@@ -1,0 +1,12 @@
+{
+  "system_id": "SDSSJ1558-0031_z2.702",
+  "role": "UNTOUCHED_CONFIRMATION",
+  "predicted_component": null,
+  "predicted_velocity_kms": null,
+  "predicted_sign": null,
+  "null_probability": 1.0,
+  "rank_score": 0.0,
+  "input_hash": "9a7313f1a395a1415caee4c327b0557b57dd21f58e2bbd368b6a3264e3b4457b",
+  "predictor_hash": "6a3ba2cc573784c0e18bfd4254558e99467aa9277606ed4ce821a8846b178bfc",
+  "sealed_at": "2026-07-28T09:07:50.516419+00:00"
+}

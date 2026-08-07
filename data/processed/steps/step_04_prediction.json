@@ -1,0 +1,10 @@
+{
+  "4A_scalar_derivation": "PASSED",
+  "4B_absorber_solution": "PASSED",
+  "4C_sign_prediction": "PASSED",
+  "4D_amplitude_prediction": "FAILED (Amplitude mismatch. Theoretical coupling parameters undetermined.)",
+  "values": {
+    "delta_ln_A": 0.2271793174421133,
+    "delta_v_T": -68106.64598273342
+  }
+}

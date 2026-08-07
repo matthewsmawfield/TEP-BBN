@@ -1,0 +1,12 @@
+{
+  "system_id": "PKS1937-1009_z3.256",
+  "role": "DEVELOPMENT",
+  "predicted_component": null,
+  "predicted_velocity_kms": null,
+  "predicted_sign": null,
+  "null_probability": 1.0,
+  "rank_score": 0.0,
+  "input_hash": "256ccc58d8c0eb08039bcf2165cf8b82150828bf11c8ebbbf349a43a3a9cb2bc",
+  "predictor_hash": "2f733ad2940c5b4c2c980a5285321fb6ff198951649d577251f5add6474d947a",
+  "sealed_at": "2026-07-26T09:13:42.375558+00:00"
+}

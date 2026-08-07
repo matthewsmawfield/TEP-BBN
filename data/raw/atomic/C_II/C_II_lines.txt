@@ -1,0 +1,10 @@
+# Atomic data for Carbon II
+# Source: NIST ASD 5.11.1
+# URL: https://physics.nist.gov/ASD
+# Downloaded: 2026-07-06T18:05:34.001455
+# Method: astroquery.nist (programmatic access)
+#
+# Format: wavelength (Å)  oscillator_strength  transition  lower_level  upper_level
+#
+1334.5323  2.4100e+08  1334 Å  2s2.2p | 2P*  | 1/2  2s.2p2 | 2D   | 3/2
+1036.3350  7.3800e+08  1036 Å  2s2.2p | 2P*  | 1/2  2s.2p2 | 2S   | 1/2

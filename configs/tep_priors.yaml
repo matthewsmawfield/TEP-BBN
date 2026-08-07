@@ -1,0 +1,44 @@
+# TEP Prior Configuration for TEP-BBN
+
+# These priors must be derived or constrained by previous TEP work,
+# laboratory experiments, or global GNSS clock networks. 
+# They cannot be arbitrary unconstrained ranges.
+
+schema_version: 1
+
+parameters:
+  alpha_log:
+    value: -7.66e-3
+    units: dimensionless
+    source: "Lab-scale density-sector coupling (from TEP-TH)"
+    type: fixed
+    
+  beta_geom:
+    value: 1.50e-4
+    units: dimensionless
+    source: "Mass-sector geometric coupling"
+    type: fixed
+    
+  beta_A:
+    value: -1.0
+    units: dimensionless
+    source: "Universal conformal coupling governing clock-rate rescaling"
+    type: fundamental
+    
+  kappa_Gal:
+    value: 9.6e5
+    units: mag
+    source: "Canonical galaxy-scale observable response coefficient"
+    type: calibrated
+
+priors:
+  proper_time_shear:
+    alpha_shear_lower: 5.0e-4
+    alpha_shear_upper: 9.0e-4
+    distribution: uniform
+    status: derived
+    derivation_source: "TEP screening law + DLA density scale (ALPHA_PRIOR_DERIVATION.md)"
+    uses_D_window: false
+    frozen: true
+
+

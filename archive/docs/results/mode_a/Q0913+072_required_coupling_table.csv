@@ -1,0 +1,13 @@
+model_name,cloud_size_kpc,max_delta_feature,required_coupling,provisional_prior_range,inside_prior
+S1_density_gradient,0.1,2.532844e+00,1.079905e-04,"[0.1, 10.0]",False
+S1_density_gradient,1.0,2.532844e+00,1.079905e-04,"[0.1, 10.0]",False
+S1_density_gradient,10.0,2.532844e+00,1.079905e-04,"[0.1, 10.0]",False
+S1_density_gradient,30.0,2.532844e+00,1.079905e-04,"[0.1, 10.0]",False
+S2_column_gradient,0.1,2.532844e+00,1.079905e-04,"[0.1, 10.0]",False
+S2_column_gradient,1.0,2.532844e+00,1.079905e-04,"[0.1, 10.0]",False
+S2_column_gradient,10.0,2.532844e+00,1.079905e-04,"[0.1, 10.0]",False
+S2_column_gradient,30.0,2.532844e+00,1.079905e-04,"[0.1, 10.0]",False
+toy_power_law,0.1,1.882370e+00,1.453078e-04,"[1e-05, 0.001]",True
+toy_power_law,1.0,5.952576e-01,4.595036e-04,"[1e-05, 0.001]",True
+toy_power_law,10.0,1.882370e-01,1.453078e-03,"[1e-05, 0.001]",False
+toy_power_law,30.0,1.086787e-01,2.516805e-03,"[1e-05, 0.001]",False

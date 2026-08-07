@@ -1,0 +1,31 @@
+{
+  "system_id": "Q1009+2956_z2.504",
+  "archive": "SQUAD_DR1",
+  "archive_object_id": "J101155+294141",
+  "source_file": "J101155+294141.fits",
+  "sha256": "c369cfd2465242d2eab3d43167c4ec326086b2c7e5211b485b044a6e639a0223",
+  "extraction_window_kms": [
+    -300,
+    100
+  ],
+  "required_lya_angstrom": 4259.220230137071,
+  "median_snr": 24.070388748244792,
+  "status": "LOW_SNR_OUTSIDE_VALIDATED_DOMAIN",
+  "literature_measurement": {
+    "instrument": "Keck/HIRES",
+    "reference": "Zavarygin et al.",
+    "arxiv": "1706.09512"
+  },
+  "tep_bbn_spectrum": {
+    "archive": "SQUAD_DR1",
+    "instrument": "VLT/UVES",
+    "archive_object_id": "J101155+294141"
+  },
+  "kinematic_prior": {
+    "instrument": "Keck/HIRES",
+    "source_type": "METALS_ONLY_VPFIT"
+  },
+  "kinematic_reference_redshift_hires": 2.5035873411,
+  "uves_hires_registration_kms": 1.0,
+  "kinematic_reference_redshift_uves": 2.503599027809414
+}

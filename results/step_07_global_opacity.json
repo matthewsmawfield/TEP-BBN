@@ -1,0 +1,7 @@
+{
+  "7A_density_profile": "n_e(x) = n_0 (CONSTANT)",
+  "7B_optical_depth": "n_0*sigma_T*x",
+  "7C_horizon_limit": "oo",
+  "7D_theorem_proved": true,
+  "7E_conclusion": "The universe becomes completely opaque at high redshift because diverging temporal transport stretches the apparent optical depth to infinity, creating an observable boundary without a physical plasma wall."
+}

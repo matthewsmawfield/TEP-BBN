@@ -1,0 +1,26 @@
+# Atomic data for Hydrogen I
+# Source: NIST ASD 5.11.1
+# URL: https://physics.nist.gov/ASD
+# Downloaded: 2026-07-06T18:05:26.499642
+# Method: astroquery.nist (programmatic access)
+#
+# Format: wavelength (Å)  oscillator_strength  transition  lower_level  upper_level
+#
+1215.6699  6.2647e+08  Lyα  1s     | 2S   | 1/2  2p     | 2P*  | 3/2
+1215.6699  6.2648e+08  Lyα  1s     | 2S   | 1/2  2p     | 2P*  | 1/2
+1215.6701  4.6986e+08  Lyα  1s     | 2S   | 1/2  2      |      |
+1215.6731  2.4950e-06  Lyα  1s     | 2S   | 1/2  2s     | 2S   | 1/2
+1025.7280  1.6725e+08  Lyβ  1s     | 2S   | 1/2  3p     | 2P*  | 3/2
+1025.7280  5.5751e+07  Lyβ  1s     | 2S   | 1/2  3      |      |
+1025.7280  1.6725e+08  Lyβ  1s     | 2S   | 1/2  3p     | 2P*  | 1/2
+972.5170  1.2785e+07  Lyγ  1s     | 2S   | 1/2  4      |      |
+972.5410  6.8185e+07  Lyγ  1s     | 2S   | 1/2  4p     | 2P*  | 3/2
+972.5410  6.8185e+07  Lyγ  1s     | 2S   | 1/2  4p     | 2P*  | 1/2
+949.7420  3.4375e+07  Lyδ  1s     | 2S   | 1/2  5p     | 2P*  | 3/2
+949.7420  4.1250e+06  Lyδ  1s     | 2S   | 1/2  5      |      |
+949.7420  3.4375e+07  Lyδ  1s     | 2S   | 1/2  5p     | 2P*  | 1/2
+949.7428  N/A  Lyδ  1s     | 2S   | 1/2  5d     | 2D   | 5/2
+949.7431  N/A  Lyδ  1s     | 2S   | 1/2  5s     | 2S   | 1/2
+937.8010  1.9728e+07  Lyε  1s     | 2S   | 1/2  6p     | 2P*  | 3/2
+937.8010  1.9728e+07  Lyε  1s     | 2S   | 1/2  6p     | 2P*  | 1/2
+937.8140  1.6440e+06  Lyε  1s     | 2S   | 1/2  6      |      |

@@ -1,0 +1,12 @@
+{
+  "system_id": "J0812+3208_z2.626",
+  "role": "LOCKED_VALIDATION_EXTENSION",
+  "predicted_component": 1,
+  "predicted_velocity_kms": 0.0,
+  "predicted_sign": "BLUEWARD",
+  "null_probability": 0.0,
+  "rank_score": 0.5,
+  "input_hash": "f45f936b0cbb932963fd38f6939f2ef9c074248b88cb287d031563fff543981c",
+  "predictor_hash": "04546e04025e335130c40bb8dda526105649288ab5440c8d069e8852ef2e2558",
+  "sealed_at": "2026-07-26T14:09:53.166636+00:00"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "system_id": "Q1009+2956_z2.504",
+    "archive": "SQUAD_DR1",
+    "archive_object_id": "J101155+294141",
+    "requested_filename": "J101155+294141_Final_Spectrum.tar.gz",
+    "priority": 1,
+    "status": "MANUAL_DOWNLOAD_REQUIRED"
+  },
+  {
+    "system_id": "HS0105+1619_z2.536",
+    "archive": "KODIAQ_DR1_DR2",
+    "archive_object_id": "J010806+163550",
+    "requested_filename": null,
+    "priority": 2,
+    "status": "MANUAL_PRODUCT_SELECTION_REQUIRED"
+  },
+  {
+    "system_id": "Q0311-1722_z3.734",
+    "archive": "SQUAD_DR1",
+    "archive_object_id": "J031115-172247",
+    "requested_filename": "J031115-172247_Final_Spectrum.tar.gz",
+    "priority": 3,
+    "status": "MANUAL_DOWNLOAD_REQUIRED"
+  }
+]

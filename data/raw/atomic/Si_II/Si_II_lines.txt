@@ -1,0 +1,10 @@
+# Atomic data for Silicon II
+# Source: NIST ASD 5.11.1
+# URL: https://physics.nist.gov/ASD
+# Downloaded: 2026-07-06T18:05:32.507338
+# Method: astroquery.nist (programmatic access)
+#
+# Format: wavelength (Å)  oscillator_strength  transition  lower_level  upper_level
+#
+1526.7200  3.8100e+08  1526 Å  3s2.3p | 2P*  | 1/2  3s2.4s | 2S   | 1/2
+1304.3700  3.6400e+08  1304 Å  3s2.3p | 2P*  | 1/2  3s.3p2 | 2S   | 1/2

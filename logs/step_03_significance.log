@@ -1,0 +1,283 @@
+[22:25:47] [INFO] ================================================================================
+[22:25:47] [INFO] Script: step_03_significance
+[22:25:47] [INFO] Started: 2026-08-07T22:25:47.205139
+[22:25:47] [INFO] ================================================================================
+[22:25:47] [SUCCESS] === GATE 3R: GENUINE MONTE CARLO CALIBRATION ===
+[22:25:47] [PROCESS] Pre-calculating base True-D model fluxes...
+[22:25:47] [INFO] 
+[22:25:47] [INFO] ================================================================================
+[22:25:47] [INFO] 
+--- Running True-D Monte Carlo Simulations (200 realizations) ---
+[22:25:47] [INFO] ================================================================================
+[22:25:47] [INFO] 
+[00:11:46] [PROCESS] Completed 1/200 simulations. Parent exceedances (>=6.45): 0
+[00:12:09] [PROCESS] Completed 2/200 simulations. Parent exceedances (>=6.45): 0
+[00:14:05] [PROCESS] Completed 3/200 simulations. Parent exceedances (>=6.45): 0
+[00:14:10] [PROCESS] Completed 4/200 simulations. Parent exceedances (>=6.45): 0
+[00:14:11] [PROCESS] Completed 5/200 simulations. Parent exceedances (>=6.45): 0
+[00:14:59] [PROCESS] Completed 6/200 simulations. Parent exceedances (>=6.45): 0
+[00:14:59] [PROCESS] Completed 7/200 simulations. Parent exceedances (>=6.45): 0
+[00:15:30] [PROCESS] Completed 8/200 simulations. Parent exceedances (>=6.45): 0
+[00:15:46] [PROCESS] Completed 9/200 simulations. Parent exceedances (>=6.45): 0
+[00:16:00] [PROCESS] Completed 10/200 simulations. Parent exceedances (>=6.45): 0
+[00:16:01] [PROCESS] Completed 11/200 simulations. Parent exceedances (>=6.45): 0
+[00:17:07] [PROCESS] Completed 12/200 simulations. Parent exceedances (>=6.45): 0
+[00:17:42] [PROCESS] Completed 13/200 simulations. Parent exceedances (>=6.45): 0
+[00:17:46] [PROCESS] Completed 14/200 simulations. Parent exceedances (>=6.45): 0
+[00:28:23] [PROCESS] Completed 15/200 simulations. Parent exceedances (>=6.45): 0
+[00:29:04] [PROCESS] Completed 16/200 simulations. Parent exceedances (>=6.45): 0
+[00:29:14] [PROCESS] Completed 17/200 simulations. Parent exceedances (>=6.45): 0
+[00:29:16] [PROCESS] Completed 18/200 simulations. Parent exceedances (>=6.45): 0
+[00:29:30] [PROCESS] Completed 19/200 simulations. Parent exceedances (>=6.45): 0
+[00:29:32] [PROCESS] Completed 20/200 simulations. Parent exceedances (>=6.45): 0
+[00:29:47] [PROCESS] Completed 21/200 simulations. Parent exceedances (>=6.45): 0
+[00:30:23] [PROCESS] Completed 22/200 simulations. Parent exceedances (>=6.45): 0
+[00:30:27] [PROCESS] Completed 23/200 simulations. Parent exceedances (>=6.45): 0
+[00:31:32] [PROCESS] Completed 24/200 simulations. Parent exceedances (>=6.45): 0
+[00:32:58] [PROCESS] Completed 25/200 simulations. Parent exceedances (>=6.45): 0
+[00:33:21] [PROCESS] Completed 26/200 simulations. Parent exceedances (>=6.45): 0
+[00:34:23] [PROCESS] Completed 27/200 simulations. Parent exceedances (>=6.45): 0
+[00:37:29] [PROCESS] Completed 28/200 simulations. Parent exceedances (>=6.45): 0
+[00:44:04] [PROCESS] Completed 29/200 simulations. Parent exceedances (>=6.45): 0
+[00:45:13] [PROCESS] Completed 30/200 simulations. Parent exceedances (>=6.45): 0
+[00:45:17] [PROCESS] Completed 31/200 simulations. Parent exceedances (>=6.45): 0
+[00:45:23] [PROCESS] Completed 32/200 simulations. Parent exceedances (>=6.45): 0
+[00:45:36] [PROCESS] Completed 33/200 simulations. Parent exceedances (>=6.45): 0
+[00:46:05] [PROCESS] Completed 34/200 simulations. Parent exceedances (>=6.45): 0
+[00:46:15] [PROCESS] Completed 35/200 simulations. Parent exceedances (>=6.45): 0
+[00:46:43] [PROCESS] Completed 36/200 simulations. Parent exceedances (>=6.45): 1
+[00:46:49] [PROCESS] Completed 37/200 simulations. Parent exceedances (>=6.45): 1
+[00:47:05] [PROCESS] Completed 38/200 simulations. Parent exceedances (>=6.45): 1
+[00:48:48] [PROCESS] Completed 39/200 simulations. Parent exceedances (>=6.45): 1
+[00:49:23] [PROCESS] Completed 40/200 simulations. Parent exceedances (>=6.45): 1
+[00:49:34] [PROCESS] Completed 41/200 simulations. Parent exceedances (>=6.45): 1
+[00:52:44] [PROCESS] Completed 42/200 simulations. Parent exceedances (>=6.45): 1
+[00:57:36] [PROCESS] Completed 43/200 simulations. Parent exceedances (>=6.45): 1
+[00:59:46] [PROCESS] Completed 44/200 simulations. Parent exceedances (>=6.45): 1
+[01:00:14] [PROCESS] Completed 45/200 simulations. Parent exceedances (>=6.45): 1
+[01:00:21] [PROCESS] Completed 46/200 simulations. Parent exceedances (>=6.45): 1
+[01:00:50] [PROCESS] Completed 47/200 simulations. Parent exceedances (>=6.45): 1
+[01:01:29] [PROCESS] Completed 48/200 simulations. Parent exceedances (>=6.45): 1
+[01:02:07] [PROCESS] Completed 49/200 simulations. Parent exceedances (>=6.45): 1
+[01:02:18] [PROCESS] Completed 50/200 simulations. Parent exceedances (>=6.45): 1
+[01:03:35] [PROCESS] Completed 51/200 simulations. Parent exceedances (>=6.45): 2
+[01:05:13] [PROCESS] Completed 52/200 simulations. Parent exceedances (>=6.45): 2
+[01:05:16] [PROCESS] Completed 53/200 simulations. Parent exceedances (>=6.45): 3
+[01:05:26] [PROCESS] Completed 54/200 simulations. Parent exceedances (>=6.45): 3
+[01:05:55] [PROCESS] Completed 55/200 simulations. Parent exceedances (>=6.45): 3
+[01:08:48] [PROCESS] Completed 56/200 simulations. Parent exceedances (>=6.45): 3
+[01:12:06] [PROCESS] Completed 57/200 simulations. Parent exceedances (>=6.45): 3
+[01:13:29] [PROCESS] Completed 58/200 simulations. Parent exceedances (>=6.45): 3
+[01:13:59] [PROCESS] Completed 59/200 simulations. Parent exceedances (>=6.45): 3
+[01:14:44] [PROCESS] Completed 60/200 simulations. Parent exceedances (>=6.45): 3
+[01:14:58] [PROCESS] Completed 61/200 simulations. Parent exceedances (>=6.45): 3
+[01:15:24] [PROCESS] Completed 62/200 simulations. Parent exceedances (>=6.45): 3
+[01:17:05] [PROCESS] Completed 63/200 simulations. Parent exceedances (>=6.45): 3
+[01:17:07] [PROCESS] Completed 64/200 simulations. Parent exceedances (>=6.45): 3
+[01:20:25] [PROCESS] Completed 65/200 simulations. Parent exceedances (>=6.45): 3
+[01:20:54] [PROCESS] Completed 66/200 simulations. Parent exceedances (>=6.45): 3
+[01:21:04] [PROCESS] Completed 67/200 simulations. Parent exceedances (>=6.45): 3
+[01:22:44] [PROCESS] Completed 68/200 simulations. Parent exceedances (>=6.45): 3
+[01:22:58] [PROCESS] Completed 69/200 simulations. Parent exceedances (>=6.45): 3
+[01:23:51] [PROCESS] Completed 70/200 simulations. Parent exceedances (>=6.45): 3
+[01:27:21] [PROCESS] Completed 71/200 simulations. Parent exceedances (>=6.45): 3
+[01:27:42] [PROCESS] Completed 72/200 simulations. Parent exceedances (>=6.45): 3
+[01:27:58] [PROCESS] Completed 73/200 simulations. Parent exceedances (>=6.45): 3
+[01:30:44] [PROCESS] Completed 74/200 simulations. Parent exceedances (>=6.45): 3
+[01:31:09] [PROCESS] Completed 75/200 simulations. Parent exceedances (>=6.45): 3
+[01:31:55] [PROCESS] Completed 76/200 simulations. Parent exceedances (>=6.45): 4
+[01:32:01] [PROCESS] Completed 77/200 simulations. Parent exceedances (>=6.45): 4
+[01:32:52] [PROCESS] Completed 78/200 simulations. Parent exceedances (>=6.45): 4
+[01:35:09] [PROCESS] Completed 79/200 simulations. Parent exceedances (>=6.45): 4
+[01:35:28] [PROCESS] Completed 80/200 simulations. Parent exceedances (>=6.45): 4
+[01:36:01] [PROCESS] Completed 81/200 simulations. Parent exceedances (>=6.45): 4
+[01:37:07] [PROCESS] Completed 82/200 simulations. Parent exceedances (>=6.45): 4
+[01:39:36] [PROCESS] Completed 83/200 simulations. Parent exceedances (>=6.45): 4
+[01:40:41] [PROCESS] Completed 84/200 simulations. Parent exceedances (>=6.45): 4
+[01:41:55] [PROCESS] Completed 85/200 simulations. Parent exceedances (>=6.45): 4
+[01:43:50] [PROCESS] Completed 86/200 simulations. Parent exceedances (>=6.45): 4
+[01:44:09] [PROCESS] Completed 87/200 simulations. Parent exceedances (>=6.45): 4
+[01:44:13] [PROCESS] Completed 88/200 simulations. Parent exceedances (>=6.45): 4
+[01:46:48] [PROCESS] Completed 89/200 simulations. Parent exceedances (>=6.45): 4
+[01:47:03] [PROCESS] Completed 90/200 simulations. Parent exceedances (>=6.45): 4
+[01:47:44] [PROCESS] Completed 91/200 simulations. Parent exceedances (>=6.45): 4
+[01:48:42] [PROCESS] Completed 92/200 simulations. Parent exceedances (>=6.45): 4
+[01:50:00] [PROCESS] Completed 93/200 simulations. Parent exceedances (>=6.45): 4
+[01:50:03] [PROCESS] Completed 94/200 simulations. Parent exceedances (>=6.45): 4
+[01:50:33] [PROCESS] Completed 95/200 simulations. Parent exceedances (>=6.45): 4
+[01:52:05] [PROCESS] Completed 96/200 simulations. Parent exceedances (>=6.45): 4
+[01:55:02] [PROCESS] Completed 97/200 simulations. Parent exceedances (>=6.45): 4
+[01:55:07] [PROCESS] Completed 98/200 simulations. Parent exceedances (>=6.45): 5
+[01:58:25] [PROCESS] Completed 99/200 simulations. Parent exceedances (>=6.45): 5
+[01:58:39] [PROCESS] Completed 100/200 simulations. Parent exceedances (>=6.45): 5
+[01:58:41] [PROCESS] Completed 101/200 simulations. Parent exceedances (>=6.45): 5
+[01:59:43] [PROCESS] Completed 102/200 simulations. Parent exceedances (>=6.45): 5
+[02:00:12] [PROCESS] Completed 103/200 simulations. Parent exceedances (>=6.45): 5
+[02:00:29] [PROCESS] Completed 104/200 simulations. Parent exceedances (>=6.45): 5
+[02:02:17] [PROCESS] Completed 105/200 simulations. Parent exceedances (>=6.45): 5
+[02:03:00] [PROCESS] Completed 106/200 simulations. Parent exceedances (>=6.45): 5
+[02:03:52] [PROCESS] Completed 107/200 simulations. Parent exceedances (>=6.45): 5
+[02:05:36] [PROCESS] Completed 108/200 simulations. Parent exceedances (>=6.45): 5
+[02:06:19] [PROCESS] Completed 109/200 simulations. Parent exceedances (>=6.45): 5
+[02:07:07] [PROCESS] Completed 110/200 simulations. Parent exceedances (>=6.45): 6
+[02:09:31] [PROCESS] Completed 111/200 simulations. Parent exceedances (>=6.45): 6
+[02:09:58] [PROCESS] Completed 112/200 simulations. Parent exceedances (>=6.45): 6
+[02:12:35] [PROCESS] Completed 113/200 simulations. Parent exceedances (>=6.45): 6
+[02:13:43] [PROCESS] Completed 114/200 simulations. Parent exceedances (>=6.45): 6
+[02:14:16] [PROCESS] Completed 115/200 simulations. Parent exceedances (>=6.45): 6
+[02:14:52] [PROCESS] Completed 116/200 simulations. Parent exceedances (>=6.45): 6
+[02:15:26] [PROCESS] Completed 117/200 simulations. Parent exceedances (>=6.45): 7
+[02:17:40] [PROCESS] Completed 118/200 simulations. Parent exceedances (>=6.45): 7
+[02:17:56] [PROCESS] Completed 119/200 simulations. Parent exceedances (>=6.45): 7
+[02:18:13] [PROCESS] Completed 120/200 simulations. Parent exceedances (>=6.45): 7
+[02:18:14] [PROCESS] Completed 121/200 simulations. Parent exceedances (>=6.45): 7
+[02:18:46] [PROCESS] Completed 122/200 simulations. Parent exceedances (>=6.45): 7
+[02:22:20] [PROCESS] Completed 123/200 simulations. Parent exceedances (>=6.45): 7
+[02:23:04] [PROCESS] Completed 124/200 simulations. Parent exceedances (>=6.45): 7
+[02:24:20] [PROCESS] Completed 125/200 simulations. Parent exceedances (>=6.45): 7
+[02:26:28] [PROCESS] Completed 126/200 simulations. Parent exceedances (>=6.45): 7
+[02:28:26] [PROCESS] Completed 127/200 simulations. Parent exceedances (>=6.45): 7
+[02:28:52] [PROCESS] Completed 128/200 simulations. Parent exceedances (>=6.45): 7
+[02:29:14] [PROCESS] Completed 129/200 simulations. Parent exceedances (>=6.45): 8
+[02:30:37] [PROCESS] Completed 130/200 simulations. Parent exceedances (>=6.45): 8
+[02:32:01] [PROCESS] Completed 131/200 simulations. Parent exceedances (>=6.45): 8
+[02:33:30] [PROCESS] Completed 132/200 simulations. Parent exceedances (>=6.45): 8
+[02:33:44] [PROCESS] Completed 133/200 simulations. Parent exceedances (>=6.45): 9
+[02:33:51] [PROCESS] Completed 134/200 simulations. Parent exceedances (>=6.45): 10
+[02:34:19] [PROCESS] Completed 135/200 simulations. Parent exceedances (>=6.45): 10
+[02:35:26] [PROCESS] Completed 136/200 simulations. Parent exceedances (>=6.45): 10
+[02:36:47] [PROCESS] Completed 137/200 simulations. Parent exceedances (>=6.45): 11
+[02:40:37] [PROCESS] Completed 138/200 simulations. Parent exceedances (>=6.45): 11
+[02:40:54] [PROCESS] Completed 139/200 simulations. Parent exceedances (>=6.45): 11
+[02:42:48] [PROCESS] Completed 140/200 simulations. Parent exceedances (>=6.45): 11
+[02:43:05] [PROCESS] Completed 141/200 simulations. Parent exceedances (>=6.45): 11
+[02:43:43] [PROCESS] Completed 142/200 simulations. Parent exceedances (>=6.45): 11
+[02:44:32] [PROCESS] Completed 143/200 simulations. Parent exceedances (>=6.45): 11
+[02:46:13] [PROCESS] Completed 144/200 simulations. Parent exceedances (>=6.45): 11
+[02:47:20] [PROCESS] Completed 145/200 simulations. Parent exceedances (>=6.45): 11
+[02:47:22] [PROCESS] Completed 146/200 simulations. Parent exceedances (>=6.45): 11
+[02:47:42] [PROCESS] Completed 147/200 simulations. Parent exceedances (>=6.45): 11
+[02:48:10] [PROCESS] Completed 148/200 simulations. Parent exceedances (>=6.45): 11
+[02:48:12] [PROCESS] Completed 149/200 simulations. Parent exceedances (>=6.45): 11
+[02:50:27] [PROCESS] Completed 150/200 simulations. Parent exceedances (>=6.45): 12
+[02:51:43] [PROCESS] Completed 151/200 simulations. Parent exceedances (>=6.45): 12
+[02:55:18] [PROCESS] Completed 152/200 simulations. Parent exceedances (>=6.45): 12
+[02:57:03] [PROCESS] Completed 153/200 simulations. Parent exceedances (>=6.45): 12
+[02:57:33] [PROCESS] Completed 154/200 simulations. Parent exceedances (>=6.45): 12
+[02:58:46] [PROCESS] Completed 155/200 simulations. Parent exceedances (>=6.45): 12
+[03:00:50] [PROCESS] Completed 156/200 simulations. Parent exceedances (>=6.45): 13
+[03:00:58] [PROCESS] Completed 157/200 simulations. Parent exceedances (>=6.45): 13
+[03:01:33] [PROCESS] Completed 158/200 simulations. Parent exceedances (>=6.45): 13
+[03:01:57] [PROCESS] Completed 159/200 simulations. Parent exceedances (>=6.45): 13
+[03:02:04] [PROCESS] Completed 160/200 simulations. Parent exceedances (>=6.45): 13
+[03:02:12] [PROCESS] Completed 161/200 simulations. Parent exceedances (>=6.45): 13
+[03:02:39] [PROCESS] Completed 162/200 simulations. Parent exceedances (>=6.45): 13
+[03:04:26] [PROCESS] Completed 163/200 simulations. Parent exceedances (>=6.45): 13
+[03:04:40] [PROCESS] Completed 164/200 simulations. Parent exceedances (>=6.45): 13
+[03:06:36] [PROCESS] Completed 165/200 simulations. Parent exceedances (>=6.45): 13
+[03:12:51] [PROCESS] Completed 166/200 simulations. Parent exceedances (>=6.45): 13
+[03:14:52] [PROCESS] Completed 167/200 simulations. Parent exceedances (>=6.45): 13
+[03:18:49] [PROCESS] Completed 168/200 simulations. Parent exceedances (>=6.45): 13
+[03:18:50] [PROCESS] Completed 169/200 simulations. Parent exceedances (>=6.45): 13
+[03:26:35] [PROCESS] Completed 170/200 simulations. Parent exceedances (>=6.45): 13
+[03:28:09] [PROCESS] Completed 171/200 simulations. Parent exceedances (>=6.45): 13
+[03:28:44] [PROCESS] Completed 172/200 simulations. Parent exceedances (>=6.45): 13
+[03:30:43] [PROCESS] Completed 173/200 simulations. Parent exceedances (>=6.45): 14
+[03:31:42] [PROCESS] Completed 174/200 simulations. Parent exceedances (>=6.45): 14
+[03:33:14] [PROCESS] Completed 175/200 simulations. Parent exceedances (>=6.45): 14
+[03:33:32] [PROCESS] Completed 176/200 simulations. Parent exceedances (>=6.45): 14
+[03:33:37] [PROCESS] Completed 177/200 simulations. Parent exceedances (>=6.45): 14
+[03:37:38] [PROCESS] Completed 178/200 simulations. Parent exceedances (>=6.45): 14
+[08:25:32] [PROCESS] Completed 179/200 simulations. Parent exceedances (>=6.45): 14
+[08:27:05] [PROCESS] Completed 180/200 simulations. Parent exceedances (>=6.45): 14
+[08:27:44] [PROCESS] Completed 181/200 simulations. Parent exceedances (>=6.45): 14
+[08:28:10] [PROCESS] Completed 182/200 simulations. Parent exceedances (>=6.45): 14
+[08:28:38] [PROCESS] Completed 183/200 simulations. Parent exceedances (>=6.45): 14
+[08:28:46] [PROCESS] Completed 184/200 simulations. Parent exceedances (>=6.45): 14
+[08:28:49] [PROCESS] Completed 185/200 simulations. Parent exceedances (>=6.45): 14
+[08:29:26] [PROCESS] Completed 186/200 simulations. Parent exceedances (>=6.45): 14
+[08:29:34] [PROCESS] Completed 187/200 simulations. Parent exceedances (>=6.45): 14
+[08:29:53] [PROCESS] Completed 188/200 simulations. Parent exceedances (>=6.45): 14
+[08:29:55] [PROCESS] Completed 189/200 simulations. Parent exceedances (>=6.45): 14
+[08:30:01] [PROCESS] Completed 190/200 simulations. Parent exceedances (>=6.45): 14
+[08:30:24] [PROCESS] Completed 191/200 simulations. Parent exceedances (>=6.45): 14
+[08:30:26] [PROCESS] Completed 192/200 simulations. Parent exceedances (>=6.45): 14
+[08:31:06] [PROCESS] Completed 193/200 simulations. Parent exceedances (>=6.45): 14
+[08:31:51] [PROCESS] Completed 194/200 simulations. Parent exceedances (>=6.45): 14
+[08:32:02] [PROCESS] Completed 195/200 simulations. Parent exceedances (>=6.45): 14
+[08:32:25] [PROCESS] Completed 196/200 simulations. Parent exceedances (>=6.45): 14
+[08:32:33] [PROCESS] Completed 197/200 simulations. Parent exceedances (>=6.45): 15
+[08:32:42] [PROCESS] Completed 198/200 simulations. Parent exceedances (>=6.45): 15
+[08:33:00] [PROCESS] Completed 199/200 simulations. Parent exceedances (>=6.45): 15
+[08:33:14] [PROCESS] Completed 200/200 simulations. Parent exceedances (>=6.45): 15
+[08:33:14] [PROCESS] 
+Observed T_obs (standard) = 77.85
+[08:33:14] [PROCESS] Observed T_obs (best parent) = 6.45
+[08:33:14] [PROCESS] Exceedances (T_sim >= 6.45): 15
+[08:33:14] [PROCESS] Calibrated p_add_one for parent reassignment = 0.07960
+[08:33:14] [INFO] 
+[08:33:14] [INFO] ================================================================================
+[08:33:14] [INFO] 
+--- Genuine Leave-One-Out Robustness Constraints ---
+[08:33:14] [INFO] ================================================================================
+[08:33:14] [INFO] 
+[08:33:25] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x1.dat': T = 50.70 (D=-11439.21, H=-11413.85)
+[08:33:37] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x2.dat': T = 68.74 (D=-15753.73, H=-15719.36)
+[08:33:49] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x2.dat': T = 66.91 (D=-14718.66, H=-14685.20)
+[08:34:01] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x1.dat': T = 43.84 (D=-11882.91, H=-11860.99)
+[08:34:24] [PROCESS] Leave-one-out transition 'Lyα': T = 2.22 (D=-14486.76, H=-14485.65)
+[08:34:37] [PROCESS] Leave-one-out transition 'Lyβ': T = 69.39 (D=-16123.91, H=-16089.21)
+[08:34:56] [PROCESS] Leave-one-out transition 'Lyγ': T = 75.37 (D=-15703.00, H=-15665.32)
+[08:34:56] [INFO] 
+[08:34:56] [INFO] ================================================================================
+[08:34:56] [INFO] 
+--- Parent Component Reassignment Robustness ---
+[08:34:56] [INFO] ================================================================================
+[08:34:56] [INFO] 
+[08:34:58] [PROCESS] Parent 0: LL_D = -17932.13, T = 77.85
+[08:35:00] [PROCESS] Parent 1: LL_D = -18062.01, T = 337.60
+[08:35:01] [PROCESS] Parent 2: LL_D = -18108.88, T = 431.33
+[08:35:04] [PROCESS] Parent 3: LL_D = -18108.88, T = 431.33
+[08:35:06] [PROCESS] Parent 4: LL_D = -18066.88, T = 347.33
+[08:35:07] [PROCESS] Parent 5: LL_D = -18108.88, T = 431.33
+[08:35:08] [PROCESS] Parent 6: LL_D = -18108.88, T = 431.33
+[08:35:08] [PROCESS] Parent 7: LL_D = -18108.88, T = 431.33
+[08:35:09] [PROCESS] Parent 8: LL_D = -18108.88, T = 431.33
+[08:35:09] [PROCESS] Parent 9: LL_D = -18108.88, T = 431.33
+[08:35:12] [PROCESS] Parent 10: LL_D = -17896.44, T = 6.45
+[08:35:14] [PROCESS] Parent 11: LL_D = -18108.88, T = 431.33
+[08:35:18] [PROCESS] Parent 12: LL_D = -18108.88, T = 431.33
+[08:35:18] [PROCESS] Parent 13: LL_D = -18108.88, T = 431.33
+[08:35:21] [PROCESS] Parent 14: LL_D = -18108.88, T = 431.33
+[08:35:24] [PROCESS] Parent 15: LL_D = -18108.88, T = 431.33
+[08:35:24] [PROCESS] Parent 16: LL_D = -18108.88, T = 431.33
+[08:35:25] [PROCESS] Parent 17: LL_D = -18108.88, T = 431.33
+[08:35:25] [PROCESS] Parent 18: LL_D = -18108.88, T = 431.33
+[08:35:26] [PROCESS] Parent 19: LL_D = -18108.88, T = 431.33
+[08:35:27] [PROCESS] Parent 20: LL_D = -18108.88, T = 431.33
+[08:35:27] [PROCESS] Parent 21: LL_D = -18108.88, T = 431.33
+[08:35:28] [PROCESS] Parent 22: LL_D = -18108.88, T = 431.33
+[08:35:28] [PROCESS] Parent 23: LL_D = -18108.88, T = 431.33
+[08:35:29] [PROCESS] Parent 24: LL_D = -18108.88, T = 431.33
+[08:35:29] [PROCESS] Parent 25: LL_D = -18108.88, T = 431.33
+[08:35:30] [PROCESS] Parent 26: LL_D = -18108.88, T = 431.33
+[08:35:30] [PROCESS] Parent 27: LL_D = -18108.88, T = 431.33
+[08:35:32] [PROCESS] Parent 28: LL_D = -18108.88, T = 431.33
+[08:35:32] [PROCESS] Parent 29: LL_D = -18108.88, T = 431.33
+[08:35:33] [PROCESS] Parent 30: LL_D = -18108.88, T = 431.33
+[08:35:33] [PROCESS] Parent 31: LL_D = -18108.88, T = 431.33
+[08:35:34] [PROCESS] Parent 32: LL_D = -18108.88, T = 431.33
+[08:35:35] [PROCESS] Parent 33: LL_D = -18108.88, T = 431.33
+[08:35:35] [PROCESS] Parent 34: LL_D = -18108.88, T = 431.33
+[08:35:39] [PROCESS] Parent 35: LL_D = -18108.88, T = 431.33
+[08:35:42] [PROCESS] Parent 36: LL_D = -18108.88, T = 431.33
+[08:35:42] [PROCESS] Parent 37: LL_D = -18108.88, T = 431.33
+[08:35:43] [PROCESS] Parent 38: LL_D = -18108.88, T = 431.33
+[08:35:43] [PROCESS] Parent 39: LL_D = -18108.88, T = 431.33
+[08:35:44] [PROCESS] Parent 40: LL_D = -18108.88, T = 431.33
+[08:35:45] [PROCESS] Parent 41: LL_D = -18108.88, T = 431.33
+[08:35:45] [PROCESS] Parent 42: LL_D = -18108.88, T = 431.33
+[08:35:45] [SUCCESS] 
+[SUCCESS] Calibration saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_significance.json
+[08:35:45] [SUCCESS]   [OK] 36598.6s
+[08:35:45] [PROCESS] [RUN] step_04_prior: Gate 4: TEP Absorber Field Closure

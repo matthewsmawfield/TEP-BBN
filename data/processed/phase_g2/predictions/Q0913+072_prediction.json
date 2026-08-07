@@ -1,0 +1,12 @@
+{
+  "system_id": "Q0913+072",
+  "role": "DEVELOPMENT",
+  "predicted_component": null,
+  "predicted_velocity_kms": null,
+  "predicted_sign": null,
+  "null_probability": 1.0,
+  "rank_score": 0.0,
+  "input_hash": "981fc418c6dcf016adf3dd3283dc1f5802a96d25c69154ede20f667c2d53414b",
+  "predictor_hash": "2f733ad2940c5b4c2c980a5285321fb6ff198951649d577251f5add6474d947a",
+  "sealed_at": "2026-07-26T09:13:42.373343+00:00"
+}

@@ -1,0 +1,7 @@
+\fixlen = T
+|             qso|                      pi_date|             spec_prefix|  redux_setup|        targname| deckname|      elaptime|  qaflag|   kodetime|   kodwblue|   kodwred|   kodrelease|
+|            char|                         char|                    char|         char|            char|     char|          char|    char|       long|       long|      long|         char|
+   J010806+163550           Tytler_Dec_6_7_2005           J010806+163550       Setup_1       q0105+1619        C5 7200+8200+6804       ok       22204        3048       5895             1
+   J010806+163550       Tytler_Oct_9_10_11_1999           J010806+163550       Setup_4      HS0105+1619        C5    3x8000,7200       ok       31200        3189       4723             2
+   J010806+163550      Tytler_Sep_20_21_22_2000           J010806+163550       Setup_2        0105+1619        C5 4x7k,7200,7500       ok       42700        3189       4724             2
+   J010806+163550            Wolfe_Nov_8_9_1999           J010806+163550       Setup_3         Q0105+16        C5           1800       ok        1800        4218       6655             2

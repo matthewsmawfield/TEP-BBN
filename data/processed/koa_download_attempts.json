@@ -1,0 +1,167 @@
+[
+  {
+    "system_id": "Q1009+2956",
+    "koaid": "HI.19970511.20673.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19970511.20673.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19970511.20673.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "Q1009+2956",
+    "koaid": "HI.19970511.20779.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19970511.20779.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19970511.20779.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "Q1009+2956",
+    "koaid": "HI.19981214.48856.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19981214.48856.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19981214.48856.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "Q1009+2956",
+    "koaid": "HI.19981214.48959.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19981214.48959.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19981214.48959.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "Q1009+2956",
+    "koaid": "HI.19981215.50357.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19981215.50357.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19981215.50357.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "Q1243+3047",
+    "koaid": "HI.19990416.33796.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19990416.33796.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19990416.33796.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "Q1243+3047",
+    "koaid": "HI.19990417.27982.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19990417.27982.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19990417.27982.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "Q1243+3047",
+    "koaid": "HI.19990417.35318.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19990417.35318.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19990417.35318.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "Q1243+3047",
+    "koaid": "HI.19990418.19823.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19990418.19823.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19990418.19823.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "Q1243+3047",
+    "koaid": "HI.19990418.28054.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19990418.28054.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19990418.28054.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "HS0105+1619",
+    "koaid": "HI.19991010.27082.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19991010.27082.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19991010.27082.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "HS0105+1619",
+    "koaid": "HI.19991010.35233.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19991010.35233.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19991010.35233.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "HS0105+1619",
+    "koaid": "HI.19991011.33009.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19991011.33009.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19991011.33009.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "HS0105+1619",
+    "koaid": "HI.19991011.40864.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19991011.40864.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19991011.40864.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  },
+  {
+    "system_id": "HS0105+1619",
+    "koaid": "HI.19991011.49298.fits",
+    "download_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19991011.49298.fits",
+    "download_status": "DOWNLOAD_REDIRECT_HTML",
+    "http_status": 200,
+    "content_type": "text/html",
+    "final_url": "https://koa.ipac.caltech.edu/cgi-bin/getKOA/nph-getKOA?koaid=HI.19991011.49298.fits",
+    "saved_to_scientific_pool": false,
+    "next_action": "Complete the KOA access agreement or browser-mediated download."
+  }
+]

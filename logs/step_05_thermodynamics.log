@@ -1,0 +1,31 @@
+[08:35:46] [INFO] ================================================================================
+[08:35:46] [INFO] Script: step_05_thermodynamics
+[08:35:46] [INFO] Started: 2026-08-08T08:35:46.048747
+[08:35:46] [INFO] ================================================================================
+[08:35:46] [SUCCESS] === GATE 5R: STATIC-SPACE TEMPORAL HORIZON THERMODYNAMICS ===
+[08:35:46] [PROCESS] 
+[AXIOM] Space does not cosmologically expand (a_m = 1). Proper time is a dynamical physical field A(phi).
+[08:35:46] [INFO] 
+[08:35:46] [INFO] ================================================================================
+[08:35:46] [INFO] 
+--- Analytical Thermal Invariance Proof ---
+[08:35:46] [INFO] ================================================================================
+[08:35:46] [INFO] 
+[08:35:46] [PROCESS] Emission Frame Planckian (B_em): 2*A_obs**3*h*nu_obs**3/(A_em**3*c**2*(exp(A_obs*h*nu_obs/(A_em*T_em*k_B)) - 1))
+[08:35:46] [PROCESS] Kinematic Frequency Shift (nu_em): A_obs*nu_obs/A_em
+[08:35:46] [PROCESS] Phase-Space Conserved Observed Intensity (I_obs): 2*h*nu_obs**3/(c**2*(exp(A_obs*h*nu_obs/(A_em*T_em*k_B)) - 1))
+[08:35:46] [PROCESS] Theoretical Target Planckian at T_obs (B_obs): 2*h*nu_obs**3/(c**2*(exp(A_obs*h*nu_obs/(A_em*T_em*k_B)) - 1))
+[08:35:46] [INFO] 
+[08:35:46] [INFO] ================================================================================
+[08:35:46] [INFO] 
+--- Formal Equivalence Test ---
+[08:35:46] [INFO] ================================================================================
+[08:35:46] [INFO] 
+[08:35:46] [PROCESS] Difference between Transported Intensity and Target Planckian: 0
+[08:35:46] [SUCCESS] Is the sheared spectrum a perfect blackbody? -> True
+[08:35:46] [SUCCESS] 
+[SUCCESS] Gate 5 Passed: Perfect blackbody preservation strictly derived from temporal shear without arbitrary numerical integration grids.
+[08:35:46] [SUCCESS] 
+[COMPLETED] Gate 5R predictions written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate5_thermodynamics.json
+[08:35:46] [SUCCESS]   [OK] 0.1s
+[08:35:46] [PROCESS] [RUN] step_06_helium: Gate 6: Primordial Helium Synthesis

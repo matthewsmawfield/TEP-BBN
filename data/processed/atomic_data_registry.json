@@ -1,0 +1,69 @@
+{
+  "download_date": "2026-07-06T18:05:22.819076",
+  "download_method": "astroquery.nist (programmatic access to NIST ASD)",
+  "nist_version": "5.11.1",
+  "elements": [
+    "H_I",
+    "D_I",
+    "O_I",
+    "Si_II",
+    "C_II",
+    "Fe_II"
+  ],
+  "data": {
+    "H_I": {
+      "status": "partial_data",
+      "file": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/atomic/H_I/H_I_lines.txt",
+      "n_lines": 23,
+      "n_with_oscillator": 19,
+      "warning": "Only 19/23 lines have oscillator strengths",
+      "checksum": "e5e64db44a25fbb3254e242a8484e9a9e25d6b917960378c64654d0496074762",
+      "size_bytes": 1484
+    },
+    "D_I": {
+      "status": "partial_data",
+      "file": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/atomic/D_I/D_I_lines.txt",
+      "n_lines": 22,
+      "n_with_oscillator": 15,
+      "warning": "Only 15/22 lines have oscillator strengths",
+      "checksum": "e4195b3791db0371119af15d0f342fdc77e5499ebc1586387725a5e8d3fe4022",
+      "size_bytes": 717
+    },
+    "O_I": {
+      "status": "real_data",
+      "file": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/atomic/O_I/O_I_lines.txt",
+      "n_lines": 2,
+      "n_with_oscillator": 2,
+      "download_method": "astroquery.nist",
+      "checksum": "5a189262e5904efdfeeb527c87d06d9755ae5c9a707d7e3b51fa9022c68fc555",
+      "size_bytes": 427
+    },
+    "Si_II": {
+      "status": "real_data",
+      "file": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/atomic/Si_II/Si_II_lines.txt",
+      "n_lines": 2,
+      "n_with_oscillator": 2,
+      "download_method": "astroquery.nist",
+      "checksum": "d2b2553f1e72f493515d27d92bcc48bd75ea5b424d6896a599161bd9f4a5e061",
+      "size_bytes": 415
+    },
+    "C_II": {
+      "status": "real_data",
+      "file": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/atomic/C_II/C_II_lines.txt",
+      "n_lines": 2,
+      "n_with_oscillator": 2,
+      "download_method": "astroquery.nist",
+      "checksum": "62ccce55cf8cd88ccf608174e1e0bd782c339e98da22c7bfad0da7efa66a11d8",
+      "size_bytes": 414
+    },
+    "Fe_II": {
+      "status": "partial_data",
+      "file": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/atomic/Fe_II/Fe_II_lines.txt",
+      "n_lines": 13,
+      "n_with_oscillator": 9,
+      "warning": "Only 9/13 lines have oscillator strengths",
+      "checksum": "5a62c37a9de67a9c20069dd5c5703266762fb9579caab51185f19b09ca606e4d",
+      "size_bytes": 1483
+    }
+  }
+}

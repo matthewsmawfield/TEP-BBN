@@ -1,0 +1,13 @@
+{
+  "system_id": "Q1444+2919_z2.428",
+  "scientific_use": true,
+  "is_proxy": false,
+  "D_window_used": false,
+  "components": [
+    {
+      "component_id": 1,
+      "velocity_kms": 0.0,
+      "g_i": 0.88
+    }
+  ]
+}

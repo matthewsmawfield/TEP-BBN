@@ -1,0 +1,14 @@
+[
+  {
+    "source_file": "/Users/matthewsmawfield/Downloads/Temporal-Efficacy-Profiler-1.0.tar.gz",
+    "system_id": null,
+    "status": "RAW_PRODUCT_REJECTED",
+    "sha256": null
+  },
+  {
+    "source_file": "/Users/matthewsmawfield/Downloads/J101155+294141_Final_Spectrum.tar.gz",
+    "system_id": "Q1009+2956_z2.504",
+    "status": "IMPORTED_AND_VALIDATED",
+    "sha256": "81e8dbf27c5c3888ad6b867dce84aa73755b1e1bad65567aed46dea38e457745"
+  }
+]

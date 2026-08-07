@@ -1,0 +1,15 @@
+# Atomic data for Deuterium I
+# Source: NIST ASD 5.11.1
+# URL: https://physics.nist.gov/ASD
+# Downloaded: 2026-07-06T18:05:29.818445
+# Method: astroquery.nist (programmatic access)
+#
+# Format: wavelength (Å)  oscillator_strength  transition  lower_level  upper_level
+#
+1215.3376  6.2665e+08  Lyα  1s     | 2S   | 1/2  2p     | 2P*  | 3/2
+1215.3379  4.6999e+08  Lyα  1s     | 2S   | 1/2  2      |      |
+1215.3424  N/A  Lyα  1s     | 2S   | 1/2  2s     | 2S   | 1/2
+949.4845  N/A  Lyδ  1s     | 2S   | 1/2  5d     | 2D   | 5/2
+949.4848  N/A  Lyδ  1s     | 2S   | 1/2  5s     | 2S   | 1/2
+937.5482  N/A  Lyε  1s     | 2S   | 1/2  6d     | 2D   | 5/2
+937.5484  N/A  Lyε  1s     | 2S   | 1/2  6s     | 2S   | 1/2

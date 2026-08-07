@@ -1,0 +1,32 @@
+[08:35:46] [INFO] ================================================================================
+[08:35:46] [INFO] Script: step_04_prior
+[08:35:46] [INFO] Started: 2026-08-08T08:35:46.034509
+[08:35:46] [INFO] ================================================================================
+[08:35:46] [SUCCESS] === GATE 4: TEP ABSORBER FIELD CLOSURE ===
+[08:35:46] [INFO] 
+[08:35:46] [INFO] ================================================================================
+[08:35:46] [INFO] 
+Executing Gate 4: Symbolic Derivation of Temporal Shear Sign...
+
+[08:35:46] [INFO] ================================================================================
+[08:35:46] [INFO] 
+[08:35:46] [PROCESS] --- Mathematical Assumptions ---
+[08:35:46] [PROCESS] 1. Conformal Coupling (alpha) is strictly negative: True
+[08:35:46] [PROCESS] 2. Absorber Density (rho) is strictly positive: True
+[08:35:46] [PROCESS] 
+--- Field Propagation ---
+[08:35:46] [PROCESS] Scalar Depth (Delta phi) equation: G_int*alpha*rho
+[08:35:46] [PROCESS] Is Delta phi strictly negative? -> True
+[08:35:46] [PROCESS] 
+Temporal Gradient (Delta ln A) equation: G_int*alpha**2*rho
+[08:35:46] [PROCESS] Is Delta ln A strictly positive? -> True
+[08:35:46] [PROCESS] 
+--- Observable Conclusion ---
+[08:35:46] [PROCESS] Apparent Velocity Shift (Delta v_T) equation: -G_int*alpha**2*c*rho
+[08:35:46] [PROCESS] Is Delta v_T strictly negative (Blueward)? -> True
+[08:35:46] [SUCCESS] 
+[SUCCESS] Gate 4 Passed: Blueward shift mathematically guaranteed independent of mass amplitude.
+[08:35:46] [SUCCESS] 
+[COMPLETED] Gate 4 predictions written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4_prediction.json
+[08:35:46] [SUCCESS]   [OK] 0.3s
+[08:35:46] [PROCESS] [RUN] step_05_thermodynamics: Gate 5: Matter-Frame Temporal Thermodynamics

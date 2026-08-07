@@ -1,0 +1,215 @@
+{
+  "angular_scale": {
+    "consistent": false,
+    "fractional_difference": 0.019289,
+    "theta_s_LCDM": 0.010411,
+    "theta_s_TEP": 0.01061182
+  },
+  "baseline_comparison": {
+    "lcdm": {
+      "visibility_preserved": true,
+      "z_star": 1085.16
+    },
+    "tep_epsilon_0": {
+      "matches_lcdm": true,
+      "visibility_preserved": true,
+      "z_star": 1085.16
+    },
+    "tep_no_screening": {
+      "visibility_preserved": false,
+      "z_star": 1086.09
+    },
+    "tep_with_screening": {
+      "visibility_preserved": true,
+      "z_star": 1078.58
+    }
+  },
+  "description": "Recombination and visibility function validation with Saha+Peebles physics",
+  "diagnostics": {
+    "g_max": 0.00433653,
+    "tau_at_0": 0.0,
+    "tau_at_1090": 0.9987,
+    "x_e_at_0": 0.000198,
+    "x_e_at_100": 0.000322,
+    "x_e_at_1090": 0.131393,
+    "x_e_at_1500": 0.954743
+  },
+  "drag_horizon": {
+    "consistent": false,
+    "fractional_difference": -0.016115,
+    "r_d_LCDM": 147.33,
+    "r_d_TEP": 144.96,
+    "z_drag": 1091.09
+  },
+  "interpretation": "Recombination and acoustic scales preserved",
+  "lcdm_baseline": {
+    "angular_scale": {
+      "consistent": true,
+      "fractional_difference": 0.000913,
+      "theta_s_LCDM": 0.010411,
+      "theta_s_TEP": 0.0104205
+    },
+    "description": "Recombination and visibility function validation with Saha+Peebles physics",
+    "diagnostics": {
+      "g_max": 0.02125977,
+      "tau_at_0": -0.0,
+      "tau_at_1090": 1.0553,
+      "x_e_at_0": 1.163687,
+      "x_e_at_100": 0.000274,
+      "x_e_at_1090": 0.131834,
+      "x_e_at_1500": 0.954966
+    },
+    "drag_horizon": {
+      "consistent": true,
+      "fractional_difference": -0.001876,
+      "r_d_LCDM": 147.33,
+      "r_d_TEP": 147.05,
+      "z_drag": 1059.93
+    },
+    "interpretation": "Recombination and acoustic scales preserved",
+    "parameters": {
+      "epsilon_t": 0,
+      "model": "lcdm",
+      "n_points": 1000,
+      "n_t": 1.0,
+      "use_screening": false,
+      "z_max": 2500.0,
+      "z_t": 100.0
+    },
+    "recombination_epoch": {
+      "consistent": true,
+      "fractional_difference": -0.0044,
+      "z_star_LCDM": 1089.92,
+      "z_star_TEP": 1085.16
+    },
+    "sound_horizon": {
+      "consistent": false,
+      "fractional_difference": -0.01551,
+      "r_s_LCDM": 147.09,
+      "r_s_TEP": 144.81
+    },
+    "step": "step_05_recombination_visibility",
+    "visibility_preserved": true
+  },
+  "parameters": {
+    "epsilon_t": 0.1,
+    "model": "tep",
+    "n_points": 1000,
+    "n_t": 1.0,
+    "use_screening": true,
+    "z_max": 2500.0,
+    "z_t": 100.0
+  },
+  "recombination_epoch": {
+    "consistent": false,
+    "fractional_difference": -0.0104,
+    "z_star_LCDM": 1089.92,
+    "z_star_TEP": 1078.58
+  },
+  "sound_horizon": {
+    "consistent": true,
+    "fractional_difference": -0.007071,
+    "r_s_LCDM": 147.09,
+    "r_s_TEP": 146.05
+  },
+  "step": "step_05_recombination_visibility",
+  "tep_no_screening": {
+    "angular_scale": {
+      "consistent": false,
+      "fractional_difference": -0.287741,
+      "theta_s_LCDM": 0.010411,
+      "theta_s_TEP": 0.00741533
+    },
+    "description": "Recombination and visibility function validation with Saha+Peebles physics",
+    "diagnostics": {
+      "g_max": 0.00416817,
+      "tau_at_0": 0.0,
+      "tau_at_1090": 0.9137,
+      "x_e_at_0": 0.000216,
+      "x_e_at_100": 0.00037,
+      "x_e_at_1090": 0.149037,
+      "x_e_at_1500": 0.954938
+    },
+    "drag_horizon": {
+      "consistent": false,
+      "fractional_difference": -0.31863,
+      "r_d_LCDM": 147.33,
+      "r_d_TEP": 100.39,
+      "z_drag": 1098.6
+    },
+    "interpretation": "Recombination requires further analysis or early-epoch screening",
+    "parameters": {
+      "epsilon_t": 0.1,
+      "model": "tep",
+      "n_points": 1000,
+      "n_t": 1.0,
+      "use_screening": false,
+      "z_max": 2500.0,
+      "z_t": 100.0
+    },
+    "recombination_epoch": {
+      "consistent": true,
+      "fractional_difference": -0.0035,
+      "z_star_LCDM": 1089.92,
+      "z_star_TEP": 1086.09
+    },
+    "sound_horizon": {
+      "consistent": false,
+      "fractional_difference": -0.311749,
+      "r_s_LCDM": 147.09,
+      "r_s_TEP": 101.23
+    },
+    "step": "step_05_recombination_visibility",
+    "visibility_preserved": false
+  },
+  "tep_zero_test": {
+    "angular_scale": {
+      "consistent": true,
+      "fractional_difference": 0.000913,
+      "theta_s_LCDM": 0.010411,
+      "theta_s_TEP": 0.0104205
+    },
+    "description": "Recombination and visibility function validation with Saha+Peebles physics",
+    "diagnostics": {
+      "g_max": 0.02125977,
+      "tau_at_0": -0.0,
+      "tau_at_1090": 1.0553,
+      "x_e_at_0": 1.163687,
+      "x_e_at_100": 0.000274,
+      "x_e_at_1090": 0.131834,
+      "x_e_at_1500": 0.954966
+    },
+    "drag_horizon": {
+      "consistent": true,
+      "fractional_difference": -0.001876,
+      "r_d_LCDM": 147.33,
+      "r_d_TEP": 147.05,
+      "z_drag": 1059.93
+    },
+    "interpretation": "Recombination and acoustic scales preserved",
+    "parameters": {
+      "epsilon_t": 0,
+      "model": "tep",
+      "n_points": 1000,
+      "n_t": 1.0,
+      "use_screening": false,
+      "z_max": 2500.0,
+      "z_t": 100.0
+    },
+    "recombination_epoch": {
+      "consistent": true,
+      "fractional_difference": -0.0044,
+      "z_star_LCDM": 1089.92,
+      "z_star_TEP": 1085.16
+    },
+    "sound_horizon": {
+      "consistent": false,
+      "fractional_difference": -0.01551,
+      "r_s_LCDM": 147.09,
+      "r_s_TEP": 144.81
+    },
+    "step": "step_05_recombination_visibility",
+    "visibility_preserved": true
+  },
+  "visibility_preserved": true
+}

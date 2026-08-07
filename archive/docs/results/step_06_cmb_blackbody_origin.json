@@ -1,0 +1,61 @@
+{
+  "blackbody_preserved": true,
+  "description": "CMB blackbody preservation under temporal-horizon thermal mapping",
+  "firas_analysis": {
+    "T_error": 0.0,
+    "T_firas": 2.725,
+    "consistent_with_standard": false,
+    "has_data": true
+  },
+  "interpretation": "Temporal-horizon thermal mapping preserves blackbody spectrum without forbidden distortions",
+  "parameters": {
+    "epsilon_t": 0.1,
+    "n_t": 1.0,
+    "z_t": 100.0,
+    "z_test": 1100.0
+  },
+  "redshift_evolution": [
+    {
+      "blackbody_preserved": true,
+      "mu_fit": 2e-08,
+      "y_fit": 0.0,
+      "z": 100
+    },
+    {
+      "blackbody_preserved": true,
+      "mu_fit": 2e-08,
+      "y_fit": 0.0,
+      "z": 500
+    },
+    {
+      "blackbody_preserved": true,
+      "mu_fit": 2e-08,
+      "y_fit": 0.0,
+      "z": 1100
+    },
+    {
+      "blackbody_preserved": true,
+      "mu_fit": 2e-08,
+      "y_fit": 0.0,
+      "z": 2000
+    }
+  ],
+  "spectral_distortions": {
+    "mu_constraint": 9e-05,
+    "mu_error": 0.0,
+    "mu_fit": 2e-08,
+    "mu_violates_firas": false,
+    "y_constraint": 1.5e-05,
+    "y_error": 0.0,
+    "y_fit": 0.0,
+    "y_violates_firas": false
+  },
+  "step": "step_06_cmb_blackbody_origin",
+  "tep_thermal_mapping": {
+    "A_at_z_test": 0.9967038494,
+    "T_tep_error": 1e-06,
+    "T_tep_fit": 2.734012,
+    "T_tep_prediction": 2.734012,
+    "thermal_scaling_preserves_blackbody": true
+  }
+}

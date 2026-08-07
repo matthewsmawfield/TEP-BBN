@@ -1,0 +1,12 @@
+{
+  "system_id": "Q1444+2919_z2.624",
+  "role": "UNTOUCHED_CONFIRMATION",
+  "predicted_component": null,
+  "predicted_velocity_kms": null,
+  "predicted_sign": null,
+  "null_probability": 1.0,
+  "rank_score": 0.0,
+  "input_hash": "7373e1e4fdd5995d8452287c8b99da77529549faba634faa47d05bf08a7a3d04",
+  "predictor_hash": "24e0a201795e8587c06f111b57ce211b52178393f58930017c0abd5bdf5823cd",
+  "sealed_at": "2026-07-25T22:08:46.803020+00:00"
+}

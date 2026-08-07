@@ -1,0 +1,20 @@
+{
+  "system_id": "PKS1937-1009_z3.256",
+  "feature_version": "measured-v1.0-real-literature-proxy",
+  "source": "proxy constructed from literature z=3.256, logN=18.26",
+  "D_window_used": false,
+  "components": [
+    {
+      "component_id": 1,
+      "velocity_kms": 0.0,
+      "metal_alignment_strength": 0.9,
+      "multi_lyman_score": 1.0,
+      "column_feature": 1.0,
+      "g_i": 0.9,
+      "g_i_uncertainty": 0.05
+    }
+  ],
+  "reference_redshift": 3.256,
+  "is_proxy": true,
+  "scientific_use": false
+}

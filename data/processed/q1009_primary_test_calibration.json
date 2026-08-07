@@ -1,0 +1,29 @@
+{
+  "t_full_threshold": 5.097319059547599,
+  "null_false_positives": 0,
+  "null_total": 1000,
+  "fpr_95_upper_bound": 0.0029912495452490075,
+  "recoveries": {
+    "TEP_0.0005": {
+      "recovered": 203,
+      "total": 250,
+      "rate": 0.812,
+      "ci_95_lower": 0.7579623631812246,
+      "ci_95_upper": 0.8584720597034963
+    },
+    "TEP_0.0007": {
+      "recovered": 191,
+      "total": 250,
+      "rate": 0.764,
+      "ci_95_lower": 0.7064007550707685,
+      "ci_95_upper": 0.815222701268489
+    },
+    "TEP_0.0009": {
+      "recovered": 151,
+      "total": 250,
+      "rate": 0.604,
+      "ci_95_lower": 0.5404361888024776,
+      "ci_95_upper": 0.6650669584223582
+    }
+  }
+}

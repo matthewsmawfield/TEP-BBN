@@ -1,0 +1,14 @@
+{
+  "system_id": "HS0105+1619_z2.536",
+  "selected_dataset_directory": "data/raw/reduced_products/HS0105+1619_z2.536/J010806+163550/Tytler_Oct_9_10_11_1999",
+  "flux_file": "data/raw/reduced_products/HS0105+1619_z2.536/J010806+163550/Tytler_Oct_9_10_11_1999/J010806+163550_f.fits",
+  "flux_file_sha256": "2137527be9649697410370d90339ac3fc56d7292710aae33a2e996f4aa541687",
+  "error_file": "data/raw/reduced_products/HS0105+1619_z2.536/J010806+163550/Tytler_Oct_9_10_11_1999/J010806+163550_e.fits",
+  "error_file_sha256": "eb7fa97a8c52e65d7dffc3c5670a8319ca31e5e4f3eef3186c2892f4cec88bbf",
+  "absorber_redshift": 2.536,
+  "lya_coverage_pass": true,
+  "measured_sideband_snr": 46.9,
+  "triage_recovered": 5,
+  "triage_trials": 5,
+  "status": "TRIAGE_PASS_PROVISIONAL"
+}

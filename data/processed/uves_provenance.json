@@ -1,0 +1,43 @@
+{
+  "download_date": "2026-07-06T18:18:45.906031",
+  "download_method": "astroquery.eso (programmatic access to ESO archive)",
+  "archive": "ESO Science Archive",
+  "archive_url": "https://archive.eso.org/",
+  "programs": {
+    "68.B-0115": {
+      "qso": "Q0913+072",
+      "redshift": 2.618,
+      "instrument": "UVES",
+      "n_observations": 26,
+      "n_downloaded": 25,
+      "files": [
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-02-14T04:09:54.782.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-02-14T04:09:57.119.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-13T02:06:38.545.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-13T02:10:11.853.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-13T03:42:54.139.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-13T03:46:24.550.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-14T02:13:24.913.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-14T02:16:59.757.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-02-20T02:41:08.495.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-02-20T02:41:09.386.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-15T00:43:32.990.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-15T00:43:33.859.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-02-16T01:44:51.993.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-02-16T01:44:52.915.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-03-23T03:52:02.081.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-17T03:53:23.787.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-17T03:53:28.956.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-02-18T03:24:42.112.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-02-18T03:24:43.024.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-23T02:17:38.261.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-23T03:28:13.488.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-23T03:28:14.360.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-03-04T05:59:56.318.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-18T03:25:04.920.fits",
+        "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/data/raw/spectra/Q0913072_z2.618/UVES.2002-01-18T03:25:05.996.fits"
+      ],
+      "status": "success"
+    }
+  }
+}

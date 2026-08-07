@@ -1,0 +1,8 @@
+{
+  "original_classifier_freeze": "189b506",
+  "corrected_classifier_freeze": "5cc265e8c7bb58c800a4907806b69ddbd1ba1e95",
+  "allowed_change": "Encapsulated logic for batch scale, dynamic feature vector loading, header-aware input loading (skiprows=1).",
+  "model_logic_changed": false,
+  "priors_changed": false,
+  "gate_thresholds_changed": false
+}

@@ -1,0 +1,13 @@
+{
+  "system_id": "SDSSJ1358+6522_z3.067",
+  "scientific_use": true,
+  "is_proxy": false,
+  "D_window_used": false,
+  "components": [
+    {
+      "component_id": 1,
+      "velocity_kms": 0.0,
+      "g_i": 0.95
+    }
+  ]
+}

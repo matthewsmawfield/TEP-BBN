@@ -1,0 +1,12 @@
+{
+  "system_id": "J1100+1122_z3.030",
+  "role": "LOCKED_VALIDATION_EXTENSION",
+  "predicted_component": null,
+  "predicted_velocity_kms": null,
+  "predicted_sign": null,
+  "null_probability": 1.0,
+  "rank_score": 0.0,
+  "input_hash": "d1fe30592c46cef0ad6b91a47ee2e6962c245c75535e423f2223aef309666c45",
+  "predictor_hash": "04546e04025e335130c40bb8dda526105649288ab5440c8d069e8852ef2e2558",
+  "sealed_at": "2026-07-26T14:09:53.167137+00:00"
+}

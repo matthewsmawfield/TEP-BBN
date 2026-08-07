@@ -1,0 +1,137 @@
+[
+  {
+    "system_id": "Q1009+2956_z2.504",
+    "qso_name": "Q1009+2956",
+    "absorber_redshift": 2.504,
+    "instrument": "Keck/HIRES",
+    "paper": "Cooke et al. 2016",
+    "status": "AUTH_REQUIRED",
+    "attempted_sources": [
+      "local",
+      "KODIAQ",
+      "KOA",
+      "igmspec"
+    ],
+    "required_user_action": "Provide reduced 1D continuum-normalized spectrum covering the relevant Lyman transitions."
+  },
+  {
+    "system_id": "Q1243+3047_z2.529",
+    "qso_name": "Q1243+3047",
+    "absorber_redshift": 2.529,
+    "instrument": "Keck/HIRES",
+    "paper": "Cooke et al. 2016",
+    "status": "AUTH_REQUIRED",
+    "attempted_sources": [
+      "local",
+      "KODIAQ",
+      "KOA",
+      "igmspec"
+    ],
+    "required_user_action": "Provide reduced 1D continuum-normalized spectrum covering the relevant Lyman transitions."
+  },
+  {
+    "system_id": "Q1351+3221_z2.597",
+    "qso_name": "Q1351+3221",
+    "absorber_redshift": 2.597,
+    "instrument": "Keck/HIRES",
+    "paper": "Cooke et al. 2016",
+    "status": "AUTH_REQUIRED",
+    "attempted_sources": [
+      "local",
+      "KODIAQ",
+      "KOA",
+      "igmspec"
+    ],
+    "required_user_action": "Provide reduced 1D continuum-normalized spectrum covering the relevant Lyman transitions."
+  },
+  {
+    "system_id": "Q1444+2919_z2.428",
+    "qso_name": "Q1444+2919",
+    "absorber_redshift": 2.428,
+    "instrument": "Keck/HIRES",
+    "paper": "Cooke et al. 2016",
+    "status": "AUTH_REQUIRED",
+    "attempted_sources": [
+      "local",
+      "KODIAQ",
+      "KOA",
+      "igmspec"
+    ],
+    "required_user_action": "Provide reduced 1D continuum-normalized spectrum covering the relevant Lyman transitions."
+  },
+  {
+    "system_id": "Q1444+2919_z2.624",
+    "qso_name": "Q1444+2919",
+    "absorber_redshift": 2.624,
+    "instrument": "Keck/HIRES",
+    "paper": "Cooke et al. 2016",
+    "status": "AUTH_REQUIRED",
+    "attempted_sources": [
+      "local",
+      "KODIAQ",
+      "KOA",
+      "igmspec"
+    ],
+    "required_user_action": "Provide reduced 1D continuum-normalized spectrum covering the relevant Lyman transitions."
+  },
+  {
+    "system_id": "HS0105+1619_z2.536",
+    "qso_name": "HS0105+1619",
+    "absorber_redshift": 2.536,
+    "instrument": "UVES/HIRES",
+    "paper": "Cooke et al. 2016",
+    "status": "NO_1D_PRODUCT_FOUND",
+    "attempted_sources": [
+      "local",
+      "KODIAQ",
+      "KOA",
+      "igmspec"
+    ],
+    "required_user_action": "Provide reduced 1D continuum-normalized spectrum covering the relevant Lyman transitions."
+  },
+  {
+    "system_id": "SDSSJ1358+6522_z3.067",
+    "qso_name": "J1358+6522",
+    "absorber_redshift": 3.067,
+    "instrument": "UVES",
+    "paper": "Cooke et al. 2016",
+    "status": "NO_1D_PRODUCT_FOUND",
+    "attempted_sources": [
+      "local",
+      "KODIAQ",
+      "KOA",
+      "igmspec"
+    ],
+    "required_user_action": "Provide reduced 1D continuum-normalized spectrum covering the relevant Lyman transitions."
+  },
+  {
+    "system_id": "SDSSJ1558-0031_z2.702",
+    "qso_name": "J1558-0031",
+    "absorber_redshift": 2.702,
+    "instrument": "UVES",
+    "paper": "Cooke et al. 2016",
+    "status": "NO_1D_PRODUCT_FOUND",
+    "attempted_sources": [
+      "local",
+      "KODIAQ",
+      "KOA",
+      "igmspec"
+    ],
+    "required_user_action": "Provide reduced 1D continuum-normalized spectrum covering the relevant Lyman transitions."
+  },
+  {
+    "system_id": "Q0311-1722_z3.734",
+    "qso_name": "Q0311-1722",
+    "absorber_redshift": 3.734,
+    "instrument": "HIRES",
+    "paper": "Cooke et al. 2016",
+    "status": "AUTH_REQUIRED",
+    "attempted_sources": [
+      "local",
+      "KODIAQ",
+      "KOA",
+      "igmspec"
+    ],
+    "required_user_action": "Provide reduced 1D continuum-normalized spectrum covering the relevant Lyman transitions."
+  }
+]

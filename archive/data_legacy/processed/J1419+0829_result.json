@@ -1,0 +1,19 @@
+{
+  "system_id": "J1419+0829_z3.049840",
+  "qso_name": "J1419+0829",
+  "classification": "REAL_NEGATIVE",
+  "classified": true,
+  "included_in_scientific_denominator": true,
+  "gate_passed": false,
+  "interpretation": "Standard D / non-TEP models dominate or tie; TEP replacement criteria not satisfied.",
+  "velocity_width": null,
+  "component_count": 3,
+  "metal_line_asymmetry": null,
+  "primary_secondary_separation": null,
+  "alpha_posterior_mean": 0.0007041958648484152,
+  "p_alpha_in_prior": 0.061270233332947004,
+  "p_f_D_lt_0p5": 0.5228904848208453,
+  "delta_m2_vs_m0": 0.014684117897303395,
+  "delta_m2_vs_m4": 0.03630695516933713,
+  "held_out_diff": 0.027833485325206908
+}

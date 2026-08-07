@@ -1,0 +1,10 @@
+{
+  "system_id": "Q1009+2956_z2.504",
+  "snr": 24.070388748244792,
+  "n_null": 10,
+  "null_fpr": 0.0,
+  "n_injection": 10,
+  "injection_tpr": 0.0,
+  "status": "INCONCLUSIVE_LOW_POWER",
+  "timestamp": "2026-07-15T10:46:53.103199"
+}

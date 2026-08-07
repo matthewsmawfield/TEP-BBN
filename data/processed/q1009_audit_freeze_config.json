@@ -1,0 +1,20 @@
+{
+  "code_commit": "08af1b502bbfd9ba68652b925b292b6be384fbd5",
+  "joint_likelihood_sha256": "ad9ed8e6ded8afa43c7899e03d2c42c14080187c41621542d675c462b7f3aa34",
+  "manifest_sha256": "fac0130515240fca3823e3b6ffd55524674b92c29ee5b106d338dbc0753ad4fe",
+  "feature_vector_sha256": "bd9fcb3eda2b63383837fe558d49c80b28106e22f4d81478da5639ed188abf33",
+  "dynesty_version": "3.0.0",
+  "sampling_method": "slice",
+  "bounding_method": "single",
+  "dlogz_threshold": 0.5,
+  "injected_parameter_vector": {
+    "alpha": 0.0007,
+    "f_D": 0.0,
+    "B_abs": 1.5e-05,
+    "v_shift": 0.0,
+    "c0": 1.0,
+    "c1": 0.0,
+    "c2": 0.0
+  },
+  "audit_config_sha256": "040f60d5dd2bb405cd3c1ee26a6c4c09734c393b7613113bb9710fa7fe2f2e8a"
+}

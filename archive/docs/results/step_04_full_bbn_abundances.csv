@@ -1,0 +1,6 @@
+species,observed,observed_error,TEP,LCDM,TEP_sigma_diff,LCDM_sigma_diff,TEP_consistent,LCDM_consistent
+Y_p,0.247,0.0001,0.2471,0.2471,1.0,1.0,True,True
+D_H,2.527e-05,3e-07,2.514e-05,2.514e-05,-0.43,-0.43,True,True
+He3_H,1.66e-05,8e-07,1.041e-05,1.041e-05,-7.74,-7.74,False,False
+Li7_H,1.58e-10,1e-11,5.238e-10,5.238e-10,36.58,36.58,False,False
+N_eff,3.04,0.17,3.046,3.046,0.04,0.04,True,True

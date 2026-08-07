@@ -1,0 +1,51 @@
+{
+  "completeness_status": {
+    "both_asymptotic": true,
+    "geodesically_complete": true,
+    "null_geodesics_complete": true,
+    "timelike_geodesics_complete": true
+  },
+  "description": "Geodesic completeness test toward temporal horizon",
+  "epsilon_sensitivity": [
+    {
+      "both_asymptotic": true,
+      "epsilon_t": 0.0001,
+      "geodesically_complete": true
+    },
+    {
+      "both_asymptotic": true,
+      "epsilon_t": 0.001,
+      "geodesically_complete": true
+    },
+    {
+      "both_asymptotic": true,
+      "epsilon_t": 0.01,
+      "geodesically_complete": true
+    }
+  ],
+  "interpretation": "Geodesics approach temporal horizon asymptotically (no singularity)",
+  "null_geodesics": {
+    "affine_parameter_complete": true,
+    "asymptotic_approach": true,
+    "integration_success": true,
+    "r_final": 0.999999,
+    "reaches_horizon": false,
+    "t_final": 1.000000001e-06
+  },
+  "parameters": {
+    "epsilon_t": 0.1,
+    "n_points": 1000,
+    "n_t": 1.0,
+    "z_max": 1000.0,
+    "z_t": 100.0
+  },
+  "step": "step_02_geodesic_completeness",
+  "timelike_geodesics": {
+    "asymptotic_approach": true,
+    "integration_success": true,
+    "proper_time_complete": true,
+    "r_final": -0.1,
+    "reaches_horizon": false,
+    "t_final": 1e-06
+  }
+}

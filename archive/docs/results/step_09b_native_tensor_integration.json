@@ -1,0 +1,25 @@
+{
+  "description": "Native tensor-mode integration: first-order Bogoliubov coefficient with physical eta_0",
+  "interpretation": "Native TEP tensor integration gives r_max = 0.00062566 at k_pivot = 8.7e-06 (analytic est. 0.00446742). For k*eta_0 >> 1, rapid oscillations across the transition suppress tensor production. Result is below BICEP/Keck bound r < 0.036: True.",
+  "parameters": {
+    "epsilon_field": 0.0175,
+    "eta_0_Mpc": 6000.0,
+    "n_profile": 2.0,
+    "p": 0.1,
+    "r_BK_max": 0.036,
+    "r_inflationary": 0.28
+  },
+  "results": {
+    "below_BK_bound": true,
+    "k_tilde_range": [
+      0.6,
+      6000.0
+    ],
+    "num_k": 50,
+    "r_analytic_estimate": 0.00446742,
+    "r_at_pivot": 9e-06,
+    "r_max": 0.000626,
+    "r_min": null
+  },
+  "step": "step_09b_native_tensor_integration"
+}

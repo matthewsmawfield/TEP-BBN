@@ -1,0 +1,28 @@
+{
+  "systems": [
+    {
+      "system_id": "Q0913+072_z2.618",
+      "qso_name": "Q0913+072",
+      "aliases": [
+        "Q0913+072"
+      ],
+      "absorber_redshift": 2.618,
+      "instrument": "Keck/HIRES",
+      "paper": "",
+      "status": "READY_FOR_STEP15"
+    },
+    {
+      "system_id": "J1419+0829_z3.049840",
+      "qso_name": "J1419+0829",
+      "aliases": [
+        "J1419+0829",
+        "SDSS J1419+0829"
+      ],
+      "absorber_redshift": 3.04984,
+      "instrument": "UVES",
+      "paper": "Cooke et al. 2014 / Pettini et al. 2008",
+      "status": "PUBLIC_SPECTRUM_FOUND",
+      "access_url": "http://archive.eso.org/datalink/links?ID=ivo://eso.org/ID?ADP.2020-06-19T07:49:49.431"
+    }
+  ]
+}

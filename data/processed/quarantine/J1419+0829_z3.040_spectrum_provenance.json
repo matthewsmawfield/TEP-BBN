@@ -1,0 +1,23 @@
+{
+  "source": "ESO Phase 3",
+  "access_url": "http://archive.eso.org/datalink/links?ID=ivo://eso.org/ID?ADP.2020-06-19T07:49:49.431",
+  "fits_url": "https://dataportal.eso.org/dataPortal/file/ADP.2020-06-19T07:49:49.431",
+  "archive_target_name": "J1419+0829",
+  "absorber_redshift": 3.04,
+  "lya_observed_wavelength_angstrom": 4911.3068,
+  "wavelength_unit": "angstrom",
+  "velocity_window": [
+    -300,
+    100
+  ],
+  "normalization_method": "linear_edge_fit",
+  "input_fits_columns": [
+    "WAVE",
+    "FLUX_REDUCED",
+    "ERR_REDUCED",
+    "BGFLUX_REDUCED",
+    "FLUX",
+    "ERR"
+  ],
+  "output_path": "data/processed/J1419+0829_z3.040_1D_spectrum.txt"
+}

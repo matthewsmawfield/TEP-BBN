@@ -1,0 +1,42 @@
+{
+  "Q1009+2956_z2.504": {
+    "predicted_component": 1,
+    "predicted_velocity_kms": 0.0,
+    "sign": "BLUEWARD",
+    "p_null": 0.0,
+    "rank_score": 0.5,
+    "prediction_level": 3,
+    "rule_class": "CHAMELEON_SCREENING_GATE",
+    "allowed_input_hash": "04a16ba0e433642eb7bb70612a66ebd4472d066964e1945242534e23b4d082df"
+  },
+  "Q0913+072": {
+    "predicted_component": null,
+    "predicted_velocity_kms": null,
+    "sign": null,
+    "p_null": 1.0,
+    "rank_score": 0.0,
+    "prediction_level": 3,
+    "rule_class": "CHAMELEON_SCREENING_GATE",
+    "allowed_input_hash": "981fc418c6dcf016adf3dd3283dc1f5802a96d25c69154ede20f667c2d53414b"
+  },
+  "J1419+0829_z3.049840": {
+    "predicted_component": null,
+    "predicted_velocity_kms": null,
+    "sign": null,
+    "p_null": 1.0,
+    "rank_score": 0.0,
+    "prediction_level": 3,
+    "rule_class": "CHAMELEON_SCREENING_GATE",
+    "allowed_input_hash": "aed2fc233ad98b25a8ac6db2080887114cf93c1dec4951384bcd85ae125d3851"
+  },
+  "PKS1937-1009_z3.256": {
+    "predicted_component": null,
+    "predicted_velocity_kms": null,
+    "sign": null,
+    "p_null": 1.0,
+    "rank_score": 0.0,
+    "prediction_level": 3,
+    "rule_class": "CHAMELEON_SCREENING_GATE",
+    "allowed_input_hash": "256ccc58d8c0eb08039bcf2165cf8b82150828bf11c8ebbbf349a43a3a9cb2bc"
+  }
+}

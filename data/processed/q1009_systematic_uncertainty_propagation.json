@@ -1,0 +1,20 @@
+{
+  "delta_v_stat": 2.1361569001620637,
+  "sigma_stat": 0.209999999999809,
+  "mandatory_systematics": {
+    "sigma_zp": 0.3,
+    "sigma_z_parent": 0.4,
+    "sigma_lsf": 0.25,
+    "sigma_sys_mandatory": 0.5590169943749475,
+    "sigma_total_mandatory": 0.5971599450732775,
+    "z_score_mandatory": 3.5771938787688375,
+    "is_zero_excluded_3sig": true
+  },
+  "sensitivity_systematics": {
+    "sigma_asym": 0.5,
+    "sigma_cont": 0.35,
+    "sigma_sys_sensitivity": 0.8276472678623424,
+    "sigma_total_sensitivity": 0.8538735269347093,
+    "z_score_sensitivity": 2.501725176831022
+  }
+}

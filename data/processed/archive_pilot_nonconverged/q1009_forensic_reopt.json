@@ -1,0 +1,412 @@
+{
+    "H0a_LL": -18816.907363618135,
+    "H0b_LL": -17487.593449990924,
+    "H1_LL": -16755.338500508555,
+    "H1_params": [
+        -131.89147014349828,
+        12.453728656347415,
+        9.010164184600674
+    ],
+    "decomp": [
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lya",
+            "w_min": 4254.42,
+            "w_max": 4265.0,
+            "delta_ll": 328.8052965606254,
+            "n_pixels": 568
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lya",
+            "w_min": 4254.42,
+            "w_max": 4265.0,
+            "delta_ll": 219.00558671744756,
+            "n_pixels": 568
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lya",
+            "w_min": 4254.42,
+            "w_max": 4265.0,
+            "delta_ll": 107.02339957980917,
+            "n_pixels": 286
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lya",
+            "w_min": 4254.42,
+            "w_max": 4265.0,
+            "delta_ll": 76.68231278251322,
+            "n_pixels": 285
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lyb",
+            "w_min": 3591.1,
+            "w_max": 3597.1,
+            "delta_ll": 34.21098635600082,
+            "n_pixels": 382
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lye+",
+            "w_min": 3259.3,
+            "w_max": 3264.2,
+            "delta_ll": 9.048522958656626,
+            "n_pixels": 344
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lye+",
+            "w_min": 3259.3,
+            "w_max": 3264.2,
+            "delta_ll": 7.113071347334127,
+            "n_pixels": 343
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lyb",
+            "w_min": 3591.1,
+            "w_max": 3597.1,
+            "delta_ll": 5.493094084071316,
+            "n_pixels": 192
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lye+",
+            "w_min": 3259.3,
+            "w_max": 3264.2,
+            "delta_ll": 4.387814382905011,
+            "n_pixels": 173
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lyb",
+            "w_min": 3591.1,
+            "w_max": 3597.1,
+            "delta_ll": 2.9145795879143597,
+            "n_pixels": 382
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lye+",
+            "w_min": 3209.81,
+            "w_max": 3212.89,
+            "delta_ll": 2.127140738309447,
+            "n_pixels": 220
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lye+",
+            "w_min": 3209.81,
+            "w_max": 3212.89,
+            "delta_ll": 2.020227804613678,
+            "n_pixels": 220
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lye+",
+            "w_min": 3208.08,
+            "w_max": 3210.2,
+            "delta_ll": 1.6800878879205203,
+            "n_pixels": 151
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lye+",
+            "w_min": 3208.08,
+            "w_max": 3210.2,
+            "delta_ll": 1.4850285380031352,
+            "n_pixels": 151
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lyg",
+            "w_min": 3403.95,
+            "w_max": 3411.03,
+            "delta_ll": 1.2153072584568645,
+            "n_pixels": 240
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lye+",
+            "w_min": 3209.81,
+            "w_max": 3212.89,
+            "delta_ll": 1.1112109524791525,
+            "n_pixels": 109
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lye+",
+            "w_min": 3208.08,
+            "w_max": 3210.2,
+            "delta_ll": 0.7198163033014819,
+            "n_pixels": 77
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lyb",
+            "w_min": 3591.1,
+            "w_max": 3597.1,
+            "delta_ll": 0.5598396567915237,
+            "n_pixels": 191
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lyg",
+            "w_min": 3403.95,
+            "w_max": 3411.03,
+            "delta_ll": 0.4839642903227689,
+            "n_pixels": 239
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lyg",
+            "w_min": 3422.22,
+            "w_max": 3425.6,
+            "delta_ll": 0.25348272411203576,
+            "n_pixels": 225
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lye+",
+            "w_min": 3209.81,
+            "w_max": 3212.89,
+            "delta_ll": 0.2330080995450734,
+            "n_pixels": 110
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lye+",
+            "w_min": 3199.5,
+            "w_max": 3201.25,
+            "delta_ll": 0.16456552967065186,
+            "n_pixels": 125
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lye+",
+            "w_min": 3199.5,
+            "w_max": 3201.25,
+            "delta_ll": 0.01587460327280099,
+            "n_pixels": 63
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lye+",
+            "w_min": 3199.5,
+            "w_max": 3201.25,
+            "delta_ll": 0.01187909472127302,
+            "n_pixels": 63
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lye+",
+            "w_min": 3199.5,
+            "w_max": 3201.25,
+            "delta_ll": 0.00617615115921577,
+            "n_pixels": 125
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lye+",
+            "w_min": 3208.08,
+            "w_max": 3210.2,
+            "delta_ll": -0.06588582323775127,
+            "n_pixels": 71
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lya",
+            "w_min": 5432.25,
+            "w_max": 5434.6,
+            "delta_ll": -0.09400690769759357,
+            "n_pixels": 49
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lya",
+            "w_min": 4674.8,
+            "w_max": 4676.7,
+            "delta_ll": -0.395057297055603,
+            "n_pixels": 47
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lya",
+            "w_min": 4674.8,
+            "w_max": 4676.7,
+            "delta_ll": -0.46150602319756695,
+            "n_pixels": 93
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lya",
+            "w_min": 4674.8,
+            "w_max": 4676.7,
+            "delta_ll": -0.7557802237260448,
+            "n_pixels": 46
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lya",
+            "w_min": 4913.9,
+            "w_max": 4915.7,
+            "delta_ll": -0.7798688028470779,
+            "n_pixels": 42
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lyg",
+            "w_min": 3422.22,
+            "w_max": 3425.6,
+            "delta_ll": -0.8703105664265025,
+            "n_pixels": 113
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lya",
+            "w_min": 5423.2,
+            "w_max": 5425.5,
+            "delta_ll": -1.035128831463001,
+            "n_pixels": 48
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lya",
+            "w_min": 4674.8,
+            "w_max": 4676.7,
+            "delta_ll": -1.0506407246226706,
+            "n_pixels": 93
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lya",
+            "w_min": 4882.3,
+            "w_max": 4884.1,
+            "delta_ll": -1.3505174511515925,
+            "n_pixels": 84
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lya",
+            "w_min": 5432.25,
+            "w_max": 5434.6,
+            "delta_ll": -1.5203050224461958,
+            "n_pixels": 80
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lya",
+            "w_min": 4913.9,
+            "w_max": 4915.7,
+            "delta_ll": -1.5874525933600383,
+            "n_pixels": 42
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lya",
+            "w_min": 5423.2,
+            "w_max": 5425.5,
+            "delta_ll": -1.7291538295367315,
+            "n_pixels": 49
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lyg",
+            "w_min": 3403.95,
+            "w_max": 3411.03,
+            "delta_ll": -1.773225911931534,
+            "n_pixels": 475
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lya",
+            "w_min": 5423.2,
+            "w_max": 5425.5,
+            "delta_ll": -2.474736142781357,
+            "n_pixels": 97
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lya",
+            "w_min": 5423.2,
+            "w_max": 5425.5,
+            "delta_ll": -3.1285097260685344,
+            "n_pixels": 97
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lya",
+            "w_min": 5432.25,
+            "w_max": 5434.6,
+            "delta_ll": -3.2609021123848603,
+            "n_pixels": 99
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lyg",
+            "w_min": 3422.22,
+            "w_max": 3425.6,
+            "delta_ll": -3.5204040139623283,
+            "n_pixels": 114
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lyg",
+            "w_min": 3403.95,
+            "w_max": 3411.03,
+            "delta_ll": -3.7724173572728685,
+            "n_pixels": 476
+        },
+        {
+            "coadd": "q1011p2941_C1x2.dat",
+            "transition": "Lya",
+            "w_min": 4882.3,
+            "w_max": 4884.1,
+            "delta_ll": -4.173058413165491,
+            "n_pixels": 43
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lya",
+            "w_min": 4882.3,
+            "w_max": 4884.1,
+            "delta_ll": -4.681353924110523,
+            "n_pixels": 84
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lyg",
+            "w_min": 3422.22,
+            "w_max": 3425.6,
+            "delta_ll": -5.255987398394399,
+            "n_pixels": 226
+        },
+        {
+            "coadd": "q1011p2941_C5x1.dat",
+            "transition": "Lya",
+            "w_min": 4913.9,
+            "w_max": 4915.7,
+            "delta_ll": -6.8984295240251425,
+            "n_pixels": 84
+        },
+        {
+            "coadd": "q1011p2941_C5x2.dat",
+            "transition": "Lya",
+            "w_min": 4882.3,
+            "w_max": 4884.1,
+            "delta_ll": -7.672685106413622,
+            "n_pixels": 42
+        },
+        {
+            "coadd": "q1011p2941_C1x1.dat",
+            "transition": "Lya",
+            "w_min": 4913.9,
+            "w_max": 4915.7,
+            "delta_ll": -16.2100007803093,
+            "n_pixels": 84
+        }
+    ]
+}

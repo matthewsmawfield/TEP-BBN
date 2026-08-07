@@ -1,0 +1,39 @@
+# TEP-BBN Requirements
+# Python 3.9+ required
+# Last updated: 2026-07-06
+
+# Core scientific computing
+numpy>=1.21.0,<2.0.0
+scipy>=1.7.0,<2.0.0
+pandas>=1.3.0,<3.0.0
+
+# Data visualization
+matplotlib>=3.4.0,<4.0.0
+
+# Bayesian inference
+dynesty>=1.2.0,<2.0.0
+emcee>=3.0.0,<4.0.0
+
+# Spectroscopic analysis (TEP-BBN specific)
+astropy>=5.0.0,<6.0.0
+
+# Data access (TEP-BBN specific - for real data downloads)
+astroquery>=0.4.7,<1.0.0
+
+# Utilities
+pathlib2>=2.3.0; python_version < '3.4'
+typing-extensions>=4.0.0; python_version < '3.8'
+
+# Development dependencies (optional)
+pytest>=7.0.0; extra == 'dev'
+pytest-cov>=3.0.0; extra == 'dev'
+black>=22.0.0; extra == 'dev'
+flake8>=4.0.0; extra == 'dev'
+mypy>=0.900; extra == 'dev'
+
+[dev]
+pytest
+pytest-cov
+black
+flake8
+mypy

@@ -1,0 +1,1432 @@
+## Executive decision
+
+The best way forward for TEP is **not** to keep polishing the current C0–HC–TH trilogy as though thermal screening is the final answer. Your objection is coherent: if TEP’s deepest claim is that cosmological inference has been distorted by the Isochrony Axiom, then simply inheriting Gamow’s hot-plasma thermal history through “thermal screening” feels philosophically inconsistent.
+
+But the best path is also **not** to immediately declare “Hoyle was right,” “deuterium is fake,” or “there was no hot phase” without a calculation. That would make the corpus much easier to dismiss. The right strategy is a **controlled non-Gamow pivot**:
+
+> **Reframe C0–HC–TH as a late-time / acoustic / temporal-horizon compatibility trilogy, then build TEP-BBN as the decisive new paper testing whether deuterium and primordial-abundance inference are contaminated by temporal shear.**
+
+That lets you reject the Gamow frame as final ontology while keeping scientific claim discipline.
+
+The key insight from the discussion is that (A_{\rm clock}\to0) should not be treated as “the universe locally stopped” or “the universe became physically hot.” It should be treated as an **observer-relative temporal-horizon limit**: signals traced to extreme temporal distance approach a limiting clock-rate ratio relative to us. That is the conceptual bridge from the current thermal version to the non-Gamow version. 
+
+---
+
+# The new TEP cosmology architecture
+
+I would divide the cosmology programme into six papers/branches:
+
+| Paper         | New role                                                                     | Status                                                           |
+| ------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **TEP-C0**    | Late-time temporal-transport evidence from SNe/redshift data.                | Keep; reframe as thermal-neutral.                                |
+| **TEP-HC**    | Acoustic-sector mathematical isomorphism under conformal temporal transport. | Keep; reframe as compatibility, not physical plasma proof.       |
+| **TEP-TH**    | Observer-relative temporal horizon. Reframe thermal screening as compatibility branch. | Branch-aware edit; do not remove thermal sector until TEP-BBN passes deuterium gate. |
+| **TEP-BBN**   | Tests whether D/H isotope inference is invariant under temporal shear.       | New decisive paper.                                              |
+| **TEP-HY**    | Hoyle-compatible eternal baryonic-cycle cosmology.                           | Only after TEP-BBN passes.                                       |
+| **TEP-CMB-N** | Non-thermal CMB origin under temporal homogenization.                        | Later; hardest problem.                                          |
+
+**Current repository status:**
+- **TEP-C0** (Paper 26, codename Athens): `/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-C0`
+- **TEP-HC** (Paper 18, codename Cambridge): `/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC`
+- **TEP-TH** (Paper 27, codename Thika): Should be at `/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-TH` (needs to be created)
+- **TEP-BBN** (Paper 29, codename Dubai): Currently at `/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN`
+
+**Repository reorganization status:**
+The TEP-BBN repository has been created from the previous TEP-TH copy and partially reorganized:
+- ✅ Updated repository metadata (VERSION.json, CITATION.cff, README.md)
+- ✅ Corrected core directory structure (removed ISO-specific modules)
+- ✅ Created ISO-specific utility modules in scripts/utils/
+- ⏳ Remaining: Remove TH pipeline steps, replace site manuscript content, update requirements/configs
+- ⏳ TODO: Create proper TEP-TH repository from remaining TH content
+
+The current trilogy should not be destroyed. It should be **recast**. Its new meaning should be:
+
+> C0–HC–TH show that TEP can reproduce the conventional cosmological observables if the standard thermal interpretation is retained, but TEP does not require that interpretation. The non-thermal branch is tested separately through temporal-shear spectroscopy.
+
+That is the strongest route.
+
+---
+
+# Repository structure conventions
+
+All TEP repositories follow a consistent structure to ensure maintainability and cross-project compatibility:
+
+```
+TEP-XX/
+├── core/                 # Shared physics modules
+│   ├── __init__.py
+│   ├── cosmology.py         # TEP background & EFT sector
+│   ├── conformal_scaling.py # Jordan-frame conformal factors
+│   ├── scalar_field.py      # Temporal-shear field
+│   ├── screening.py         # Screening dictionary & PPN
+│   ├── evidence.py          # Evidence-gate infrastructure
+│   ├── constants.py         # Physical constants & aliases
+│   └── (paper-specific modules)
+├── scripts/              # Analysis pipeline
+│   ├── steps/               # Numbered pipeline steps
+│   ├── utils/               # Plotting, PDF generation, logging
+│   └── run_pipeline.py      # Full pipeline runner (or run_all.py)
+├── data/                 # Data directory
+│   ├── raw/                 # Downloaded datasets
+│   ├── processed/           # Ingested catalogues & registries
+│   └── (paper-specific subdirectories)
+├── results/              # Pipeline outputs
+│   ├── figures/             # Generated plots
+│   ├── outputs/             # MCMC chains, CLASS samples, fitting results
+│   └── *.json               # Step results & evidence matrices
+├── site/                 # Static-site manuscript builder
+│   ├── components/          # HTML source of truth
+│   └── public/docs/         # Published PDF
+├── external/             # Patched dependencies
+│   ├── class/               # TEP-CLASS Boltzmann solver (if needed)
+│   └── AlterBBN/            # BBN nucleosynthesis (if needed)
+├── README.md
+├── VERSION.json
+├── CITATION.cff
+└── requirements.txt
+```
+
+## Pipeline execution conventions
+
+- **Full pipeline**: `python scripts/run_pipeline.py` or `python scripts/run_all.py`
+- **Individual steps**: `python scripts/steps/step_XX_name.py`
+- **Site build**: `cd site && npm run build`
+- **Manuscript editing**: Edit `site/components/*.html` only (not auto-generated .md or site/dist/)
+
+## Publication conventions
+
+- **PDF naming**: `{PaperNumber}-TEP-{Code}-v{Version}-{Codename}.pdf`
+- **Site deployment**: Repository-specific GitHub Pages or custom domain
+- **DOI**: Zenodo release with consistent citation format
+
+## Cross-project module sharing
+
+The `core/` directory contains shared physics modules that are maintained across TEP-C0, TEP-HC, TEP-TH, and should be similarly structured in TEP-BBN:
+
+- `cosmology.py`: TEP background & EFT sector (shared across C0/HC/TH)
+- `conformal_scaling.py`: Jordan-frame conformal factors
+- `scalar_field.py`: Temporal-shear field implementation
+- `screening.py`: Screening dictionary & PPN parameters
+- `evidence.py`: Evidence-gate infrastructure for claim validation
+- `constants.py`: Physical constants & aliases
+
+TEP-BBN will add paper-specific modules like `isotopic_shift.py` for D/H temporal-shear formalism.
+
+---
+
+# New controlling thesis
+
+Use this as the shared thesis across the rewritten papers:
+
+> The Temporal Equivalence Principle does not require a physical hot Big Bang. The apparent hot dense origin is an observer-frame reconstruction produced by applying the Isochrony Axiom to temporally transported light, high-redshift spectroscopy, and horizon-limited data. Standard thermal cosmology is retained only as a compatibility branch, not as the final ontology of TEP.
+
+This is more radical than the current trilogy, but still defensible.
+
+---
+
+# Why phantom deuterium must come first
+
+The non-Gamow programme stands or falls first on deuterium, not on the CMB.
+
+The pasted discussion correctly identifies the core problem: helium can be made much less fatal for Hoyle if the universe is eternal, but deuterium is the trap because stars tend to destroy it, and standard BBN treats it as a precision fossil. 
+
+The current D/H evidence is not a vague story. High-quality D/H estimates come from high-redshift damped Lyman-(\alpha) systems; Cooke et al. report a weighted mean from six high-quality DLA measures of (10^5({\rm D/H})_P=2.547\pm0.033). ([arXiv][1]) Earlier precision D/H work also stresses multiple resolved Lyman-series lines and blind profile analysis. ([arXiv][2])
+
+So the first non-Gamow TEP paper must not begin with “the CMB is starlight.” It must begin with:
+
+> Are primordial deuterium measurements invariant under the Isochrony Axiom?
+
+The first numerical gate is clean:
+
+[
+\Delta v_{\rm D/H}\simeq 82\ {\rm km,s^{-1}}
+]
+
+[
+\Delta\ln A \simeq \frac{\Delta v}{c}
+\simeq \frac{82}{299792}
+\simeq 2.7\times10^{-4}
+]
+
+The pasted plan already identifies this as the make-or-break number. 
+
+If TEP can naturally generate (\Delta\ln A\sim2.7\times10^{-4}) across DLA absorbers without ruining the rest of the spectrum, the non-Gamow branch becomes real. If it cannot, the radical branch is weakened.
+
+---
+
+# Rewrite plan for the three current papers
+
+## 1. TEP-C0: keep the science, make it thermal-neutral
+
+C0 is your safest paper because its main claim does not require the hot Big Bang. It is about late-time temporal transport and the SNe distance-redshift relation.
+
+### Keep
+
+Keep the following intact:
+
+* Pantheon+ full-covariance evidence.
+* (z_{\rm los}) line-of-sight temporal-shear transport.
+* Pure conformal control branch.
+* No-(\Lambda) temporal-shear branch.
+* Host/environmental interpretation.
+* Distance-duality stress test.
+* Claim registry.
+
+### Change the role
+
+C0 should stop sounding as if TH has “solved” the early thermal sector. Instead, C0 should explicitly say that its result is **thermal-sector independent**.
+
+Add this to the abstract or end of the introduction:
+
+> The present result is independent of the physical ontology assigned to the high-redshift thermal sector. C0 tests whether late-time distance-redshift observations can be reconstructed by line-of-sight temporal transport in a static spatial geometry. This result is compatible with a screened-limit thermal branch, but it also motivates a non-thermal spectroscopic branch in which primordial abundance inferences are tested for temporal-shear contamination.
+
+### Add a section
+
+Add near the end of C0:
+
+## Thermal-sector neutrality of the C0 result
+
+Suggested text:
+
+> The C0 inference does not require a physical hot Big Bang. Its empirical claim is restricted to the late-time distance-redshift sector: whether the Pantheon+ Hubble diagram can be reconstructed by conformal temporal transport without primitive spatial expansion. The interpretation of high-redshift thermal and abundance data is therefore branch-dependent. If the conventional abundance interpretation is retained, the screened-limit compatibility branch of TEP-TH applies. If primordial abundance measurements are not invariant under temporal shear, the non-thermal TEP-BBN branch becomes available.
+
+### Claim registry edit
+
+Where C0 currently lists early-universe closure, change the status to:
+
+> **Branch-dependent.** Screened thermal compatibility is supplied by TEP-TH. Non-thermal abundance/spectroscopy reinterpretation is assigned to TEP-BBN.
+
+That prevents C0 from endorsing Gamow’s frame.
+
+---
+
+## 2. TEP-HC: reframe as acoustic isomorphism, not plasma ontology
+
+HC should not be deleted. Its value is that it shows TEP can map the conventional acoustic reconstruction into conformal temporal geometry. But it should no longer sound like proof that the standard photon-baryon plasma story is physically final.
+
+### New title option
+
+> **TEP-HC: Acoustic Isomorphism without Spatial Expansion**
+
+Subtitle:
+
+> **A Boltzmann-sector compatibility test of conformal temporal transport**
+
+### New abstract language
+
+Replace any “this proves the early thermal history” tone with:
+
+> HC demonstrates that the conventional CMB acoustic reconstruction can be mapped into TEP’s conformal temporal geometry without primitive spatial expansion. This is an acoustic-sector compatibility theorem, not a commitment to the hot Big Bang as final ontology. A non-thermal origin of the CMB, if viable, requires a separate derivation and is not claimed here.
+
+### Keep the results
+
+Keep:
+
+* native `hi_class` implementation;
+* sound-horizon preservation;
+* active perturbation closure;
+* CAMB high-(\ell) consistency diagnostic;
+* growth/spectrum compatibility.
+
+But relabel them as:
+
+> conventional acoustic-branch compatibility results.
+
+The CMB is the hardest non-Gamow problem because COBE/FIRAS measured an extremely close blackbody spectrum: RMS deviations below 50 ppm of the CMB peak and limits (|y|<15\times10^{-6}), (|\mu|<9\times10^{-5}). ([arXiv][3]) The present CMB temperature review gives (T_{\rm CMB}=2.72548\pm0.00057\ {\rm K}). ([arXiv][4])
+
+So HC should not yet claim a non-thermal CMB. It should say:
+
+> This paper shows that TEP is not killed by the conventional acoustic reconstruction. The physical origin of the CMB monopole and anisotropy pattern is deferred to a later non-thermal branch.
+
+### Add an interpretive-status box
+
+> **Interpretive status.** The present calculation should be read as a compatibility theorem. It shows that the standard CMB acoustic pipeline can be recast in conformal temporal variables. It does not require the photon-baryon plasma interpretation to be accepted as the final physical ontology of TEP.
+
+---
+
+## 3. TEP-TH: branch-aware rewrite around observer-relative temporal horizon
+
+TH is the paper that most needs reframing, but it should be staged. Do not perform a major rewrite yet. Instead make it branch-aware until TEP-BBN passes the deuterium gate.
+
+The current TH direction says, in effect:
+
+> Temporal horizon + thermal screening preserves BBN/recombination.
+
+The staged direction should say:
+
+> Temporal horizon is an observer-relative reconstruction boundary. Thermal screening is a compatibility branch, not final ontology. The non-thermal branch is assigned to TEP-BBN for empirical testing.
+
+### Minimal rewrite for v0.2
+
+**Do not yet make TH fully non-thermal.** Instead:
+
+1. **Rewrite abstract and conclusion** around observer-relative temporal horizons
+2. **Add branch-aware language** in key sections
+3. **Move thermal screening to compatibility appendix** (but do not delete it)
+
+### New title option
+
+> **Observer-Relative Temporal Horizons and the Absence of a Physical Hot Big Bang**
+
+or:
+
+> **Temporal Horizon Cosmology without a Physical Hot Origin**
+
+### Replace the central claim
+
+Current conceptual centre:
+
+> The universe approaches (A_{\rm clock}\to0), thermal screening preserves early physics, and standard BBN is inherited.
+
+New conceptual centre (branch-aware):
+
+> (A_{\rm clock}\to0) is not a local physical state of the universe. It is the observer-relative limit (A_{\rm em}/A_{\rm obs}\to0) reached when signals are traced to extreme temporal distance. The apparent Big Bang is an observational temporal horizon, not a physical hot origin. The screened thermal branch is retained as a compatibility construction. The non-thermal branch is opened and assigned to TEP-BBN.
+
+Use this exact wording:
+
+> The limit (A_{\rm clock}\to0) is not a local claim that clocks in the universe cease to tick. It is an observer-relative conformal limit: as signals are traced across increasing temporal distance, the ratio (A_{\rm em}/A_{\rm obs}) tends toward zero. The apparent Big Bang is therefore an observational temporal horizon, not a physical hot origin of space, matter, or time.
+
+### Move thermal screening to an appendix
+
+Do not delete it yet. Rename it:
+
+> **Appendix B: Screened-limit compatibility with conventional BBN/recombination**
+
+Opening sentence:
+
+> This appendix records a compatibility branch: if the conventional primordial-abundance interpretation is retained, TEP can recover the standard thermal sector through screened-limit reduction. This branch is not asserted as the final physical ontology of TEP.
+
+This is crucial. You do not want reviewers saying you silently abandoned BBN. You want to show you know the conventional constraint, but you are no longer treating it as final.
+
+### Add branch-aware section
+
+Add a major section:
+
+## Branch-dependent interpretation
+
+Suggested text:
+
+> The observer-relative horizon is the primary ontology of TEP-TH. The screened thermal branch is retained as a compatibility construction. The non-thermal branch is opened and assigned to TEP-BBN for empirical testing. TEP-TH does not assert that the non-thermal branch has won; it demonstrates that the temporal-horizon framework is mathematically regular and can accommodate both thermal and non-thermal interpretations.
+
+### Replace conclusion
+
+Replace current conclusion with:
+
+> TEP does not require that the universe began in a physical hot explosion. The apparent Big Bang is an observer-relative temporal reconstruction horizon. The screened-limit thermal construction is retained as a compatibility branch, not asserted as the final ontology of TEP. If primordial abundance inference is not invariant under temporal shear (as tested in TEP-BBN), the non-thermal, Hoyle-compatible branch becomes available.
+
+---
+
+# New cornerstone paper: TEP-BBN
+
+This is the key to the whole pivot.
+
+## Proposed title
+
+> **TEP-BBN: Isotopic Line Identification under Temporal Shear**
+
+Subtitle:
+
+> **A falsifiable test of whether primordial deuterium measurements are invariant under the Isochrony Axiom**
+
+## Core claim
+
+Do not say:
+
+> Deuterium is fake.
+
+Say:
+
+> We test whether D/H identification in high-redshift DLA spectra is invariant under a line-of-sight temporal-shear field.
+
+That is much stronger scientifically.
+
+---
+
+# Gate 0: Magnitude feasibility (critical first gate)
+
+Before building the full DLA pipeline, calculate whether any existing TEP shear model can naturally produce the required $\Delta\ln A \sim 2.7 \times 10^{-4}$ across DLA-like environments.
+
+## Feasibility test
+
+Write a short internal note:
+
+> **Can Temporal Shear Mimic the Deuterium Isotope Shift?**
+
+Contents:
+
+1. D/H isotope offset (82 km/s)
+2. Required $\Delta\ln A = 2.7 \times 10^{-4}$
+3. Candidate TEP shear laws from existing formalism
+4. DLA path length / density / potential estimates
+5. Magnitude verdict: can TEP naturally produce this scale?
+
+## Decision gate
+
+| Result                      | Action                                                         |
+| --------------------------- | -------------------------------------------------------------- |
+| Natural scale $\ll 10^{-4}$  | Do not pursue phantom D as main branch. Keep thermal compatibility. |
+| Natural scale $\sim 10^{-4}$ | Continue to spectral modelling.                                |
+| Natural scale $\gg 10^{-4}$  | Check whether TEP overpredicts spectral distortions elsewhere. |
+
+This gate must be passed before investing in the full spectral fitting pipeline. Without this gate, the pipeline could become a lot of work built on an impossible amplitude.
+
+---
+
+# TEP-BBN detailed structure
+
+## Section 1 — The deuterium gate
+
+Purpose:
+
+* Explain why deuterium is the central obstacle for non-Gamow cosmology.
+* Explain why helium alone does not settle the issue in an eternal/static universe.
+* Explain why D/H is measured spectroscopically, not by collecting primordial gas in a lab.
+* Define the hypothesis: D/H inference may be contaminated by temporal-shear line shifts.
+
+Core paragraph:
+
+> In standard BBN, primordial D/H is treated as a precision fossil of a hot, rapidly cooling early universe. In TEP, this interpretation must be re-examined because absorption-line spectroscopy assumes that all atoms in the absorber share the same clock-rate normalization. If the absorber contains line-of-sight temporal shear, part of the apparent isotope shift may be temporal rather than nuclear in origin.
+
+## Section 2 — Spectroscopic Isochrony Axiom
+
+Define the hidden assumption:
+
+> Standard absorption-line fitting assumes that frequency offsets arise from rest-frame atomic constants, velocity structure, thermal broadening, turbulence, and instrumental effects, but not from spatial variation in the local clock-rate field.
+
+Then define the TEP correction:
+
+\[
+\nu_{\rm obs}(s) = \frac{A(s)}{A_{\rm obs}}\nu_0
+\]
+
+For two regions inside the same absorber:
+
+\[
+\frac{\Delta\nu}{\nu} \simeq \Delta\ln A_{\rm cloud}
+\]
+
+Equivalent velocity shift:
+
+\[
+\Delta v_T \simeq c\,\Delta\ln A_{\rm cloud}
+\]
+
+**Sign convention:** Positive $\Delta v_T$ denotes an apparent redward displacement relative to the absorber rest frame; the deuterium mimic requires the sign corresponding to the D I isotope offset relative to H I. Without this, the model may hit the right magnitude but wrong direction.
+
+**Differential shear requirement:** Only differential $\Delta\ln A$ across distinct absorbing components can mimic isotope structure. A uniform $A$-shift across the whole absorber is absorbed into the system redshift and is not observable as D/H contamination. A global conformal shift is just redshift; it does not mimic deuterium.
+
+Required D/H mimicry:
+
+\[
+\Delta\ln A_{\rm D/H} \simeq 2.7\times10^{-4}
+\]
+
+## Section 3 — DLA temporal-shear model
+
+Define:
+
+\[
+\Delta\ln A_{\rm DLA} = \int_{\rm los}\Sigma_\parallel(s)\,ds
+\]
+
+where $\Sigma_\parallel$ is the line-of-sight temporal-shear component.
+
+Test multiple parameterizations:
+
+| Model  | Description                                                   |
+| ------ | ------------------------------------------------------------- |
+| **T0** | No temporal shear.                                            |
+| **T1** | Constant shear across absorber.                               |
+| **T2** | Shear proportional to column-density gradient.                |
+| **T3** | Shear tied to inferred gravitational/environmental potential. |
+| **T4** | Multi-component stochastic shear field.                       |
+
+The goal is not to fit anything with arbitrary freedom. The goal is to find whether a **physically reasonable TEP shear model** naturally lands near $\Delta\ln A\sim10^{-4}$.
+
+## Section 3.5 — Identifiability: temporal shear versus velocity structure
+
+### Core question
+
+What observable does temporal shear produce that cannot be fully reabsorbed into ordinary gas velocity, redshift, turbulent structure, continuum placement, or unresolved H I blending?
+
+This is the decisive issue. If temporal shear only shifts a line by an apparent velocity offset, then a skeptic will say:
+
+> "You have renamed a velocity component as temporal shear."
+
+### Required distinctive signatures
+
+TEP-BBN must define at least one distinctive signature that cannot be mimicked by ordinary velocity structure:
+
+1. **Species coherence with environmental weighting**: Temporal shear should affect all transitions formed in the same temporal region, but not necessarily in the same way as a simple velocity component if different ions trace different density/shear zones.
+
+2. **Correlated residuals across Lyman and metal lines**: A temporal-shear model should improve the whole absorber fit, not just the apparent D line.
+
+3. **Environment-dependent inferred D/H bias**: If temporal shear is real, D/H deviations should correlate with absorber complexity, $N_{\rm HI}$, metallicity, or halo proximity.
+
+4. **Prior-predictive amplitude**: The required $\Delta\ln A$ should come from the TEP shear model before fitting, not be freely tuned afterward.
+
+### Gate -1: Identifiability
+
+| Question | Action |
+|----------|--------|
+| Does TEP temporal shear predict an observable pattern distinguishable from ordinary velocity blending? | If no, TEP-BBN cannot claim evidence even if fits improve. |
+
+This gate must be passed before spectral fitting begins. Without passing this gate, improved fits could be attributed to ordinary velocity structure rather than temporal shear.
+
+---
+
+## Section 4 — Voigt-profile implementation
+
+Fit four models to the same systems.
+
+| Model  | Meaning                                              |
+| ------ | ---------------------------------------------------- |
+| **M0** | Standard H I + D I Voigt model.                      |
+| **M1** | H I only + temporal-shear shifted component.         |
+| **M2** | Hybrid: real D/H plus temporal-shear nuisance field. |
+| **M3** | H I-only ordinary velocity-interloper model, no temporal shear. |
+
+**M3 is critical.** Without M3, critics will say your TEP-shear component is just a hidden H I cloud or ordinary velocity blending. A temporal-shear component must produce a pattern that is statistically distinguishable from ordinary H I velocity substructure, continuum placement error, and line blending.
+
+M2 is important because the first plausible result may not be “there is no deuterium.” It may be:
+
+> Deuterium exists, but the inferred primordial abundance is biased by temporal shear.
+
+That is already enough to weaken the Gamow frame.
+
+## Section 5 — Null tests
+
+This is the make-or-break part.
+
+A real temporal field cannot affect only the deuterium line. It should leave correlated structure.
+
+### Null test A: metal-line coherence
+
+If the temporal field shifts H I, it should also shift O I, Si II, C II, Fe II, etc., in related components.
+
+Prediction:
+
+> Apparent D/H anomalies should correlate with subtle residuals or component shifts in metal lines.
+
+### Null test B: multi-Lyman consistency
+
+The same temporal model must fit Ly(\alpha), Ly(\beta), Ly(\gamma), etc. simultaneously.
+
+If it only fits one line, it fails.
+
+### Null test C: environmental correlation
+
+Inferred D/H should correlate with:
+
+* (N_{\rm HI});
+* metallicity;
+* velocity width;
+* number of fitted components;
+* absorber complexity;
+* proximity to galaxies;
+* halo mass proxies.
+
+Standard primordial D/H should be nearly universal after known systematics. TEP-contaminated D/H should carry environmental structure.
+
+### Null test D: component asymmetry
+
+If phantom D is temporal, it may prefer one side of the velocity structure. If real D, it should track H I component structure in the standard isotope-shift way.
+
+### Null test E: blind injection
+
+Generate synthetic spectra:
+
+1. real D/H, no temporal shear;
+2. no D/H, temporal shear;
+3. mixed D/H + temporal shear.
+
+Then test whether the fitting pipeline can recover which case is true.
+
+## Section 6 — Bayesian evidence
+
+Use nested sampling.
+
+\[
+\Delta\ln Z = \ln Z_{\rm TEP\ shear} - \ln Z_{\rm standard}
+\]
+
+Decision thresholds:
+
+| Result                                  | Meaning                                            |
+| --------------------------------------- | -------------------------------------------------- |
+| $\Delta\ln Z < 0$                       | Temporal-shear D/H model rejected for that system. |
+| $0 < \Delta\ln Z < 2$                   | Inconclusive.                                      |
+| $2 < \Delta\ln Z < 5$                   | Worth further investigation.                       |
+| $\Delta\ln Z > 5$ across multiple systems | Serious evidence for temporal-shear contamination. |
+
+## Section 7 — Pre-registration and analysis protocol
+
+Because this is highly controversial, you need a pre-registered analysis protocol before fitting the full sample.
+
+### Pre-registration requirements
+
+Before fitting the full sample, freeze:
+
+1. **System selection criteria**
+   - Redshift range
+   - Signal-to-noise thresholds
+   - Instrument requirements
+   - Continuum quality standards
+   - Exclusion rules
+
+2. **Model definitions**
+   - M0, M1, M2, M3 parameterizations
+   - Priors for all parameters
+   - Fitting ranges
+   - Convergence criteria
+
+3. **Evidence thresholds**
+   - $\Delta\ln Z$ decision boundaries
+   - Claim gate criteria
+   - Stopping rules
+
+4. **Null test protocols**
+   - Metal-line coherence thresholds
+   - Multi-Lyman consistency requirements
+   - Environmental correlation significance levels
+   - Component asymmetry metrics
+   - Blind injection success criteria
+
+5. **Exclusion rules**
+   - When to exclude a system
+   - Quality control criteria
+   - Outlier detection methods
+
+This pre-registration prevents critics from claiming the TEP-BBN model was tuned after the fact. The protocol should be documented in a separate file and version-controlled before any real data analysis begins.
+
+### Prior-volume discipline
+
+Bayesian evidence will be meaningless if the TEP model has broad, flexible priors while the standard model is constrained. Add:
+
+> Priors for the temporal-shear amplitude and profile must be fixed from the TEP amplitude feasibility calculation before fitting spectra. Broad post-hoc priors are not allowed for discovery claims.
+
+### Spectral-only likelihood rule
+
+Do not use standard BBN priors in TEP-BBN. The whole point is to test the spectroscopic inference. Add:
+
+> D/H priors must be spectral-only. No BBN-predicted abundance prior is allowed in the main evidence comparison.
+
+### Real deuterium caveat
+
+The plan already avoids "deuterium is fake," but state explicitly:
+
+> TEP-BBN does not deny terrestrial, solar-system, or local astrophysical deuterium. It tests whether high-redshift primordial D/H inference is contaminated by temporal-shear spectroscopy.
+
+This avoids a predictable misunderstanding.
+
+---
+
+## Section 8 — Consequences for non-Gamow TEP
+
+Use a strict claim gate:
+
+| Outcome                           | Consequence                                                               |
+| --------------------------------- | ------------------------------------------------------------------------- |
+| M0 wins everywhere                | Non-Gamow branch weakens; thermal compatibility remains necessary.        |
+| M2 wins                           | D/H exists but abundance inference is biased; revise BBN constraints.     |
+| M1 wins in multiple clean systems | Strong support for phantom-D branch; Hoyle-compatible TEP becomes viable. |
+
+---
+
+# Technical implementation plan
+
+The TEP-BBN repository has been created by reorganizing the existing TEP-TH copy. The structure follows established TEP conventions with ISO-specific modules in scripts/utils:
+
+```text
+TEP-BBN/
+├── core/                 # Shared physics modules (across TEP papers)
+│   ├── __init__.py
+│   ├── cosmology.py         # TEP background & EFT sector
+│   ├── conformal_scaling.py # Jordan-frame conformal factors
+│   ├── scalar_field.py      # Temporal-shear field
+│   ├── screening.py         # Screening dictionary & PPN
+│   ├── evidence.py          # Evidence-gate infrastructure
+│   └── constants.py         # Physical constants & aliases
+├── scripts/              # Analysis pipeline
+│   ├── steps/               # Numbered pipeline steps
+│   ├── utils/               # Plotting, PDF generation, logging
+│   │   ├── isotopic_shift.py     # D/H temporal-shear formalism
+│   │   ├── voigt_fitting.py      # Voigt profile fitting utilities
+│   │   ├── dla_analysis.py       # DLA-specific analysis tools
+│   │   └── null_tests.py         # Null test implementations
+│   └── run_pipeline.py      # Full pipeline runner
+├── data/                 # Data directory
+│   ├── raw/                 # Downloaded DLA spectra, literature data
+│   ├── processed/           # Ingested catalogues & registries
+│   └── literature/           # Published D/H system tables
+├── results/              # Pipeline outputs
+│   ├── figures/             # Generated plots
+│   ├── outputs/             # MCMC chain files & fitting results
+│   └── *.json               # Step results & evidence matrices
+├── site/                 # Static-site manuscript builder
+│   ├── components/          # HTML sections (source of truth)
+│   └── public/docs/         # Published PDF
+├── external/             # External dependencies
+│   └── (optional: CLASS for background consistency)
+├── README.md
+├── VERSION.json
+├── CITATION.cff
+└── requirements.txt
+```
+
+**Key principle:** The core/ directory contains only shared physics modules used across multiple TEP papers (C0, HC, TH, ISO). Paper-specific modules (like isotopic shift analysis) are implemented in scripts/utils/ and called from pipeline steps.
+
+## Pipeline execution
+
+### Full pipeline
+```bash
+cd TEP-BBN
+python scripts/run_pipeline.py
+```
+
+### Individual steps
+```bash
+# Literature table construction
+python scripts/steps/step_01_literature_table.py
+
+# Spectra data download/registration
+python scripts/steps/step_02_spectra_download.py
+
+# Line list preparation
+python scripts/steps/step_03_line_lists.py
+
+# Standard D/H model fitting
+python scripts/steps/step_04_standard_dh_fit.py
+
+# Temporal-shear model fitting
+python scripts/steps/step_05_temporal_shear_fit.py
+
+# Hybrid model fitting
+python scripts/steps/step_06_hybrid_fit.py
+
+# Nested sampling evidence
+python scripts/steps/step_07_nested_sampling.py
+
+# Environment correlations
+python scripts/steps/step_08_environment_correlations.py
+
+# Posterior predictive checks
+python scripts/steps/step_09_posterior_checks.py
+
+# Figure generation
+python scripts/steps/step_10_generate_figures.py
+```
+
+### ISO-specific module implementation
+
+The `scripts/utils/` directory includes TEP-BBN specific modules:
+
+- `isotopic_shift.py`: Temporal-shear line-shift formalism for D/H
+  - `temporal_shear_shift(delta_ln_A)`: Convert temporal shear to velocity shift
+  - `deuterium_gate_velocity()`: Return the 82 km/s target shift
+  - `required_delta_ln_A()`: Return the 2.7×10⁻⁴ target
+- `voigt_fitting.py`: Voigt profile fitting utilities
+  - `standard_dh_model()`: Standard H I + D I Voigt model
+  - `temporal_shear_model()`: H I + temporal-shear shifted component
+  - `hybrid_model()`: Real D/H plus temporal-shear nuisance field
+- `dla_analysis.py`: DLA-specific analysis tools
+  - `column_density_gradient()`: For T2 shear model
+  - `environmental_correlation()`: For T3 shear model
+- `null_tests.py`: Null test implementations
+  - `metal_line_coherence()`: Test A
+  - `multi_lyman_consistency()`: Test B
+  - `environment_correlation_test()`: Test C
+  - `component_asymmetry()`: Test D
+  - `blind_injection()`: Test E
+
+**Note:** These modules are in scripts/utils/ (not core/) because they are specific to TEP-BBN analysis. The core/ directory contains only shared physics modules used across multiple TEP papers.
+
+### Site build
+```bash
+cd site && npm run build
+```
+
+## Pipeline outputs
+
+The pipeline should produce:
+
+1. Required (\Delta\ln A) table (`results/outputs/required_delta_ln_A.json`)
+2. Absorber inventory table (`results/outputs/absorber_inventory.csv`)
+3. Standard D/H fit results (`results/outputs/standard_dh_fit.json`)
+4. Temporal-shear fit results (`results/outputs/temporal_shear_fit.json`)
+5. Hybrid fit results (`results/outputs/hybrid_fit.json`)
+6. Bayesian evidence comparison (`results/outputs/evidence_comparison.json`)
+7. Residual plots (`results/figures/residuals_*.png`)
+8. Metal-line coherence plots (`results/figures/metal_coherence_*.png`)
+9. Environment-correlation plots (`results/figures/environment_*.png`)
+10. Claim-gate summary (`results/outputs/claim_gate.json`)
+
+---
+
+# Data plan with provenance and reproducibility
+
+## Data download and provenance requirements
+
+All data downloads must be performed through dedicated pipeline steps with full provenance tracking:
+
+### Step 01: Literature data registry
+**File:** `scripts/steps/step_01_literature_registry.py`
+
+**Purpose:** Build a comprehensive registry of published D/H systems with full citation provenance
+
+**Provenance tracking:**
+- Source publication (arXiv ID, DOI, journal citation)
+- Publication date
+- Author list
+- Data version/release
+- Access method (public archive, author request, etc.)
+- Download timestamp
+- File checksums (SHA-256)
+- License/terms of use
+
+**Output:** `data/processed/dh_literature_registry.csv` with columns:
+```csv
+system_id,qso_name,redshift,publication_doi,arxiv_id,authors,year,journal,download_date,license,notes
+```
+
+### Step 02: Spectra data download
+**File:** `scripts/steps/step_02_spectra_download.py`
+
+**Purpose:** Download raw spectroscopic data for target systems with full provenance
+
+**Provenance tracking:**
+- Archive identifier (e.g., MAST ID, ESO ID, SDSS ID)
+- Observation date
+- Instrument configuration
+- Data release version
+- Download URL
+- Download timestamp
+- File checksums (SHA-256 for all files)
+- Calibration version
+- Data reduction software version
+
+**Reproducibility measures:**
+- Fixed data release versions (no "latest" downloads)
+- Archive-specific API calls with version parameters
+- Retry logic with exponential backoff
+- Checksum verification post-download
+- Failure logging with full context
+
+**Output:** 
+- `data/raw/spectra/{system_id}/{instrument}/{file}.fits`
+- `data/processed/spectra_provenance.json` with full download metadata
+- `data/processed/spectra_checksums.json` with SHA-256 hashes
+
+### Step 03: Line list and atomic data
+**File:** `scripts/steps/step_03_atomic_data.py`
+
+**Purpose:** Download and register atomic data (wavelengths, oscillator strengths, etc.)
+
+**Provenance tracking:**
+- Atomic database source (NIST, VALD, etc.)
+- Database version/release date
+- Download timestamp
+- Checksums
+- Citation requirements
+
+**Output:**
+- `data/processed/atomic_data_registry.json`
+- `data/processed/atomic_data_checksums.json`
+
+## Data processing provenance
+
+### Step 04: Data ingestion and standardization
+**File:** `scripts/steps/step_04_data_ingestion.py`
+
+**Purpose:** Convert raw data to standardized analysis format with processing provenance
+
+**Provenance tracking:**
+- Input file checksums
+- Processing software version
+- Processing parameters
+- Processing timestamp
+- Output file checksums
+- Processing log
+
+**Output:** `data/processed/{system_id}_standardized.fits` with processing metadata in FITS headers
+
+## Reproducibility requirements
+
+### Random number control
+- All stochastic processes must use fixed random seeds
+- Seeds recorded in output metadata
+- Seed values specified in configuration files
+
+### Software version control
+- All Python packages pinned in `requirements.txt` with exact versions
+- External software versions recorded (CLASS, AlterBBN, etc.)
+- Pipeline version recorded in `VERSION.json`
+- Git commit hash recorded in all output files
+
+### Configuration management
+- All analysis parameters in YAML configuration files
+- Config files version-controlled
+- Config checksums recorded in outputs
+- Config files copied to results/ for each run
+
+### Logging
+- Detailed execution logs for all steps
+- Logs include: timestamp, step ID, parameters, input/output files, checksums
+- Logs stored in `logs/` with run-specific identifiers
+- Log format standardized across all steps
+
+## Data registry format
+
+### Master data registry
+**File:** `data/processed/master_data_registry.json`
+
+```json
+{
+  "registry_version": "1.0",
+  "created": "2026-07-06T00:00:00Z",
+  "pipeline_version": "0.1.0",
+  "git_commit": "abc123...",
+  "systems": [
+    {
+      "system_id": "J1234+5678_z2.5",
+      "qso_name": "J1234+5678",
+      "redshift": 2.518,
+      "literature_source": {
+        "doi": "10.1086/123456",
+        "arxiv_id": "1607.03900",
+        "authors": ["Cooke, R.", "et al."],
+        "year": 2016,
+        "journal": "AJ",
+        "download_date": "2026-07-06T00:00:00Z"
+      },
+      "spectra": [
+        {
+          "instrument": "HIRES",
+          "archive_id": "MAST:12345",
+          "observation_date": "2015-03-15",
+          "download_url": "https://...",
+          "download_date": "2026-07-06T00:00:00Z",
+          "sha256": "abc123...",
+          "file_path": "data/raw/spectra/J1234+5678_z2.5/HIRES/..."
+        }
+      ],
+      "atomic_data": {
+        "source": "NIST",
+        "version": "5.9",
+        "download_date": "2026-07-06T00:00:00Z",
+        "sha256": "def456..."
+      }
+    }
+  ]
+}
+```
+
+## Data validation steps
+
+### Step 05: Data validation
+**File:** `scripts/steps/step_05_data_validation.py`
+
+**Validation checks:**
+- File integrity (checksum verification)
+- Format validation (FITS structure, required headers)
+- Data range checks (wavelengths, fluxes, signal-to-noise)
+- Cross-validation with literature values
+- Metadata completeness check
+
+**Output:** `data/processed/validation_report.json`
+
+## Start with the published high-quality D/H systems used in precision analyses. Do not begin with a huge, messy sample. Start with one clean absorber, then expand.
+
+For each absorber, collect:
+
+| Field                  | Purpose                      |
+| ---------------------- | ---------------------------- |
+| QSO name               | system identity              |
+| absorber redshift      | temporal-distance variable   |
+| (N_{\rm HI})           | column density               |
+| D/H                    | standard inferred abundance  |
+| metallicity            | astration/environment proxy  |
+| velocity components    | line-complexity proxy        |
+| Lyman transitions used | multi-transition consistency |
+| metal lines used       | species-coherence test       |
+| instrument/resolution  | instrumental systematics     |
+| continuum treatment    | fitting robustness           |
+| literature model       | baseline comparison          |
+| Archive identifier     | data provenance              |
+| Download checksum      | file integrity verification  |
+| Processing version     | reproducibility tracking     |
+
+The first deliverable should be a table, not a theory claim.
+
+---
+
+# Strategic roadmap vs. execution log
+
+This document contains both strategic planning and execution tracking. To avoid confusion:
+
+## Strategic roadmap (Sections 1-8)
+- Non-Gamow pivot architecture
+- Six-branch paper structure  
+- Controlling thesis
+- TEP-BBN detailed structure
+- Model definitions and null tests
+- Claim gates and decision criteria
+
+## Execution log (Sections 9+)
+- Repository reorganization status
+- Completed work items
+- Remaining tasks
+- Timeline estimates
+
+The strategic roadmap should be treated as the governing document for the overall TEP architecture. The execution log tracks concrete progress and should be updated as work is completed.
+
+---
+
+# Revised execution order
+
+## Phase 0 — Stabilize the current trilogy, 2–4 days
+
+Do **minimal branch-aware edits**, not a full rewrite.
+
+### C0
+
+Add "thermal-sector neutrality" exactly as planned. C0 is the safest paper because its evidence is late-time SNe/redshift transport.
+
+### HC
+
+Reframe HC as an acoustic isomorphism / compatibility theorem, not physical plasma proof. Keep the `hi_class`, sound-horizon, active perturbation, and CAMB diagnostic results.
+
+### TH
+
+Rewrite the abstract and conclusion around observer-relative temporal horizons. Move thermal screening into a compatibility branch/appendix, but do not delete it.
+
+Use this exact claim:
+
+> The screened-limit thermal construction is retained as a compatibility branch, not asserted as the final ontology of TEP.
+
+---
+
+## Phase 1 — Write the TEP-BBN feasibility note, 3–5 days
+
+Title:
+
+> **Can Temporal Shear Mimic the Deuterium Isotope Shift?**
+
+Contents:
+
+1. D/H isotope offset
+2. Required $\Delta\ln A$
+3. Candidate TEP shear laws
+4. DLA path length / density / potential estimates
+5. Magnitude verdict
+6. Stop/continue decision
+
+This is the most important near-term deliverable. Without passing this gate, the full spectral fitting pipeline should not be built.
+
+---
+
+## Phase 2 — Build the TEP-BBN protocol paper, 1–2 weeks
+
+Use the plan's structure, but add:
+
+* M3 ordinary H I interloper model
+* Pre-registration section
+* Velocity-structure degeneracy section
+* Prior-sensitivity analysis
+* Synthetic injection tests before real data claims
+
+The TEP-BBN outline is already good: deuterium gate, Spectroscopic Isochrony Axiom, temporal-shear formalism, Voigt models, null tests, Bayesian evidence, and outcome gates.
+
+---
+
+## Phase 3 — One-absorber prototype, 3–5 weeks
+
+The plan correctly says to begin with one clean absorber, not a huge sample.
+
+But add one strict rule:
+
+> The first absorber result must be treated as a pipeline validation, not a discovery claim.
+
+Deliverables:
+
+* Standard D/H fit
+* H-only interloper fit
+* TEP-shear fit
+* Hybrid fit
+* Evidence comparison
+* Posterior predictive residuals
+* Metal-line coherence test
+
+---
+
+## Phase 4 — Multi-absorber expansion, 2–4 months
+
+Proceed only if Phase 3 is not negative.
+
+Look for:
+
+* Consistent $\Delta\ln A$
+* Environmental correlation
+* Metal-line coherence
+* Residual improvement
+* Redshift dependence
+* Robustness to priors
+
+---
+
+## Phase 5 — Hoyle-compatible TEP only after ISO signal
+
+The plan is correct here: do not write TEP-HY until the D/H gate shows signal.
+
+If TEP-BBN does not work, Hoyle-compatible TEP remains philosophical but not empirically supported.
+
+---
+
+# Execution log
+
+## Completed work
+
+### Repository reorganization (completed)
+
+The TEP-BBN repository has been reorganized from the TEP-TH copy:
+
+**Completed steps:**
+
+1. ✅ **Updated repository metadata:**
+   - Updated VERSION.json to v0.1 (Dubai)
+   - Updated CITATION.cff for Paper 29 (Dynamical Proper Time and the Illusion of Primordial Deuterium)
+   - Rewrote README.md for TEP-BBN focus
+
+2. ✅ **Corrected core directory structure:**
+   - Removed ISO-specific modules from core/
+   - Core/ now contains only shared physics modules (conformal_scaling.py, constants.py, cosmology.py, etc.)
+   - ISO-specific modules moved to scripts/utils/
+
+3. ✅ **Created ISO-specific utility modules:**
+   - scripts/utils/isotopic_shift.py: Temporal-shear line-shift formalism
+   - scripts/utils/voigt_fitting.py: Voigt profile fitting utilities
+   - scripts/utils/dla_analysis.py: DLA-specific analysis tools
+   - scripts/utils/null_tests.py: Null test implementations
+
+4. ✅ **Updated project structure documentation:**
+   - README.md reflects corrected structure
+   - Plan updated to reflect core/ vs scripts/utils/ separation
+
+**Remaining steps:**
+
+5. ✅ **Update pipeline steps:**
+   - Removed TEP-TH specific steps (temporal horizon, BBN, recombination, etc.)
+   - Created TEP-BBN specific steps (literature registry, spectra download, Voigt fitting, etc.)
+   - Updated run_pipeline.py for 14-step ISO pipeline
+
+6. ✅ **Update site/components:**
+   - Removed TEP-TH manuscript content
+   - Created TEP-BBN manuscript structure (abstract, introduction, spectroscopic isochrony, temporal shear formalism, Voigt models, null tests, Bayesian comparison, conclusion)
+   - Updated index.html for TEP-BBN
+
+7. ✅ **Update configuration files:**
+   - Updated requirements.txt for ISO-specific dependencies (added astropy, removed cobaya)
+   - Updated logger.py header for TEP-BBN
+
+8. ⏳ **Remove TEP-TH artifacts** (cleanup script created, awaiting execution):
+   - Remove 11 TEP-TH step files from scripts/steps/
+   - Remove 4 TEP-TH manuscript files
+   - Remove 6 TEP-TH site components
+   - Remove 5 TEP-TH utility scripts
+   - Remove 2 TEP-TH derivation scripts
+   - Remove 1 TEP-TH result file
+   - Cleanup script: cleanup_and_implement.sh
+
+### Repository reorganization (completed)
+
+The TEP-BBN repository has been reorganized from the TEP-TH copy:
+
+**Completed steps:**
+
+1. ✅ **Updated repository metadata:**
+   - Updated VERSION.json to v0.1 (Dubai)
+   - Updated CITATION.cff for Paper 29 (Dynamical Proper Time and the Illusion of Primordial Deuterium)
+   - Rewrote README.md for TEP-BBN focus
+
+2. ✅ **Corrected core directory structure:**
+   - Removed ISO-specific modules from core/
+   - Core/ now contains only shared physics modules (conformal_scaling.py, constants.py, cosmology.py, etc.)
+   - ISO-specific modules moved to scripts/utils/
+
+3. ✅ **Created ISO-specific utility modules:**
+   - scripts/utils/isotopic_shift.py: Temporal-shear line-shift formalism
+   - scripts/utils/voigt_fitting.py: Voigt profile fitting utilities
+   - scripts/utils/dla_analysis.py: DLA-specific analysis tools
+   - scripts/utils/null_tests.py: Null test implementations
+
+4. ✅ **Updated project structure documentation:**
+   - README.md reflects corrected structure
+   - Plan updated to reflect core/ vs scripts/utils/ separation
+
+**Remaining steps:**
+
+5. ✅ **Update pipeline steps:**
+   - Removed TEP-TH specific steps (temporal horizon, BBN, recombination, etc.)
+   - Created TEP-BBN specific steps (literature registry, spectra download, Voigt fitting, etc.)
+   - Updated run_pipeline.py for 14-step ISO pipeline
+
+6. ✅ **Update site/components:**
+   - Removed TEP-TH manuscript content
+   - Created TEP-BBN manuscript structure (abstract, introduction, spectroscopic isochrony, temporal shear formalism, Voigt models, null tests, Bayesian comparison, conclusion)
+   - Updated index.html for TEP-BBN
+
+7. ✅ **Update configuration files:**
+   - Updated requirements.txt for ISO-specific dependencies (added astropy, removed cobaya)
+   - Updated logger.py header for TEP-BBN
+
+8. ⏳ **Remove TEP-TH artifacts** (cleanup script created, awaiting execution):
+   - Remove 11 TEP-TH step files from scripts/steps/
+   - Remove 4 TEP-TH manuscript files
+   - Remove 6 TEP-TH site components
+   - Remove 5 TEP-TH utility scripts
+   - Remove 2 TEP-TH derivation scripts
+   - Remove 1 TEP-TH result file
+   - Cleanup script: cleanup_and_implement.sh
+
+### Branch decision and language cleanup
+
+Deliverables:
+
+1. Decide the new branch terminology:
+
+   * “screened-limit compatibility branch”
+   * “non-thermal temporal-spectroscopic branch”
+   * “observer-relative temporal horizon”
+2. Create a shared terminology file for all papers (`TEP_TERMINOLOGY.md`).
+3. Remove “thermal screening as final answer” language from abstracts/conclusions.
+
+## Phase 1 — Rewrite the trilogy framing, 1 week
+
+### C0 edits
+
+* Add “Thermal-sector neutrality” section.
+* Make early-universe claims branch-dependent.
+* Keep all SNe evidence intact.
+
+### HC edits
+
+* Reframe as acoustic isomorphism.
+* Add interpretive-status box.
+* Keep Boltzmann results.
+* Stop implying physical hot-plasma ontology.
+
+### TH edits
+
+* Rewrite abstract around observer-relative horizon.
+* Move thermal screening to appendix.
+* Add non-thermal branch section.
+* Add TEP-BBN as required next falsification step.
+
+## Phase 2 — TEP-BBN mathematical note, 1 week
+
+Write a short internal note:
+
+> **Can temporal shear mimic the deuterium isotope shift?**
+
+Must include:
+
+[
+\Delta v_T = c\Delta\ln A
+]
+
+[
+\Delta\ln A_{\rm required}=2.7\times10^{-4}
+]
+
+Then estimate whether current TEP shear models can plausibly produce this in DLA-like environments.
+
+Decision:
+
+* if obviously impossible, stop;
+* if plausible, continue.
+
+## Phase 3 — TEP-BBN v0.1 paper, 2–3 weeks
+
+Write a theory/protocol paper before data results.
+
+Sections:
+
+1. D/H as the gatekeeper.
+2. Spectroscopic Isochrony Axiom.
+3. Temporal-shear line-shift formalism.
+4. Required (\Delta\ln A).
+5. Null tests.
+6. Bayesian model-comparison plan.
+7. Claim gates.
+
+This can be released as a methodological preprint even before the full data analysis.
+
+## Phase 4 — one-absorber prototype, 3–5 weeks
+
+Pick one clean D/H absorber.
+
+Run:
+
+* M0 standard;
+* M1 temporal-shear;
+* M2 hybrid.
+
+Generate:
+
+* residual comparison;
+* evidence comparison;
+* posterior predictive plots;
+* line-by-line consistency.
+
+Decision:
+
+* If M0 decisively wins, non-Gamow branch weakens.
+* If M2 improves fit, continue.
+* If M1 wins, this becomes a major result.
+
+## Phase 5 — multi-absorber expansion, 2–4 months
+
+Expand to the high-quality D/H sample.
+
+Look for:
+
+* consistent (\Delta\ln A);
+* environmental trends;
+* metal-line coherence;
+* redshift dependence;
+* systematic residual improvement.
+
+## Phase 6 — Hoyle-compatible paper only after D/H gate, 3+ months
+
+Only after TEP-BBN shows signal should you write:
+
+> **TEP-HY: Hoyle-Compatible Temporal Cosmology and Eternal Baryonic Cycling**
+
+This paper must model helium, metals, gas recycling, deuterium destruction, and local deuterium sources. It cannot simply say “infinite time solves helium.”
+
+---
+
+# How to handle Hoyle
+
+You can align with Hoyle philosophically, but not naively.
+
+The correct Hoyle-compatible TEP claim is not:
+
+> Stars had infinite time, therefore helium is solved.
+
+The stronger claim is:
+
+> In an observer-relative temporal cosmology, the age constraint that killed stellar helium production is not fundamental. Helium abundance may be an equilibrium product of long-timescale baryonic cycling, while deuterium must be separately tested for spectroscopic temporal-shear contamination.
+
+That is much better.
+
+For TEP-HY, use equilibrium equations:
+
+\[
+\frac{dY}{dt} = P_{\rm He}^{\star} - L_{\rm He} + R_{\rm He}
+\]
+
+\[
+\frac{dD}{dt} = P_D^{\rm local} - A_D^{\star} - D_D^{\rm shock} + B_D^{\rm obs}
+\]
+
+where $B_D^{\rm obs}$ is not physical production but observational bias from temporal-shear spectroscopy. This lets you separate actual abundance from inferred abundance.
+
+---
+
+# How to handle the CMB later
+
+Do not lead with CMB thermalized starlight. That is the hardest and most dangerous claim.
+
+The non-Gamow CMB problem requires explaining:
+
+* the 2.72548 K monopole;
+* the near-perfect blackbody;
+* the absence of large spectral distortions;
+* the acoustic peak pattern;
+* the small anisotropies;
+* the dipole/environment structure.
+
+The FIRAS blackbody constraint is severe. ([arXiv][3])
+
+So the CMB paper should come after TEP-BBN. Its working title could be:
+
+> **TEP-CMB-N: Non-Thermal CMB Homogenization under Temporal Transport**
+
+But do not write it first.
+
+---
+
+# Claim language rules
+
+Use these phrases:
+
+* “does not require a physical hot Big Bang”
+* “observer-relative temporal horizon”
+* “thermal compatibility branch”
+* “non-thermal branch under test”
+* “D/H inference may be contaminated”
+* “Isochrony Axiom in spectroscopy”
+* “temporal-shear line-shift model”
+* “branch-dependent interpretation”
+
+Avoid these for now:
+
+* “Gamow was wrong”
+* “Hoyle was right”
+* “deuterium is fake”
+* “the CMB is starlight”
+* “there was definitely no hot plasma”
+* “thermal screening is wrong”
+
+The papers can reject the Gamow frame without sounding reckless.
+
+---
+
+# Decision tree
+
+## If TEP-BBN fails
+
+Then the best final architecture is:
+
+> TEP rejects spatial expansion but keeps screened-limit thermal compatibility.
+
+That is not your preferred ontology, but it remains a viable constrained branch.
+
+## If TEP-BBN partially succeeds
+
+Then the best final architecture is:
+
+> D/H exists but is biased by temporal shear; standard BBN constraints must be reinterpreted.
+
+This would already be a major result.
+
+## If TEP-BBN strongly succeeds
+
+Then the best final architecture becomes:
+
+> The hot Big Bang is not required. D/H is not a clean primordial fossil. The temporal horizon is observer-relative. Hoyle-compatible baryonic cycling becomes viable. HC becomes a compatibility theorem, not physical ontology. TH becomes a non-thermal temporal-horizon paper.
+
+That is the route to the TEP you actually want.
+
+---
+
+# Final recommendation
+
+The best possible way forward is:
+
+1. **Do not accept Gamow as final ontology.**
+2. **Do not delete the current trilogy.**
+3. **Rewrite C0–HC–TH as branch-aware papers.**
+4. **Demote thermal screening to a compatibility appendix/branch.**
+5. **Make observer-relative temporal horizons the main TH ontology.**
+6. **Write TEP-BBN immediately as the decisive next paper.**
+7. **Start with the (-82\ {\rm km/s}) deuterium shift and (\Delta\ln A\simeq2.7\times10^{-4}).**
+8. **Only after TEP-BBN passes should you write the fully Hoyle-compatible non-thermal cosmology.**
+
+That is the strongest path: it lets you pursue the non-Gamow TEP honestly, but with enough empirical discipline that the work remains defensible.
+
+[1]: https://arxiv.org/abs/1607.03900?utm_source=chatgpt.com "The primordial deuterium abundance of the most metal-poor damped Lyman-alpha system"
+[2]: https://arxiv.org/abs/1308.3240?utm_source=chatgpt.com "Precision measures of the primordial abundance of deuterium"
+[3]: https://arxiv.org/abs/astro-ph/9605054?utm_source=chatgpt.com "The Cosmic Microwave Background Spectrum from the Full COBE/FIRAS Data Set"
+[4]: https://arxiv.org/abs/0911.1955?utm_source=chatgpt.com "The Temperature of the Cosmic Microwave Background"

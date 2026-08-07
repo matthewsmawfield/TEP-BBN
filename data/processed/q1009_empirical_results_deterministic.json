@@ -1,0 +1,44 @@
+{
+  "classification": "REAL_NEGATIVE",
+  "T_full": -77477.18292103335,
+  "T_secondary": 0.0,
+  "S_held": -2.7428086468717083e-09,
+  "pass_t_full": false,
+  "pass_t_sec": false,
+  "pass_s_held": false,
+  "converged": false,
+  "H0": {
+    "logL_train": -2571052.918784249,
+    "logL_held": 208.28507421137988,
+    "converged": false,
+    "physical_parameters": {
+      "v_shift": 1.0,
+      "B_abs": 6.640722155562074e-05,
+      "int_v": -10.0,
+      "int_n": 6.426017079615775e-05,
+      "int_b": 12.0
+    }
+  },
+  "H1": {
+    "logL_train": -2609791.510244766,
+    "logL_held": 209.13928939298575,
+    "converged": true,
+    "physical_parameters": {
+      "v_shift": 1.0,
+      "B_abs": 6.782864007873721e-05,
+      "f_D": 1.0,
+      "alpha": 0.0006
+    }
+  },
+  "H2": {
+    "logL_train": -2609791.510244766,
+    "logL_held": 209.13928939161434,
+    "converged": true,
+    "physical_parameters": {
+      "v_shift": 1.0,
+      "B_abs": 6.782864007650317e-05,
+      "f_D": 1.0,
+      "alpha": 0.0006
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "5A_local_clock": "d\\tau = A_clock(t) dt",
+  "5B_redshift_mechanism": "TEMPORAL_SHEAR_NOT_RECESSION",
+  "5C_thermodynamic_closure": "S_TEP_NATIVE_EVOLUTION",
+  "5D_singularity": "ASYMPTOTIC_TEMPORAL_HORIZON_NO_SPATIAL_SINGULARITY",
+  "symbolic_proof": {
+    "B_em": "2*A_obs**3*h*nu_obs**3/(A_em**3*c**2*(exp(A_obs*h*nu_obs/(A_em*T_em*k_B)) - 1))",
+    "I_obs": "2*h*nu_obs**3/(c**2*(exp(A_obs*h*nu_obs/(A_em*T_em*k_B)) - 1))",
+    "B_theoretical_obs": "2*h*nu_obs**3/(c**2*(exp(A_obs*h*nu_obs/(A_em*T_em*k_B)) - 1))",
+    "is_perfect_blackbody": true
+  }
+}

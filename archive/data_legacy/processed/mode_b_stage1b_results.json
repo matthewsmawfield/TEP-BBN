@@ -1,0 +1,32 @@
+{
+  "system_id": "Q0913+072_z2.618",
+  "test": "Mode B Stage 1b: Prior-Predictive Feature Test",
+  "timestamp": "2026-07-06T21:00:48.059623",
+  "alpha_source": "frozen_TEP_prior",
+  "alpha_was_fit_to_D_location": false,
+  "prediction": {
+    "predicted_velocity_interval_kms": [
+      -122.89,
+      28.47
+    ],
+    "observed_D_velocity_kms": -82.0,
+    "D_inside_prediction_interval": true
+  },
+  "diagnostic": {
+    "type": "required_alpha_after_unblinding",
+    "value": 0.0007325340340544607,
+    "claim_allowed_from_this": false
+  },
+  "null_test": {
+    "n_shuffles": 1000,
+    "false_positive_rate": 1.0,
+    "passed": false
+  },
+  "tests": {
+    "feature_frozen_before_D_fit": true,
+    "D_window_masked_during_construction": true,
+    "predicted_sign_correct": true,
+    "predicted_location_in_interval": true
+  },
+  "pass_condition": false
+}

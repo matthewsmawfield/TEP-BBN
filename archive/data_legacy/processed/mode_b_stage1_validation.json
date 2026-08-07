@@ -1,0 +1,13 @@
+{
+  "system_id": "Q0913+072_z2.618",
+  "feature_vector_frozen": true,
+  "D_window_blinded_until_fit": true,
+  "models": [
+    "M0",
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "claim_allowed": false,
+  "status": "one_system_validation"
+}

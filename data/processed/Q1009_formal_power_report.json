@@ -1,0 +1,10 @@
+{
+  "status": "INSUFFICIENT_POWER",
+  "reason": "Central alpha recovery 0/50 fell below threshold of 45",
+  "batch1": {
+    "0.0": 0,
+    "0.0005": 0,
+    "0.0007": 0,
+    "0.0009": 0
+  }
+}

@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+# dist/  # Uncommented for gh-pages deployment
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.windsurf/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+
+.devin

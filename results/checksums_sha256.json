@@ -1,0 +1,10 @@
+{
+  "data/raw/atomic/H_I/H_I_lines.txt": "e5e64db44a25fbb3254e242a8484e9a9e25d6b917960378c64654d0496074762",
+  "data/raw/atomic/D_I/D_I_lines.txt": "e4195b3791db0371119af15d0f342fdc77e5499ebc1586387725a5e8d3fe4022",
+  "results/gate1_embedding.json": "5a6a9a82171f824b77c2dc65bbe9f7a6ac06730c1a450fb17421c25093256efe",
+  "results/gate2_parameter_ledger.json": "08d73897b2d599160ae45675dd373ba33883bbd3819242da0afe3f3c0afe66d8",
+  "results/gate3_significance.json": "9750b5ede183177f8e334e37e642ea5e092317e8afdacb1580bbd4d02cea8f46",
+  "results/gate4_prediction.json": "ec7f1007ec6dc67496ec8f95ab7255623c22b40c484fbb5a15640a6db6c9234c",
+  "results/gate5_thermodynamics.json": "2f8fcb772b672a5994e3ac3a8fa26cf8a4af941da38df47f8fa06e16afc6a53f",
+  "results/gate6_helium_results.json": "bbb36bc1fb231d24550ae14a053dd2080aaac8972ba41f1db37f0557e9a0d52d"
+}

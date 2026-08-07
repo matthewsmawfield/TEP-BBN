@@ -1,0 +1,12 @@
+{
+  "system_id": "Q0913+072_z2.618",
+  "test": "Mode B Stage 1: Feature-Freeze Test",
+  "timestamp": "2026-07-06T20:56:11.741626",
+  "tests": {
+    "feature_frozen_before_D_fit": true,
+    "D_window_masked_during_construction": true,
+    "predicted_sign_correct": true,
+    "predicted_location_near_D_feature": true
+  },
+  "pass_condition": true
+}

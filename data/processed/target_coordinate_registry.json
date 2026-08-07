@@ -1,0 +1,23 @@
+{
+  "Q1009+2956_z2.504": {
+    "ra_deg": 152.979167,
+    "dec_deg": 29.694722,
+    "coordinate_source": "canonical_J2000_name",
+    "coordinate_precision": "truncated_name",
+    "verified": true
+  },
+  "HS0105+1619_z2.536": {
+    "ra_deg": 17.025000,
+    "dec_deg": 16.597222,
+    "coordinate_source": "canonical_J2000_name",
+    "coordinate_precision": "truncated_name",
+    "verified": true
+  },
+  "Q0311-1722_z3.734": {
+    "ra_deg": 47.812500,
+    "dec_deg": -17.379722,
+    "coordinate_source": "canonical_J2000_name",
+    "coordinate_precision": "truncated_name",
+    "verified": true
+  }
+}

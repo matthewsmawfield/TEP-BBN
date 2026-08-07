@@ -1,0 +1,29 @@
+{
+  "system_id": "Q0913+072_z2.618",
+  "feature_version": "measured-v1.0-real-literature",
+  "source": "extracted from Pettini et al. 2008 via arxiv:0805.0594",
+  "D_window_used": false,
+  "components": [
+    {
+      "component_id": 0,
+      "velocity_kms": -12.43,
+      "metal_alignment_strength": 0.31,
+      "multi_lyman_score": 1.0,
+      "column_feature": 0.447,
+      "g_i": 0.586,
+      "g_i_uncertainty": 0.067
+    },
+    {
+      "component_id": 1,
+      "velocity_kms": 0.0,
+      "metal_alignment_strength": 0.69,
+      "multi_lyman_score": 1.0,
+      "column_feature": 1.0,
+      "g_i": 0.897,
+      "g_i_uncertainty": 0.088
+    }
+  ],
+  "reference_redshift": 2.618,
+  "is_proxy": false,
+  "scientific_use": true
+}

@@ -1,0 +1,12 @@
+{
+  "source": "ESO Phase 3",
+  "access_url": "unknown",
+  "fits_url": "unknown",
+  "archive_target_name": "Q0913+072",
+  "absorber_redshift": 2.618,
+  "lya_observed_wavelength_angstrom": 4398.294,
+  "wavelength_unit": "angstrom",
+  "velocity_window": [-300, 100],
+  "normalization_method": "unknown",
+  "output_path": "data/processed/Q0913+072_1D_spectrum.txt"
+}

@@ -1,0 +1,220 @@
+{
+  "calculation_date": "2026-07-06T20:47:47.560760",
+  "system_id": "Q0913+072_z2.618",
+  "delta_ln_a_required": 0.0002735229759299781,
+  "analysis_mode": "literature_feasibility",
+  "evidence_level": "toy_only",
+  "claim_allowed": false,
+  "shear_law_results": {
+    "S1_density_gradient": {
+      "name": "Density gradient",
+      "equation": "\u0394lnA = \u03ba * \u0394ln(\u03c1/\u03c1\u2080)",
+      "size_grid": [
+        {
+          "size_kpc": 0.1,
+          "features": [
+            1.8665893503744977,
+            0.715296803877475,
+            -0.6662542519189558
+          ],
+          "max_delta_feature": 2.5328436022934535,
+          "kappa_required": 0.00010799047192740483,
+          "kappa_provisional_prior_range": [
+            0.1,
+            10.0
+          ],
+          "inside_provisional_prior": false,
+          "status": "computed"
+        },
+        {
+          "size_kpc": 1.0,
+          "features": [
+            -0.4359957426195477,
+            -1.5872882891165705,
+            -2.9688393449130013
+          ],
+          "max_delta_feature": 2.5328436022934535,
+          "kappa_required": 0.00010799047192740483,
+          "kappa_provisional_prior_range": [
+            0.1,
+            10.0
+          ],
+          "inside_provisional_prior": false,
+          "status": "computed"
+        },
+        {
+          "size_kpc": 10.0,
+          "features": [
+            -2.7385808356135932,
+            -3.889873382110616,
+            -5.271424437907047
+          ],
+          "max_delta_feature": 2.532843602293454,
+          "kappa_required": 0.0001079904719274048,
+          "kappa_provisional_prior_range": [
+            0.1,
+            10.0
+          ],
+          "inside_provisional_prior": false,
+          "status": "computed"
+        },
+        {
+          "size_kpc": 30.0,
+          "features": [
+            -3.8371931242817032,
+            -4.988485670778726,
+            -6.370036726575157
+          ],
+          "max_delta_feature": 2.532843602293454,
+          "kappa_required": 0.0001079904719274048,
+          "kappa_provisional_prior_range": [
+            0.1,
+            10.0
+          ],
+          "inside_provisional_prior": false,
+          "status": "computed"
+        }
+      ]
+    },
+    "S2_column_gradient": {
+      "name": "Column density gradient",
+      "equation": "\u0394lnA = \u03bb * \u0394ln(N_HI/N\u2080)",
+      "size_grid": [
+        {
+          "size_kpc": 0.1,
+          "features": [
+            0.6907755278982153,
+            -0.4605170185988074,
+            -1.8420680743952382
+          ],
+          "max_delta_feature": 2.5328436022934535,
+          "lambda_required": 0.00010799047192740483,
+          "lambda_provisional_prior_range": [
+            0.1,
+            10.0
+          ],
+          "inside_provisional_prior": false,
+          "status": "computed"
+        },
+        {
+          "size_kpc": 1.0,
+          "features": [
+            0.6907755278982153,
+            -0.4605170185988074,
+            -1.8420680743952382
+          ],
+          "max_delta_feature": 2.5328436022934535,
+          "lambda_required": 0.00010799047192740483,
+          "lambda_provisional_prior_range": [
+            0.1,
+            10.0
+          ],
+          "inside_provisional_prior": false,
+          "status": "computed"
+        },
+        {
+          "size_kpc": 10.0,
+          "features": [
+            0.6907755278982153,
+            -0.4605170185988074,
+            -1.8420680743952382
+          ],
+          "max_delta_feature": 2.5328436022934535,
+          "lambda_required": 0.00010799047192740483,
+          "lambda_provisional_prior_range": [
+            0.1,
+            10.0
+          ],
+          "inside_provisional_prior": false,
+          "status": "computed"
+        },
+        {
+          "size_kpc": 30.0,
+          "features": [
+            0.6907755278982153,
+            -0.4605170185988074,
+            -1.8420680743952382
+          ],
+          "max_delta_feature": 2.5328436022934535,
+          "lambda_required": 0.00010799047192740483,
+          "lambda_provisional_prior_range": [
+            0.1,
+            10.0
+          ],
+          "inside_provisional_prior": false,
+          "status": "computed"
+        }
+      ]
+    },
+    "toy_power_law": {
+      "name": "Power law toy model",
+      "equation": "\u0394lnA = \u03b1 * (\u03c1/\u03c1\u2080)^\u03b2 * (L/L\u2080)^\u03b3",
+      "size_grid": [
+        {
+          "size_kpc": 0.1,
+          "features": [
+            2.0447934948398427,
+            0.6466204788389661,
+            0.16242372071318212
+          ],
+          "max_delta_feature": 1.8823697741266607,
+          "alpha_required": 0.00014530778154726856,
+          "alpha_provisional_prior_range": [
+            1e-05,
+            0.001
+          ],
+          "inside_provisional_prior": true,
+          "status": "computed"
+        },
+        {
+          "size_kpc": 1.0,
+          "features": [
+            0.6466204788389662,
+            0.20447934948398433,
+            0.05136289034927239
+          ],
+          "max_delta_feature": 0.5952575884896938,
+          "alpha_required": 0.00045950355143555444,
+          "alpha_provisional_prior_range": [
+            1e-05,
+            0.001
+          ],
+          "inside_provisional_prior": true,
+          "status": "computed"
+        },
+        {
+          "size_kpc": 10.0,
+          "features": [
+            0.20447934948398433,
+            0.06466204788389662,
+            0.016242372071318217
+          ],
+          "max_delta_feature": 0.18823697741266612,
+          "alpha_required": 0.0014530778154726854,
+          "alpha_provisional_prior_range": [
+            1e-05,
+            0.001
+          ],
+          "inside_provisional_prior": false,
+          "status": "computed"
+        },
+        {
+          "size_kpc": 30.0,
+          "features": [
+            0.11805620746829788,
+            0.03733265075212018,
+            0.00937753788765363
+          ],
+          "max_delta_feature": 0.10867866958064426,
+          "alpha_required": 0.0025168046037498852,
+          "alpha_provisional_prior_range": [
+            1e-05,
+            0.001
+          ],
+          "inside_provisional_prior": false,
+          "status": "computed"
+        }
+      ]
+    }
+  }
+}

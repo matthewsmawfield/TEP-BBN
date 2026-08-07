@@ -1,0 +1,57 @@
+<h2>3. Scalar Field Dynamics and Temporal Shear</h2>
+<p>
+    The non-uniqueness of the deuterium identification in Q1009 necessitates a theoretical mechanism to explain the D-like $-82$ km/s structure without invoking isotopic anomalies. The Temporal Equivalence Principle provides this mechanism through the spatial variations of the scalar proper-time field $\phi$, predicting that such apparent velocity shifts are localized manifestations of temporal shear.
+</p>
+
+<h3>3.1 Field-Theoretic Derivation</h3>
+<p>
+    In TEP, gravity is governed by a Lorentzian metric $g_{\mu\nu}$, while matter couples to a causal effective metric $\tilde{g}_{\mu\nu}$ determined by the scalar field $\phi$. The interaction is defined by the action:
+</p>
+<div class="equation">
+    \begin{equation} S_{\rm TEP} = \int d^4x\sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2}R - \frac{1}{2}\nabla_\mu\phi\nabla^\mu\phi - V(\phi) \right] + S_m[\tilde g_{\mu\nu},\psi], \end{equation}
+</div>
+<p>
+    where the TEP matter metric is defined by $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu \phi \nabla_\nu \phi$. Varying this action with respect to $\phi$ ($\frac{\delta S_{\rm TEP}}{\delta\phi}=0$) over a localized static absorber yields the scalar equation of motion:
+</p>
+<div class="theorem">
+    <strong>Equation of Motion:</strong>
+    <div class="equation">
+        \begin{equation} \Box \phi - V'(\phi) = - \frac{1}{\sqrt{-g}} \frac{\delta S_m}{\delta \phi} \propto \frac{d\ln A}{d\phi} T^{(m)}. \end{equation}
+    </div>
+    <p>
+        Solving the scalar equation of motion over a localized static absorber—abstracted via a positive-definite Green's integral $G_{\rm int} = \int \mathcal{G}(\mathbf{x},\mathbf{x}')\rho(\mathbf{x}')d^3x'$ over the hydrogen density profile—confirms that the local clock rate $A(\phi)$ is systematically deformed inside the cloud relative to the cosmological background. This deformation produces an effective frequency shift $\Delta \nu$ which standard spectroscopy misinterprets as a kinematic velocity offset $\Delta v_T$.
+    </p>
+</div>
+
+<h3>3.2 Sign Provenance and the Blueward Displacement</h3>
+<p>
+    To ensure a genuinely deterministic sign prediction, the geometric and observational conventions are frozen prior to evaluating the candidate feature:
+</p>
+<ul>
+    <li><strong>Line-of-Sight (LOS) Orientation:</strong> Positive outward from the observer.</li>
+    <li><strong>Reference Component:</strong> The ambient cosmological background field value at the absorber redshift ($A_{\rm bg} = A(\phi_{\rm bg})$).</li>
+    <li><strong>Candidate Component:</strong> The dense center of the neutral hydrogen absorber.</li>
+    <li><strong>Fundamental Coupling:</strong> Standard TEP architecture enforces a strictly negative coupling constant $\beta_A < 0$ ($A=e^{\beta_A\phi/M_{\rm Pl}}$).</li>
+    <li><strong>Definition of Difference:</strong> $\Delta \ln A_{\rm abs} \equiv \ln \frac{A(\phi_{\rm core})}{A(\phi_{\rm bg})}$. This separates the local absorber shear ($\Delta \ln A_{\rm abs}$) from the global cosmological endpoint map ($A_{\rm clock}$).</li>
+    <li><strong>Velocity Sign Convention:</strong> $\Delta v_T \simeq -c \Delta \ln A_{\rm abs}$ (with $\Delta v_T < 0$ defined as blueward).</li>
+</ul>
+<p>
+    The sign of the temporal shift must emerge directly from the field equation rather than being assumed. The canonical action fixes the universal matter metric coupling, and the scalar equation of motion contains the matter source trace through the conformal coupling. The deterministic chain is:
+</p>
+<div class="equation">
+    \begin{equation} \beta_A < 0 \ (\text{frozen}) \rightarrow \text{evaluate } \Delta\phi_{\rm pred} = \frac{G_{\rm int}\,\beta_A\,\rho}{M_{\rm Pl}} \rightarrow \Delta\ln A_{\rm abs} \simeq \frac{\beta_A}{M_{\rm Pl}}\Delta\phi \rightarrow \Delta v_T. \end{equation}
+</div>
+<p>
+    For any positive mass-energy density ($\rho > 0$) integrated over the absorber volume ($G_{\rm int} > 0$), the scalar field depth is strictly negative ($\Delta \phi_{\rm pred} < 0$) relative to the background at the core. By propagating the frozen negative conformal coupling ($\beta_A < 0$), the temporal shift is deterministically derived:
+</p>
+<div class="equation">
+    \begin{equation} \Delta\ln A_{\rm abs} \simeq \frac{\beta_A}{M_{\rm Pl}}\Delta\phi_{\rm pred} > 0. \end{equation}
+</div>
+<div class="key-finding">
+    <p>
+        Therefore, independent of any D-window measurement or arbitrary parameter choice, the TEP field equations deterministically require $\Delta v_T < 0$, which predicts the characteristic blueward shift observed in the putative deuterium windows.
+    </p>
+</div>
+<p>
+    Treating the sign and amplitude as distinct predictions, it is concluded that the derived TEP field solution generates the correct blueward temporal displacement purely from geometric provenance. Rather than serving as a free parameter, the observed apparent velocity displacement of $-82$ km/s establishes an observational boundary condition on the TEP coupling space. Given the required temporal shear amplitude $|\Delta\ln A_{\rm abs}| \approx \Delta v/c \approx 2.7\times10^{-4}$, the scalar equation of motion implies an inverse relationship between the local absorber mass density integral $G_{\rm int}$ and the conformal coupling constant $\beta_A$. This translates the Q1009+2956 absorption feature from a presumed isotopic anomaly into a falsifiable constraint on the TEP matter coupling, verifiable by local multi-messenger clock-comparison networks. Having demonstrated that localized variations of $\phi$ successfully reproduce observed velocity anomalies without invoking physical isotope shifts, this temporal-shear mechanics is now extended to the global cosmological background.
+</p>

@@ -1,0 +1,63 @@
+{
+  "arrow_of_time": {
+    "arrow_points_forward": true,
+    "ds_dz_at_z0": 0.0,
+    "ds_dz_at_zmax": -0.0,
+    "entropy_monotonic": true
+  },
+  "description": "Entropy and arrow-of-time regularity at temporal horizon",
+  "entropy_conservation": {
+    "s_comoving_std_range": [
+      1.0,
+      1.0
+    ],
+    "s_comoving_tep_range": [
+      1.0,
+      1.0
+    ],
+    "standard_comoving_conserved": true,
+    "tep_comoving_conserved": true
+  },
+  "entropy_regularity": {
+    "s_standard_finite": true,
+    "s_tep_bounded_near_horizon": true,
+    "s_tep_finite": true,
+    "s_tep_max": 5971975754650371.0,
+    "s_tep_min": 2900000.0,
+    "s_tep_positive_near_horizon": true
+  },
+  "epsilon_sensitivity": [
+    {
+      "all_regular": true,
+      "entropy_finite": true,
+      "epsilon_t": 0.0001
+    },
+    {
+      "all_regular": true,
+      "entropy_finite": true,
+      "epsilon_t": 0.001
+    },
+    {
+      "all_regular": true,
+      "entropy_finite": true,
+      "epsilon_t": 0.01
+    }
+  ],
+  "interpretation": "Temporal horizon is thermodynamically regular with finite entropy",
+  "parameters": {
+    "epsilon_t": 0.1,
+    "n_points": 1000,
+    "n_t": 1.0,
+    "z_max": 1000.0,
+    "z_t": 100.0
+  },
+  "step": "step_07_entropy_arrow",
+  "thermodynamic_regularity": {
+    "all_regular": true,
+    "arrow_of_time_valid": true,
+    "entropy_bounded": true,
+    "entropy_conserved": true,
+    "entropy_finite": true,
+    "entropy_positive": true
+  }
+}

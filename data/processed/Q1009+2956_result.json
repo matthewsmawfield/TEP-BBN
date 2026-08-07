@@ -1,0 +1,19 @@
+{
+  "system_id": "Q1009+2956_z2.504",
+  "qso_name": "Q1009+2956",
+  "classification": "REAL_NEGATIVE",
+  "classified": true,
+  "included_in_scientific_denominator": true,
+  "gate_passed": false,
+  "interpretation": "Standard D / non-TEP models dominate or tie; TEP replacement criteria not satisfied.",
+  "velocity_width": null,
+  "component_count": 2,
+  "metal_line_asymmetry": null,
+  "primary_secondary_separation": null,
+  "alpha_posterior_mean": 0.0005232171242670537,
+  "p_alpha_in_prior": 0.0,
+  "p_f_D_lt_0p5": 0.0,
+  "delta_m2_vs_m0": 681.7598502590408,
+  "delta_m2_vs_m4": -14074.792397234574,
+  "held_out_diff": 652.6394237142395
+}

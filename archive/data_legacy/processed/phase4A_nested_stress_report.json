@@ -1,0 +1,97 @@
+{
+  "phase": "4A++",
+  "claim_allowed": false,
+  "selection_method": "nested_sampling",
+  "models": [
+    "Mnull",
+    "M0",
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "alpha_prior_used": [
+    0.0005,
+    0.0009
+  ],
+  "truth_cases": {
+    "Mnull": {
+      "Mnull": 1,
+      "M0": 0,
+      "M1": 0,
+      "M2": 0,
+      "M3": 9
+    },
+    "M0": {
+      "Mnull": 0,
+      "M0": 0,
+      "M1": 0,
+      "M2": 7,
+      "M3": 3
+    },
+    "M3_exact_D": {
+      "Mnull": 0,
+      "M0": 0,
+      "M1": 0,
+      "M2": 0,
+      "M3": 10
+    }
+  },
+  "false_TEP_win_rate": {
+    "Mnull": 0.0,
+    "M0": 0.7,
+    "M3_exact_D": 0.0
+  },
+  "upper_95_binomial_bound": {
+    "Mnull": 0.3084971078187629,
+    "M0": 0.9332604888222655,
+    "M3_exact_D": 0.3084971078187629
+  },
+  "snr_stratified": true,
+  "snr_detailed_rates": {
+    "SNR_50": {
+      "exact_D": {
+        "rate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.3084971078187629,
+        "n": 10
+      },
+      "M0": {
+        "rate": 0.7,
+        "ci_low": 0.3475471499399921,
+        "ci_high": 0.9332604888222655,
+        "n": 10
+      },
+      "Mnull": {
+        "rate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.3084971078187629,
+        "n": 10
+      }
+    }
+  },
+  "ready_for_phase_4B_1": false,
+  "delta_logZ_M2_minus_M3": {
+    "median": -13.040970606641054,
+    "p05": -34.87040261359499,
+    "p95": -2.0927293339906896,
+    "fraction_M2_wins": 0.0
+  },
+  "alpha_prior_audit": {
+    "alpha_prior": [
+      0.0005,
+      0.0009
+    ],
+    "derived_without_D_location": true,
+    "uses_required_minus_82_shift": false,
+    "uses_alpha_required_from_D": false,
+    "source_document": "ALPHA_PRIOR_DERIVATION.md",
+    "frozen_before_unblinding": true,
+    "alpha_prior_system_specific": false,
+    "alpha_prior_derived_from_TEP": true,
+    "alpha_prior_uses_observed_D_location": false,
+    "D_window_used_for_feature_vector": false,
+    "D_window_used_for_alpha_prior": false,
+    "alpha_required_from_minus82_used": false,
+    "continuum_inherited_from_standard_D_fit": false
+  }
+}

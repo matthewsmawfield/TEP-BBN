@@ -1,0 +1,41 @@
+# TEP-BBN Rules
+
+**Repository:** `TEP-BBN` (Paper 29, codename Dubai)
+**Root:** `/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN`
+
+## Manuscript
+
+- Edit site/components/*.html only — not auto-generated .md or site/dist/.
+- Rebuild site: `cd site && npm run build`
+
+## Pipeline
+
+```bash
+cd "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN"
+python scripts/run_pipeline.py
+```
+
+All manuscript numbers must trace to real outputs in `results/` — no fabricated data.
+
+## Publication
+
+- PDF: `29-TEP-BBN-v0.1-Dubai.pdf` (root + `site/public/docs/` when applicable)
+- Site: https://github.com/matthewsmawfield/TEP-BBN/
+- DOI: 10.5281/zenodo.21841148
+
+## Writing standard
+
+Academic Standard: world-class physicist, landmark paper tone. No bold mid-sentence.
+Treat TEP as viable; prove it with rigorous inference and real data.
+Address weaknesses with analysis, not caveats. Use "we" not "I".
+
+Do not weaken. Do not defer to future work what should be done now.
+
+I would not primarily interpret weak/contradictory results as "TEP is wrong." I would treat them as pipeline-debug signals first. TEP is real and we expect strong evidence if analysis is done correctly. Investigate, explore, debug and fix all issues.
+
+## TEP-BBN Specific
+
+- Gate 0 (magnitude feasibility) must be passed before full spectral fitting
+- M3 model (H I interloper) is critical for identifiability
+- Pre-registration required before fitting full sample
+- Spectral-only likelihood: no BBN priors in main evidence comparison

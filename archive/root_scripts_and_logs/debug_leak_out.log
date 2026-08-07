@@ -1,0 +1,31 @@
+Running M3_exact_D debug for 60 seeds...
+{
+  "seed": 31,
+  "truth": "M3_exact_D",
+  "M2_full_logZ": -497.39794028917,
+  "M2_primary_only_logZ": -511.0367772029029,
+  "M3_centroid_logZ": -502.7297172316409,
+  "best_non_TEP": "M3_centroid",
+  "best_non_TEP_logZ": -502.7297172316409,
+  "delta_M2full_minus_primary": 13.638836913732916,
+  "delta_M2full_minus_M3centroid": 5.331776942470924,
+  "f_D_mean": 0.338314282660486,
+  "P_f_D_lt_0p5": 0.9945495731118962,
+  "alpha_mean": 0.0005967790123968473,
+  "P_alpha_blind": 0.9960192379171169
+}
+{
+  "seed": 30,
+  "truth": "M3_exact_D",
+  "M2_full_logZ": -415.61088274591503,
+  "M2_primary_only_logZ": -425.6912636020614,
+  "M3_centroid_logZ": -420.52505321519504,
+  "best_non_TEP": "M3_centroid",
+  "best_non_TEP_logZ": -420.52505321519504,
+  "delta_M2full_minus_primary": 10.080380856146348,
+  "delta_M2full_minus_M3centroid": 4.914170469280009,
+  "f_D_mean": 0.31106489316341573,
+  "P_f_D_lt_0p5": 0.9984658763218953,
+  "alpha_mean": 0.0006636789246350993,
+  "P_alpha_blind": 0.9994389035239085
+}

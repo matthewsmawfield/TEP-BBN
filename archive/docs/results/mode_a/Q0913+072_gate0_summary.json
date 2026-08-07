@@ -1,0 +1,9 @@
+{
+  "system_id": "Q0913+072_z2.618",
+  "status": "Mode A Complete",
+  "gate": "Gate 0 Feasibility",
+  "required_delta_ln_a": 2.73523e-04,
+  "verdict": "A TEP proper-time explanation of the D/H offset is not obviously impossible at the level of required amplitude. However, proper-time shear remains degenerate with ordinary velocity structure.",
+  "claim_allowed": false,
+  "next_step": "Proceed to Mode B: Feature freezing and blinded D-window fitting."
+}

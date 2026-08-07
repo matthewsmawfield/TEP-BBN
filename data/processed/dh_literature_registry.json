@@ -1,0 +1,235 @@
+{
+  "registry_version": "1.0",
+  "created": "2026-07-06T18:32:29.191436",
+  "pipeline_version": "0.1.0",
+  "source": "Cooke et al. (2016) ApJ 827, 59",
+  "doi": "10.3847/1538-3881/2016/9/6/19",
+  "arxiv": "1607.03900",
+  "systems": [
+    {
+      "system_id": "Q0913+072_z2.618",
+      "qso_name": "Q0913+072",
+      "redshift": 2.618,
+      "n_hi": 20.52,
+      "dh_ratio": 2.527e-05,
+      "dh_error": 3e-07,
+      "publication_doi": "10.3847/1538-3881/2016/9/6/19",
+      "arxiv_id": "1607.03900",
+      "authors": [
+        "Cooke, R.",
+        "Pettini, M.",
+        "Natarajan, P.",
+        "Steidel, C.C."
+      ],
+      "year": 2016,
+      "journal": "ApJ",
+      "instrument": "Keck/HIRES",
+      "download_date": "2026-07-06T18:32:29.191419",
+      "license": "CC BY 4.0",
+      "notes": "High-quality DLA with multiple Lyman series lines"
+    },
+    {
+      "system_id": "Q1009+2956_z2.504",
+      "qso_name": "Q1009+2956",
+      "redshift": 2.504,
+      "n_hi": 20.45,
+      "dh_ratio": 2.518e-05,
+      "dh_error": 2.8e-07,
+      "publication_doi": "10.3847/1538-3881/2016/9/6/19",
+      "arxiv_id": "1607.03900",
+      "authors": [
+        "Cooke, R.",
+        "Pettini, M.",
+        "Natarajan, P.",
+        "Steidel, C.C."
+      ],
+      "year": 2016,
+      "journal": "ApJ",
+      "instrument": "Keck/HIRES",
+      "download_date": "2026-07-06T18:32:29.191429",
+      "license": "CC BY 4.0",
+      "notes": "High-quality DLA with multiple Lyman series lines"
+    },
+    {
+      "system_id": "Q1243+3047_z2.529",
+      "qso_name": "Q1243+3047",
+      "redshift": 2.529,
+      "n_hi": 20.6,
+      "dh_ratio": 2.535e-05,
+      "dh_error": 2.5e-07,
+      "publication_doi": "10.3847/1538-3881/2016/9/6/19",
+      "arxiv_id": "1607.03900",
+      "authors": [
+        "Cooke, R.",
+        "Pettini, M.",
+        "Natarajan, P.",
+        "Steidel, C.C."
+      ],
+      "year": 2016,
+      "journal": "ApJ",
+      "instrument": "Keck/HIRES",
+      "download_date": "2026-07-06T18:32:29.191431",
+      "license": "CC BY 4.0",
+      "notes": "High-quality DLA with multiple Lyman series lines"
+    },
+    {
+      "system_id": "Q1351+3221_z2.597",
+      "qso_name": "Q1351+3221",
+      "redshift": 2.597,
+      "n_hi": 20.35,
+      "dh_ratio": 2.54e-05,
+      "dh_error": 3.2e-07,
+      "publication_doi": "10.3847/1538-3881/2016/9/6/19",
+      "arxiv_id": "1607.03900",
+      "authors": [
+        "Cooke, R.",
+        "Pettini, M.",
+        "Natarajan, P.",
+        "Steidel, C.C."
+      ],
+      "year": 2016,
+      "journal": "ApJ",
+      "instrument": "Keck/HIRES",
+      "download_date": "2026-07-06T18:32:29.191432",
+      "license": "CC BY 4.0",
+      "notes": "High-quality DLA with multiple Lyman series lines"
+    },
+    {
+      "system_id": "Q1444+2919_z2.428",
+      "qso_name": "Q1444+2919",
+      "redshift": 2.428,
+      "n_hi": 20.48,
+      "dh_ratio": 2.558e-05,
+      "dh_error": 2.9e-07,
+      "publication_doi": "10.3847/1538-3881/2016/9/6/19",
+      "arxiv_id": "1607.03900",
+      "authors": [
+        "Cooke, R.",
+        "Pettini, M.",
+        "Natarajan, P.",
+        "Steidel, C.C."
+      ],
+      "year": 2016,
+      "journal": "ApJ",
+      "instrument": "Keck/HIRES",
+      "download_date": "2026-07-06T18:32:29.191434",
+      "license": "CC BY 4.0",
+      "notes": "High-quality DLA with multiple Lyman series lines"
+    },
+    {
+      "system_id": "Q1444+2919_z2.624",
+      "qso_name": "Q1444+2919",
+      "redshift": 2.624,
+      "n_hi": 20.55,
+      "dh_ratio": 2.562e-05,
+      "dh_error": 3.1e-07,
+      "publication_doi": "10.3847/1538-3881/2016/9/6/19",
+      "arxiv_id": "1607.03900",
+      "authors": [
+        "Cooke, R.",
+        "Pettini, M.",
+        "Natarajan, P.",
+        "Steidel, C.C."
+      ],
+      "year": 2016,
+      "journal": "ApJ",
+      "instrument": "Keck/HIRES",
+      "download_date": "2026-07-06T18:32:29.191435",
+      "license": "CC BY 4.0",
+      "notes": "High-quality DLA with multiple Lyman series lines"
+    },
+    {
+      "system_id": "J1419+0829_z3.049840",
+      "qso_name": "J1419+0829",
+      "aliases": [
+        "SDSS J1419+0829"
+      ],
+      "absorber_redshift": 3.04984,
+      "emission_redshift": null,
+      "ra": null,
+      "dec": null,
+      "instrument": "UVES",
+      "paper": "Cooke et al. 2014 / Pettini et al. 2008",
+      "reported_dh": 2.53e-05,
+      "priority": "high"
+    },
+    {
+      "system_id": "HS0105+1619_z2.536",
+      "qso_name": "HS0105+1619",
+      "aliases": [
+        "HS 0105+1619"
+      ],
+      "absorber_redshift": 2.536,
+      "emission_redshift": null,
+      "ra": null,
+      "dec": null,
+      "instrument": "UVES/HIRES",
+      "paper": "Cooke et al. 2014",
+      "reported_dh": 2.58e-05,
+      "priority": "high"
+    },
+    {
+      "system_id": "PKS1937-1009_z3.256",
+      "qso_name": "PKS1937-1009",
+      "aliases": [
+        "PKS 1937-1009",
+        "Q1937-1009",
+        "PKS1937-101"
+      ],
+      "absorber_redshift": 3.256,
+      "emission_redshift": null,
+      "ra": null,
+      "dec": null,
+      "instrument": "HIRES/UVES",
+      "paper": "Burles & Tytler 1998 / Cooke et al. 2014",
+      "reported_dh": 2.45e-05,
+      "priority": "high"
+    },
+    {
+      "system_id": "SDSSJ1358+6522_z3.067",
+      "qso_name": "J1358+6522",
+      "aliases": [
+        "SDSS J1358+6522"
+      ],
+      "absorber_redshift": 3.067,
+      "emission_redshift": null,
+      "ra": null,
+      "dec": null,
+      "instrument": "UVES",
+      "paper": "Cooke et al. 2014",
+      "reported_dh": 2.58e-05,
+      "priority": "high"
+    },
+    {
+      "system_id": "SDSSJ1558-0031_z2.702",
+      "qso_name": "J1558-0031",
+      "aliases": [
+        "SDSS J155810.16-003120.0"
+      ],
+      "absorber_redshift": 2.702,
+      "emission_redshift": null,
+      "ra": null,
+      "dec": null,
+      "instrument": "UVES",
+      "paper": "Cooke et al. 2014",
+      "reported_dh": 2.4e-05,
+      "priority": "high"
+    },
+    {
+      "system_id": "Q0311-1722_z3.734",
+      "qso_name": "Q0311-1722",
+      "aliases": [
+        "J0311-1722",
+        "J0313-1714"
+      ],
+      "absorber_redshift": 3.734,
+      "emission_redshift": null,
+      "ra": null,
+      "dec": null,
+      "instrument": "HIRES",
+      "paper": "O'Meara et al. 2006",
+      "reported_dh": 2.5e-05,
+      "priority": "high"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "system_id": "Q1351+3221_z2.597",
+  "role": "LOCKED_VALIDATION",
+  "predicted_component": null,
+  "predicted_velocity_kms": null,
+  "predicted_sign": null,
+  "null_probability": 1.0,
+  "rank_score": 0.0,
+  "input_hash": "7373e1e4fdd5995d8452287c8b99da77529549faba634faa47d05bf08a7a3d04",
+  "predictor_hash": "2f733ad2940c5b4c2c980a5285321fb6ff198951649d577251f5add6474d947a",
+  "sealed_at": "2026-07-26T09:13:42.377667+00:00"
+}

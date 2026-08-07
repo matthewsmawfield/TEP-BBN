@@ -1,0 +1,2122 @@
+{
+  "T_obs": 77.84553356554534,
+  "N_sims": 200,
+  "exceedances_standard": 0,
+  "exceedances_parent": 15,
+  "p_add_one": 0.004975124378109453,
+  "p_add_one_parent": 0.07960199004975124,
+  "binom_95_upper": 0.015,
+  "leave_one_out": [
+    {
+      "type": "coadd",
+      "excluded": "q1011p2941_C1x1.dat",
+      "T": 50.70381105621345,
+      "LL_D": -11439.20650084256,
+      "LL_H": -11413.854595314453
+    },
+    {
+      "type": "coadd",
+      "excluded": "q1011p2941_C5x2.dat",
+      "T": 68.74064213107704,
+      "LL_D": -15753.731057208839,
+      "LL_H": -15719.3607361433
+    },
+    {
+      "type": "coadd",
+      "excluded": "q1011p2941_C1x2.dat",
+      "T": 66.90966077357734,
+      "LL_D": -14718.65969597731,
+      "LL_H": -14685.204865590522
+    },
+    {
+      "type": "coadd",
+      "excluded": "q1011p2941_C5x1.dat",
+      "T": 43.84266645160824,
+      "LL_D": -11882.91316366626,
+      "LL_H": -11860.991830440456
+    },
+    {
+      "type": "transition",
+      "excluded": "Ly\u03b1",
+      "T": 2.216622823572834,
+      "LL_D": -14486.75973579997,
+      "LL_H": -14485.651424388183
+    },
+    {
+      "type": "transition",
+      "excluded": "Ly\u03b2",
+      "T": 69.39029779179691,
+      "LL_D": -16123.90630264079,
+      "LL_H": -16089.21115374489
+    },
+    {
+      "type": "transition",
+      "excluded": "Ly\u03b3",
+      "T": 75.3689558345468,
+      "LL_D": -15703.002286591545,
+      "LL_H": -15665.317808674272
+    }
+  ],
+  "parent_reassignment": [
+    {
+      "parent_idx": 0,
+      "LL_D": -17932.134795039892,
+      "LL_H": -17893.21202825712,
+      "T": 77.84553356554534
+    },
+    {
+      "parent_idx": 1,
+      "LL_D": -18062.010990115814,
+      "LL_H": -17893.21202825712,
+      "T": 337.59792371738877
+    },
+    {
+      "parent_idx": 2,
+      "LL_D": -18108.876141689347,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686445434
+    },
+    {
+      "parent_idx": 3,
+      "LL_D": -18108.876141811135,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822710803157
+    },
+    {
+      "parent_idx": 4,
+      "LL_D": -18066.87940849062,
+      "LL_H": -17893.21202825712,
+      "T": 347.334760466998
+    },
+    {
+      "parent_idx": 5,
+      "LL_D": -18108.876141689216,
+      "LL_H": -17893.21202825712,
+      "T": 431.3282268641924
+    },
+    {
+      "parent_idx": 6,
+      "LL_D": -18108.87614168915,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686406143
+    },
+    {
+      "parent_idx": 7,
+      "LL_D": -18108.87614168918,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686411964
+    },
+    {
+      "parent_idx": 8,
+      "LL_D": -18108.876141689274,
+      "LL_H": -17893.21202825712,
+      "T": 431.3282268643088
+    },
+    {
+      "parent_idx": 9,
+      "LL_D": -18108.876141689383,
+      "LL_H": -17893.21202825712,
+      "T": 431.3282268645271
+    },
+    {
+      "parent_idx": 10,
+      "LL_D": -17896.437992031617,
+      "LL_H": -17893.21202825712,
+      "T": 6.451927548994718
+    },
+    {
+      "parent_idx": 11,
+      "LL_D": -18108.876142056743,
+      "LL_H": -17893.21202825712,
+      "T": 431.328227599246
+    },
+    {
+      "parent_idx": 12,
+      "LL_D": -18108.87614170328,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822689232125
+    },
+    {
+      "parent_idx": 13,
+      "LL_D": -18108.8761416895,
+      "LL_H": -17893.21202825712,
+      "T": 431.3282268647599
+    },
+    {
+      "parent_idx": 14,
+      "LL_D": -18108.87624141917,
+      "LL_H": -17893.21202825712,
+      "T": 431.3284263241003
+    },
+    {
+      "parent_idx": 15,
+      "LL_D": -18108.87621361365,
+      "LL_H": -17893.21202825712,
+      "T": 431.3283707130613
+    },
+    {
+      "parent_idx": 16,
+      "LL_D": -18108.876141689405,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686457075
+    },
+    {
+      "parent_idx": 17,
+      "LL_D": -18108.87614168936,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686448344
+    },
+    {
+      "parent_idx": 18,
+      "LL_D": -18108.876065782217,
+      "LL_H": -17893.21202825712,
+      "T": 431.32807505019446
+    },
+    {
+      "parent_idx": 19,
+      "LL_D": -18108.87657280402,
+      "LL_H": -17893.21202825712,
+      "T": 431.3290890938006
+    },
+    {
+      "parent_idx": 20,
+      "LL_D": -18108.87614168936,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686448344
+    },
+    {
+      "parent_idx": 21,
+      "LL_D": -18108.87614168939,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686454165
+    },
+    {
+      "parent_idx": 22,
+      "LL_D": -18108.876141689347,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686445434
+    },
+    {
+      "parent_idx": 23,
+      "LL_D": -18108.876141689354,
+      "LL_H": -17893.21202825712,
+      "T": 431.3282268644689
+    },
+    {
+      "parent_idx": 24,
+      "LL_D": -18108.876141689354,
+      "LL_H": -17893.21202825712,
+      "T": 431.3282268644689
+    },
+    {
+      "parent_idx": 25,
+      "LL_D": -18108.876036364392,
+      "LL_H": -17893.21202825712,
+      "T": 431.32801621454564
+    },
+    {
+      "parent_idx": 26,
+      "LL_D": -18108.876141689278,
+      "LL_H": -17893.21202825712,
+      "T": 431.3282268643161
+    },
+    {
+      "parent_idx": 27,
+      "LL_D": -18108.876141689343,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686444706
+    },
+    {
+      "parent_idx": 28,
+      "LL_D": -18108.87599752012,
+      "LL_H": -17893.21202825712,
+      "T": 431.327938526003
+    },
+    {
+      "parent_idx": 29,
+      "LL_D": -18108.875998043623,
+      "LL_H": -17893.21202825712,
+      "T": 431.327939573006
+    },
+    {
+      "parent_idx": 30,
+      "LL_D": -18108.87614168936,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686448344
+    },
+    {
+      "parent_idx": 31,
+      "LL_D": -18108.87614168936,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686448344
+    },
+    {
+      "parent_idx": 32,
+      "LL_D": -18108.87614168935,
+      "LL_H": -17893.21202825712,
+      "T": 431.3282268644616
+    },
+    {
+      "parent_idx": 33,
+      "LL_D": -18108.876141689354,
+      "LL_H": -17893.21202825712,
+      "T": 431.3282268644689
+    },
+    {
+      "parent_idx": 34,
+      "LL_D": -18108.87614168934,
+      "LL_H": -17893.21202825712,
+      "T": 431.3282268644398
+    },
+    {
+      "parent_idx": 35,
+      "LL_D": -18108.877230050635,
+      "LL_H": -17893.21202825712,
+      "T": 431.33040358703147
+    },
+    {
+      "parent_idx": 36,
+      "LL_D": -18108.876128037602,
+      "LL_H": -17893.21202825712,
+      "T": 431.328199560965
+    },
+    {
+      "parent_idx": 37,
+      "LL_D": -18108.87614168936,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686448344
+    },
+    {
+      "parent_idx": 38,
+      "LL_D": -18108.87614168936,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686448344
+    },
+    {
+      "parent_idx": 39,
+      "LL_D": -18108.87614168936,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686448344
+    },
+    {
+      "parent_idx": 40,
+      "LL_D": -18108.876141689376,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686451254
+    },
+    {
+      "parent_idx": 41,
+      "LL_D": -18108.87614168937,
+      "LL_H": -17893.21202825712,
+      "T": 431.328226864498
+    },
+    {
+      "parent_idx": 42,
+      "LL_D": -18108.876141689332,
+      "LL_H": -17893.21202825712,
+      "T": 431.32822686442523
+    }
+  ],
+  "simulations": [
+    {
+      "simulation_id": 900004,
+      "seed": 900004,
+      "logL_D_max": -18392.43746992465,
+      "logL_Hfree": -18391.72637511656,
+      "T_parent": 1.4221896161834593,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900012,
+      "seed": 900012,
+      "logL_D_max": -18392.90218136364,
+      "logL_Hfree": -18478.873465402023,
+      "T_parent": -171.9425680767672,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900010,
+      "seed": 900010,
+      "logL_D_max": -18638.767263542442,
+      "logL_Hfree": -18638.39574261581,
+      "T_parent": 0.7430418532676413,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900005,
+      "seed": 900005,
+      "logL_D_max": -18632.840137433162,
+      "logL_Hfree": -18630.23338058466,
+      "T_parent": 5.2135136970027816,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900002,
+      "seed": 900002,
+      "logL_D_max": -18622.450615839378,
+      "logL_Hfree": -18620.748268879237,
+      "T_parent": 3.4046939202817157,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900011,
+      "seed": 900011,
+      "logL_D_max": -18661.66947493782,
+      "logL_Hfree": -18661.19339401982,
+      "T_parent": 0.9521618359940476,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900008,
+      "seed": 900008,
+      "logL_D_max": -18521.98992534969,
+      "logL_Hfree": -18521.363621821438,
+      "T_parent": 1.2526070565072587,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900001,
+      "seed": 900001,
+      "logL_D_max": -18552.48785797325,
+      "logL_Hfree": -18621.801680887296,
+      "T_parent": -138.62764582809177,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900006,
+      "seed": 900006,
+      "logL_D_max": -18538.58587297949,
+      "logL_Hfree": -18536.726493765545,
+      "T_parent": 3.7187584278872237,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900013,
+      "seed": 900013,
+      "logL_D_max": -18627.122503128292,
+      "logL_Hfree": -18627.10409481755,
+      "T_parent": 0.03681662148301257,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900007,
+      "seed": 900007,
+      "logL_D_max": -18822.233446667393,
+      "logL_Hfree": -18822.048077284544,
+      "T_parent": 0.37073876569775166,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900003,
+      "seed": 900003,
+      "logL_D_max": -18379.848051217996,
+      "logL_Hfree": -18378.787402707796,
+      "T_parent": 2.121297020399652,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900000,
+      "seed": 900000,
+      "logL_D_max": -18544.887246531754,
+      "logL_Hfree": -18544.19987467669,
+      "T_parent": 1.374743710126495,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900009,
+      "seed": 900009,
+      "logL_D_max": -18447.056353427477,
+      "logL_Hfree": -18443.92854533907,
+      "T_parent": 6.255616176815238,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900014,
+      "seed": 900014,
+      "logL_D_max": -18607.11235253849,
+      "logL_Hfree": -18606.78846533242,
+      "T_parent": 0.6477744121366413,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900017,
+      "seed": 900017,
+      "logL_D_max": -18605.390010725136,
+      "logL_Hfree": -18604.89862044782,
+      "T_parent": 0.9827805546301533,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900020,
+      "seed": 900020,
+      "logL_D_max": -18403.58176692969,
+      "logL_Hfree": -18402.651721617556,
+      "T_parent": 1.8600906242645578,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900019,
+      "seed": 900019,
+      "logL_D_max": -18799.786673710067,
+      "logL_Hfree": -18799.775928565665,
+      "T_parent": 0.02149028880376136,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900022,
+      "seed": 900022,
+      "logL_D_max": -18558.401782577897,
+      "logL_Hfree": -18557.56735823354,
+      "T_parent": 1.6688486887142062,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900018,
+      "seed": 900018,
+      "logL_D_max": -18500.76014916324,
+      "logL_Hfree": -18498.938612787613,
+      "T_parent": 3.6430727512561134,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900023,
+      "seed": 900023,
+      "logL_D_max": -18476.73291268755,
+      "logL_Hfree": -18476.608355873053,
+      "T_parent": 0.24911362899001688,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900021,
+      "seed": 900021,
+      "logL_D_max": -18647.959547755978,
+      "logL_Hfree": -18647.60428088888,
+      "T_parent": 0.7105337341927225,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900015,
+      "seed": 900015,
+      "logL_D_max": -18525.359380971757,
+      "logL_Hfree": -18523.868098024894,
+      "T_parent": 2.9825658937261323,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900016,
+      "seed": 900016,
+      "logL_D_max": -18425.520365870278,
+      "logL_Hfree": -18423.829003546074,
+      "T_parent": 3.38272464840702,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900024,
+      "seed": 900024,
+      "logL_D_max": -18593.564604690015,
+      "logL_Hfree": -18592.432614805974,
+      "T_parent": 2.2639797680822085,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900027,
+      "seed": 900027,
+      "logL_D_max": -18534.599964142482,
+      "logL_Hfree": -18531.523844832685,
+      "T_parent": 6.152238619593845,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900025,
+      "seed": 900025,
+      "logL_D_max": -18648.06448349569,
+      "logL_Hfree": -18647.188860779923,
+      "T_parent": 1.7512454315365176,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900026,
+      "seed": 900026,
+      "logL_D_max": -18508.45014442855,
+      "logL_Hfree": -18505.41220467439,
+      "T_parent": 6.075879508316575,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900032,
+      "seed": 900032,
+      "logL_D_max": -18710.058428340206,
+      "logL_Hfree": -18709.761095110156,
+      "T_parent": 0.5946664600996883,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900033,
+      "seed": 900033,
+      "logL_D_max": -18539.763506240797,
+      "logL_Hfree": -18538.99353388917,
+      "T_parent": 1.5399447032541502,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900028,
+      "seed": 900028,
+      "logL_D_max": -18586.922746852215,
+      "logL_Hfree": -18586.85648575607,
+      "T_parent": 0.13252219228888862,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900029,
+      "seed": 900029,
+      "logL_D_max": -18449.215844196904,
+      "logL_Hfree": -18447.94427324662,
+      "T_parent": 2.543141900569026,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900030,
+      "seed": 900030,
+      "logL_D_max": -18525.721256698413,
+      "logL_Hfree": -18524.852496632993,
+      "T_parent": 1.737520130838675,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900031,
+      "seed": 900031,
+      "logL_D_max": -18551.058051784716,
+      "logL_Hfree": -18549.560488260537,
+      "T_parent": 2.995127048357972,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900036,
+      "seed": 900036,
+      "logL_D_max": -18436.739622688758,
+      "logL_Hfree": -18434.154483309478,
+      "T_parent": 5.170278758560016,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900037,
+      "seed": 900037,
+      "logL_D_max": -18556.888616292756,
+      "logL_Hfree": -18553.47189038706,
+      "T_parent": 6.833451811391569,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900035,
+      "seed": 900035,
+      "logL_D_max": -18598.869491592486,
+      "logL_Hfree": -18598.867602378006,
+      "T_parent": 0.0037784289597766474,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900039,
+      "seed": 900039,
+      "logL_D_max": -18441.434907001614,
+      "logL_Hfree": -18440.621942983067,
+      "T_parent": 1.625928037094127,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900034,
+      "seed": 900034,
+      "logL_D_max": -18438.065787551906,
+      "logL_Hfree": -18438.038432251735,
+      "T_parent": 0.05471060034324182,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900040,
+      "seed": 900040,
+      "logL_D_max": -18361.16603113894,
+      "logL_Hfree": -18360.079904805574,
+      "T_parent": 2.1722526667290367,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900038,
+      "seed": 900038,
+      "logL_D_max": -18644.28065906965,
+      "logL_Hfree": -18643.661251374295,
+      "T_parent": 1.2388153907086235,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900041,
+      "seed": 900041,
+      "logL_D_max": -18397.930789892827,
+      "logL_Hfree": -18397.86051152344,
+      "T_parent": 0.14055673877737718,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900048,
+      "seed": 900048,
+      "logL_D_max": -18470.203131038354,
+      "logL_Hfree": -18470.119745395623,
+      "T_parent": 0.1667712854614365,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900042,
+      "seed": 900042,
+      "logL_D_max": -18741.63882631584,
+      "logL_Hfree": -18741.0160344351,
+      "T_parent": 1.2455837614834309,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900043,
+      "seed": 900043,
+      "logL_D_max": -18610.549933338803,
+      "logL_Hfree": -18610.525709583268,
+      "T_parent": 0.04844751107157208,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900044,
+      "seed": 900044,
+      "logL_D_max": -18661.310746133022,
+      "logL_Hfree": -18658.204983782667,
+      "T_parent": 6.21152470070956,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900046,
+      "seed": 900046,
+      "logL_D_max": -18482.075785288584,
+      "logL_Hfree": -18482.062428424953,
+      "T_parent": 0.0267137272603577,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900051,
+      "seed": 900051,
+      "logL_D_max": -18541.586773411782,
+      "logL_Hfree": -18540.745842267206,
+      "T_parent": 1.6818622891514678,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900047,
+      "seed": 900047,
+      "logL_D_max": -18458.750810735615,
+      "logL_Hfree": -18456.297657150848,
+      "T_parent": 4.906307169534557,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900045,
+      "seed": 900045,
+      "logL_D_max": -18580.995048910318,
+      "logL_Hfree": -18580.934341750974,
+      "T_parent": 0.1214143186880392,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900052,
+      "seed": 900052,
+      "logL_D_max": -18665.958057520562,
+      "logL_Hfree": -18658.7090986593,
+      "T_parent": 14.497917722525017,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900054,
+      "seed": 900054,
+      "logL_D_max": -18769.918567887136,
+      "logL_Hfree": -18768.45764727701,
+      "T_parent": 2.9218412202535546,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900050,
+      "seed": 900050,
+      "logL_D_max": -18322.66463203828,
+      "logL_Hfree": -18319.195099157183,
+      "T_parent": 6.939065762191603,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900049,
+      "seed": 900049,
+      "logL_D_max": -18614.70942438333,
+      "logL_Hfree": -18614.699389645444,
+      "T_parent": 0.020069475773198064,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900053,
+      "seed": 900053,
+      "logL_D_max": -18645.869904436542,
+      "logL_Hfree": -18645.53188684048,
+      "T_parent": 0.6760351921257097,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900055,
+      "seed": 900055,
+      "logL_D_max": -18648.032327304118,
+      "logL_Hfree": -18646.675196927543,
+      "T_parent": 2.714260753149574,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900056,
+      "seed": 900056,
+      "logL_D_max": -18650.04914368728,
+      "logL_Hfree": -18649.592418675235,
+      "T_parent": 0.9134500240907073,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900060,
+      "seed": 900060,
+      "logL_D_max": -18706.925448903017,
+      "logL_Hfree": -18705.249918688576,
+      "T_parent": 3.3510604288821924,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900061,
+      "seed": 900061,
+      "logL_D_max": -18764.95335736346,
+      "logL_Hfree": -18763.551140285363,
+      "T_parent": 2.8044341561981128,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900059,
+      "seed": 900059,
+      "logL_D_max": -18497.0527764467,
+      "logL_Hfree": -18495.665513726923,
+      "T_parent": 2.774525439555873,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900063,
+      "seed": 900063,
+      "logL_D_max": -18321.36500401651,
+      "logL_Hfree": -18321.062912263653,
+      "T_parent": 0.6041835057112621,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900058,
+      "seed": 900058,
+      "logL_D_max": -18337.53974547626,
+      "logL_Hfree": -18337.50212589533,
+      "T_parent": 0.07523916185891721,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900057,
+      "seed": 900057,
+      "logL_D_max": -18511.608640530005,
+      "logL_Hfree": -18511.563546321224,
+      "T_parent": 0.09018841756187612,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900064,
+      "seed": 900064,
+      "logL_D_max": -18687.531566878322,
+      "logL_Hfree": -18687.31383589665,
+      "T_parent": 0.43546196334500564,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900066,
+      "seed": 900066,
+      "logL_D_max": -18400.50677789371,
+      "logL_Hfree": -18399.819080467176,
+      "T_parent": 1.3753948530647904,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900067,
+      "seed": 900067,
+      "logL_D_max": -18643.065753721577,
+      "logL_Hfree": -18641.889732409356,
+      "T_parent": 2.352042624443129,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900062,
+      "seed": 900062,
+      "logL_D_max": -18559.478388322397,
+      "logL_Hfree": -18558.26129530881,
+      "T_parent": 2.4341860271742917,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900068,
+      "seed": 900068,
+      "logL_D_max": -18524.146121141,
+      "logL_Hfree": -18522.57218281886,
+      "T_parent": 3.14787664427422,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900069,
+      "seed": 900069,
+      "logL_D_max": -18687.67139529581,
+      "logL_Hfree": -18687.443315642748,
+      "T_parent": 0.45615930612257216,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900065,
+      "seed": 900065,
+      "logL_D_max": -18369.27431284258,
+      "logL_Hfree": -18489.937897052703,
+      "T_parent": -241.3271684202482,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900071,
+      "seed": 900071,
+      "logL_D_max": -18503.138742164097,
+      "logL_Hfree": -18600.207060892757,
+      "T_parent": -194.136637457319,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900072,
+      "seed": 900072,
+      "logL_D_max": -18439.973005408767,
+      "logL_Hfree": -18437.718679393558,
+      "T_parent": 4.508652030417579,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900070,
+      "seed": 900070,
+      "logL_D_max": -18554.197777521407,
+      "logL_Hfree": -18554.1977457409,
+      "T_parent": 6.356101221172139e-05,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900073,
+      "seed": 900073,
+      "logL_D_max": -18512.851703155742,
+      "logL_Hfree": -18510.63857407695,
+      "T_parent": 4.426258157582197,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900074,
+      "seed": 900074,
+      "logL_D_max": -18581.501622759093,
+      "logL_Hfree": -18580.78939270618,
+      "T_parent": 1.4244601058235276,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900076,
+      "seed": 900076,
+      "logL_D_max": -18600.732661252136,
+      "logL_Hfree": -18596.335176981076,
+      "T_parent": 8.794968542119022,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900075,
+      "seed": 900075,
+      "logL_D_max": -18406.03840375716,
+      "logL_Hfree": -18405.779625583924,
+      "T_parent": 0.517556346472702,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900077,
+      "seed": 900077,
+      "logL_D_max": -18653.01713617348,
+      "logL_Hfree": -18653.002895474372,
+      "T_parent": 0.02848139821435325,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900078,
+      "seed": 900078,
+      "logL_D_max": -18365.399750820263,
+      "logL_Hfree": -18364.682075368535,
+      "T_parent": 1.4353509034554008,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900079,
+      "seed": 900079,
+      "logL_D_max": -18428.104077865584,
+      "logL_Hfree": -18426.90480576097,
+      "T_parent": 2.3985442092307494,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900081,
+      "seed": 900081,
+      "logL_D_max": -18579.98601898045,
+      "logL_Hfree": -18579.98576151063,
+      "T_parent": 0.0005149396383785643,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900082,
+      "seed": 900082,
+      "logL_D_max": -18712.325381050134,
+      "logL_Hfree": -18709.83970878083,
+      "T_parent": 4.971344538607809,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900080,
+      "seed": 900080,
+      "logL_D_max": -18543.858119908447,
+      "logL_Hfree": -18541.408979810363,
+      "T_parent": 4.8982801961683435,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900083,
+      "seed": 900083,
+      "logL_D_max": -18749.651634078207,
+      "logL_Hfree": -18875.927603327644,
+      "T_parent": -252.55193849887291,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900086,
+      "seed": 900086,
+      "logL_D_max": -18422.003258825323,
+      "logL_Hfree": -18421.808938008224,
+      "T_parent": 0.38864163419930264,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900084,
+      "seed": 900084,
+      "logL_D_max": -18679.378603770445,
+      "logL_Hfree": -18679.362896804152,
+      "T_parent": 0.03141393258556491,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900087,
+      "seed": 900087,
+      "logL_D_max": -18667.88217324291,
+      "logL_Hfree": -18667.822081593702,
+      "T_parent": 0.12018329841521336,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900085,
+      "seed": 900085,
+      "logL_D_max": -18566.574032568067,
+      "logL_Hfree": -18565.75688337219,
+      "T_parent": 1.6342983917566016,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900089,
+      "seed": 900089,
+      "logL_D_max": -18343.625112984286,
+      "logL_Hfree": -18343.22524915276,
+      "T_parent": 0.799727663048543,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900090,
+      "seed": 900090,
+      "logL_D_max": -18586.548343693106,
+      "logL_Hfree": -18586.052580404343,
+      "T_parent": 0.9915265775271109,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900088,
+      "seed": 900088,
+      "logL_D_max": -18455.16130344076,
+      "logL_Hfree": -18629.528768379096,
+      "T_parent": -348.73492987667123,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900091,
+      "seed": 900091,
+      "logL_D_max": -18314.189567851983,
+      "logL_Hfree": -18312.87933116345,
+      "T_parent": 2.620473377064627,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900094,
+      "seed": 900094,
+      "logL_D_max": -18615.062457797976,
+      "logL_Hfree": -18613.55293458054,
+      "T_parent": 3.0190464348706882,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900095,
+      "seed": 900095,
+      "logL_D_max": -18715.565636531748,
+      "logL_Hfree": -18714.919698922145,
+      "T_parent": 1.2918752192053944,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900092,
+      "seed": 900092,
+      "logL_D_max": -18663.501264712948,
+      "logL_Hfree": -18663.449125173946,
+      "T_parent": 0.10427907800476532,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900093,
+      "seed": 900093,
+      "logL_D_max": -18535.11322049249,
+      "logL_Hfree": -18533.619923196355,
+      "T_parent": 2.986594592272013,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900096,
+      "seed": 900096,
+      "logL_D_max": -18683.86477541827,
+      "logL_Hfree": -18682.54182366409,
+      "T_parent": 2.6459035083607887,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900097,
+      "seed": 900097,
+      "logL_D_max": -18443.751222292052,
+      "logL_Hfree": -18439.591340404106,
+      "T_parent": 8.31976377589308,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900098,
+      "seed": 900098,
+      "logL_D_max": -18441.456252341533,
+      "logL_Hfree": -18440.60259057441,
+      "T_parent": 1.7073235342468251,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900100,
+      "seed": 900100,
+      "logL_D_max": -18628.97218995284,
+      "logL_Hfree": -18626.83873061757,
+      "T_parent": 4.266918670546147,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900099,
+      "seed": 900099,
+      "logL_D_max": -18393.608508924717,
+      "logL_Hfree": -18393.430340625924,
+      "T_parent": 0.35633659758605063,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900102,
+      "seed": 900102,
+      "logL_D_max": -18161.404315390046,
+      "logL_Hfree": -18160.62749077011,
+      "T_parent": 1.5536492398678092,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900101,
+      "seed": 900101,
+      "logL_D_max": -18379.846067770337,
+      "logL_Hfree": -18378.153781770514,
+      "T_parent": 3.384571999646141,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900103,
+      "seed": 900103,
+      "logL_D_max": -18445.205623033984,
+      "logL_Hfree": -18443.513659530523,
+      "T_parent": 3.383927006922022,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900105,
+      "seed": 900105,
+      "logL_D_max": -18538.097132889146,
+      "logL_Hfree": -18538.077601229612,
+      "T_parent": 0.039063319069100544,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900104,
+      "seed": 900104,
+      "logL_D_max": -18613.31108512767,
+      "logL_Hfree": -18613.184912923563,
+      "T_parent": 0.2523444082107744,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900107,
+      "seed": 900107,
+      "logL_D_max": -18650.716888019757,
+      "logL_Hfree": -18650.677829821507,
+      "T_parent": 0.07811639650026336,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900109,
+      "seed": 900109,
+      "logL_D_max": -18359.360249489862,
+      "logL_Hfree": -18359.188648600466,
+      "T_parent": 0.34320177879271796,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900108,
+      "seed": 900108,
+      "logL_D_max": -18648.709629786827,
+      "logL_Hfree": -18648.708011426694,
+      "T_parent": 0.003236720265704207,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900106,
+      "seed": 900106,
+      "logL_D_max": -18416.054474700715,
+      "logL_Hfree": -18409.484251773225,
+      "T_parent": 13.140445854980499,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900111,
+      "seed": 900111,
+      "logL_D_max": -18523.313317107,
+      "logL_Hfree": -18521.99275293997,
+      "T_parent": 2.6411283340639784,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900110,
+      "seed": 900110,
+      "logL_D_max": -18296.119997374502,
+      "logL_Hfree": -18413.99758854825,
+      "T_parent": -235.75518234749325,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900112,
+      "seed": 900112,
+      "logL_D_max": -18319.257207287472,
+      "logL_Hfree": -18319.023224066965,
+      "T_parent": 0.4679664410141413,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900114,
+      "seed": 900114,
+      "logL_D_max": -18637.45864335584,
+      "logL_Hfree": -18637.1465635636,
+      "T_parent": 0.6241595844767289,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900116,
+      "seed": 900116,
+      "logL_D_max": -18723.42810834856,
+      "logL_Hfree": -18723.360297049683,
+      "T_parent": 0.13562259775062557,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900115,
+      "seed": 900115,
+      "logL_D_max": -18661.900524983364,
+      "logL_Hfree": -18661.826817807065,
+      "T_parent": 0.14741435259929858,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900113,
+      "seed": 900113,
+      "logL_D_max": -18588.02010985096,
+      "logL_Hfree": -18584.777643015288,
+      "T_parent": 6.484933671345061,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900121,
+      "seed": 900121,
+      "logL_D_max": -18498.30491793431,
+      "logL_Hfree": -18496.712055212272,
+      "T_parent": 3.1857254440765246,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900118,
+      "seed": 900118,
+      "logL_D_max": -18611.41048842438,
+      "logL_Hfree": -18611.07063913036,
+      "T_parent": 0.6796985880355351,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900117,
+      "seed": 900117,
+      "logL_D_max": -18578.72875043522,
+      "logL_Hfree": -18578.59825775433,
+      "T_parent": 0.2609853617832414,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900119,
+      "seed": 900119,
+      "logL_D_max": -18578.96815325987,
+      "logL_Hfree": -18578.957650543824,
+      "T_parent": 0.02100543209235184,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900120,
+      "seed": 900120,
+      "logL_D_max": -18718.25355244609,
+      "logL_Hfree": -18717.98707933102,
+      "T_parent": 0.5329462301451713,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900122,
+      "seed": 900122,
+      "logL_D_max": -18769.858127841748,
+      "logL_Hfree": -18769.570986690742,
+      "T_parent": 0.5742823020118522,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900123,
+      "seed": 900123,
+      "logL_D_max": -18510.95303079783,
+      "logL_Hfree": -18509.83773134603,
+      "T_parent": 2.230598903603095,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900125,
+      "seed": 900125,
+      "logL_D_max": -18612.34030177239,
+      "logL_Hfree": -18710.786476401427,
+      "T_parent": -196.8923492580725,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900124,
+      "seed": 900124,
+      "logL_D_max": -18634.69343003157,
+      "logL_Hfree": -18633.397287073214,
+      "T_parent": 2.592285916711262,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900126,
+      "seed": 900126,
+      "logL_D_max": -18425.75303112657,
+      "logL_Hfree": -18423.424872496398,
+      "T_parent": 4.656317260341893,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900130,
+      "seed": 900130,
+      "logL_D_max": -18501.099450195106,
+      "logL_Hfree": -18619.1447898057,
+      "T_parent": -236.09067922118993,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900128,
+      "seed": 900128,
+      "logL_D_max": -18483.42041713867,
+      "logL_Hfree": -18479.634713649262,
+      "T_parent": 7.571406978815503,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900127,
+      "seed": 900127,
+      "logL_D_max": -18626.567366740193,
+      "logL_Hfree": -18625.78544096185,
+      "T_parent": 1.5638515566897695,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900129,
+      "seed": 900129,
+      "logL_D_max": -18163.340543883278,
+      "logL_Hfree": -18161.849308542263,
+      "T_parent": 2.9824706820290885,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900131,
+      "seed": 900131,
+      "logL_D_max": -18561.539775951653,
+      "logL_Hfree": -18561.39262932836,
+      "T_parent": 0.2942932465884951,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900133,
+      "seed": 900133,
+      "logL_D_max": -18623.98819003687,
+      "logL_Hfree": -18619.359874659243,
+      "T_parent": 9.256630755255173,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900135,
+      "seed": 900135,
+      "logL_D_max": -18398.164875231727,
+      "logL_Hfree": -18373.072111987494,
+      "T_parent": 50.18552648846526,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900132,
+      "seed": 900132,
+      "logL_D_max": -18532.105558236497,
+      "logL_Hfree": -18532.081847459558,
+      "T_parent": 0.047421553877939004,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900134,
+      "seed": 900134,
+      "logL_D_max": -18670.395841003396,
+      "logL_Hfree": -18669.976768217544,
+      "T_parent": 0.8381455717026256,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900136,
+      "seed": 900136,
+      "logL_D_max": -18947.607268860414,
+      "logL_Hfree": -18944.282880198636,
+      "T_parent": 6.648777323556715,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900139,
+      "seed": 900139,
+      "logL_D_max": -18416.374276545837,
+      "logL_Hfree": -18416.324505929508,
+      "T_parent": 0.09954123265924864,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900137,
+      "seed": 900137,
+      "logL_D_max": -18602.56904790519,
+      "logL_Hfree": -18601.03609829274,
+      "T_parent": 3.0658992248936556,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900140,
+      "seed": 900140,
+      "logL_D_max": -18355.20155387508,
+      "logL_Hfree": -18354.9658531308,
+      "T_parent": 0.47140148855396546,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900141,
+      "seed": 900141,
+      "logL_D_max": -18558.837961447553,
+      "logL_Hfree": -18558.805981745143,
+      "T_parent": 0.06395940481888829,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900138,
+      "seed": 900138,
+      "logL_D_max": -18517.444245880186,
+      "logL_Hfree": -18515.84792929956,
+      "T_parent": 3.192633161248523,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900143,
+      "seed": 900143,
+      "logL_D_max": -18949.746608242487,
+      "logL_Hfree": -18948.68036610705,
+      "T_parent": 2.1324842708709184,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900142,
+      "seed": 900142,
+      "logL_D_max": -18345.565259593757,
+      "logL_Hfree": -18345.540625723414,
+      "T_parent": 0.0492677406873554,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900145,
+      "seed": 900145,
+      "logL_D_max": -18447.517495591197,
+      "logL_Hfree": -18446.986088864047,
+      "T_parent": 1.0628134543003398,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900147,
+      "seed": 900147,
+      "logL_D_max": -18256.98769894477,
+      "logL_Hfree": -18256.897626627877,
+      "T_parent": 0.18014463378494838,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900148,
+      "seed": 900148,
+      "logL_D_max": -18593.18108386652,
+      "logL_Hfree": -18592.137876817567,
+      "T_parent": 2.086414097902889,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900149,
+      "seed": 900149,
+      "logL_D_max": -18566.039311188808,
+      "logL_Hfree": -18565.57112608055,
+      "T_parent": 0.9363702165137511,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900144,
+      "seed": 900144,
+      "logL_D_max": -18701.590330315106,
+      "logL_Hfree": -18700.974601153117,
+      "T_parent": 1.2314583239785861,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900146,
+      "seed": 900146,
+      "logL_D_max": -18357.54903792644,
+      "logL_Hfree": -18352.804993544607,
+      "T_parent": 9.488088763668202,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900150,
+      "seed": 900150,
+      "logL_D_max": -18662.537973289,
+      "logL_Hfree": -18660.484984748186,
+      "T_parent": 4.105977081628225,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900151,
+      "seed": 900151,
+      "logL_D_max": -18452.11346999427,
+      "logL_Hfree": -18450.667067858318,
+      "T_parent": 2.8928042719053337,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900154,
+      "seed": 900154,
+      "logL_D_max": -18555.861155867227,
+      "logL_Hfree": -18555.018008166928,
+      "T_parent": 1.6862954005991924,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900152,
+      "seed": 900152,
+      "logL_D_max": -18676.239969444785,
+      "logL_Hfree": -18675.82408883326,
+      "T_parent": 0.8317612230530358,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900153,
+      "seed": 900153,
+      "logL_D_max": -18494.623148446644,
+      "logL_Hfree": -18492.37724503045,
+      "T_parent": 4.491806832389557,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900159,
+      "seed": 900159,
+      "logL_D_max": -18481.187393172426,
+      "logL_Hfree": -18477.30262926474,
+      "T_parent": 7.769527815369656,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900156,
+      "seed": 900156,
+      "logL_D_max": -18489.052956346044,
+      "logL_Hfree": -18487.520448451454,
+      "T_parent": 3.065015789179597,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900155,
+      "seed": 900155,
+      "logL_D_max": -18678.044440814312,
+      "logL_Hfree": -18677.973596739514,
+      "T_parent": 0.14168814959703013,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900160,
+      "seed": 900160,
+      "logL_D_max": -18608.896515272965,
+      "logL_Hfree": -18607.953286052732,
+      "T_parent": 1.8864584404655034,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900158,
+      "seed": 900158,
+      "logL_D_max": -18447.817864597768,
+      "logL_Hfree": -18447.35041363606,
+      "T_parent": 0.9349019234141451,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900157,
+      "seed": 900157,
+      "logL_D_max": -18645.256864769526,
+      "logL_Hfree": -18645.25401238606,
+      "T_parent": 0.005704766932467464,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900161,
+      "seed": 900161,
+      "logL_D_max": -18353.743668760137,
+      "logL_Hfree": -18353.322314725443,
+      "T_parent": 0.8427080693872995,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900163,
+      "seed": 900163,
+      "logL_D_max": -18623.508339362063,
+      "logL_Hfree": -18622.975538314266,
+      "T_parent": 1.0656020955939312,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900164,
+      "seed": 900164,
+      "logL_D_max": -18422.60570295574,
+      "logL_Hfree": -18420.504019302625,
+      "T_parent": 4.203367306232394,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900162,
+      "seed": 900162,
+      "logL_D_max": -18381.553154074325,
+      "logL_Hfree": -18378.983667260483,
+      "T_parent": 5.138973627683299,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900166,
+      "seed": 900166,
+      "logL_D_max": -18461.70552678912,
+      "logL_Hfree": -18461.61896751721,
+      "T_parent": 0.1731185438184184,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900165,
+      "seed": 900165,
+      "logL_D_max": -18527.866198084193,
+      "logL_Hfree": -18527.865574869564,
+      "T_parent": 0.0012464292594813742,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900170,
+      "seed": 900170,
+      "logL_D_max": -18784.852756955326,
+      "logL_Hfree": -18782.904655428054,
+      "T_parent": 3.8962030545444577,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900167,
+      "seed": 900167,
+      "logL_D_max": -18233.430294993508,
+      "logL_Hfree": -18230.84467661284,
+      "T_parent": 5.171236761336331,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900172,
+      "seed": 900172,
+      "logL_D_max": -18565.191103755013,
+      "logL_Hfree": -18563.545984483626,
+      "T_parent": 3.290238542773295,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900174,
+      "seed": 900174,
+      "logL_D_max": -18821.031834971527,
+      "logL_Hfree": -18820.679523523977,
+      "T_parent": 0.7046228951003286,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900171,
+      "seed": 900171,
+      "logL_D_max": -18512.00148428949,
+      "logL_Hfree": -18511.99061421136,
+      "T_parent": 0.02174015625496395,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900173,
+      "seed": 900173,
+      "logL_D_max": -18517.049548975843,
+      "logL_Hfree": -18511.026372442575,
+      "T_parent": 12.04635306653654,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900168,
+      "seed": 900168,
+      "logL_D_max": -18511.613081215368,
+      "logL_Hfree": -18510.886020488506,
+      "T_parent": 1.4541214537239284,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900175,
+      "seed": 900175,
+      "logL_D_max": -18471.752642611944,
+      "logL_Hfree": -18471.191834662073,
+      "T_parent": 1.1216158997413004,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900176,
+      "seed": 900176,
+      "logL_D_max": -18588.67560976219,
+      "logL_Hfree": -18587.29429104935,
+      "T_parent": 2.7626374256797135,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900169,
+      "seed": 900169,
+      "logL_D_max": -18520.49200756857,
+      "logL_Hfree": -18520.251044182813,
+      "T_parent": 0.4819267715138267,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900177,
+      "seed": 900177,
+      "logL_D_max": -18521.331412717744,
+      "logL_Hfree": -18521.32370106692,
+      "T_parent": 0.015423301643750165,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900178,
+      "seed": 900178,
+      "logL_D_max": -18712.864446486987,
+      "logL_Hfree": -18712.72058189726,
+      "T_parent": 0.28772917945025256,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900180,
+      "seed": 900180,
+      "logL_D_max": -18391.42294135368,
+      "logL_Hfree": -18390.833954537797,
+      "T_parent": 1.1779736317694187,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900179,
+      "seed": 900179,
+      "logL_D_max": -18641.029448063113,
+      "logL_Hfree": -18639.847563119292,
+      "T_parent": 2.363769887640956,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900181,
+      "seed": 900181,
+      "logL_D_max": -18498.607000290343,
+      "logL_Hfree": -18496.332893322422,
+      "T_parent": 4.548213935842796,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900182,
+      "seed": 900182,
+      "logL_D_max": -18576.28994686567,
+      "logL_Hfree": -18574.763827517356,
+      "T_parent": 3.0522386966258637,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900187,
+      "seed": 900187,
+      "logL_D_max": -18346.542862207363,
+      "logL_Hfree": -18345.314196812164,
+      "T_parent": 2.4573307903992827,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900183,
+      "seed": 900183,
+      "logL_D_max": -18532.113515151705,
+      "logL_Hfree": -18529.462517945103,
+      "T_parent": 5.3019944132029195,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900184,
+      "seed": 900184,
+      "logL_D_max": -18554.41470301247,
+      "logL_Hfree": -18626.987385259534,
+      "T_parent": -145.14536449412844,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900186,
+      "seed": 900186,
+      "logL_D_max": -18491.147481363467,
+      "logL_Hfree": -18488.61015980719,
+      "T_parent": 5.074643112551712,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900190,
+      "seed": 900190,
+      "logL_D_max": -18561.602145820212,
+      "logL_Hfree": -18560.124995029648,
+      "T_parent": 2.954301581128675,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900185,
+      "seed": 900185,
+      "logL_D_max": -18349.615389502997,
+      "logL_Hfree": -18349.262375331647,
+      "T_parent": 0.7060283426981186,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900188,
+      "seed": 900188,
+      "logL_D_max": -18428.01165738223,
+      "logL_Hfree": -18427.956351302742,
+      "T_parent": 0.11061215897643706,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900191,
+      "seed": 900191,
+      "logL_D_max": -18687.636539217347,
+      "logL_Hfree": -18686.987606603197,
+      "T_parent": 1.2978652282981784,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900189,
+      "seed": 900189,
+      "logL_D_max": -18403.569909836355,
+      "logL_Hfree": -18403.15230636176,
+      "T_parent": 0.8352069491884322,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900192,
+      "seed": 900192,
+      "logL_D_max": -18526.944145478807,
+      "logL_Hfree": -18523.78404297521,
+      "T_parent": 6.320205007192271,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900194,
+      "seed": 900194,
+      "logL_D_max": -18396.55780672814,
+      "logL_Hfree": -18393.83362390387,
+      "T_parent": 5.448365648539038,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900193,
+      "seed": 900193,
+      "logL_D_max": -18602.749374872095,
+      "logL_Hfree": -18602.643540133366,
+      "T_parent": 0.21166947745950893,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900195,
+      "seed": 900195,
+      "logL_D_max": -18586.437185782393,
+      "logL_Hfree": -18585.875097616794,
+      "T_parent": 1.1241763311991235,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900198,
+      "seed": 900198,
+      "logL_D_max": -18514.513693934365,
+      "logL_Hfree": -18510.98809171522,
+      "T_parent": 7.051204438292189,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900196,
+      "seed": 900196,
+      "logL_D_max": -18401.616266194007,
+      "logL_Hfree": -18401.60632689956,
+      "T_parent": 0.01987858889333438,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900197,
+      "seed": 900197,
+      "logL_D_max": -18422.067312698477,
+      "logL_Hfree": -18421.243318196473,
+      "T_parent": 1.6479890040063765,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900199,
+      "seed": 900199,
+      "logL_D_max": -18620.738100334132,
+      "logL_Hfree": -18620.168574780833,
+      "T_parent": 1.1390511065983446,
+      "converged_D": true,
+      "converged_H": true
+    }
+  ]
+}

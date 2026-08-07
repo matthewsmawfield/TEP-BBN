@@ -1,0 +1,42 @@
+[
+  {
+    "system_id": "Q1009+2956_z2.504",
+    "archive": "SQUAD_DR1",
+    "archive_object_id": "J101155+294141",
+    "expected_filename": "J101155+294141_Final_Spectrum.tar.gz",
+    "resource_url": "https://data-portal.hpc.swin.edu.au/dataset/c4bad1eb-7e80-49c8-981e-ce44654f79ca/resource/c504146c-dfdf-43dc-acb3-4020d30f62cd/download/j101155294141finalspectrum.tar.gz",
+    "resource_discovery_method": "CKAN_API",
+    "product_type": "CONTINUUM_NORMALIZED_1D",
+    "wavelength_start_angstrom": 4159.160301783,
+    "wavelength_end_angstrom": 6210.4843986815,
+    "required_lya_angstrom": 4259.71,
+    "coverage_pass": true,
+    "status": "PRODUCT_CONFIRMED"
+  },
+  {
+    "system_id": "Q0311-1722_z3.734",
+    "archive": "SQUAD_DR1",
+    "archive_object_id": "J031115-172247",
+    "expected_filename": "J031115-172247_Final_Spectrum.tar.gz",
+    "resource_url": "https://data-portal.hpc.swin.edu.au/dataset/c4bad1eb-7e80-49c8-981e-ce44654f79ca/resource/352a1420-4dc6-4bfc-9ace-e74f5ffdb555/download/j031115-172247finalspectrum.tar.gz",
+    "resource_discovery_method": "CKAN_API",
+    "product_type": "CONTINUUM_NORMALIZED_1D",
+    "wavelength_start_angstrom": 4372.1042081195,
+    "wavelength_end_angstrom": 6409.9352301472,
+    "required_lya_angstrom": 5754.98,
+    "coverage_pass": true,
+    "status": "PRODUCT_CONFIRMED"
+  },
+  {
+    "system_id": "HS0105+1619_z2.536",
+    "archive": "KODIAQ_DR1_DR2",
+    "archive_object_id": "J010806+163550",
+    "expected_filename": null,
+    "resource_url": null,
+    "resource_discovery_method": "KOA_TAP",
+    "product_type": "CONTINUUM_NORMALIZED_1D",
+    "required_lya_angstrom": 4298.61,
+    "coverage_pass": false,
+    "status": "KODIAQ_CATALOG_CONFIRMED | MANUAL_PRODUCT_SELECTION_REQUIRED"
+  }
+]

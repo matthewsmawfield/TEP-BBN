@@ -1,0 +1,7 @@
+v0.1 (Dubai) — 2026-08-12 — Eternal-universe BBN: deuterium as thermodynamic resting state, not primordial relic
+
+- Replaced hot-BBN primordial deuterium narrative with temporal-horizon chemical equilibrium over infinite proper-time history
+- Embedding-safe spectroscopic reanalysis of Q1009+2956: unrestricted-H optimum improves Δln L=38.92 over true-D
+- Temporal-exposure convergence condition: infinite proper-time history compatible with finite nuclear and stellar processing
+- Resolved classical stellar astration paradox without invoking an explosive spatial origin
+- Cross-paper consistency: aligned with TEP-TH (Paper 27) temporal-horizon closure and TEP (Paper 0) v0.10

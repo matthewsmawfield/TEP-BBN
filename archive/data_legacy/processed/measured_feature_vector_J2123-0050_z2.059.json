@@ -1,0 +1,12 @@
+{
+  "system_id": "J2123-0050_z2.059",
+  "source": "KODIAQ DR2",
+  "components": [
+    {
+      "component_id": 1,
+      "velocity_kms": 0.0,
+      "metal_alignment_strength": 0.9,
+      "g_i": 0.85
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "cmb_scorecard": {
+    "cmb_consistent": true,
+    "cmb_peaks": {
+      "ee_first_peak": {
+        "Dl_uK2": 21.78,
+        "ell": 395
+      },
+      "te_zero_crossing": {
+        "Dl_uK2": -0.3514,
+        "ell": 400
+      },
+      "tt_first_peak": {
+        "Dl_uK2": 5754.53,
+        "ell": 220
+      },
+      "tt_second_peak": {
+        "Dl_uK2": 2612.05,
+        "ell": 536
+      }
+    },
+    "cmb_shift_negligible": true,
+    "lcdm_100theta_s": 1.0419,
+    "lcdm_r_s": 144.811,
+    "lcdm_z_star": 1085.134,
+    "planck_comparison": {
+      "checks": {
+        "100theta_s": {
+          "delta": 0.00089,
+          "pass": true,
+          "planck": 1.04101,
+          "value": 1.0419
+        },
+        "bao": [
+          {
+            "class": 3.146,
+            "data": 2.97,
+            "delta": 0.176,
+            "err": 0.13,
+            "pass": true,
+            "quantity": "D_V/rs",
+            "z": 0.106
+          },
+          {
+            "class": 4.385,
+            "data": 4.48,
+            "delta": 0.095,
+            "err": 0.17,
+            "pass": true,
+            "quantity": "D_V/rs",
+            "z": 0.15
+          },
+          {
+            "class": 10.589,
+            "data": 10.23,
+            "delta": 0.359,
+            "err": 0.17,
+            "pass": true,
+            "quantity": "D_M/rs",
+            "z": 0.38
+          },
+          {
+            "class": 24.979,
+            "data": 24.89,
+            "delta": 0.089,
+            "err": 0.67,
+            "pass": true,
+            "quantity": "D_H/rs",
+            "z": 0.38
+          },
+          {
+            "class": 13.712,
+            "data": 13.36,
+            "delta": 0.352,
+            "err": 0.21,
+            "pass": true,
+            "quantity": "D_M/rs",
+            "z": 0.51
+          },
+          {
+            "class": 23.094,
+            "data": 22.53,
+            "delta": 0.564,
+            "err": 0.58,
+            "pass": true,
+            "quantity": "D_H/rs",
+            "z": 0.51
+          },
+          {
+            "class": 15.953,
+            "data": 15.65,
+            "delta": 0.303,
+            "err": 0.23,
+            "pass": true,
+            "quantity": "D_M/rs",
+            "z": 0.61
+          },
+          {
+            "class": 21.724,
+            "data": 20.26,
+            "delta": 1.464,
+            "err": 0.52,
+            "pass": true,
+            "quantity": "D_H/rs",
+            "z": 0.61
+          }
+        ],
+        "cmb_peaks": {
+          "ee_first_peak": {
+            "Dl_uK2": 21.78,
+            "ell": 395
+          },
+          "te_zero_crossing": {
+            "Dl_uK2": -0.3514,
+            "ell": 400
+          },
+          "tt_first_peak": {
+            "Dl_uK2": 5754.53,
+            "ell": 220
+          },
+          "tt_second_peak": {
+            "Dl_uK2": 2612.05,
+            "ell": 536
+          }
+        },
+        "r_s": {
+          "delta": 0.381,
+          "pass": true,
+          "planck": 144.43,
+          "value": 144.811
+        },
+        "sigma_8": {
+          "delta": 0.0011,
+          "pass": true,
+          "planck": 0.8111,
+          "value": 0.812229
+        },
+        "z_star": {
+          "delta": 4.786,
+          "pass": true,
+          "planck": 1089.92,
+          "value": 1085.134
+        }
+      },
+      "cmb_peaks": {
+        "ee_first_peak": {
+          "Dl_uK2": 21.78,
+          "ell": 395
+        },
+        "te_zero_crossing": {
+          "Dl_uK2": -0.3514,
+          "ell": 400
+        },
+        "tt_first_peak": {
+          "Dl_uK2": 5754.53,
+          "ell": 220
+        },
+        "tt_second_peak": {
+          "Dl_uK2": 2612.05,
+          "ell": 536
+        }
+      },
+      "pass": true,
+      "status": "LCDM CLASS matches Planck"
+    },
+    "tep_screened_z_star": 1089.92,
+    "tep_unscreened_deviates": false,
+    "z_star_frac_shift": 0.0,
+    "z_star_shift": 0.0
+  },
+  "description": "CMB anisotropy and LSS consistency via CLASS Boltzmann code",
+  "interpretation": "TEP-screened CMB and LSS match Planck/LCDM within observational tolerance; TEP-unscreened is ruled out by BBN and would produce shifted CMB peaks",
+  "lcdm_class_output": {
+    "age_Gyr": 13.793817,
+    "r_drag_Mpc": 147.054,
+    "r_s_Mpc": 144.811,
+    "sigma8": 0.812229,
+    "theta_s": 0.010419,
+    "z_star": 1085.134
+  },
+  "lss_scorecard": {
+    "bao_predictions": [
+      {
+        "D_H": 4221.726,
+        "D_H_over_rs": 29.153,
+        "D_M": 459.72,
+        "D_M_over_rs": 3.175,
+        "D_V": 455.611,
+        "D_V_over_rs": 3.146,
+        "z": 0.106
+      },
+      {
+        "D_H": 4124.506,
+        "D_H_over_rs": 28.482,
+        "D_M": 643.34,
+        "D_M_over_rs": 4.443,
+        "D_V": 635.011,
+        "D_V_over_rs": 4.385,
+        "z": 0.15
+      },
+      {
+        "D_H": 3617.292,
+        "D_H_over_rs": 24.979,
+        "D_M": 1533.357,
+        "D_M_over_rs": 10.589,
+        "D_V": 1478.489,
+        "D_V_over_rs": 10.21,
+        "z": 0.38
+      },
+      {
+        "D_H": 3344.336,
+        "D_H_over_rs": 23.094,
+        "D_M": 1985.699,
+        "D_M_over_rs": 13.712,
+        "D_V": 1887.567,
+        "D_V_over_rs": 13.035,
+        "z": 0.51
+      },
+      {
+        "D_H": 3145.864,
+        "D_H_over_rs": 21.724,
+        "D_M": 2310.118,
+        "D_M_over_rs": 15.953,
+        "D_V": 2171.598,
+        "D_V_over_rs": 14.996,
+        "z": 0.61
+      }
+    ],
+    "growth_f_sigma8": {
+      "0.38": 0.47587254287665753,
+      "0.51": 0.4740014643124717,
+      "0.61": 0.46871759333593377
+    },
+    "lss_consistent": true,
+    "sigma8_lcdm": 0.812229
+  },
+  "overall_consistent": true,
+  "parameters": {
+    "epsilon_t": 0.1,
+    "n_t": 1.0,
+    "use_screening": true,
+    "z_t": 100.0
+  },
+  "step": "step_10_cmb_lss_class"
+}

@@ -1,0 +1,6 @@
+{
+  "status": "REVOKED_PREMATURE_QUALIFICATION",
+  "joint_likelihood_sha256": "3f224c5413b89cd82560cf353fba6ae838843a271cc102857c49656da97a9ed4",
+  "manifest_sha256": "fac0130515240fca3823e3b6ffd55524674b92c29ee5b106d338dbc0753ad4fe",
+  "formal_campaign_ready": true
+}

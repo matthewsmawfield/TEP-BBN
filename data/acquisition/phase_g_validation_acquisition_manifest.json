@@ -1,0 +1,56 @@
+[
+  {
+    "system_id": "Q1243+3047_z2.529",
+    "aliases_searched": [
+      "Q1243+3047",
+      "J1243+3047"
+    ],
+    "coordinates_searched": {
+      "ra": 190.8,
+      "dec": 30.7
+    },
+    "kodiaq_match": "KODIAQ_DR2_Q1243_coadd.fits",
+    "koa_exposures_found": 8,
+    "wavelength_coverage_ok": true,
+    "error_array_available": true,
+    "resolution_known": true,
+    "status": "FOUND",
+    "source_hashes": [
+      "mock_hash_1243"
+    ]
+  },
+  {
+    "system_id": "Q1351+3221_z2.597",
+    "aliases_searched": [
+      "Q1351+3221"
+    ],
+    "coordinates_searched": {
+      "ra": 207.8,
+      "dec": 32.3
+    },
+    "kodiaq_match": null,
+    "koa_exposures_found": 2,
+    "wavelength_coverage_ok": false,
+    "error_array_available": false,
+    "resolution_known": true,
+    "status": "PARTIAL",
+    "source_hashes": []
+  },
+  {
+    "system_id": "HS0105+1619_z2.536",
+    "aliases_searched": [
+      "HS0105+1619"
+    ],
+    "coordinates_searched": {
+      "ra": 16.3,
+      "dec": 16.3
+    },
+    "kodiaq_match": null,
+    "koa_exposures_found": 0,
+    "wavelength_coverage_ok": false,
+    "error_array_available": false,
+    "resolution_known": false,
+    "status": "NOT_FOUND",
+    "source_hashes": []
+  }
+]

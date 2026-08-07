@@ -1,0 +1,35 @@
+{
+  "name": "tep-bbn-site",
+  "version": "0.1.0",
+  "description": "TEP-BBN: Dynamical Proper Time and the Illusion of Primordial Deuterium",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "start": "python3 -m http.server 8000",
+    "build": "node build.js",
+    "build:markdown": "npm run build && node html-to-markdown.js",
+    "markdown": "node html-to-markdown.js"
+  },
+  "keywords": [
+    "TEP-BBN",
+    "Temporal Cosmology",
+    "Cosmic Redshift",
+    "FLRW",
+    "Big Bang Cosmology",
+    "Cosmic Expansion",
+    "Proper-Time Transport",
+    "Redshift Drift",
+    "Distance Duality",
+    "Temporal Equivalence Principle",
+    "Cosmology"
+  ],
+  "author": "Matthew Lukin Smawfield",
+  "license": "CC-BY-4.0",
+  "devDependencies": {
+    "chokidar": "^4.0.3",
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

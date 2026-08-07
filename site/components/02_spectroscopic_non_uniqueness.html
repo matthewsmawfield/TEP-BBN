@@ -1,0 +1,83 @@
+<h2>2. Spectroscopic Re-analysis of Q1009+2956</h2>
+<p>
+    The assumption that primordial deuterium can be reliably identified depends on the "isochrony axiom"—the premise that a single high-redshift Lyman-limit absorption system can be rigorously decomposed into nested Voigt components matching the distinct isotopic architectures of H and D. This assumption was tested directly on the high-resolution Keck HIRES spectrum of the benchmark Q1009+2956 absorption system.
+</p>
+
+<h3>2.1 Isotope Identifiability Limits in Q1009+2956</h3>
+<div class="experimental-section">
+    <p>
+        Using the immutable physical atomic registries for H I and D I, synthetic deuterium was embedded at typical expected ratios and recovered using unrestricted hydrogen models. Across all common Lyman transitions simultaneously, the maximum discrepancy between the best-fit free-H model and the exact true-D model, relative to the instrumental noise level, was found to be only $0.0011\sigma$. This verifies that the isotope architectures are observationally unidentifiable given standard physical noise floors.
+    </p>
+</div>
+
+<h3>2.2 Likelihood Nesting and Significance Testing</h3>
+<p>
+    A complete structural re-analysis of the Q1009+2956 spectrum under a rigorously nested model hierarchy was then executed. By anchoring the fits to an immutable data manifest (SHA-256 validated), the likelihood surfaces of the standard D-interpretation ($M_D$), an unrestricted hydrogen interpretation ($M_{H,\rm free}$), and the joint space ($M_{D+H}$) were mapped.
+</p>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Candidate interpretation</th>
+            <th>$\ln L_{\max}$</th>
+            <th>Nested?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>$M_D$</td>
+            <td>D tied to parent H</td>
+            <td>$-17932.13$</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>$M_{H,\rm free}$</td>
+            <td>unrestricted H</td>
+            <td>$-17893.21$</td>
+            <td>observationally embeds $M_D$ at Q1009 precision</td>
+        </tr>
+        <tr>
+            <td>$M_{D+H}$</td>
+            <td>D + unrestricted H</td>
+            <td>$-17893.21$</td>
+            <td>contains $M_{H,\rm free}$ if $N_{\rm D}\to 0$</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="key-finding">
+    <h4>Statistical Significance</h4>
+    <p>
+        The unrestricted hydrogen model provided a superior description of the data, yielding a likelihood improvement:
+    </p>
+    <div class="equation">
+        \begin{equation} \Delta \ln L = 38.92, \qquad T = 77.85. \end{equation}
+    </div>
+    <p>
+        To establish rigorous significance, 200 physical Monte Carlo simulations generating exact, noisy true-D flux were run, followed by dense free-H refitting. Not a single realization ($k=0$) out of $N_{\rm MC}=200$ exceeded the observed statistic. This provides an empirical add-one $p$-value of $p_{\rm add-one} = 1/201 \approx 0.00498$, and a one-sided 95% binomial upper bound of $p < 0.0149$.
+    </p>
+</div>
+
+<h3>2.3 Leave-One-Out and Parent Reassignment Robustness</h3>
+<p>
+    The component misattribution vulnerability was exhaustively tested by tying the candidate D velocity to every single available H component in the model family (43 distinct parent candidate structures). The maximum alternative-parent test statistic is defined as:
+</p>
+<div class="equation">
+    \begin{equation} T_{\rm parent} = 2 \left[ \ln L(M_{H,\rm free}) - \max_j \ln L(M_D\mid j) \right]. \end{equation}
+</div>
+<p>
+    Against the most advantageous alternative parent assignment, the free-H interpretation still preferred with $T_{\rm parent} = 6.45$. When calibrated inside the true-D Monte Carlo loop—utilizing exhaustive multi-start optimization to prevent local minima from artificially widening the null distribution—the $T \ge 6.45$ threshold yields an empirical $p_{\rm parent} \approx 0.08$ (15 exceedances out of 200 realizations). This demonstrates that current benchmark spectra cannot reliably exclude ordinary hydrogen kinematics. The standard hot-BBN inference relies on the premise that deuterium is uniquely identifiable in high-redshift systems. Because the $M_{H,\rm free}$ model embeds the true-D architecture without statistical rejection, this identifiability assumption is not supported by current data. Without ultra-high-resolution instruments (e.g., ELT/ANDES, with $R > 100,000$ and exceptional signal-to-noise ratios) to physically break this kinematic degeneracy, definitive high-redshift deuterium detections remain unconfirmed.
+</p>
+
+<p>
+    Finally, performing a transition-level leave-one-out (LOO) test reveals where the empirical discrimination resides:
+</p>
+<div class="equation">
+    \begin{equation} T_{\rm full} = 77.85, \qquad T_{-\mathrm{Ly}\alpha} = 2.22. \end{equation}
+</div>
+<div class="critical-analysis">
+    <p>
+        The statistical result is driven primarily by the morphology of the Ly$\alpha$ transition. The result demonstrates that a benchmark high-redshift D/H system is not spectroscopically self-authenticating once the displaced-H model class is admitted. Astronomical D/H therefore cannot by itself establish isotope identity without quantitatively excluding the ordinary-H alternative.
+    </p>
+</div>

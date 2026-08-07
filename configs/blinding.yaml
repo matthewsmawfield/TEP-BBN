@@ -1,0 +1,14 @@
+system_id: Q0913+072_z2.618
+blind_regions:
+  - name: deuterium_window_Ly_alpha
+    velocity_center_kms: -82
+    width_kms: 25
+  - name: deuterium_window_Ly_beta
+    velocity_center_kms: -82
+    width_kms: 25
+feature_construction_must_exclude_blind_regions: true
+forbidden_inputs:
+  - "D I line depth"
+  - "D I line residual"
+  - "D I fitted column density"
+  - "post-hoc evidence comparison"

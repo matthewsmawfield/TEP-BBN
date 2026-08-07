@@ -1,0 +1,12 @@
+{
+  "4A_scalar_derivation": "PASSED (Symbolic Proof)",
+  "4B_absorber_solution": "PASSED (Green's Integral Abstraction)",
+  "4C_sign_prediction": "PASSED (Blueward)",
+  "4D_amplitude_prediction": "DROPPED (Requires explicit mass model)",
+  "symbolic_relations": {
+    "delta_phi": "G_int*alpha*rho",
+    "delta_ln_A": "G_int*alpha**2*rho",
+    "delta_v_T": "-G_int*alpha**2*c*rho",
+    "is_blueward": true
+  }
+}

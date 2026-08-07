@@ -1,0 +1,2 @@
+# Placeholder for extracted 1D spectrum from manual ingest
+# Wavelength Flux Error

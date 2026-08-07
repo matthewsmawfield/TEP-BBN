@@ -1,0 +1,13 @@
+{
+  "processing_date": "2026-07-06T18:32:45.402320",
+  "processing_software_version": "0.1.0",
+  "processing_notes": "UVES data are raw 2D echelle images requiring reduction",
+  "systems": [
+    {
+      "system_id": "Q0913+072_z2.618",
+      "n_files": 26,
+      "output_file": "../../data/processed/standardized/Q0913+072_z2.618_standardized.json",
+      "processing_status": "raw_data_ready_for_reduction"
+    }
+  ]
+}

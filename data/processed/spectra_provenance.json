@@ -1,0 +1,25 @@
+{
+  "download_date": "2026-07-06T18:28:00",
+  "download_method": "astroquery.eso (programmatic access to ESO archive)",
+  "archive": "ESO Science Archive",
+  "archive_url": "https://archive.eso.org/",
+  "archive_version": "public (no authentication required)",
+  "systems": [
+    {
+      "system_id": "Q0913+072_z2.618",
+      "qso_name": "Q0913+072",
+      "redshift": 2.618,
+      "instrument": "UVES",
+      "archive": "ESO",
+      "program_id": "68.B-0115",
+      "download_status": "success",
+      "n_observations": 26,
+      "n_downloaded": 26,
+      "data_directory": "data/raw/spectra/Q0913072_z2.618/",
+      "checksum_file": "data/raw/spectra/Q0913072_z2.618/checksums.json",
+      "total_size_bytes": 201746880,
+      "total_size_mb": 192.4,
+      "download_method": "astroquery.eso"
+    }
+  ]
+}

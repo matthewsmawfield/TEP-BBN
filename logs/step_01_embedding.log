@@ -1,0 +1,30 @@
+[22:24:09] [INFO] ================================================================================
+[22:24:09] [INFO] Script: step_01_embedding
+[22:24:09] [INFO] Started: 2026-08-07T22:24:09.104643
+[22:24:09] [INFO] ================================================================================
+[22:24:09] [SUCCESS] === GATE 1R: PHYSICAL ATOMIC-DATA EMBEDDING ===
+[22:24:09] [PROCESS] H_I_lines.txt SHA-256: e5e64db44a25fbb3254e242a8484e9a9e25d6b917960378c64654d0496074762
+[22:24:09] [PROCESS] D_I_lines.txt SHA-256: e4195b3791db0371119af15d0f342fdc77e5499ebc1586387725a5e8d3fe4022
+[22:24:09] [PROCESS] 
+Optimal Mapping derived from Lyα ratio: rho = 0.99972665
+[22:24:09] [PROCESS] HI_Lyα / DI_Lyα:
+[22:24:09] [PROCESS]   eps_tau = 2.7549e-04
+[22:24:09] [PROCESS]   eps_F   = 1.0133e-04
+[22:24:09] [PROCESS] 
+Global Max eps_tau = 2.7549e-04
+[22:24:09] [PROCESS] Global Max eps_F   = 1.0133e-04
+[22:24:09] [INFO] 
+[22:24:09] [INFO] ================================================================================
+[22:24:09] [INFO] 
+--- Operational Isotope Non-Identifiability ---
+[22:24:09] [INFO] ================================================================================
+[22:24:09] [INFO] 
+[22:24:09] [PROCESS] Convolved eps_conv (HI_Lyα) = 5.2927e-05  |  max |F_D - F_H| / sigma_F = 0.0011
+[22:24:09] [PROCESS] 
+Global Max |F_D - F_H| / sigma_F = 0.0011
+[22:24:09] [SUCCESS] 
+[SUCCESS] Operational Isotope Non-Identifiability verified. Theoretical maximum discrepancy is strictly bounded below instrumental noise.
+[22:24:09] [SUCCESS] 
+[SUCCESS] Gate 1R ledger written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate1_embedding.json
+[22:24:09] [SUCCESS]   [OK] 1.2s
+[22:24:09] [PROCESS] [RUN] step_02_q1009: Gate 2R: Immutable Q1009 Fit Verification

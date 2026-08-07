@@ -1,0 +1,115 @@
+[
+  {
+    "system_id": "Q0913+072_z2.618",
+    "qso_name": "Q0913+072",
+    "registry_redshift": 2.618,
+    "status": "SCIENTIFIC_ELIGIBLE",
+    "reasons": []
+  },
+  {
+    "system_id": "Q1009+2956_z2.504",
+    "qso_name": "Q1009+2956",
+    "registry_redshift": 2.504,
+    "status": "INCONCLUSIVE_LOW_POWER",
+    "reasons": [
+      "Power validation did not return INFORMATIVE_NEGATIVE."
+    ]
+  },
+  {
+    "system_id": "Q1243+3047_z2.529",
+    "qso_name": "Q1243+3047",
+    "registry_redshift": 2.529,
+    "status": "INSUFFICIENT_SECONDARY_STRUCTURE",
+    "reasons": [
+      "Feature vector marked as proxy/engineering-only.",
+      "Only 0 component(s) found. Needs >= 2 for TEP test."
+    ]
+  },
+  {
+    "system_id": "Q1351+3221_z2.597",
+    "qso_name": "Q1351+3221",
+    "registry_redshift": 2.597,
+    "status": "INSUFFICIENT_SECONDARY_STRUCTURE",
+    "reasons": [
+      "Feature vector marked as proxy/engineering-only.",
+      "Only 0 component(s) found. Needs >= 2 for TEP test."
+    ]
+  },
+  {
+    "system_id": "Q1444+2919_z2.428",
+    "qso_name": "Q1444+2919",
+    "registry_redshift": 2.428,
+    "status": "INSUFFICIENT_SECONDARY_STRUCTURE",
+    "reasons": [
+      "Feature vector marked as proxy/engineering-only.",
+      "Only 0 component(s) found. Needs >= 2 for TEP test."
+    ]
+  },
+  {
+    "system_id": "Q1444+2919_z2.624",
+    "qso_name": "Q1444+2919",
+    "registry_redshift": 2.624,
+    "status": "INSUFFICIENT_SECONDARY_STRUCTURE",
+    "reasons": [
+      "Feature vector marked as proxy/engineering-only.",
+      "Only 0 component(s) found. Needs >= 2 for TEP test."
+    ]
+  },
+  {
+    "system_id": "J1419+0829_z3.049840",
+    "qso_name": "J1419+0829",
+    "registry_redshift": 3.04984,
+    "status": "SCIENTIFIC_ELIGIBLE",
+    "reasons": []
+  },
+  {
+    "system_id": "HS0105+1619_z2.536",
+    "qso_name": "HS0105+1619",
+    "registry_redshift": 2.536,
+    "status": "INSUFFICIENT_SECONDARY_STRUCTURE",
+    "reasons": [
+      "Feature vector marked as proxy/engineering-only.",
+      "Only 0 component(s) found. Needs >= 2 for TEP test."
+    ]
+  },
+  {
+    "system_id": "PKS1937-1009_z3.256",
+    "qso_name": "PKS1937-1009",
+    "registry_redshift": 3.256,
+    "status": "INSUFFICIENT_SECONDARY_STRUCTURE",
+    "reasons": [
+      "Feature vector marked as proxy/engineering-only.",
+      "Only 1 component(s) found. Needs >= 2 for TEP test."
+    ]
+  },
+  {
+    "system_id": "SDSSJ1358+6522_z3.067",
+    "qso_name": "J1358+6522",
+    "registry_redshift": 3.067,
+    "status": "INSUFFICIENT_SECONDARY_STRUCTURE",
+    "reasons": [
+      "Feature vector marked as proxy/engineering-only.",
+      "Only 0 component(s) found. Needs >= 2 for TEP test."
+    ]
+  },
+  {
+    "system_id": "SDSSJ1558-0031_z2.702",
+    "qso_name": "J1558-0031",
+    "registry_redshift": 2.702,
+    "status": "INSUFFICIENT_SECONDARY_STRUCTURE",
+    "reasons": [
+      "Feature vector marked as proxy/engineering-only.",
+      "Only 0 component(s) found. Needs >= 2 for TEP test."
+    ]
+  },
+  {
+    "system_id": "Q0311-1722_z3.734",
+    "qso_name": "Q0311-1722",
+    "registry_redshift": 3.734,
+    "status": "INSUFFICIENT_SECONDARY_STRUCTURE",
+    "reasons": [
+      "Feature vector marked as proxy/engineering-only.",
+      "Only 0 component(s) found. Needs >= 2 for TEP test."
+    ]
+  }
+]

@@ -1,0 +1,455 @@
+{
+  "reduction_date": "2026-07-06T18:47:56.505396",
+  "reduction_method": "Python simplified reduction",
+  "reduction_version": "0.1.0",
+  "status": "complete",
+  "n_files": 26,
+  "n_successful": 26,
+  "n_failed": 0,
+  "average_snr": 659.6007839187015,
+  "results": [
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-13T02:06:38.545.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-13T02:06:38.545.fits",
+      "input_name": "UVES.2002-01-13T02:06:38.545.fits",
+      "output_name": "reduced_UVES.2002-01-13T02:06:38.545.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 139.0,
+      "continuum_level": 46448.0,
+      "snr": 1054.8692282023997,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-13T02:10:11.853.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-13T02:10:11.853.fits",
+      "input_name": "UVES.2002-01-13T02:10:11.853.fits",
+      "output_name": "reduced_UVES.2002-01-13T02:10:11.853.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 254.0,
+      "continuum_level": 16379.5,
+      "snr": 79.10389703465738,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-13T03:42:54.139.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-13T03:42:54.139.fits",
+      "input_name": "UVES.2002-01-13T03:42:54.139.fits",
+      "output_name": "reduced_UVES.2002-01-13T03:42:54.139.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 139.0,
+      "continuum_level": 46186.0,
+      "snr": 1076.7238253826931,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-13T03:46:24.550.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-13T03:46:24.550.fits",
+      "input_name": "UVES.2002-01-13T03:46:24.550.fits",
+      "output_name": "reduced_UVES.2002-01-13T03:46:24.550.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 255.0,
+      "continuum_level": 7258.5,
+      "snr": 36.24970742369525,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-14T02:13:24.913.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-14T02:13:24.913.fits",
+      "input_name": "UVES.2002-01-14T02:13:24.913.fits",
+      "output_name": "reduced_UVES.2002-01-14T02:13:24.913.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 139.0,
+      "continuum_level": 70029.5,
+      "snr": 1405.8209317453382,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-14T02:16:59.757.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-14T02:16:59.757.fits",
+      "input_name": "UVES.2002-01-14T02:16:59.757.fits",
+      "output_name": "reduced_UVES.2002-01-14T02:16:59.757.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 255.0,
+      "continuum_level": 34096.0,
+      "snr": 169.3837552119312,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-15T00:43:32.990.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-15T00:43:32.990.fits",
+      "input_name": "UVES.2002-01-15T00:43:32.990.fits",
+      "output_name": "reduced_UVES.2002-01-15T00:43:32.990.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 255.0,
+      "continuum_level": 28409.0,
+      "snr": 133.01383829341523,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-15T00:43:33.859.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-15T00:43:33.859.fits",
+      "input_name": "UVES.2002-01-15T00:43:33.859.fits",
+      "output_name": "reduced_UVES.2002-01-15T00:43:33.859.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 140.0,
+      "continuum_level": 101988.5,
+      "snr": 1672.6112751478936,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-17T03:53:23.787.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-17T03:53:23.787.fits",
+      "input_name": "UVES.2002-01-17T03:53:23.787.fits",
+      "output_name": "reduced_UVES.2002-01-17T03:53:23.787.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 255.0,
+      "continuum_level": 7668.5,
+      "snr": 39.328463437464386,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-17T03:53:28.956.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-17T03:53:28.956.fits",
+      "input_name": "UVES.2002-01-17T03:53:28.956.fits",
+      "output_name": "reduced_UVES.2002-01-17T03:53:28.956.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 139.0,
+      "continuum_level": 42765.0,
+      "snr": 1053.2930903738163,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-18T03:25:04.920.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-18T03:25:04.920.fits",
+      "input_name": "UVES.2002-01-18T03:25:04.920.fits",
+      "output_name": "reduced_UVES.2002-01-18T03:25:04.920.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 140.0,
+      "continuum_level": 55095.5,
+      "snr": 1160.5150428564295,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-18T03:25:05.996.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-18T03:25:05.996.fits",
+      "input_name": "UVES.2002-01-18T03:25:05.996.fits",
+      "output_name": "reduced_UVES.2002-01-18T03:25:05.996.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 255.0,
+      "continuum_level": 38921.0,
+      "snr": 180.7371467423136,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-23T02:17:38.261.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-23T02:17:38.261.fits",
+      "input_name": "UVES.2002-01-23T02:17:38.261.fits",
+      "output_name": "reduced_UVES.2002-01-23T02:17:38.261.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 256.0,
+      "continuum_level": 17744.0,
+      "snr": 88.89340435603441,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-23T03:28:13.488.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-23T03:28:13.488.fits",
+      "input_name": "UVES.2002-01-23T03:28:13.488.fits",
+      "output_name": "reduced_UVES.2002-01-23T03:28:13.488.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 256.0,
+      "continuum_level": 9993.5,
+      "snr": 51.09185896415533,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-01-23T03:28:14.360.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-01-23T03:28:14.360.fits",
+      "input_name": "UVES.2002-01-23T03:28:14.360.fits",
+      "output_name": "reduced_UVES.2002-01-23T03:28:14.360.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 140.0,
+      "continuum_level": 53134.0,
+      "snr": 1080.529637244447,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-02-14T04:09:28.303.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-02-14T04:09:28.303.fits",
+      "input_name": "UVES.2002-02-14T04:09:28.303.fits",
+      "output_name": "reduced_UVES.2002-02-14T04:09:28.303.fits",
+      "shape": [
+        290,
+        400
+      ],
+      "bias_level": 121.0,
+      "continuum_level": 9935.0,
+      "snr": 704.0742622771734,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-02-14T04:09:54.782.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-02-14T04:09:54.782.fits",
+      "input_name": "UVES.2002-02-14T04:09:54.782.fits",
+      "output_name": "reduced_UVES.2002-02-14T04:09:54.782.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 252.0,
+      "continuum_level": 38423.5,
+      "snr": 180.7585244245138,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-02-14T04:09:57.119.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-02-14T04:09:57.119.fits",
+      "input_name": "UVES.2002-02-14T04:09:57.119.fits",
+      "output_name": "reduced_UVES.2002-02-14T04:09:57.119.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 140.0,
+      "continuum_level": 61369.5,
+      "snr": 1137.48956985029,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-02-16T01:44:51.993.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-02-16T01:44:51.993.fits",
+      "input_name": "UVES.2002-02-16T01:44:51.993.fits",
+      "output_name": "reduced_UVES.2002-02-16T01:44:51.993.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 140.0,
+      "continuum_level": 53585.5,
+      "snr": 1073.3466326099124,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-02-16T01:44:52.915.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-02-16T01:44:52.915.fits",
+      "input_name": "UVES.2002-02-16T01:44:52.915.fits",
+      "output_name": "reduced_UVES.2002-02-16T01:44:52.915.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 252.0,
+      "continuum_level": 28428.0,
+      "snr": 139.96523649321017,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-02-18T03:24:42.112.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-02-18T03:24:42.112.fits",
+      "input_name": "UVES.2002-02-18T03:24:42.112.fits",
+      "output_name": "reduced_UVES.2002-02-18T03:24:42.112.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 254.0,
+      "continuum_level": 54200.5,
+      "snr": 238.6171063290487,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-02-18T03:24:43.024.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-02-18T03:24:43.024.fits",
+      "input_name": "UVES.2002-02-18T03:24:43.024.fits",
+      "output_name": "reduced_UVES.2002-02-18T03:24:43.024.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 140.0,
+      "continuum_level": 71336.5,
+      "snr": 1264.5765320067833,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-02-20T02:41:08.495.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-02-20T02:41:08.495.fits",
+      "input_name": "UVES.2002-02-20T02:41:08.495.fits",
+      "output_name": "reduced_UVES.2002-02-20T02:41:08.495.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 256.0,
+      "continuum_level": 77952.5,
+      "snr": 348.7472653240191,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-02-20T02:41:09.386.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-02-20T02:41:09.386.fits",
+      "input_name": "UVES.2002-02-20T02:41:09.386.fits",
+      "output_name": "reduced_UVES.2002-02-20T02:41:09.386.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 140.0,
+      "continuum_level": 63844.0,
+      "snr": 1133.6196084875369,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-03-04T05:59:56.318.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-03-04T05:59:56.318.fits",
+      "input_name": "UVES.2002-03-04T05:59:56.318.fits",
+      "output_name": "reduced_UVES.2002-03-04T05:59:56.318.fits",
+      "shape": [
+        1500,
+        1074
+      ],
+      "bias_level": 140.0,
+      "continuum_level": 86790.5,
+      "snr": 1472.2176396386872,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    },
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-03-23T03:52:02.081.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-03-23T03:52:02.081.fits",
+      "input_name": "UVES.2002-03-23T03:52:02.081.fits",
+      "output_name": "reduced_UVES.2002-03-23T03:52:02.081.fits",
+      "shape": [
+        2048,
+        2148
+      ],
+      "bias_level": 255.0,
+      "continuum_level": 36588.0,
+      "snr": 174.04290202837998,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    }
+  ],
+  "notes": "Simplified reduction for analysis purposes. For publication-quality reduction, use ESO Reflex."
+}

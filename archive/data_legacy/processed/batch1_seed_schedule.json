@@ -1,0 +1,2602 @@
+[
+  {
+    "condition": "null",
+    "trial_index": 0,
+    "data_seed": 20001,
+    "sampler_seeds": {
+      "M0": 900001,
+      "M1": 900002,
+      "M2": 900003
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 1,
+    "data_seed": 20002,
+    "sampler_seeds": {
+      "M0": 900004,
+      "M1": 900005,
+      "M2": 900006
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 2,
+    "data_seed": 20003,
+    "sampler_seeds": {
+      "M0": 900007,
+      "M1": 900008,
+      "M2": 900009
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 3,
+    "data_seed": 20004,
+    "sampler_seeds": {
+      "M0": 900010,
+      "M1": 900011,
+      "M2": 900012
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 4,
+    "data_seed": 20005,
+    "sampler_seeds": {
+      "M0": 900013,
+      "M1": 900014,
+      "M2": 900015
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 5,
+    "data_seed": 20006,
+    "sampler_seeds": {
+      "M0": 900016,
+      "M1": 900017,
+      "M2": 900018
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 6,
+    "data_seed": 20007,
+    "sampler_seeds": {
+      "M0": 900019,
+      "M1": 900020,
+      "M2": 900021
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 7,
+    "data_seed": 20008,
+    "sampler_seeds": {
+      "M0": 900022,
+      "M1": 900023,
+      "M2": 900024
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 8,
+    "data_seed": 20009,
+    "sampler_seeds": {
+      "M0": 900025,
+      "M1": 900026,
+      "M2": 900027
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 9,
+    "data_seed": 20010,
+    "sampler_seeds": {
+      "M0": 900028,
+      "M1": 900029,
+      "M2": 900030
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 10,
+    "data_seed": 20011,
+    "sampler_seeds": {
+      "M0": 900031,
+      "M1": 900032,
+      "M2": 900033
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 11,
+    "data_seed": 20012,
+    "sampler_seeds": {
+      "M0": 900034,
+      "M1": 900035,
+      "M2": 900036
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 12,
+    "data_seed": 20013,
+    "sampler_seeds": {
+      "M0": 900037,
+      "M1": 900038,
+      "M2": 900039
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 13,
+    "data_seed": 20014,
+    "sampler_seeds": {
+      "M0": 900040,
+      "M1": 900041,
+      "M2": 900042
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 14,
+    "data_seed": 20015,
+    "sampler_seeds": {
+      "M0": 900043,
+      "M1": 900044,
+      "M2": 900045
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 15,
+    "data_seed": 20016,
+    "sampler_seeds": {
+      "M0": 900046,
+      "M1": 900047,
+      "M2": 900048
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 16,
+    "data_seed": 20017,
+    "sampler_seeds": {
+      "M0": 900049,
+      "M1": 900050,
+      "M2": 900051
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 17,
+    "data_seed": 20018,
+    "sampler_seeds": {
+      "M0": 900052,
+      "M1": 900053,
+      "M2": 900054
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 18,
+    "data_seed": 20019,
+    "sampler_seeds": {
+      "M0": 900055,
+      "M1": 900056,
+      "M2": 900057
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 19,
+    "data_seed": 20020,
+    "sampler_seeds": {
+      "M0": 900058,
+      "M1": 900059,
+      "M2": 900060
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 20,
+    "data_seed": 20021,
+    "sampler_seeds": {
+      "M0": 900061,
+      "M1": 900062,
+      "M2": 900063
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 21,
+    "data_seed": 20022,
+    "sampler_seeds": {
+      "M0": 900064,
+      "M1": 900065,
+      "M2": 900066
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 22,
+    "data_seed": 20023,
+    "sampler_seeds": {
+      "M0": 900067,
+      "M1": 900068,
+      "M2": 900069
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 23,
+    "data_seed": 20024,
+    "sampler_seeds": {
+      "M0": 900070,
+      "M1": 900071,
+      "M2": 900072
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 24,
+    "data_seed": 20025,
+    "sampler_seeds": {
+      "M0": 900073,
+      "M1": 900074,
+      "M2": 900075
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 25,
+    "data_seed": 20026,
+    "sampler_seeds": {
+      "M0": 900076,
+      "M1": 900077,
+      "M2": 900078
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 26,
+    "data_seed": 20027,
+    "sampler_seeds": {
+      "M0": 900079,
+      "M1": 900080,
+      "M2": 900081
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 27,
+    "data_seed": 20028,
+    "sampler_seeds": {
+      "M0": 900082,
+      "M1": 900083,
+      "M2": 900084
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 28,
+    "data_seed": 20029,
+    "sampler_seeds": {
+      "M0": 900085,
+      "M1": 900086,
+      "M2": 900087
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 29,
+    "data_seed": 20030,
+    "sampler_seeds": {
+      "M0": 900088,
+      "M1": 900089,
+      "M2": 900090
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 30,
+    "data_seed": 20031,
+    "sampler_seeds": {
+      "M0": 900091,
+      "M1": 900092,
+      "M2": 900093
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 31,
+    "data_seed": 20032,
+    "sampler_seeds": {
+      "M0": 900094,
+      "M1": 900095,
+      "M2": 900096
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 32,
+    "data_seed": 20033,
+    "sampler_seeds": {
+      "M0": 900097,
+      "M1": 900098,
+      "M2": 900099
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 33,
+    "data_seed": 20034,
+    "sampler_seeds": {
+      "M0": 900100,
+      "M1": 900101,
+      "M2": 900102
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 34,
+    "data_seed": 20035,
+    "sampler_seeds": {
+      "M0": 900103,
+      "M1": 900104,
+      "M2": 900105
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 35,
+    "data_seed": 20036,
+    "sampler_seeds": {
+      "M0": 900106,
+      "M1": 900107,
+      "M2": 900108
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 36,
+    "data_seed": 20037,
+    "sampler_seeds": {
+      "M0": 900109,
+      "M1": 900110,
+      "M2": 900111
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 37,
+    "data_seed": 20038,
+    "sampler_seeds": {
+      "M0": 900112,
+      "M1": 900113,
+      "M2": 900114
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 38,
+    "data_seed": 20039,
+    "sampler_seeds": {
+      "M0": 900115,
+      "M1": 900116,
+      "M2": 900117
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 39,
+    "data_seed": 20040,
+    "sampler_seeds": {
+      "M0": 900118,
+      "M1": 900119,
+      "M2": 900120
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 40,
+    "data_seed": 20041,
+    "sampler_seeds": {
+      "M0": 900121,
+      "M1": 900122,
+      "M2": 900123
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 41,
+    "data_seed": 20042,
+    "sampler_seeds": {
+      "M0": 900124,
+      "M1": 900125,
+      "M2": 900126
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 42,
+    "data_seed": 20043,
+    "sampler_seeds": {
+      "M0": 900127,
+      "M1": 900128,
+      "M2": 900129
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 43,
+    "data_seed": 20044,
+    "sampler_seeds": {
+      "M0": 900130,
+      "M1": 900131,
+      "M2": 900132
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 44,
+    "data_seed": 20045,
+    "sampler_seeds": {
+      "M0": 900133,
+      "M1": 900134,
+      "M2": 900135
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 45,
+    "data_seed": 20046,
+    "sampler_seeds": {
+      "M0": 900136,
+      "M1": 900137,
+      "M2": 900138
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 46,
+    "data_seed": 20047,
+    "sampler_seeds": {
+      "M0": 900139,
+      "M1": 900140,
+      "M2": 900141
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 47,
+    "data_seed": 20048,
+    "sampler_seeds": {
+      "M0": 900142,
+      "M1": 900143,
+      "M2": 900144
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 48,
+    "data_seed": 20049,
+    "sampler_seeds": {
+      "M0": 900145,
+      "M1": 900146,
+      "M2": 900147
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "null",
+    "trial_index": 49,
+    "data_seed": 20050,
+    "sampler_seeds": {
+      "M0": 900148,
+      "M1": 900149,
+      "M2": 900150
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 50,
+    "data_seed": 20051,
+    "sampler_seeds": {
+      "M0": 900151,
+      "M1": 900152,
+      "M2": 900153
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 51,
+    "data_seed": 20052,
+    "sampler_seeds": {
+      "M0": 900154,
+      "M1": 900155,
+      "M2": 900156
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 52,
+    "data_seed": 20053,
+    "sampler_seeds": {
+      "M0": 900157,
+      "M1": 900158,
+      "M2": 900159
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 53,
+    "data_seed": 20054,
+    "sampler_seeds": {
+      "M0": 900160,
+      "M1": 900161,
+      "M2": 900162
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 54,
+    "data_seed": 20055,
+    "sampler_seeds": {
+      "M0": 900163,
+      "M1": 900164,
+      "M2": 900165
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 55,
+    "data_seed": 20056,
+    "sampler_seeds": {
+      "M0": 900166,
+      "M1": 900167,
+      "M2": 900168
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 56,
+    "data_seed": 20057,
+    "sampler_seeds": {
+      "M0": 900169,
+      "M1": 900170,
+      "M2": 900171
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 57,
+    "data_seed": 20058,
+    "sampler_seeds": {
+      "M0": 900172,
+      "M1": 900173,
+      "M2": 900174
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 58,
+    "data_seed": 20059,
+    "sampler_seeds": {
+      "M0": 900175,
+      "M1": 900176,
+      "M2": 900177
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 59,
+    "data_seed": 20060,
+    "sampler_seeds": {
+      "M0": 900178,
+      "M1": 900179,
+      "M2": 900180
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 60,
+    "data_seed": 20061,
+    "sampler_seeds": {
+      "M0": 900181,
+      "M1": 900182,
+      "M2": 900183
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 61,
+    "data_seed": 20062,
+    "sampler_seeds": {
+      "M0": 900184,
+      "M1": 900185,
+      "M2": 900186
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 62,
+    "data_seed": 20063,
+    "sampler_seeds": {
+      "M0": 900187,
+      "M1": 900188,
+      "M2": 900189
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 63,
+    "data_seed": 20064,
+    "sampler_seeds": {
+      "M0": 900190,
+      "M1": 900191,
+      "M2": 900192
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 64,
+    "data_seed": 20065,
+    "sampler_seeds": {
+      "M0": 900193,
+      "M1": 900194,
+      "M2": 900195
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 65,
+    "data_seed": 20066,
+    "sampler_seeds": {
+      "M0": 900196,
+      "M1": 900197,
+      "M2": 900198
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 66,
+    "data_seed": 20067,
+    "sampler_seeds": {
+      "M0": 900199,
+      "M1": 900200,
+      "M2": 900201
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 67,
+    "data_seed": 20068,
+    "sampler_seeds": {
+      "M0": 900202,
+      "M1": 900203,
+      "M2": 900204
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 68,
+    "data_seed": 20069,
+    "sampler_seeds": {
+      "M0": 900205,
+      "M1": 900206,
+      "M2": 900207
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 69,
+    "data_seed": 20070,
+    "sampler_seeds": {
+      "M0": 900208,
+      "M1": 900209,
+      "M2": 900210
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 70,
+    "data_seed": 20071,
+    "sampler_seeds": {
+      "M0": 900211,
+      "M1": 900212,
+      "M2": 900213
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 71,
+    "data_seed": 20072,
+    "sampler_seeds": {
+      "M0": 900214,
+      "M1": 900215,
+      "M2": 900216
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 72,
+    "data_seed": 20073,
+    "sampler_seeds": {
+      "M0": 900217,
+      "M1": 900218,
+      "M2": 900219
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 73,
+    "data_seed": 20074,
+    "sampler_seeds": {
+      "M0": 900220,
+      "M1": 900221,
+      "M2": 900222
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 74,
+    "data_seed": 20075,
+    "sampler_seeds": {
+      "M0": 900223,
+      "M1": 900224,
+      "M2": 900225
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 75,
+    "data_seed": 20076,
+    "sampler_seeds": {
+      "M0": 900226,
+      "M1": 900227,
+      "M2": 900228
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 76,
+    "data_seed": 20077,
+    "sampler_seeds": {
+      "M0": 900229,
+      "M1": 900230,
+      "M2": 900231
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 77,
+    "data_seed": 20078,
+    "sampler_seeds": {
+      "M0": 900232,
+      "M1": 900233,
+      "M2": 900234
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 78,
+    "data_seed": 20079,
+    "sampler_seeds": {
+      "M0": 900235,
+      "M1": 900236,
+      "M2": 900237
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 79,
+    "data_seed": 20080,
+    "sampler_seeds": {
+      "M0": 900238,
+      "M1": 900239,
+      "M2": 900240
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 80,
+    "data_seed": 20081,
+    "sampler_seeds": {
+      "M0": 900241,
+      "M1": 900242,
+      "M2": 900243
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 81,
+    "data_seed": 20082,
+    "sampler_seeds": {
+      "M0": 900244,
+      "M1": 900245,
+      "M2": 900246
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 82,
+    "data_seed": 20083,
+    "sampler_seeds": {
+      "M0": 900247,
+      "M1": 900248,
+      "M2": 900249
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 83,
+    "data_seed": 20084,
+    "sampler_seeds": {
+      "M0": 900250,
+      "M1": 900251,
+      "M2": 900252
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 84,
+    "data_seed": 20085,
+    "sampler_seeds": {
+      "M0": 900253,
+      "M1": 900254,
+      "M2": 900255
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 85,
+    "data_seed": 20086,
+    "sampler_seeds": {
+      "M0": 900256,
+      "M1": 900257,
+      "M2": 900258
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 86,
+    "data_seed": 20087,
+    "sampler_seeds": {
+      "M0": 900259,
+      "M1": 900260,
+      "M2": 900261
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 87,
+    "data_seed": 20088,
+    "sampler_seeds": {
+      "M0": 900262,
+      "M1": 900263,
+      "M2": 900264
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 88,
+    "data_seed": 20089,
+    "sampler_seeds": {
+      "M0": 900265,
+      "M1": 900266,
+      "M2": 900267
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 89,
+    "data_seed": 20090,
+    "sampler_seeds": {
+      "M0": 900268,
+      "M1": 900269,
+      "M2": 900270
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 90,
+    "data_seed": 20091,
+    "sampler_seeds": {
+      "M0": 900271,
+      "M1": 900272,
+      "M2": 900273
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 91,
+    "data_seed": 20092,
+    "sampler_seeds": {
+      "M0": 900274,
+      "M1": 900275,
+      "M2": 900276
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 92,
+    "data_seed": 20093,
+    "sampler_seeds": {
+      "M0": 900277,
+      "M1": 900278,
+      "M2": 900279
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 93,
+    "data_seed": 20094,
+    "sampler_seeds": {
+      "M0": 900280,
+      "M1": 900281,
+      "M2": 900282
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 94,
+    "data_seed": 20095,
+    "sampler_seeds": {
+      "M0": 900283,
+      "M1": 900284,
+      "M2": 900285
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 95,
+    "data_seed": 20096,
+    "sampler_seeds": {
+      "M0": 900286,
+      "M1": 900287,
+      "M2": 900288
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 96,
+    "data_seed": 20097,
+    "sampler_seeds": {
+      "M0": 900289,
+      "M1": 900290,
+      "M2": 900291
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 97,
+    "data_seed": 20098,
+    "sampler_seeds": {
+      "M0": 900292,
+      "M1": 900293,
+      "M2": 900294
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 98,
+    "data_seed": 20099,
+    "sampler_seeds": {
+      "M0": 900295,
+      "M1": 900296,
+      "M2": 900297
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0005",
+    "trial_index": 99,
+    "data_seed": 20100,
+    "sampler_seeds": {
+      "M0": 900298,
+      "M1": 900299,
+      "M2": 900300
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 100,
+    "data_seed": 20101,
+    "sampler_seeds": {
+      "M0": 900301,
+      "M1": 900302,
+      "M2": 900303
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 101,
+    "data_seed": 20102,
+    "sampler_seeds": {
+      "M0": 900304,
+      "M1": 900305,
+      "M2": 900306
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 102,
+    "data_seed": 20103,
+    "sampler_seeds": {
+      "M0": 900307,
+      "M1": 900308,
+      "M2": 900309
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 103,
+    "data_seed": 20104,
+    "sampler_seeds": {
+      "M0": 900310,
+      "M1": 900311,
+      "M2": 900312
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 104,
+    "data_seed": 20105,
+    "sampler_seeds": {
+      "M0": 900313,
+      "M1": 900314,
+      "M2": 900315
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 105,
+    "data_seed": 20106,
+    "sampler_seeds": {
+      "M0": 900316,
+      "M1": 900317,
+      "M2": 900318
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 106,
+    "data_seed": 20107,
+    "sampler_seeds": {
+      "M0": 900319,
+      "M1": 900320,
+      "M2": 900321
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 107,
+    "data_seed": 20108,
+    "sampler_seeds": {
+      "M0": 900322,
+      "M1": 900323,
+      "M2": 900324
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 108,
+    "data_seed": 20109,
+    "sampler_seeds": {
+      "M0": 900325,
+      "M1": 900326,
+      "M2": 900327
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 109,
+    "data_seed": 20110,
+    "sampler_seeds": {
+      "M0": 900328,
+      "M1": 900329,
+      "M2": 900330
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 110,
+    "data_seed": 20111,
+    "sampler_seeds": {
+      "M0": 900331,
+      "M1": 900332,
+      "M2": 900333
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 111,
+    "data_seed": 20112,
+    "sampler_seeds": {
+      "M0": 900334,
+      "M1": 900335,
+      "M2": 900336
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 112,
+    "data_seed": 20113,
+    "sampler_seeds": {
+      "M0": 900337,
+      "M1": 900338,
+      "M2": 900339
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 113,
+    "data_seed": 20114,
+    "sampler_seeds": {
+      "M0": 900340,
+      "M1": 900341,
+      "M2": 900342
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 114,
+    "data_seed": 20115,
+    "sampler_seeds": {
+      "M0": 900343,
+      "M1": 900344,
+      "M2": 900345
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 115,
+    "data_seed": 20116,
+    "sampler_seeds": {
+      "M0": 900346,
+      "M1": 900347,
+      "M2": 900348
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 116,
+    "data_seed": 20117,
+    "sampler_seeds": {
+      "M0": 900349,
+      "M1": 900350,
+      "M2": 900351
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 117,
+    "data_seed": 20118,
+    "sampler_seeds": {
+      "M0": 900352,
+      "M1": 900353,
+      "M2": 900354
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 118,
+    "data_seed": 20119,
+    "sampler_seeds": {
+      "M0": 900355,
+      "M1": 900356,
+      "M2": 900357
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 119,
+    "data_seed": 20120,
+    "sampler_seeds": {
+      "M0": 900358,
+      "M1": 900359,
+      "M2": 900360
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 120,
+    "data_seed": 20121,
+    "sampler_seeds": {
+      "M0": 900361,
+      "M1": 900362,
+      "M2": 900363
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 121,
+    "data_seed": 20122,
+    "sampler_seeds": {
+      "M0": 900364,
+      "M1": 900365,
+      "M2": 900366
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 122,
+    "data_seed": 20123,
+    "sampler_seeds": {
+      "M0": 900367,
+      "M1": 900368,
+      "M2": 900369
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 123,
+    "data_seed": 20124,
+    "sampler_seeds": {
+      "M0": 900370,
+      "M1": 900371,
+      "M2": 900372
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 124,
+    "data_seed": 20125,
+    "sampler_seeds": {
+      "M0": 900373,
+      "M1": 900374,
+      "M2": 900375
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 125,
+    "data_seed": 20126,
+    "sampler_seeds": {
+      "M0": 900376,
+      "M1": 900377,
+      "M2": 900378
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 126,
+    "data_seed": 20127,
+    "sampler_seeds": {
+      "M0": 900379,
+      "M1": 900380,
+      "M2": 900381
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 127,
+    "data_seed": 20128,
+    "sampler_seeds": {
+      "M0": 900382,
+      "M1": 900383,
+      "M2": 900384
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 128,
+    "data_seed": 20129,
+    "sampler_seeds": {
+      "M0": 900385,
+      "M1": 900386,
+      "M2": 900387
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 129,
+    "data_seed": 20130,
+    "sampler_seeds": {
+      "M0": 900388,
+      "M1": 900389,
+      "M2": 900390
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 130,
+    "data_seed": 20131,
+    "sampler_seeds": {
+      "M0": 900391,
+      "M1": 900392,
+      "M2": 900393
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 131,
+    "data_seed": 20132,
+    "sampler_seeds": {
+      "M0": 900394,
+      "M1": 900395,
+      "M2": 900396
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 132,
+    "data_seed": 20133,
+    "sampler_seeds": {
+      "M0": 900397,
+      "M1": 900398,
+      "M2": 900399
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 133,
+    "data_seed": 20134,
+    "sampler_seeds": {
+      "M0": 900400,
+      "M1": 900401,
+      "M2": 900402
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 134,
+    "data_seed": 20135,
+    "sampler_seeds": {
+      "M0": 900403,
+      "M1": 900404,
+      "M2": 900405
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 135,
+    "data_seed": 20136,
+    "sampler_seeds": {
+      "M0": 900406,
+      "M1": 900407,
+      "M2": 900408
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 136,
+    "data_seed": 20137,
+    "sampler_seeds": {
+      "M0": 900409,
+      "M1": 900410,
+      "M2": 900411
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 137,
+    "data_seed": 20138,
+    "sampler_seeds": {
+      "M0": 900412,
+      "M1": 900413,
+      "M2": 900414
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 138,
+    "data_seed": 20139,
+    "sampler_seeds": {
+      "M0": 900415,
+      "M1": 900416,
+      "M2": 900417
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 139,
+    "data_seed": 20140,
+    "sampler_seeds": {
+      "M0": 900418,
+      "M1": 900419,
+      "M2": 900420
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 140,
+    "data_seed": 20141,
+    "sampler_seeds": {
+      "M0": 900421,
+      "M1": 900422,
+      "M2": 900423
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 141,
+    "data_seed": 20142,
+    "sampler_seeds": {
+      "M0": 900424,
+      "M1": 900425,
+      "M2": 900426
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 142,
+    "data_seed": 20143,
+    "sampler_seeds": {
+      "M0": 900427,
+      "M1": 900428,
+      "M2": 900429
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 143,
+    "data_seed": 20144,
+    "sampler_seeds": {
+      "M0": 900430,
+      "M1": 900431,
+      "M2": 900432
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 144,
+    "data_seed": 20145,
+    "sampler_seeds": {
+      "M0": 900433,
+      "M1": 900434,
+      "M2": 900435
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 145,
+    "data_seed": 20146,
+    "sampler_seeds": {
+      "M0": 900436,
+      "M1": 900437,
+      "M2": 900438
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 146,
+    "data_seed": 20147,
+    "sampler_seeds": {
+      "M0": 900439,
+      "M1": 900440,
+      "M2": 900441
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 147,
+    "data_seed": 20148,
+    "sampler_seeds": {
+      "M0": 900442,
+      "M1": 900443,
+      "M2": 900444
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 148,
+    "data_seed": 20149,
+    "sampler_seeds": {
+      "M0": 900445,
+      "M1": 900446,
+      "M2": 900447
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0007",
+    "trial_index": 149,
+    "data_seed": 20150,
+    "sampler_seeds": {
+      "M0": 900448,
+      "M1": 900449,
+      "M2": 900450
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 150,
+    "data_seed": 20151,
+    "sampler_seeds": {
+      "M0": 900451,
+      "M1": 900452,
+      "M2": 900453
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 151,
+    "data_seed": 20152,
+    "sampler_seeds": {
+      "M0": 900454,
+      "M1": 900455,
+      "M2": 900456
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 152,
+    "data_seed": 20153,
+    "sampler_seeds": {
+      "M0": 900457,
+      "M1": 900458,
+      "M2": 900459
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 153,
+    "data_seed": 20154,
+    "sampler_seeds": {
+      "M0": 900460,
+      "M1": 900461,
+      "M2": 900462
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 154,
+    "data_seed": 20155,
+    "sampler_seeds": {
+      "M0": 900463,
+      "M1": 900464,
+      "M2": 900465
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 155,
+    "data_seed": 20156,
+    "sampler_seeds": {
+      "M0": 900466,
+      "M1": 900467,
+      "M2": 900468
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 156,
+    "data_seed": 20157,
+    "sampler_seeds": {
+      "M0": 900469,
+      "M1": 900470,
+      "M2": 900471
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 157,
+    "data_seed": 20158,
+    "sampler_seeds": {
+      "M0": 900472,
+      "M1": 900473,
+      "M2": 900474
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 158,
+    "data_seed": 20159,
+    "sampler_seeds": {
+      "M0": 900475,
+      "M1": 900476,
+      "M2": 900477
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 159,
+    "data_seed": 20160,
+    "sampler_seeds": {
+      "M0": 900478,
+      "M1": 900479,
+      "M2": 900480
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 160,
+    "data_seed": 20161,
+    "sampler_seeds": {
+      "M0": 900481,
+      "M1": 900482,
+      "M2": 900483
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 161,
+    "data_seed": 20162,
+    "sampler_seeds": {
+      "M0": 900484,
+      "M1": 900485,
+      "M2": 900486
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 162,
+    "data_seed": 20163,
+    "sampler_seeds": {
+      "M0": 900487,
+      "M1": 900488,
+      "M2": 900489
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 163,
+    "data_seed": 20164,
+    "sampler_seeds": {
+      "M0": 900490,
+      "M1": 900491,
+      "M2": 900492
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 164,
+    "data_seed": 20165,
+    "sampler_seeds": {
+      "M0": 900493,
+      "M1": 900494,
+      "M2": 900495
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 165,
+    "data_seed": 20166,
+    "sampler_seeds": {
+      "M0": 900496,
+      "M1": 900497,
+      "M2": 900498
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 166,
+    "data_seed": 20167,
+    "sampler_seeds": {
+      "M0": 900499,
+      "M1": 900500,
+      "M2": 900501
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 167,
+    "data_seed": 20168,
+    "sampler_seeds": {
+      "M0": 900502,
+      "M1": 900503,
+      "M2": 900504
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 168,
+    "data_seed": 20169,
+    "sampler_seeds": {
+      "M0": 900505,
+      "M1": 900506,
+      "M2": 900507
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 169,
+    "data_seed": 20170,
+    "sampler_seeds": {
+      "M0": 900508,
+      "M1": 900509,
+      "M2": 900510
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 170,
+    "data_seed": 20171,
+    "sampler_seeds": {
+      "M0": 900511,
+      "M1": 900512,
+      "M2": 900513
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 171,
+    "data_seed": 20172,
+    "sampler_seeds": {
+      "M0": 900514,
+      "M1": 900515,
+      "M2": 900516
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 172,
+    "data_seed": 20173,
+    "sampler_seeds": {
+      "M0": 900517,
+      "M1": 900518,
+      "M2": 900519
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 173,
+    "data_seed": 20174,
+    "sampler_seeds": {
+      "M0": 900520,
+      "M1": 900521,
+      "M2": 900522
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 174,
+    "data_seed": 20175,
+    "sampler_seeds": {
+      "M0": 900523,
+      "M1": 900524,
+      "M2": 900525
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 175,
+    "data_seed": 20176,
+    "sampler_seeds": {
+      "M0": 900526,
+      "M1": 900527,
+      "M2": 900528
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 176,
+    "data_seed": 20177,
+    "sampler_seeds": {
+      "M0": 900529,
+      "M1": 900530,
+      "M2": 900531
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 177,
+    "data_seed": 20178,
+    "sampler_seeds": {
+      "M0": 900532,
+      "M1": 900533,
+      "M2": 900534
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 178,
+    "data_seed": 20179,
+    "sampler_seeds": {
+      "M0": 900535,
+      "M1": 900536,
+      "M2": 900537
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 179,
+    "data_seed": 20180,
+    "sampler_seeds": {
+      "M0": 900538,
+      "M1": 900539,
+      "M2": 900540
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 180,
+    "data_seed": 20181,
+    "sampler_seeds": {
+      "M0": 900541,
+      "M1": 900542,
+      "M2": 900543
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 181,
+    "data_seed": 20182,
+    "sampler_seeds": {
+      "M0": 900544,
+      "M1": 900545,
+      "M2": 900546
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 182,
+    "data_seed": 20183,
+    "sampler_seeds": {
+      "M0": 900547,
+      "M1": 900548,
+      "M2": 900549
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 183,
+    "data_seed": 20184,
+    "sampler_seeds": {
+      "M0": 900550,
+      "M1": 900551,
+      "M2": 900552
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 184,
+    "data_seed": 20185,
+    "sampler_seeds": {
+      "M0": 900553,
+      "M1": 900554,
+      "M2": 900555
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 185,
+    "data_seed": 20186,
+    "sampler_seeds": {
+      "M0": 900556,
+      "M1": 900557,
+      "M2": 900558
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 186,
+    "data_seed": 20187,
+    "sampler_seeds": {
+      "M0": 900559,
+      "M1": 900560,
+      "M2": 900561
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 187,
+    "data_seed": 20188,
+    "sampler_seeds": {
+      "M0": 900562,
+      "M1": 900563,
+      "M2": 900564
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 188,
+    "data_seed": 20189,
+    "sampler_seeds": {
+      "M0": 900565,
+      "M1": 900566,
+      "M2": 900567
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 189,
+    "data_seed": 20190,
+    "sampler_seeds": {
+      "M0": 900568,
+      "M1": 900569,
+      "M2": 900570
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 190,
+    "data_seed": 20191,
+    "sampler_seeds": {
+      "M0": 900571,
+      "M1": 900572,
+      "M2": 900573
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 191,
+    "data_seed": 20192,
+    "sampler_seeds": {
+      "M0": 900574,
+      "M1": 900575,
+      "M2": 900576
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 192,
+    "data_seed": 20193,
+    "sampler_seeds": {
+      "M0": 900577,
+      "M1": 900578,
+      "M2": 900579
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 193,
+    "data_seed": 20194,
+    "sampler_seeds": {
+      "M0": 900580,
+      "M1": 900581,
+      "M2": 900582
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 194,
+    "data_seed": 20195,
+    "sampler_seeds": {
+      "M0": 900583,
+      "M1": 900584,
+      "M2": 900585
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 195,
+    "data_seed": 20196,
+    "sampler_seeds": {
+      "M0": 900586,
+      "M1": 900587,
+      "M2": 900588
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 196,
+    "data_seed": 20197,
+    "sampler_seeds": {
+      "M0": 900589,
+      "M1": 900590,
+      "M2": 900591
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 197,
+    "data_seed": 20198,
+    "sampler_seeds": {
+      "M0": 900592,
+      "M1": 900593,
+      "M2": 900594
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 198,
+    "data_seed": 20199,
+    "sampler_seeds": {
+      "M0": 900595,
+      "M1": 900596,
+      "M2": 900597
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  },
+  {
+    "condition": "alpha_0.0009",
+    "trial_index": 199,
+    "data_seed": 20200,
+    "sampler_seeds": {
+      "M0": 900598,
+      "M1": 900599,
+      "M2": 900600
+    },
+    "nlive": "PENDING",
+    "code_commit": "PENDING",
+    "completed": false
+  }
+]

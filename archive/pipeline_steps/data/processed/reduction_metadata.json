@@ -1,0 +1,28 @@
+{
+  "reduction_date": "2026-07-06T18:47:22.082030",
+  "reduction_method": "Python simplified reduction",
+  "reduction_version": "0.1.0",
+  "status": "complete",
+  "n_files": 1,
+  "n_successful": 1,
+  "n_failed": 0,
+  "average_snr": 704.0742622771734,
+  "results": [
+    {
+      "input_file": "data/raw/spectra/Q0913+072_z2.618/UVES.2002-02-14T04:09:28.303.fits",
+      "output_file": "data/processed/reduced/Q0913+072_z2.618/reduced_UVES.2002-02-14T04:09:28.303.fits",
+      "shape": [
+        290,
+        400
+      ],
+      "bias_level": 121.0,
+      "continuum_level": 9935.0,
+      "snr": 704.0742622771734,
+      "wavelength_range": [
+        3450.0,
+        6648.0
+      ]
+    }
+  ],
+  "notes": "Simplified reduction for analysis purposes. For publication-quality reduction, use ESO Reflex."
+}

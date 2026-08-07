@@ -1,0 +1,19 @@
+{
+  "test_type": "synthetic_recovery",
+  "claim_allowed": false,
+  "truth_models": [
+    "Mnull",
+    "M0",
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "recovery_matrix": {
+    "Mnull_truth": "Mnull_wins",
+    "M0_truth": "M0_wins",
+    "M1_truth": "M1_wins",
+    "M2_truth": "M2_wins",
+    "M3_truth": "M3_wins"
+  },
+  "pipeline_ready_for_real_data": true
+}

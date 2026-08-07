@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: If you use this work, please cite it as below.
+authors:
+- family-names: Smawfield
+  given-names: Matthew Lukin
+  orcid: https://orcid.org/0009-0003-8219-3159
+title: 'Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium'
+type: article
+version: v0.1 (Dubai)
+date-released: 2026-08-12
+doi: 10.5281/zenodo.21841148
+url: https://mlsmawfield.com/tep/bbn
+license: CC-BY-4.0
+abstract: |
+  The standard inference from high-redshift deuterium to a uniquely primordial hot-BBN origin depends on both isotope identifiability and the interpretation of redshift as spatial expansion. Both assumptions are challenged within the Temporal Equivalence Principle (TEP). Using immutable H I and D I atomic data, it is shown that the optimally embedded ordinary-H spectrum differs from true D by only $0.0011\sigma$ at Q1009 resolution. An embedding-safe reanalysis of Q1009+2956 finds an unrestricted-H optimum improved by $\Delta\ln L=38.92$ ($T=77.85$); none of 200 true-D Monte Carlo realizations reproduces the observed statistic. The TEP absorber field and its blueward displacement sign are then derived, showing that such apparent velocity shifts are localized manifestations of temporal shear, and cosmological redshift is formulated as temporal transport over a static spatial background. This separates observed temperature, chronology and photon energy from the local thermodynamic history that governs nuclear processing. A temporal-exposure convergence condition is derived showing precisely when infinite proper-time history remains compatible with finite nuclear and stellar processing, and the helium-4 mass fraction ($Y_{\rm eq} = 0.247$) is proven to emerge as an asymptotic thermodynamic attractor under baryonic cycling. Finally, divergent temporal transport is proven to stretch the apparent optical depth to infinity at high redshift, creating an observable boundary without a physical plasma wall. This decouples physical chemical evolution from an eternal coordinate manifold, resolving the classical stellar astration paradox without invoking an explosive spatial origin.
+
+keywords:
+- Temporal Equivalence Principle
+- deuterium abundance
+- isotopic line identification
+- temporal shear
+- absorption-line spectroscopy
+- Lyman-limit systems
+- Big Bang nucleosynthesis
+- cosmology
+- TEP
+- Proper-Time Transport

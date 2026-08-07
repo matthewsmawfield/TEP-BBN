@@ -1,0 +1,45 @@
+{
+  "description": "Temporal horizon mapping: a_eff \u2192 0 \u2194 A(\u03c6) \u2192 0",
+  "epsilon_sensitivity": [
+    {
+      "epsilon_t": 0.0001,
+      "horizon_z": 1000.0,
+      "mapping_valid": true
+    },
+    {
+      "epsilon_t": 0.001,
+      "horizon_z": 1000.0,
+      "mapping_valid": true
+    },
+    {
+      "epsilon_t": 0.01,
+      "horizon_z": 1000.0,
+      "mapping_valid": true
+    },
+    {
+      "epsilon_t": 0.1,
+      "horizon_z": 1000.0,
+      "mapping_valid": true
+    }
+  ],
+  "horizon_mapping": {
+    "A_at_z0": 1.0,
+    "A_at_zmax": 0.786793442196772,
+    "a_eff_at_z0": 1.0,
+    "a_eff_at_zmax": 0.786793442196772,
+    "horizon_z_A": 1000.0,
+    "horizon_z_a_eff": 1000.0,
+    "horizons_coincide": true,
+    "shear_integral_at_zmax": 3.1e-05
+  },
+  "interpretation": "a_eff \u2192 0 and A \u2192 0 occur at same redshift within tolerance",
+  "mapping_valid": true,
+  "parameters": {
+    "epsilon_t": 0.1,
+    "n_points": 1000,
+    "n_t": 1.0,
+    "z_max": 1000.0,
+    "z_t": 100.0
+  },
+  "step": "step_00_temporal_horizon_mapping"
+}

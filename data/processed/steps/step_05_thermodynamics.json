@@ -1,0 +1,6 @@
+{
+  "5A_local_clock": "d\\tau = A(t) dt",
+  "5B_redshift_mechanism": "TEMPORAL_SHEAR_NOT_RECESSION",
+  "5C_density_scaling": "STATIC_VOLUME_n_loc_CONSTANT",
+  "5D_singularity": "ASYMPTOTIC_TEMPORAL_HORIZON_NO_SPATIAL_SINGULARITY"
+}

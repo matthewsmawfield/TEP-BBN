@@ -1,0 +1,12 @@
+{
+  "system_id": "Q0311-1722_z3.734",
+  "role": "UNTOUCHED_CONFIRMATION",
+  "predicted_component": 1,
+  "predicted_velocity_kms": 0.0,
+  "predicted_sign": "BLUEWARD",
+  "null_probability": 0.0,
+  "rank_score": 0.65,
+  "input_hash": "d432a4f8418fae95e345ae54cac68e33ce90d79e66d759a0ca5a5d03d6dfb657",
+  "predictor_hash": "6a3ba2cc573784c0e18bfd4254558e99467aa9277606ed4ce821a8846b178bfc",
+  "sealed_at": "2026-07-28T09:07:50.514750+00:00"
+}

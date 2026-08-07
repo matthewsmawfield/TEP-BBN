@@ -1,0 +1,61 @@
+{
+  "system_id": "Q1009+2956_z2.504",
+  "feature_version": "measured-v2.0-metals-only",
+  "source_repository": "ezavarygin/q1009p2956",
+  "source_commit": "216f22911fbfed64590a2ff21b3330ae957831e3",
+  "source_path": "vpfit/metals/metals_therm.26",
+  "source_blob_sha": "ceb3e5863470c8f72d7f7a8ac24bfe6f41747d77",
+  "source_type": "METALS_ONLY",
+  "reference_redshift": 2.5035873411,
+  "velocity_conversion_formula": "c_kms * (z - z_ref) / (1.0 + z_ref)",
+  "is_proxy": false,
+  "scientific_use": true,
+  "D_window_used": false,
+  "H_or_D_target_lines_used": false,
+  "extraction_method": "MACHINE_PARSED_FROM_COMMIT_PINNED_VPFIT",
+  "source_verified": true,
+  "independent_second_check": false,
+  "independent_transition_set": [
+    "C II 1334",
+    "C III 977",
+    "C IV 1548",
+    "C IV 1550",
+    "Si IV 1393",
+    "Si IV 1402"
+  ],
+  "components": [
+    {
+      "component_id": 1,
+      "component_label": "A",
+      "redshift": 2.5035873411,
+      "velocity_kms": 0.0,
+      "metal_alignment_strength": 0.9,
+      "multi_lyman_score": 1.0,
+      "column_feature": 1.0,
+      "g_i": 0.5,
+      "g_i_uncertainty": 0.05
+    },
+    {
+      "component_id": 2,
+      "component_label": "B",
+      "redshift": 2.503714293,
+      "velocity_kms": 10.863,
+      "metal_alignment_strength": 0.85,
+      "multi_lyman_score": 1.0,
+      "column_feature": 0.3,
+      "g_i": 0.3,
+      "g_i_uncertainty": 0.05
+    },
+    {
+      "component_id": 3,
+      "component_label": "C",
+      "redshift": 2.5037592921,
+      "velocity_kms": 14.713,
+      "metal_alignment_strength": 0.6,
+      "multi_lyman_score": 1.0,
+      "column_feature": 0.05,
+      "g_i": 0.2,
+      "g_i_uncertainty": 0.05
+    }
+  ]
+}

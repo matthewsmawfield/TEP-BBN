@@ -1,0 +1,3 @@
+component_id,velocity_kms,redshift,metal_fraction,b_kms,log_N_HI_inferred,source,uncertainty
+0,-25.0,2.5037,0.40,5.0,19.90,Cooke2016_Table4,0.05
+1,0.0,2.5040,0.60,6.0,20.30,Cooke2016_Table4,0.05

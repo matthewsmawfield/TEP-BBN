@@ -1,0 +1,15 @@
+{
+    "tep_windows": [
+        [
+            4258.0,
+            4260.5
+        ],
+        [
+            3593.0,
+            3594.5
+        ]
+    ],
+    "control_hash": "5dc0fcf10b8177c7575bee3c6b66adfe",
+    "control_pixel_count": 7920,
+    "tep_pixel_count": 690
+}

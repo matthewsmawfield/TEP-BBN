@@ -1,0 +1,26 @@
+{
+  "system_id": "Q0913+072_z2.618",
+  "timestamp": "2026-07-06T21:33:07.676956",
+  "feature_vector_frozen": true,
+  "alpha_prior_status": "derived",
+  "D_window_used_for_feature": false,
+  "system_classification": {
+    "system_role": "prototype_single_system",
+    "can_pass_identifiability_gate_alone": false,
+    "can_proceed_to_model_comparison": true,
+    "claim_scope": "one-system exploratory evidence only"
+  },
+  "tests": {
+    "D_inside_predicted_interval": true,
+    "coverage_fraction": 0.24862749866666667,
+    "null_test": {
+      "type": "exact_permutation",
+      "n_unique_permutations": 2,
+      "hits": 1,
+      "false_positive_rate": 0.5,
+      "single_system_resolution_limit": 0.5
+    }
+  },
+  "overall_pass": false,
+  "claim_allowed": false
+}

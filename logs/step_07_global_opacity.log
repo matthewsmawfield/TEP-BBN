@@ -1,0 +1,29 @@
+[13:48:47] [INFO] ================================================================================
+[13:48:47] [INFO] Script: step_07_global_opacity
+[13:48:47] [INFO] Started: 2026-08-12T13:48:47.808476
+[13:48:47] [INFO] ================================================================================
+[13:48:47] [SUCCESS] === STEP 07: GLOBAL OPACITY THEOREM ===
+[13:48:47] [PROCESS] 
+[AXIOM] Space does not cosmologically expand (a_m = 1).
+[13:48:47] [PROCESS] [AXIOM] Temporal horizon redshift arises from A(phi) -> 0.
+[13:48:47] [INFO] 
+[13:48:47] [INFO] ================================================================================
+[13:48:47] [INFO] 
+--- Analytical Opacity Proof ---
+[13:48:47] [INFO] ================================================================================
+[13:48:47] [INFO] 
+[13:48:47] [PROCESS] Constant physical density (no plasma wall): n_e(x) = n_0
+[13:48:47] [PROCESS] Redshift relationship: z(x) = exp(x) - 1
+[13:48:47] [PROCESS] Apparent optical depth tau(x): n_0*sigma_T*x
+[13:48:47] [INFO] 
+[13:48:47] [INFO] ================================================================================
+[13:48:47] [INFO] 
+--- Formal Limit at Temporal Horizon ---
+[13:48:47] [INFO] ================================================================================
+[13:48:47] [INFO] 
+[13:48:47] [PROCESS] Limit of tau(x) as z -> infinity (x -> oo): oo
+[13:48:47] [SUCCESS] Does the optical depth diverge? -> True
+[13:48:47] [SUCCESS] 
+[SUCCESS] Step 07 Passed: The universe becomes completely opaque at high redshift because diverging temporal transport stretches the apparent optical depth to infinity, creating an observable boundary without a physical plasma wall.
+[13:48:47] [SUCCESS] 
+[COMPLETED] Step 07 predictions written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_07_global_opacity.json

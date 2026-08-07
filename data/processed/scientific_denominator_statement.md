@@ -1,0 +1,1 @@
+After integrity auditing, two absorbers satisfy the scientific eligibility requirements for the frozen TEP-BBN gate: Q0913+072 and J1419+0829_z3.049840. Both are classified as REAL_NEGATIVE. PKS1937-1009_z3.256 is excluded from the scientific denominator because its current feature vector is a single-component proxy and cannot support the required secondary-window TEP test.

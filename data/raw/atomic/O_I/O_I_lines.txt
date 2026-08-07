@@ -1,0 +1,10 @@
+# Atomic data for Oxygen I
+# Source: NIST ASD 5.11.1
+# URL: https://physics.nist.gov/ASD
+# Downloaded: 2026-07-06T18:05:31.158104
+# Method: astroquery.nist (programmatic access)
+#
+# Format: wavelength (Å)  oscillator_strength  transition  lower_level  upper_level
+#
+1302.1680  3.4100e+08  1302 Å  2s2.2p4 | 3P   | 2  2s2.2p3.(4S*).3s | 3S*  | 1
+1304.8580  2.0300e+08  1304 Å  2s2.2p4 | 3P   | 1  2s2.2p3.(4S*).3s | 3S*  | 1

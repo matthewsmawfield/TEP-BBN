@@ -1,0 +1,22 @@
+{
+  "Q1009+2956_z2.504": {
+    "predicted_component": 1,
+    "predicted_velocity_kms": 0.0,
+    "sign": "BLUEWARD",
+    "p_null": 0.0,
+    "rank_score": 0.5,
+    "prediction_level": 2,
+    "rule_class": "DEVELOPMENT_CALIBRATED_TEP_RULE",
+    "allowed_input_hash": "04a16ba0e433642eb7bb70612a66ebd4472d066964e1945242534e23b4d082df"
+  },
+  "Q0913+072": {
+    "predicted_component": 1,
+    "predicted_velocity_kms": 0.0,
+    "sign": "BLUEWARD",
+    "p_null": 0.0,
+    "rank_score": 0.897,
+    "prediction_level": 2,
+    "rule_class": "DEVELOPMENT_CALIBRATED_TEP_RULE",
+    "allowed_input_hash": "981fc418c6dcf016adf3dd3283dc1f5802a96d25c69154ede20f667c2d53414b"
+  }
+}

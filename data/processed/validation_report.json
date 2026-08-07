@@ -1,0 +1,224 @@
+{
+  "validation_date": "2026-07-06",
+  "checks_performed": [
+    "atomic_data_integrity",
+    "spectroscopic_data_integrity",
+    "format_validation",
+    "data_range_checks",
+    "literature_cross_validation",
+    "metadata_completeness",
+    "placeholder_rejection"
+  ],
+  "systems": [
+    {
+      "system_id": "Q0913+072_z2.618",
+      "checks": {
+        "literature_format": {
+          "status": "PASS"
+        },
+        "data_range": {
+          "status": "PASS",
+          "values": {
+            "redshift": true,
+            "n_hi": true,
+            "dh_ratio": true
+          }
+        },
+        "raw_spectra": {
+          "status": "WARNING",
+          "path": "../../data/raw/spectra/Q0913+072_z2.618",
+          "note": "Raw spectra not found (may require manual download from KOA)"
+        },
+        "atomic_data": {
+          "status": "PASS",
+          "n_elements": 6
+        },
+        "checksums": {
+          "status": "WARNING",
+          "note": "Checksums file not found"
+        },
+        "placeholder_rejection": {
+          "status": "PASS"
+        }
+      },
+      "checks_passed": 4,
+      "total_checks": 6,
+      "overall_status": "WARNING"
+    },
+    {
+      "system_id": "Q1009+2956_z2.504",
+      "checks": {
+        "literature_format": {
+          "status": "PASS"
+        },
+        "data_range": {
+          "status": "PASS",
+          "values": {
+            "redshift": true,
+            "n_hi": true,
+            "dh_ratio": true
+          }
+        },
+        "raw_spectra": {
+          "status": "WARNING",
+          "path": "../../data/raw/spectra/Q1009+2956_z2.504",
+          "note": "Raw spectra not found (may require manual download from KOA)"
+        },
+        "atomic_data": {
+          "status": "PASS",
+          "n_elements": 6
+        },
+        "checksums": {
+          "status": "WARNING",
+          "note": "Checksums file not found"
+        },
+        "placeholder_rejection": {
+          "status": "PASS"
+        }
+      },
+      "checks_passed": 4,
+      "total_checks": 6,
+      "overall_status": "WARNING"
+    },
+    {
+      "system_id": "Q1243+3047_z2.529",
+      "checks": {
+        "literature_format": {
+          "status": "PASS"
+        },
+        "data_range": {
+          "status": "PASS",
+          "values": {
+            "redshift": true,
+            "n_hi": true,
+            "dh_ratio": true
+          }
+        },
+        "raw_spectra": {
+          "status": "WARNING",
+          "path": "../../data/raw/spectra/Q1243+3047_z2.529",
+          "note": "Raw spectra not found (may require manual download from KOA)"
+        },
+        "atomic_data": {
+          "status": "PASS",
+          "n_elements": 6
+        },
+        "checksums": {
+          "status": "WARNING",
+          "note": "Checksums file not found"
+        },
+        "placeholder_rejection": {
+          "status": "PASS"
+        }
+      },
+      "checks_passed": 4,
+      "total_checks": 6,
+      "overall_status": "WARNING"
+    },
+    {
+      "system_id": "Q1351+3221_z2.597",
+      "checks": {
+        "literature_format": {
+          "status": "PASS"
+        },
+        "data_range": {
+          "status": "PASS",
+          "values": {
+            "redshift": true,
+            "n_hi": true,
+            "dh_ratio": true
+          }
+        },
+        "raw_spectra": {
+          "status": "WARNING",
+          "path": "../../data/raw/spectra/Q1351+3221_z2.597",
+          "note": "Raw spectra not found (may require manual download from KOA)"
+        },
+        "atomic_data": {
+          "status": "PASS",
+          "n_elements": 6
+        },
+        "checksums": {
+          "status": "WARNING",
+          "note": "Checksums file not found"
+        },
+        "placeholder_rejection": {
+          "status": "PASS"
+        }
+      },
+      "checks_passed": 4,
+      "total_checks": 6,
+      "overall_status": "WARNING"
+    },
+    {
+      "system_id": "Q1444+2919_z2.428",
+      "checks": {
+        "literature_format": {
+          "status": "PASS"
+        },
+        "data_range": {
+          "status": "PASS",
+          "values": {
+            "redshift": true,
+            "n_hi": true,
+            "dh_ratio": true
+          }
+        },
+        "raw_spectra": {
+          "status": "WARNING",
+          "path": "../../data/raw/spectra/Q1444+2919_z2.428",
+          "note": "Raw spectra not found (may require manual download from KOA)"
+        },
+        "atomic_data": {
+          "status": "PASS",
+          "n_elements": 6
+        },
+        "checksums": {
+          "status": "WARNING",
+          "note": "Checksums file not found"
+        },
+        "placeholder_rejection": {
+          "status": "PASS"
+        }
+      },
+      "checks_passed": 4,
+      "total_checks": 6,
+      "overall_status": "WARNING"
+    },
+    {
+      "system_id": "Q1444+2919_z2.624",
+      "checks": {
+        "literature_format": {
+          "status": "PASS"
+        },
+        "data_range": {
+          "status": "PASS",
+          "values": {
+            "redshift": true,
+            "n_hi": true,
+            "dh_ratio": true
+          }
+        },
+        "raw_spectra": {
+          "status": "WARNING",
+          "path": "../../data/raw/spectra/Q1444+2919_z2.624",
+          "note": "Raw spectra not found (may require manual download from KOA)"
+        },
+        "atomic_data": {
+          "status": "PASS",
+          "n_elements": 6
+        },
+        "checksums": {
+          "status": "WARNING",
+          "note": "Checksums file not found"
+        },
+        "placeholder_rejection": {
+          "status": "PASS"
+        }
+      },
+      "checks_passed": 4,
+      "total_checks": 6,
+      "overall_status": "WARNING"
+    }
+  ]
+}

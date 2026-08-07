@@ -1,0 +1,55 @@
+{
+  "description": "Effective stress-energy and energy condition analysis",
+  "energy_conditions": {
+    "DEC": true,
+    "NEC": true,
+    "SEC": false,
+    "WEC": true,
+    "rho_min": 34.4745686342,
+    "rho_plus_3p_min": -571652575.4009356,
+    "rho_plus_p_min": 0.1148041404
+  },
+  "epsilon_sensitivity": [
+    {
+      "SEC_violated": true,
+      "epsilon_t": 0.0001,
+      "evades_singularity_theorem": true
+    },
+    {
+      "SEC_violated": true,
+      "epsilon_t": 0.001,
+      "evades_singularity_theorem": true
+    },
+    {
+      "SEC_violated": true,
+      "epsilon_t": 0.01,
+      "evades_singularity_theorem": true
+    }
+  ],
+  "interpretation": "Temporal field violates SEC, evading standard singularity theorems",
+  "parameters": {
+    "epsilon_t": 0.1,
+    "n_points": 1000,
+    "n_t": 1.0,
+    "z_max": 1000.0,
+    "z_t": 100.0
+  },
+  "singularity_theorem_analysis": {
+    "NEC_satisfied": true,
+    "SEC_violated": true,
+    "TEP_evades_singularity_theorem": true,
+    "standard_theorem_applies": false
+  },
+  "step": "step_03_effective_stress_energy",
+  "stress_energy_components": {
+    "p_bounded_near_horizon": true,
+    "p_finite": true,
+    "p_max": -34.359764,
+    "rho_bounded_near_horizon": true,
+    "rho_finite": true,
+    "rho_max": 285979338.260786,
+    "w_at_z0": -0.9,
+    "w_at_zmax": -0.9999,
+    "w_finite": true
+  }
+}

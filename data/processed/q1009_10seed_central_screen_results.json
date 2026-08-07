@@ -1,0 +1,84 @@
+[
+  {
+    "seed": 1001,
+    "pass": true,
+    "delta_logz": 4132.659237107763,
+    "full_logz": -86.02775912126677,
+    "null_logz": -4218.68699622903,
+    "alpha_mean": 0.0007558379068224959,
+    "at_lower": false,
+    "at_upper": false
+  },
+  {
+    "seed": 1006,
+    "pass": true,
+    "delta_logz": 2071.841321470708,
+    "full_logz": 267.9415939587094,
+    "null_logz": -1803.8997275119984,
+    "alpha_mean": 0.000878613006196992,
+    "at_lower": false,
+    "at_upper": false
+  },
+  {
+    "seed": 1010,
+    "pass": true,
+    "delta_logz": 1392.979283572138,
+    "full_logz": -192.37986490796848,
+    "null_logz": -1585.3591484801066,
+    "alpha_mean": 0.0005651108487526018,
+    "at_lower": false,
+    "at_upper": false
+  },
+  {
+    "seed": 1009,
+    "pass": true,
+    "delta_logz": 3528.534454816652,
+    "full_logz": -115.43406668701634,
+    "null_logz": -3643.9685215036684,
+    "alpha_mean": 0.0005385579939483604,
+    "at_lower": false,
+    "at_upper": false
+  },
+  {
+    "seed": 1003,
+    "pass": true,
+    "delta_logz": 1027.213203137734,
+    "full_logz": -29.627470379157366,
+    "null_logz": -1056.8406735168912,
+    "alpha_mean": 0.0008777418403699919,
+    "at_lower": false,
+    "at_upper": false
+  },
+  {
+    "seed": 1005,
+    "pass": true,
+    "delta_logz": 1599.191756886013,
+    "full_logz": -1129.8728001364952,
+    "null_logz": -2729.0645570225083,
+    "alpha_mean": 0.0008760683744464784,
+    "at_lower": false,
+    "at_upper": false
+  },
+  {
+    "seed": 1004,
+    "pass": true,
+    "delta_logz": 1092.6167641592633,
+    "full_logz": 259.49386012344667,
+    "null_logz": -833.1229040358166,
+    "alpha_mean": 0.0007521131032851528,
+    "at_lower": false,
+    "at_upper": false
+  },
+  {
+    "seed": 1007,
+    "pass": true,
+    "delta_logz": 993.5927742594067,
+    "full_logz": -63.05206905559226,
+    "null_logz": -1056.644843314999,
+    "alpha_mean": 0.0005494375889779828,
+    "at_lower": false,
+    "at_upper": false
+  },
+  {
+    "seed": 1002,
+    "pass": 

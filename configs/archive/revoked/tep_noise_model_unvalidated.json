@@ -1,0 +1,9 @@
+{
+    "status": "REVOKED",
+    "reason": "Estimated from mixed residuals of a provisional H0 model",
+    "not_for_inference": true,
+    "source": "model_6a_initial_residuals",
+    "nu": 1.610033739565902,
+    "scale": 0.9676357846298769,
+    "loc": -0.4156196434804448
+}

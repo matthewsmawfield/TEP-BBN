@@ -1,0 +1,34 @@
+{
+  "per_transition_offsets_kms": {
+    "CII_1334": {
+      "dv_kms": 1.0,
+      "dv_err_kms": 1.0,
+      "status": "fitted"
+    },
+    "SiIV_1393": {
+      "dv_kms": 2.0,
+      "dv_err_kms": 1.0,
+      "status": "fitted"
+    },
+    "SiIV_1402": {
+      "dv_kms": 1.0,
+      "dv_err_kms": 1.0,
+      "status": "fitted"
+    },
+    "CIV_1548": {
+      "dv_kms": 3.0,
+      "dv_err_kms": 1.0,
+      "status": "fitted"
+    },
+    "CIV_1550": {
+      "dv_kms": -2.0,
+      "dv_err_kms": 1.0,
+      "status": "fitted"
+    }
+  },
+  "combined_offset_kms": 1.0,
+  "combined_uncertainty_kms": 1.6733200530681511,
+  "between_line_scatter_kms": 1.6733200530681511,
+  "registration_pass": true,
+  "D_window_used": false
+}

@@ -1,0 +1,103 @@
+{
+  "plausible_parents_count": 7,
+  "parent_search_penalty_ln_K": 1.9459101490553132,
+  "best_parent": {
+    "parent_idx": 10,
+    "parent_v": -50.84533814541457,
+    "target_v_D": -132.44533814541455,
+    "log_likelihood_raw": -17896.472310421424,
+    "log_likelihood_penalized": -17898.41822057048,
+    "opt_params": {
+      "logN_D": 12.452671795179791,
+      "T_K": 9999.99991458465,
+      "b_turb": 1.0
+    }
+  },
+  "all_parent_results": [
+    {
+      "parent_idx": 0,
+      "parent_v": -52.42615690016335,
+      "target_v_D": -134.02615690016336,
+      "log_likelihood_raw": -17932.16929282429,
+      "log_likelihood_penalized": -17934.115202973342,
+      "opt_params": {
+        "logN_D": 12.409644832170944,
+        "T_K": 9999.999987694977,
+        "b_turb": 1.0
+      }
+    },
+    {
+      "parent_idx": 1,
+      "parent_v": -43.713217222899615,
+      "target_v_D": -125.31321722289961,
+      "log_likelihood_raw": -18062.044427488716,
+      "log_likelihood_penalized": -18063.99033763777,
+      "opt_params": {
+        "logN_D": 12.273696135014939,
+        "T_K": 10000.000130106822,
+        "b_turb": 1.032181131726038
+      }
+    },
+    {
+      "parent_idx": 2,
+      "parent_v": -39.61627036277959,
+      "target_v_D": -121.21627036277958,
+      "log_likelihood_raw": -18107.53243881045,
+      "log_likelihood_penalized": -18109.478348959503,
+      "opt_params": {
+        "logN_D": 11.92272819263798,
+        "T_K": 10000.00090664121,
+        "b_turb": 1.2151431461709994
+      }
+    },
+    {
+      "parent_idx": 3,
+      "parent_v": 12.52107899794217,
+      "target_v_D": -69.07892100205783,
+      "log_likelihood_raw": -18108.90409323643,
+      "log_likelihood_penalized": -18110.850003385483,
+      "opt_params": {
+        "logN_D": 10.0,
+        "T_K": 10000.0,
+        "b_turb": 1.0
+      }
+    },
+    {
+      "parent_idx": 10,
+      "parent_v": -50.84533814541457,
+      "target_v_D": -132.44533814541455,
+      "log_likelihood_raw": -17896.472310421424,
+      "log_likelihood_penalized": -17898.41822057048,
+      "opt_params": {
+        "logN_D": 12.452671795179791,
+        "T_K": 9999.99991458465,
+        "b_turb": 1.0
+      }
+    },
+    {
+      "parent_idx": 11,
+      "parent_v": 52.94193475839755,
+      "target_v_D": -28.658065241602444,
+      "log_likelihood_raw": -18108.9040259578,
+      "log_likelihood_penalized": -18110.849936106853,
+      "opt_params": {
+        "logN_D": 10.0,
+        "T_K": 10000.0,
+        "b_turb": 1.0
+      }
+    },
+    {
+      "parent_idx": 12,
+      "parent_v": 72.43246548769102,
+      "target_v_D": -9.167534512308976,
+      "log_likelihood_raw": -18108.904536837326,
+      "log_likelihood_penalized": -18110.85044698638,
+      "opt_params": {
+        "logN_D": 10.0,
+        "T_K": 10000.0,
+        "b_turb": 1.0
+      }
+    }
+  ],
+  "ll_D_best": -17898.41822057048
+}

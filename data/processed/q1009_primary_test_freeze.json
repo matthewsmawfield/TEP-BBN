@@ -1,0 +1,44 @@
+{
+  "status": "FROZEN_BEFORE_Q1009",
+  "models": {
+    "H0": "M3_centroid",
+    "H1": "M2_primary_only",
+    "H2": "M2_full"
+  },
+  "thresholds": {
+    "T_full": 5.097319059547599,
+    "T_secondary": 0.0,
+    "S_held": 0.0
+  },
+  "calibration_results": {
+    "t_full_threshold": 5.097319059547599,
+    "null_false_positives": 0,
+    "null_total": 1000,
+    "fpr_95_upper_bound": 0.0029912495452490075,
+    "recoveries": {
+      "TEP_0.0005": {
+        "recovered": 203,
+        "total": 250,
+        "rate": 0.812,
+        "ci_95_lower": 0.7579623631812246,
+        "ci_95_upper": 0.8584720597034963
+      },
+      "TEP_0.0007": {
+        "recovered": 191,
+        "total": 250,
+        "rate": 0.764,
+        "ci_95_lower": 0.7064007550707685,
+        "ci_95_upper": 0.815222701268489
+      },
+      "TEP_0.0009": {
+        "recovered": 151,
+        "total": 250,
+        "rate": 0.604,
+        "ci_95_lower": 0.5404361888024776,
+        "ci_95_upper": 0.6650669584223582
+      }
+    }
+  },
+  "results_sha256": "4c5b9286ebd9cd4b7f1b43e194fab3a8199af52710dd9888d7fe21389a89536b",
+  "real_classification_run": false
+}

@@ -1,0 +1,12 @@
+{
+  "system_id": "PKS1937-1009_z3.256",
+  "role": "RETROSPECTIVE_VALIDATION",
+  "predicted_component": 1,
+  "predicted_velocity_kms": 0.0,
+  "predicted_sign": "BLUEWARD",
+  "null_probability": 0.0,
+  "rank_score": 0.9,
+  "input_hash": "256ccc58d8c0eb08039bcf2165cf8b82150828bf11c8ebbbf349a43a3a9cb2bc",
+  "predictor_hash": "24e0a201795e8587c06f111b57ce211b52178393f58930017c0abd5bdf5823cd",
+  "sealed_at": "2026-07-25T22:08:46.800805+00:00"
+}

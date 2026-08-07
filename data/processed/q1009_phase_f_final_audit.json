@@ -1,0 +1,8 @@
+{
+  "verdict": "Q1009_FREE_H_KINEMATIC_COMPONENT_SUPPORTED",
+  "delta_v_kms": 2.14,
+  "sigma_stat_sys": 0.5971599450733446,
+  "significance": 3.5836295077312332,
+  "p_value": 0.0,
+  "M_D_best_LL": -17898.42
+}

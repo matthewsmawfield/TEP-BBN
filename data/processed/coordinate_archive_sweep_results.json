@@ -1,0 +1,82 @@
+[
+  {
+    "system_id": "Q1009+2956_z2.504",
+    "qso_name": "Q1009+2956",
+    "registry_redshift": 2.504,
+    "coordinate_source": "REGISTRY_VERIFIED",
+    "ra_deg": 152.979167,
+    "dec_deg": 29.694722,
+    "status": "AUTH_REQUIRED",
+    "hits": []
+  },
+  {
+    "system_id": "Q1243+3047_z2.529",
+    "qso_name": "Q1243+3047",
+    "registry_redshift": 2.529,
+    "coordinate_source": "SIMBAD",
+    "ra_deg": 353.17499999999933,
+    "dec_deg": 30.52138888888889,
+    "status": "AUTH_REQUIRED",
+    "hits": []
+  },
+  {
+    "system_id": "Q1351+3221_z2.597",
+    "status": "COORD_NOT_RESOLVED",
+    "hits": []
+  },
+  {
+    "system_id": "Q1444+2919_z2.428",
+    "status": "COORD_NOT_RESOLVED",
+    "hits": []
+  },
+  {
+    "system_id": "Q1444+2919_z2.624",
+    "status": "COORD_NOT_RESOLVED",
+    "hits": []
+  },
+  {
+    "system_id": "HS0105+1619_z2.536",
+    "qso_name": "HS0105+1619",
+    "registry_redshift": 2.536,
+    "coordinate_source": "REGISTRY_VERIFIED",
+    "ra_deg": 17.025,
+    "dec_deg": 16.597222,
+    "status": "AUTH_REQUIRED",
+    "hits": []
+  },
+  {
+    "system_id": "PKS1937-1009_z3.256",
+    "qso_name": "PKS1937-1009",
+    "registry_redshift": 3.256,
+    "coordinate_source": "SIMBAD",
+    "ra_deg": 104.82854216969882,
+    "dec_deg": -10.04486730547,
+    "status": "AUTH_REQUIRED",
+    "hits": []
+  },
+  {
+    "system_id": "SDSSJ1358+6522_z3.067",
+    "status": "COORD_NOT_RESOLVED",
+    "hits": []
+  },
+  {
+    "system_id": "SDSSJ1558-0031_z2.702",
+    "qso_name": "J1558-0031",
+    "registry_redshift": 2.702,
+    "coordinate_source": "SIMBAD",
+    "ra_deg": 353.1352637027997,
+    "dec_deg": -0.52223211717,
+    "status": "AUTH_REQUIRED",
+    "hits": []
+  },
+  {
+    "system_id": "Q0311-1722_z3.734",
+    "qso_name": "Q0311-1722",
+    "registry_redshift": 3.734,
+    "coordinate_source": "REGISTRY_VERIFIED",
+    "ra_deg": 47.8125,
+    "dec_deg": -17.379722,
+    "status": "AUTH_REQUIRED",
+    "hits": []
+  }
+]

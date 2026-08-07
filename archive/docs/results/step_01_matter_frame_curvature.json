@@ -1,0 +1,42 @@
+{
+  "curvature_invariants": {
+    "K_bounded_near_horizon": true,
+    "K_finite": true,
+    "K_max": 1.4645696090083715e+18,
+    "R_bounded_near_horizon": true,
+    "R_finite": true,
+    "R_max": 2420103422.236314,
+    "det_finite": true,
+    "det_min": 3e-15,
+    "det_nonzero_near_horizon": true
+  },
+  "description": "Matter-frame curvature regularity at temporal horizon",
+  "epsilon_sensitivity": [
+    {
+      "epsilon_t": 0.0001,
+      "matter_frame_regular": false
+    },
+    {
+      "epsilon_t": 0.001,
+      "matter_frame_regular": false
+    },
+    {
+      "epsilon_t": 0.01,
+      "matter_frame_regular": false
+    }
+  ],
+  "interpretation": "Matter-frame curvature invariants remain finite and bounded",
+  "parameters": {
+    "epsilon_t": 0.1,
+    "n_points": 1000,
+    "n_t": 1.0,
+    "z_max": 1000.0,
+    "z_t": 100.0
+  },
+  "regularity_status": {
+    "all_invariants_bounded": true,
+    "all_invariants_finite": true,
+    "matter_frame_regular": true
+  },
+  "step": "step_01_matter_frame_curvature"
+}

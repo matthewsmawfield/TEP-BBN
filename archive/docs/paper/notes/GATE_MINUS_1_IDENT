@@ -1,0 +1,220 @@
+# Identifiability of Proper-Time Shear in D/H Absorption Systems
+
+**Date**: 2026-07-06
+**Status**: Gate -1 - NOT_YET_IDENTIFIABLE
+**Purpose**: Define TEP proper-time observables that cannot be absorbed into velocity structure
+
+---
+
+## The Core Problem
+
+For each absorber component (i), the observed velocity can be written as:
+
+$$v_{\text{obs},i} = v_{\text{kin},i} + c \cdot \delta a_i$$
+
+where:
+
+$$\delta a_i = \ln A_i - \bar{\ln A}$$
+
+The problem is that $v_{\text{kin},i}$ and $c \cdot \delta a_i$ are observationally degenerate unless $\delta a_i$ is predicted independently.
+
+### Critical Rule
+
+**A free component-level proper-time shift is not a TEP detection. It is just velocity fitting.**
+
+TEP-BBN must not fit $\delta a_i$ freely. It must predict:
+
+$$\delta a_i = \alpha g_i$$
+
+where $g_i$ is fixed before fitting the D line.
+
+---
+
+## Current Status
+
+### Mode A Pipeline
+- ✅ Structurally correct
+- ✅ Calculates required coupling from component features
+- ✅ Labeled as `literature_feasibility`, `toy_only`, `claim_allowed: False`
+- ❌ Gate -1 not identifiable (feature not independent of velocity)
+
+### Current Feature Models
+- **S1**: Density gradient ($g_i = \ln(\rho_i/\rho_0)$)
+- **S2**: Column density gradient ($g_i = \ln(N_i/N_0)$)
+- **Toy**: Power law ($g_i = (\rho/\rho_0)^\beta (L/L_0)^\gamma$)
+
+**Problem**: These features are still degenerate with velocity structure because they rely on assumed cloud sizes and lack independent constraints.
+
+---
+
+## Candidate Proper-Time Features
+
+### Candidate A — Column-Density/Screening Feature
+
+**Definition**:
+$$g_i = S(N_{\text{HI},i})$$
+or
+$$g_i = S(n_i)$$
+
+where $S$ is a TEP screening function.
+
+**Strengths**:
+- Closest to current setup
+- Physically motivated (density-dependent screening)
+
+**Weaknesses**:
+- Screening function not yet derived from TEP
+- Cloud size $L$ still assumed
+- Remains sensitivity model, not observationally fixed
+
+**Identifiability**: Partial (not alone)
+
+---
+
+### Candidate B — Metal-Line Coherence Feature ⭐
+
+**Definition**:
+$$g_i = g(\text{O I, Si II, C II, Fe II component alignment})$$
+
+**Principle**: If proper-time shear is real, the shifted component should leave correlated residual structure in metal lines.
+
+**Strengths**:
+- Independent of D fit
+- Stronger identifiability
+- Ordinary H I interlopers do not require same metal-line pattern
+- Uses actual observables (metal lines)
+
+**Weaknesses**:
+- Requires metal-line data
+- More complex analysis
+
+**Identifiability**: Stronger (yes, if metals available)
+
+**Test**: Does the D-like absorption occur where the TEP feature predicts a proper-time offset, and do metals show the corresponding component structure?
+
+---
+
+### Candidate C — Multi-Lyman Residual Coherence
+
+**Definition**: A real proper-time interpretation must fit the same component displacement across multiple Lyman transitions.
+
+**Principle**: TEP must improve:
+- Lyα
+- Lyβ
+- Lyγ
+- Higher-order lines
+
+with the same $\delta a_i$.
+
+**Strengths**:
+- Independent of D fit
+- Medium/strong identifiability
+- Uses same atomic physics
+
+**Weaknesses**:
+- Requires high-quality multi-line data
+- More complex fitting
+
+**Identifiability**: Medium/strong (yes)
+
+**Test**: If the effect appears only in one line, it is blending or continuum error.
+
+---
+
+### Candidate D — Environment/Halo Feature
+
+**Definition**: If temporal shear is tied to absorber environment, then $g_i$ should depend on:
+- Metallicity
+- Component complexity
+- $N_{\text{HI}}$
+- Velocity width
+- Proximity to galaxy/halo if known
+
+**Strengths**:
+- Independent of D fit
+- Strong in multi-system analysis
+- Physically motivated
+
+**Weaknesses**:
+- Requires multi-system data
+- Environment measurements may be limited
+
+**Identifiability**: Strong in sample (later)
+
+---
+
+## Gate -1 Pass/Fail Table
+
+| Feature                | Independent of D fit? | Beats velocity degeneracy? | Ready for Mode B? |
+| ---------------------- | --------------------: | -------------------------: | ------------------: |
+| Column-density feature |               Partial |                       Weak |          Not alone |
+| Metal-line coherence   |                   Yes |                   Stronger | Yes, if metals available |
+| Multi-Lyman coherence  |                   Yes |              Medium/strong |                 Yes |
+| Environment feature    |                   Yes |           Strong in sample |                Later |
+| Free $\delta a_i$      |                    No |                         No |              Reject |
+
+---
+
+## Required Next Steps
+
+### Immediate (Before Mode B)
+
+1. **Derive or freeze TEP prior**
+   - Create `configs/tep_priors.yaml`
+   - Document in `paper/notes/TEP_PRIOR_DERIVATION.md`
+   - Prior must come from: existing TEP parameters, GNSS/clock-network amplitudes, laboratory/atomic-clock constraints, or explicit derivation from matter metric/screening function
+
+2. **Implement metal-line feature**
+   - Add metal-line component alignment to component registry
+   - Define $g_i$ from metal-line structure
+   - Test identifiability against velocity blending
+
+3. **Implement multi-Lyman coherence**
+   - Require same $\delta a_i$ across multiple Lyman lines
+   - Test for line-by-line consistency
+
+### Mode B Preparation
+
+4. **Real spectral fitting**
+   - Use published reduced spectra + VPFIT-style model
+   - Or ESO Reflex reduction + custom fitter
+   - Current Python reduction is engineering only, not evidence
+
+5. **M0/M1/M2/M3 comparison**
+   - M0: Standard H I + real D I
+   - M1: H I + TEP proper-time/shear field, no D
+   - M2: Real D/H + TEP proper-time bias
+   - M3: H I-only ordinary velocity interloper, no TEP
+
+6. **Pre-registration**
+   - Freeze protocol before fitting spectra
+   - Define pass conditions
+   - Document identifiability requirements
+
+---
+
+## Valid Milestone
+
+A valid milestone would read:
+
+> "For Q0913+072, a proper-time feature defined before fitting from metal-line/component structure predicts the sign and approximate component location of the D-like absorption. This feature cannot be fully absorbed into ordinary H I velocity blending. Proceed to M0/M1/M2/M3 spectral evidence comparison."
+
+This would be a genuine breakthrough.
+
+---
+
+## Current Status
+
+**Gate -1**: NOT_YET_IDENTIFIABLE
+
+**Blocking Issue**: Need an independently predicted proper-time feature not degenerate with velocity.
+
+**Next Required Step**: Derive an independently predicted proper-time feature, preferably using metal-line and multi-Lyman coherence.
+
+**Claim Allowed**: False
+
+---
+
+**Prepared by**: Matthew Lukin Smawfield
+**Date**: 2026-07-06
+**Status**: Gate -1 identifiability analysis complete - requires feature design

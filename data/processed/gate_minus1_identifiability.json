@@ -1,0 +1,37 @@
+{
+  "gate": "Gate -1",
+  "status": "feature_design",
+  "claim_allowed": false,
+  "candidate_features": [
+    {
+      "name": "column_density",
+      "independent": "Partial",
+      "degeneracy_break": "Weak",
+      "ready_for_mode_b": "Not alone"
+    },
+    {
+      "name": "metal_line_coherence",
+      "independent": "Yes",
+      "degeneracy_break": "Stronger",
+      "ready_for_mode_b": "Yes, if metals available"
+    },
+    {
+      "name": "multi_lyman_coherence",
+      "independent": "Yes",
+      "degeneracy_break": "Medium/strong",
+      "ready_for_mode_b": "Yes"
+    },
+    {
+      "name": "environment_feature",
+      "independent": "Yes",
+      "degeneracy_break": "Strong in sample",
+      "ready_for_mode_b": "Later"
+    }
+  ],
+  "pass_conditions": [
+    "Independent constraint on g_i from non-spectral data or metal lines",
+    "Physical prediction of proper-time amplitude",
+    "Must not use arbitrary free shear parameters"
+  ],
+  "blocking_issue": "Need an independently predicted proper-time feature not degenerate with velocity."
+}

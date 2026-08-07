@@ -1,0 +1,154 @@
+{
+  "system_id": "Q0913+072_z2.618",
+  "qso_name": "Q0913+072",
+  "redshift": 2.618,
+  "processing_status": "raw_data_ready_for_reduction",
+  "data_type": "raw_2d_echelle",
+  "instrument": "UVES",
+  "n_files": 26,
+  "files": [
+    {
+      "filename": "UVES.2002-02-20T02:41:09.386.fits",
+      "size_bytes": 3248640,
+      "checksum": "b950d76ea42b27df7e3cc27da68970e34a98f4b4ccf214dbd8f60899e73773c1"
+    },
+    {
+      "filename": "UVES.2002-01-13T02:06:38.545.fits",
+      "size_bytes": 3248640,
+      "checksum": "5c7ce489714a49b4d23bbfe472e755d9cefe574e3d619642b7ffda1d48870eba"
+    },
+    {
+      "filename": "UVES.2002-01-23T03:28:14.360.fits",
+      "size_bytes": 3248640,
+      "checksum": "5d41957701657b3a02eb49c250a8473dbc7fde64354e7c212512d9102ca56694"
+    },
+    {
+      "filename": "UVES.2002-01-18T03:25:04.920.fits",
+      "size_bytes": 3248640,
+      "checksum": "150fd049f7d97b3fe2f9d53eb6522496e079cef26b36de01b7645df7bf733de1"
+    },
+    {
+      "filename": "UVES.2002-01-13T03:42:54.139.fits",
+      "size_bytes": 3248640,
+      "checksum": "20e34a55d75e3d157670267d6b15faa02335ae1c68fc92c37e6a70fe180c4438"
+    },
+    {
+      "filename": "UVES.2002-02-14T04:09:57.119.fits",
+      "size_bytes": 3248640,
+      "checksum": "99397cf76a7a3c093d6456fcc0cd08da9b0d7315cd4a9b0dbaa5e5fd583ad00e"
+    },
+    {
+      "filename": "UVES.2002-02-14T04:09:54.782.fits",
+      "size_bytes": 8827200,
+      "checksum": "2655b15f0371543419fcdf51a7c0b4918f79d0d562aef0512f4faf0c3804281e"
+    },
+    {
+      "filename": "UVES.2002-01-17T03:53:28.956.fits",
+      "size_bytes": 3248640,
+      "checksum": "87c065cb8dc898ba3fd8b485bbf9345e2e4834ecc8da33043058d57982e54de8"
+    },
+    {
+      "filename": "UVES.2002-01-13T03:46:24.550.fits",
+      "size_bytes": 8827200,
+      "checksum": "49b148e5d060817ad7cd11311cf3861824e122d941d796392cb77170e62d1621"
+    },
+    {
+      "filename": "UVES.2002-01-15T00:43:33.859.fits",
+      "size_bytes": 3248640,
+      "checksum": "af7d1612950cbee6ceb2b28c7766fb72cf6766894b06e8201a3d7a6806b848c5"
+    },
+    {
+      "filename": "UVES.2002-03-04T05:59:56.318.fits",
+      "size_bytes": 3248640,
+      "checksum": "f6cd01076f0da1c5ba1b62b93f1b7e70d5bd476492b85b278c59dbfeac1bcf54"
+    },
+    {
+      "filename": "UVES.2002-01-14T02:13:24.913.fits",
+      "size_bytes": 3248640,
+      "checksum": "3824e95fcc1dd09bd411292440b5e4eb0cf661643726f275dbbcd5d119e485db"
+    },
+    {
+      "filename": "UVES.2002-02-18T03:24:42.112.fits",
+      "size_bytes": 8827200,
+      "checksum": "cab665a3b0edc468749834747eb48cdd3a64f2f4d836fe6843a7f06d8cf5f9a6"
+    },
+    {
+      "filename": "UVES.2002-02-20T02:41:08.495.fits",
+      "size_bytes": 8827200,
+      "checksum": "7a357e9c3d33d11a043101bcf6658743dc649f02ab9885356f3846783f2d5b5a"
+    },
+    {
+      "filename": "UVES.2002-01-17T03:53:23.787.fits",
+      "size_bytes": 8827200,
+      "checksum": "0a5cfdb115e807efe54a0533fffdb9b939735ffd107d8fcc9478e3d923b46c56"
+    },
+    {
+      "filename": "UVES.2002-03-23T03:52:02.081.fits",
+      "size_bytes": 8827200,
+      "checksum": "abdfe6717cc6a446dffad29ea0a1b74736be91baec2e283ef7350c6ff95fef83"
+    },
+    {
+      "filename": "UVES.2002-02-14T04:09:28.303.fits",
+      "size_bytes": 259200,
+      "checksum": "e28b1dc3bbc8e7160077edf54d2e85adf75563aef97062f8cc821635067c9948"
+    },
+    {
+      "filename": "UVES.2002-02-18T03:24:43.024.fits",
+      "size_bytes": 3248640,
+      "checksum": "5ca1c80102c381d2adcfe6d5fb053ceb991b0e09fd0d24d1672d17e90ec5d312"
+    },
+    {
+      "filename": "UVES.2002-02-16T01:44:51.993.fits",
+      "size_bytes": 3248640,
+      "checksum": "807e2c82e48e1bc934120b78077fb194d9b1557e0e76feaaa5f375a9a0ea25ae"
+    },
+    {
+      "filename": "UVES.2002-01-13T02:10:11.853.fits",
+      "size_bytes": 8827200,
+      "checksum": "4e6e3db5c7328ed4ca6936cfeb12f263d69821350db428e9274c33e690f408a3"
+    },
+    {
+      "filename": "UVES.2002-01-23T03:28:13.488.fits",
+      "size_bytes": 8827200,
+      "checksum": "3afb5a242c1c0d662125eef9f592aaa230a938493da733065df83d2ade01a7af"
+    },
+    {
+      "filename": "UVES.2002-01-23T02:17:38.261.fits",
+      "size_bytes": 8827200,
+      "checksum": "0ac399337bbc28f126093f2d83cba9b8320a462ede0d222fb4726fbf6d89bfca"
+    },
+    {
+      "filename": "UVES.2002-01-15T00:43:32.990.fits",
+      "size_bytes": 8827200,
+      "checksum": "3e56ff69d622bce381809aa53e802eb3356579645c94245aa1dc17f149536131"
+    },
+    {
+      "filename": "UVES.2002-01-14T02:16:59.757.fits",
+      "size_bytes": 8827200,
+      "checksum": "d13270e1dce9fcb94095bfd52213df95a7bf1c6d6bcd864d4c93d0e18bc27148"
+    },
+    {
+      "filename": "UVES.2002-02-16T01:44:52.915.fits",
+      "size_bytes": 8827200,
+      "checksum": "1ff2c2f816dd84835fb9905319eaac0ef62d1a3fd218f3bea3b4fc62db450bb6"
+    },
+    {
+      "filename": "UVES.2002-01-18T03:25:05.996.fits",
+      "size_bytes": 8827200,
+      "checksum": "18c7b1cc3e7ce299fc8c2bb70defcb5507eb759a6c4e47c46795ed1bc5506527"
+    }
+  ],
+  "notes": "UVES data are raw 2D echelle images. Reduction requires ESO Reflex or similar software.",
+  "reduction_software": [
+    "ESO Reflex",
+    "IRAF",
+    "Custom reduction pipeline"
+  ],
+  "next_steps": [
+    "Reduce raw 2D echelle images to 1D spectra",
+    "Calibrate wavelength solution",
+    "Flux calibration",
+    "Continuum normalization",
+    "Co-add multiple exposures"
+  ]
+}

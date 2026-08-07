@@ -1,0 +1,12 @@
+{
+  "system_id": "J0812+3208_z2.626",
+  "source": "UVES SQUAD DR1",
+  "components": [
+    {
+      "component_id": 1,
+      "velocity_kms": 0.0,
+      "metal_alignment_strength": 0.8,
+      "g_i": 0.5
+    }
+  ]
+}

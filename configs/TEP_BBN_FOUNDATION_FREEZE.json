@@ -1,0 +1,29 @@
+{
+    "freeze_status": "LOCKED",
+    "timestamp": "2026-07-20T12:30:00Z",
+    "description": "Frozen foundational models and parameters for the TEP-BBN Pure-Temporal Origin Falsification Programme.",
+    "frozen_items": {
+        "radiative_transfer": {
+            "engine": "scripts.lib.physical_rt_engine",
+            "status": "validated",
+            "transitions_supported": ["HI_Lya", "HI_Lyb", "HI_Lyg", "HI_Ly6", "HI_Ly13", "HI_Ly14", "HI_Ly21", "CII_1334", "CIII_977", "CIV_1548", "CIV_1550", "SiIV_1393", "SiIV_1402"]
+        },
+        "baseline_model": {
+            "name": "model_6a",
+            "type": "conventional",
+            "status": "frozen"
+        },
+        "noise_model": {
+            "type": "Student-t",
+            "parameters": {
+                "nu": 2.331,
+                "scale": 0.805,
+                "location": 0.0
+            }
+        },
+        "data_processing": {
+            "continuum_marginalisation": "analytic_profiling",
+            "pixel_masking": "native_finite_flux_err_gt_0"
+        }
+    }
+}

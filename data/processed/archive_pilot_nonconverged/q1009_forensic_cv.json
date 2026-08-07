@@ -1,0 +1,14 @@
+{
+    "Fold A (Train Lya, Test Higher)": {
+        "H0b_Test_LL": -11441.338931880466,
+        "H1_Test_LL": -11097.840555074241
+    },
+    "Fold B (Train Higher, Test Lya)": {
+        "H0b_Test_LL": -7241.195882293178,
+        "H1_Test_LL": -7182.168303407168
+    },
+    "Overall": {
+        "H0b_CV_LL": -18682.534814173643,
+        "H1_CV_LL": -18280.008858481408
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "phase": "4A+",
+  "stress_failure_mode": null,
+  "fixes_applied": [
+    "shared_continuum",
+    "eligibility_rule",
+    "nuisance_tracking"
+  ],
+  "false_TEP_win_rate_on_M3_exact_D": 0.11333333333333333,
+  "false_TEP_win_rate_on_M3_near_D": 0.0,
+  "false_TEP_win_rate_on_M3_off_D": 0.06222222222222222,
+  "M0_M3_degeneracy_rate": 0.0,
+  "nuisance_bound_hits": {
+    "c0": 0,
+    "c1": 56,
+    "c2": 0,
+    "v_shift": 0,
+    "lsf_scale": 0
+  },
+  "delta_bic_distribution": {
+    "M3_truth_M3_minus_M2": {
+      "median": -248.71053087121766,
+      "p05": -5979.64500729105,
+      "p95": 51.10716502034893
+    }
+  },
+  "ready_for_phase_4B": false
+}

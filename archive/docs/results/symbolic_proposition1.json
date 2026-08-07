@@ -1,0 +1,42 @@
+{
+  "proposition": "Proposition 1: Curvature regularity of the temporal conformal boundary",
+  "assumptions": [
+    "Conformally flat metric g\u0303_\u03bc\u03bd = A(\u03b7)^2 \u03b7_\u03bc\u03bd",
+    "A(\u03b7) = C \u03b7^{-p} with 0 < p \u2264 1/2",
+    "\u03b7 is the TEP temporal-horizon conformal coordinate"
+  ],
+  "derivations": [
+    {
+      "quantity": "Ricci scalar",
+      "symbol": "R\u0303",
+      "expression": "6*eta**(2*p - 2)*p*(p + 1)/C**2",
+      "limit_eta_to_infinity": "0",
+      "condition_for_vanishing": "0 < p < 1 (exponent 2p-2 < 0, so \u03b7^{2p-2} \u2192 0 as \u03b7 \u2192 \u221e)"
+    },
+    {
+      "quantity": "Kretschmann scalar",
+      "symbol": "K\u0303",
+      "expression": "24*C**2*eta**(-2*p - 4)*p**2",
+      "limit_eta_to_infinity": "0",
+      "condition_for_vanishing": "0 < p < 1 (exponent 4p-4 < 0, so \u03b7^{4p-4} \u2192 0 as \u03b7 \u2192 \u221e)"
+    },
+    {
+      "quantity": "Timelike proper time",
+      "symbol": "\u03c4",
+      "expression": "C*Piecewise((eta**(1 - p)/(1 - p), Ne(p, 1)), (log(eta), True))",
+      "limit_eta_to_infinity": "oo",
+      "condition_for_divergence": "p < 1"
+    },
+    {
+      "quantity": "Null affine parameter",
+      "symbol": "\u03bb",
+      "expression": "C**2*Piecewise((eta**(1 - 2*p)/(1 - 2*p), Ne(p, 1/2)), (log(eta), True))",
+      "limit_eta_to_infinity": "oo",
+      "condition_for_divergence": "p \u2264 1/2 (logarithmic divergence at p = 1/2, power-law for p < 1/2)"
+    }
+  ],
+  "certificate": {
+    "verified": true,
+    "note": "All symbolic limits have been computed with SymPy. For 0 < p \u2264 1/2: R\u0303 ~ \u03b7^{2p-2} \u2192 0, K\u0303 ~ \u03b7^{4p-4} \u2192 0, \u03c4 \u2192 \u221e, and \u03bb \u2192 \u221e. The boundary \u03b7 \u2192 \u221e corresponds to A_clock \u2192 0 (the temporal horizon)."
+  }
+}

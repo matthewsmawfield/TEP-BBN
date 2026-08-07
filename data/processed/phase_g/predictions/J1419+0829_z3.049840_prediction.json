@@ -1,0 +1,12 @@
+{
+  "system_id": "J1419+0829_z3.049840",
+  "role": "RETROSPECTIVE_VALIDATION",
+  "predicted_component": 1,
+  "predicted_velocity_kms": 0.0,
+  "predicted_sign": "BLUEWARD",
+  "null_probability": 0.0,
+  "rank_score": 0.9,
+  "input_hash": "aed2fc233ad98b25a8ac6db2080887114cf93c1dec4951384bcd85ae125d3851",
+  "predictor_hash": "24e0a201795e8587c06f111b57ce211b52178393f58930017c0abd5bdf5823cd",
+  "sealed_at": "2026-07-25T22:08:46.800215+00:00"
+}

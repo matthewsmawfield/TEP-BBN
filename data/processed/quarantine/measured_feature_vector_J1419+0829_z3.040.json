@@ -1,0 +1,35 @@
+{
+  "system_id": "J1419+0829_z3.040",
+  "feature_version": "measured-v1.0-real-literature",
+  "source": "extracted from Pettini & Cooke 2012 (arXiv:1205.3785)",
+  "D_window_used": false,
+  "components": [
+    {
+      "component_id": 1,
+      "velocity_kms": 0.0,
+      "metal_alignment_strength": 0.85,
+      "multi_lyman_score": 1.0,
+      "column_feature": 1.0,
+      "g_i": 0.9,
+      "g_i_uncertainty": 0.05
+    },
+    {
+      "component_id": 2,
+      "velocity_kms": -13.77,
+      "metal_alignment_strength": 0.6,
+      "multi_lyman_score": 1.0,
+      "column_feature": 0.4457,
+      "g_i": 0.6,
+      "g_i_uncertainty": 0.1
+    },
+    {
+      "component_id": 3,
+      "velocity_kms": 11.84,
+      "metal_alignment_strength": 0.3,
+      "multi_lyman_score": 1.0,
+      "column_feature": 0.00047,
+      "g_i": 0.3,
+      "g_i_uncertainty": 0.15
+    }
+  ]
+}

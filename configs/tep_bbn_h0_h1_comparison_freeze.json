@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_BEFORE_H1_FITTING",
+  "development_system": "Q1009+2956",
+  "data_manifest": "data/processed/Q1009_union_manifest.json",
+  "data_hash": "407c52ba7cdde5fd7ac2b5ab18dbe87880bc007a99fbf9dc4a6935fec10b48ed",
+  "pixel_hash": "e9ad9d7f8702f8a3d3a804e74889ba2421fc5f2ed733530a3da0914806c1ab38",
+  "baseline_source": "model_6a.26",
+  "baseline_parser_version": "0275b5a5e634c2f24e1445139eb0e5a507d6ea2207bbac74c3e2ea5ed10a5e67",
+  "shared_engine": "physical_rt_engine",
+  "noise_model": "configs/tep_noise_model.json",
+  "continuum_treatment": "analytic_profiling",
+  "zero_level_treatment": "analytic_profiling",
+  "h0": "H0_D_CONVENTIONAL",
+  "h1": "H1_HI_KINEMATIC",
+  "h1_velocity_prior_source": "non-D absorber velocity span",
+  "h1_prior_uses_isotope_offset": false,
+  "shared_pixels": true,
+  "shared_transitions": true,
+  "shared_instrument_model": true,
+  "shared_nuisance_freedom": true,
+  "h0_ll_t": -18816.907363618135,
+  "pixel_count": 8610
+}

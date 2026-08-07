@@ -1,0 +1,18 @@
+{
+  "system_id": "Q1243+3047_z2.529",
+  "source_archive": "ESO/KOA/KODIAQ/manual",
+  "download_method": "manual",
+  "archive_dataset_id": "mock_downloaded_spectrum.txt",
+  "raw_file_path": "data/raw/spectra/Q1243+3047_z2.529/mock_downloaded_spectrum.txt",
+  "absorber_redshift": 2.529,
+  "lya_observed_wavelength_angstrom": 4290.1,
+  "velocity_window": [
+    -300,
+    100
+  ],
+  "wavelength_unit": "Angstrom",
+  "flux_column": "flux",
+  "error_column": "err",
+  "normalization_method": "unknown",
+  "checksum_sha256": "12ac6cb566c39910228b4ec965cfd094337660849526754f88c5483285cfae6b"
+}

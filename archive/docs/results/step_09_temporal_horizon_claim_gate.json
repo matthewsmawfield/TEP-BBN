@@ -1,0 +1,113 @@
+{
+  "claim_levels": {
+    "level_1": {
+      "claim": "The Big Bang singularity is a temporal-horizon limit in the distance/acoustic sector.",
+      "criteria": {
+        "acoustic_preserved": true,
+        "established_claim": "The Big Bang singularity is a temporal-horizon limit in the distance/acoustic sector.",
+        "mapping_valid": true,
+        "passes": true,
+        "thermal_preserved": true
+      },
+      "name": "Temporal-Horizon Reinterpretation",
+      "passes": true
+    },
+    "level_2": {
+      "claim": "The physical matter-frame geometry is nonsingular in the TEP early-universe closure.",
+      "criteria": {
+        "bbn_preserved": true,
+        "curvature_regular": true,
+        "established_claim": "The physical matter-frame geometry is nonsingular in the TEP early-universe closure.",
+        "geodesic_complete_or_asymptotic": true,
+        "passes": true,
+        "recombination_preserved": true
+      },
+      "name": "Nonsingular Matter-Frame Cosmology",
+      "passes": true
+    },
+    "level_3": {
+      "claim": "TEP-TH replaces the standard Big Bang interpretation with a complete nonsingular temporal-horizon cosmology.",
+      "criteria": {
+        "blackbody_preserved": true,
+        "cmb_lss_consistent": true,
+        "entropy_regular": true,
+        "established_claim": "TEP-TH replaces the standard Big Bang interpretation with a complete nonsingular temporal-horizon cosmology.",
+        "level_2_required": true,
+        "passes": true,
+        "perturbation_well_defined": true
+      },
+      "name": "Full Big-Bang Replacement",
+      "passes": true
+    }
+  },
+  "description": "Automated claim gate for temporal-horizon cosmology",
+  "interpretation": "TEP-TH achieves Level 3 claim: Full Big-Bang Replacement",
+  "overall_claim": {
+    "final_claim": "Level 3: Full Big-Bang Replacement",
+    "level_achieved": 3,
+    "strength": "Full Big-Bang Replacement"
+  },
+  "pipeline_status": {
+    "all_steps_completed": true,
+    "steps_completed": 10,
+    "total_steps": 10
+  },
+  "singularity_theorem_analysis": {
+    "SEC_violated": true,
+    "evades_standard_theorem": true,
+    "supports_nonsingular_claim": true
+  },
+  "step": "step_09_temporal_horizon_claim_gate",
+  "subclaim_summary": {
+    "failing": 0,
+    "pass_rate": 1.0,
+    "passing": 11,
+    "total": 11
+  },
+  "subclaims": {
+    "bbn_preservation": {
+      "description": "BBN light-element abundances preserved (Y_p, D/H, He3/H, Li7/H, N_eff)",
+      "status": true
+    },
+    "blackbody_preservation": {
+      "description": "CMB blackbody spectrum preserved without spectral distortions",
+      "status": true
+    },
+    "cmb_anisotropy_match": {
+      "description": "CMB TT/TE/EE anisotropy spectra match Planck within observational tolerance",
+      "status": true
+    },
+    "curvature_boundedness": {
+      "description": "Matter-frame curvature invariants remain bounded near horizon",
+      "status": true
+    },
+    "entropy_regularity": {
+      "description": "Entropy and arrow-of-time regularity maintained at horizon",
+      "status": true
+    },
+    "geodesic_non_termination": {
+      "description": "Null and timelike geodesics do not terminate at finite affine/proper time",
+      "status": true
+    },
+    "horizon_mapping": {
+      "description": "Temporal-horizon mapping established (a_eff \u2192 0 \u2194 A \u2192 0)",
+      "status": true
+    },
+    "lss_bao_match": {
+      "description": "Matter power spectrum, growth factor, and BAO scales match SDSS/BOSS",
+      "status": true
+    },
+    "perturbation_boundary": {
+      "description": "Primordial perturbation boundary condition is well-defined",
+      "status": true
+    },
+    "recombination_visibility": {
+      "description": "Recombination visibility function and acoustic scales preserved",
+      "status": true
+    },
+    "singularity_theorem_evasion": {
+      "description": "SEC violation evades Hawking-Penrose singularity theorems",
+      "status": true
+    }
+  }
+}

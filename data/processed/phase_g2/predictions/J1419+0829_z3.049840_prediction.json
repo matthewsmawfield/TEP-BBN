@@ -1,0 +1,12 @@
+{
+  "system_id": "J1419+0829_z3.049840",
+  "role": "DEVELOPMENT",
+  "predicted_component": null,
+  "predicted_velocity_kms": null,
+  "predicted_sign": null,
+  "null_probability": 1.0,
+  "rank_score": 0.0,
+  "input_hash": "aed2fc233ad98b25a8ac6db2080887114cf93c1dec4951384bcd85ae125d3851",
+  "predictor_hash": "2f733ad2940c5b4c2c980a5285321fb6ff198951649d577251f5add6474d947a",
+  "sealed_at": "2026-07-26T09:13:42.374490+00:00"
+}

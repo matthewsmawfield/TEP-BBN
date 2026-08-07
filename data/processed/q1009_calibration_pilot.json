@@ -1,0 +1,5492 @@
+[
+  {
+    "condition": "null",
+    "data_seed": 40001,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "04bd39b589ac06cb7c34de382cb58583e3a068c2a50b19fa38d296430e5c0306",
+    "H0": {
+      "logL_train": 2549.9437800422593,
+      "logL_held": 301.07723283545465,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2549.9468592379044,
+      "logL_held": 301.07227261801256,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2550.0736504746146,
+      "logL_held": 301.4660489273694,
+      "converged": true
+    },
+    "T_full": 0.25974086471069313,
+    "T_secondary": 0.25358247342046525,
+    "S_held": 0.7776321838294962,
+    "active_boundaries": [
+      "int_n",
+      "alpha"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40002,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "47b52079ccf99a9692851382b0151efbe3aa6a88cc963cc2bc100187218958ed",
+    "H0": {
+      "logL_train": 2543.5481777365785,
+      "logL_held": 304.01029410186464,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2543.347657884814,
+      "logL_held": 303.8972126242752,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2543.3789013956725,
+      "logL_held": 303.8211296405731,
+      "converged": true
+    },
+    "T_full": -0.3385526818119615,
+    "T_secondary": 0.062487021717061,
+    "S_held": -0.3783289225831368,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40003,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "2dee83cd6f9a3e9a599dfc64c9633dcb04c7b905efcbb344a579b879d66f387e",
+    "H0": {
+      "logL_train": 2555.0930631331757,
+      "logL_held": 301.2275022366494,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2555.0350788628143,
+      "logL_held": 301.3915531348647,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2555.0350788630726,
+      "logL_held": 301.39155233006665,
+      "converged": true
+    },
+    "T_full": -0.11596854020626779,
+    "T_secondary": 5.165929906070232e-10,
+    "S_held": -1.609596097296162e-06,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40004,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "1897284416fb8402778315c86153913a272f5ef16c72be9857d856177d109f6a",
+    "H0": {
+      "logL_train": 2494.0013642160625,
+      "logL_held": 316.3827519233578,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2494.001352908511,
+      "logL_held": 316.3832359237277,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2494.001352909648,
+      "logL_held": 316.3832358764127,
+      "converged": true
+    },
+    "T_full": -2.2612828615820035e-05,
+    "T_secondary": 2.2746462491340935e-09,
+    "S_held": -9.462996786169242e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40005,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "0dbe445c49a6e5bdbc4890c2aab9f1015a47c13c3259c8aff25c61750372e734",
+    "H0": {
+      "logL_train": 2540.195786913072,
+      "logL_held": 310.64394801387124,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2540.195786224413,
+      "logL_held": 310.64394350840314,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2540.1957864297146,
+      "logL_held": 310.64394995403666,
+      "converged": true
+    },
+    "T_full": -9.667146514402702e-07,
+    "T_secondary": 4.106032065465115e-07,
+    "S_held": 3.880330837091606e-06,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40006,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "cee28097ce87186ad34cd60eee5524ea63713ccc068cd1fdd19d64db41d85b4e",
+    "H0": {
+      "logL_train": 2542.3227383511457,
+      "logL_held": 311.56925867784133,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2541.964498314095,
+      "logL_held": 311.8943420160307,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2541.9644983239177,
+      "logL_held": 311.8943418818836,
+      "converged": true
+    },
+    "T_full": -0.7164800544560421,
+    "T_secondary": 1.964508555829525e-08,
+    "S_held": -2.6829422949958825e-07,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40007,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "c9b40dea3c08f1732e499193c3ba976027adad7638df85f0c1e060fbe771b5bf",
+    "H0": {
+      "logL_train": 2534.657887120459,
+      "logL_held": 328.6471684635111,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2535.065287150816,
+      "logL_held": 328.68848963184297,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2535.0618999789813,
+      "logL_held": 327.76250276659107,
+      "converged": true
+    },
+    "T_full": 0.808025717044984,
+    "T_secondary": -0.006774343669349037,
+    "S_held": -1.8519737305038007,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40008,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "d8885072809253bd8659f0eb6af4cfafd9620a4f8921e7650d5ed5c00483d701",
+    "H0": {
+      "logL_train": 2499.6920923703497,
+      "logL_held": 311.206522099671,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2499.706607142996,
+      "logL_held": 311.19925879726804,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2499.7669676713504,
+      "logL_held": 311.2942507428205,
+      "converged": true
+    },
+    "T_full": 0.14975060200140433,
+    "T_secondary": 0.1207210567090442,
+    "S_held": 0.17545728629897894,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40009,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "bf50925058fba4725be83595769833f2b77e38f70afb6af2bd50d0be0837d86b",
+    "H0": {
+      "logL_train": 2520.663756137319,
+      "logL_held": 326.1213418547342,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2520.6904025744,
+      "logL_held": 326.14259553916844,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2520.7042553408037,
+      "logL_held": 325.77766122122455,
+      "converged": true
+    },
+    "T_full": 0.08099840696922911,
+    "T_secondary": 0.027705532806976407,
+    "S_held": -0.7298686358877831,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40010,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "52c0c7a95c834abaa56cfe97e2c9154cc811548588c734b2333fb490f14f59af",
+    "H0": {
+      "logL_train": 2512.2226485068804,
+      "logL_held": 306.6840846670545,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2511.823293705576,
+      "logL_held": 307.27601145750094,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2511.8232937050498,
+      "logL_held": 307.2760114420164,
+      "converged": true
+    },
+    "T_full": -0.7987096036613366,
+    "T_secondary": -1.052285369951278e-09,
+    "S_held": -3.096909040323226e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40011,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "624b5248d5a07e4ddfa50b182b992a29d0e23018fda5994a291b3ff98d59afc7",
+    "H0": {
+      "logL_train": 2547.675931694033,
+      "logL_held": 330.5719706942056,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2547.6757358519294,
+      "logL_held": 330.56818645220335,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2547.6757358515706,
+      "logL_held": 330.56818637457866,
+      "converged": true
+    },
+    "T_full": -0.00039168492457974935,
+    "T_secondary": -7.175913196988404e-10,
+    "S_held": -0.007568639253918263,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40012,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "c0499171af68d4072e617fb7fdd6c30aab557e4fff49ffeaeae2a71b08062147",
+    "H0": {
+      "logL_train": 2525.2321902415865,
+      "logL_held": 318.84388424035654,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2525.2278838121474,
+      "logL_held": 318.81769645176365,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2525.2385068558633,
+      "logL_held": 318.8092835567703,
+      "converged": true
+    },
+    "T_full": 0.012633228553568188,
+    "T_secondary": 0.02124608743179124,
+    "S_held": -0.06920136717246805,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40013,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "c583bea6b41df6d18140a04f031c29bc59a4c29a62bb0a999a77d45649a72718",
+    "H0": {
+      "logL_train": 2535.7494158030427,
+      "logL_held": 308.8219591510896,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2535.751399261518,
+      "logL_held": 308.8319790952388,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2535.757938314965,
+      "logL_held": 308.90976504590304,
+      "converged": true
+    },
+    "T_full": 0.017045023844730167,
+    "T_secondary": 0.013078106893772201,
+    "S_held": 0.15557190132847154,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40014,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "16fabebf262508cc4ee4cc7152081e215a0a0c70de9f7bab0835932cde453cb8",
+    "H0": {
+      "logL_train": 2547.4868689564746,
+      "logL_held": 314.4464293611566,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2547.432046208463,
+      "logL_held": 314.3880664991557,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2547.433264727417,
+      "logL_held": 314.14123178447943,
+      "converged": true
+    },
+    "T_full": -0.10720845811556501,
+    "T_secondary": 0.0024370379078391124,
+    "S_held": -0.610395153354375,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40015,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "fad221af09b6c51583f7da720628acf8f3f951124f39de0909274b49ef9b0102",
+    "H0": {
+      "logL_train": 2550.7963265484304,
+      "logL_held": 311.290626150099,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2549.615567579382,
+      "logL_held": 311.30971388888383,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2549.615757108895,
+      "logL_held": 311.30907425990415,
+      "converged": true
+    },
+    "T_full": -2.361138879070495,
+    "T_secondary": 0.0003790590262724436,
+    "S_held": -0.0012792579593678965,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40016,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "069364337150e9aef2795010990c6f0b5c32e0a3754367fe9961973ad1897cd4",
+    "H0": {
+      "logL_train": 2537.9515570430244,
+      "logL_held": 309.9936993712691,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2537.5873074350266,
+      "logL_held": 309.91100680108485,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2537.6160216942517,
+      "logL_held": 309.9542228209308,
+      "converged": true
+    },
+    "T_full": -0.6710706975454741,
+    "T_secondary": 0.05742851845025143,
+    "S_held": -0.07895310067658556,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40017,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "30537ba9d2597451413d828907f62460df020136f3b3df007abd316b99f57c4e",
+    "H0": {
+      "logL_train": 2508.9959851667395,
+      "logL_held": 307.17420237703,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2509.063159407993,
+      "logL_held": 307.1785623211551,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2509.069082082614,
+      "logL_held": 307.32851223753056,
+      "converged": true
+    },
+    "T_full": 0.14619383174886025,
+    "T_secondary": 0.011845349241411895,
+    "S_held": 0.29989983275095256,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40018,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "afcff5fae12735a0782ee417f4884f643e41a793d32408e09b724139a11310c3",
+    "H0": {
+      "logL_train": 2512.8973580883903,
+      "logL_held": 324.23007328404134,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2512.4323232755282,
+      "logL_held": 324.1865282338588,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2512.4831285751916,
+      "logL_held": 324.1955553429724,
+      "converged": true
+    },
+    "T_full": -0.8284590263974678,
+    "T_secondary": 0.10161059932670469,
+    "S_held": -0.06903588213788225,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40019,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "e885619ed407876032ba4976b0e9d62fe76c1298581b7bfdd50b096ac0852b60",
+    "H0": {
+      "logL_train": 2517.3026211241395,
+      "logL_held": 318.41813709091036,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2517.302432282026,
+      "logL_held": 318.41820874700545,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2517.3024322807905,
+      "logL_held": 318.41820877952773,
+      "converged": true
+    },
+    "T_full": -0.00037768669790239073,
+    "T_secondary": -2.471097104717046e-09,
+    "S_held": 6.504455996036995e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40020,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "2312778e2c7f9a10f4289809ae0593522d85b69926eddef8b2a08c4ab3592659",
+    "H0": {
+      "logL_train": 2541.2122521839938,
+      "logL_held": 312.0383712918004,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2540.721232710855,
+      "logL_held": 312.091100451812,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2540.7306155303695,
+      "logL_held": 312.07626696184474,
+      "converged": true
+    },
+    "T_full": -0.963273307248528,
+    "T_secondary": 0.018765639028970327,
+    "S_held": -0.029666979934518167,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40021,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "32374a4b78607ab8e5309177402e3b256fb12d465b19b1dd03418f66e71e0a80",
+    "H0": {
+      "logL_train": 2548.6608717892254,
+      "logL_held": 312.43906576115353,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2548.6532327593914,
+      "logL_held": 312.43145012614013,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2548.6532327921677,
+      "logL_held": 312.43145005902824,
+      "converged": true
+    },
+    "T_full": -0.015277994115422189,
+    "T_secondary": 6.555274012498558e-08,
+    "S_held": -0.015231404250585001,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40022,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "87442d708f95c998a581e8d0094f68ea124835edfe9c4fb190f8a06f34c64ea3",
+    "H0": {
+      "logL_train": 2538.878501994728,
+      "logL_held": 328.0391002444277,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2538.602208741694,
+      "logL_held": 327.8458732365061,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2538.602208740752,
+      "logL_held": 327.845873189666,
+      "converged": true
+    },
+    "T_full": -0.5525865079525829,
+    "T_secondary": -1.8844730220735073e-09,
+    "S_held": -0.38645410952335624,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40023,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "71fef75779255898bdc21101107fe3f808f641c6af6a93d5fc26ab618a8b0822",
+    "H0": {
+      "logL_train": 2527.8041554648903,
+      "logL_held": 321.2593484674844,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2526.6107216463006,
+      "logL_held": 321.81365152359,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2526.7236326473535,
+      "logL_held": 321.98978673163384,
+      "converged": true
+    },
+    "T_full": -2.161045635073606,
+    "T_secondary": 0.22582200210581505,
+    "S_held": 0.35227041608766285,
+    "active_boundaries": [
+      "int_n",
+      "alpha"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40024,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "5c9eb2e29e310cbf577323191202eeedc44c5e07b515867bd5beb3afe7045a7c",
+    "H0": {
+      "logL_train": 2540.251835299349,
+      "logL_held": 311.81961985334124,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2540.3254410773907,
+      "logL_held": 311.757546683329,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2540.336096670887,
+      "logL_held": 311.3298832724083,
+      "converged": true
+    },
+    "T_full": 0.16852274307620974,
+    "T_secondary": 0.021311186992534203,
+    "S_held": -0.9794731618658261,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40025,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "90353904ca33f2006788c4807bef15f9dc72ad2718495057e76df91da211eeb3",
+    "H0": {
+      "logL_train": 2523.1557910461406,
+      "logL_held": 323.4377319221541,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2523.2382450896844,
+      "logL_held": 323.42816498234384,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2523.359556871589,
+      "logL_held": 323.2541808357631,
+      "converged": true
+    },
+    "T_full": 0.40753165089699905,
+    "T_secondary": 0.24262356380950223,
+    "S_held": -0.3671021727819834,
+    "active_boundaries": [
+      "int_n",
+      "alpha"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40026,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "3be7b3219c3d30d32295bda66fd3dbf8b4c91da51399455170a3a211322ed2f8",
+    "H0": {
+      "logL_train": 2508.3062900958503,
+      "logL_held": 327.15652341370026,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2508.31473727942,
+      "logL_held": 327.147484675473,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2508.359708190726,
+      "logL_held": 326.8146134799508,
+      "converged": true
+    },
+    "T_full": 0.10683618975144782,
+    "T_secondary": 0.0899418226117632,
+    "S_held": -0.6838198674988689,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40027,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "872a3369acaccf7c675836cf81cc1f7e49239ab25b00f553ab7630ff2b0f4c47",
+    "H0": {
+      "logL_train": 2512.2986391751706,
+      "logL_held": 323.7204206765273,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2509.715249154659,
+      "logL_held": 323.48054076099197,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2509.71636050459,
+      "logL_held": 323.4707868388158,
+      "converged": true
+    },
+    "T_full": -5.164557341161526,
+    "T_secondary": 0.0022226998617043137,
+    "S_held": -0.49926767542297057,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40028,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "d613d35b6cb5d459045b2a906296f2fbb580be00c7968f427843a0f8447a37d7",
+    "H0": {
+      "logL_train": 2550.3935796718915,
+      "logL_held": 301.06508755434487,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2550.2719697467137,
+      "logL_held": 301.07642368107855,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2550.3430930893146,
+      "logL_held": 301.08255542935694,
+      "converged": true
+    },
+    "T_full": -0.10097316515384591,
+    "T_secondary": 0.14224668520182604,
+    "S_held": 0.012263496556784048,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40029,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "ff521f5ef281f5ddd5707174f8d694e8340bd47c91ac2e3a57765b8d0e8058f1",
+    "H0": {
+      "logL_train": 2496.6044358082863,
+      "logL_held": 322.19401459562033,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2496.6409836196844,
+      "logL_held": 322.19588468877924,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2496.6409720179045,
+      "logL_held": 322.2709294898768,
+      "converged": true
+    },
+    "T_full": 0.07307241923626862,
+    "T_secondary": -2.320355997653678e-05,
+    "S_held": 0.15008960219506662,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40030,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "f513ea316211663ec6ecfe4e74389fe6f3b6ea0c4d81ba67d94d6cda688fbbf1",
+    "H0": {
+      "logL_train": 2590.5303407125184,
+      "logL_held": 323.3992404740103,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2590.530343275845,
+      "logL_held": 323.3992357576474,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2590.530343276825,
+      "logL_held": 323.3992357436168,
+      "converged": true
+    },
+    "T_full": 5.128613338456489e-06,
+    "T_secondary": 1.9599610823206604e-09,
+    "S_held": -9.46078694141761e-06,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40031,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "86902c380de656ed6c5c305bda3de10cdb8933bba55817340d5d3429265c3649",
+    "H0": {
+      "logL_train": 2554.6110767284654,
+      "logL_held": 316.26203033821395,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2554.6110788225496,
+      "logL_held": 316.26225853526466,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2554.656834808383,
+      "logL_held": 316.67891937289124,
+      "converged": true
+    },
+    "T_full": 0.0915161598350096,
+    "T_secondary": 0.09151197166647762,
+    "S_held": 0.8333216752531598,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40032,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "34973e0c59245512ecb8b4538e304c35812fdc308078ff09399b19a475f8c90d",
+    "H0": {
+      "logL_train": 2539.4854087240074,
+      "logL_held": 311.5995082256871,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2539.4855014452196,
+      "logL_held": 311.5983780182242,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2539.4855014464792,
+      "logL_held": 311.59837801729196,
+      "converged": true
+    },
+    "T_full": 0.00018544494378147647,
+    "T_secondary": 2.5193003239110112e-09,
+    "S_held": -0.0022604167902500194,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40033,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "fd9bf93279d9671f9e3e000ba38199ad35ce724ef0090d9dd5e767adab2ee56b",
+    "H0": {
+      "logL_train": 2491.0508461775735,
+      "logL_held": 317.39253201057403,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2491.0381629540825,
+      "logL_held": 317.4169958317557,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2491.038157508938,
+      "logL_held": 317.4169000687643,
+      "converged": true
+    },
+    "T_full": -0.025377337270583666,
+    "T_secondary": -1.0890288649534341e-05,
+    "S_held": -0.0001915259828138005,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40034,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "33a664b4a04793db8a08696ced8e990e902bda8ce2811fda2fea628720f10547",
+    "H0": {
+      "logL_train": 2509.213633901654,
+      "logL_held": 312.3157625063578,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2509.213519404802,
+      "logL_held": 312.31765374900107,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2509.213519405199,
+      "logL_held": 312.3176537918772,
+      "converged": true
+    },
+    "T_full": -0.00022899290979694342,
+    "T_secondary": 7.939888746477664e-10,
+    "S_held": 8.575227639084915e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40035,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "ea1bc738b83d1b28bbdb3a35c65b72c2b8fc12e02c01684c429243827d5e9696",
+    "H0": {
+      "logL_train": 2546.754879680474,
+      "logL_held": 314.5582362957442,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2546.899410039861,
+      "logL_held": 314.5720027539272,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2547.0129967614007,
+      "logL_held": 314.91513283363633,
+      "converged": true
+    },
+    "T_full": 0.5162341618533901,
+    "T_secondary": 0.22717344307966414,
+    "S_held": 0.6862601594182252,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40036,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "3982aaf7bac766237b06ee3d9c2af4cd2f6b77ee87c3be58dff7dfe40027f03e",
+    "H0": {
+      "logL_train": 2531.099012204154,
+      "logL_held": 314.5344274029834,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2531.099012263995,
+      "logL_held": 314.53458896215074,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2531.099012265053,
+      "logL_held": 314.5345889036026,
+      "converged": true
+    },
+    "T_full": 1.21797711472027e-07,
+    "T_secondary": 2.115484676323831e-09,
+    "S_held": -1.170963059848873e-07,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40037,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "37221a6163417384abcdda84c222bfaf47e064889ece74f753836072fc6efb1d",
+    "H0": {
+      "logL_train": 2545.6060112196833,
+      "logL_held": 320.9181622926787,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2545.6059311437966,
+      "logL_held": 320.9183624069142,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2545.6059311438207,
+      "logL_held": 320.9183624050545,
+      "converged": true
+    },
+    "T_full": -0.0001601517251401674,
+    "T_secondary": 4.8203219193965197e-11,
+    "S_held": -3.71937858290039e-09,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40038,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "2c000e4156f4e80abfbe1b78b08f98d2378c35b4db593ecb4d1c29ad82730537",
+    "H0": {
+      "logL_train": 2498.7067363707793,
+      "logL_held": 324.1294439385971,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2497.298107653488,
+      "logL_held": 323.4057479174123,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2497.298107653232,
+      "logL_held": 323.40574790202174,
+      "converged": true
+    },
+    "T_full": -2.817257435094689,
+    "T_secondary": -5.120455170981586e-10,
+    "S_held": -1.447392073150695,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40039,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "e17642e55c960333bfb70b36b6c5627d1a83c15fb95aeb4e7cfcd1b4d9662f6d",
+    "H0": {
+      "logL_train": 2513.7356918847913,
+      "logL_held": 304.396440174831,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2513.7742326607536,
+      "logL_held": 304.4326667138415,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2513.724467145469,
+      "logL_held": 304.1120645791019,
+      "converged": true
+    },
+    "T_full": -0.02244947864437563,
+    "T_secondary": -0.09953103056886903,
+    "S_held": -0.6412042694792035,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40040,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "e322fb7bc5c58ae4b1c06aa1594b8d0732b539054ba2076378ac47119a1dac85",
+    "H0": {
+      "logL_train": 2541.943927951613,
+      "logL_held": 318.16153977593007,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2541.9630694336315,
+      "logL_held": 318.16079908399695,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2541.9604075906122,
+      "logL_held": 318.0669946943967,
+      "converged": true
+    },
+    "T_full": 0.03295927799808851,
+    "T_secondary": -0.0053236860385368345,
+    "S_held": -0.18909016306668036,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40041,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "7d217c1ff9ad09790d029dc5737feb7f1d30735fc67d295ebb25920f4350c961",
+    "H0": {
+      "logL_train": 2523.145217939257,
+      "logL_held": 313.3729304280412,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2522.306646939556,
+      "logL_held": 313.7381716940468,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2522.3066469414434,
+      "logL_held": 313.73817160326996,
+      "converged": true
+    },
+    "T_full": -1.6771419956266982,
+    "T_secondary": 3.775312507059425e-09,
+    "S_held": -1.815536734284251e-07,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40042,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "268fb7b31a1d7f632555717a261dabe5d78c5237de51f6d095365dda2595afbc",
+    "H0": {
+      "logL_train": 2543.0637387451966,
+      "logL_held": 325.4370791167795,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2543.1884861370895,
+      "logL_held": 325.43867650912955,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2543.308165464144,
+      "logL_held": 325.3249360551816,
+      "converged": true
+    },
+    "T_full": 0.488853437895159,
+    "T_secondary": 0.23935865410931,
+    "S_held": -0.2274809078959379,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40043,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "69a09d30a9a939e3236705ecdeaeb2a4637b4f22bcfac3ba841305bfb438f0a1",
+    "H0": {
+      "logL_train": 2542.805050306748,
+      "logL_held": 319.1030339708729,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2542.6489963885497,
+      "logL_held": 319.10205293802903,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2542.6595422400305,
+      "logL_held": 319.157449206057,
+      "converged": true
+    },
+    "T_full": -0.29101613343482313,
+    "T_secondary": 0.021091702961712144,
+    "S_held": 0.10883047036816151,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40044,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "1e76e36f7c76dcb1875e576902c57dde59545a30c2477461a4f1771b74c98650",
+    "H0": {
+      "logL_train": 2563.610997782348,
+      "logL_held": 314.57971061452923,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2563.610800009042,
+      "logL_held": 314.58166524269336,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2563.6108000089284,
+      "logL_held": 314.5816652498224,
+      "converged": true
+    },
+    "T_full": -0.0003955468391723116,
+    "T_secondary": -2.2737367544323206e-10,
+    "S_held": 1.4258034752856474e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40045,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "633e8f411b6da3a6d8c34a2feb1f5c60fc40f98421b63ac7deba7d3fa8278360",
+    "H0": {
+      "logL_train": 2514.1698511247687,
+      "logL_held": 331.52340904675464,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2514.169860005254,
+      "logL_held": 331.5233370441812,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2514.16986001192,
+      "logL_held": 331.5233371433395,
+      "converged": true
+    },
+    "T_full": 1.777430225047283e-05,
+    "T_secondary": 1.3331373338587582e-08,
+    "S_held": -0.000143806830237736,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40046,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "7bb8828a4fe0389317c2b0054f8a3fcabb53f53b43e8e769f91b8dab52c7f386",
+    "H0": {
+      "logL_train": 2502.94924905397,
+      "logL_held": 324.6613991350188,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2502.8938923874252,
+      "logL_held": 324.6573353742669,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2502.8913957212044,
+      "logL_held": 324.5208564128657,
+      "converged": true
+    },
+    "T_full": -0.11570666553143383,
+    "T_secondary": -0.004993332441699749,
+    "S_held": -0.28108544430619986,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40047,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "cd983819650c5844b2d94a2040476f24f036124db34e85c71e4233ecc8560173",
+    "H0": {
+      "logL_train": 2542.860492821567,
+      "logL_held": 320.8240319767942,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2542.715349908202,
+      "logL_held": 320.76735360610064,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2542.8030595339483,
+      "logL_held": 320.64301306534213,
+      "converged": true
+    },
+    "T_full": -0.11486657523710164,
+    "T_secondary": 0.17541925149271265,
+    "S_held": -0.36203782290408526,
+    "active_boundaries": [
+      "int_n",
+      "alpha"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40048,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "558fb9ab151c6a7b72a323ad89f84b215a65138bcf49e8b5dc74286bafa2b36d",
+    "H0": {
+      "logL_train": 2518.630816032171,
+      "logL_held": 327.5507966903947,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2517.7158827282465,
+      "logL_held": 327.8547635935276,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2517.7771447611917,
+      "logL_held": 328.18462761388264,
+      "converged": true
+    },
+    "T_full": -1.7073425419584964,
+    "T_secondary": 0.12252406589050224,
+    "S_held": 0.6597280407100925,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40049,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "81bca78fc2ac34252478035bca9591ecec8cbb26aa14cc1cbe249987c59ba8a2",
+    "H0": {
+      "logL_train": 2531.5466404976914,
+      "logL_held": 311.36873194091197,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2531.4578512737694,
+      "logL_held": 311.45093524000526,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2531.457851270096,
+      "logL_held": 311.45093528584334,
+      "converged": true
+    },
+    "T_full": -0.17757845519099646,
+    "T_secondary": -7.346898200921714e-09,
+    "S_held": 9.16761564440094e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40050,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "8fb680fc2ae8e328d96e4ca223491b06f363ebf149c142e651dfcf64354ea827",
+    "H0": {
+      "logL_train": 2545.159284656548,
+      "logL_held": 316.28394485438633,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2544.4445836465684,
+      "logL_held": 316.778161261046,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2544.4312538002027,
+      "logL_held": 317.11359321067636,
+      "converged": true
+    },
+    "T_full": -1.4560617126908255,
+    "T_secondary": -0.02665969273130031,
+    "S_held": 0.6708638992606666,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40051,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "497f223f99a5c1ce6b31dec0e4ac297cdaaf512a66f9c6485c2bca589621056f",
+    "H0": {
+      "logL_train": 2552.54705470552,
+      "logL_held": 324.20469716571995,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2552.415463172229,
+      "logL_held": 324.1798551417506,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2552.415463428947,
+      "logL_held": 324.1797781821354,
+      "converged": true
+    },
+    "T_full": -0.26318255314618,
+    "T_secondary": 5.134361344971694e-07,
+    "S_held": -0.04983796716908273,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40052,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "802a6304c038167efe854a59256b5c0556502b92896016d0051c40c20d642e58",
+    "H0": {
+      "logL_train": 2533.057791296538,
+      "logL_held": 313.9745842240636,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2533.0577457268673,
+      "logL_held": 313.97456497932257,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2533.057745939607,
+      "logL_held": 313.9740822407605,
+      "converged": true
+    },
+    "T_full": -9.071386284631444e-05,
+    "T_secondary": 4.254789018887095e-07,
+    "S_held": -0.0010039666062766628,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40053,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "ca46bdaebd010b4776921af88d0fb4191d75d03892605fbc68ba4adbdc49a578",
+    "H0": {
+      "logL_train": 2555.2233899600305,
+      "logL_held": 325.84720795489704,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2555.2231961036905,
+      "logL_held": 325.8497542622434,
+      "converged": false
+    },
+    "H2": {
+      "logL_train": 2555.223196104105,
+      "logL_held": 325.849754252893,
+      "converged": true
+    },
+    "T_full": -0.0003877118506352417,
+    "T_secondary": 8.294591680169106e-10,
+    "S_held": -1.8700802684179507e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40054,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "80b3aba4af50dfdc0414c484896690b102a7ae10930acf582cd2db0a2649114d",
+    "H0": {
+      "logL_train": 2545.400021578701,
+      "logL_held": 309.6550168504007,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2545.3730591261,
+      "logL_held": 309.7304978045713,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2545.37305912569,
+      "logL_held": 309.73049783262354,
+      "converged": false
+    },
+    "T_full": -0.05392490602207545,
+    "T_secondary": -8.203642209991813e-10,
+    "S_held": 5.610445441561751e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40055,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "e7b42a7c46f2784658b61fd7cd6e870ed28e056d0dff5973ada43d25a58cc4f1",
+    "H0": {
+      "logL_train": 2509.804860942574,
+      "logL_held": 309.888603488638,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2509.7817647423353,
+      "logL_held": 309.87178895315276,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2509.905985461164,
+      "logL_held": 309.7560707473341,
+      "converged": true
+    },
+    "T_full": 0.20224903718008136,
+    "T_secondary": 0.24844143765767512,
+    "S_held": -0.265065482607838,
+    "active_boundaries": [
+      "int_n",
+      "alpha"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40056,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "94a62a12dd20e92bc7b9a06b97a5610cc4179453162fe43402556d778ddc2cee",
+    "H0": {
+      "logL_train": 2511.783799409717,
+      "logL_held": 318.39756612323777,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2511.733558550877,
+      "logL_held": 318.48945872055594,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2511.7464159708175,
+      "logL_held": 318.62108583152093,
+      "converged": true
+    },
+    "T_full": -0.07476687779944768,
+    "T_secondary": 0.025714839880492946,
+    "S_held": 0.2632542219299694,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40057,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "96b61784ac0b94271e7531b92fea67b043c0b52429a165612733b770501d2aa2",
+    "H0": {
+      "logL_train": 2557.305072024632,
+      "logL_held": 308.2908471949484,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2556.907929331677,
+      "logL_held": 308.4791540969936,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2556.908700240053,
+      "logL_held": 308.4929868235107,
+      "converged": true
+    },
+    "T_full": -0.7927435691581195,
+    "T_secondary": 0.0015418167513416847,
+    "S_held": 0.027665453034160237,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40058,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "a13d61e40bd961d3a26da5b39d5a26595560f938959ab1783247e6203012a3a2",
+    "H0": {
+      "logL_train": 2514.044191958328,
+      "logL_held": 313.58978354036145,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2514.0440442932554,
+      "logL_held": 313.591333314011,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2514.044044294244,
+      "logL_held": 313.59133329673756,
+      "converged": true
+    },
+    "T_full": -0.000295328168249398,
+    "T_secondary": 1.977241481654346e-09,
+    "S_held": -3.4546928873169236e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40059,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "2fe9b0a2640617f85d50b7d5cfd8461ad13f33e6ae168845e6c0e980e4c87207",
+    "H0": {
+      "logL_train": 2534.061266341805,
+      "logL_held": 309.4624271475535,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2533.68803860194,
+      "logL_held": 309.1816771113887,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2533.688038602917,
+      "logL_held": 309.1816771813159,
+      "converged": true
+    },
+    "T_full": -0.7464554777761805,
+    "T_secondary": 1.95359461940825e-09,
+    "S_held": -0.5614999324752716,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40060,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "727518cdedecadbc9fe5824e6fb6b0cee27adc810f31289dbdb1614508b76d2e",
+    "H0": {
+      "logL_train": 2489.057293174005,
+      "logL_held": 306.81307685683674,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2489.0572327895447,
+      "logL_held": 306.8131264240805,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2489.057232792406,
+      "logL_held": 306.81312643291614,
+      "converged": true
+    },
+    "T_full": -0.00012076319762854837,
+    "T_secondary": 5.7225406635552645e-09,
+    "S_held": 1.7671254681772552e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40061,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "9e29f5869acd540282da1a6f29132d5ed12c8248cd4c295ab55a5a73d1a47184",
+    "H0": {
+      "logL_train": 2507.151588886557,
+      "logL_held": 319.16476041090186,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2507.15158076963,
+      "logL_held": 319.16470812946477,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2507.15158077266,
+      "logL_held": 319.16470820117183,
+      "converged": true
+    },
+    "T_full": -1.6227793821599334e-05,
+    "T_secondary": 6.059963197913021e-09,
+    "S_held": -0.00010441946005812497,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40062,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "787ef770fe06ef37208c60d337ac729164e795460e5a3094b88bd599973e37c9",
+    "H0": {
+      "logL_train": 2546.252660849294,
+      "logL_held": 327.722605902764,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2546.3915025268007,
+      "logL_held": 327.7011078518907,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2546.440546732715,
+      "logL_held": 327.4342273824865,
+      "converged": true
+    },
+    "T_full": 0.3757717668422629,
+    "T_secondary": 0.09808841182893957,
+    "S_held": -0.5767570405549804,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40063,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "6107f1c6ca5e8b8f94d71aac0d8d32694e90944330cc124f495b7bd82c3e62a3",
+    "H0": {
+      "logL_train": 2545.3776760960063,
+      "logL_held": 328.880991485099,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2543.464882445373,
+      "logL_held": 329.08266189438234,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2543.4648824458595,
+      "logL_held": 329.08266189095065,
+      "converged": true
+    },
+    "T_full": -3.8255873002935914,
+    "T_secondary": 9.731593308970332e-10,
+    "S_held": -6.863388080091681e-09,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40064,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "cce3a134a9c27bb61c8c8643f5f1db6ade489d8b3ecb13da6099a9bca87384c7",
+    "H0": {
+      "logL_train": 2518.609867012039,
+      "logL_held": 308.73802603429516,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2518.758714036643,
+      "logL_held": 308.71746942636696,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2518.841692696079,
+      "logL_held": 307.91023848742987,
+      "converged": true
+    },
+    "T_full": 0.4636513680798089,
+    "T_secondary": 0.16595731887173315,
+    "S_held": -1.6555750937305902,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40065,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "7666aff5459110d539bf6246e5140ffb79cdf5a289ef9ac38bb19eee23f397ab",
+    "H0": {
+      "logL_train": 2526.205566051709,
+      "logL_held": 309.79779653943694,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2526.1407194749227,
+      "logL_held": 309.9310536049973,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2526.1407194765743,
+      "logL_held": 309.93105359513197,
+      "converged": false
+    },
+    "T_full": -0.12969315026930417,
+    "T_secondary": 3.3032847568392754e-09,
+    "S_held": -1.9730691747099627e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40066,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "0a5cf554cc7130824824ffb1c26d3d3759bc2320311d7c4b771e03df191b54c6",
+    "H0": {
+      "logL_train": 2512.6504682614104,
+      "logL_held": 320.67929888560127,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2512.0531546446273,
+      "logL_held": 320.81395568302185,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2512.1547989354967,
+      "logL_held": 320.9386900755903,
+      "converged": true
+    },
+    "T_full": -0.991338651827391,
+    "T_secondary": 0.20328858173888875,
+    "S_held": 0.24946878513685533,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40067,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "14c0cdb328f694bc1c6bc5660e921ec9da769d24ba225e3b411e9be99322f0fd",
+    "H0": {
+      "logL_train": 2516.7860997094676,
+      "logL_held": 294.9743281769948,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2516.7860378732826,
+      "logL_held": 294.9738431491317,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2517.1318837386393,
+      "logL_held": 292.9008447773401,
+      "converged": true
+    },
+    "T_full": 0.6915680583433641,
+    "T_secondary": 0.6916917307135009,
+    "S_held": -4.146966799309325,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40068,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "34a90a970d56894870c8435aa2d257b4287d25d9f72a655023e458d54b1fdf31",
+    "H0": {
+      "logL_train": 2535.113775652399,
+      "logL_held": 323.29200635603013,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2534.4064551926695,
+      "logL_held": 322.957144992415,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2534.4064551938977,
+      "logL_held": 322.9571450093193,
+      "converged": true
+    },
+    "T_full": -1.4146409170025436,
+    "T_secondary": 2.456545189488679e-09,
+    "S_held": -0.6697226934217042,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40069,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "7d65f86a7bb52b4b1222b8b828d65e5131e7a4fc0d14fccb1f71d10afc80069e",
+    "H0": {
+      "logL_train": 2547.4872270781075,
+      "logL_held": 311.60267740884774,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2547.4446324304545,
+      "logL_held": 311.596779298249,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2547.4812630743004,
+      "logL_held": 312.10750319162594,
+      "converged": true
+    },
+    "T_full": -0.011928007614187663,
+    "T_secondary": 0.07326128769182105,
+    "S_held": 1.0096515655563962,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40070,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "93b42b67e6d8bbdb012c7f9365db25814de4273a5716efe149e86a0f7cd843d3",
+    "H0": {
+      "logL_train": 2511.847379651635,
+      "logL_held": 323.8720975253245,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2511.847515050585,
+      "logL_held": 323.87236985612685,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2511.8702372242897,
+      "logL_held": 323.8958118785781,
+      "converged": true
+    },
+    "T_full": 0.04571514530925924,
+    "T_secondary": 0.04544434740910219,
+    "S_held": 0.04688404490252651,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40071,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "93a726cfeed5a75872fa8b30ed09698e50b0bbd8a19fa0747684ff7a42c70a08",
+    "H0": {
+      "logL_train": 2563.245250440069,
+      "logL_held": 303.55127691288527,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2563.177877135431,
+      "logL_held": 303.87014669833593,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2563.177877135431,
+      "logL_held": 303.87014669833593,
+      "converged": true
+    },
+    "T_full": -0.13474660927568038,
+    "T_secondary": 0.0,
+    "S_held": 0.0,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40072,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "e094acdfa9cf2a29ddbf89eea8d1f674bc5f75d1ba7b4344a9ff14722a19609e",
+    "H0": {
+      "logL_train": 2552.45681239214,
+      "logL_held": 310.97286091587097,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2551.209083465266,
+      "logL_held": 310.71466460372693,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2551.2341540651682,
+      "logL_held": 310.1351816327923,
+      "converged": true
+    },
+    "T_full": -2.445316653943337,
+    "T_secondary": 0.050141199804784264,
+    "S_held": -1.6753585661573425,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40073,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "4fcdfd344095e111b784411234ac58ec1554e2ec55fc5a4340033f7dce0c2908",
+    "H0": {
+      "logL_train": 2515.4396924650746,
+      "logL_held": 314.9632977683526,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2515.4283681976967,
+      "logL_held": 314.88935584725385,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2515.4270102280893,
+      "logL_held": 314.81095512159004,
+      "converged": true
+    },
+    "T_full": -0.025364473970512336,
+    "T_secondary": -0.002715939214795071,
+    "S_held": -0.3046852935251536,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40074,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "431d083af06d503bc26bf90fb24d9a2d9e86bbe5e5251b9a9cc5dddc5ef4c9a0",
+    "H0": {
+      "logL_train": 2535.1888927971686,
+      "logL_held": 308.73777991763995,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2534.6276827731585,
+      "logL_held": 308.57514556534454,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2534.627682773367,
+      "logL_held": 308.5751455807925,
+      "converged": true
+    },
+    "T_full": -1.1224200476035548,
+    "T_secondary": 4.1654857341200113e-10,
+    "S_held": -0.32526867369494994,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40075,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "2da5f59cb771dd07fab42714699bc5a5210f8f7c2c56fcd6a53b9c73243c7663",
+    "H0": {
+      "logL_train": 2523.1866922032796,
+      "logL_held": 325.88798817575116,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2523.121672474895,
+      "logL_held": 325.8695495561987,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2523.129514987092,
+      "logL_held": 325.56492326903333,
+      "converged": true
+    },
+    "T_full": -0.11435443237496656,
+    "T_secondary": 0.015685024393860658,
+    "S_held": -0.6461298134356639,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40076,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "146b078ccfc805115495a245045d254fe7032a47c5bc24f073a07c3b62fc5e4a",
+    "H0": {
+      "logL_train": 2531.83338766719,
+      "logL_held": 313.8226402083004,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2531.8550553966934,
+      "logL_held": 313.82532891888536,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2531.8602624690375,
+      "logL_held": 313.7239200519267,
+      "converged": true
+    },
+    "T_full": 0.05374960369499604,
+    "T_secondary": 0.010414144688184024,
+    "S_held": -0.20281773391729985,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40077,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "2e7f255d8f49463d270e94cd56e4030c466c169efc7b0f74cb8ef7b149b00d26",
+    "H0": {
+      "logL_train": 2542.650688336525,
+      "logL_held": 327.13482202312616,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2542.7164884990943,
+      "logL_held": 327.1787720977821,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2542.742095457825,
+      "logL_held": 327.5491126595221,
+      "converged": true
+    },
+    "T_full": 0.18281424260021595,
+    "T_secondary": 0.051213917461609526,
+    "S_held": 0.7406811234800443,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40078,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "1f38e394a4f6b674e198363c115bf5be212473f7f64c07b1a28f44e11ebbd4a6",
+    "H0": {
+      "logL_train": 2544.4315114287974,
+      "logL_held": 311.81831649380183,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2544.431505725443,
+      "logL_held": 311.8183923267178,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2544.4315057470285,
+      "logL_held": 311.81839339183927,
+      "converged": true
+    },
+    "T_full": -1.1363537851138972e-05,
+    "T_secondary": 4.3170985009055585e-08,
+    "S_held": 2.1302429331626627e-06,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40079,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "77fb5895ea42aa6113c6e751e80aeb6b70e48f398a47b97b0f423c69f82d447a",
+    "H0": {
+      "logL_train": 2557.1806554627647,
+      "logL_held": 317.35151759623653,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2557.1808208851608,
+      "logL_held": 317.34894892167654,
+      "converged": false
+    },
+    "H2": {
+      "logL_train": 2557.1808209020055,
+      "logL_held": 317.34894851532056,
+      "converged": true
+    },
+    "T_full": 0.0003308784816908883,
+    "T_secondary": 3.368950274307281e-08,
+    "S_held": -0.005138161831951038,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40080,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "55ac80b5693d082d59bd360b03e96ce6bb7304e1db32fb96dcd28e40d4d8bc27",
+    "H0": {
+      "logL_train": 2530.5057426719,
+      "logL_held": 321.40117569356903,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2528.2751569178604,
+      "logL_held": 320.67892030475065,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2528.2765701340004,
+      "logL_held": 320.66282214245786,
+      "converged": true
+    },
+    "T_full": -4.458345075799116,
+    "T_secondary": 0.0028264322800168884,
+    "S_held": -1.476707102222349,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40081,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "99b6f88123d0ba51fdb6f889556264d5cbf6d90b72cdaaca6b62552b27ca5b23",
+    "H0": {
+      "logL_train": 2522.7452032350216,
+      "logL_held": 320.2206721610717,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2522.745400757905,
+      "logL_held": 320.2193842277783,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2522.7454007582596,
+      "logL_held": 320.2193842316177,
+      "converged": true
+    },
+    "T_full": 0.0003950464761146577,
+    "T_secondary": 7.09405867382884e-10,
+    "S_held": -0.002575858908016926,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40082,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "b1d251bb76cf330622dc9f9142c253ac8d8ba742724ebe7602c976a11801d1bf",
+    "H0": {
+      "logL_train": 2544.94070467851,
+      "logL_held": 322.3240376509441,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2544.834467943154,
+      "logL_held": 322.36524295711297,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2544.739222405623,
+      "logL_held": 322.2652595604717,
+      "converged": true
+    },
+    "T_full": -0.40296454577401164,
+    "T_secondary": -0.19049107506180007,
+    "S_held": -0.19996679328255595,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40083,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "8a94b4de7ac8d6a2eb9707fe8d4c669c0c8d98f82573c69f33313a28c1686ab8",
+    "H0": {
+      "logL_train": 2528.21216290226,
+      "logL_held": 307.39722109030123,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2528.2120889122843,
+      "logL_held": 307.39813316764173,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2528.21208891272,
+      "logL_held": 307.3981331269076,
+      "converged": true
+    },
+    "T_full": -0.0001479790798839531,
+    "T_secondary": 8.712959242984653e-10,
+    "S_held": -8.146821528498549e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40084,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "d04a5813193e7627ec0639f8bc76800788c71330172d9a81fe297f7358d2a09d",
+    "H0": {
+      "logL_train": 2529.287328783511,
+      "logL_held": 323.5517896072456,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2528.05330181763,
+      "logL_held": 323.5888053325937,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2528.062015655018,
+      "logL_held": 323.4019265800281,
+      "converged": true
+    },
+    "T_full": -2.4506262569857427,
+    "T_secondary": 0.017427674775717605,
+    "S_held": -0.37375750513126604,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40085,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "2064a6595b2f86d66ade7f7e89598f67b7fd0c69a5c73e19a3061af2860f438c",
+    "H0": {
+      "logL_train": 2545.31596524835,
+      "logL_held": 311.0501044123173,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2545.3916756886056,
+      "logL_held": 311.04243252186,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2545.3833536978477,
+      "logL_held": 311.1803219128607,
+      "converged": true
+    },
+    "T_full": 0.13477689899536927,
+    "T_secondary": -0.016643981515699124,
+    "S_held": 0.260435001086762,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40086,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "01a7d8a6860188daffc90134c715fcaf06ea04f51ad91f823178a3d60251bffb",
+    "H0": {
+      "logL_train": 2512.868980221623,
+      "logL_held": 315.9153330520252,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2511.9435701645975,
+      "logL_held": 315.66368107365673,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2511.952484749251,
+      "logL_held": 315.5650612346129,
+      "converged": true
+    },
+    "T_full": -1.8329909447438695,
+    "T_secondary": 0.01782916930733336,
+    "S_held": -0.7005436348244984,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40087,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "54034d894e39d4262b29aac757b0d7088eb982cf44701a6ddf8e79146dd56dd8",
+    "H0": {
+      "logL_train": 2500.031761707621,
+      "logL_held": 318.64472171813395,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2500.031600251739,
+      "logL_held": 318.6451085604261,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2500.031600251761,
+      "logL_held": 318.6451085613745,
+      "converged": true
+    },
+    "T_full": -0.00032291172010445734,
+    "T_secondary": 4.4565240386873484e-11,
+    "S_held": 1.8968648873851635e-09,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40088,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "b8ef3084041d276a97d9657e49668d79495b43e3ae9a0dca1b2516d9f8d6f2c7",
+    "H0": {
+      "logL_train": 2524.038162069941,
+      "logL_held": 327.5753406146647,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2521.3969915924085,
+      "logL_held": 327.9351170302624,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2521.396991593147,
+      "logL_held": 327.9351170230337,
+      "converged": true
+    },
+    "T_full": -5.2823409535876635,
+    "T_secondary": 1.4770193956792355e-09,
+    "S_held": -1.4457441466220189e-08,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40089,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "31a13188c5fefe4874f7e7555f3c7c237321fbb9a98992754580455b35fbd31f",
+    "H0": {
+      "logL_train": 2510.5951107004776,
+      "logL_held": 317.75229072487485,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2510.0172118653563,
+      "logL_held": 317.83117757856274,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2509.985548667473,
+      "logL_held": 317.862521951988,
+      "converged": true
+    },
+    "T_full": -1.219124066009499,
+    "T_secondary": -0.06332639576703514,
+    "S_held": 0.06268874685054016,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40090,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "bd4bfae69d50dd74072538d396034000ca8865ee72e322141906b3c515962f51",
+    "H0": {
+      "logL_train": 2573.902027230441,
+      "logL_held": 308.33892052699457,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2573.920257620138,
+      "logL_held": 308.34719409065576,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2573.959476036506,
+      "logL_held": 308.57541120369217,
+      "converged": true
+    },
+    "T_full": 0.11489761213033489,
+    "T_secondary": 0.07843683273677016,
+    "S_held": 0.45643422607281536,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40091,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "17b05fee9ea5cbf3f81e5898a8e522c4e70889051bb4eafcd907edd9e2298bad",
+    "H0": {
+      "logL_train": 2548.726889007514,
+      "logL_held": 303.2291296375574,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2548.705589900995,
+      "logL_held": 303.2226102131471,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2548.6988264864776,
+      "logL_held": 303.0925366646855,
+      "converged": true
+    },
+    "T_full": -0.05612504207238089,
+    "T_secondary": -0.013526829035072296,
+    "S_held": -0.2731859457437622,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40092,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "8fbfbcc3f5a4813fe3b5d8636b4e2b89d8d226d260924497abdb849c343c082f",
+    "H0": {
+      "logL_train": 2526.0291783016837,
+      "logL_held": 309.53196253115664,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2526.0289825914865,
+      "logL_held": 309.5289677651342,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2526.028982583281,
+      "logL_held": 309.5289676403677,
+      "converged": true
+    },
+    "T_full": -0.0003914368053301587,
+    "T_secondary": -1.6410922398790717e-08,
+    "S_held": -0.005989781577909525,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40093,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "6257b0c5df5f44d9ad0e82ee5042214e61c3dab426a56a75e37ebd20e9456c6b",
+    "H0": {
+      "logL_train": 2497.5735837418547,
+      "logL_held": 307.58921032650056,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2498.083652972021,
+      "logL_held": 307.54440013677527,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2497.6209615715097,
+      "logL_held": 307.69246265971685,
+      "converged": true
+    },
+    "T_full": 0.09475565931006713,
+    "T_secondary": -0.9253828010223515,
+    "S_held": 0.20650466643257914,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40094,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "cb3d3ca0a7623e9230d9d430a59f9a1a588856bc940f2ded9bdf74e6fa976585",
+    "H0": {
+      "logL_train": 2488.2329768757913,
+      "logL_held": 326.86700769828263,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2488.2328530510254,
+      "logL_held": 326.86466121203165,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2488.31143181155,
+      "logL_held": 326.59161236059066,
+      "converged": true
+    },
+    "T_full": 0.15690987151720037,
+    "T_secondary": 0.15715752104915737,
+    "S_held": -0.5507906753839507,
+    "active_boundaries": [
+      "f_D",
+      "int_n",
+      "alpha"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40095,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "4f284302a6ca7564f0f2438ca9ef3ef9fa60eb108a46c400d7b76be3232e10cd",
+    "H0": {
+      "logL_train": 2531.5399960891164,
+      "logL_held": 320.8088117264536,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2531.6455249941296,
+      "logL_held": 320.79606850045104,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2531.670441526371,
+      "logL_held": 320.7046840805103,
+      "converged": true
+    },
+    "T_full": 0.26089087450964143,
+    "T_secondary": 0.049833064483209455,
+    "S_held": -0.20825529188664405,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40096,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "4b763991efd9dbca48596eeda43953667fa7b989b4233d999a3878893a75251f",
+    "H0": {
+      "logL_train": 2555.3428166237723,
+      "logL_held": 309.3822348434449,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2554.1393653418677,
+      "logL_held": 309.3934967570706,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2554.389488631749,
+      "logL_held": 309.4092307166551,
+      "converged": true
+    },
+    "T_full": -1.9066559840466653,
+    "T_secondary": 0.5002465797624609,
+    "S_held": 0.03146791916901748,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40097,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "878ddf580a121ddb81ed0a62c77a8cb78d0ba47eb7a76bf5024189350274d582",
+    "H0": {
+      "logL_train": 2554.5173560284893,
+      "logL_held": 311.98104863296567,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2553.874941962938,
+      "logL_held": 311.79637974956495,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2553.8749419635433,
+      "logL_held": 311.79637975885447,
+      "converged": true
+    },
+    "T_full": -1.2848281298920483,
+    "T_secondary": 1.2105374480597675e-09,
+    "S_held": -0.3693377482223923,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40098,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "82a00cf40db230256600696c23d6030d680d16c11a55345695c0d4b43de67341",
+    "H0": {
+      "logL_train": 2511.3434468627015,
+      "logL_held": 323.2254416066222,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2511.5890832688156,
+      "logL_held": 323.3116781245775,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2511.6513976776746,
+      "logL_held": 322.7242299190609,
+      "converged": true
+    },
+    "T_full": 0.6159016299461655,
+    "T_secondary": 0.12462881771807588,
+    "S_held": -1.17489641103316,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40099,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "64b8f9f41494a6a758cd15a7f086eff9dfc9f6f4e56aadd91f23abb3e4de1286",
+    "H0": {
+      "logL_train": 2550.075198295928,
+      "logL_held": 312.53479551576737,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2550.0458381333356,
+      "logL_held": 312.5238384864069,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2550.0415524055857,
+      "logL_held": 312.41218241540577,
+      "converged": true
+    },
+    "T_full": -0.0672917806850819,
+    "T_secondary": -0.00857145549980487,
+    "S_held": -0.24522620072320933,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "null",
+    "data_seed": 40100,
+    "generating_model": "H0",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 1.0,
+      "alpha": 0.0,
+      "int_v": 0.0,
+      "int_n": 0.0,
+      "int_b": 5.0
+    },
+    "flux_sha256": "dae11fce22f1962d08ed589523506df82ef0d605b936687a5c3bc4b38ea75808",
+    "H0": {
+      "logL_train": 2516.2300245108036,
+      "logL_held": 320.8043694661074,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2515.1504876211607,
+      "logL_held": 320.67775815184376,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2515.157099419206,
+      "logL_held": 320.5723938839693,
+      "converged": true
+    },
+    "T_full": -2.1458501831948524,
+    "T_secondary": 0.013223596090938372,
+    "S_held": -0.46395116427618177,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50001,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "d97387882a3d1f9f4dc802ed30301450f92df248d94d343978fa5356d63f38a5",
+    "H0": {
+      "logL_train": 2418.1558350253254,
+      "logL_held": -144.32941057249116,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2512.240144449932,
+      "logL_held": -129.88980026546028,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2512.4143160903377,
+      "logL_held": 310.5502690796119,
+      "converged": true
+    },
+    "T_full": 188.5169621300247,
+    "T_secondary": 0.3483432808116049,
+    "S_held": 880.8801386901443,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50002,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "db8b0f1a89268cd4543a6e5314c7407d3a3794cde5fe03665764e8d110c8688e",
+    "H0": {
+      "logL_train": 2438.5389498724358,
+      "logL_held": -152.72611858400592,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2567.701865973322,
+      "logL_held": -139.87923634526842,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2569.891780911648,
+      "logL_held": 300.3750272265211,
+      "converged": true
+    },
+    "T_full": 262.7056620784242,
+    "T_secondary": 4.379829876651456,
+    "S_held": 880.5085271435792,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50003,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "f9fe08764f05e1ca430ae7c5b09c827ea1d16c2a716c23841a7b1fafa3e8e251",
+    "H0": {
+      "logL_train": 2362.0662649255146,
+      "logL_held": -180.2073048973236,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2504.270911622021,
+      "logL_held": -176.13261602419954,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2510.3459555107966,
+      "logL_held": 309.8541858074874,
+      "converged": true
+    },
+    "T_full": 296.55938117056394,
+    "T_secondary": 12.150087777551562,
+    "S_held": 971.9736036633739,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50004,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "7ae7abf02b076f69a37bed1611220bb00163072415f9e4c205903ec91aa7d016",
+    "H0": {
+      "logL_train": 2405.421095870611,
+      "logL_held": -148.57293915853998,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2491.9167172446505,
+      "logL_held": -126.38612939717626,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2495.462614499698,
+      "logL_held": 308.2847718459172,
+      "converged": true
+    },
+    "T_full": 180.08303725817314,
+    "T_secondary": 7.091794510094587,
+    "S_held": 869.3418024861869,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50005,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "5b24286687c2b09af51a67a06e9cec9b855007639d31a8922290fafcf1e7676d",
+    "H0": {
+      "logL_train": 2443.0780730237793,
+      "logL_held": -201.28660963927544,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2527.9410478510335,
+      "logL_held": -172.06050448400256,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2529.6586030235803,
+      "logL_held": 289.4600077515867,
+      "converged": true
+    },
+    "T_full": 173.161059999602,
+    "T_secondary": 3.4351103450935625,
+    "S_held": 923.0410244711786,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50006,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "8fb5089b42251ea8fe953370749d61e0460b4e6763d1b994720ca4a323f51bbe",
+    "H0": {
+      "logL_train": 2404.2758253821144,
+      "logL_held": -171.03732039211624,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2540.4738876478355,
+      "logL_held": -152.23637976488914,
+      "converged": false
+    },
+    "H2": {
+      "logL_train": 2541.849869008146,
+      "logL_held": 293.6347988201126,
+      "converged": true
+    },
+    "T_full": 275.1480872520633,
+    "T_secondary": 2.7519627206211226,
+    "S_held": 891.7423571700035,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50007,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "0bdc5bfb540314084b709a86ee573d371a40980711fc7189d86e6919c1be7ba0",
+    "H0": {
+      "logL_train": 2378.1125357088245,
+      "logL_held": -190.67735188949118,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2496.428710757971,
+      "logL_held": -177.84070615923252,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2498.1779403825894,
+      "logL_held": 323.29005083775627,
+      "converged": true
+    },
+    "T_full": 240.13080934752998,
+    "T_secondary": 3.4984592492364754,
+    "S_held": 1002.2615139939776,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50008,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "4fb2f9dedd7bacef752c0bd43e44de091d01cd7193c7862fcdc9171b0ba5709c",
+    "H0": {
+      "logL_train": 2445.224591451467,
+      "logL_held": -194.55170616271738,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2537.4778716028713,
+      "logL_held": -184.26950788488585,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2540.1492502777664,
+      "logL_held": 304.2567424902355,
+      "converged": true
+    },
+    "T_full": 189.84931765259898,
+    "T_secondary": 5.34275734979019,
+    "S_held": 977.0525007502428,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50009,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "e4638225edf39c706d9f67c3cf8df249f9f987b3aec9e2836b3febfa8281ee90",
+    "H0": {
+      "logL_train": 2392.698489356322,
+      "logL_held": -159.88274900131555,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2529.0360902539833,
+      "logL_held": -148.5717406989166,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2531.4743105825164,
+      "logL_held": 305.66395919710845,
+      "converged": true
+    },
+    "T_full": 277.5516424523885,
+    "T_secondary": 4.876440657066269,
+    "S_held": 908.4713997920501,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50010,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "4fb4d0feae28f3662bf66400e9dbb9c869fbee8f4451cc9cf1980a411127752d",
+    "H0": {
+      "logL_train": 2365.1171471327734,
+      "logL_held": -142.80189401532698,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2493.365772610281,
+      "logL_held": -134.3813779286102,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2498.646942992764,
+      "logL_held": 314.49393377410576,
+      "converged": true
+    },
+    "T_full": 267.05959171998074,
+    "T_secondary": 10.562340764965484,
+    "S_held": 897.750623405432,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50011,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "b95a467da42266de4e78179c15d83db6a4c71e0fe900787467eda688d031e659",
+    "H0": {
+      "logL_train": 2399.5825860040572,
+      "logL_held": -160.5761683452008,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2526.8828981541437,
+      "logL_held": -151.0508750837518,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2529.8286097799314,
+      "logL_held": 310.34692409008096,
+      "converged": true
+    },
+    "T_full": 260.4920475517483,
+    "T_secondary": 5.891423251575361,
+    "S_held": 922.7955983476655,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50012,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "5cbf90b2e2101b2f112944e0576ea2cbef571a082f388f6aa0635dbcc311b311",
+    "H0": {
+      "logL_train": 2427.420663753062,
+      "logL_held": -192.48019631730028,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2514.9515548644026,
+      "logL_held": -177.90526373740164,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2519.12879401264,
+      "logL_held": 295.1280387005302,
+      "converged": true
+    },
+    "T_full": 183.4162605191559,
+    "T_secondary": 8.354478296474554,
+    "S_held": 946.0666048758637,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50013,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "6f65f6b5c0a5076e6c582d4db81f278b965418d015cb4b9c32bad5d073d1a984",
+    "H0": {
+      "logL_train": 2403.5754486960736,
+      "logL_held": -174.68770231978328,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2511.1614457053925,
+      "logL_held": -168.6227170640961,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2513.949276886312,
+      "logL_held": 266.368727652699,
+      "converged": true
+    },
+    "T_full": 220.74765638047666,
+    "T_secondary": 5.575662361839022,
+    "S_held": 869.9828894335902,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50014,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "e98e170298275194d944a18b5e70221832e5193ef4686c5e8f778ee513d32723",
+    "H0": {
+      "logL_train": 2415.83124761863,
+      "logL_held": -163.94176384941966,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2530.080733722246,
+      "logL_held": -151.29987495373342,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2533.615115658443,
+      "logL_held": 307.5099720828243,
+      "converged": true
+    },
+    "T_full": 235.56773607962532,
+    "T_secondary": 7.068763872393902,
+    "S_held": 917.6196940731154,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50015,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "c3e1d5ad9c0d2292ae6af06fcd0c531f9251505bbbd31ae62d7bb39e55f048da",
+    "H0": {
+      "logL_train": 2434.600126799093,
+      "logL_held": -158.86398071253507,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2527.8769804611593,
+      "logL_held": -147.91851519531656,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2527.774811331244,
+      "logL_held": 314.01688517789876,
+      "converged": true
+    },
+    "T_full": 186.34936906430266,
+    "T_secondary": -0.20433825983036513,
+    "S_held": 923.8708007464306,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50016,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "a99e532d3c4a6bde814cda8af56d6dc0edaccc0ae91cc7f0dc71da3d3e7d43b2",
+    "H0": {
+      "logL_train": 2395.5951098820915,
+      "logL_held": -213.9914956782756,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2533.5205963441663,
+      "logL_held": -199.8437472421408,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2536.129962446726,
+      "logL_held": 311.67850864104287,
+      "converged": true
+    },
+    "T_full": 281.0697051292691,
+    "T_secondary": 5.218732205119522,
+    "S_held": 1023.0445117663673,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50017,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "156db7854688c89f1d3b0070beb052a081c7f25c5ce6dde7682980ebc25aa752",
+    "H0": {
+      "logL_train": 2430.8250445790068,
+      "logL_held": -204.7042705137108,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2510.243529035024,
+      "logL_held": -190.8903178475843,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2513.313303752264,
+      "logL_held": 298.654206373679,
+      "converged": true
+    },
+    "T_full": 164.97651834651424,
+    "T_secondary": 6.139549434479704,
+    "S_held": 979.0890484425266,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50018,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "20c907effd0735df56b30e6924216cb066dbbfcbc87b5f6b896a1ea39943cd9f",
+    "H0": {
+      "logL_train": 2412.908968170681,
+      "logL_held": -165.50240072894533,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2539.180461750517,
+      "logL_held": -156.22270321267933,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2540.619584524931,
+      "logL_held": 306.8925650651453,
+      "converged": true
+    },
+    "T_full": 255.4212327084997,
+    "T_secondary": 2.8782455488271808,
+    "S_held": 926.2305365556492,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50019,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "79038736abd1e9e27d9c50b0534850652f4e059592e2e028ec54a47145967371",
+    "H0": {
+      "logL_train": 2425.094573953134,
+      "logL_held": -172.72589187903196,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2522.6802353702174,
+      "logL_held": -151.08438918224752,
+      "converged": false
+    },
+    "H2": {
+      "logL_train": 2524.042395450174,
+      "logL_held": 315.61335132694825,
+      "converged": true
+    },
+    "T_full": 197.89564299407994,
+    "T_secondary": 2.724320159913077,
+    "S_held": 933.3954810183916,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50020,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "2847a8fac06d207f959e0eeaea9231ca914f6e9448cc350bd51096b7c9185580",
+    "H0": {
+      "logL_train": 2399.143636231669,
+      "logL_held": -100.94522897030893,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2501.099409675069,
+      "logL_held": -91.25343562361822,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2504.0857342661548,
+      "logL_held": 320.7393752810819,
+      "converged": true
+    },
+    "T_full": 209.8841960689715,
+    "T_secondary": 5.972649182171153,
+    "S_held": 823.9856218094002,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50021,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "e0d3a52ac55321d0235b8520a03c59be6898fee895e2dd73f581070e8f5cd1b9",
+    "H0": {
+      "logL_train": 2414.37927091288,
+      "logL_held": -191.79013290970033,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2538.617459937694,
+      "logL_held": -176.67816659861026,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2542.175843189993,
+      "logL_held": 319.35314268224545,
+      "converged": true
+    },
+    "T_full": 255.59314455422555,
+    "T_secondary": 7.116766504597763,
+    "S_held": 992.0626185617114,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50022,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "6268313ee12399da6090400f45fce47411ef62bfa5aa961b763e525054e1d1e6",
+    "H0": {
+      "logL_train": 2389.202157357695,
+      "logL_held": -126.03375370040933,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2495.7563889258954,
+      "logL_held": -114.43170353127144,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2504.0014712255825,
+      "logL_held": 306.2687820717287,
+      "converged": true
+    },
+    "T_full": 229.59862773577515,
+    "T_secondary": 16.49016459937411,
+    "S_held": 841.4009712060003,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50023,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "2c73ef86d89fc8358f954c32a47099c5102e236583b1206da9ddd47324cbe305",
+    "H0": {
+      "logL_train": 2471.423865263269,
+      "logL_held": -125.28427815277975,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2552.2201720548182,
+      "logL_held": -112.0176771220687,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2552.6874353349276,
+      "logL_held": 322.07850731814864,
+      "converged": true
+    },
+    "T_full": 162.5271401433174,
+    "T_secondary": 0.9345265602187283,
+    "S_held": 868.1923688804347,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50024,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "7c23ce1771affc1f8edef8f74df3a53f7b443b7344db87821e6c7b960730a964",
+    "H0": {
+      "logL_train": 2420.294380977278,
+      "logL_held": -205.56865899186957,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2538.151116962492,
+      "logL_held": -192.7605336384141,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2539.4181787133,
+      "logL_held": 279.64795554733405,
+      "converged": true
+    },
+    "T_full": 238.24759547204485,
+    "T_secondary": 2.5341235016167047,
+    "S_held": 944.8169783714964,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50025,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "25d433f334df03f3cd2b69a050edf0fc10d5ea9177714207fd1e4533b6987634",
+    "H0": {
+      "logL_train": 2410.569692023533,
+      "logL_held": -151.53516005162922,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2539.8783437045954,
+      "logL_held": -139.32975088300057,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2543.0724257263037,
+      "logL_held": 315.48376966111357,
+      "converged": true
+    },
+    "T_full": 265.0054674055409,
+    "T_secondary": 6.388164043416509,
+    "S_held": 909.6270410882282,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50026,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "cb332a6e97ed74c4fc86ff32d5f3b6a2143396fc70460b9732dd3b7886880c53",
+    "H0": {
+      "logL_train": 2427.242700812243,
+      "logL_held": -183.45538666900313,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2523.8502834454603,
+      "logL_held": -171.65876717080707,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2527.612855362492,
+      "logL_held": 323.64664411141086,
+      "converged": true
+    },
+    "T_full": 200.74030910049805,
+    "T_secondary": 7.525143834063783,
+    "S_held": 990.6108225644359,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50027,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "193064cf31a44c80320cb50f1822ca95fdcdacb01902bec9bb2f9af0381b9d31",
+    "H0": {
+      "logL_train": 2408.1813158010777,
+      "logL_held": -129.15022065961085,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2527.268238138634,
+      "logL_held": -115.27213359470987,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2529.781592171959,
+      "logL_held": 320.0269752792965,
+      "converged": true
+    },
+    "T_full": 243.2005527417623,
+    "T_secondary": 5.026708066649917,
+    "S_held": 870.5982177480128,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50028,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "93224ae5ea30fa59dfee5dae4df07f62e71e0a1b77455e6f7abc8734cd096c6f",
+    "H0": {
+      "logL_train": 2417.8916484385973,
+      "logL_held": -196.78177986380737,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2506.1517969209553,
+      "logL_held": -184.2919476590713,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2509.3159518250272,
+      "logL_held": 302.9944749771593,
+      "converged": true
+    },
+    "T_full": 182.84860677285997,
+    "T_secondary": 6.328309808143786,
+    "S_held": 974.5728452724612,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50029,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "ecdefc1c228928e06ba9357eaa4bae2fad71609fd46f7782625f7c840e672578",
+    "H0": {
+      "logL_train": 2399.537386645455,
+      "logL_held": -120.26208203483769,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2502.8267944756476,
+      "logL_held": -114.48224277848999,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2512.093388738919,
+      "logL_held": 281.2502772359303,
+      "converged": true
+    },
+    "T_full": 225.11200418692806,
+    "T_secondary": 18.5331885265432,
+    "S_held": 791.4650400288406,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50030,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "05565cd6a5ab152a8f7aec686927038107ffc8f331376661150c0611d456e19c",
+    "H0": {
+      "logL_train": 2395.058278802326,
+      "logL_held": -230.72820430022182,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2505.165267658855,
+      "logL_held": -223.3705414915243,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2507.766065328398,
+      "logL_held": 267.62785871322376,
+      "converged": true
+    },
+    "T_full": 225.41557305214337,
+    "T_secondary": 5.201595339085543,
+    "S_held": 981.9968004094961,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50031,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "1628dd79a2f5cab6eea0dce42ab47959a233b82ba38625dc9a1be11242ebeca5",
+    "H0": {
+      "logL_train": 2432.311786654157,
+      "logL_held": -160.69423477881622,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2521.8731584858238,
+      "logL_held": -149.61490864420958,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2524.628254144516,
+      "logL_held": 307.2866849894349,
+      "converged": true
+    },
+    "T_full": 184.63293498071835,
+    "T_secondary": 5.510191317384852,
+    "S_held": 913.8031872672889,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50032,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "96a805301925f91e41a278969bd2a3238be19105a2f0727c31f6bebb0ecc5c25",
+    "H0": {
+      "logL_train": 2384.3351417601466,
+      "logL_held": -115.95863890451763,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2489.3387558249774,
+      "logL_held": -102.86265955218596,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2492.378332180178,
+      "logL_held": 321.6778809097657,
+      "converged": true
+    },
+    "T_full": 216.0863808400627,
+    "T_secondary": 6.079152710401104,
+    "S_held": 849.0810809239033,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50033,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "e89c2d49054cb3d5c4cb7eeab380bf0edf102a2680bf0af00ba391df2adbd5ca",
+    "H0": {
+      "logL_train": 2390.758248880169,
+      "logL_held": -246.56286424227883,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2500.221280287806,
+      "logL_held": -234.03289562923973,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2506.144421906498,
+      "logL_held": 297.87005973431087,
+      "converged": true
+    },
+    "T_full": 230.77234605265767,
+    "T_secondary": 11.846283237383432,
+    "S_held": 1063.8059107271013,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50034,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "5903b14b73501f8628860eb7600d9cfb9843b68f7f0dfcc47ffc4c74d51de66d",
+    "H0": {
+      "logL_train": 2375.0198565103437,
+      "logL_held": -174.90295882016014,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2517.234070560384,
+      "logL_held": -169.8209219141537,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2520.33705367546,
+      "logL_held": 316.4701862406768,
+      "converged": true
+    },
+    "T_full": 290.6343943302327,
+    "T_secondary": 6.2059662301517164,
+    "S_held": 972.582216309661,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50035,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "eab2726f7ad1bb3623c090e638a5629f4d701bf7450b7952f00f3aa6a0137633",
+    "H0": {
+      "logL_train": 2417.0124321789217,
+      "logL_held": -136.7434694437148,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2531.8059235176574,
+      "logL_held": -126.90202866435804,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2534.3687860957875,
+      "logL_held": 306.531386492985,
+      "converged": true
+    },
+    "T_full": 234.71270783373166,
+    "T_secondary": 5.12572515626016,
+    "S_held": 866.8668303146861,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50036,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "9d8e9fc8525bdd11098eed4b3e611c40e6210537a45734464b2db27ac6b02b55",
+    "H0": {
+      "logL_train": 2407.8667537188467,
+      "logL_held": -154.02672188161156,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2512.2743756587142,
+      "logL_held": -134.11047709767473,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2514.1120760400954,
+      "logL_held": 275.4256465356588,
+      "converged": true
+    },
+    "T_full": 212.4906446424975,
+    "T_secondary": 3.675400762762365,
+    "S_held": 819.0722472666671,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50037,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "aef630b44f2f60e4f70aa4ca849ae66e8414031a693d6bcad0877174af0b24ef",
+    "H0": {
+      "logL_train": 2411.327736163086,
+      "logL_held": -151.94031484499774,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2517.416527796232,
+      "logL_held": -135.23981567899156,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2520.0776907125946,
+      "logL_held": 292.2153394157343,
+      "converged": true
+    },
+    "T_full": 217.4999090990177,
+    "T_secondary": 5.322325832725255,
+    "S_held": 854.9103101894518,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50038,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "f846adc014420d307dcf8b4d87c05c716c0cf0210fe1c9f6b8007c40bed18689",
+    "H0": {
+      "logL_train": 2396.7212271301682,
+      "logL_held": -189.57644372784102,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2503.756324834023,
+      "logL_held": -178.89439017625867,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2503.539848961187,
+      "logL_held": 313.9994021242305,
+      "converged": true
+    },
+    "T_full": 213.6372436620377,
+    "T_secondary": -0.432951745671744,
+    "S_held": 985.7875846009783,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50039,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "eece182192a85ebed3b7b7c25368f14445b7b21fcc2d2ab93fe6699c4a223946",
+    "H0": {
+      "logL_train": 2398.9287784911776,
+      "logL_held": -188.70689682643388,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2516.404411439199,
+      "logL_held": -177.6636821155717,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2518.020029680815,
+      "logL_held": 305.9288279542801,
+      "converged": true
+    },
+    "T_full": 238.1825023792744,
+    "T_secondary": 3.2312364832314415,
+    "S_held": 967.1850201397036,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50040,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "1722343d23e519d436a537756b2c1923e0c6bf905ba9e007f0afaa16b10ba6c1",
+    "H0": {
+      "logL_train": 2383.094308066249,
+      "logL_held": -129.70774992874965,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2526.698291285556,
+      "logL_held": -119.972336094384,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2531.6704748688044,
+      "logL_held": 317.127065006268,
+      "converged": true
+    },
+    "T_full": 297.15233360511047,
+    "T_secondary": 9.944367166496704,
+    "S_held": 874.198802201304,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50041,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "d6e50a8bf6b949ba3d2db06fa80d7855c1ef286dd10e0d4b8b65e509e9c5bc35",
+    "H0": {
+      "logL_train": 2400.324944536408,
+      "logL_held": -158.48334493321818,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2516.3668497144336,
+      "logL_held": -143.05733559757607,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2517.5372636424772,
+      "logL_held": 300.7878982731254,
+      "converged": true
+    },
+    "T_full": 234.42463821213823,
+    "T_secondary": 2.340827856087344,
+    "S_held": 887.6904677414029,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50042,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "d20759aec8486838f5e8166de07ed60eb4870480349196b982355a3ade3287a5",
+    "H0": {
+      "logL_train": 2408.760858776363,
+      "logL_held": -118.35441680102068,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2528.9036962581768,
+      "logL_held": -106.73996570446265,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2536.81411125123,
+      "logL_held": 314.77388517319713,
+      "converged": true
+    },
+    "T_full": 256.1065049497338,
+    "T_secondary": 15.820829986106219,
+    "S_held": 843.0277017553195,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50043,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "3107b095885331fedc5a31ce0a9cd841cffdd970fbea83139aa06a6c9bb1c1ad",
+    "H0": {
+      "logL_train": 2446.4782105302306,
+      "logL_held": -190.27452105324232,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2549.158234997297,
+      "logL_held": -178.65463572616395,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2552.1642015316884,
+      "logL_held": 298.539258668192,
+      "converged": true
+    },
+    "T_full": 211.3719820029155,
+    "T_secondary": 6.011933068783037,
+    "S_held": 954.387788788712,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50044,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "9f082aab062e9e42fe35184b4f8fbe30a3f704da816001ce49cd70a9d0101059",
+    "H0": {
+      "logL_train": 2423.5412794567537,
+      "logL_held": -223.40109195887402,
+      "converged": false
+    },
+    "H1": {
+      "logL_train": 2540.360475846467,
+      "logL_held": -206.34346703815112,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2542.013717188321,
+      "logL_held": 293.8863428383019,
+      "converged": true
+    },
+    "T_full": 236.94487546313485,
+    "T_secondary": 3.3064826837080545,
+    "S_held": 1000.4596197529061,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50045,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "ad02a91b1a95880a617539a69726ee7a0d815334ca3c3d84fb428dc7b24689ad",
+    "H0": {
+      "logL_train": 2408.1207551131442,
+      "logL_held": -167.01725359705202,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2533.243931575618,
+      "logL_held": -148.89698036672385,
+      "converged": false
+    },
+    "H2": {
+      "logL_train": 2533.8627886410904,
+      "logL_held": 296.4429988562542,
+      "converged": true
+    },
+    "T_full": 251.4840670558924,
+    "T_secondary": 1.2377141309452782,
+    "S_held": 890.6799584459561,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50046,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "b76f7ff62b4d3d2c110caa8947794bed4bcf2097fadba38054e097dd9bd190f3",
+    "H0": {
+      "logL_train": 2441.0489783025887,
+      "logL_held": -201.12271828206872,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2530.350256290566,
+      "logL_held": -181.98203420302838,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2531.488747418257,
+      "logL_held": 294.9358514769675,
+      "converged": true
+    },
+    "T_full": 180.87953823133648,
+    "T_secondary": 2.2769822553818813,
+    "S_held": 953.8357713599918,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50047,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "7f9c93fe4057419fd7c5a58fa59fafd8420adbf91319353ed8841c893b404aff",
+    "H0": {
+      "logL_train": 2431.016367112262,
+      "logL_held": -167.47290893319584,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2536.26509438643,
+      "logL_held": -153.6962617347127,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2537.3661032637992,
+      "logL_held": 317.69973108433646,
+      "converged": true
+    },
+    "T_full": 212.6994723030748,
+    "T_secondary": 2.2020177547383355,
+    "S_held": 942.7919856380984,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50048,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "587306ea0caf38fdfaed4f950024d56c94acfb4a4808d82c2ee12a0777ad6dde",
+    "H0": {
+      "logL_train": 2360.5429912938566,
+      "logL_held": -171.6877406701328,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2492.3588664419494,
+      "logL_held": -160.4922557408512,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2504.113270853032,
+      "logL_held": 293.15636771419247,
+      "converged": true
+    },
+    "T_full": 287.1405591183511,
+    "T_secondary": 23.50880882216552,
+    "S_held": 907.2972469100873,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50049,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "6990f045ced90ab9cbc5549a466b0f2761125503d6355eb813def205782aac4d",
+    "H0": {
+      "logL_train": 2455.0896782102755,
+      "logL_held": -152.28914538258948,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2565.4892622358757,
+      "logL_held": -132.4818261781158,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2567.710370101178,
+      "logL_held": 318.86873839693277,
+      "converged": true
+    },
+    "T_full": 225.24138378180487,
+    "T_secondary": 4.442215730604403,
+    "S_held": 902.7011291500971,
+    "active_boundaries": [
+      "int_n"
+    ],
+    "completed": true
+  },
+  {
+    "condition": "TEP_0.0007",
+    "data_seed": 50050,
+    "generating_model": "H2",
+    "actual_parameters": {
+      "v_shift": 0.0,
+      "B_abs": 1.5e-05,
+      "f_D": 0.0,
+      "alpha": 0.0007
+    },
+    "flux_sha256": "4d4228455c03a1dd2625f5f204867928068d75bdb8fd113a214a2a463b5ca558",
+    "H0": {
+      "logL_train": 2425.849951931094,
+      "logL_held": -81.09081849338861,
+      "converged": true
+    },
+    "H1": {
+      "logL_train": 2533.861035669626,
+      "logL_held": -70.13729460911969,
+      "converged": true
+    },
+    "H2": {
+      "logL_train": 2536.805498812448,
+      "logL_held": 320.3441137621517,
+      "converged": true
+    },
+    "T_full": 221.91109376270833,
+    "T_secondary": 5.888926285644629,
+    "S_held": 780.9628167425428,
+    "active_boundaries": [
+      "f_D",
+      "int_n"
+    ],
+    "completed": true
+  }
+]

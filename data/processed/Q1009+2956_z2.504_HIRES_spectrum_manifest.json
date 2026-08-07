@@ -1,0 +1,33 @@
+{
+  "system_id": "Q1009+2956_z2.504_HIRES",
+  "archive_object_id": "Q1009+2956",
+  "kinematic_reference_redshift": 2.5035873411,
+  "wavelength_frame": "vacuum_heliocentric",
+  "likelihood_mode": "JOINT_INDEPENDENT_SPECTRA",
+  "spectra": [
+    {
+      "file": "data/raw/reduced_products/Q1009+2956_z2.504_HIRES/q1011p2941_C1x1.dat",
+      "setup": "C1x1",
+      "sigma_v_kms": 2.6,
+      "sha256": "a379b504802cfa414ca289e0e722c2e039c162c60b840adff7ddbca24fbb1018"
+    },
+    {
+      "file": "data/raw/reduced_products/Q1009+2956_z2.504_HIRES/q1011p2941_C1x2.dat",
+      "setup": "C1x2",
+      "sigma_v_kms": 2.6,
+      "sha256": "7be63c993104d19ead31da37e7596ddccb0af373a472638331a94d86cb1b206f"
+    },
+    {
+      "file": "data/raw/reduced_products/Q1009+2956_z2.504_HIRES/q1011p2941_C5x1.dat",
+      "setup": "C5x1",
+      "sigma_v_kms": 3.4,
+      "sha256": "440e2498a8621c0d63bec2d8da573b790536bb28afa96d9291902d0cb9ddad0f"
+    },
+    {
+      "file": "data/raw/reduced_products/Q1009+2956_z2.504_HIRES/q1011p2941_C5x2.dat",
+      "setup": "C5x2",
+      "sigma_v_kms": 3.4,
+      "sha256": "94c84bfbacd534b7f1c4090a1c4741c90f15f077e2d3568fc027dff144199b0d"
+    }
+  ]
+}

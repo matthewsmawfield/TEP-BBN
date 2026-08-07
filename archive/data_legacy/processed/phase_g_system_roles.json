@@ -1,0 +1,29 @@
+{
+  "system_roles": {
+    "DEVELOPMENT": [
+      "Q1009+2956_z2.504",
+      "Q0913+072",
+      "J1419+0829_z3.049840",
+      "PKS1937-1009_z3.256"
+    ],
+    "UNTOUCHED_CONFIRMATION": [
+      "Q0311-1722_z3.734",
+      "Q1444+2919_z2.428",
+      "Q1444+2919_z2.624",
+      "SDSSJ1358+6522_z3.067",
+      "SDSSJ1558-0031_z2.702"
+    ],
+    "LOCKED_VALIDATION_PENDING_DATA": [
+      "Q1243+3047_z2.529",
+      "Q1351+3221_z2.597",
+      "HS0105+1619_z2.536"
+    ],
+    "LOCKED_VALIDATION_EXTENSION": [
+      "J0812+3208_z2.626",
+      "J2123-0050_z2.059",
+      "J1100+1122_z3.030"
+    ]
+  },
+  "blinding_tests_passed": true,
+  "blinding_commit_hash": "pre-phase-g2-freeze"
+}

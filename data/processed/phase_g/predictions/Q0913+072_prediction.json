@@ -1,0 +1,12 @@
+{
+  "system_id": "Q0913+072",
+  "role": "DEVELOPMENT",
+  "predicted_component": 1,
+  "predicted_velocity_kms": 0.0,
+  "predicted_sign": "BLUEWARD",
+  "null_probability": 0.0,
+  "rank_score": 0.897,
+  "input_hash": "981fc418c6dcf016adf3dd3283dc1f5802a96d25c69154ede20f667c2d53414b",
+  "predictor_hash": "24e0a201795e8587c06f111b57ce211b52178393f58930017c0abd5bdf5823cd",
+  "sealed_at": "2026-07-25T22:08:46.799490+00:00"
+}

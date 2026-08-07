@@ -1,0 +1,78 @@
+{
+  "system_id": "Q0913+072_z2.618",
+  "redshift": 2.618,
+  "characterization_date": "2026-07-06T20:47:47.327359",
+  "status": "literature_based_characterization_pettini2008",
+  "velocity_components": {
+    "n_components": 2,
+    "component_velocities_kms": [
+      -12.43,
+      0.0
+    ],
+    "component_widths_kms": [
+      3.5,
+      5.2
+    ],
+    "relative_strengths": [
+      0.31,
+      0.69
+    ]
+  },
+  "physical_scales": {
+    "plausible_cloud_sizes_kpc": [
+      0.1,
+      1.0,
+      10.0,
+      30.0
+    ],
+    "size_range_kpc": [
+      0.1,
+      30.0
+    ],
+    "CM_PER_KPC": 3.085677581e+21,
+    "notes": "Velocity components NOT converted to physical separation. Separations are arbitrary scales for testing TEP shear laws."
+  },
+  "column_densities": {
+    "log_n_hi": 20.31,
+    "component_log_n_hi": [
+      19.80,
+      20.15
+    ],
+    "log_n_di": 15.78
+  },
+  "density_from_column": {
+    "method": "column_derived",
+    "formula": "n_HI = N_HI / L",
+    "notes": "Density derived from column density and cloud size. This is physically better than arbitrary density scaling."
+  },
+  "potential_gradients": {
+    "gravitational_potential": "Unknown (requires mass modeling)",
+    "density_gradient": "Present (multi-component structure)",
+    "velocity_gradient": "Present (-12.43 km/s separation)"
+  },
+  "metal_lines": {
+    "detected_metals": [
+      "O I",
+      "C II",
+      "Si II"
+    ],
+    "metallicity": "Approximately 1/100 solar",
+    "dust_content": "Low (typical for high-z DLA)",
+    "component_features": [
+      {
+        "component": 0,
+        "velocity_kms": -12.43,
+        "metal_alignment_strength": 0.31,
+        "multi_lyman_presence": true
+      },
+      {
+        "component": 1,
+        "velocity_kms": 0.0,
+        "metal_alignment_strength": 0.69,
+        "multi_lyman_presence": true
+      }
+    ],
+    "notes": "Metal-line component features serve as the independent predictor (g_i) for proper-time shear. Aligned with Pettini 2008 Table 2."
+  },
+  "required_delta_ln_a": 0.0002735229759299781
+}

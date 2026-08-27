@@ -1,0 +1,382 @@
+[0;37m[16:04:49] [INFO] ================================================================================[0m
+[0;37m[16:04:49] [INFO] Script: run_pipeline[0m
+[0;37m[16:04:49] [INFO] Started: 2026-08-20T16:04:49.969450[0m
+[0;37m[16:04:49] [INFO] ================================================================================[0m
+[0;37m[16:04:49] [INFO] [0m
+[0;37m[16:04:49] [INFO] ================================================================================[0m
+[0;37m[16:04:49] [INFO] TEP-BBN FINAL ISOTOPIC ANALYSIS PIPELINE[0m
+[0;37m[16:04:49] [INFO] ================================================================================[0m
+[0;37m[16:04:49] [INFO] [0m
+[0;34m[16:04:49] [PROCESS] [RUN] step_01_embedding: Gate 1R: Physical Atomic-Data Embedding[0m
+[0;37m[16:04:50] [INFO] ================================================================================[0m
+[0;37m[16:04:50] [INFO] Script: step_01_embedding[0m
+[0;37m[16:04:50] [INFO] Started: 2026-08-20T16:04:50.533493[0m
+[0;37m[16:04:50] [INFO] ================================================================================[0m
+[1;32m[16:04:50] [SUCCESS] === GATE 1R: PHYSICAL ATOMIC-DATA EMBEDDING ===[0m
+[0;34m[16:04:50] [PROCESS] H_I_lines.txt SHA-256: e5e64db44a25fbb3254e242a8484e9a9e25d6b917960378c64654d0496074762[0m
+[0;34m[16:04:50] [PROCESS] D_I_lines.txt SHA-256: e4195b3791db0371119af15d0f342fdc77e5499ebc1586387725a5e8d3fe4022[0m
+[0;34m[16:04:50] [PROCESS] 
+Optimal Mapping derived from Lyα ratio: rho = 0.99972665[0m
+[0;34m[16:04:50] [PROCESS] HI_Lyα / DI_Lyα:[0m
+[0;34m[16:04:50] [PROCESS]   eps_tau = 2.7549e-04[0m
+[0;34m[16:04:50] [PROCESS]   eps_F   = 1.0133e-04[0m
+[0;34m[16:04:50] [PROCESS] 
+Global Max eps_tau = 2.7549e-04[0m
+[0;34m[16:04:50] [PROCESS] Global Max eps_F   = 1.0133e-04[0m
+[0;37m[16:04:50] [INFO] [0m
+[0;37m[16:04:50] [INFO] ================================================================================[0m
+[0;37m[16:04:50] [INFO] 
+--- Operational Isotope Non-Identifiability ---[0m
+[0;37m[16:04:50] [INFO] ================================================================================[0m
+[0;37m[16:04:50] [INFO] [0m
+[0;34m[16:04:50] [PROCESS] Convolved eps_conv (HI_Lyα) = 7.9110e-05  |  max |F_D - F_H| / sigma_F = 0.0016[0m
+[0;34m[16:04:50] [PROCESS] 
+Global Max |F_D - F_H| / sigma_F = 0.0016[0m
+[1;32m[16:04:50] [SUCCESS] 
+[SUCCESS] Operational Isotope Non-Identifiability verified. Theoretical maximum discrepancy is strictly bounded below instrumental noise.[0m
+[1;32m[16:04:50] [SUCCESS] 
+[SUCCESS] Gate 1R ledger written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate1_embedding.json[0m
+[1;32m[16:04:50] [SUCCESS]   [OK] 0.6s[0m
+[0;34m[16:04:50] [PROCESS] [RUN] step_02_q1009: Gate 2R: Frozen Q1009 Fit Verification[0m
+[0;37m[16:04:50] [INFO] ================================================================================[0m
+[0;37m[16:04:50] [INFO] Script: step_02_q1009[0m
+[0;37m[16:04:50] [INFO] Started: 2026-08-20T16:04:50.562688[0m
+[0;37m[16:04:50] [INFO] ================================================================================[0m
+[1;32m[16:04:50] [SUCCESS] === GATE 2R: FROZEN Q1009 FIT VERIFICATION ===[0m
+[0;37m[16:04:50] [INFO] [0m
+[0;37m[16:04:50] [INFO] ================================================================================[0m
+[0;37m[16:04:50] [INFO] 
+--- Data Manifest ---[0m
+[0;37m[16:04:50] [INFO] ================================================================================[0m
+[0;37m[16:04:50] [INFO] [0m
+[0;34m[16:04:50] [PROCESS] wave_hash: e9ad9d7f8702f8a3d3a804e74889ba2421fc5f2ed733530a3da0914806c1ab38[0m
+[0;34m[16:04:50] [PROCESS] flux_hash: bd64c2e618cd0145ae49b870c824b788a5b3268f797be13a5078fc71e918e2c2[0m
+[0;34m[16:04:50] [PROCESS] err_hash: 6f97570884decf32e4b4eff423fc462eb0ce66ef7cf668d32de72f2d09536c52[0m
+[0;34m[16:04:50] [PROCESS] likelihood_cfg: {'hash': '5dc0fcf10b8177c7575bee3c6b66adfe', 'mu_sys_corrected': 0.09588536285236063, 'model': 'student_t', 'nu': 2.331259566054082, 'scale': 0.8046430742999215, 'location': 0.0}[0m
+[0;37m[16:04:50] [INFO] [0m
+[0;37m[16:04:50] [INFO] ================================================================================[0m
+[0;37m[16:04:50] [INFO] 
+--- Fitting M_Dfree (Multistart) ---[0m
+[0;37m[16:04:50] [INFO] ================================================================================[0m
+[0;37m[16:04:50] [INFO] [0m
+[0;34m[16:04:53] [PROCESS]  Start 0: LL=-17932.13 | converged=True | logN_D=12.4097 T=10000.0 b_turb=1.0000[0m
+[0;34m[16:05:03] [PROCESS]  Start 1: LL=-17927.36 | converged=True | logN_D=12.3867 T=5000.0 b_turb=4.9239[0m
+[0;34m[16:05:04] [PROCESS]  Start 2: LL=-18108.88 | converged=True | logN_D=0.0000 T=20000.0 b_turb=1.0000[0m
+[0;34m[16:05:04] [PROCESS] M_Dfree Global Best LL: -17927.36[0m
+[0;37m[16:05:04] [INFO] [0m
+[0;37m[16:05:04] [INFO] ================================================================================[0m
+[0;37m[16:05:04] [INFO] 
+--- Fitting M_Hfree (Multistart) ---[0m
+[0;37m[16:05:04] [INFO] ================================================================================[0m
+[0;37m[16:05:04] [INFO] [0m
+[0;34m[16:05:14] [PROCESS]  Start 0: LL=-17893.12 | converged=True | v_H=-131.89[0m
+[0;34m[16:05:22] [PROCESS]  Start 1: LL=-17893.21 | converged=True | v_H=-131.89[0m
+[0;34m[16:05:29] [PROCESS]  Start 2: LL=-18108.88 | converged=True | v_H=-79.82[0m
+[0;34m[16:05:30] [PROCESS]  Start 3: LL=-18108.88 | converged=True | v_H=-79.34[0m
+[0;34m[16:05:30] [PROCESS] M_Hfree Global Best LL: -17893.12[0m
+[0;37m[16:05:30] [INFO] [0m
+[0;37m[16:05:30] [INFO] ================================================================================[0m
+[0;37m[16:05:30] [INFO] 
+--- Profiling M_Hfree Velocity Optimum ---[0m
+[0;37m[16:05:30] [INFO] ================================================================================[0m
+[0;37m[16:05:30] [INFO] [0m
+[0;34m[16:05:31] [PROCESS] v_H profile array length: 11. Confirming distinct minimum.[0m
+[0;37m[16:05:31] [INFO] [0m
+[0;37m[16:05:31] [INFO] ================================================================================[0m
+[0;37m[16:05:31] [INFO] 
+--- Reconstructing M_Hfree inside M_D+H space ---[0m
+[0;37m[16:05:31] [INFO] ================================================================================[0m
+[0;37m[16:05:31] [INFO] [0m
+[0;34m[16:05:32] [PROCESS] LL(M_Hfree) = -17893.1228[0m
+[0;34m[16:05:32] [PROCESS] LL(M_D+H | logN_D=0.0, H_params=best_H) = -17893.1228[0m
+[0;37m[16:05:32] [INFO] [0m
+[0;37m[16:05:32] [INFO] ================================================================================[0m
+[0;37m[16:05:32] [INFO] 
+--- Independent Optimization M_D+H ---[0m
+[0;37m[16:05:32] [INFO] ================================================================================[0m
+[0;37m[16:05:32] [INFO] [0m
+[0;34m[16:05:34] [PROCESS] M_D+H LL: -17893.12 (success=True)[0m
+[1;32m[16:05:34] [SUCCESS] 
+[SUCCESS] Ledger saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate2_parameter_ledger.json[0m
+[1;32m[16:05:34] [SUCCESS]   [OK] 43.5s[0m
+[0;34m[16:05:34] [PROCESS] [RUN] step_03_significance: Gate 3R: Genuine Monte Carlo Calibration[0m
+[0;37m[16:05:34] [INFO] ================================================================================[0m
+[0;37m[16:05:34] [INFO] Script: step_03_significance[0m
+[0;37m[16:05:34] [INFO] Started: 2026-08-20T16:05:34.118304[0m
+[0;37m[16:05:34] [INFO] ================================================================================[0m
+[1;32m[16:05:34] [SUCCESS] === GATE 3R: GENUINE MONTE CARLO CALIBRATION ===[0m
+[0;34m[16:05:34] [PROCESS] Pre-calculating base True-D model fluxes...[0m
+[0;37m[16:05:34] [INFO] [0m
+[0;37m[16:05:34] [INFO] ================================================================================[0m
+[0;37m[16:05:34] [INFO] 
+--- Computing observed parent reassignment T ---[0m
+[0;37m[16:05:34] [INFO] ================================================================================[0m
+[0;37m[16:05:34] [INFO] [0m
+[0;34m[16:05:49] [PROCESS]   Parent 0: LL_D = -17927.36, T = 68.46[0m
+[0;34m[16:05:59] [PROCESS]   Parent 1: LL_D = -18057.79, T = 329.34[0m
+[0;34m[16:06:03] [PROCESS]   Parent 2: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:06:20] [PROCESS]   Parent 3: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:06:39] [PROCESS]   Parent 4: LL_D = -18066.88, T = 347.51[0m
+[0;34m[16:06:43] [PROCESS]   Parent 5: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:06:46] [PROCESS]   Parent 6: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:06:50] [PROCESS]   Parent 7: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:06:55] [PROCESS]   Parent 8: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:06:59] [PROCESS]   Parent 9: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:07:17] [PROCESS]   Parent 10: LL_D = -17896.13, T = 6.02[0m
+[0;34m[16:07:27] [PROCESS]   Parent 11: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:07:43] [PROCESS]   Parent 12: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:07:46] [PROCESS]   Parent 13: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:07:56] [PROCESS]   Parent 14: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:09] [PROCESS]   Parent 15: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:12] [PROCESS]   Parent 16: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:16] [PROCESS]   Parent 17: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:24] [PROCESS]   Parent 18: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:27] [PROCESS]   Parent 19: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:31] [PROCESS]   Parent 20: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:35] [PROCESS]   Parent 21: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:38] [PROCESS]   Parent 22: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:43] [PROCESS]   Parent 23: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:48] [PROCESS]   Parent 24: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:51] [PROCESS]   Parent 25: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:08:59] [PROCESS]   Parent 26: LL_D = -18108.80, T = 431.35[0m
+[0;34m[16:09:02] [PROCESS]   Parent 27: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:09:07] [PROCESS]   Parent 28: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:09:10] [PROCESS]   Parent 29: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:09:18] [PROCESS]   Parent 30: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:09:23] [PROCESS]   Parent 31: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:09:26] [PROCESS]   Parent 32: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:09:30] [PROCESS]   Parent 33: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:09:33] [PROCESS]   Parent 34: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:09:48] [PROCESS]   Parent 35: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:10:09] [PROCESS]   Parent 36: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:10:13] [PROCESS]   Parent 37: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:10:23] [PROCESS]   Parent 38: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:10:30] [PROCESS]   Parent 39: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:10:34] [PROCESS]   Parent 40: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:10:38] [PROCESS]   Parent 41: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:10:41] [PROCESS]   Parent 42: LL_D = -18108.88, T = 431.51[0m
+[0;34m[16:10:41] [PROCESS] Observed T_parent_best = 6.02[0m
+[0;37m[16:10:41] [INFO] [0m
+[0;37m[16:10:41] [INFO] ================================================================================[0m
+[0;37m[16:10:41] [INFO] 
+--- Running True-D Monte Carlo Simulations (200 realizations) ---[0m
+[0;37m[16:10:41] [INFO] ================================================================================[0m
+[0;37m[16:10:41] [INFO] [0m
+[0;34m[16:35:51] [PROCESS] Completed 10/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[16:47:31] [PROCESS] Completed 20/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[16:57:16] [PROCESS] Completed 30/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[17:02:07] [PROCESS] Completed 40/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[17:11:40] [PROCESS] Completed 50/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[17:23:11] [PROCESS] Completed 60/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[17:30:03] [PROCESS] Completed 70/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[17:38:46] [PROCESS] Completed 80/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[17:48:09] [PROCESS] Completed 90/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[17:57:49] [PROCESS] Completed 100/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[18:04:59] [PROCESS] Completed 110/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[18:11:33] [PROCESS] Completed 120/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[18:19:17] [PROCESS] Completed 130/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[18:27:21] [PROCESS] Completed 140/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[18:35:48] [PROCESS] Completed 150/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[18:51:34] [PROCESS] Completed 160/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[19:10:51] [PROCESS] Completed 170/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[19:25:46] [PROCESS] Completed 180/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[19:38:50] [PROCESS] Completed 190/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[19:44:03] [PROCESS] Completed 200/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=6.02): 0[0m
+[0;34m[19:44:03] [PROCESS] 
+Observed T_obs (standard, parent 0) = 68.46[0m
+[0;34m[19:44:03] [PROCESS] Observed T_obs (best parent) = 6.02[0m
+[0;34m[19:44:03] [PROCESS] Exceedances (fair standard, T_sim_standard >= 68.46): 0[0m
+[0;34m[19:44:03] [PROCESS] Calibrated p_add_one (fair standard) = 0.00498[0m
+[0;34m[19:44:03] [PROCESS] Exceedances (parent, T_sim >= 6.02): 0[0m
+[0;34m[19:44:03] [PROCESS] Calibrated p_add_one for parent reassignment = 0.00498[0m
+[0;37m[19:44:03] [INFO] [0m
+[0;37m[19:44:03] [INFO] ================================================================================[0m
+[0;37m[19:44:03] [INFO] 
+--- Genuine Leave-One-Out Robustness Constraints ---[0m
+[0;37m[19:44:03] [INFO] ================================================================================[0m
+[0;37m[19:44:03] [INFO] [0m
+[0;34m[19:44:24] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x1.dat': T = 43.35 (D=-11882.67, H=-11860.99)[0m
+[0;34m[19:44:46] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x2.dat': T = 61.20 (D=-15749.96, H=-15719.36)[0m
+[0;34m[19:45:08] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x2.dat': T = 55.71 (D=-14713.06, H=-14685.20)[0m
+[0;34m[19:45:29] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x1.dat': T = 39.54 (D=-11433.62, H=-11413.85)[0m
+[0;34m[19:46:11] [PROCESS] Leave-one-out transition 'Lyα': T = 2.22 (D=-14486.76, H=-14485.65)[0m
+[0;34m[19:46:41] [PROCESS] Leave-one-out transition 'Lyβ': T = 57.10 (D=-16117.76, H=-16089.21)[0m
+[0;34m[19:47:14] [PROCESS] Leave-one-out transition 'Lyγ': T = 65.27 (D=-15697.95, H=-15665.32)[0m
+[0;34m[19:47:42] [PROCESS] Leave-one-out transition 'Ly6': T = 68.19 (D=-15881.66, H=-15847.56)[0m
+[0;34m[19:48:09] [PROCESS] Leave-one-out transition 'Ly13': T = 68.24 (D=-16276.06, H=-16241.94)[0m
+[0;34m[19:48:36] [PROCESS] Leave-one-out transition 'Ly14': T = 68.29 (D=-16608.73, H=-16574.59)[0m
+[0;37m[19:48:36] [INFO] [0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[0;37m[19:48:36] [INFO] 
+--- Parent Component Reassignment Robustness ---[0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[0;37m[19:48:36] [INFO] [0m
+[0;34m[19:48:36] [PROCESS] Parent 0: LL_D = -17927.36, T = 68.46[0m
+[0;34m[19:48:36] [PROCESS] Parent 1: LL_D = -18057.79, T = 329.34[0m
+[0;34m[19:48:36] [PROCESS] Parent 2: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 3: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 4: LL_D = -18066.88, T = 347.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 5: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 6: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 7: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 8: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 9: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 10: LL_D = -17896.13, T = 6.02[0m
+[0;34m[19:48:36] [PROCESS] Parent 11: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 12: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 13: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 14: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 15: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 16: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 17: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 18: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 19: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 20: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 21: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 22: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 23: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 24: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 25: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 26: LL_D = -18108.80, T = 431.35[0m
+[0;34m[19:48:36] [PROCESS] Parent 27: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 28: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 29: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 30: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 31: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 32: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 33: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 34: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 35: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 36: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 37: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 38: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 39: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 40: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 41: LL_D = -18108.88, T = 431.51[0m
+[0;34m[19:48:36] [PROCESS] Parent 42: LL_D = -18108.88, T = 431.51[0m
+[1;32m[19:48:36] [SUCCESS] 
+[SUCCESS] Calibration saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_significance.json[0m
+[1;32m[19:48:36] [SUCCESS]   [OK] 13382.3s[0m
+[0;34m[19:48:36] [PROCESS] [RUN] step_04_prior: Gate 4: TEP Absorber Field Closure[0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[0;37m[19:48:36] [INFO] Script: step_04_prior[0m
+[0;37m[19:48:36] [INFO] Started: 2026-08-20T19:48:36.767068[0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[1;32m[19:48:36] [SUCCESS] === GATE 4: TEP ABSORBER FIELD CLOSURE ===[0m
+[0;37m[19:48:36] [INFO] [0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[0;37m[19:48:36] [INFO] 
+Executing Gate 4: Symbolic Derivation of Temporal Shear Sign...
+[0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[0;37m[19:48:36] [INFO] [0m
+[0;34m[19:48:36] [PROCESS] --- Mathematical Assumptions ---[0m
+[0;34m[19:48:36] [PROCESS] 1. Conformal Coupling (beta_A) is strictly negative: True[0m
+[0;34m[19:48:36] [PROCESS] 2. Absorber Density (rho) is strictly positive: True[0m
+[0;34m[19:48:36] [PROCESS] 3. Stress-energy trace T^(m) = -rho < 0 (signature (-,+,+,+))[0m
+[0;34m[19:48:36] [PROCESS] 
+--- Field Propagation ---[0m
+[0;34m[19:48:36] [PROCESS] Scalar source term: (beta_A/M_Pl) * T^(m) = -beta_A*rho/M_Pl[0m
+[0;34m[19:48:36] [PROCESS] Is source strictly positive? -> True[0m
+[0;34m[19:48:36] [PROCESS] 
+Scalar field response (Delta phi_pred): G_int*rho/M_Pl[0m
+[0;34m[19:48:36] [PROCESS] Is Delta phi_pred strictly positive? -> True[0m
+[0;34m[19:48:36] [PROCESS] 
+Core clock shift (Delta ln A_core): G_int*beta_A*rho/M_Pl**2[0m
+[0;34m[19:48:36] [PROCESS] Is Delta ln A_core strictly negative? -> True[0m
+[0;34m[19:48:36] [PROCESS] 
+Core-edge absorber shear (Delta ln A_abs = -Delta ln A_core): -G_int*beta_A*rho/M_Pl**2[0m
+[0;34m[19:48:36] [PROCESS] Is Delta ln A_abs strictly positive? -> True[0m
+[0;34m[19:48:36] [PROCESS] 
+--- Observable Conclusion ---[0m
+[0;34m[19:48:36] [PROCESS] Apparent Velocity Shift (Delta v_T): G_int*beta_A*c*rho/M_Pl**2[0m
+[0;34m[19:48:36] [PROCESS] Is Delta v_T strictly negative (Blueward)? -> True[0m
+[1;32m[19:48:36] [SUCCESS] 
+[SUCCESS] Gate 4 Passed: Blueward shift mathematically guaranteed from core-edge geometry and trace sign, independent of mass amplitude.[0m
+[1;32m[19:48:36] [SUCCESS] 
+[COMPLETED] Gate 4 predictions written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4_prediction.json[0m
+[1;32m[19:48:36] [SUCCESS]   [OK] 0.4s[0m
+[0;34m[19:48:36] [PROCESS] [RUN] step_05_thermodynamics: Gate 5: Matter-Frame Temporal Thermodynamics[0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[0;37m[19:48:36] [INFO] Script: step_05_thermodynamics[0m
+[0;37m[19:48:36] [INFO] Started: 2026-08-20T19:48:36.829636[0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[1;32m[19:48:36] [SUCCESS] === GATE 5R: STATIC-SPACE TEMPORAL HORIZON THERMODYNAMICS ===[0m
+[0;34m[19:48:36] [PROCESS] 
+[AXIOM] Space does not cosmologically expand (a_m = 1). Proper time is a dynamical physical field A(phi).[0m
+[0;37m[19:48:36] [INFO] [0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[0;37m[19:48:36] [INFO] 
+--- Analytical Thermal Invariance Proof ---[0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[0;37m[19:48:36] [INFO] [0m
+[0;34m[19:48:36] [PROCESS] Emission Frame Planckian (B_em): 2*A_obs**3*h*nu_obs**3/(A_em**3*c**2*(exp(A_obs*h*nu_obs/(A_em*T_em*k_B)) - 1))[0m
+[0;34m[19:48:36] [PROCESS] Kinematic Frequency Shift (nu_em): A_obs*nu_obs/A_em[0m
+[0;34m[19:48:36] [PROCESS] Phase-Space Conserved Observed Intensity (I_obs): 2*h*nu_obs**3/(c**2*(exp(A_obs*h*nu_obs/(A_em*T_em*k_B)) - 1))[0m
+[0;34m[19:48:36] [PROCESS] Theoretical Target Planckian at T_obs (B_obs): 2*h*nu_obs**3/(c**2*(exp(A_obs*h*nu_obs/(A_em*T_em*k_B)) - 1))[0m
+[0;37m[19:48:36] [INFO] [0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[0;37m[19:48:36] [INFO] 
+--- Formal Equivalence Test ---[0m
+[0;37m[19:48:36] [INFO] ================================================================================[0m
+[0;37m[19:48:36] [INFO] [0m
+[0;34m[19:48:36] [PROCESS] Difference between Transported Intensity and Target Planckian: 0[0m
+[1;32m[19:48:36] [SUCCESS] Is the sheared spectrum a perfect blackbody? -> True[0m
+[1;32m[19:48:36] [SUCCESS] 
+[SUCCESS] Gate 5 Passed: Perfect blackbody preservation strictly derived from temporal shear without arbitrary numerical integration grids.[0m
+[1;32m[19:48:36] [SUCCESS] 
+[COMPLETED] Gate 5R predictions written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate5_thermodynamics.json[0m
+[1;32m[19:48:36] [SUCCESS]   [OK] 0.1s[0m
+[0;34m[19:48:36] [PROCESS] [RUN] step_06_helium: Gate 6: Primordial Helium Synthesis[0m
+[0;37m[19:48:37] [INFO] ================================================================================[0m
+[0;37m[19:48:37] [INFO] Script: step_06_helium[0m
+[0;37m[19:48:37] [INFO] Started: 2026-08-20T19:48:37.218417[0m
+[0;37m[19:48:37] [INFO] ================================================================================[0m
+[1;32m[19:48:37] [SUCCESS] === GATE 6: GCE BARYONIC-CYCLING EQUILIBRIUM ===[0m
+[0;34m[19:48:37] [PROCESS] Integrating GCE ODEs with Temporal Horizon sequestration...[0m
+[1;32m[19:48:37] [SUCCESS]   IC: Y=0.00, Z=0.00 -> Present Day: Y=0.2470, Z=0.0001[0m
+[1;32m[19:48:37] [SUCCESS]   IC: Y=0.80, Z=0.10 -> Present Day: Y=0.2470, Z=0.0001[0m
+[1;32m[19:48:37] [SUCCESS]   IC: Y=0.50, Z=0.50 -> Present Day: Y=0.2470, Z=0.0001[0m
+[0;34m[19:48:37] [PROCESS] 
+Theoretical Equilibrium: Y_eq = 0.2470, Z_eq = 0.0001[0m
+[1;32m[19:48:37] [SUCCESS] Gate 6 baryonic-cycling equilibrium verified. Plot saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_equilibrium.png[0m
+[1;32m[19:48:37] [SUCCESS]   [OK] 0.7s[0m
+[0;34m[19:48:37] [PROCESS] [RUN] step_07_global_opacity: Gate 7: Global Opacity Boundary[0m
+[0;37m[19:48:37] [INFO] ================================================================================[0m
+[0;37m[19:48:37] [INFO] Script: step_07_global_opacity[0m
+[0;37m[19:48:37] [INFO] Started: 2026-08-20T19:48:37.607398[0m
+[0;37m[19:48:37] [INFO] ================================================================================[0m
+[1;32m[19:48:37] [SUCCESS] === STEP 07: GLOBAL OPACITY BOUNDARY ===[0m
+[0;34m[19:48:37] [PROCESS] 
+[AXIOM] Space does not cosmologically expand (a_m = 1).[0m
+[0;34m[19:48:37] [PROCESS] [AXIOM] Temporal horizon redshift arises from A(phi) -> 0.[0m
+[0;37m[19:48:37] [INFO] [0m
+[0;37m[19:48:37] [INFO] ================================================================================[0m
+[0;37m[19:48:37] [INFO] 
+--- Analytical Opacity Boundary Verification ---[0m
+[0;37m[19:48:37] [INFO] ================================================================================[0m
+[0;37m[19:48:37] [INFO] [0m
+[0;34m[19:48:37] [PROCESS] Constant physical density (no plasma wall): n_e(x) = n_0[0m
+[0;34m[19:48:37] [PROCESS] Test 1: A(x) = exp(-x), z(x) = exp(x) - 1[0m
+[0;34m[19:48:37] [PROCESS]   tau(x) = n_0*sigma_T*x, limit = oo, divergent = True[0m
+[0;34m[19:48:37] [PROCESS] Test 2: A(x) = (1+x)^(-p), z(x) = (x + 1)**p - 1[0m
+[0;34m[19:48:37] [PROCESS]   tau(x) = n_0*sigma_T*x, limit = oo, divergent = True[0m
+[0;37m[19:48:37] [INFO] [0m
+[0;37m[19:48:37] [INFO] ================================================================================[0m
+[0;37m[19:48:37] [INFO] 
+--- Formal Limit at Temporal Horizon ---[0m
+[0;37m[19:48:37] [INFO] ================================================================================[0m
+[0;37m[19:48:37] [INFO] [0m
+[1;32m[19:48:37] [SUCCESS] Both forms diverge at x -> oo: True[0m
+[1;32m[19:48:37] [SUCCESS] 
+[SUCCESS] Step 07 Passed: In the static spatial geometry, the line-of-sight optical depth diverges at high redshift for any non-vanishing electron density and any A(x) -> 0, creating an observable boundary without a physical plasma wall.[0m
+[1;32m[19:48:37] [SUCCESS] 
+[COMPLETED] Step 07 predictions written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_07_global_opacity.json[0m
+[1;32m[19:48:37] [SUCCESS]   [OK] 0.0s[0m
+[0;37m[19:48:37] [INFO] [0m
+[0;37m[19:48:37] [INFO] ================================================================================[0m
+[0;37m[19:48:37] [INFO] PIPELINE COMPLETE: 7/7 steps succeeded[0m
+[0;37m[19:48:37] [INFO] ================================================================================[0m
+[0;37m[19:48:37] [INFO] [0m
+[0;34m[19:48:37] [PROCESS] Generating SHA-256 Checksum Manifest...[0m
+[1;32m[19:48:37] [SUCCESS] All 7 Gates passed verification perfectly. Repository is fully locked.[0m

@@ -86,7 +86,7 @@ def compress_pdf(
     try:
         subprocess.run(cmd, check=True, capture_output=True, text=True)
 
-        # If we used a temp file for in-place compression, replace the original now
+        # If a temp file was used for in-place compression, replace the original now
         if temp_output:
 
             shutil.move(str(temp_output), str(output_file))

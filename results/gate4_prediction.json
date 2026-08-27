@@ -1,12 +1,22 @@
 {
-  "4A_scalar_derivation": "PASSED (Symbolic Proof)",
-  "4B_absorber_solution": "PASSED (Green's Integral Abstraction)",
-  "4C_sign_prediction": "PASSED (Blueward)",
-  "4D_amplitude_prediction": "DROPPED (Requires explicit mass model)",
+  "4A_scalar_derivation": "PASSED (Screened scalar EOM with positive Green operator)",
+  "4B_absorber_solution": "PASSED (K = \u222bG_+\u03c1 d\u00b3x', core-edge geometry)",
+  "4C_sign_prediction": "PASSED (Blueward, from \u03b2_A\u00b2 > 0 and edge-minus-core convention)",
+  "4D_amplitude_prediction": "SQUARE_ROOT: |\u03b2_A| = M_Pl \u00d7 \u221a(|\u0394v_T| / (c \u00d7 K))",
+  "4E_corpus_note": "\u03b2_A should be frozen from independent measurements; absorber amplitude is a prediction",
   "symbolic_relations": {
-    "delta_phi": "G_int*alpha*rho",
-    "delta_ln_A": "G_int*alpha**2*rho",
-    "delta_v_T": "-G_int*alpha**2*c*rho",
-    "is_blueward": true
+    "green_integral": "K = \u222b G_+(x,x') \u03c1(x') d\u00b3x' > 0",
+    "scalar_EOM": "(-\u2207\u00b2 + m_eff\u00b2) \u03b4\u03c6 = -(\u03b2_A/M_Pl) \u03c1",
+    "delta_phi_core": "-K*beta_A/M_Pl",
+    "delta_ln_A_core": "-K*beta_A**2/M_Pl**2",
+    "delta_ln_A_core_form": "-\u03b2_A\u00b2 \u00d7 K / M_Pl\u00b2",
+    "delta_ln_A_abs": "K*beta_A**2/M_Pl**2",
+    "delta_ln_A_abs_form": "\u03b2_A\u00b2 \u00d7 K / M_Pl\u00b2",
+    "delta_v_T": "-K*beta_A**2*c/M_Pl**2",
+    "delta_v_T_form": "-c \u00d7 \u03b2_A\u00b2 \u00d7 K / M_Pl\u00b2",
+    "amplitude_constraint": "|\u03b2_A| = M_Pl \u00d7 \u221a(|\u0394v_T| / (c \u00d7 K))",
+    "dependence": "quadratic in \u03b2_A",
+    "is_blueward": true,
+    "sign_origin": "\u03b2_A\u00b2 > 0 and edge-minus-core convention (not \u03b2_A < 0 directly)"
   }
 }

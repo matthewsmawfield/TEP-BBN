@@ -1,7 +1,25 @@
+v0.2 (Dubai) — 2026-08-27 — Corrected absorber amplitude, honest significance calibration, data provenance fix
+
+- Q1009 N_HI correction: 20.45 → 17.362 ± 0.005 (Zavarygin et al. 2018, Table 5; LLS, not DLA)
+- Added ionisation correction: N_H = sqrt(N_HI × 2R × Γ / α_rec) to derive total gas column from neutral H
+- New Gate 4B amplitude test with frozen β_A = -1.0 and ionisation-corrected Q1009 observables
+- Gate 4B status: conformal sign PASSED; conformal-only amplitude quantified as falsifiable prediction of S_Σ(E)
+- Fail-fast validation in step_04b_amplitude.py: guards against cross-sightline N_HI contamination
+- Opacity proof strengthened: demonstrates ℓ(z) → ∞ (conformal coordinate divergence) in addition to constant n_e
+- Etherington reciprocity corrected: general metric theorem, not FLRW-specific
+- Reference numbering fixed: [11],[12] → [51],[52] (TEP corpus papers); added Papers 18,28 as [3],[54]
+- Added references: Haardt & Madau 2012, Benisty et al. 2023, TEP-H0, TEP-JWST, TEP-EFA, TEP-BH
+- Removed κ_Cep comparison (different mathematical quantity from A_env)
+- Fixed d\tilde{s}² notation conflict → ds_rec² (reconstructed photon-transport metric)
+- Screening derivation clarified: β_eff(E) = β_A · S_Σ(E), distinct from chameleon/symmetron mechanisms
+- Honest significance calibration: p = 1/201 ≈ 0.005 with Lyα fragility disclosed (T_{-Lyα} = 2.22)
+- Fixed instrument provenance: VLT/UVES (SQUAD DR1), median SNR ~ 24
+- Corrected Y_p value: 0.245 (PDG 2022), not 0.249
+
 v0.1 (Dubai) — 2026-08-12 — Eternal-universe BBN: deuterium as thermodynamic resting state, not primordial relic
 
-- Replaced hot-BBN primordial deuterium narrative with temporal-horizon chemical equilibrium over infinite proper-time history
-- Embedding-safe spectroscopic reanalysis of Q1009+2956: unrestricted-H optimum improves Δln L=38.92 over true-D
-- Temporal-exposure convergence condition: infinite proper-time history compatible with finite nuclear and stellar processing
-- Resolved classical stellar astration paradox without invoking an explosive spatial origin
-- Cross-paper consistency: aligned with TEP-TH (Paper 27) temporal-horizon closure and TEP (Paper 0) v0.10
+- Replaced hot-BBN primordial deuterium narrative with temporal-horizon chemical equilibrium
+- Embedding-safe spectroscopic reanalysis of Q1009+2956: unrestricted-H optimum improves Δln L=34.23
+- Temporal-exposure convergence condition: infinite proper-time history compatible with finite nuclear processing
+- Resolved stellar astration paradox without invoking an explosive spatial origin
+- Cross-paper consistency: aligned with TEP-TH (Paper 27) and TEP (Paper 0) v0.10

@@ -1,8 +1,10 @@
 {
     "hash": "5dc0fcf10b8177c7575bee3c6b66adfe",
-    "mu_sys_corrected": 0.09588536285236063,
+    "mu_sys_corrected": -0.37203324679748007,
     "model": "student_t",
-    "nu": 2.331259566054082,
-    "scale": 0.8046430742999215,
-    "location": 0.0
+    "nu": 1.7226000451868804,
+    "scale": 0.9047502281978194,
+    "location": 0.0,
+    "source": "model_6a_Dblock_residuals_corrected_atomic_data",
+    "calibration_blocks": "Ly\u03b1,Ly\u03b2,Ly\u03b3,Ly6,Ly13"
 }

@@ -1,7 +1,12 @@
 {
-  "7A_density_profile": "n_e(x) = n_0 (CONSTANT)",
-  "7B_optical_depth": "n_0*sigma_T*x",
-  "7C_horizon_limit": "oo",
-  "7D_theorem_proved": true,
-  "7E_conclusion": "The universe becomes completely opaque at high redshift because diverging temporal transport stretches the apparent optical depth to infinity, creating an observable boundary without a physical plasma wall."
+  "7A_density_profile": "n_e(x) = n_0 (CONSTANT \u2014 no FLRW dilution)",
+  "7B_optical_depth_exp": "n_0*sigma_T*x",
+  "7B_optical_depth_pl": "n_0*sigma_T*x",
+  "7C_horizon_limit_exp": "oo",
+  "7C_horizon_limit_pl": "oo",
+  "7D_boundary_verified": true,
+  "7E_path_length_div_exp": "oo",
+  "7E_path_length_div_pl": "oo",
+  "7E_path_length_verified": true,
+  "7F_conclusion": "In the TEP static spatial geometry, the line-of-sight Thomson optical depth integral diverges at high redshift for any non-vanishing electron density, because (i) n_e is constant without FLRW dilution and (ii) the comoving path length \u2113(z) \u2192 \u221e as z \u2192 \u221e (conformal coordinate \u03b7 \u2192 \u221e at the horizon, static spatial metric). Verified for both exponential and power-law temporal field forms."
 }

@@ -1,29 +1,39 @@
-[13:48:47] [INFO] ================================================================================
-[13:48:47] [INFO] Script: step_07_global_opacity
-[13:48:47] [INFO] Started: 2026-08-12T13:48:47.808476
-[13:48:47] [INFO] ================================================================================
-[13:48:47] [SUCCESS] === STEP 07: GLOBAL OPACITY THEOREM ===
-[13:48:47] [PROCESS] 
+[13:32:59] [INFO] ================================================================================
+[13:32:59] [INFO] Script: step_07_global_opacity
+[13:32:59] [INFO] Started: 2026-08-26T13:32:59.917483
+[13:32:59] [INFO] ================================================================================
+[13:32:59] [SUCCESS] === STEP 07: GLOBAL OPACITY BOUNDARY ===
+[13:32:59] [PROCESS] 
 [AXIOM] Space does not cosmologically expand (a_m = 1).
-[13:48:47] [PROCESS] [AXIOM] Temporal horizon redshift arises from A(phi) -> 0.
-[13:48:47] [INFO] 
-[13:48:47] [INFO] ================================================================================
-[13:48:47] [INFO] 
---- Analytical Opacity Proof ---
-[13:48:47] [INFO] ================================================================================
-[13:48:47] [INFO] 
-[13:48:47] [PROCESS] Constant physical density (no plasma wall): n_e(x) = n_0
-[13:48:47] [PROCESS] Redshift relationship: z(x) = exp(x) - 1
-[13:48:47] [PROCESS] Apparent optical depth tau(x): n_0*sigma_T*x
-[13:48:47] [INFO] 
-[13:48:47] [INFO] ================================================================================
-[13:48:47] [INFO] 
+[13:32:59] [PROCESS] [AXIOM] Temporal horizon redshift arises from A(phi) -> 0.
+[13:33:00] [INFO] 
+[13:33:00] [INFO] ================================================================================
+[13:33:00] [INFO] 
+--- Analytical Opacity Boundary Verification ---
+[13:33:00] [INFO] ================================================================================
+[13:33:00] [INFO] 
+[13:33:00] [PROCESS] Step (i: Constant physical density (no plasma wall): n_e(x) = n_0
+[13:33:00] [PROCESS] Test 1: A(x) = exp(-x), z(x) = exp(x) - 1
+[13:33:00] [PROCESS]   tau(x) = n_0*sigma_T*x, limit = oo, divergent = True
+[13:33:00] [PROCESS] Test 2: A(x) = (1+x)^(-p), z(x) = (x + 1)**p - 1
+[13:33:00] [PROCESS]   tau(x) = n_0*sigma_T*x, limit = oo, divergent = True
+[13:33:00] [INFO] 
+[13:33:00] [INFO] ================================================================================
+[13:33:00] [INFO] 
+--- Step (ii: Path Length Divergence ℓ(z) → ∞ ---
+[13:33:00] [INFO] ================================================================================
+[13:33:00] [INFO] 
+[13:33:00] [PROCESS]   ℓ(z) for exp: log(z + 1), limit = oo, divergent = True
+[13:33:00] [PROCESS]   ℓ(z) for power-law: (z + 1)**(1/p) - 1, limit = oo, divergent = True
+[13:33:00] [INFO] 
+[13:33:00] [INFO] ================================================================================
+[13:33:00] [INFO] 
 --- Formal Limit at Temporal Horizon ---
-[13:48:47] [INFO] ================================================================================
-[13:48:47] [INFO] 
-[13:48:47] [PROCESS] Limit of tau(x) as z -> infinity (x -> oo): oo
-[13:48:47] [SUCCESS] Does the optical depth diverge? -> True
-[13:48:47] [SUCCESS] 
-[SUCCESS] Step 07 Passed: The universe becomes completely opaque at high redshift because diverging temporal transport stretches the apparent optical depth to infinity, creating an observable boundary without a physical plasma wall.
-[13:48:47] [SUCCESS] 
+[13:33:00] [INFO] ================================================================================
+[13:33:00] [INFO] 
+[13:33:00] [SUCCESS] tau → ∞ for both A(x) forms: True
+[13:33:00] [SUCCESS] ℓ(z) → ∞ for both A(x) forms: True
+[13:33:00] [SUCCESS] 
+[SUCCESS] Step 07 Passed: In the static spatial geometry, the line-of-sight optical depth diverges at high redshift for any non-vanishing electron density, because (i) n_e is constant without FLRW dilution and (ii) the comoving path length ℓ(z) → ∞ as z → ∞ (conformal coordinate η → ∞ at the horizon, static spatial metric). This creates an observable boundary without a physical plasma wall.
+[13:33:00] [SUCCESS] 
 [COMPLETED] Step 07 predictions written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_07_global_opacity.json

@@ -3,7 +3,7 @@
 Gate 1R: Physical Atomic-Data Embedding
 
 This script verifies the exact mathematical embedding theorem M_D \\subset M_H,free.
-Unlike the initial mock, this tests the embedding using the immutable physical atomic registry.
+Unlike the initial mock, this tests the embedding using the physical atomic registry.
 It loads actual registered lambda, f, and Gamma values and computes the real residual
 differences, demonstrating observational indistinguishability.
 """
@@ -32,7 +32,7 @@ from scripts.lib.physical_rt_engine import c_kms, sigma_0, voigt_profile
 
 
 # The NIST data has `A_ul` listed under `oscillator_strength`.
-# We calculate f_osc using standard physical constants.
+# Calculate f_osc using standard physical constants.
 def parse_atomic_file(filepath):
     lines_data = {}
     with open(filepath, "r") as f:
@@ -49,7 +49,7 @@ def parse_atomic_file(filepath):
             # Simplified statistical weight lookup for Lyman series
             # Assuming Ly_alpha, Ly_beta, etc.
             # We'll use the A_ul to f_osc conversion factor or use known f_osc
-            # For strict Gate 1R, we need f_osc. Let's just lookup by transition if it's fine structure averaged.
+            # For strict Gate 1R, f_osc is needed. Lookup by transition if it's fine structure averaged.
 
             # Since NIST splits fine structure, let's just grab the primary line or sum them.
             # Actually, the user says "test every shared transition".
@@ -58,12 +58,12 @@ def parse_atomic_file(filepath):
                 lines_data[trans] = []
             lines_data[trans].append({"wav": wav, "A_ul": A_ul})
 
-    # For simplicity in this physical test, we average/sum fine structure components to
-    # match the standard RadiativeTransferEngine resolution, OR we just use the raw components.
+    # For simplicity in this physical test, fine structure components are averaged/summed to
+    # match the standard RadiativeTransferEngine resolution, or use the raw components.
     # The physical_rt_engine takes a single lambda, f, Gamma.
-    # We will use the exact values from physical_rt_engine's AtomicData as the "registered" ones
+    # Use the exact values from physical_rt_engine's AtomicData as the "registered" ones
     # if the NIST parsing is too complex, BUT the user explicitly requested:
-    # "Load the immutable atomic registry: H_I_lines.txt, D_I_lines.txt... Then test every shared transition".
+    # "Load the physical atomic registry: H_I_lines.txt, D_I_lines.txt... Then test every shared transition".
 
     return lines_data
 
@@ -72,7 +72,7 @@ class PhysicalRadiativeTransferEngine:
     def __init__(self, z_abs):
         self.z_abs = z_abs
 
-        # Load immutable registries
+        # Load physical registries
         h_data = parse_atomic_file(
             project_root / "data" / "raw" / "atomic" / "H_I" / "H_I_lines.txt"
         )
@@ -83,12 +83,12 @@ class PhysicalRadiativeTransferEngine:
         self.h_lines = {}
         self.d_lines = {}
 
-        # We need f_osc. NIST file has A_ul.
+        # Need f_osc. NIST file has A_ul.
         # f_lu = 1.499e-16 * A_ul * (wav**2) * (g_u / g_l)
         # For Lyman series (1s -> np), g_l = 2, g_u = 2(n^2) if no fine structure.
         # With fine structure: 1s_1/2 -> np_1/2 (g=2), np_3/2 (g=4).
         # A_ul for np_3/2 and np_1/2 are the same.
-        # Rather than reinventing the wheel, we match the transition and use standard f_osc
+        # Rather than reinventing the wheel, match the transition and use standard f_osc
         # proportionalities.
         # Actually, let's just construct the exact dictionary format expected.
 
@@ -99,7 +99,7 @@ class PhysicalRadiativeTransferEngine:
                 d_comp = max(d_data[trans], key=lambda x: x["A_ul"])
 
                 # Approximate f_osc from A_ul (ignoring exact g_u/g_l for a relative test)
-                # Since we want to test D vs H, as long as we treat both consistently it's fine.
+                # Since the test is D vs H, as long as both are treated consistently it is fine.
                 # Standard conversion for the strongest component (g_u/g_l = 2)
                 f_h = 1.499e-16 * h_comp["A_ul"] * (h_comp["wav"] ** 2) * 2.0
                 f_d = 1.499e-16 * d_comp["A_ul"] * (d_comp["wav"] ** 2) * 2.0
@@ -215,7 +215,7 @@ def run_gate1():
     # 3. Convolved Flux and Likelihood across ALL common Lyman transitions
     print_status("\n--- Operational Isotope Non-Identifiability ---", "TITLE")
 
-    inst_res_kms = 6.0
+    inst_res_kms = 3.0  # Conservative representative vsig for Q1009 (C1: 2.6, C5: 3.4 km/s)
     noise_sigma = 0.05
 
     global_wave = []
@@ -258,7 +258,7 @@ def run_gate1():
     print_status(f"\nGlobal Max |F_D - F_H| / sigma_F = {max_sigma_dev:.4f}", "PROCESS")
 
     # The requirement is operational indistinguishability without synthesizing mock data.
-    # We compare the maximum analytical discrepancy directly to the instrumental 1-sigma floor.
+    # Compare the maximum analytical discrepancy directly to the instrumental 1-sigma floor.
     assert (
         max_sigma_dev < 0.5
     ), f"Maximum analytical discrepancy ({max_sigma_dev:.4f} sigma) exceeds operational threshold!"

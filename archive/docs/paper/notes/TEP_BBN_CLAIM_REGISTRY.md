@@ -46,12 +46,12 @@ Status: AUTHORIZED
 *   `TEMPORAL NUCLEOSYNTHESIS AMPLITUDE FREE`
 *   `GENUINE LOCAL HIGH-ENERGY PHASE REQUIRED`
 *   `ABUNDANCE NETWORK INCOMPATIBLE`
-**Status:** COMPLETED (TEMPORAL_NUCLEOSYNTHESIS_PASSED — Section 4.8 GCE equilibrium attractor $Y_{\rm eq} = 0.249$)
+**Status:** COMPLETED (TEMPORAL_NUCLEOSYNTHESIS_PASSED — Section 4.8 GCE equilibrium attractor $Y_{\rm eq} = 0.247$)
 
 ## Phase 5: TEP-BBN Deuterium Spectroscopy
 **Gate:** Compare Q1009 H0 (Genuine Deuterium) against H1 (Unrestricted Free Hydrogen) and H2E (Exploratory Temporal Endpoint).
 **Condition:** H2E implementation is strictly blocked until Phase 1 resolves the endpoint sign and frame convention.
-**Status:** COMPLETED (PRIMORDIAL D/H INFERENCE WEAKENED — Section 2 spectroscopic re-analysis, $p_{\rm add-one} \approx 0.005$)
+**Status:** COMPLETED (PRIMORDIAL D/H INFERENCE WEAKENED — Section 2 spectroscopic re-analysis, $p_{\rm add-one} = 1/201 \approx 0.005$)
 
 ## Phase 6: Local Thermometry in Absorbers
 **Gate:** Utilize independent kinetic and excitation thermometry (e.g., C I, C II*, CO, fine-structure) to distinguish purely absolute temporal frequency transport from genuine local thermal excitation in the absorber cloud.

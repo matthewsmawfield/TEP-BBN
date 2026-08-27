@@ -1,7 +1,7 @@
 # TEP: Suppressed Density Scaling in Globular Cluster Pulsars
 **Matthew Lukin Smawfield**
 Version: v0.8 (Caracas)
-First published: 9 January 2026 · Last updated: 8 August 2026
+First published: 9 January 2026 · Last updated: 19 August 2026
 DOI: 10.5281/zenodo.18165798
 
 ---
@@ -18,7 +18,7 @@ Keywords: temporal equivalence principle, pulsar timing, globular clusters, time
 
 ## 1.1 The Intermediate-Scale Problem
 
-General Relativity has passed every precision test in the Solar System. Yet at intermediate and cosmological scales, persistent discrepancies arise—rotation curves, cluster dynamics, cosmic acceleration—that conventionally require invisible mass or exotic energy to resolve. A fundamental question follows: Is gravitational time dilation scale-dependent? This work explores the hypothesis that these anomalies reflect not missing matter but modified temporal structure: a scale-dependent enhancement of gravitational time dilation beyond the predictions of standard General Relativity.
+General Relativity has passed every precision test in the Solar System. Yet at intermediate and cosmological scales, persistent discrepancies arise—rotation curves, cluster dynamics, cosmic acceleration—that conventionally require invisible mass or exotic energy to resolve. A fundamental question follows: Is gravitational time dilation scale-dependent? This work explores the hypothesis that these anomalies reflect not missing matter but modified temporal structure: a scale-dependent amplification of gravitational time dilation beyond the predictions of standard General Relativity.
 
 The Temporal Equivalence Principle (TEP) formalizes this possibility within a two-metric framework (see Section 2), predicting that the rate of proper time accumulation is environment-dependent at intermediate scales while remaining consistent with precision tests in the screened Solar System regime. The central prediction is that *rate-dependent* physical processes—pulsar spin-down, photon arrival times, clock frequencies—should exhibit anomalies in deep gravitational potentials, while *fossil* observables that integrate over formation timescales remain insensitive.
 
@@ -112,7 +112,7 @@ To make the screening physics explicit and evaluable without recourse to externa
 
 - Temporal Equivalence Principle: All non-gravitational processes evolve according to proper time $d\tau$ defined by $\tilde{g}_{\mu\nu}$. In local freely falling frames, physics reduces to special relativity with invariant $c$.
 
-- Screening via continuous gradient: Rather than operating via discrete boundary cutoffs or thin-shell transitions, screening manifests as a continuous spatial profile governed by the non-linear superposition of field gradients (Temporal Shear). This suppresses fifth forces and clock-rate enhancements in regions of high curvature (Solar System) while leaving low-curvature astrophysical environments accessible to dynamics.
+- Screening via continuous gradient: Rather than operating via discrete boundary cutoffs or thin-shell transitions, screening manifests as a continuous spatial profile governed by the non-linear superposition of field gradients (Temporal Shear). This suppresses Temporal Shear and the associated clock-rate responses in regions of high curvature (Solar System) while leaving low-curvature astrophysical environments accessible to dynamics.
 
 The Action and Field Equations. The action in the Einstein frame is:
 
@@ -132,7 +132,7 @@ where $\alpha(\phi) \equiv d \ln A/d\phi = \beta_A/M_{\rm Pl}$, $T \equiv \tilde
 
 #### Observable Response Coefficient
 
-*$\kappa_{\text{MSP}}$ is treated as an observable pulsar response coefficient.* It is not identified with the microscopic coupling β. Solar-System PPN and MICROSCOPE tests constrain the environmentally screened effective source and composition-dependent couplings rather than directly determining the bare conformal parameter β. The observable κ<sub>MSP</sub> is connected to the microscopic sector only through the environmental transfer function; it represents the effective amplified response in the active-shear globular cluster environment (Appendix C). The empirical phenomenology is:
+*$\kappa_{\text{MSP}}$ is treated as an observable pulsar response coefficient.* It is not identified with the microscopic coupling β. Solar-System PPN and MICROSCOPE tests constrain the environmentally screened effective source and composition-dependent couplings rather than directly determining the unsuppressed conformal parameter β. The observable κ<sub>MSP</sub> is connected to the microscopic sector only through the environmental transfer function; it represents the effective amplified response in the active-shear globular cluster environment (Appendix C). The empirical phenomenology is:
 
 \begin{equation} \label{eq:theory_4}
 \frac{d\tau}{dt} = 1 + \frac{\Phi}{c^2} + \kappa_{\text{MSP}}^{\text{emp}} \frac{\Phi}{c^2}
@@ -146,7 +146,7 @@ where the empirically screened coefficient $\kappa_{\text{MSP}}^{\text{emp}}$ is
 
 This order of magnitude is consistent with the observed spin-down excess in globular cluster pulsars. The empirical value is determined from data, not from a theoretical derivation.
 
-A complementary pipeline computation (step_44_kappa_msp_prior.json) inverts the observed 0.63 dex raw excess with real cluster parameters to derive a separately normalised full response coefficient $\tilde\kappa_{\rm MSP} = (2.9 \pm 4.5)\times 10^4$ (dimensionless). This quantity absorbs the potential depth and acceleration fraction into a single response coefficient suitable for cross-probe comparison with the Cepheid coefficient $\kappa_{\rm Cep} \sim 10^6$ mag (Paper 11). The two normalisations — $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$ as the fractional in-equation coupling in the spin-down equation, and $\tilde\kappa_{\rm MSP} \sim 10^4$ as the full response coefficient — trace back to the same bare geometric factor $\sim\!10^6$ with different screening normalisations. Paper 11's cross-probe comparison uses $\tilde\kappa_{\rm MSP}$; the spin-down equations here use $\kappa_{\text{MSP}}^{\text{emp}}$.
+A complementary pipeline computation (step_44_kappa_msp_prior.json) inverts the observed 0.63 dex raw excess with real cluster parameters to derive a separately normalised full response coefficient $\tilde\kappa_{\rm MSP} = (2.9 \pm 4.5)\times 10^4$ (dimensionless). This quantity absorbs the potential depth and acceleration fraction into a single response coefficient suitable for cross-probe comparison with the Cepheid coefficient $\kappa_{\rm Cep} \sim 10^6$ mag (Paper 11). The two normalisations — $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$ as the fractional in-equation coupling in the spin-down equation, and $\tilde\kappa_{\rm MSP} \sim 10^4$ as the full response coefficient — trace back to the same unsuppressed geometric factor $\sim\!10^6$ with different screening normalisations. Paper 11's cross-probe comparison uses $\tilde\kappa_{\rm MSP}$; the spin-down equations here use $\kappa_{\text{MSP}}^{\text{emp}}$.
 
 The sector-decoupling argument establishing why this large response coefficient coexists with Solar System and composition tests is derived in the screening hierarchy framework (Papers 6 and 11); in brief, MICROSCOPE constrains composition-dependent scalar charge, Cassini constrains the screened PPN/source-charge and Shapiro sector, and GW170817 constrains differential disformal cone tilt; none of these directly fixes the channel response coefficient κ<sub>MSP</sub>.
 
@@ -260,7 +260,7 @@ This does not mean gravitational acceleration is meaningless: one can still defi
 
 ### The Rosetta Stone
 
-The TEP prediction for pulsar spin-down anomalies is a manifestation of enhanced gravitational time dilation effects in deep potentials:
+The TEP prediction for pulsar spin-down anomalies is a manifestation of amplified gravitational time dilation in deep potentials:
 
 | Observable | GR Prediction | TEP Prediction | Status |
 | --- | --- | --- | --- |
@@ -302,7 +302,7 @@ In standard GR, both effects are negligible ($\sim 10^{-8}$). Under TEP, both ar
 
 #### A Conceptual Note: Acceleration as a Time Derivative
 
-Standard "cluster acceleration" is a kinematic effect: a changing Doppler shift ($\dot{P} \propto a_{\ell}/c$). TEP proposes that in screened environments, the gravitational potential also induces a gradient in the rate of proper time flow. This is distinct from semantic re-labeling; TEP predicts a potential-based clock response with bare geometric factor $\kappa_{\rm MSP} \sim 10^6$, which in dense cluster environments is geometrically screened to the in-equation coupling $\kappa_{\rm MSP}^{\rm emp} \approx 0.05$. The observed signal is too large (by ~0.612 dex) and scales too weakly with density to be explained by standard kinematic acceleration alone (see Section 3.4). The key signature is the suppressed density scaling ($\Gamma = 0.39$ vs Newtonian $0.75$), which reflects the potential-based TEP response saturating more rapidly than the acceleration-based Newtonian prediction. Thus, the analysis is not "interpreting acceleration as dilation," but detecting an *excess* signal that correlates with potential depth.
+Standard "cluster acceleration" is a kinematic effect: a changing Doppler shift ($\dot{P} \propto a_{\ell}/c$). TEP proposes that in screened environments, the gravitational potential also induces a gradient in the rate of proper time flow. This is distinct from semantic re-labeling; TEP predicts a potential-based clock response with unsuppressed geometric factor $\kappa_{\rm MSP} \sim 10^6$, which in dense cluster environments is geometrically screened to the in-equation coupling $\kappa_{\rm MSP}^{\rm emp} \approx 0.05$. The observed signal is too large (by ~0.612 dex) and scales too weakly with density to be explained by standard kinematic acceleration alone (see Section 3.4). The key signature is the suppressed density scaling ($\Gamma = 0.39$ vs Newtonian $0.75$), which reflects the potential-based TEP response saturating more rapidly than the acceleration-based Newtonian prediction. Thus, the analysis is not "interpreting acceleration as dilation," but detecting an *excess* signal that correlates with potential depth.
 
 ## 3.2 The Data
 
@@ -952,7 +952,11 @@ Using verified data from Paulo Freire's GC Pulsar Catalog (Freire GCpsr), radial
 
 The radial structure is heterogeneous across clusters; some show strong internal trends, including significant negative correlations (e.g., M62 and M28), while others are consistent with no trend.
 
-The radial correlation test is therefore treated as a diagnostic rather than a primary detection, because observed Ṗ in globular clusters can be strongly affected by line-of-sight acceleration and internal dynamics.  ## 3.15 Falsification of Conventional Dynamics and Exotic GR Mechanisms  The CMC comparison strongly constrains standard Newtonian dynamical explanations. We evaluate whether combinations of unmodeled but conventional gravitational mechanisms — collectively termed exotic-GR interactions — could recover the observed phenomenology. The analysis shows that the tested conventional alternatives struggle to reproduce the joint amplitude and density-scaling failures while preserving the binary comparator and field-binary null, making TEP the more economical interpretation within the models considered.
+The radial correlation test is therefore treated as a diagnostic rather than a primary detection, because observed Ṗ in globular clusters can be strongly affected by line-of-sight acceleration and internal dynamics.
+
+## 3.15 Falsification of Conventional Dynamics and Exotic GR Mechanisms
+
+The CMC comparison strongly constrains standard Newtonian dynamical explanations. We evaluate whether combinations of unmodeled but conventional gravitational mechanisms — collectively termed exotic-GR interactions — could recover the observed phenomenology. The analysis shows that the tested conventional alternatives struggle to reproduce the joint amplitude and density-scaling failures while preserving the binary comparator and field-binary null, making TEP the more economical interpretation within the models considered.
 
 #### Analysis: `step_41_exotic_physics_quantification.py`
 
@@ -1354,7 +1358,7 @@ The TEP signal persists in both PCC and non-PCC clusters with no statistically s
 
 ## 4.4 Connection to Other TEP Evidence
 
-The underlying bare geometric enhancement factor of ~10<sup>6</sup>–10<sup>7</sup> (which is heavily suppressed down to $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$ in the dense GC core) is consistent with the bare couplings inferred in previous TEP findings:
+The underlying unsuppressed geometric enhancement factor of ~10<sup>6</sup>–10<sup>7</sup> (which is heavily suppressed down to $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$ in the dense GC core) is consistent with the unsuppressed couplings inferred in previous TEP findings:
 
 | Dataset | Enhancement | Reference |
 | --- | --- | --- |
@@ -1518,7 +1522,7 @@ This ~5 yr TEP differential is O(10⁻⁸) of the typical age spread among coeva
 
 ### 4.7.6 Laboratory and Solar System Constraints
 
-Modified gravity theories with screening mechanisms are tightly constrained by laboratory atom interferometry and Lunar Laser Ranging (LLR). Atom interferometry excludes a wide range of chameleon/symmetron parameters in vacuum (Burrage et al. 2018). However, TEP posits a screening transition at $\rho_T \approx 20 \text{ g/cm}^3$. Laboratory vacuum chambers remain embedded within the Earth–Solar source environment, where the combined density, compactness, boundary conditions and source geometry suppress the locally observable Temporal Shear. This local suppression is governed by $S_\Sigma(\mathcal{E})$, not by the chamber's nominal vacuum density or by a binary comparison with $\rho_T$. The predicted bare enhancement ($\kappa_{\text{bare}} \sim 10^6$) applies only to extended, low-density systems (e.g., galactic halos). Inside dense globular clusters, it is suppressed to $\sim 0.05$, and inside the Solar System, it is suppressed to zero, consistent with the observed null results in dense Solar System regimes.
+Modified gravity theories with screening mechanisms are tightly constrained by laboratory atom interferometry and Lunar Laser Ranging (LLR). Atom interferometry excludes a wide range of chameleon/symmetron parameters in vacuum (Burrage et al. 2018). However, TEP posits a screening transition at $\rho_T \approx 20 \text{ g/cm}^3$. Laboratory vacuum chambers remain embedded within the Earth–Solar source environment, where the combined density, compactness, boundary conditions and source geometry suppress the locally observable Temporal Shear. This local suppression is governed by $S_\Sigma(\mathcal{E})$, not by the chamber's nominal vacuum density or by a binary comparison with $\rho_T$. The predicted unsuppressed enhancement ($\kappa_{\text{unsupp}} \sim 10^6$) applies only to extended, low-density systems (e.g., galactic halos). Inside dense globular clusters, it is suppressed to $\sim 0.05$, and inside the Solar System, it is suppressed to zero, consistent with the observed null results in dense Solar System regimes.
 
 ### 4.7.7 Consistency with Pulsar Timing Arrays
 
@@ -1534,7 +1538,7 @@ Explicit calculation for a pulsar moving at $v \sim 220$ km/s through the Galact
 
 ### 4.7.8 Cross-Scale Consistency: The Hubble Tension Connection
 
-The TEP framework provides a unifying interpretation across scales—from GNSS clock correlations (Earth) to pulsar timing (globular clusters) to cosmological distances. The Hubble tension (5σ discrepancy between Planck CMB and SH0ES local H₀ measurements) may find natural interpretation within this framework: time-dilation-dependent methods (Cepheid period-luminosity) systematically differ from dynamics-based methods (CMB, BAO) because clocks in galactic potentials experience enhanced time dilation.
+The TEP framework provides a unifying interpretation across scales—from GNSS clock correlations (Earth) to pulsar timing (globular clusters) to cosmological distances. The Hubble tension (5σ discrepancy between Planck CMB and SH0ES local H₀ measurements) may find natural interpretation within this framework: time-dilation-dependent methods (Cepheid period-luminosity) systematically differ from dynamics-based methods (CMB, BAO) because clocks in galactic potentials experience amplified time dilation.
 
 *Quantitative evidence from Paper 11:* Analysis of 29 SH0ES host galaxies reveals correlation between host velocity dispersion σ and derived H₀ (Spearman ρ=0.434, p=0.019). TEP correction yields unified H₀=68.66±1.51 km/s/Mpc, reducing Planck tension to 0.79σ. See Paper 11 (11manuscript-tep-h0.md) for complete derivation.
 
@@ -1554,7 +1558,7 @@ It is crucial to consider whether TEP could alter the interpretation of geometri
 
 - Not individually correcting for Shklovskii (treated as part of the field distribution)
 
-*Distance Ladder Implications:* The Hubble tension analysis (Section 4.7.8) assumes standard parallax calibrations for Cepheids. TEP predicts that geometric parallax (from Gaia) remains accurate because it is a screened Earth-based measurement, while Cepheid period-luminosity distances are systematically overestimated due to enhanced time dilation. This *asymmetric* effect—independent of parallax systematics—strengthens the TEP interpretation of the H₀ tension.
+*Distance Ladder Implications:* The Hubble tension analysis (Section 4.7.8) assumes standard parallax calibrations for Cepheids. TEP predicts that geometric parallax (from Gaia) remains accurate because it is a screened Earth-based measurement, while Cepheid period-luminosity distances are systematically overestimated due to amplified time dilation. This *asymmetric* effect—independent of parallax systematics—strengthens the TEP interpretation of the H₀ tension.
 
 *Conclusion:* TEP does not modify parallax geometry, and the Shklovskii effect is subdominant to cluster acceleration in the regime where the TEP signal is detected. Distance ladder calibrations relying on geometric parallax remain valid within TEP.
 
@@ -1598,7 +1602,7 @@ Eliminating s: From Γ_N = 1 + s, this gives s = Γ_N − 1. Substituting:
 
 *Γ_TEP = 2Γ_N − 1*
 
-*Note on Mathematical Exactness:* The identity Γ_TEP = 2Γ_N − 1 is an *exact* mathematical consequence of the definition of the regression slope. It does not assume that $\alpha$ is strictly constant across all clusters, nor does it require zero scatter in the $R_c$ vs $\rho_c$ relationship. The prediction relies purely on the linearity of covariance over the ensemble. Furthermore, taking $\Gamma_N$ from full N-body/CMC simulations natively captures the effective slope $s$ of the mass-segregated pulsar population, rather than the bare structural slope of the overall cluster light profile.
+*Note on Mathematical Exactness:* The identity Γ_TEP = 2Γ_N − 1 is an *exact* mathematical consequence of the definition of the regression slope. It does not assume that $\alpha$ is strictly constant across all clusters, nor does it require zero scatter in the $R_c$ vs $\rho_c$ relationship. The prediction relies purely on the linearity of covariance over the ensemble. Furthermore, taking $\Gamma_N$ from full N-body/CMC simulations natively captures the effective slope $s$ of the mass-segregated pulsar population, rather than the unsuppressed structural slope of the overall cluster light profile.
 
 #### Result
 
@@ -1959,7 +1963,7 @@ TEP modifications at the ~10<sup>−5</sup> level are swamped by astrophysical s
 
 Type Ia supernovae occupy an intermediate category between rate and fossil observables. While SNe Ia light curves are instantaneous events (theoretically rate-sensitive), their use as distance indicators relies on peak magnitude standardization, which is dominated by host galaxy mass effects.
 
-SNe Ia in galaxies with higher velocity dispersion appear systematically fainter (r = +0.22, p = 1.2×10<sup>−3</sup>, 218 SNe from Pantheon+). This direction matches the TEP prediction—deeper potentials correlate with enhanced time dilation—but the correlation is *indistinguishable* from the standard mass-step effect. Partial correlation controlling for host mass is null (r = −0.047, p = 0.49), indicating the signal is dominated by established astrophysical systematics rather than a novel TEP signature. Consequently, SNe Ia provide qualitative framework-consistency but cannot independently confirm TEP predictions.
+SNe Ia in galaxies with higher velocity dispersion appear systematically fainter (r = +0.22, p = 1.2×10<sup>−3</sup>, 218 SNe from Pantheon+). This direction matches the TEP prediction—deeper potentials correlate with amplified time dilation—but the correlation is *indistinguishable* from the standard mass-step effect. Partial correlation controlling for host mass is null (r = −0.047, p = 0.49), indicating the signal is dominated by established astrophysical systematics rather than a novel TEP signature. Consequently, SNe Ia provide qualitative framework-consistency but cannot independently confirm TEP predictions.
 
 #### Why SNe Ia Are Not Fossil Observables
 
@@ -2005,7 +2009,7 @@ The following derives an illustrative transfer model using chameleon-type equati
 
 ## C.1 Motivation
 
-To satisfy precision tests in dense environments while allowing cosmological dynamics, a chameleon-like potential may be adopted. The following derivation shows how such a microscopic framework could, in principle, produce the bare geometric factor of $\sim 10^6$, which is then heavily attenuated by local screening down to the empirically observed $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$ response coefficient in the cluster core.
+To satisfy precision tests in dense environments while allowing cosmological dynamics, a chameleon-like potential may be adopted. The following derivation shows how such a microscopic framework could, in principle, produce the unsuppressed geometric factor of $\sim 10^6$, which is then heavily attenuated by local screening down to the empirically observed $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$ response coefficient in the cluster core.
 
 ## C.2 Effective Potential and Field Equilibrium
 
@@ -2065,9 +2069,9 @@ Comparing to the phenomenological form and substituting the linear mapping yield
 \frac{c^2}{4\pi G \rho_0 R_c^2} \right) \cdot \mathcal{S}(m_{\rm eff}, R_c)
 \end{equation}
 
-where the bare geometric factor $c^2/(4\pi G \rho_0 R_c^2) \approx 10^6$–$10^7$ for typical cluster densities ($\rho_0 \sim 10^{-18}$ g/cm³) and core radii ($R_c \sim 1$ pc). Because the cluster core is dense, the local effective mass $m_{\rm eff}$ is large, leading to severe geometric screening $\mathcal{S}(m_{\rm eff}, R_c) \sim 10^{-8}$. This strong attenuation squashes the bare $\sim 10^6$ coupling down to the observed $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$ response coefficient. This demonstrates *one possible* microscopic origin for the screened coupling, but the empirical value is ultimately determined directly from data, not from this or any other transfer model.
+where the unsuppressed geometric factor $c^2/(4\pi G \rho_0 R_c^2) \approx 10^6$–$10^7$ for typical cluster densities ($\rho_0 \sim 10^{-18}$ g/cm³) and core radii ($R_c \sim 1$ pc). Because the cluster core is dense, the local effective mass $m_{\rm eff}$ is large, leading to severe geometric screening $\mathcal{S}(m_{\rm eff}, R_c) \sim 10^{-8}$. This strong attenuation squashes the unsuppressed $\sim 10^6$ coupling down to the observed $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$ response coefficient. This demonstrates *one possible* microscopic origin for the screened coupling, but the empirical value is ultimately determined directly from data, not from this or any other transfer model.
 
-The pipeline (step_44_kappa_msp_prior.json) provides a complementary data-driven normalisation: by inverting the observed 0.63 dex raw excess with real cluster parameters (core radii 0.1–0.5 pc, 64 pulsars across 7 clusters), it derives a full response coefficient $\tilde\kappa_{\rm MSP} = (2.9 \pm 4.5)\times 10^4$ with an effective screening factor $S_{\rm MSP} \approx 0.027$ relative to the bare $\sim\!10^6$ scale. The chameleon screening factor $\mathcal{S} \sim 10^{-8}$ and the pipeline's geometric suppression factor $S_{\rm MSP} \approx 0.027$ operate at different levels of the normalisation hierarchy: $\mathcal{S}$ suppresses the bare microscopic coupling to the in-equation coefficient $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$, while $S_{\rm MSP}$ suppresses the bare geometric factor to the full response coefficient $\tilde\kappa_{\rm MSP} \sim 10^4$. Paper 11 uses the latter for cross-probe comparison with $\kappa_{\rm Cep}$.
+The pipeline (step_44_kappa_msp_prior.json) provides a complementary data-driven normalisation: by inverting the observed 0.63 dex raw excess with real cluster parameters (core radii 0.1–0.5 pc, 64 pulsars across 7 clusters), it derives a full response coefficient $\tilde\kappa_{\rm MSP} = (2.9 \pm 4.5)\times 10^4$ with an effective screening factor $S_{\rm MSP} \approx 0.027$ relative to the bare $\sim\!10^6$ scale. The chameleon screening factor $\mathcal{S} \sim 10^{-8}$ and the pipeline's geometric suppression factor $S_{\rm MSP} \approx 0.027$ operate at different levels of the normalisation hierarchy: $\mathcal{S}$ suppresses the unsuppressed microscopic coupling to the in-equation coefficient $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$, while $S_{\rm MSP}$ suppresses the unsuppressed geometric factor to the full response coefficient $\tilde\kappa_{\rm MSP} \sim 10^4$. Paper 11 uses the latter for cross-probe comparison with $\kappa_{\rm Cep}$.
 
 ## Data Availability & Reproducibility
 
@@ -2191,10 +2195,10 @@ The TEP corpus uses related but distinct symbols across its papers. This diction
 | $\beta_A$ | Microscopic conformal coupling: $A(\phi) = \exp(\beta_A \phi/M_{\rm Pl})$ | TEP (Paper 0) | Order unity; not directly fitted in pulsar channel |
 | $\rho_T$ | Temporal Topology saturation scale (series-level) | TEP-UCD (Paper 6) | $\approx 20$ g/cm³ |
 | $R_T(M)$ | Temporal Topology saturation radius as function of mass | TEP-UCD (Paper 6) | $R_T \propto M^{1/3}$ |
-| $\kappa_{\text{MSP}}^{\text{emp}}$ | In-equation acceleration coupling in the pulsar spin-down equation; screened by chameleon factor $\mathcal{S} \sim 10^{-8}$ from the bare $\sim\!10^6$ geometric factor | TEP-COS (Paper 10) | $\approx 0.05$ (dimensionless) |
+| $\kappa_{\text{MSP}}^{\text{emp}}$ | In-equation acceleration coupling in the pulsar spin-down equation; screened by chameleon factor $\mathcal{S} \sim 10^{-8}$ from the unsuppressed $\sim\!10^6$ geometric factor | TEP-COS (Paper 10) | $\approx 0.05$ (dimensionless) |
 | $\tilde\kappa_{\rm MSP}$ | Full empirical response coefficient from pipeline inversion of the 0.63 dex raw excess with real cluster parameters; suitable for cross-probe comparison with $\kappa_{\rm Cep}$ | TEP-COS (Paper 10) | $(2.9 \pm 4.5) \times 10^4$ (dimensionless) |
-| $S_{\rm MSP}$ | Effective screening factor: ratio of $\tilde\kappa_{\rm MSP}$ to the bare geometric factor $\sim\!10^6$ | TEP-COS (Paper 10) | $\approx 0.027$ |
-| $\mathcal{S}(m_{\rm eff}, R_c)$ | Chameleon screening factor suppressing the bare microscopic coupling to the in-equation coefficient | TEP-COS (Paper 10) | $\sim 10^{-8}$ in dense cluster cores |
+| $S_{\rm MSP}$ | Effective screening factor: ratio of $\tilde\kappa_{\rm MSP}$ to the unsuppressed geometric factor $\sim\!10^6$ | TEP-COS (Paper 10) | $\approx 0.027$ |
+| $\mathcal{S}(m_{\rm eff}, R_c)$ | Chameleon screening factor suppressing the unsuppressed microscopic coupling to the in-equation coefficient | TEP-COS (Paper 10) | $\sim 10^{-8}$ in dense cluster cores |
 | $\Gamma$ | Density-scaling slope of the spin-down excess: $d(\log|\dot{P}|)/d(\log\rho)$ | TEP-COS (Paper 10) | Observed: $0.39 \pm 0.08$; Newtonian: $0.75$; TEP prediction: $0.50$ |
 | $\Gamma_{\rm TEP} = 2\Gamma_N - 1$ | Parameter-free TEP prediction for the density-scaling slope, derived from potential-based ($|\Phi| \propto \rho R_c^2$) vs acceleration-based ($a \propto \rho R_c$) scaling | TEP-COS (Paper 10) | $0.50 \pm 0.08$ (matches observation at $0.9\sigma$) |
 | $\kappa_{\rm Cep}$ | Cepheid observable response coefficient (P–L transfer × clock response) | TEP-H0 (Paper 11) | $(1.27 \pm 0.46) \times 10^6$ mag |
@@ -2203,7 +2207,7 @@ The TEP corpus uses related but distinct symbols across its papers. This diction
 | $S(\rho)$ | Continuous shear-suppression factor: $S(\rho) = [1 + (\rho/\rho_{\rm half})^2]^{-1}$ | TEP-UCD (Paper 6) | $\rho_{\rm half} \approx 0.5\,M_\odot/\text{pc}^3$ |
 | $\mathcal{S}_\Sigma(\mathcal{E})$ | Unified covariant screening operator; reduces to $S(\rho)$ or gradient-dependent $f(g)$ in appropriate limits | TEP-C0 (Paper 26) | Environment-dependent |
 
-*Note:* The two pulsar normalisations — $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$ (in-equation coupling) and $\tilde\kappa_{\rm MSP} \sim 10^4$ (full response coefficient) — trace back to the same bare geometric factor $\sim\!10^6$ but absorb different combinations of the potential and acceleration normalisation. The cross-probe comparison with the Cepheid coefficient $\kappa_{\rm Cep}$ uses $\tilde\kappa_{\rm MSP}$, which is the quantity directly analogous to $\kappa_{\rm Cep}$. The key observational signature of the pulsar channel is the suppressed density scaling ($\Gamma = 0.39$ vs Newtonian $0.75$), reflecting the potential-based TEP clock response saturating more rapidly than the acceleration-based Newtonian prediction.
+*Note:* The two pulsar normalisations — $\kappa_{\text{MSP}}^{\text{emp}} \approx 0.05$ (in-equation coupling) and $\tilde\kappa_{\rm MSP} \sim 10^4$ (full response coefficient) — trace back to the same unsuppressed geometric factor $\sim\!10^6$ but absorb different combinations of the potential and acceleration normalisation. The cross-probe comparison with the Cepheid coefficient $\kappa_{\rm Cep}$ uses $\tilde\kappa_{\rm MSP}$, which is the quantity directly analogous to $\kappa_{\rm Cep}$. The key observational signature of the pulsar channel is the suppressed density scaling ($\Gamma = 0.39$ vs Newtonian $0.75$), reflecting the potential-based TEP clock response saturating more rapidly than the acceleration-based Newtonian prediction.
 
 ---
 

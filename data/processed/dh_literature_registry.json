@@ -32,23 +32,23 @@
       "system_id": "Q1009+2956_z2.504",
       "qso_name": "Q1009+2956",
       "redshift": 2.504,
-      "n_hi": 20.45,
-      "dh_ratio": 2.518e-05,
-      "dh_error": 2.8e-07,
-      "publication_doi": "10.3847/1538-3881/2016/9/6/19",
-      "arxiv_id": "1607.03900",
+      "n_hi": 17.362,
+      "dh_ratio": 2.48e-05,
+      "dh_error": 3.8e-06,
+      "publication_doi": "10.1093/mnras/sty1003",
+      "arxiv_id": "1706.09512",
       "authors": [
-        "Cooke, R.",
-        "Pettini, M.",
-        "Natarajan, P.",
-        "Steidel, C.C."
+        "Zavarygin, E.",
+        "Webb, J.K.",
+        "Dumont, V.",
+        "Riemer-Sørensen, S."
       ],
-      "year": 2016,
-      "journal": "ApJ",
+      "year": 2018,
+      "journal": "MNRAS",
       "instrument": "Keck/HIRES",
       "download_date": "2026-07-06T18:32:29.191429",
       "license": "CC BY 4.0",
-      "notes": "High-quality DLA with multiple Lyman series lines"
+      "notes": "Lyman Limit System (LLS), not DLA. log N_HI = 17.362 ± 0.005 from Zavarygin et al. 2018, Table 5."
     },
     {
       "system_id": "Q1243+3047_z2.529",

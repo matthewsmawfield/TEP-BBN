@@ -22,6 +22,7 @@ VERSION_STRING = f"TEP v{VERSION} ({VERSION_CODENAME})"
 # =============================================================================
 G_NEWTON = 6.67430e-11          # m^3 kg^-1 s^-2
 C_LIGHT = 299792458.0            # m s^-1
+C_KMS = 299792.458               # km s^-1 (convenience alias)
 M_PLANCK = 2.176434e-8           # kg (Planck mass m_P = sqrt(hbar*c/G))
 M_SUN = 1.98847e30               # kg
 M_EARTH = 5.972e24               # kg

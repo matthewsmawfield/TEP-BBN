@@ -5,8 +5,8 @@ Gate 6: Primordial Helium Synthesis via Baryonic Cycling
 This script implements a Galactic Chemical Evolution (GCE) ODE solver.
 It demonstrates that in an eternal TEP universe, the observed abundances 
 (Y ≈ 0.247, Z ≈ 10^-4) are not primordial initial conditions (Big Bang), 
-but are the inescapable thermodynamic asymptotic equilibria of eternal 
-stellar processing, governed by Temporal Horizon metal sequestration.
+but are the equilibrium of baryonic-cycling reaction flows under 
+temporal-horizon metal sequestration.
 """
 
 import sys
@@ -36,7 +36,7 @@ def gce_derivatives(t, state, p_Y, p_Z, R, tau_star):
 
 def run_gate6():
     setup_step_logger(Path(__file__).stem)
-    print_status("=== GATE 6: GCE ASYMPTOTIC EQUILIBRIUM ===", "SUCCESS")
+    print_status("=== GATE 6: GCE BARYONIC-CYCLING EQUILIBRIUM ===", "SUCCESS")
 
     # 1. Physical Parameters
     # Return fraction (fraction of mass returned to ISM)
@@ -52,7 +52,7 @@ def run_gate6():
     p_Y_vmo = 0.149
     p_Z_vmo = 0.00
 
-    # Fraction of star formation in VMOs (must be extremely high in early universe to hit Z_eq ~ 10^-4)
+    # Fraction of star formation in VMOs (high early-universe VMO fraction yields Z_eq ~ 10^-4)
     f_vmo = 0.994
 
     # Effective yields
@@ -65,11 +65,11 @@ def run_gate6():
     t_span = (-20.0 * tau_star, 0.0) # Integrate from far past to present
     t_eval = np.linspace(t_span[0], t_span[1], 500)
 
-    # Initial conditions: Absurd starting points to prove the asymptotic equilibrium
+    # Initial conditions: Extreme starting points to demonstrate convergence to equilibrium
     initial_conditions = [
         [0.00, 0.00], # Pure Hydrogen (Standard assumption)
-        [0.80, 0.10], # 80% Helium, 10% Metals (Absurdly heavy)
-        [0.50, 0.50], # 50% Helium, 50% Metals (Absurdly heavy)
+        [0.80, 0.10], # 80% Helium, 10% Metals (Extremely heavy)
+        [0.50, 0.50], # 50% Helium, 50% Metals (Extremely heavy)
     ]
 
     print_status("Integrating GCE ODEs with Temporal Horizon sequestration...", "PROCESS")
@@ -104,7 +104,7 @@ def run_gate6():
             "final_Z": float(Z_final)
         })
 
-    # The theoretical equilibrium (equilibrium)
+    # The theoretical equilibrium
     Y_eq = p_Y_eff / (1 - R)
     Z_eq = p_Z_eff / (1 - R)
     
@@ -113,7 +113,7 @@ def run_gate6():
     plt.axhline(Y_eq, color='black', linestyle=':', label=f'Theoretical Y Equilibrium ({Y_eq:.3f})')
     plt.axhline(Z_eq, color='gray', linestyle=':', label=f'Theoretical Z Equilibrium ({Z_eq:.5f})')
     
-    plt.title("TEP Galactic Chemical Evolution: Convergence to Asymptotic Equilibrium")
+    plt.title("TEP Galactic Chemical Evolution: Convergence to Baryonic-Cycling Equilibrium")
     plt.xlabel("Proper Time ($\\tau$)")
     plt.ylabel("Mass Fraction")
     plt.legend()
@@ -137,7 +137,7 @@ def run_gate6():
     with open(results_path, "w") as f:
         json.dump(out_dict, f, indent=2)
 
-    print_status(f"Gate 6 asymptotic equilibrium physics proven. Plot saved to {plot_path}", "SUCCESS")
+    print_status(f"Gate 6 baryonic-cycling equilibrium verified. Plot saved to {plot_path}", "SUCCESS")
 
 if __name__ == "__main__":
     run_gate6()

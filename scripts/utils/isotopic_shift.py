@@ -8,7 +8,7 @@ whether deuterium isotope identification can be contaminated by temporal shear.
 import sys
 
 sys.path.insert(0, "../../")
-from core.constants import c_kms
+from core.constants import C_KMS as c_kms
 
 
 def temporal_shear_shift(delta_ln_A):

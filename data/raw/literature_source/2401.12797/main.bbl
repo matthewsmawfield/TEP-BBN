@@ -1,0 +1,256 @@
+\begin{thebibliography}{}
+\makeatletter
+\relax
+\def\mn@urlcharsother{\let\do\@makeother \do\$\do\&\do\#\do\^\do\_\do\%\do\~}
+\def\mn@doi{\begingroup\mn@urlcharsother \@ifnextchar [ {\mn@doi@}
+  {\mn@doi@[]}}
+\def\mn@doi@[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href
+  {http://dx.doi.org/#2} {doi:#2}\else \href {http://dx.doi.org/#2} {#1}\fi
+  \endgroup}
+\def\mn@eprint#1#2{\mn@eprint@#1:#2::\@nil}
+\def\mn@eprint@arXiv#1{\href {http://arxiv.org/abs/#1} {{\tt arXiv:#1}}}
+\def\mn@eprint@dblp#1{\href {http://dblp.uni-trier.de/rec/bibtex/#1.xml}
+  {dblp:#1}}
+\def\mn@eprint@#1:#2:#3:#4\@nil{\def\@tempa {#1}\def\@tempb {#2}\def\@tempc
+  {#3}\ifx \@tempc \@empty \let \@tempc \@tempb \let \@tempb \@tempa \fi \ifx
+  \@tempb \@empty \def\@tempb {arXiv}\fi \@ifundefined
+  {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
+  mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
+
+\bibitem[\protect\citeauthoryear{Asplund, Grevesse, Sauval  \& Scott}{Asplund
+  et~al.}{2009}]{Asplund_2009}
+Asplund M.,  Grevesse N.,  Sauval A.~J.,   Scott P.,  2009, \mn@doi [Annual
+  Review of Astronomy and Astrophysics]
+  {10.1146/annurev.astro.46.060407.145222}, 47, 481
+
+\bibitem[\protect\citeauthoryear{Aver, Berg, Hirschauer, Olive, Pogge, Rogers,
+  Salzer  \& Skillman}{Aver et~al.}{2021}]{Aver2021}
+Aver E.,  Berg D.~A.,  Hirschauer A.~S.,  Olive K.~A.,  Pogge R.~W.,  Rogers N.
+  S.~J.,  Salzer J.~J.,   Skillman E.~D.,  2021, \mn@doi [Monthly Notices of
+  the Royal Astronomical Society] {10.1093/mnras/stab3226}, 510, 373
+
+\bibitem[\protect\citeauthoryear{Balashev, Zavarygin, Ivanchik, Telikova  \&
+  Varshalovich}{Balashev et~al.}{2016}]{Balashev_2016}
+Balashev S.~A.,  Zavarygin E.~O.,  Ivanchik A.~V.,  Telikova K.~N.,
+  Varshalovich D.~A.,  2016, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/stw356}, 458, 2188
+
+\bibitem[\protect\citeauthoryear{Cooke \& Pettini}{Cooke \&
+  Pettini}{2015}]{Cooke_IC}
+Cooke R.,  Pettini M.,  2015, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1093/mnras/stv2343}, 455, 1512
+
+\bibitem[\protect\citeauthoryear{Cooke, Pettini, Jorgenson, Murphy  \&
+  Steidel}{Cooke et~al.}{2014}]{Cooke_2014}
+Cooke R.~J.,  Pettini M.,  Jorgenson R.~A.,  Murphy M.~T.,   Steidel C.~C.,
+  2014, \mn@doi [The Astrophysical Journal] {10.1088/0004-637x/781/1/31}, 781,
+  31
+
+\bibitem[\protect\citeauthoryear{Cooke, Pettini, Nollett  \& Jorgenson}{Cooke
+  et~al.}{2016}]{Cooke_2016}
+Cooke R.~J.,  Pettini M.,  Nollett K.~M.,   Jorgenson R.,  2016, \mn@doi [The
+  Astrophysical Journal] {10.3847/0004-637x/830/2/148}, 830, 148
+
+\bibitem[\protect\citeauthoryear{Cooke, Pettini  \& Steidel}{Cooke
+  et~al.}{2018}]{Cooke_2018}
+Cooke R.~J.,  Pettini M.,   Steidel C.~C.,  2018, \mn@doi [The Astrophysical
+  Journal] {10.3847/1538-4357/aaab53}, 855, 102
+
+\bibitem[\protect\citeauthoryear{De~Cia, Jenkins, Fox, Ledoux, Ramburuth-Hurt,
+  Konstantopoulou, Petitjean  \& Krogager}{De~Cia et~al.}{2021}]{De_Cia_2021}
+De~Cia A.,  Jenkins E.~B.,  Fox A.~J.,  Ledoux C.,  Ramburuth-Hurt T.,
+  Konstantopoulou C.,  Petitjean P.,   Krogager J.-K.,  2021, \mn@doi [Nature]
+  {10.1038/s41586-021-03780-0}, 597, 206
+
+\bibitem[\protect\citeauthoryear{Dekker, D'Odorico, Kaufer, Delabre  \&
+  Kotzlowski}{Dekker et~al.}{2000}]{UVES}
+Dekker H.,  D'Odorico S.,  Kaufer A.,  Delabre B.,   Kotzlowski H.,  2000, in
+  Iye M.,  Moorwood A. F.~M.,  eds, Optical and IR Telescope Instrumentation
+  and Detectors. SPIE, pp 534 -- 545, \mn@doi{10.1117/12.395512}, \url
+  {https://doi.org/10.1117/12.395512}
+
+\bibitem[\protect\citeauthoryear{Dvorkin, Vangioni, Silk, Petitjean  \&
+  Olive}{Dvorkin et~al.}{2016}]{Dvorkin_2016}
+Dvorkin I.,  Vangioni E.,  Silk J.,  Petitjean P.,   Olive K.~A.,  2016,
+  \mn@doi [Monthly Notices of the Royal Astronomical Society: Letters]
+  {10.1093/mnrasl/slw028}, 458, L104–L108
+
+\bibitem[\protect\citeauthoryear{Esteban, Méndez-Delgado, García-Rojas  \&
+  Arellano-Córdova}{Esteban et~al.}{2022}]{Esteban_2022}
+Esteban C.,  Méndez-Delgado J.~E.,  García-Rojas J.,   Arellano-Córdova
+  K.~Z.,  2022, \mn@doi [The Astrophysical Journal] {10.3847/1538-4357/ac6b38},
+  931, 92
+
+\bibitem[\protect\citeauthoryear{{Evans} et~al.,}{{Evans}
+  et~al.}{2022}]{Cubes2022}
+{Evans} C.,  et~al., 2022, \mn@doi [Experimental Astronomy]
+  {10.1007/s10686-022-09864-7}, \href
+  {https://ui.adsabs.harvard.edu/abs/2022ExA...tmp...69E} {}
+
+\bibitem[\protect\citeauthoryear{Fernández, Terlevich, Díaz, Terlevich  \&
+  Rosales-Ortega}{Fernández et~al.}{2018}]{Fernandez}
+Fernández V.,  Terlevich E.,  Díaz A.~I.,  Terlevich R.,   Rosales-Ortega
+  F.~F.,  2018, \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1093/mnras/sty1206}, 478, 5301
+
+\bibitem[\protect\citeauthoryear{{Freudling}, {Romaniello}, {Bramich},
+  {Ballester}, {Forchi}, {Garc{\'{\i}}a-Dabl{\'o}}, {Moehler}  \&
+  {Neeser}}{{Freudling} et~al.}{2013}]{Freudling2013}
+{Freudling} W.,  {Romaniello} M.,  {Bramich} D.~M.,  {Ballester} P.,  {Forchi}
+  V.,  {Garc{\'{\i}}a-Dabl{\'o}} C.~E.,  {Moehler} S.,   {Neeser} M.~J.,  2013,
+  \mn@doi [\aap] {10.1051/0004-6361/201322494}, \href
+  {http://adsabs.harvard.edu/abs/2013A%26A...559A..96F} {559, A96}
+
+\bibitem[\protect\citeauthoryear{Fumagalli, O'Meara  \& Prochaska}{Fumagalli
+  et~al.}{2011}]{Fumagalli_2011}
+Fumagalli M.,  O'Meara J.~M.,   Prochaska J.~X.,  2011, \mn@doi [Science]
+  {10.1126/science.1213581}, 334, 1245
+
+\bibitem[\protect\citeauthoryear{Goodman \& Weare}{Goodman \&
+  Weare}{2010}]{sampler}
+Goodman J.,  Weare J.,  2010, \mn@doi [Communications in Applied Mathematics
+  and Computational Science] {10.2140/camcos.2010.5.65}, 5, 65
+
+\bibitem[\protect\citeauthoryear{Hsyu, Cooke, Prochaska  \& Bolte}{Hsyu
+  et~al.}{2020}]{Hsyu_2020}
+Hsyu T.,  Cooke R.~J.,  Prochaska J.~X.,   Bolte M.,  2020, \mn@doi [The
+  Astrophysical Journal] {10.3847/1538-4357/ab91af}, 896, 77
+
+\bibitem[\protect\citeauthoryear{Izotov, Thuan  \& Guseva}{Izotov
+  et~al.}{2014}]{Izotov_2014}
+Izotov Y.~I.,  Thuan T.~X.,   Guseva N.~G.,  2014, \mn@doi [Monthly Notices of
+  the Royal Astronomical Society] {10.1093/mnras/stu1771}, 445, 778
+
+\bibitem[\protect\citeauthoryear{Kurichin, Kislitsyn  \& Ivanchik}{Kurichin
+  et~al.}{2021a}]{Kurichin2021_2}
+Kurichin O.~A.,  Kislitsyn P.~A.,   Ivanchik A.~V.,  2021a, \mn@doi [Astronomy
+  Letters] {10.1134/S1063773721100054}, 47, 674
+
+\bibitem[\protect\citeauthoryear{Kurichin, Kislitsyn, Klimenko, Balashev  \&
+  Ivanchik}{Kurichin et~al.}{2021b}]{Kurichin2021}
+Kurichin O.~A.,  Kislitsyn P.~A.,  Klimenko V.~V.,  Balashev S.~A.,   Ivanchik
+  A.~V.,  2021b, \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1093/mnras/stab215}, 502, 3045
+
+\bibitem[\protect\citeauthoryear{Levshakov, Dessauges-Zavadsky, D’Odorico  \&
+  Molaro}{Levshakov et~al.}{2002}]{Levshakov_2002}
+Levshakov S.~A.,  Dessauges-Zavadsky M.,  D’Odorico S.,   Molaro P.,  2002,
+  \mn@doi [The Astrophysical Journal] {10.1086/324722}, 565, 696
+
+\bibitem[\protect\citeauthoryear{Matsumoto et~al.,}{Matsumoto
+  et~al.}{2022}]{EMPRESS_2022}
+Matsumoto A.,  et~al., 2022, \mn@doi [The Astrophysical Journal]
+  {10.3847/1538-4357/ac9ea1}, 941, 167
+
+\bibitem[\protect\citeauthoryear{Mossa et~al.,}{Mossa
+  et~al.}{2020}]{Mossa_2020}
+Mossa V.,  et~al., 2020, \mn@doi [Nature] {10.1038/s41586-020-2878-4}, 587, 210
+
+\bibitem[\protect\citeauthoryear{Murphy}{Murphy}{2016}]{Murphy_2016}
+Murphy M.~T.,  2016, \mn@doi [UVES_popler: POst-PipeLine Echelle Reduction
+  software.] {10.5281/zenodo.44765}
+
+\bibitem[\protect\citeauthoryear{Murphy, Kacprzak, Savorgnan  \&
+  Carswell}{Murphy et~al.}{2018}]{Murphy_2019}
+Murphy M.~T.,  Kacprzak G.~G.,  Savorgnan G. A.~D.,   Carswell R.~F.,  2018,
+  \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1093/mnras/sty2834}, 482, 3458
+
+\bibitem[\protect\citeauthoryear{{Noterdaeme}, {L{\'o}pez}, {Dumont}, {Ledoux},
+  {Molaro}  \& {Petitjean}}{{Noterdaeme} et~al.}{2012}]{Noterdaeme_2012}
+{Noterdaeme} P.,  {L{\'o}pez} S.,  {Dumont} V.,  {Ledoux} C.,  {Molaro} P.,
+  {Petitjean} P.,  2012, \mn@doi [\aap] {10.1051/0004-6361/201219453}, \href
+  {https://ui.adsabs.harvard.edu/abs/2012A&A...542L..33N} {542, L33}
+
+\bibitem[\protect\citeauthoryear{Pettini \& Bowen}{Pettini \&
+  Bowen}{2001}]{Pettini_2001}
+Pettini M.,  Bowen D.~V.,  2001, \mn@doi [The Astrophysical Journal]
+  {10.1086/322510}, 560, 41
+
+\bibitem[\protect\citeauthoryear{Pettini, Zych, Steidel  \& Chaffee}{Pettini
+  et~al.}{2008}]{Pettini_2008}
+Pettini M.,  Zych B.~J.,  Steidel C.~C.,   Chaffee F.~H.,  2008, \mn@doi
+  [Monthly Notices of the Royal Astronomical Society]
+  {10.1111/j.1365-2966.2008.12951.x}, 385, 2011
+
+\bibitem[\protect\citeauthoryear{Pitrou, Coc, Uzan  \& Vangioni}{Pitrou
+  et~al.}{2021}]{Pitrou2021}
+Pitrou C.,  Coc A.,  Uzan J.-P.,   Vangioni E.,  2021, \mn@doi [Monthly Notices
+  of the Royal Astronomical Society] {10.1093/mnras/stab135}, 502, 2474
+
+\bibitem[\protect\citeauthoryear{{Planck Collaboration} et~al.,}{{Planck
+  Collaboration} et~al.}{2020}]{PL18}
+{Planck Collaboration} et~al., 2020, \mn@doi [A\&A]
+  {10.1051/0004-6361/201833910}, 641, A6
+
+\bibitem[\protect\citeauthoryear{{Ramburuth-Hurt} et~al.,}{{Ramburuth-Hurt}
+  et~al.}{2023}]{metal_variations}
+{Ramburuth-Hurt} T.,  et~al., 2023, \mn@doi [\aap]
+  {10.1051/0004-6361/202244609}, \href
+  {https://ui.adsabs.harvard.edu/abs/2023A&A...672A..68R} {672, A68}
+
+\bibitem[\protect\citeauthoryear{Riemer-Sørensen et~al.,}{Riemer-Sørensen
+  et~al.}{2015}]{Riemer-Sorensen_2015}
+Riemer-Sørensen S.,  et~al., 2015, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1093/mnras/stu2599}, 447, 2925
+
+\bibitem[\protect\citeauthoryear{Riemer-Sørensen, Kotuš, Webb, Ali, Dumont,
+  Murphy  \& Carswell}{Riemer-Sørensen et~al.}{2017}]{Riemer-Sorensen_2017}
+Riemer-Sørensen S.,  Kotuš S.,  Webb J.~K.,  Ali K.,  Dumont V.,  Murphy
+  M.~T.,   Carswell R.~F.,  2017, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1093/mnras/stx681}, 468, 3239
+
+\bibitem[\protect\citeauthoryear{Robert, Murphy, O’Meara, Crighton  \&
+  Fumagalli}{Robert et~al.}{2018}]{Robert_2019}
+Robert P.~F.,  Murphy M.~T.,  O’Meara J.~M.,  Crighton N. H.~M.,   Fumagalli
+  M.,  2018, \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1093/mnras/sty3287}, 483, 2736
+
+\bibitem[\protect\citeauthoryear{Srianand, Gupta, Petitjean, Noterdaeme  \&
+  Ledoux}{Srianand et~al.}{2010}]{Srianand_2010}
+Srianand R.,  Gupta N.,  Petitjean P.,  Noterdaeme P.,   Ledoux C.,  2010,
+  \mn@doi [Monthly Notices of the Royal Astronomical Society]
+  {10.1111/j.1365-2966.2010.16574.x}, 405, 1888
+
+\bibitem[\protect\citeauthoryear{Tytler, Fan  \& Burles}{Tytler
+  et~al.}{1996}]{Tytler_1996}
+Tytler D.,  Fan X.-M.,   Burles S.,  1996, \mn@doi [Nature] {10.1038/381207a0},
+  381, 207
+
+\bibitem[\protect\citeauthoryear{Valerdi, Peimbert  \& Peimbert}{Valerdi
+  et~al.}{2021}]{Valerdi}
+Valerdi M.,  Peimbert A.,   Peimbert M.,  2021, \mn@doi [Monthly Notices of the
+  Royal Astronomical Society] {10.1093/mnras/stab1543}, 505, 3624
+
+\bibitem[\protect\citeauthoryear{{V{\'e}ron-Cetty} \&
+  {V{\'e}ron}}{{V{\'e}ron-Cetty} \& {V{\'e}ron}}{2010}]{Veron-Cetty2010}
+{V{\'e}ron-Cetty} M.~P.,  {V{\'e}ron} P.,  2010, \mn@doi [\aap]
+  {10.1051/0004-6361/201014188}, \href
+  {https://ui.adsabs.harvard.edu/abs/2010A&A...518A..10V} {518, A10}
+
+\bibitem[\protect\citeauthoryear{{Vogt} et~al.,}{{Vogt}
+  et~al.}{1994}]{Vogt1994}
+{Vogt} S.~S.,  et~al., 1994, in {Crawford} D.~L.,  {Craine} E.~R.,  eds,
+  Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series
+  Vol. 2198, Instrumentation in Astronomy VIII. p.~362,
+  \mn@doi{10.1117/12.176725}
+
+\bibitem[\protect\citeauthoryear{Weinberg}{Weinberg}{2017}]{Weinberg_2016}
+Weinberg D.~H.,  2017, \mn@doi [The Astrophysical Journal]
+  {10.3847/1538-4357/aa96b2}, 851, 25
+
+\bibitem[\protect\citeauthoryear{Zavarygin, Webb, Dumont  \&
+  Riemer-Sørensen}{Zavarygin et~al.}{2018}]{Zvarygin_2018}
+Zavarygin E.~O.,  Webb J.~K.,  Dumont V.,   Riemer-Sørensen S.,  2018, \mn@doi
+  [Monthly Notices of the Royal Astronomical Society] {10.1093/mnras/sty1003},
+  477, 5536
+
+\bibitem[\protect\citeauthoryear{van~de Voort, Quataert, Faucher-Giguère,
+  Kereš, Hopkins, Chan, Feldmann  \& Hafen}{van~de Voort
+  et~al.}{2018}]{Van_de_voort_2018}
+van~de Voort F.,  Quataert E.,  Faucher-Giguère C.-A.,  Kereš D.,  Hopkins
+  P.~F.,  Chan T.~K.,  Feldmann R.,   Hafen Z.,  2018, \mn@doi [Monthly Notices
+  of the Royal Astronomical Society] {10.1093/mnras/sty591}, 477, 80
+
+\makeatother
+\end{thebibliography}

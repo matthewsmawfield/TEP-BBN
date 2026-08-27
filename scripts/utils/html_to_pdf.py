@@ -257,7 +257,7 @@ class HTMLToPDFConverter:
                 logger.info("All images loaded successfully")
             except TimeoutError:
                 logger.warning("Could not verify all images loaded, proceeding anyway")
-                # Log how many images we found
+                # Log how many images were found
                 try:
                     image_count = await page.evaluate(
                         "document.querySelectorAll('img').length"

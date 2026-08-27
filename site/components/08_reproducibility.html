@@ -1,5 +1,5 @@
 <section id="reproducibility">
-    <h2>Data Availability & Reproducibility</h2>
+    <h2>Data Availability &amp; Reproducibility</h2>
 
     <div style="background: #f0f4f8; padding: 1.2em; margin: 1em 0; border-left: 3px solid #4a7fb5;">
         <p>
@@ -14,11 +14,11 @@
         GitHub Repository: <a href="https://github.com/matthewsmawfield/TEP-BBN">github.com/matthewsmawfield/TEP-BBN</a>
     </p>
     <p>
-        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 7 core analysis steps for spectroscopic embedding, baseline system fitting, Monte Carlo significance testing, absorber field closure, temporal horizon thermodynamics, primordial helium synthesis, and global opacity proof.
+        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 7 core analysis steps for spectroscopic embedding, baseline system fitting, Monte Carlo significance testing, absorber field closure, temporal horizon thermodynamics, primordial helium synthesis, and global opacity boundary analysis.
         All steps are orchestrated by <code>scripts/run_pipeline.py</code> with comprehensive per-step logging.
     </p>
     <p>
-        All raw Keck HIRES spectra, structural likelihood matrices, and the temporal-field equation solvers are released in the Zenodo repository (<a href="https://doi.org/10.5281/zenodo.21841148" target="_blank">DOI: 10.5281/zenodo.21841148</a>) under CC-BY 4.0. The full codebase and execution environments are identical to the published version.
+        All raw VLT/UVES spectra (SQUAD DR1), structural likelihood matrices, and the temporal-field equation solvers are released in the Zenodo repository (<a href="https://doi.org/10.5281/zenodo.21841148" target="_blank">DOI: 10.5281/zenodo.21841148</a>) under CC-BY 4.0. The full codebase and execution environments are identical to the published version.
     </p>
 
     <h4>Repository Structure</h4>
@@ -26,15 +26,19 @@
 <pre>
 TEP-BBN/
 ├── data/
-│   ├── raw/                       # Keck/HIRES spectroscopic exposures (KODIAQ)
-│   │   ├── atomic/                # Immutable H I, D I line registries
+│   ├── raw/                       # VLT/UVES spectroscopic exposures (SQUAD DR1)
+│   │   ├── atomic/                # Physical H I, D I line registries (NIST ASD)
 │   │   └── reduced_products/      # Pre-reduced and co-added normalized spectra
+│   ├── literature_components/     # Published VPFIT model files and component tables
 │   └── processed/                 # Pipeline-ready union manifests
 ├── scripts/
 │   ├── steps/                     # 7 deterministic pipeline steps (01-07)
 │   ├── lib/                       # Physical RT engine, Voigt fitters, model parsers
 │   └── run_pipeline.py            # Master orchestration script
-├── configs/                       # Immutable priors and noise model
+├── configs/
+│   ├── sightlines/                # Per-sightline JSON configs (bounds, MC settings)
+│   ├── tep_priors.yaml            # Frozen TEP prior parameters
+│   └── tep_noise_model.json       # Student-t noise profile
 ├── results/                       # Generated parameter ledgers and significance matrices
 ├── logs/                          # Per-step execution logs
 ├── site/
@@ -58,17 +62,31 @@ TEP-BBN/
         <tbody>
             <tr style="border-bottom: 1px solid #d0d7e0;">
                 <td style="padding: 0.5em;">Q1009+2956 Spectra</td>
-                <td style="padding: 0.5em;">Keck HIRES (KODIAQ)</td>
+                <td style="padding: 0.5em;">VLT/UVES (SQUAD DR1)</td>
                 <td style="padding: 0.5em;">Pre-reduced</td>
-                <td style="padding: 0.5em;">4 coadds</td>
-                <td style="padding: 0.5em;"><code>data/raw/reduced_products/Q1009+2956_z2.504_HIRES/</code></td>
+                <td style="padding: 0.5em;">4 coadds (median SNR $\approx 24$)</td>
+                <td style="padding: 0.5em;"><code>data/raw/reduced_products/Q1009+2956_z2.504_UVES/</code></td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
                 <td style="padding: 0.5em;">Atomic Data</td>
-                <td style="padding: 0.5em;">NIST / Lit</td>
+                <td style="padding: 0.5em;">NIST ASD <a href="#ref49">[49]</a></td>
                 <td style="padding: 0.5em;">Static Registry</td>
                 <td style="padding: 0.5em;">H I, D I, metals</td>
                 <td style="padding: 0.5em;"><code>data/raw/atomic/</code></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.5em;">Literature Model</td>
+                <td style="padding: 0.5em;">Zavarygin et al. <a href="#ref44">[44]</a> / VPFIT <a href="#ref50">[50]</a></td>
+                <td style="padding: 0.5em;">Static File</td>
+                <td style="padding: 0.5em;">43 H I + 3 D I components</td>
+                <td style="padding: 0.5em;"><code>data/literature_components/model_6a.26</code></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.5em;">Component Table</td>
+                <td style="padding: 0.5em;">Zavarygin et al. <a href="#ref44">[44]</a></td>
+                <td style="padding: 0.5em;">Static File</td>
+                <td style="padding: 0.5em;">2 velocity components</td>
+                <td style="padding: 0.5em;"><code>data/literature_components/Q1009+2956_z2.504_component_table.csv</code></td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
                 <td style="padding: 0.5em;">Prior Bounds</td>
@@ -82,14 +100,14 @@ TEP-BBN/
 
     <h3>Pipeline Architecture</h3>
     <p>
-        The analysis pipeline comprises 7 deterministic steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, and opacity proof.
+        The analysis pipeline comprises 7 deterministic steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, and opacity boundary analysis.
         Each step is a standalone Python script in <code>scripts/steps/</code> that produces serialized outputs and
         detailed logs.
     </p>
-    
+
     <h4>Complete Step Inventory and Runtime</h4>
     <p style="font-size: 0.85em; color: #555; margin-bottom: 0.5em;">
-        Runtimes are approximate and measured on Apple M4 Pro (14-core, 24 GB). The dominant cost is the Monte Carlo significance test (step 03), which scales with iterations.
+        Runtimes are approximate and measured on Apple M4 Pro (14-core, 24 GB). The dominant cost is the Monte Carlo significance test (step 03), which scales with the number of realizations multiplied by the 43-parent reassignment refit performed inside each realization.
     </p>
 
     <table style="width: 100%; border-collapse: collapse; font-size: 0.85em; margin: 1em 0;">
@@ -111,14 +129,14 @@ TEP-BBN/
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
                 <td style="padding: 0.4em;">02</td>
                 <td style="padding: 0.4em;"><code>step_02_q1009.py</code></td>
-                <td style="padding: 0.4em;">Baseline structural fit of the Q1009+2956 absorption complex</td>
-                <td style="padding: 0.4em;">~15 s</td>
+                <td style="padding: 0.4em;">Nested-hypothesis fit of the Q1009+2956 absorption complex on the fixed shared scaffold (multi-start; nesting invariants verified)</td>
+                <td style="padding: 0.4em;">~30 s</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
                 <td style="padding: 0.4em;">03</td>
                 <td style="padding: 0.4em;"><code>step_03_significance.py</code></td>
-                <td style="padding: 0.4em;">200-realization Monte Carlo significance test and true-D injection</td>
-                <td style="padding: 0.4em;">~20 min</td>
+                <td style="padding: 0.4em;">1000-realization Monte Carlo significance test and true-D injection (43-parent reassignment inside each realization)</td>
+                <td style="padding: 0.4em;">~7.5 hr</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
                 <td style="padding: 0.4em;">04</td>
@@ -141,12 +159,12 @@ TEP-BBN/
             <tr style="border-bottom: 1px solid #d0d7e0;">
                 <td style="padding: 0.4em;">07</td>
                 <td style="padding: 0.4em;"><code>step_07_global_opacity.py</code></td>
-                <td style="padding: 0.4em;">Analytical proof of divergent optical depth at the temporal horizon (Global Opacity Theorem)</td>
+                <td style="padding: 0.4em;">Analytical proof of divergent optical depth in the static spatial geometry (Opacity Boundary)</td>
                 <td style="padding: 0.4em;">~1 s</td>
             </tr>
         </tbody>
     </table>
-    
+
     <h4>Total Runtime Summary</h4>
     <table style="width: auto; border-collapse: collapse; font-size: 0.9em; margin: 1em 0;">
         <tr style="background: #e8eef5; border-bottom: 2px solid #4a7fb5;">
@@ -157,12 +175,12 @@ TEP-BBN/
         <tr style="border-bottom: 1px solid #d0d7e0;">
             <td style="padding: 0.4em;">All Analysis Stages</td>
             <td style="padding: 0.4em;">7</td>
-            <td style="padding: 0.4em;">~20 min</td>
+            <td style="padding: 0.4em;">~7.5 hr</td>
         </tr>
         <tr style="border-bottom: 2px solid #4a7fb5; font-weight: 600;">
             <td style="padding: 0.4em;">Total</td>
             <td style="padding: 0.4em;">7</td>
-            <td style="padding: 0.4em;">~20 min</td>
+            <td style="padding: 0.4em;">~7.5 hr</td>
         </tr>
     </table>
 
@@ -178,13 +196,27 @@ cd TEP-BBN
 # 2. Install dependencies
 pip install -r requirements-lock.txt
 
-# 3. Run full pipeline
+# 3. Run full pipeline (default: Q1009+2956 sightline)
 python scripts/run_pipeline.py
+
+# 3b. Run a specific sightline
+python scripts/run_pipeline.py --sightline PKS1937-1009
+
+# 3c. Run all sightlines with ingested data
+python scripts/run_pipeline.py --all-sightlines
 
 # 4. Results will be stored in results/ and logs/
 </pre>
     </div>
-    
+
+    <h4>Multi-Sightline Configuration</h4>
+    <p>
+        The pipeline supports multiple D/H absorber sightlines through per-sightline JSON configuration files in <code>configs/sightlines/</code>.
+        Each config specifies the data manifest path, VPFIT model file, noise model, absorber redshift, candidate parameter bounds, multi-start initial points, and Monte Carlo settings.
+        The Q1009+2956 config reproduces the exact hardcoded values from the original pipeline, ensuring bit-identical backward compatibility.
+        Sightlines without ingested data (PKS 1937$-$1009, HS 0105+1619) are automatically skipped with a diagnostic message.
+    </p>
+
     <h4>System Requirements</h4>
     <table style="width: auto; border-collapse: collapse; font-size: 0.9em; margin: 1em 0;">
         <tr style="background: #e8eef5; border-bottom: 2px solid #4a7fb5;">

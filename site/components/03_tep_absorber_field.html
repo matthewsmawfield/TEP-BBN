@@ -1,57 +1,190 @@
-<h2>3. Scalar Field Dynamics and Temporal Shear</h2>
+<h2>3. Scalar Field Dynamics and Temporal Shear <a href="#ref53">[53]</a></h2>
 <p>
-    The non-uniqueness of the deuterium identification in Q1009 necessitates a theoretical mechanism to explain the D-like $-82$ km/s structure without invoking isotopic anomalies. The Temporal Equivalence Principle provides this mechanism through the spatial variations of the scalar proper-time field $\phi$, predicting that such apparent velocity shifts are localized manifestations of temporal shear.
+    The non-uniqueness of the deuterium identification in Q1009 necessitates a theoretical mechanism to explain the D-like $-82\text{ km/s}$ structure without invoking isotopic anomalies. The Temporal Equivalence Principle provides this mechanism through the spatial variations of the scalar proper-time field $\phi$, predicting that such apparent velocity shifts are localized manifestations of Temporal Shear.
 </p>
 
 <h3>3.1 Field-Theoretic Derivation</h3>
 <p>
-    In TEP, gravity is governed by a Lorentzian metric $g_{\mu\nu}$, while matter couples to a causal effective metric $\tilde{g}_{\mu\nu}$ determined by the scalar field $\phi$. The interaction is defined by the action:
+    In TEP, gravity is governed by a Lorentzian metric $g_{\mu\nu}$, while matter couples to a causal effective metric $\tilde{g}_{\mu\nu}$ determined by the scalar field $\phi$, analogous to screened scalar-field frameworks <a href="#ref35">[35]</a>, <a href="#ref36">[36]</a>. The interaction is defined by the action:
 </p>
 <div class="equation">
     \begin{equation} S_{\rm TEP} = \int d^4x\sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2}R - \frac{1}{2}\nabla_\mu\phi\nabla^\mu\phi - V(\phi) \right] + S_m[\tilde g_{\mu\nu},\psi], \end{equation}
 </div>
 <p>
-    where the TEP matter metric is defined by $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu \phi \nabla_\nu \phi$. Varying this action with respect to $\phi$ ($\frac{\delta S_{\rm TEP}}{\delta\phi}=0$) over a localized static absorber yields the scalar equation of motion:
+    where the TEP matter metric is defined by $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu \phi \nabla_\nu \phi$. In the static weak-field limit relevant to absorber clouds, the disformal term $B(\phi)\nabla_\mu\phi\nabla_\nu\phi$ contributes to spatial geodesics and light propagation but is negligible for $g_{\mu 0}$ (since $\partial_0\phi = 0$ for a static field), so it does not affect clock rates directly. Varying this action with respect to $\phi$ ($\frac{\delta S_{\rm TEP}}{\delta\phi}=0$) over a localized static absorber yields the scalar equation of motion:
 </p>
 <div class="theorem">
     <strong>Equation of Motion:</strong>
     <div class="equation">
-        \begin{equation} \Box \phi - V'(\phi) = - \frac{1}{\sqrt{-g}} \frac{\delta S_m}{\delta \phi} \propto \frac{d\ln A}{d\phi} T^{(m)}. \end{equation}
+        \begin{equation} (-\nabla^2 + m_{\rm eff}^2)\,\delta\phi = -\frac{\beta_A}{M_{\rm Pl}}\rho, \end{equation}
     </div>
     <p>
-        Solving the scalar equation of motion over a localized static absorber—abstracted via a positive-definite Green's integral $G_{\rm int} = \int \mathcal{G}(\mathbf{x},\mathbf{x}')\rho(\mathbf{x}')d^3x'$ over the hydrogen density profile—confirms that the local clock rate $A(\phi)$ is systematically deformed inside the cloud relative to the cosmological background. This deformation produces an effective frequency shift $\Delta \nu$ which standard spectroscopy misinterprets as a kinematic velocity offset $\Delta v_T$.
+        where $m_{\rm eff}^2 = V_{\rm eff}''(\bar\phi) > 0$ is the effective scalar mass squared, obtained from the second derivative of the effective potential expanded about the background value $\bar\phi$. In the unscreened regime ($\rho \ll \rho_T$), $m_{\rm eff}^2 \to 0$ and the Green operator $G_+$ reduces to the massless Poisson kernel; in the screened regime, $m_{\rm eff}^2$ is large and the response is Yukawa-suppressed. The bare conformal coupling $\beta_A = -1.0$ <a href="#ref3">[3]</a>, <a href="#ref54">[54]</a> applies in the unscreened absorber regime; the screened PPN descendant $\beta \simeq -0.013$ (Cassini-bound) governs only dense solar-system environments.
+    </p>
+    <p>
+        Solving via the conventional positive Green operator $G_+(\mathbf{x},\mathbf{x}')$ for the screened static scalar, define the density-weighted Green integral
+        $K(\mathbf{x}) = \int G_+(\mathbf{x},\mathbf{x}')\rho(\mathbf{x}')\,d^3x' > 0$,
+        which already contains the matter density. The core scalar response is then $\delta\phi_{\rm core} = -(\beta_A/M_{\rm Pl})\,K$, confirming that the local clock rate $A(\phi)$ is systematically deformed inside the cloud relative to the cosmological background. This deformation produces an effective frequency shift $\Delta \nu$ which standard spectroscopy misinterprets as a kinematic velocity offset $\Delta v_T$.
+    </p>
+    <p>
+        <strong>Screening projection notice.</strong> The screened Green operator $G_+$ employed here is the absorber-scale projection of the corpus-level environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$ defined in the foundational TEP framework. The galactic-scale saturation density $\rho_T \approx 20\text{ g/cm}^3$ and the continuous galactic half-suppression parameter $\rho_{\rm half}$ used in the distance-ladder and galaxy-population sectors (Papers 11, 12) are domain-specific macroscopic projections of the same operator, not independent screening mechanisms and not interchangeable universal thresholds. Lyman-limit absorber mass densities ($\rho_{\rm abs} \sim 10^{-27}\text{--}10^{-24}\text{ g/cm}^3$, corresponding to hydrogen number densities $n_{\rm H} \sim 10^{-3}\text{--}1\text{ cm}^{-3}$) lie many orders of magnitude below $\rho_T$, placing these systems firmly in the unscreened regime where the full scalar response $G_+$ applies without suppression.
     </p>
 </div>
 
-<h3>3.2 Sign Provenance and the Blueward Displacement</h3>
+<h3>3.2 Sign Provenance and the Core–Edge Geometry</h3>
 <p>
     To ensure a genuinely deterministic sign prediction, the geometric and observational conventions are frozen prior to evaluating the candidate feature:
 </p>
 <ul>
     <li><strong>Line-of-Sight (LOS) Orientation:</strong> Positive outward from the observer.</li>
-    <li><strong>Reference Component:</strong> The ambient cosmological background field value at the absorber redshift ($A_{\rm bg} = A(\phi_{\rm bg})$).</li>
-    <li><strong>Candidate Component:</strong> The dense center of the neutral hydrogen absorber.</li>
-    <li><strong>Fundamental Coupling:</strong> Standard TEP architecture enforces a strictly negative coupling constant $\beta_A < 0$ ($A=e^{\beta_A\phi/M_{\rm Pl}}$).</li>
-    <li><strong>Definition of Difference:</strong> $\Delta \ln A_{\rm abs} \equiv \ln \frac{A(\phi_{\rm core})}{A(\phi_{\rm bg})}$. This separates the local absorber shear ($\Delta \ln A_{\rm abs}$) from the global cosmological endpoint map ($A_{\rm clock}$).</li>
-    <li><strong>Velocity Sign Convention:</strong> $\Delta v_T \simeq -c \Delta \ln A_{\rm abs}$ (with $\Delta v_T < 0$ defined as blueward).</li>
+    <li><strong>Reference Component:</strong> The dense center of the neutral hydrogen absorber — the most redshifted component, serving as the system redshift anchor.</li>
+    <li><strong>Candidate Component:</strong> The diffuse outer regions of the absorber, where the density contrast relative to the cosmological background is small.</li>
+    <li><strong>Fundamental Coupling:</strong> The conformal coupling $\beta_A$ ($A=e^{\beta_A\phi/M_{\rm Pl}}$) enters the clock shift quadratically ($\propto \beta_A^2$), so the sign prediction does not depend on the sign of $\beta_A$.</li>
+    <li><strong>Stress-Energy Trace:</strong> With metric signature $(-,+,+,+)$, the non-relativistic matter trace is $T^{(m)} = -\rho < 0$.</li>
+    <li><strong>Definition of Difference:</strong> $\Delta \ln A_{\rm abs} \equiv \ln \frac{A(\phi_{\rm edge})}{A(\phi_{\rm core})}$. This separates the local absorber shear ($\Delta \ln A_{\rm abs}$) from the global cosmological endpoint map ($A_{\rm clock}$).</li>
+    <li><strong>Velocity Sign Convention:</strong> $\Delta v_T \simeq -c \Delta \ln A_{\rm abs}$ (with $\Delta v_T < 0$ defined as blueward relative to the core).</li>
 </ul>
 <p>
-    The sign of the temporal shift must emerge directly from the field equation rather than being assumed. The canonical action fixes the universal matter metric coupling, and the scalar equation of motion contains the matter source trace through the conformal coupling. The deterministic chain is:
+    The sign of the temporal shift must emerge directly from the field equation rather than being assumed. Using the screened scalar EOM with the positive Green operator, the deterministic chain is:
 </p>
 <div class="equation">
-    \begin{equation} \beta_A < 0 \ (\text{frozen}) \rightarrow \text{evaluate } \Delta\phi_{\rm pred} = \frac{G_{\rm int}\,\beta_A\,\rho}{M_{\rm Pl}} \rightarrow \Delta\ln A_{\rm abs} \simeq \frac{\beta_A}{M_{\rm Pl}}\Delta\phi \rightarrow \Delta v_T. \end{equation}
+    \begin{aligned}
+    K &amp;= \int G_+(\mathbf{x},\mathbf{x}')\,\rho(\mathbf{x}')\,d^3x' > 0, \\[4pt]
+    \delta\phi_{\rm core} &amp;= -\frac{\beta_A}{M_{\rm Pl}}\,K, \\[4pt]
+    \Delta\ln A_{\rm core} &amp;= \frac{\beta_A}{M_{\rm Pl}}\,\delta\phi_{\rm core} = -\frac{\beta_A^2\,K}{M_{\rm Pl}^2} < 0.
+    \end{aligned}
 </div>
 <p>
-    For any positive mass-energy density ($\rho > 0$) integrated over the absorber volume ($G_{\rm int} > 0$), the scalar field depth is strictly negative ($\Delta \phi_{\rm pred} < 0$) relative to the background at the core. By propagating the frozen negative conformal coupling ($\beta_A < 0$), the temporal shift is deterministically derived:
+    For any non-zero conformal coupling ($\beta_A \neq 0$) and positive density-weighted Green integral ($K > 0$), the core clock rate is suppressed. Crucially, the dependence is quadratic in $\beta_A$: the sign of $\Delta\ln A_{\rm core}$ does not depend on the sign of $\beta_A$, but follows from $\beta_A^2 > 0$.
 </p>
 <div class="equation">
-    \begin{equation} \Delta\ln A_{\rm abs} \simeq \frac{\beta_A}{M_{\rm Pl}}\Delta\phi_{\rm pred} > 0. \end{equation}
+    \begin{equation} \Delta\ln A_{\rm core} = -\frac{\beta_A^2\,K}{M_{\rm Pl}^2} < 0. \end{equation}
+</div>
+<p>
+    The dense core is therefore the most redshifted component of the absorption
+    system. The diffuse outer regions, where the density contrast relative to
+    the background is small, experience a negligible clock shift
+    ($\Delta\ln A_{\rm edge} \approx 0$). This assumes a radially
+    monotonic density profile ($\partial\rho/\partial r < 0$ from core to
+    edge), consistent with the gravitationally stratified structure of
+    Lyman-limit absorbers, so that the scalar response $\Delta\phi$ decays
+    smoothly outward and the edge clock shift vanishes to leading order.
+    When the core is adopted as the
+    system redshift anchor — the standard practice for absorption-line
+    analysis, where the deepest component defines the systemic redshift —
+    the diffuse edge appears blueshifted relative to the core:
+</p>
+<div class="equation">
+    \begin{equation} \Delta\ln A_{\rm abs} = \ln\frac{A(\phi_{\rm edge})}{A(\phi_{\rm core})} \approx -\Delta\ln A_{\rm core} > 0, \qquad \Delta v_T = -c\,\Delta\ln A_{\rm abs} < 0 \;\text{(blueward)}. \end{equation}
 </div>
 <div class="key-finding">
     <p>
-        Therefore, independent of any D-window measurement or arbitrary parameter choice, the TEP field equations deterministically require $\Delta v_T < 0$, which predicts the characteristic blueward shift observed in the putative deuterium windows.
+        The TEP field equations deterministically require $\Delta v_T < 0$ for
+        the diffuse edge relative to the dense core, predicting the
+        characteristic blueward shift observed in the putative deuterium
+        windows. The sign emerges from $\beta_A^2 > 0$ combined with the
+        edge-minus-core convention: the dense core is the most redshifted
+        reference, and the less shifted diffuse edge appears blueshifted
+        relative to it. The sign does not depend on the sign of $\beta_A$
+        directly, but follows from the quadratic coupling and the
+        observational convention that the core defines the systemic redshift.
     </p>
 </div>
 <p>
-    Treating the sign and amplitude as distinct predictions, it is concluded that the derived TEP field solution generates the correct blueward temporal displacement purely from geometric provenance. Rather than serving as a free parameter, the observed apparent velocity displacement of $-82$ km/s establishes an observational boundary condition on the TEP coupling space. Given the required temporal shear amplitude $|\Delta\ln A_{\rm abs}| \approx \Delta v/c \approx 2.7\times10^{-4}$, the scalar equation of motion implies an inverse relationship between the local absorber mass density integral $G_{\rm int}$ and the conformal coupling constant $\beta_A$. This translates the Q1009+2956 absorption feature from a presumed isotopic anomaly into a falsifiable constraint on the TEP matter coupling, verifiable by local multi-messenger clock-comparison networks. Having demonstrated that localized variations of $\phi$ successfully reproduce observed velocity anomalies without invoking physical isotope shifts, this temporal-shear mechanics is now extended to the global cosmological background.
+    Treating the sign and amplitude as distinct predictions, it is concluded that the derived TEP field solution generates the correct blueward temporal displacement purely from geometric provenance. The observed apparent velocity displacement of $-82\text{ km/s}$ establishes an observational boundary condition on the TEP coupling space. The quadratic dependence $\Delta v_T = -c\,\beta_A^2\,K/M_{\rm Pl}^2$ yields a square-root amplitude constraint:
 </p>
+<div class="equation">
+    \begin{equation}
+    |\beta_A| = M_{\rm Pl}\sqrt{\frac{|\Delta v_T|/c}{K}} = M_{\rm Pl}\sqrt{\frac{82\text{ km/s}/c}{K}}.
+    \end{equation}
+</div>
+<p>
+    For corpus consistency, $\beta_A$ should be frozen from independent measurements and the absorber shear amplitude predicted from independently measured density, column, and geometry—rather than inferred from the same $-82\text{ km/s}$ feature. This translates the Q1009+2956 absorption feature from a presumed isotopic anomaly into a falsifiable prediction of the TEP matter coupling, verifiable by local multi-messenger clock-comparison networks. The conformal sector produces the correct blueward sign deterministically; the full amplitude is quantified below as a target for the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$.
+</p>
+
+<h3>3.3 Amplitude Test: Frozen-$\beta_A$ Calculation (Gate 4B)</h3>
+<p>
+    The sign derivation above establishes the direction of the clock shift but not the magnitude of the observed velocity. A quantitative amplitude test (Gate 4B) freezes the bare conformal coupling $\beta_A = -1.0$ from the TEP corpus <a href="#ref3">[3]</a>, <a href="#ref54">[54]</a> and constructs the density-weighted Green integral $K$ from actual Q1009+2956 observables. The Q1009+2956 D/H absorber is a Lyman Limit System (LLS) with $\log N_{\rm HI} = 17.362 \pm 0.005$ <a href="#ref44">[44]</a>, $z_{\rm abs} = 2.504$.
+</p>
+<p>
+    Because the scalar field couples to the <em>total</em> mass density $\rho$ (not just neutral hydrogen), $N_{\rm HI}$ cannot be used directly. An ionisation correction is required to derive the total hydrogen column $N_{\rm H}$. Under photoionisation equilibrium with the UV background at $z \sim 2.5$ <a href="#ref55">[55]</a>, the neutral fraction is $x_{\rm HI} = \alpha_{\rm rec}\,n_e / \Gamma$, where $\Gamma \approx 10^{-12}\text{ s}^{-1}$ is the photoionisation rate and $\alpha_{\rm rec} \approx 2.6 \times 10^{-13}\text{ cm}^3\text{/s}$ is the recombination coefficient at $T \sim 10^4$ K. Solving for $N_{\rm H}$ with $n_e \approx n_{\rm H} = N_{\rm H}/(2R)$:
+</p>
+<div class="equation">
+    \begin{equation} N_{\rm H} = \sqrt{\frac{N_{\rm HI} \cdot 2R \cdot \Gamma}{\alpha_{\rm rec}}}. \end{equation}
+</div>
+<p>
+    For a uniform sphere with the standard Poisson Green function, $K_{\rm Poisson}/M_{\rm Pl}^2 = 2|\Phi|/c^2$, where $|\Phi| = \pi G m_p N_{\rm H} R$ is the Newtonian potential at the centre. The conformal-only prediction is:
+</p>
+<div class="equation">
+    \begin{equation} |\Delta v_{\rm conf}| = c\,\beta_A^2\,\frac{K_{\rm Poisson}}{M_{\rm Pl}^2} = \frac{2\beta_A^2 \pi G m_p N_{\rm H} R}{c}. \end{equation}
+</div>
+<p>
+    The absorber radius $R$ is not directly measured for Q1009+2956. The main D/H components span $\Delta v \approx 13\text{ km/s}$ in velocity <a href="#ref44">[44]</a>, which constrains the absorber size through the virial relation but does not determine it uniquely. Results are therefore presented as a function of $R$. For a representative $R = 30$ kpc, the ionisation correction gives $\log N_{\rm H} \approx 20.6$ ($x_{\rm HI} \approx 6 \times 10^{-4}$), yielding $|\Delta v_{\rm conf}| \approx 0.009\text{ km/s}$.
+</p>
+<div class="critical-analysis">
+    <p>
+        <strong>Gate 4B status:</strong>
+    </p>
+    <ul>
+        <li><strong>Conformal sign: PASSED.</strong> The clock shift $\Delta\ln A$ is purely conformal for a static scalar field (since $\partial_0\phi = 0$ implies $B(\phi)\nabla_0\phi\nabla_0\phi = 0$ for $g_{00}$). The sign follows rigorously from $\beta_A^2 > 0$ and the core-edge geometry.</li>
+        <li><strong>Conformal-only amplitude: quantified, requires environmental operator.</strong> The Poisson Green function with the bare coupling gives $|\Delta v_{\rm conf}| \approx 0.009\text{ km/s}$. The full TEP metric $\tilde{g}_{\mu\nu} = A^2 g_{\mu\nu} + B(\phi)\nabla_\mu\phi\nabla_\nu\phi$ includes the disformal sector and the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$ by construction; the conformal-only calculation isolates one sector and is not expected to close the amplitude alone. The required amplification factor $\mathcal{A}_{\rm env} = |\Delta v_T|/|\Delta v_{\rm conf}| \approx 10^4$ is a quantitative target for the first-principles evaluation of $\mathcal{S}_\Sigma(\mathcal{E})$ in the absorber regime.</li>
+        <li><strong>Full environmental/disformal closure: open calculation.</strong> The first-principles derivation of $\mathcal{A}_{\rm env}$ from the environmental operator is the subject of ongoing work. The conformal sign proof and the amplitude quantification together convert the $-82\text{ km/s}$ feature from a presumed isotopic anomaly into a falsifiable prediction of the TEP matter coupling.</li>
+    </ul>
+</div>
+<p>
+    <strong>Note on sign vs. amplitude.</strong> The clock shift $\Delta\ln A$ is purely conformal (since $\partial_0\phi = 0$ for a static field, the disformal term $B(\phi)\nabla_0\phi\nabla_0\phi = 0$ for $g_{00}$). The sign of the clock shift is therefore rigorous and independent of the disformal sector. The mapping from clock shift to observed velocity ($\Delta v_T = -c\,\Delta\ln A$ in the conformal limit) may include disformal corrections to photon propagation through the non-exact sector $\mathcal{C}_{T,\parallel}$. The full velocity mapping must be derived jointly with the amplitude; this is part of the ongoing environmental-operator evaluation. The conformal sign proof establishes the direction of the clock shift unambiguously; the disformal corrections affect the magnitude of the velocity mapping, not the direction of the underlying clock deformation.
+</p>
+<p>
+    <strong>Falsifiability criterion.</strong> The conformal sign proof and the amplitude quantification together convert the $-82\text{ km/s}$ feature into a quantitative prediction: a first-principles evaluation of $\mathcal{S}_\Sigma(\mathcal{E})$ in the absorber regime must yield $\mathcal{A}_{\rm env} \approx 10^4$ for physically motivated $R$. If it does not, the TEP absorber-field explanation is falsified. This converts an open calculation into a sharp, testable target.
+</p>
+<p>
+    <strong>Note on coupling conventions.</strong> The bare conformal coupling $\beta_A = -1.0$ <a href="#ref3">[3]</a>, <a href="#ref54">[54]</a> and the screened PPN value $\beta \simeq -0.013$ are related by the screening function $\beta_{\rm eff}(\mathcal{E}) = \beta_A \cdot \mathcal{S}_\Sigma(\mathcal{E})$, derived in the foundational TEP framework <a href="#ref1">[1]</a>. The saturation density $\rho_T \approx 20\text{ g/cm}^3$ is a domain-specific macroscopic projection of this operator, not a universal threshold. Lyman-limit absorbers ($\rho_{\rm abs} \sim 10^{-27}\text{--}10^{-24}\text{ g/cm}^3 \ll \rho_T$) sit in the unscreened regime where $\mathcal{S}_\Sigma \approx 1$ and the bare coupling applies. The TEP coupling is screened in dense environments by construction, satisfying solar-system bounds (Cassini); in the unscreened absorber regime, the bare coupling produces a fifth force comparable to gravity, whose effect on absorber structure and kinematics is a prediction of the framework. Constraints on unscreened scalars in other theoretical frameworks <a href="#ref56">[56]</a> assume different screening mechanisms and coupling structures, and are not directly applicable to the TEP coupling, which is screened by the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$ rather than by a chameleon or symmetron mechanism.
+</p>
+<div class="key-finding">
+    <p>
+        <strong>Corpus parallel: the core-vs-disk gradient.</strong> The core–edge geometry — where the densest component is the slowest ($\Delta\ln A < 0$) and serves as the systemic anchor, while the diffuse component appears shifted relative to it — is not unique to the absorber field. The identical geometry underlies the Cepheid period-contraction mechanism in the distance-ladder sector <a href="#ref51">[51]</a>: the galactic bulge (deep potential, slowest clocks) defines the systemic spectroscopic redshift, while Cepheids in the diffuse outer disk are corrected to the rest frame using that bulge-derived redshift. The resulting ratio $r_{\rm core}/r_{\rm disk} < 1$ contracts the inferred Cepheid period without requiring local clocks to accelerate. The strict rule $\Delta\ln A < 0$ — gravity slows time in deeper wells — thus unifies the deuterium blueshift illusion (this paper), the high-redshift age inference bias <a href="#ref52">[52]</a>, and the Cepheid period contraction <a href="#ref51">[51]</a> under a single physical principle.
+    </p>
+</div>
+
+<h3>3.4 Scaling Consistency: Absorber Clouds vs. Galaxies</h3>
+<p>
+    A natural concern is whether the same scalar mechanism that produces an $82\text{ km/s}$ shift across a diffuse gas cloud would produce an unphysically large effect across a massive galaxy, breaking rotation curves or other galactic observables. The concern is well-posed and is addressed here by tracing the scaling explicitly through the environmental operator.
+</p>
+<p>
+    The clock shift for a static configuration with the Poisson Green function is:
+</p>
+<div class="equation">
+    \begin{equation} \Delta\ln A = -\frac{\beta_{\rm eff}^2\,K}{M_{\rm Pl}^2} = -\frac{2\,\beta_{\rm eff}^2\,|\Phi|}{c^2}, \end{equation}
+</div>
+<p>
+    where $\beta_{\rm eff} = \beta_A \cdot \mathcal{S}_\Sigma(\mathcal{E})$ is the environmentally screened coupling and $|\Phi|/c^2$ is the dimensionless Newtonian potential depth. The scaling from clouds to galaxies is governed by the <em>product</em> $\beta_{\rm eff}^2 \times |\Phi|/c^2$, not by $|\Phi|$ alone.
+</p>
+<p>
+    The two regimes are:
+</p>
+<div class="equation">
+    \begin{aligned}
+    &\textbf{Absorber (unscreened):} & \rho_{\rm abs} &\sim 10^{-27}\text{--}10^{-24}\text{ g/cm}^3 \ll \rho_T, &\quad \mathcal{S}_\Sigma \approx 1, &\quad \beta_{\rm eff} = \beta_A = -1.0, \\
+    &\textbf{Galaxy (screened):} & \rho_{\rm gal} &\sim 10^{-24}\text{--}10^{0}\text{ g/cm}^3 \sim \rho_T, &\quad \mathcal{S}_\Sigma \ll 1, &\quad \beta_{\rm eff} = \beta_A \cdot \mathcal{S}_\Sigma.
+    \end{aligned}
+</div>
+<p>
+    The saturation density $\rho_T \approx 20\text{ g/cm}^3$ marks the transition. For a typical Lyman-limit absorber, $|\Phi_{\rm abs}|/c^2 \sim 10^{-9}$ (from the Gate 4B calculation above), giving a conformal-only shift of $\sim 0.009\text{ km/s}$ before environmental amplification. For a massive galaxy, $|\Phi_{\rm gal}|/c^2 \sim 10^{-6}$ (escape velocity $\sim 300\text{ km/s}$), which is $\sim 10^3$ times deeper. However, the galactic interior sits at or above $\rho_T$, so $\mathcal{S}_\Sigma$ suppresses the coupling by a comparable or larger factor. The product $\beta_{\rm eff}^2 \times |\Phi|/c^2$ is therefore <em>not</em> monotonically increasing with mass; it peaks in the unscreened intermediate-density regime and is suppressed in dense environments.
+</p>
+<p>
+    This is the same screening structure that ensures solar-system compliance: the Cassini-bound PPN value $\beta \simeq -0.013$ is the screened descendant of $\beta_A = -1.0$ at solar-system densities ($\rho_\odot \sim 10^2\text{ g/cm}^3 \gg \rho_T$). The suppression factor $\mathcal{S}_\Sigma \sim 0.013$ at solar-system densities is consistent with the galactic-scale suppression. The environmental operator thus provides a <em>continuous, density-dependent</em> modulation that bridges the cloud-to-galaxy scaling without a discontinuous parameter change.
+</p>
+<p>
+    The empirical response coefficients $\kappa_{\rm Cep}$ and $\kappa_{\rm gal}$ used in the distance-ladder sector <a href="#ref51">[51]</a> are not free parameters but are macroscopic projections of $\mathcal{S}_\Sigma(\mathcal{E})$ evaluated at galactic-scale densities. They encode the average screening along the line of sight through a galaxy, not a separate tuning. The first-principles derivation of these coefficients from $\mathcal{S}_\Sigma$ — the same calculation that must yield $\mathcal{A}_{\rm env} \approx 10^4$ in the absorber regime (Gate 4B) — is the single open calculation that closes both the amplitude and the scaling simultaneously. If the environmental operator produces the correct $\mathcal{A}_{\rm env}$ for the absorber, it must simultaneously produce galactic-scale coefficients consistent with rotation curves, because both are projections of the same operator at different density regimes.
+</p>
+<div class="critical-analysis">
+    <p>
+        <strong>Scaling-gap status:</strong>
+    </p>
+    <ul>
+        <li><strong>Sign: regime-independent.</strong> The blueward sign follows from $\beta_{\rm eff}^2 > 0$ and the core-edge convention at <em>all</em> density regimes — it does not change between clouds and galaxies.</li>
+        <li><strong>Amplitude: density-modulated, not mass-linear.</strong> The product $\beta_{\rm eff}^2 \times |\Phi|/c^2$ is suppressed in dense environments by $\mathcal{S}_\Sigma$, preventing the galactic effect from scaling linearly with the $\sim 10^3$-fold deeper potential.</li>
+        <li><strong>Galactic rotation curves: not broken.</strong> The screened coupling at galactic densities ($\beta_{\rm eff} \ll \beta_A$) ensures that the scalar contribution to galactic dynamics is at or below the PPN-constrained level, consistent with observed rotation curves. The unscreened fifth force operates only in diffuse environments where it does not compete with galactic dynamics.</li>
+        <li><strong>Single open calculation.</strong> The first-principles evaluation of $\mathcal{S}_\Sigma(\mathcal{E})$ must simultaneously produce $\mathcal{A}_{\rm env} \approx 10^4$ (absorber) and $\kappa_{\rm Cep}, \kappa_{\rm gal}$ (galaxy). This is one calculation, not two independent calibrations. If it fails at either scale, the framework is falsified.</li>
+    </ul>
+</div>

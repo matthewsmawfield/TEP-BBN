@@ -1,0 +1,24 @@
+{
+  "placeholders": {
+    "T_OBS": "56.54",
+    "T_PARENT": "5.02",
+    "P_PARENT": "0.0199",
+    "P_STD": "0.005",
+    "T_LYA": "1.93",
+    "DLNL": "28.27",
+    "DAIC": "-54.54",
+    "DBIC": "-47.48",
+    "N_SIMS": "200",
+    "EXC_STD": "0",
+    "EXC_PARENT": "3",
+    "BINOM95": "0.0381",
+    "T_OBS_PKS": "8982.42",
+    "T_PARENT_PKS": "30.01",
+    "P_STD_PKS": "0.005",
+    "P_PARENT_PKS": "0.005",
+    "T_OBS_J1332": "1885.56",
+    "T_PARENT_J1332": "8.67",
+    "P_STD_J1332": "0.005",
+    "P_PARENT_J1332": "0.214"
+  }
+}

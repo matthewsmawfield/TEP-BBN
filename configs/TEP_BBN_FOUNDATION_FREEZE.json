@@ -6,7 +6,7 @@
         "radiative_transfer": {
             "engine": "scripts.lib.physical_rt_engine",
             "status": "validated",
-            "transitions_supported": ["HI_Lya", "HI_Lyb", "HI_Lyg", "HI_Ly6", "HI_Ly13", "HI_Ly14", "HI_Ly21", "CII_1334", "CIII_977", "CIV_1548", "CIV_1550", "SiIV_1393", "SiIV_1402"]
+            "transitions_supported": ["HI_Lya", "HI_Lyb", "HI_Lyg", "HI_Lyd", "HI_Lye", "HI_Ly6", "HI_Ly7", "HI_Ly8", "HI_Ly9", "HI_Ly10", "HI_Ly11", "HI_Ly12", "HI_Ly13", "HI_Ly14", "HI_Ly21", "CII_1334", "CIII_977", "CIV_1548", "CIV_1550", "SiIV_1393", "SiIV_1402"]
         },
         "baseline_model": {
             "name": "model_6a",

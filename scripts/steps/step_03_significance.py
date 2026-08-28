@@ -66,6 +66,9 @@ def run_simulation(
     frozen_grouped,
     frozen_cache,
     cfg_multistart_D,
+    d_velocity_offset_kms=-81.6,
+    parent_window_kms=1000.0,
+    canonical_parent_idx=0,
 ):
     rng = np.random.default_rng(seed)
 
@@ -103,6 +106,8 @@ def run_simulation(
                 z_abs_ref,
                 c_kms,
                 parent_idx=parent_idx,
+                d_velocity_offset_kms=d_velocity_offset_kms,
+                parent_window_kms=parent_window_kms,
             )
             # Frozen scaffold contributes an identical optical depth on every
             # evaluation, so only the candidate components are recomputed here.
@@ -122,17 +127,17 @@ def run_simulation(
     # Only parents within the absorber velocity window are considered (see observed scan).
     comps = pm.reconstruct(theta_shared_base)
     h_comps = [c for c in comps if c["ion"] == "H_I"]
-    parent_window_kms = 1000.0
+    parent_window_kms = parent_window_kms
     valid_parents = []
     for j, c in enumerate(h_comps):
         v = c_kms * (c["z"] - z_abs_ref) / (1.0 + z_abs_ref)
         if abs(v) <= parent_window_kms:
             valid_parents.append(j)
     best_ll_D = -np.inf
-    ll_D_parent0 = -np.inf  # Track D at canonical parent 0 for fair standard comparison
+    ll_D_canonical = -np.inf  # Track D at canonical (auto-detected) parent for fair standard
     res_D_success = False
 
-    # The data was generated using opt_D_obs on the canonical parent (idx=0)
+    # The data was generated using opt_D_obs on the canonical parent
     # So opt_D_obs should be passed into the simulation to use as a strong prior start
     opt_D_obs = starts_H["opt_D_obs"]  # Extract from a dict we'll pass
     actual_starts_H = starts_H["starts"]
@@ -142,7 +147,7 @@ def run_simulation(
 
         # Use config multistart starts (expanded to cover low-T_K / high-b_turb)
         starts_D = [list(s) for s in cfg_multistart_D]
-        if j == valid_parents[0]:
+        if j == canonical_parent_idx:
             starts_D.insert(0, opt_D_obs)  # True generating params
 
         best_local_ll_D = -np.inf
@@ -153,8 +158,8 @@ def run_simulation(
                 best_local_ll_D = -res_D.fun
                 local_success = res_D.success
 
-        if j == 0:
-            ll_D_parent0 = best_local_ll_D
+        if j == canonical_parent_idx:
+            ll_D_canonical = best_local_ll_D
 
         if best_local_ll_D > best_ll_D:
             best_ll_D = best_local_ll_D
@@ -179,16 +184,17 @@ def run_simulation(
     # T_parent: Hfree vs best possible parent for D (fair: H is parent-free)
     T_parent = 2.0 * (best_ll_H - best_ll_D)
 
-    # T_standard: Hfree vs D at canonical parent 0 (fair: matches obs T_obs=68.46
-    # which also uses parent 0 for D). This eliminates the asymmetry where sim D
-    # could cherry-pick the best parent while obs D is locked to parent 0.
-    T_standard = 2.0 * (best_ll_H - ll_D_parent0)
+    # T_standard: Hfree vs D at canonical (auto-detected) parent
+    # (fair: matches obs T_obs which also uses the auto-detected parent for D).
+    # This eliminates the asymmetry where sim D could cherry-pick the best
+    # parent while obs D is locked to the canonical parent.
+    T_standard = 2.0 * (best_ll_H - ll_D_canonical)
 
     return {
         "simulation_id": seed,
         "seed": seed,
         "logL_D_max": best_ll_D,
-        "logL_D_parent0": ll_D_parent0,
+        "logL_D_canonical": ll_D_canonical,
         "logL_Hfree": best_ll_H,
         "T_parent": T_parent,
         "T_standard": T_standard,
@@ -228,7 +234,7 @@ def run_gate3(sightline=None):
     with open(noise_model_path, "r") as f:
         noise_cfg = json.load(f)
 
-    z_abs_ref = manifest["z_abs"]
+    z_abs_ref = cfg.get("z_abs", manifest["z_abs"])
     c_kms = 299792.458
 
     components_raw, regions = parse_vpfit_ties(vpfit_path)
@@ -295,10 +301,30 @@ def run_gate3(sightline=None):
     # is implicitly 1.0 (the residual engine will fit it from the noisy data).
     print_status("Pre-calculating base True-D model fluxes...", "PROCESS")
     grouped_D = build_model_components(
-        "M_Dfree", theta_shared_base, opt_D_obs, pm, z_abs_ref, c_kms
+        "M_Dfree", theta_shared_base, opt_D_obs, pm, z_abs_ref, c_kms,
+        d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
+        parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
     )
+
+    # Auto-detect the canonical parent index (first H I with a D counterpart
+    # in the VPFIT model).  This is the parent used by build_model_components
+    # when parent_idx='auto' (the default in step_02).  The simulation must
+    # use the same parent for the "fair standard" comparison to be valid.
+    comps_for_parent = pm.reconstruct(theta_shared_base)
+    d_zs = set(round(c["z"], 10) for c in comps_for_parent if c["ion"] == "D_I")
+    canonical_parent_idx = 0
+    _h_count = 0
+    for c in comps_for_parent:
+        if c["ion"] == "H_I":
+            if round(c["z"], 10) in d_zs:
+                canonical_parent_idx = _h_count
+                break
+            _h_count += 1
+    print_status(f"Canonical parent index (auto-detected): {canonical_parent_idx}", "PROCESS")
     lyman_transitions = [
-        "HI_Lya", "HI_Lyb", "HI_Lyg", "HI_Ly6", "HI_Ly13", "HI_Ly14", "HI_Ly21",
+        "HI_Lya", "HI_Lyb", "HI_Lyg", "HI_Lyd", "HI_Lye",
+        "HI_Ly6", "HI_Ly7", "HI_Ly8", "HI_Ly9", "HI_Ly10",
+        "HI_Ly11", "HI_Ly12", "HI_Ly13", "HI_Ly14", "HI_Ly21",
     ]
     base_fluxes = []
     for block in data_blocks:
@@ -350,7 +376,9 @@ def run_gate3(sightline=None):
     # spectra (which share wave, err and region bounds), so this is computed once
     # and reused for every likelihood evaluation in this step.
     frozen_grouped = build_model_components(
-        "M_NULL", theta_shared_base, None, pm, z_abs_ref, c_kms
+        "M_NULL", theta_shared_base, None, pm, z_abs_ref, c_kms,
+        d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
+        parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
     )
     frozen_cache = build_frozen_cache(frozen_grouped, data_blocks, engine)
     print_status(
@@ -370,7 +398,7 @@ def run_gate3(sightline=None):
     # belong to unrelated absorber systems along the line of sight; tying D to
     # them places the D absorption at a completely different wavelength, where
     # it fits unrelated residuals — a physically meaningless comparison.
-    parent_window_kms = 1000.0  # ±1000 km/s of the absorber systemic velocity
+    parent_window_kms = cfg.get("parent_window_kms") or 1000.0  # ±window of absorber systemic
     valid_parent_indices = []
     for j, c in enumerate(h_comps_obs):
         v = c_kms * (c["z"] - z_abs_ref) / (1.0 + z_abs_ref)
@@ -387,7 +415,9 @@ def run_gate3(sightline=None):
     for j in valid_parent_indices:
         def _obj_d_parent(p, _j=j):
             grouped = build_model_components(
-                "M_Dfree", theta_shared_base, p, pm, z_abs_ref, c_kms, parent_idx=_j
+                "M_Dfree", theta_shared_base, p, pm, z_abs_ref, c_kms, parent_idx=_j,
+                d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
+                parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
             )
             cand = split_frozen_candidate(grouped, frozen_grouped)
             res = compute_residuals_fast(cand, data_blocks, engine, frozen_cache)
@@ -414,8 +444,8 @@ def run_gate3(sightline=None):
         print_status(f"  Parent {j}: LL_D = {best_ll_D_parent:.2f}, T = {t_p:.2f}", "PROCESS")
     print_status(f"Observed T_parent_best = {T_obs_parent_best:.2f}", "PROCESS")
 
-    N_sims = cfg["monte_carlo"]["n_sims"]
-    seed_base = cfg["monte_carlo"]["seed_base"]
+    N_sims = cfg.get("monte_carlo", {}).get("n_sims", 1000)
+    seed_base = cfg.get("monte_carlo", {}).get("seed_base", 42)
     print_status(
         f"\n--- Running True-D Monte Carlo Simulations ({N_sims} realizations) ---",
         "TITLE",
@@ -444,6 +474,9 @@ def run_gate3(sightline=None):
                 frozen_grouped,
                 frozen_cache,
                 cfg_multistart_D,
+                cfg.get("d_velocity_offset_kms") or -81.6,
+                cfg.get("parent_window_kms") or 1000.0,
+                canonical_parent_idx,
             )
         )
 
@@ -477,7 +510,7 @@ def run_gate3(sightline=None):
     # Compute exact binomial 95% upper bound for the fair standard exceedances
     binom_95_upper = 1.0 - 0.05 ** (1.0 / N_sims) if exceedances_standard_fair == 0 else None
 
-    print_status(f"\nObserved T_obs (standard, parent 0) = {T_obs:.2f}", "PROCESS")
+    print_status(f"\nObserved T_obs (standard, canonical parent {canonical_parent_idx}) = {T_obs:.2f}", "PROCESS")
     print_status(f"Observed T_obs (best parent) = {T_obs_parent_best:.2f}", "PROCESS")
     print_status(f"Exceedances (fair standard, T_sim_standard >= {T_obs:.2f}): {exceedances_standard_fair}", "PROCESS")
     print_status(f"Calibrated p_add_one (fair standard) = {p_add_one_standard_fair:.5f}", "PROCESS")
@@ -498,7 +531,9 @@ def run_gate3(sightline=None):
 
         def obj_D(p):
             grouped = build_model_components(
-                "M_Dfree", theta_shared_base, p, pm, z_abs_ref, c_kms
+                "M_Dfree", theta_shared_base, p, pm, z_abs_ref, c_kms,
+                d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
+                parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
             )
             cand = split_frozen_candidate(grouped, frozen_grouped)
             res = compute_residuals_fast(cand, subset, engine, subset_cache)
@@ -513,7 +548,9 @@ def run_gate3(sightline=None):
 
         def obj_H(p):
             grouped = build_model_components(
-                "M_H", theta_shared_base, p, pm, z_abs_ref, c_kms
+                "M_H", theta_shared_base, p, pm, z_abs_ref, c_kms,
+                d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
+                parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
             )
             cand = split_frozen_candidate(grouped, frozen_grouped)
             res = compute_residuals_fast(cand, subset, engine, subset_cache)
@@ -526,7 +563,7 @@ def run_gate3(sightline=None):
                 )
             )
 
-        starts_D_loo = [[12.4, 10000.0, 1.0], [12.0, 5000.0, 1.0], [13.0, 20000.0, 5.0]]
+        starts_D_loo = [list(s) for s in cfg.get("multistart", {}).get("M_Dfree", [[12.4, 10000.0, 1.0]])]
         best_D = -np.inf
         for x0 in starts_D_loo:
             rD = minimize(obj_D, x0, method="L-BFGS-B", bounds=bounds_D)
@@ -544,6 +581,23 @@ def run_gate3(sightline=None):
     coadds = set(b["coadd"] for b in data_blocks)
     for c_exclude in coadds:
         mask = [b["coadd"] != c_exclude for b in data_blocks]
+        if not any(mask):
+            # Skip: removing this coadd would leave no data blocks
+            print_status(
+                f"Leave-one-out coadd '{c_exclude}': SKIPPED (single coadd, no data remaining)",
+                "PROCESS",
+            )
+            loo_ledger.append(
+                {
+                    "type": "coadd",
+                    "excluded": c_exclude,
+                    "T": 0.0,
+                    "LL_D": 0.0,
+                    "LL_H": 0.0,
+                    "skipped": True,
+                }
+            )
+            continue
         ll_d, ll_h = eval_loo_models(mask)
         t_loo = 2.0 * (ll_h - ll_d)
         print_status(
@@ -560,15 +614,18 @@ def run_gate3(sightline=None):
             }
         )
 
-    transitions_to_test = ["Lyα", "Lyβ", "Lyγ", "Ly6", "Ly13", "Ly14", "Ly21"]
+    transitions_to_test = [
+        "Lyα", "Lyβ", "Lyγ", "Lyδ", "Lyε",
+        "Ly6", "Ly7", "Ly8", "Ly9", "Ly10",
+        "Ly11", "Ly12", "Ly13", "Ly14", "Ly21",
+    ]
     transition_rest_wavelengths = {
-        "Lyα": 1215.6701,
-        "Lyβ": 1025.7223,
-        "Lyγ": 972.5368,
-        "Ly6": 930.7483,
-        "Ly13": 916.429,
-        "Ly14": 915.824,
-        "Ly21": 913.0,
+        "Lyα": 1215.6701, "Lyβ": 1025.7223, "Lyγ": 972.5368,
+        "Lyδ": 949.7420, "Lyε": 937.8010,
+        "Ly6": 930.7483, "Ly7": 926.2265, "Ly8": 923.1504,
+        "Ly9": 921.0263, "Ly10": 919.4295, "Ly11": 918.1294,
+        "Ly12": 917.1061, "Ly13": 916.4290, "Ly14": 915.8240,
+        "Ly21": 913.6510,
     }
 
     for trans in transitions_to_test:

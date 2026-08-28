@@ -101,7 +101,7 @@ def run_gate2(sightline=None):
     with open(noise_model_path, "r") as f:
         noise_cfg = json.load(f)
 
-    z_abs_ref = manifest["z_abs"]
+    z_abs_ref = cfg.get("z_abs", manifest["z_abs"])
     c_kms = 299792.458
 
     components_raw, regions = parse_vpfit_ties(vpfit_path)
@@ -174,7 +174,9 @@ def run_gate2(sightline=None):
     def make_obj(model_name):
         def obj(p):
             grouped = build_model_components(
-                model_name, theta_shared_base, p, pm, z_abs_ref, c_kms
+                model_name, theta_shared_base, p, pm, z_abs_ref, c_kms,
+                d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
+                parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
             )
             res = compute_residuals(grouped, data_blocks, engine)
             v_res = res[np.abs(res) < 100.0]
@@ -229,12 +231,14 @@ def run_gate2(sightline=None):
     obj_H = make_obj("M_H")
 
     comps = pm.reconstruct(theta_shared_base)
+    # Auto-detect the D parent: first H I with a D counterpart in VPFIT
+    d_zs = set(round(c["z"], 10) for c in comps if c["ion"] == "D_I")
     parent_h_v = 0.0
     for c in comps:
-        if c["ion"] == "H_I":
+        if c["ion"] == "H_I" and round(c["z"], 10) in d_zs:
             parent_h_v = c_kms * (c["z"] - z_abs_ref) / (1.0 + z_abs_ref)
             break
-    v_D = parent_h_v - 81.6
+    v_D = parent_h_v + (cfg.get("d_velocity_offset_kms") or -81.6)
 
     # Nesting-safe D-embedding start first, then configured starts.
     starts_H = [[v_D, opt_D[0], opt_D[1] / 2.0, opt_D[2]]]

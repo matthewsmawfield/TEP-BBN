@@ -1,39 +1,39 @@
-[13:32:59] [INFO] ================================================================================
-[13:32:59] [INFO] Script: step_07_global_opacity
-[13:32:59] [INFO] Started: 2026-08-26T13:32:59.917483
-[13:32:59] [INFO] ================================================================================
-[13:32:59] [SUCCESS] === STEP 07: GLOBAL OPACITY BOUNDARY ===
-[13:32:59] [PROCESS] 
+[01:14:57] [INFO] ================================================================================
+[01:14:57] [INFO] Script: step_07_global_opacity
+[01:14:57] [INFO] Started: 2026-08-28T01:14:57.568002
+[01:14:57] [INFO] ================================================================================
+[01:14:57] [SUCCESS] === STEP 07: GLOBAL OPACITY BOUNDARY ===
+[01:14:57] [PROCESS] 
 [AXIOM] Space does not cosmologically expand (a_m = 1).
-[13:32:59] [PROCESS] [AXIOM] Temporal horizon redshift arises from A(phi) -> 0.
-[13:33:00] [INFO] 
-[13:33:00] [INFO] ================================================================================
-[13:33:00] [INFO] 
+[01:14:57] [PROCESS] [AXIOM] Temporal horizon redshift arises from A(phi) -> 0.
+[01:14:57] [INFO] 
+[01:14:57] [INFO] ================================================================================
+[01:14:57] [INFO] 
 --- Analytical Opacity Boundary Verification ---
-[13:33:00] [INFO] ================================================================================
-[13:33:00] [INFO] 
-[13:33:00] [PROCESS] Step (i: Constant physical density (no plasma wall): n_e(x) = n_0
-[13:33:00] [PROCESS] Test 1: A(x) = exp(-x), z(x) = exp(x) - 1
-[13:33:00] [PROCESS]   tau(x) = n_0*sigma_T*x, limit = oo, divergent = True
-[13:33:00] [PROCESS] Test 2: A(x) = (1+x)^(-p), z(x) = (x + 1)**p - 1
-[13:33:00] [PROCESS]   tau(x) = n_0*sigma_T*x, limit = oo, divergent = True
-[13:33:00] [INFO] 
-[13:33:00] [INFO] ================================================================================
-[13:33:00] [INFO] 
+[01:14:57] [INFO] ================================================================================
+[01:14:57] [INFO] 
+[01:14:57] [PROCESS] Step (i: Constant physical density (no plasma wall): n_e(x) = n_0
+[01:14:57] [PROCESS] Test 1: A(x) = exp(-x), z(x) = exp(x) - 1
+[01:14:57] [PROCESS]   tau(x) = n_0*sigma_T*x, limit = oo, divergent = True
+[01:14:57] [PROCESS] Test 2: A(x) = (1+x)^(-p), z(x) = (x + 1)**p - 1
+[01:14:57] [PROCESS]   tau(x) = n_0*sigma_T*x, limit = oo, divergent = True
+[01:14:57] [INFO] 
+[01:14:57] [INFO] ================================================================================
+[01:14:57] [INFO] 
 --- Step (ii: Path Length Divergence ℓ(z) → ∞ ---
-[13:33:00] [INFO] ================================================================================
-[13:33:00] [INFO] 
-[13:33:00] [PROCESS]   ℓ(z) for exp: log(z + 1), limit = oo, divergent = True
-[13:33:00] [PROCESS]   ℓ(z) for power-law: (z + 1)**(1/p) - 1, limit = oo, divergent = True
-[13:33:00] [INFO] 
-[13:33:00] [INFO] ================================================================================
-[13:33:00] [INFO] 
+[01:14:57] [INFO] ================================================================================
+[01:14:57] [INFO] 
+[01:14:57] [PROCESS]   ℓ(z) for exp: log(z + 1), limit = oo, divergent = True
+[01:14:57] [PROCESS]   ℓ(z) for power-law: (z + 1)**(1/p) - 1, limit = oo, divergent = True
+[01:14:57] [INFO] 
+[01:14:57] [INFO] ================================================================================
+[01:14:57] [INFO] 
 --- Formal Limit at Temporal Horizon ---
-[13:33:00] [INFO] ================================================================================
-[13:33:00] [INFO] 
-[13:33:00] [SUCCESS] tau → ∞ for both A(x) forms: True
-[13:33:00] [SUCCESS] ℓ(z) → ∞ for both A(x) forms: True
-[13:33:00] [SUCCESS] 
+[01:14:57] [INFO] ================================================================================
+[01:14:57] [INFO] 
+[01:14:57] [SUCCESS] tau → ∞ for both A(x) forms: True
+[01:14:57] [SUCCESS] ℓ(z) → ∞ for both A(x) forms: True
+[01:14:57] [SUCCESS] 
 [SUCCESS] Step 07 Passed: In the static spatial geometry, the line-of-sight optical depth diverges at high redshift for any non-vanishing electron density, because (i) n_e is constant without FLRW dilution and (ii) the comoving path length ℓ(z) → ∞ as z → ∞ (conformal coordinate η → ∞ at the horizon, static spatial metric). This creates an observable boundary without a physical plasma wall.
-[13:33:00] [SUCCESS] 
+[01:14:57] [SUCCESS] 
 [COMPLETED] Step 07 predictions written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_07_global_opacity.json

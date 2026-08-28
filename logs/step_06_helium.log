@@ -1,12 +1,12 @@
-[13:32:58] [INFO] ================================================================================
-[13:32:58] [INFO] Script: step_06_helium
-[13:32:58] [INFO] Started: 2026-08-26T13:32:58.614434
-[13:32:58] [INFO] ================================================================================
-[13:32:58] [SUCCESS] === GATE 6: GCE BARYONIC-CYCLING EQUILIBRIUM ===
-[13:32:58] [PROCESS] Integrating GCE ODEs with Temporal Horizon sequestration...
-[13:32:58] [SUCCESS]   IC: Y=0.00, Z=0.00 -> Present Day: Y=0.2470, Z=0.0001
-[13:32:58] [SUCCESS]   IC: Y=0.80, Z=0.10 -> Present Day: Y=0.2470, Z=0.0001
-[13:32:58] [SUCCESS]   IC: Y=0.50, Z=0.50 -> Present Day: Y=0.2470, Z=0.0001
-[13:32:58] [PROCESS] 
+[01:14:56] [INFO] ================================================================================
+[01:14:56] [INFO] Script: step_06_helium
+[01:14:56] [INFO] Started: 2026-08-28T01:14:56.666160
+[01:14:56] [INFO] ================================================================================
+[01:14:56] [SUCCESS] === GATE 6: GCE BARYONIC-CYCLING EQUILIBRIUM ===
+[01:14:56] [PROCESS] Integrating GCE ODEs with Temporal Horizon sequestration...
+[01:14:57] [SUCCESS]   IC: Y=0.00, Z=0.00 -> Present Day: Y=0.2470, Z=0.0001
+[01:14:57] [SUCCESS]   IC: Y=0.80, Z=0.10 -> Present Day: Y=0.2470, Z=0.0001
+[01:14:57] [SUCCESS]   IC: Y=0.50, Z=0.50 -> Present Day: Y=0.2470, Z=0.0001
+[01:14:57] [PROCESS] 
 Theoretical Equilibrium: Y_eq = 0.2470, Z_eq = 0.0001
-[13:32:59] [SUCCESS] Gate 6 baryonic-cycling equilibrium verified. Plot saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_equilibrium.png
+[01:14:57] [SUCCESS] Gate 6 baryonic-cycling equilibrium verified. Plot saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_equilibrium.png

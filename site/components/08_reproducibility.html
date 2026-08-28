@@ -14,11 +14,11 @@
         GitHub Repository: <a href="https://github.com/matthewsmawfield/TEP-BBN">github.com/matthewsmawfield/TEP-BBN</a>
     </p>
     <p>
-        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 7 core analysis steps for spectroscopic embedding, baseline system fitting, Monte Carlo significance testing, absorber field closure, temporal horizon thermodynamics, primordial helium synthesis, and global opacity boundary analysis.
+        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 8 core analysis steps for spectroscopic embedding, baseline system fitting, Monte Carlo significance testing, absorber field closure, temporal horizon thermodynamics, primordial helium synthesis, and global opacity boundary analysis.
         All steps are orchestrated by <code>scripts/run_pipeline.py</code> with comprehensive per-step logging.
     </p>
     <p>
-        All raw VLT/UVES spectra (SQUAD DR1), structural likelihood matrices, and the temporal-field equation solvers are released in the Zenodo repository (<a href="https://doi.org/10.5281/zenodo.21841148" target="_blank">DOI: 10.5281/zenodo.21841148</a>) under CC-BY 4.0. The full codebase and execution environments are identical to the published version.
+        All raw spectroscopic data (VLT/UVES and VLT/ESPRESSO), structural likelihood matrices, and the temporal-field equation solvers are released in the Zenodo repository (<a href="https://doi.org/10.5281/zenodo.21841148" target="_blank">DOI: 10.5281/zenodo.21841148</a>) under CC-BY 4.0. The full codebase and execution environments are identical to the published version.
     </p>
 
     <h4>Repository Structure</h4>
@@ -26,13 +26,13 @@
 <pre>
 TEP-BBN/
 ├── data/
-│   ├── raw/                       # VLT/UVES spectroscopic exposures (SQUAD DR1)
+│   ├── raw/                       # Spectroscopic exposures (UVES, ESPRESSO)
 │   │   ├── atomic/                # Physical H I, D I line registries (NIST ASD)
 │   │   └── reduced_products/      # Pre-reduced and co-added normalized spectra
 │   ├── literature_components/     # Published VPFIT model files and component tables
 │   └── processed/                 # Pipeline-ready union manifests
 ├── scripts/
-│   ├── steps/                     # 7 deterministic pipeline steps (01-07)
+│   ├── steps/                     # 8 deterministic pipeline steps (01-08)
 │   ├── lib/                       # Physical RT engine, Voigt fitters, model parsers
 │   └── run_pipeline.py            # Master orchestration script
 ├── configs/
@@ -68,6 +68,20 @@ TEP-BBN/
                 <td style="padding: 0.5em;"><code>data/raw/reduced_products/Q1009+2956_z2.504_UVES/</code></td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.5em;">PKS 1937$-$101 Spectra</td>
+                <td style="padding: 0.5em;">VLT/ESPRESSO (Cooke et al. 2024)</td>
+                <td style="padding: 0.5em;">ESO Archive</td>
+                <td style="padding: 0.5em;">3 exposures</td>
+                <td style="padding: 0.5em;"><code>data/raw/spectra/PKS1937-101_z3.572_ESPRESSO/</code></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.5em;">J1332$+$0052 Spectra</td>
+                <td style="padding: 0.5em;">VLT/UVES (Riemer-Sørensen et al. 2024)</td>
+                <td style="padding: 0.5em;">ESO Archive</td>
+                <td style="padding: 0.5em;">24 exposures</td>
+                <td style="padding: 0.5em;"><code>data/raw/spectra/J1332+0052_z3.420_UVES/</code></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
                 <td style="padding: 0.5em;">Atomic Data</td>
                 <td style="padding: 0.5em;">NIST ASD <a href="#ref49">[49]</a></td>
                 <td style="padding: 0.5em;">Static Registry</td>
@@ -75,39 +89,46 @@ TEP-BBN/
                 <td style="padding: 0.5em;"><code>data/raw/atomic/</code></td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
-                <td style="padding: 0.5em;">Literature Model</td>
+                <td style="padding: 0.5em;">Q1009+2956 Model</td>
                 <td style="padding: 0.5em;">Zavarygin et al. <a href="#ref44">[44]</a> / VPFIT <a href="#ref50">[50]</a></td>
                 <td style="padding: 0.5em;">Static File</td>
                 <td style="padding: 0.5em;">43 H I + 3 D I components</td>
                 <td style="padding: 0.5em;"><code>data/literature_components/model_6a.26</code></td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
-                <td style="padding: 0.5em;">Component Table</td>
-                <td style="padding: 0.5em;">Zavarygin et al. <a href="#ref44">[44]</a></td>
+                <td style="padding: 0.5em;">PKS 1937$-$101 Model</td>
+                <td style="padding: 0.5em;">Cooke et al. 2024 / VPFIT <a href="#ref50">[50]</a></td>
                 <td style="padding: 0.5em;">Static File</td>
-                <td style="padding: 0.5em;">2 velocity components</td>
-                <td style="padding: 0.5em;"><code>data/literature_components/Q1009+2956_z2.504_component_table.csv</code></td>
+                <td style="padding: 0.5em;">184 H I + 3 D I components</td>
+                <td style="padding: 0.5em;"><code>data/literature_components/PKS1937-101_z3.572_vpfit_model.26</code></td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.5em;">J1332$+$0052 Model</td>
+                <td style="padding: 0.5em;">Riemer-Sørensen et al. 2024 / VPFIT <a href="#ref50">[50]</a></td>
+                <td style="padding: 0.5em;">Static File</td>
+                <td style="padding: 0.5em;">4 H I + 4 D I components</td>
+                <td style="padding: 0.5em;"><code>data/literature_components/J1332+0052_z3.420_vpfit_model.26</code></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
                 <td style="padding: 0.5em;">Prior Bounds</td>
                 <td style="padding: 0.5em;">Derived</td>
                 <td style="padding: 0.5em;">Static File</td>
                 <td style="padding: 0.5em;">All variables</td>
-                <td style="padding: 0.5em;"><code>configs/tep_priors.yaml</code></td>
+                <td style="padding: 0.5em;"><code>configs/sightlines/*.json</code></td>
             </tr>
         </tbody>
     </table>
 
     <h3>Pipeline Architecture</h3>
     <p>
-        The analysis pipeline comprises 7 deterministic steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, and opacity boundary analysis.
+        The analysis pipeline comprises 8 deterministic steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, and opacity boundary analysis.
         Each step is a standalone Python script in <code>scripts/steps/</code> that produces serialized outputs and
         detailed logs.
     </p>
 
     <h4>Complete Step Inventory and Runtime</h4>
     <p style="font-size: 0.85em; color: #555; margin-bottom: 0.5em;">
-        Runtimes are approximate and measured on Apple M4 Pro (14-core, 24 GB). The dominant cost is the Monte Carlo significance test (step 03), which scales with the number of realizations multiplied by the 43-parent reassignment refit performed inside each realization.
+        Runtimes are approximate and measured on Apple M4 Pro (14-core, 24 GB). The dominant cost is the Monte Carlo significance test (step 03), which scales with the number of realizations multiplied by the parent reassignment refit performed inside each realization.
     </p>
 
     <table style="width: 100%; border-collapse: collapse; font-size: 0.85em; margin: 1em 0;">
@@ -129,14 +150,14 @@ TEP-BBN/
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
                 <td style="padding: 0.4em;">02</td>
                 <td style="padding: 0.4em;"><code>step_02_q1009.py</code></td>
-                <td style="padding: 0.4em;">Nested-hypothesis fit of the Q1009+2956 absorption complex on the fixed shared scaffold (multi-start; nesting invariants verified)</td>
+                <td style="padding: 0.4em;">Nested-hypothesis fit of the absorption complex on the fixed shared scaffold (multi-start; nesting invariants verified)</td>
                 <td style="padding: 0.4em;">~30 s</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
                 <td style="padding: 0.4em;">03</td>
                 <td style="padding: 0.4em;"><code>step_03_significance.py</code></td>
-                <td style="padding: 0.4em;">1000-realization Monte Carlo significance test and true-D injection (43-parent reassignment inside each realization)</td>
-                <td style="padding: 0.4em;">~7.5 hr</td>
+                <td style="padding: 0.4em;">200-realization Monte Carlo significance test and true-D injection (parent reassignment inside each realization)</td>
+                <td style="padding: 0.4em;">~25 min</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
                 <td style="padding: 0.4em;">04</td>
@@ -162,6 +183,12 @@ TEP-BBN/
                 <td style="padding: 0.4em;">Analytical proof of divergent optical depth in the static spatial geometry (Opacity Boundary)</td>
                 <td style="padding: 0.4em;">~1 s</td>
             </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.4em;">08</td>
+                <td style="padding: 0.4em;"><code>step_08_light_elements.py</code></td>
+                <td style="padding: 0.4em;">Light-element network and convergence constraints</td>
+                <td style="padding: 0.4em;">~5 s</td>
+            </tr>
         </tbody>
     </table>
 
@@ -174,13 +201,13 @@ TEP-BBN/
         </tr>
         <tr style="border-bottom: 1px solid #d0d7e0;">
             <td style="padding: 0.4em;">All Analysis Stages</td>
-            <td style="padding: 0.4em;">7</td>
-            <td style="padding: 0.4em;">~7.5 hr</td>
+            <td style="padding: 0.4em;">8</td>
+            <td style="padding: 0.4em;">~30 min per sightline</td>
         </tr>
         <tr style="border-bottom: 2px solid #4a7fb5; font-weight: 600;">
-            <td style="padding: 0.4em;">Total</td>
-            <td style="padding: 0.4em;">7</td>
-            <td style="padding: 0.4em;">~7.5 hr</td>
+            <td style="padding: 0.4em;">Total (3 sightlines)</td>
+            <td style="padding: 0.4em;">8</td>
+            <td style="padding: 0.4em;">~1.5 hr</td>
         </tr>
     </table>
 
@@ -200,7 +227,7 @@ pip install -r requirements-lock.txt
 python scripts/run_pipeline.py
 
 # 3b. Run a specific sightline
-python scripts/run_pipeline.py --sightline PKS1937-1009
+python scripts/run_pipeline.py --sightline PKS1937-101
 
 # 3c. Run all sightlines with ingested data
 python scripts/run_pipeline.py --all-sightlines
@@ -213,7 +240,7 @@ python scripts/run_pipeline.py --all-sightlines
     <p>
         The pipeline supports multiple D/H absorber sightlines through per-sightline JSON configuration files in <code>configs/sightlines/</code>.
         Each config specifies the data manifest path, VPFIT model file, noise model, absorber redshift, candidate parameter bounds, multi-start initial points, and Monte Carlo settings.
-        The Q1009+2956 config reproduces the exact hardcoded values from the original pipeline, ensuring bit-identical backward compatibility.
+        Three sightlines are currently supported with ingested data: Q1009+2956 (UVES, $z=2.504$), PKS 1937$-$101 (ESPRESSO, $z=3.572$), and J1332$+$0052 (UVES, $z=3.421$).
         Sightlines without ingested data (PKS 1937$-$1009, HS 0105+1619) are automatically skipped with a diagnostic message.
     </p>
 

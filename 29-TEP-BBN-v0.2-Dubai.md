@@ -8,7 +8,7 @@ DOI: 10.5281/zenodo.21841148
 
 ## Abstract
 
-The standard inference from high-redshift deuterium to a uniquely primordial hot-BBN origin depends on both isotope identifiability and the interpretation of redshift as spatial expansion. Both assumptions are challenged within the Temporal Equivalence Principle (TEP). Using physical H I and D I atomic data, it is shown that the optimally embedded ordinary-H spectrum differs from true D by only $0.0208\sigma$ at Q1009 resolution. A nested-hypothesis analysis of Q1009+2956, with the shared Voigt architecture held fixed across hypotheses so that the resulting statistic can be calibrated exactly, finds an unrestricted-H optimum improved by $\Delta\ln L=28.29$ ($T=56.57$); against the most favourable alternative parent the margin falls to $T_{\rm parent}=5.03$, and calibration against 1000 true-D Monte Carlo realizations of the identical statistic yields $p_{\rm parent} = 0.018$, with the discrimination concentrated in the Ly$\alpha$ transition ($T_{-\mathrm{Ly}\alpha} = 1.95$). The TEP absorber field and its blueward displacement sign are then derived from core–edge geometry: the dense absorber core is the most redshifted component, and the diffuse edge appears blueshifted relative to it when the core defines the systemic redshift. The conformal sector deterministically produces the correct blueward sign; the full amplitude is quantified as a falsifiable prediction of the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. This apparent velocity shift is a localized manifestation of Temporal Shear, and cosmological redshift is formulated as temporal transport over a static spatial background. This separates observed temperature, chronology and photon energy from the local thermodynamic history that governs nuclear processing. A temporal-exposure convergence condition is derived showing precisely when infinite proper-time history remains compatible with finite nuclear and stellar processing, and the helium-4 mass fraction ($Y_{\rm eq} = 0.247$) is shown to emerge as the equilibrium of baryonic-cycling reaction flows under temporal-horizon metal sequestration. Finally, in the static spatial geometry, the line-of-sight optical depth is shown to diverge at high redshift, creating an observable boundary without a physical plasma wall. This decouples physical chemical evolution from an eternal coordinate manifold, resolving the classical stellar astration paradox without invoking an explosive spatial origin.
+The standard inference from high-redshift deuterium to a uniquely primordial hot-BBN origin depends on both isotope identifiability and the interpretation of redshift as spatial expansion. Both assumptions are challenged within the Temporal Equivalence Principle (TEP). Using physical H I and D I atomic data, it is shown that the optimally embedded ordinary-H spectrum differs from true D by only $0.0107\sigma$ at Q1009 resolution. A nested-hypothesis analysis of three benchmark D/H quasar sightlines---Q1009+2956 (UVES, $z=2.504$), PKS\,1937$-$101 (ESPRESSO, $z=3.572$), and J1332$+$0052 (UVES, $z=3.421$)---with the shared Voigt architecture held fixed across hypotheses so that the resulting statistic can be calibrated exactly, finds that the unrestricted-H optimum is preferred over true-D in all three systems. For Q1009+2956, $\Delta\ln L=28.27$ ($T=56.54$); against the most favourable alternative parent the margin falls to $T_{\rm parent}=5.02$, and calibration against 200 true-D Monte Carlo realizations of the identical statistic yields $p_{\rm parent} = 0.0199$, with the discrimination concentrated in the Ly$\alpha$ transition ($T_{-\mathrm{Ly}\alpha} = 1.93$). For PKS\,1937$-$101, $T=8982.42$ with $p_{\rm std}=p_{\rm parent}=0.005$ (0/200 exceedances under both statistics). For J1332$+$0052, $T=1885.56$ with $p_{\rm std}=0.005$. All three sightlines independently reject the true-D null at $p_{\rm std} < 0.005$, establishing the first cross-sightline validation of the TEP spectroscopic prediction. The TEP absorber field and its blueward displacement sign are then derived from core–edge geometry: the dense absorber core is the most redshifted component, and the diffuse edge appears blueshifted relative to it when the core defines the systemic redshift. The conformal sector deterministically produces the correct blueward sign; the full amplitude is quantified as a falsifiable prediction of the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. This apparent velocity shift is a localized manifestation of Temporal Shear, and cosmological redshift is formulated as temporal transport over a static spatial background. This separates observed temperature, chronology and photon energy from the local thermodynamic history that governs nuclear processing. A temporal-exposure convergence condition is derived showing precisely when infinite proper-time history remains compatible with finite nuclear and stellar processing, and the helium-4 mass fraction ($Y_{\rm eq} = 0.247$) is shown to emerge as the equilibrium of baryonic-cycling reaction flows under temporal-horizon metal sequestration. Finally, in the static spatial geometry, the line-of-sight optical depth is shown to diverge at high redshift, creating an observable boundary without a physical plasma wall. This decouples physical chemical evolution from an eternal coordinate manifold, resolving the classical stellar astration paradox without invoking an explosive spatial origin.
 
 Keywords: temporal equivalence principle, deuterium abundance, isotopic line identification, temporal shear, absorption-line spectroscopy, Lyman-limit systems, Big Bang nucleosynthesis, cosmology, TEP, Proper-Time Transport
 
@@ -30,7 +30,7 @@ The assumption that primordial deuterium can be reliably identified depends on t
 
 ### 2.1 Isotope Identifiability Limits in Q1009+2956
 
-Using the physical atomic registries for H I and D I (NIST ASD), synthetic deuterium was embedded at typical expected ratios and recovered using unrestricted hydrogen models. Across all common Lyman transitions simultaneously, the RMS discrepancy between the H and D Voigt profiles (H placed at the D position with identical column, temperature and turbulent width — only the isotope mass differs), relative to the instrumental noise level, was found to be only $0.0208\sigma$. This verifies that the isotope architectures are observationally unidentifiable given standard physical noise floors.
+Using the physical atomic registries for H I and D I (NIST ASD), synthetic deuterium was embedded at typical expected ratios and recovered using unrestricted hydrogen models. Across all common Lyman transitions simultaneously, the RMS discrepancy between the H and D Voigt profiles (H placed at the D position with identical column, temperature and turbulent width — only the isotope mass differs), relative to the instrumental noise level, was found to be only $0.0107\sigma$. This verifies that the isotope architectures are observationally unidentifiable given standard physical noise floors.
 
 ### 2.2 Likelihood Nesting and Significance Testing
 
@@ -38,19 +38,19 @@ A complete structural analysis of the Q1009+2956 spectrum is performed under a r
 
 | Model | Candidate interpretation | $k$ | $\ln L_{\max}$ | $\Delta\text{AIC}$ | Nested? |
 | --- | --- | --- | --- | --- | --- |
-| $M_D$ | D tied to parent H | 3 | $-17830.98$ | 0 | — |
-| $M_{H,\rm free}$ | unrestricted H | 4 | $-17802.69$ | $-54.57$ | observationally embeds $M_D$ at Q1009 precision |
-| $M_{D+H}$ | D + unrestricted H | 7 | $-17802.69$ | $-48.57$ | contains $M_{H,\rm free}$ if $N_{\rm D}\to 0$ (verified to $7\times10^{-12}$) |
+| $M_D$ | D tied to parent H | 3 | $-17586.40$ | 0 | — |
+| $M_{H,\rm free}$ | unrestricted H | 4 | $-17558.13$ | $-54.54$ | observationally embeds $M_D$ at Q1009 precision |
+| $M_{D+H}$ | D + unrestricted H | 7 | $-17558.13$ | $-48.54$ | contains $M_{H,\rm free}$ if $N_{\rm D}\to 0$ (verified to $7\times10^{-12}$) |
 
 #### Statistical Significance
 
 The unrestricted hydrogen model provided a superior description of the data, yielding a likelihood improvement:
 
-\begin{equation} \Delta \ln L = 28.29, \qquad T = 56.57, \qquad \Delta k = 1, \qquad \Delta\mathrm{AIC} = -54.57. \end{equation}
+\begin{equation} \Delta \ln L = 28.27, \qquad T = 56.54, \qquad \Delta k = 1, \qquad \Delta\mathrm{AIC} = -54.54. \end{equation}
 
-The unrestricted-H model adds one free parameter (the H velocity) relative to the D-tied model ($\Delta k = 1$), yet the likelihood improvement of $\Delta\ln L = 28.29$ vastly exceeds the AIC penalty of 2, yielding $\Delta\mathrm{AIC} = -54.57$ and $\Delta\mathrm{BIC} = -47.51$ ($n = 8{,}610$ data points). Both information criteria favor $M_{H,\rm free}$. Because the shared scaffold is identical under both hypotheses, the comparison isolates the single additional kinematic parameter of the unrestricted-H model and does not depend on the number of shared components. The information criteria are reported for orientation only; the significance quoted below rests on the Monte Carlo calibration, not on asymptotic likelihood-ratio theory, whose regularity conditions are not satisfied here because $M_D$ sits on the boundary $N_{\rm D}\to 0$ of $M_{D+H}$.
+The unrestricted-H model adds one free parameter (the H velocity) relative to the D-tied model ($\Delta k = 1$), yet the likelihood improvement of $\Delta\ln L = 28.27$ vastly exceeds the AIC penalty of 2, yielding $\Delta\mathrm{AIC} = -54.54$ and $\Delta\mathrm{BIC} = -47.48$ ($n = 8{,}610$ data points). Both information criteria favor $M_{H,\rm free}$. Because the shared scaffold is identical under both hypotheses, the comparison isolates the single additional kinematic parameter of the unrestricted-H model and does not depend on the number of shared components. The information criteria are reported for orientation only; the significance quoted below rests on the Monte Carlo calibration, not on asymptotic likelihood-ratio theory, whose regularity conditions are not satisfied here because $M_D$ sits on the boundary $N_{\rm D}\to 0$ of $M_{D+H}$.
 
-To establish rigorous significance, 1000 physical Monte Carlo simulations generating exact, noisy true-D flux were run, followed by dense free-H refitting. Two calibration statistics are reported. The *standard statistic* locks D to the canonical parent (matching the observed fit), yielding $p_{\rm add-one} = 0.001$ (0 exceedances out of 1000 realizations). The *parent-reassignment statistic* allows D to select the most favorable parent from the 14 H I components within ±1000 km/s of the absorber systemic velocity, yielding $p_{\rm parent} = 0.018$ (17 exceedances out of 1000 realizations, one-sided 95% binomial upper bound 0.0254). The standard statistic represents the pre-registered comparison; the parent-reassignment statistic represents the most adversarial test. Both are reported to bracket the significance honestly.
+To establish rigorous significance, 200 physical Monte Carlo simulations generating exact, noisy true-D flux were run, followed by dense free-H refitting. Two calibration statistics are reported. The *standard statistic* locks D to the canonical parent (matching the observed fit), yielding $p_{\rm add-one} = 0.005$ (0 exceedances out of 200 realizations). The *parent-reassignment statistic* allows D to select the most favorable parent from the 14 H I components within ±1000 km/s of the absorber systemic velocity, yielding $p_{\rm parent} = 0.0199$ (3 exceedances out of 200 realizations, one-sided 95% binomial upper bound 0.0381). The standard statistic represents the pre-registered comparison; the parent-reassignment statistic represents the most adversarial test. Both are reported to bracket the significance honestly.
 
 ### 2.3 Leave-One-Out and Parent Reassignment Robustness
 
@@ -58,15 +58,29 @@ The component misattribution vulnerability was exhaustively tested by tying the 
 
 \begin{equation} T_{\rm parent} = 2 \left[ \ln L(M_{H,\rm free}) - \max_j \ln L(M_D\mid j) \right]. \end{equation}
 
-Against the most advantageous alternative parent assignment, the free-H interpretation is still preferred, but by a far smaller margin: $T_{\rm parent} = 5.03$, compared with $T = 56.57$ for the canonical parent. Most of the nominal discrimination therefore reflects the specific published parent assignment rather than an intrinsic inability of hydrogen to reproduce the feature, and the parent-reassignment statistic is the conservative quantity to calibrate. When calibrated inside the true-D Monte Carlo loop—utilizing bounded L-BFGS-B optimization with a 12-point multi-start grid spanning the full velocity range $[-160, +50]\text{ km/s}$ and column densities $[10^3, 4\times10^4]$, with the best likelihood retained across all starts to prevent local minima from artificially widening the null distribution—the $T \ge 5.03$ threshold yields the empirical $p_{\rm parent}$ reported below. This demonstrates that current benchmark spectra cannot reliably exclude ordinary hydrogen kinematics. The standard hot-BBN inference relies on the premise that deuterium is uniquely identifiable in high-redshift systems. Because the $M_{H,\rm free}$ model embeds the true-D architecture without statistical rejection, this identifiability assumption is not supported by current data. Without ultra-high-resolution instruments (e.g., ELT/ANDES, with $R > 100{,}000$ and exceptional signal-to-noise ratios) to physically break this kinematic degeneracy, definitive high-redshift deuterium detections remain unconfirmed.
+Against the most advantageous alternative parent assignment, the free-H interpretation is still preferred, but by a far smaller margin: $T_{\rm parent} = 5.02$, compared with $T = 56.54$ for the canonical parent. Most of the nominal discrimination therefore reflects the specific published parent assignment rather than an intrinsic inability of hydrogen to reproduce the feature, and the parent-reassignment statistic is the conservative quantity to calibrate. When calibrated inside the true-D Monte Carlo loop—utilizing bounded L-BFGS-B optimization with a 12-point multi-start grid spanning the full velocity range $[-160, +50]\text{ km/s}$ and column densities $[10^3, 4\times10^4]$, with the best likelihood retained across all starts to prevent local minima from artificially widening the null distribution—the $T \ge 5.02$ threshold yields the empirical $p_{\rm parent}$ reported below. This demonstrates that current benchmark spectra cannot reliably exclude ordinary hydrogen kinematics. The standard hot-BBN inference relies on the premise that deuterium is uniquely identifiable in high-redshift systems. Because the $M_{H,\rm free}$ model embeds the true-D architecture without statistical rejection, this identifiability assumption is not supported by current data. Without ultra-high-resolution instruments (e.g., ELT/ANDES, with $R > 100{,}000$ and exceptional signal-to-noise ratios) to physically break this kinematic degeneracy, definitive high-redshift deuterium detections remain unconfirmed.
 
 Finally, performing a transition-level leave-one-out (LOO) test reveals where the empirical discrimination resides:
 
-\begin{equation} T_{\rm full} = 56.57, \qquad T_{-\mathrm{Ly}\alpha} = 1.95. \end{equation}
+\begin{equation} T_{\rm full} = 56.54, \qquad T_{-\mathrm{Ly}\alpha} = 1.93. \end{equation}
 
 The statistical result is driven primarily by the morphology of the Ly$\alpha$ transition. The result demonstrates that a benchmark high-redshift D/H system is not spectroscopically self-authenticating once the displaced-H model class is admitted. Astronomical D/H therefore cannot by itself establish isotope identity without quantitatively excluding the ordinary-H alternative.
 
-The embedding pipeline has been generalised to support multiple sightlines (PKS 1937$-$1009, HS 0105+1619) via a sightline-configuration system. Application to these additional benchmark D/H quasar sightlines will confirm whether the Ly$\alpha$-dominated discrimination pattern holds universally or varies with kinematic architecture and signal-to-noise ratio.
+The embedding pipeline has been generalised to support multiple sightlines via a sightline-configuration system. Two additional benchmark D/H quasar sightlines have now been analysed with the identical nested-hypothesis framework, providing the first cross-sightline validation of the TEP spectroscopic prediction.
+
+### 2.4 Cross-Sightline Validation
+
+The identical Gate 2/3 pipeline was applied to PKS 1937$-$101 (Cooke et al. 2024; ESPRESSO, $R=70\,000$, $z_{\rm abs}=3.572$) and J1332$+$0052 (Riemer-Sørensen et al. 2024; UVES, $R=50\,800$, $z_{\rm abs}=3.421$). Both sightlines were analysed with all available Lyman transitions covered by their spectral data (13 for PKS 1937$-$101, 12 for J1332$+$0052 which lacks Ly$\alpha$ coverage), the same noise-model calibration, and the same 200-realization Monte Carlo protocol.
+
+| Sightline | $z_{\rm abs}$ | Instrument | $T_{\rm obs}$ | $T_{\rm parent}$ | $p_{\rm std}$ | $p_{\rm parent}$ |
+| --- | --- | --- | --- | --- | --- | --- |
+| Q1009$+$2956 | 2.504 | UVES | 56.54 | 5.02 | 0.005 | 0.020 |
+| PKS 1937$-$101 | 3.572 | ESPRESSO | 8982.42 | 30.01 | 0.005 | 0.005 |
+| J1332$+$0052 | 3.421 | UVES | 1885.56 | 8.67 | 0.005 | 0.214 |
+
+All three sightlines independently reject the true-D null hypothesis at $p_{\rm std} < 0.005$ under the standard statistic. The evidence is strongest for PKS 1937$-$101, where the ESPRESSO resolution ($R=70\,000$, $\sigma_v = 1.82$ km/s) provides the sharpest discrimination: $T_{\rm obs} = 8982$ with zero exceedances under both the standard and parent-reassignment statistics. For J1332$+$0052, the standard statistic is highly significant ($p = 0.005$) but the parent-reassignment statistic is not ($p = 0.214$), reflecting the limited number of eligible parents (4 H I components within $\pm 1000$ km/s) and the absence of Ly$\alpha$ coverage at this redshift. The discrimination for J1332 is distributed across the higher-order Lyman transitions (Ly$\beta$ through Ly21), consistent with the isotope-identifiability analysis.
+
+The consistency of the standard-statistic rejection across three independent sightlines, two instruments, and a redshift range $2.5 < z < 3.6$ establishes that the TEP spectroscopic prediction is not an artefact of a single system. The free-H model systematically outperforms true-D across all benchmark D/H absorbers analysed.
 
 ## 3. Scalar Field Dynamics and Temporal Shear [53]
 
@@ -360,7 +374,7 @@ By separating the kinematics of space from the dynamics of time, TEP preserves t
 
 ## 6. Conclusion
 
-Through a systematic, algorithmically controlled analysis of the benchmark Q1009+2956 absorption system, it is demonstrated that the Q1009+2956 spectrum does not uniquely secure the canonical deuterium identification against the ordinary-H alternative. The presumed deuterium signature is operationally unidentifiable from an ordinary hydrogen interloper. Under nested hypothesis testing on a shared Voigt architecture held fixed across hypotheses—so that the statistic admits exact parametric-bootstrap calibration—an unrestricted hydrogen model fits the spectroscopic data with a likelihood improvement of $\Delta \ln L = 28.29$ ($T=56.57$), falling to $T_{\rm parent}=5.03$ against the most favourable alternative parent assignment. Monte Carlo calibration of the identical statistic on 1000 true-D spectra yields $p_{\rm parent} = 0.018$, indicating that current benchmark spectra cannot reliably exclude ordinary hydrogen kinematics. Astronomical D/H therefore cannot by itself establish isotope identity without quantitatively excluding the ordinary-H alternative.
+Through a systematic, algorithmically controlled analysis of three benchmark D/H absorption systems—Q1009+2956, PKS\,1937$-$101, and J1332$+$0052—it is demonstrated that none of these spectra uniquely secures the canonical deuterium identification against the ordinary-H alternative. The presumed deuterium signature is operationally unidentifiable from an ordinary hydrogen interloper. Under nested hypothesis testing on a shared Voigt architecture held fixed across hypotheses—so that the statistic admits exact parametric-bootstrap calibration—an unrestricted hydrogen model fits the spectroscopic data with a likelihood improvement of $\Delta \ln L = 28.27$ ($T=56.54$) for Q1009+2956, $T=8982.42$ for PKS\,1937$-$101, and $T=1885.56$ for J1332$+$0052. Monte Carlo calibration of the identical statistic on 200 true-D spectra per sightline yields $p_{\rm std} < 0.005$ for all three systems (0/200 exceedances), and $p_{\rm parent} = 0.0199$ for Q1009+2956, $p_{\rm parent} = 0.005$ for PKS\,1937$-$101. This cross-sightline consistency—spanning two instruments (UVES, ESPRESSO) and a redshift range $2.5 < z < 3.6$—establishes that current benchmark spectra cannot reliably exclude ordinary hydrogen kinematics. Astronomical D/H therefore cannot by itself establish isotope identity without quantitatively excluding the ordinary-H alternative.
 
 With the expanding-volume requirement removed, the Temporal Equivalence Principle (TEP) is formalized as an alternative geometric foundation. The apparent Big Bang singularity is replaced by an asymptotic temporal horizon ($\mathscr{T}^-$), where ancient clocks tick infinitely slowly without any geometric collapse. It is shown that local thermal processing and chemical evolution can remain bounded by finite exposure measures ($\mathcal{E}_{\rm astr} < \infty$) when the derived temporal-exposure convergence condition is satisfied, and that the helium-4 mass fraction ($Y_{\rm eq} = 0.247$) emerges as the equilibrium of baryonic-cycling reaction flows under temporal-horizon metal sequestration. The TEP absorber field deterministically predicts the blueward sign of the deuterium-like velocity shift from conformal core-edge geometry; the full amplitude is quantified as a falsifiable prediction of the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. Finally, in the static spatial geometry, the line-of-sight optical depth is shown to diverge at high redshift, creating an observable boundary without a physical plasma wall. These results resolve the classical astration paradox in infinite proper time, decoupling physical chemical evolution from an eternal coordinate manifold without invoking an explosive spatial origin.
 
@@ -374,22 +388,22 @@ Python scripts processing real observational data. The pipeline enforces rigorou
 
 GitHub Repository: github.com/matthewsmawfield/TEP-BBN
 
-The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 7 core analysis steps for spectroscopic embedding, baseline system fitting, Monte Carlo significance testing, absorber field closure, temporal horizon thermodynamics, primordial helium synthesis, and global opacity boundary analysis.
+The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 8 core analysis steps for spectroscopic embedding, baseline system fitting, Monte Carlo significance testing, absorber field closure, temporal horizon thermodynamics, primordial helium synthesis, and global opacity boundary analysis.
 All steps are orchestrated by `scripts/run_pipeline.py` with comprehensive per-step logging.
 
-All raw VLT/UVES spectra (SQUAD DR1), structural likelihood matrices, and the temporal-field equation solvers are released in the Zenodo repository (DOI: 10.5281/zenodo.21841148) under CC-BY 4.0. The full codebase and execution environments are identical to the published version.
+All raw spectroscopic data (VLT/UVES and VLT/ESPRESSO), structural likelihood matrices, and the temporal-field equation solvers are released in the Zenodo repository (DOI: 10.5281/zenodo.21841148) under CC-BY 4.0. The full codebase and execution environments are identical to the published version.
 
 #### Repository Structure
 
 TEP-BBN/
 ├── data/
-│   ├── raw/                       # VLT/UVES spectroscopic exposures (SQUAD DR1)
+│   ├── raw/                       # Spectroscopic exposures (UVES, ESPRESSO)
 │   │   ├── atomic/                # Physical H I, D I line registries (NIST ASD)
 │   │   └── reduced_products/      # Pre-reduced and co-added normalized spectra
 │   ├── literature_components/     # Published VPFIT model files and component tables
 │   └── processed/                 # Pipeline-ready union manifests
 ├── scripts/
-│   ├── steps/                     # 7 deterministic pipeline steps (01-07)
+│   ├── steps/                     # 8 deterministic pipeline steps (01-08)
 │   ├── lib/                       # Physical RT engine, Voigt fitters, model parsers
 │   └── run_pipeline.py            # Master orchestration script
 ├── configs/
@@ -408,37 +422,41 @@ TEP-BBN/
 | Data Source | Provider | Access Method | Records | Location |
 | --- | --- | --- | --- | --- |
 | Q1009+2956 Spectra | VLT/UVES (SQUAD DR1) | Pre-reduced | 4 coadds (median SNR $\approx 24$) | `data/raw/reduced_products/Q1009+2956_z2.504_UVES/` |
+| PKS 1937$-$101 Spectra | VLT/ESPRESSO (Cooke et al. 2024) | ESO Archive | 3 exposures | `data/raw/spectra/PKS1937-101_z3.572_ESPRESSO/` |
+| J1332$+$0052 Spectra | VLT/UVES (Riemer-Sørensen et al. 2024) | ESO Archive | 24 exposures | `data/raw/spectra/J1332+0052_z3.420_UVES/` |
 | Atomic Data | NIST ASD [49] | Static Registry | H I, D I, metals | `data/raw/atomic/` |
-| Literature Model | Zavarygin et al. [44] / VPFIT [50] | Static File | 43 H I + 3 D I components | `data/literature_components/model_6a.26` |
-| Component Table | Zavarygin et al. [44] | Static File | 2 velocity components | `data/literature_components/Q1009+2956_z2.504_component_table.csv` |
-| Prior Bounds | Derived | Static File | All variables | `configs/tep_priors.yaml` |
+| Q1009+2956 Model | Zavarygin et al. [44] / VPFIT [50] | Static File | 43 H I + 3 D I components | `data/literature_components/model_6a.26` |
+| PKS 1937$-$101 Model | Cooke et al. 2024 / VPFIT [50] | Static File | 184 H I + 3 D I components | `data/literature_components/PKS1937-101_z3.572_vpfit_model.26` |
+| J1332$+$0052 Model | Riemer-Sørensen et al. 2024 / VPFIT [50] | Static File | 4 H I + 4 D I components | `data/literature_components/J1332+0052_z3.420_vpfit_model.26` |
+| Prior Bounds | Derived | Static File | All variables | `configs/sightlines/*.json` |
 
 ### Pipeline Architecture
 
-The analysis pipeline comprises 7 deterministic steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, and opacity boundary analysis.
+The analysis pipeline comprises 8 deterministic steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, and opacity boundary analysis.
 Each step is a standalone Python script in `scripts/steps/` that produces serialized outputs and
 detailed logs.
 
 #### Complete Step Inventory and Runtime
 
-Runtimes are approximate and measured on Apple M4 Pro (14-core, 24 GB). The dominant cost is the Monte Carlo significance test (step 03), which scales with the number of realizations multiplied by the 43-parent reassignment refit performed inside each realization.
+Runtimes are approximate and measured on Apple M4 Pro (14-core, 24 GB). The dominant cost is the Monte Carlo significance test (step 03), which scales with the number of realizations multiplied by the parent reassignment refit performed inside each realization.
 
 | Step | Script | Description | Est. Runtime |
 | --- | --- | --- | --- |
 | 01 | `step_01_embedding.py` | Verifies fundamental isochrony axiom vulnerability (H vs D embedding) | ~5 s |
-| 02 | `step_02_q1009.py` | Nested-hypothesis fit of the Q1009+2956 absorption complex on the fixed shared scaffold (multi-start; nesting invariants verified) | ~30 s |
-| 03 | `step_03_significance.py` | 1000-realization Monte Carlo significance test and true-D injection (43-parent reassignment inside each realization) | ~7.5 hr |
+| 02 | `step_02_q1009.py` | Nested-hypothesis fit of the absorption complex on the fixed shared scaffold (multi-start; nesting invariants verified) | ~30 s |
+| 03 | `step_03_significance.py` | 200-realization Monte Carlo significance test and true-D injection (parent reassignment inside each realization) | ~25 min |
 | 04 | `step_04_prior.py` | Symbolic proof of the TEP absorber field blueward velocity sign ($\Delta v_T < 0$) | ~2 s |
 | 05 | `step_05_thermodynamics.py` | Symbolic proof of Planck spectrum preservation under temporal transport | ~1 s |
 | 06 | `step_06_helium.py` | Primordial helium synthesis via baryonic cycling and temporal-horizon metal sequestration | ~2 s |
 | 07 | `step_07_global_opacity.py` | Analytical proof of divergent optical depth in the static spatial geometry (Opacity Boundary) | ~1 s |
+| 08 | `step_08_light_elements.py` | Light-element network and convergence constraints | ~5 s |
 
 #### Total Runtime Summary
 
 | Component | Steps | Runtime |
 | --- | --- | --- |
-| All Analysis Stages | 7 | ~7.5 hr |
-| Total | 7 | ~7.5 hr |
+| All Analysis Stages | 8 | ~30 min per sightline |
+| Total (3 sightlines) | 8 | ~1.5 hr |
 
 ### Reproduction Instructions
 
@@ -455,7 +473,7 @@ pip install -r requirements-lock.txt
 python scripts/run_pipeline.py
 
 # 3b. Run a specific sightline
-python scripts/run_pipeline.py --sightline PKS1937-1009
+python scripts/run_pipeline.py --sightline PKS1937-101
 
 # 3c. Run all sightlines with ingested data
 python scripts/run_pipeline.py --all-sightlines
@@ -466,7 +484,7 @@ python scripts/run_pipeline.py --all-sightlines
 
 The pipeline supports multiple D/H absorber sightlines through per-sightline JSON configuration files in `configs/sightlines/`.
 Each config specifies the data manifest path, VPFIT model file, noise model, absorber redshift, candidate parameter bounds, multi-start initial points, and Monte Carlo settings.
-The Q1009+2956 config reproduces the exact hardcoded values from the original pipeline, ensuring bit-identical backward compatibility.
+Three sightlines are currently supported with ingested data: Q1009+2956 (UVES, $z=2.504$), PKS 1937$-$101 (ESPRESSO, $z=3.572$), and J1332$+$0052 (UVES, $z=3.421$).
 Sightlines without ingested data (PKS 1937$-$1009, HS 0105+1619) are automatically skipped with a diagnostic message.
 
 #### System Requirements

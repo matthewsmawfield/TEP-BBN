@@ -1,325 +1,102 @@
-[07:00:36] [INFO] ================================================================================
-[07:00:36] [INFO] Script: step_03_significance
-[07:00:36] [INFO] Started: 2026-08-27T07:00:36.710144
-[07:00:36] [INFO] ================================================================================
-[07:00:36] [SUCCESS] === GATE 3R: GENUINE MONTE CARLO CALIBRATION (Q1009+2956) ===
-[07:00:36] [PROCESS] Using VPFIT init shared params (legacy format)
-[07:00:36] [PROCESS] Pre-calculating base True-D model fluxes...
-[07:00:36] [PROCESS] Frozen-scaffold cache built for 50 blocks (43 shared H I + metals cached)
-[07:00:36] [INFO] 
-[07:00:36] [INFO] ================================================================================
-[07:00:36] [INFO] 
+[22:49:27] [INFO] ================================================================================
+[22:49:27] [INFO] Script: step_03_significance
+[22:49:27] [INFO] Started: 2026-08-27T22:49:27.648569
+[22:49:27] [INFO] ================================================================================
+[22:49:27] [SUCCESS] === GATE 3R: GENUINE MONTE CARLO CALIBRATION (Q1009+2956) ===
+[22:49:27] [PROCESS] Using VPFIT init shared params (legacy format)
+[22:49:27] [PROCESS] Pre-calculating base True-D model fluxes...
+[22:49:27] [PROCESS] Canonical parent index (auto-detected): 0
+[22:49:27] [PROCESS] Frozen-scaffold cache built for 50 blocks (43 shared H I + metals cached)
+[22:49:27] [INFO] 
+[22:49:27] [INFO] ================================================================================
+[22:49:27] [INFO] 
 --- Computing observed parent reassignment T ---
-[07:00:36] [INFO] ================================================================================
-[07:00:36] [INFO] 
-[07:00:36] [PROCESS] Parent reassignment window: ±1000 km/s → 14/43 H I components eligible
-[07:00:39] [PROCESS]   Parent 0: LL_D = -17830.98, T = 56.57
-[07:00:41] [PROCESS]   Parent 1: LL_D = -17927.79, T = 250.21
-[07:00:41] [PROCESS]   Parent 2: LL_D = -17979.22, T = 353.06
-[07:00:43] [PROCESS]   Parent 3: LL_D = -17979.22, T = 353.06
-[07:00:46] [PROCESS]   Parent 4: LL_D = -17943.92, T = 282.46
-[07:00:46] [PROCESS]   Parent 5: LL_D = -17979.22, T = 353.06
-[07:00:46] [PROCESS]   Parent 6: LL_D = -17979.22, T = 353.06
-[07:00:47] [PROCESS]   Parent 7: LL_D = -17979.22, T = 353.06
-[07:00:47] [PROCESS]   Parent 8: LL_D = -17979.22, T = 353.06
-[07:00:47] [PROCESS]   Parent 9: LL_D = -17979.22, T = 353.06
-[07:00:50] [PROCESS]   Parent 10: LL_D = -17805.21, T = 5.03
-[07:00:51] [PROCESS]   Parent 11: LL_D = -17979.22, T = 353.06
-[07:00:54] [PROCESS]   Parent 12: LL_D = -17979.22, T = 353.06
-[07:00:54] [PROCESS]   Parent 13: LL_D = -17979.22, T = 353.06
-[07:00:54] [PROCESS] Observed T_parent_best = 5.03
-[07:00:54] [INFO] 
-[07:00:54] [INFO] ================================================================================
-[07:00:54] [INFO] 
---- Running True-D Monte Carlo Simulations (1000 realizations) ---
-[07:00:54] [INFO] ================================================================================
-[07:00:54] [INFO] 
-[07:00:59] [PROCESS] Completed 20/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 0
-[07:01:47] [PROCESS] Completed 30/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 0
-[07:01:55] [PROCESS] Completed 10/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 0
-[07:02:03] [PROCESS] Completed 40/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 0
-[07:02:51] [PROCESS] Completed 20/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 0
-[07:03:01] [PROCESS] Completed 50/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 0
-[07:03:35] [PROCESS] Completed 30/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 0
-[07:03:43] [PROCESS] Completed 60/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 1
-[07:03:50] [PROCESS] Completed 40/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 0
-[07:04:26] [PROCESS] Completed 70/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 1
-[07:04:41] [PROCESS] Completed 50/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 0
-[07:04:55] [PROCESS] Completed 80/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 2
-[07:05:22] [PROCESS] Completed 60/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 1
-[07:05:37] [PROCESS] Completed 90/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 2
-[07:06:08] [PROCESS] Completed 70/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 1
-[07:06:16] [PROCESS] Completed 100/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:06:36] [PROCESS] Completed 80/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 2
-[07:06:53] [PROCESS] Completed 110/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:07:19] [PROCESS] Completed 90/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 2
-[07:07:31] [PROCESS] Completed 120/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:07:56] [PROCESS] Completed 100/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:08:14] [PROCESS] Completed 130/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:08:34] [PROCESS] Completed 110/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:08:48] [PROCESS] Completed 140/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:09:11] [PROCESS] Completed 120/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:09:27] [PROCESS] Completed 150/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:09:56] [PROCESS] Completed 130/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:10:13] [PROCESS] Completed 160/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:10:29] [PROCESS] Completed 140/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:10:50] [PROCESS] Completed 170/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:11:06] [PROCESS] Completed 150/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:11:27] [PROCESS] Completed 180/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:11:56] [PROCESS] Completed 160/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:12:11] [PROCESS] Completed 190/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:12:25] [PROCESS] Completed 170/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:12:38] [PROCESS] Completed 200/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:13:04] [PROCESS] Completed 180/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:13:16] [PROCESS] Completed 210/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:13:54] [PROCESS] Completed 190/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:14:02] [PROCESS] Completed 220/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:14:20] [PROCESS] Completed 200/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:14:46] [PROCESS] Completed 230/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:15:05] [PROCESS] Completed 210/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 3
-[07:15:33] [PROCESS] Completed 240/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:15:56] [PROCESS] Completed 220/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:16:05] [PROCESS] Completed 250/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:16:36] [PROCESS] Completed 230/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:16:56] [PROCESS] Completed 260/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:17:22] [PROCESS] Completed 240/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:17:48] [PROCESS] Completed 270/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:17:55] [PROCESS] Completed 250/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:18:22] [PROCESS] Completed 280/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:18:45] [PROCESS] Completed 260/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:19:04] [PROCESS] Completed 290/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:19:36] [PROCESS] Completed 270/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 4
-[07:19:46] [PROCESS] Completed 300/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:20:13] [PROCESS] Completed 280/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:20:40] [PROCESS] Completed 310/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:20:57] [PROCESS] Completed 290/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:21:15] [PROCESS] Completed 320/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:21:38] [PROCESS] Completed 300/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:21:54] [PROCESS] Completed 330/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:22:30] [PROCESS] Completed 310/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:22:50] [PROCESS] Completed 340/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:23:03] [PROCESS] Completed 320/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:23:28] [PROCESS] Completed 350/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:23:43] [PROCESS] Completed 330/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:24:07] [PROCESS] Completed 360/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:24:38] [PROCESS] Completed 340/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:24:50] [PROCESS] Completed 370/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:25:19] [PROCESS] Completed 350/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:25:35] [PROCESS] Completed 380/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:25:57] [PROCESS] Completed 360/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 5
-[07:26:13] [PROCESS] Completed 390/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:26:41] [PROCESS] Completed 370/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:27:00] [PROCESS] Completed 400/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:27:24] [PROCESS] Completed 380/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:27:43] [PROCESS] Completed 410/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:28:05] [PROCESS] Completed 390/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:28:24] [PROCESS] Completed 420/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:28:49] [PROCESS] Completed 400/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:29:01] [PROCESS] Completed 430/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:29:35] [PROCESS] Completed 410/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:29:41] [PROCESS] Completed 440/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 7
-[07:30:13] [PROCESS] Completed 420/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:30:19] [PROCESS] Completed 450/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:30:54] [PROCESS] Completed 430/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 6
-[07:31:11] [PROCESS] Completed 460/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:31:31] [PROCESS] Completed 440/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 7
-[07:31:59] [PROCESS] Completed 470/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:32:10] [PROCESS] Completed 450/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:32:37] [PROCESS] Completed 480/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:33:03] [PROCESS] Completed 460/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:33:26] [PROCESS] Completed 490/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:33:50] [PROCESS] Completed 470/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:34:14] [PROCESS] Completed 500/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:34:28] [PROCESS] Completed 480/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:35:09] [PROCESS] Completed 510/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:35:17] [PROCESS] Completed 490/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:35:35] [PROCESS] Completed 520/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:36:06] [PROCESS] Completed 500/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:36:17] [PROCESS] Completed 530/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:37:01] [PROCESS] Completed 510/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:37:03] [PROCESS] Completed 540/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:37:28] [PROCESS] Completed 520/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:37:47] [PROCESS] Completed 550/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:38:11] [PROCESS] Completed 530/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:38:35] [PROCESS] Completed 560/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:38:56] [PROCESS] Completed 540/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:39:19] [PROCESS] Completed 570/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:39:40] [PROCESS] Completed 550/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:40:03] [PROCESS] Completed 580/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:40:31] [PROCESS] Completed 560/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:40:36] [PROCESS] Completed 590/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:41:07] [PROCESS] Completed 570/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 8
-[07:41:30] [PROCESS] Completed 600/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:41:56] [PROCESS] Completed 580/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:42:17] [PROCESS] Completed 610/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:42:24] [PROCESS] Completed 590/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:43:02] [PROCESS] Completed 620/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:43:23] [PROCESS] Completed 600/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:43:41] [PROCESS] Completed 630/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:44:09] [PROCESS] Completed 610/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:44:40] [PROCESS] Completed 640/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:44:55] [PROCESS] Completed 620/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:45:13] [PROCESS] Completed 650/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:45:29] [PROCESS] Completed 630/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:45:54] [PROCESS] Completed 660/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:46:26] [PROCESS] Completed 640/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:46:48] [PROCESS] Completed 670/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:46:58] [PROCESS] Completed 650/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:47:20] [PROCESS] Completed 680/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:47:41] [PROCESS] Completed 660/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 9
-[07:47:56] [PROCESS] Completed 690/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:48:32] [PROCESS] Completed 670/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:48:48] [PROCESS] Completed 700/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:49:03] [PROCESS] Completed 680/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:49:28] [PROCESS] Completed 710/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:49:39] [PROCESS] Completed 690/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:49:58] [PROCESS] Completed 720/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:50:31] [PROCESS] Completed 700/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:50:47] [PROCESS] Completed 730/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:51:16] [PROCESS] Completed 710/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:51:26] [PROCESS] Completed 740/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 11
-[07:51:52] [PROCESS] Completed 720/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:52:16] [PROCESS] Completed 750/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:52:53] [PROCESS] Completed 730/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 10
-[07:53:10] [PROCESS] Completed 760/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:53:24] [PROCESS] Completed 740/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 11
-[07:54:05] [PROCESS] Completed 770/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:54:18] [PROCESS] Completed 750/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:54:52] [PROCESS] Completed 780/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:55:15] [PROCESS] Completed 760/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:55:32] [PROCESS] Completed 790/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:56:07] [PROCESS] Completed 770/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:56:24] [PROCESS] Completed 800/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:56:53] [PROCESS] Completed 780/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:57:10] [PROCESS] Completed 810/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 13
-[07:57:36] [PROCESS] Completed 790/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:58:05] [PROCESS] Completed 820/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[07:58:29] [PROCESS] Completed 800/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 12
-[07:58:59] [PROCESS] Completed 830/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[07:59:10] [PROCESS] Completed 810/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 13
-[07:59:43] [PROCESS] Completed 840/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:00:08] [PROCESS] Completed 820/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:00:28] [PROCESS] Completed 850/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:01:03] [PROCESS] Completed 830/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:01:20] [PROCESS] Completed 860/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:01:48] [PROCESS] Completed 840/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:02:07] [PROCESS] Completed 870/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:02:30] [PROCESS] Completed 850/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:02:58] [PROCESS] Completed 880/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:03:25] [PROCESS] Completed 860/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:03:55] [PROCESS] Completed 890/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:04:11] [PROCESS] Completed 870/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:04:47] [PROCESS] Completed 900/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:05:00] [PROCESS] Completed 880/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:05:38] [PROCESS] Completed 910/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:06:01] [PROCESS] Completed 890/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:06:21] [PROCESS] Completed 920/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:06:49] [PROCESS] Completed 900/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:07:06] [PROCESS] Completed 930/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 15
-[08:07:38] [PROCESS] Completed 910/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:08:00] [PROCESS] Completed 940/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 15
-[08:08:25] [PROCESS] Completed 920/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 14
-[08:08:55] [PROCESS] Completed 950/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 15
-[08:09:07] [PROCESS] Completed 930/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 15
-[08:09:26] [PROCESS] Completed 960/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 17
-[08:10:07] [PROCESS] Completed 940/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 15
-[08:10:21] [PROCESS] Completed 970/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 17
-[08:10:58] [PROCESS] Completed 950/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 15
-[08:11:22] [PROCESS] Completed 980/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 17
-[08:11:32] [PROCESS] Completed 960/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 17
-[08:12:13] [PROCESS] Completed 990/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 17
-[08:12:20] [PROCESS] Completed 970/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 17
-[08:12:38] [PROCESS] Completed 1000/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 17
-[08:12:38] [PROCESS] 
-Observed T_obs (standard, parent 0) = 56.57
-[08:12:38] [PROCESS] Observed T_obs (best parent) = 5.03
-[08:12:38] [PROCESS] Exceedances (fair standard, T_sim_standard >= 56.57): 0
-[08:12:38] [PROCESS] Calibrated p_add_one (fair standard) = 0.00100
-[08:12:38] [PROCESS] Exceedances (parent, T_sim >= 5.03): 17
-[08:12:38] [PROCESS] Calibrated p_add_one for parent reassignment = 0.01798
-[08:12:38] [INFO] 
-[08:12:38] [INFO] ================================================================================
-[08:12:38] [INFO] 
+[22:49:27] [INFO] ================================================================================
+[22:49:27] [INFO] 
+[22:49:27] [PROCESS] Parent reassignment window: ±1000 km/s → 14/43 H I components eligible
+[22:49:31] [PROCESS]   Parent 0: LL_D = -17586.40, T = 56.54
+[22:49:34] [PROCESS]   Parent 1: LL_D = -17681.15, T = 246.04
+[22:49:36] [PROCESS]   Parent 2: LL_D = -17732.60, T = 348.93
+[22:49:38] [PROCESS]   Parent 3: LL_D = -17734.61, T = 352.95
+[22:49:40] [PROCESS]   Parent 4: LL_D = -17734.61, T = 352.95
+[22:49:42] [PROCESS]   Parent 5: LL_D = -17622.42, T = 128.58
+[22:49:43] [PROCESS]   Parent 6: LL_D = -17597.91, T = 79.57
+[22:49:45] [PROCESS]   Parent 7: LL_D = -17568.11, T = 19.97
+[22:49:46] [PROCESS]   Parent 8: LL_D = -17680.84, T = 245.41
+[22:49:47] [PROCESS]   Parent 9: LL_D = -17734.61, T = 352.95
+[22:49:50] [PROCESS]   Parent 10: LL_D = -17560.64, T = 5.02
+[22:49:52] [PROCESS]   Parent 11: LL_D = -17734.61, T = 352.95
+[22:49:55] [PROCESS]   Parent 12: LL_D = -17734.61, T = 352.95
+[22:49:56] [PROCESS]   Parent 13: LL_D = -17734.61, T = 352.95
+[22:49:56] [PROCESS] Observed T_parent_best = 5.02
+[22:49:56] [INFO] 
+[22:49:56] [INFO] ================================================================================
+[22:49:56] [INFO] 
+--- Running True-D Monte Carlo Simulations (200 realizations) ---
+[22:49:56] [INFO] ================================================================================
+[22:49:56] [INFO] 
+[22:51:31] [PROCESS] Completed 10/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 0
+[22:53:02] [PROCESS] Completed 20/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 0
+[22:53:35] [PROCESS] Completed 30/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 0
+[22:54:56] [PROCESS] Completed 40/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 0
+[22:56:30] [PROCESS] Completed 50/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 0
+[22:57:15] [PROCESS] Completed 60/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 1
+[22:58:22] [PROCESS] Completed 70/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 2
+[22:59:47] [PROCESS] Completed 80/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 2
+[23:00:46] [PROCESS] Completed 90/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:01:36] [PROCESS] Completed 100/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:02:53] [PROCESS] Completed 110/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:04:05] [PROCESS] Completed 120/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:04:58] [PROCESS] Completed 130/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:05:57] [PROCESS] Completed 140/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:06:55] [PROCESS] Completed 150/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:08:07] [PROCESS] Completed 160/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:09:09] [PROCESS] Completed 170/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:10:10] [PROCESS] Completed 180/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:11:08] [PROCESS] Completed 190/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:11:51] [PROCESS] Completed 200/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.02): 3
+[23:11:51] [PROCESS] 
+Observed T_obs (standard, canonical parent 0) = 56.54
+[23:11:51] [PROCESS] Observed T_obs (best parent) = 5.02
+[23:11:51] [PROCESS] Exceedances (fair standard, T_sim_standard >= 56.54): 0
+[23:11:51] [PROCESS] Calibrated p_add_one (fair standard) = 0.00498
+[23:11:51] [PROCESS] Exceedances (parent, T_sim >= 5.02): 3
+[23:11:51] [PROCESS] Calibrated p_add_one for parent reassignment = 0.01990
+[23:11:51] [INFO] 
+[23:11:51] [INFO] ================================================================================
+[23:11:51] [INFO] 
 --- Genuine Leave-One-Out Robustness Constraints ---
-[08:12:38] [INFO] ================================================================================
-[08:12:38] [INFO] 
-[08:12:44] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x1.dat': T = 32.39 (D=-11481.94, H=-11465.74)
-[08:12:51] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x2.dat': T = 50.49 (D=-15590.62, H=-15565.37)
-[08:12:57] [PROCESS] Completed 980/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 17
-[08:12:57] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x1.dat': T = 36.61 (D=-11788.56, H=-11770.25)
-[08:13:04] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x2.dat': T = 46.79 (D=-14629.55, H=-14606.15)
-[08:13:16] [PROCESS] Leave-one-out transition 'Lyα': T = 1.95 (D=-14434.14, H=-14433.16)
-[08:13:22] [PROCESS] Completed 990/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 17
-[08:13:23] [PROCESS] Leave-one-out transition 'Lyβ': T = 47.51 (D=-15975.87, H=-15952.11)
-[08:13:28] [PROCESS] Leave-one-out transition 'Lyγ': T = 54.03 (D=-15542.08, H=-15515.06)
-[08:13:33] [PROCESS] Leave-one-out transition 'Ly6': T = 56.57 (D=-16261.53, H=-16233.25)
-[08:13:34] [PROCESS] Completed 1000/1000 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=5.03): 17
-[08:13:34] [PROCESS] 
-Observed T_obs (standard, parent 0) = 56.57
-[08:13:34] [PROCESS] Observed T_obs (best parent) = 5.03
-[08:13:34] [PROCESS] Exceedances (fair standard, T_sim_standard >= 56.57): 0
-[08:13:34] [PROCESS] Calibrated p_add_one (fair standard) = 0.00100
-[08:13:34] [PROCESS] Exceedances (parent, T_sim >= 5.03): 17
-[08:13:34] [PROCESS] Calibrated p_add_one for parent reassignment = 0.01798
-[08:13:34] [INFO] 
-[08:13:34] [INFO] ================================================================================
-[08:13:34] [INFO] 
---- Genuine Leave-One-Out Robustness Constraints ---
-[08:13:34] [INFO] ================================================================================
-[08:13:34] [INFO] 
-[08:13:37] [PROCESS] Leave-one-out transition 'Ly13': T = 56.50 (D=-16073.78, H=-16045.52)
-[08:13:38] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x1.dat': T = 32.39 (D=-11481.94, H=-11465.74)
-[08:13:41] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x2.dat': T = 50.49 (D=-15590.62, H=-15565.37)
-[08:13:42] [PROCESS] Leave-one-out transition 'Ly14': T = 56.57 (D=-16474.61, H=-16446.33)
-[08:13:42] [INFO] 
-[08:13:42] [INFO] ================================================================================
-[08:13:42] [INFO] 
+[23:11:51] [INFO] ================================================================================
+[23:11:51] [INFO] 
+[23:11:59] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x2.dat': T = 46.76 (D=-14428.35, H=-14404.97)
+[23:12:06] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x1.dat': T = 36.59 (D=-11626.49, H=-11608.19)
+[23:12:14] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x2.dat': T = 50.47 (D=-15377.26, H=-15352.03)
+[23:12:20] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x1.dat': T = 32.37 (D=-11324.83, H=-11308.64)
+[23:12:32] [PROCESS] Leave-one-out transition 'Lyα': T = 1.93 (D=-14189.53, H=-14188.57)
+[23:12:42] [PROCESS] Leave-one-out transition 'Lyβ': T = 47.47 (D=-15731.29, H=-15707.55)
+[23:12:51] [PROCESS] Leave-one-out transition 'Lyγ': T = 54.00 (D=-15297.50, H=-15270.50)
+[23:12:59] [PROCESS] Leave-one-out transition 'Ly6': T = 56.53 (D=-16016.88, H=-15988.61)
+[23:13:08] [PROCESS] Leave-one-out transition 'Ly13': T = 56.50 (D=-15882.31, H=-15854.06)
+[23:13:16] [PROCESS] Leave-one-out transition 'Ly14': T = 56.54 (D=-16407.43, H=-16379.16)
+[23:13:16] [INFO] 
+[23:13:16] [INFO] ================================================================================
+[23:13:16] [INFO] 
 --- Parent Component Reassignment Robustness ---
-[08:13:42] [INFO] ================================================================================
-[08:13:42] [INFO] 
-[08:13:42] [PROCESS] Parent 0: LL_D = -17830.98, T = 56.57
-[08:13:42] [PROCESS] Parent 1: LL_D = -17927.79, T = 250.21
-[08:13:42] [PROCESS] Parent 2: LL_D = -17979.22, T = 353.06
-[08:13:42] [PROCESS] Parent 3: LL_D = -17979.22, T = 353.06
-[08:13:42] [PROCESS] Parent 4: LL_D = -17943.92, T = 282.46
-[08:13:42] [PROCESS] Parent 5: LL_D = -17979.22, T = 353.06
-[08:13:42] [PROCESS] Parent 6: LL_D = -17979.22, T = 353.06
-[08:13:42] [PROCESS] Parent 7: LL_D = -17979.22, T = 353.06
-[08:13:42] [PROCESS] Parent 8: LL_D = -17979.22, T = 353.06
-[08:13:42] [PROCESS] Parent 9: LL_D = -17979.22, T = 353.06
-[08:13:42] [PROCESS] Parent 10: LL_D = -17805.21, T = 5.03
-[08:13:42] [PROCESS] Parent 11: LL_D = -17979.22, T = 353.06
-[08:13:42] [PROCESS] Parent 12: LL_D = -17979.22, T = 353.06
-[08:13:42] [PROCESS] Parent 13: LL_D = -17979.22, T = 353.06
-[08:13:42] [SUCCESS] 
-[SUCCESS] Calibration saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_significance.json
-[08:13:44] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x2.dat': T = 46.79 (D=-14629.55, H=-14606.15)
-[08:13:47] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x1.dat': T = 36.61 (D=-11788.56, H=-11770.25)
-[08:13:54] [PROCESS] Leave-one-out transition 'Lyα': T = 1.95 (D=-14434.14, H=-14433.16)
-[08:13:58] [PROCESS] Leave-one-out transition 'Lyβ': T = 47.51 (D=-15975.87, H=-15952.11)
-[08:14:02] [PROCESS] Leave-one-out transition 'Lyγ': T = 54.03 (D=-15542.08, H=-15515.06)
-[08:14:06] [PROCESS] Leave-one-out transition 'Ly6': T = 56.57 (D=-16261.53, H=-16233.25)
-[08:14:11] [PROCESS] Leave-one-out transition 'Ly13': T = 56.50 (D=-16073.78, H=-16045.52)
-[08:14:15] [PROCESS] Leave-one-out transition 'Ly14': T = 56.57 (D=-16474.61, H=-16446.33)
-[08:14:15] [INFO] 
-[08:14:15] [INFO] ================================================================================
-[08:14:15] [INFO] 
---- Parent Component Reassignment Robustness ---
-[08:14:15] [INFO] ================================================================================
-[08:14:15] [INFO] 
-[08:14:15] [PROCESS] Parent 0: LL_D = -17830.98, T = 56.57
-[08:14:15] [PROCESS] Parent 1: LL_D = -17927.79, T = 250.21
-[08:14:15] [PROCESS] Parent 2: LL_D = -17979.22, T = 353.06
-[08:14:15] [PROCESS] Parent 3: LL_D = -17979.22, T = 353.06
-[08:14:15] [PROCESS] Parent 4: LL_D = -17943.92, T = 282.46
-[08:14:15] [PROCESS] Parent 5: LL_D = -17979.22, T = 353.06
-[08:14:15] [PROCESS] Parent 6: LL_D = -17979.22, T = 353.06
-[08:14:15] [PROCESS] Parent 7: LL_D = -17979.22, T = 353.06
-[08:14:15] [PROCESS] Parent 8: LL_D = -17979.22, T = 353.06
-[08:14:15] [PROCESS] Parent 9: LL_D = -17979.22, T = 353.06
-[08:14:15] [PROCESS] Parent 10: LL_D = -17805.21, T = 5.03
-[08:14:15] [PROCESS] Parent 11: LL_D = -17979.22, T = 353.06
-[08:14:15] [PROCESS] Parent 12: LL_D = -17979.22, T = 353.06
-[08:14:15] [PROCESS] Parent 13: LL_D = -17979.22, T = 353.06
-[08:14:15] [SUCCESS] 
+[23:13:16] [INFO] ================================================================================
+[23:13:16] [INFO] 
+[23:13:16] [PROCESS] Parent 0: LL_D = -17586.40, T = 56.54
+[23:13:16] [PROCESS] Parent 1: LL_D = -17681.15, T = 246.04
+[23:13:16] [PROCESS] Parent 2: LL_D = -17732.60, T = 348.93
+[23:13:16] [PROCESS] Parent 3: LL_D = -17734.61, T = 352.95
+[23:13:16] [PROCESS] Parent 4: LL_D = -17734.61, T = 352.95
+[23:13:16] [PROCESS] Parent 5: LL_D = -17622.42, T = 128.58
+[23:13:16] [PROCESS] Parent 6: LL_D = -17597.91, T = 79.57
+[23:13:16] [PROCESS] Parent 7: LL_D = -17568.11, T = 19.97
+[23:13:16] [PROCESS] Parent 8: LL_D = -17680.84, T = 245.41
+[23:13:16] [PROCESS] Parent 9: LL_D = -17734.61, T = 352.95
+[23:13:16] [PROCESS] Parent 10: LL_D = -17560.64, T = 5.02
+[23:13:16] [PROCESS] Parent 11: LL_D = -17734.61, T = 352.95
+[23:13:16] [PROCESS] Parent 12: LL_D = -17734.61, T = 352.95
+[23:13:16] [PROCESS] Parent 13: LL_D = -17734.61, T = 352.95
+[23:13:16] [SUCCESS] 
 [SUCCESS] Calibration saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_significance.json

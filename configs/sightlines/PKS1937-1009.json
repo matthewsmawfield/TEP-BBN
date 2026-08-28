@@ -49,5 +49,6 @@
         "seed_base": 910000
     },
     "output_prefix": "gate_pks1937",
+    "parent_window_kms": 1000.0,
     "data_status": "pending_ingestion"
 }

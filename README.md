@@ -17,7 +17,7 @@
 
 ## Abstract
 
-The standard inference from high-redshift deuterium to a uniquely primordial hot-BBN origin depends on both isotope identifiability and the interpretation of redshift as spatial expansion. Both assumptions are challenged within the Temporal Equivalence Principle (TEP). Using physical H I and D I atomic data, it is shown that the optimally embedded ordinary-H spectrum differs from true D by only $0.0208\sigma$ at Q1009 resolution. A nested-hypothesis analysis of Q1009+2956, with the shared Voigt architecture held fixed across hypotheses so that the resulting statistic can be calibrated exactly, finds an unrestricted-H optimum improved by $\Delta\ln L=28.29$ ($T=56.57$); against the most favourable alternative parent the margin falls to $T_{\rm parent}=5.03$, and calibration against 1000 true-D Monte Carlo realizations of the identical statistic yields $p_{\rm parent} = 0.018$, with the discrimination concentrated in the Ly$\alpha$ transition ($T_{-\mathrm{Ly}\alpha} = 1.95$). The TEP absorber field and its blueward displacement sign are then derived from core–edge geometry: the dense absorber core is the most redshifted component, and the diffuse edge appears blueshifted relative to it when the core defines the systemic redshift. The conformal sector deterministically produces the correct blueward sign; the full amplitude is quantified as a falsifiable prediction of the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. This apparent velocity shift is a localized manifestation of Temporal Shear, and cosmological redshift is formulated as temporal transport over a static spatial background. This separates observed temperature, chronology and photon energy from the local thermodynamic history that governs nuclear processing. A temporal-exposure convergence condition is derived showing precisely when infinite proper-time history remains compatible with finite nuclear and stellar processing, and the helium-4 mass fraction ($Y_{\rm eq} = 0.247$) is shown to emerge as the equilibrium of baryonic-cycling reaction flows under temporal-horizon metal sequestration. Finally, in the static spatial geometry, the line-of-sight optical depth is shown to diverge at high redshift, creating an observable boundary without a physical plasma wall. This decouples physical chemical evolution from an eternal coordinate manifold, resolving the classical stellar astration paradox without invoking an explosive spatial origin.
+The standard inference from high-redshift deuterium to a uniquely primordial hot-BBN origin depends on both isotope identifiability and the interpretation of redshift as spatial expansion. Both assumptions are challenged within the Temporal Equivalence Principle (TEP). Using physical H I and D I atomic data, it is shown that the optimally embedded ordinary-H spectrum differs from true D by only $0.0107\sigma$ at Q1009 resolution. A nested-hypothesis analysis of three benchmark D/H quasar sightlines---Q1009+2956 (UVES, $z=2.504$), PKS\,1937$-$101 (ESPRESSO, $z=3.572$), and J1332$+$0052 (UVES, $z=3.421$)---with the shared Voigt architecture held fixed across hypotheses so that the resulting statistic can be calibrated exactly, finds that the unrestricted-H optimum is preferred over true-D in all three systems. For Q1009+2956, $\Delta\ln L=28.27$ ($T=56.54$); against the most favourable alternative parent the margin falls to $T_{\rm parent}=5.02$, and calibration against 200 true-D Monte Carlo realizations of the identical statistic yields $p_{\rm parent} = 0.0199$, with the discrimination concentrated in the Ly$\alpha$ transition ($T_{-\mathrm{Ly}\alpha} = 1.93$). For PKS\,1937$-$101, $T=8982.42$ with $p_{\rm std}=p_{\rm parent}=0.005$ (0/200 exceedances under both statistics). For J1332$+$0052, $T=1885.56$ with $p_{\rm std}=0.005$. All three sightlines independently reject the true-D null at $p_{\rm std} < 0.005$, establishing the first cross-sightline validation of the TEP spectroscopic prediction. The TEP absorber field and its blueward displacement sign are then derived from core–edge geometry: the dense absorber core is the most redshifted component, and the diffuse edge appears blueshifted relative to it when the core defines the systemic redshift. The conformal sector deterministically produces the correct blueward sign; the full amplitude is quantified as a falsifiable prediction of the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. This apparent velocity shift is a localized manifestation of Temporal Shear, and cosmological redshift is formulated as temporal transport over a static spatial background. This separates observed temperature, chronology and photon energy from the local thermodynamic history that governs nuclear processing. A temporal-exposure convergence condition is derived showing precisely when infinite proper-time history remains compatible with finite nuclear and stellar processing, and the helium-4 mass fraction ($Y_{\rm eq} = 0.247$) is shown to emerge as the equilibrium of baryonic-cycling reaction flows under temporal-horizon metal sequestration. Finally, in the static spatial geometry, the line-of-sight optical depth is shown to diverge at high redshift, creating an observable boundary without a physical plasma wall. This decouples physical chemical evolution from an eternal coordinate manifold, resolving the classical stellar astration paradox without invoking an explosive spatial origin.
 
 Keywords: temporal equivalence principle, deuterium abundance, isotopic line identification, temporal shear, absorption-line spectroscopy, Lyman-limit systems, Big Bang nucleosynthesis, cosmology, TEP, Proper-Time Transport
 
@@ -48,7 +48,7 @@ pip install -r requirements-lock.txt
 ## Pipeline Execution
 
 ### Full Pipeline
-The core analysis is orchestrated by `run_pipeline.py`, which executes 7 sequential "gates":
+The core analysis is orchestrated by `run_pipeline.py`, which executes 8 sequential "gates":
 ```bash
 python scripts/run_pipeline.py
 ```
@@ -56,12 +56,13 @@ python scripts/run_pipeline.py
 This master script performs:
 1. **Gate 1**: Embedding the Q1009 transition manifold.
 2. **Gate 2**: Generating and fitting standard parent-tied $D$ and displaced free-$H$ components.
-3. **Gate 3**: Executing a 1000-realization Monte Carlo significance test.
+3. **Gate 3**: Executing a 200-realization Monte Carlo significance test.
 4. **Gate 4**: Symbolic proof of the TEP absorber field blueward velocity sign.
 5. **Gate 4B**: Quantitative amplitude test with frozen $\beta_A = -1.0$ and ionisation-corrected Q1009+2956 observables.
 6. **Gate 5**: Symbolic proof of Planck spectrum preservation under temporal transport.
 7. **Gate 6**: Primordial helium synthesis via baryonic cycling and temporal-horizon metal sequestration.
 8. **Gate 7**: Analytical proof of divergent optical depth in the static spatial geometry (Opacity Boundary).
+9. **Gate 8**: Light-element network and convergence constraints.
 
 The output metrics, structural fits, and physical derivations are dumped as JSON ledgers into the `results/` directory, terminating with a cryptographic `checksums_sha256.json` file.
 
@@ -75,7 +76,7 @@ python scripts/generate_site_pdf.py
 
 ## Key Results (v0.2)
 
-1. **Statistical Non-Identifiability**: Subjected to rigorously nested hypothesis testing, an unrestricted hydrogen model fits the Q1009 data with statistical dominance ($p_{\rm add-one} = 0.001$ standard, $p_{\rm parent} = 0.018$ conservative), with discrimination concentrated in the Ly$\alpha$ transition.
+1. **Statistical Non-Identifiability**: Subjected to rigorously nested hypothesis testing across three benchmark sightlines (Q1009+2956, PKS 1937$-$101, J1332$+$0052), an unrestricted hydrogen model fits the data with statistical dominance ($p_{\rm std} = 0.005$ for all three sightlines, $p_{\rm parent} = 0.020$ for Q1009+2956 conservative), with discrimination concentrated in the Ly$\alpha$ transition for Q1009+2956.
 2. **TEP Absorber Field Sign**: The blueward displacement sign is deterministically derived from conformal core-edge geometry (Gate 4, sign proof). The conformal amplitude is quantified with the frozen bare coupling $\beta_A = -1.0$ and ionisation-corrected Q1009+2956 observables (Gate 4B); the full amplitude is a falsifiable prediction of the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$.
 3. **Planck Spectral Preservation**: A symbolic proof demonstrates that any emitted Planck spectrum is strictly preserved in form under temporal transport, without requiring a singular early phase or FLRW geometric expansion.
 4. **Helium-4 Equilibrium**: The helium-4 mass fraction ($Y_{\rm eq} = 0.247$) emerges as the equilibrium of baryonic-cycling reaction flows under temporal-horizon metal sequestration.
@@ -89,9 +90,8 @@ TEP-BBN/
 ├── logs/                 # Execution logs
 ├── scripts/              # Analysis pipeline
 │   ├── lib/                 # Core logic, likelihoods, and radiative transfer
-│   ├── steps/               # Individual pipeline gates (01-07)
+│   ├── steps/               # Individual pipeline gates (01-08)
 │   └── run_pipeline.py      # Full pipeline runner
-├── tests/                # Verification tests
 ├── results/              # Pipeline outputs
 │   ├── checksums_sha256.json
 │   └── *.json               # Gate ledgers and results

@@ -2,10 +2,16 @@
   "data/raw/atomic/H_I/H_I_lines.txt": "e5e64db44a25fbb3254e242a8484e9a9e25d6b917960378c64654d0496074762",
   "data/raw/atomic/D_I/D_I_lines.txt": "e4195b3791db0371119af15d0f342fdc77e5499ebc1586387725a5e8d3fe4022",
   "results/gate1_embedding.json": "b4dd2b5cb1e77e15feb277242ef93b09cfb78b38acf3f532133f2aabc88fff62",
-  "results/gate2_parameter_ledger.json": "556a71124e62504d4eaeca2f3b4d83d0470a07b669d5b38cb9e2d8e7913e40f4",
-  "results/gate3_significance.json": "cf14e33499d9a8973ca3a30644e4f4d31bd7a928f339cc1fef61dd4cc9ffb039",
-  "results/gate4_prediction.json": "f3dc3ea0660a44a531b427ef721ce2a5e85a5e3fa27550e69e96cc8719de9fd4",
+  "results/gate2_parameter_ledger.json": "775df6037c3c094f77747c974ff4d30f5e358286d8ca35cc7f5d10ee1292d66a",
+  "results/gate3_significance.json": "1c2d266d78544ce7543dfe1470e25417e71dc14ae0829b09aa14afea4d9a2370",
+  "results/gate4_prediction.json": "df855c9415922ff1a49e2c9add0499f6d7d2fe66b2322b394f8f7c900c958ca4",
+  "results/gate4b_amplitude.json": "e5d1d522d4c5d21a54a11f3205a5e169615bb0a2ef5d3838df6318ccaa03cdc7",
   "results/gate5_thermodynamics.json": "2f8fcb772b672a5994e3ac3a8fa26cf8a4af941da38df47f8fa06e16afc6a53f",
-  "results/gate6_helium_results.json": "bbb36bc1fb231d24550ae14a053dd2080aaac8972ba41f1db37f0557e9a0d52d",
-  "results/step_07_global_opacity.json": "f24fa4c719c78a71299bceccb1db5cce232c48ff65f3d48e7f1a9c51dc491200"
+  "results/gate6_helium_results.json": "52c59098c7715f9bb177890bf3bb26f7effadf868a1bece477f103f3854da09e",
+  "results/gate8_light_elements.json": "74ae72181873c4451582238cbff4e51f0341902cbc3907fdf50b598d57b70a7e",
+  "results/step_07_global_opacity.json": "e70456954b02f8d65bf75d811fe242b43c729e3c5128ea9a3f0f7017f3d65118",
+  "results/gate_pks19372_parameter_ledger.json": "f5e06d908888a1b0c42a42da69b94dfc228ce9b600e57772d10c8eb620a7cbaf",
+  "results/gate_pks19373_significance.json": "d425ffbc81033fc118953bf9127f2da986c7358ba49637fff4270c63a81d4c46",
+  "results/gate_j13322_parameter_ledger.json": "a7f48a0c18209bef12758c36fdf67aaed491790bdec2c5d1dfaaa4d0ff661763",
+  "results/gate_j13323_significance.json": "571445ce96476e4db671b11f0730b968424d12ebe42f34b03dc479d67b3fc082"
 }

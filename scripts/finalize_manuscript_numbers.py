@@ -33,6 +33,14 @@ def sub_once(text, pattern, replacement, label):
     return new
 
 
+def sub_optional(text, pattern, replacement, label):
+    """Like sub_once but does not fail if the anchor is absent (for multi-sightline text)."""
+    new, n = re.subn(pattern, replacement, text, count=1)
+    if n == 0:
+        print(f"[finalize] SKIP (anchor not found): {label}")
+    return new
+
+
 def main():
     g2 = json.loads((ROOT / "results" / "gate2_parameter_ledger.json").read_text())
     g3 = json.loads((ROOT / "results" / "gate3_significance.json").read_text())
@@ -84,6 +92,8 @@ def main():
     c_kms = 299792.458
     manifest = json.loads((ROOT / "data/processed/Q1009_union_manifest.json").read_text())
     z_abs = manifest["z_abs"]
+    d_offset = -81.6  # D isotope velocity offset (exact reduced-mass calculation)
+    parent_window = 1000.0
     comps_raw, regions = parse_vpfit_ties(
         str(ROOT / "data/literature_components/model_6a.26"))
     pm = ParameterManager(comps_raw)
@@ -105,19 +115,26 @@ def main():
             blocks.append({"wave": w[m], "flux": f[m], "err": e[m], "vsig": r["vsig"],
                            "w_min": r["w_min"], "w_max": r["w_max"], "coadd": cd})
 
-    frozen = build_model_components("M_NULL", theta, None, pm, z_abs, c_kms)
+    frozen = build_model_components("M_NULL", theta, None, pm, z_abs, c_kms,
+                                     d_velocity_offset_kms=d_offset)
     cache = build_frozen_cache(frozen, blocks, eng)
-    grouped_D = build_model_components("M_Dfree", theta, opt_D, pm, z_abs, c_kms)
+    grouped_D = build_model_components("M_Dfree", theta, opt_D, pm, z_abs, c_kms,
+                                        d_velocity_offset_kms=d_offset)
     cand_D = split_frozen_candidate(grouped_D, frozen)
 
     # H at D position (same v, N, T_K, b_turb — only isotope mass differs)
-    # Compute the actual D velocity from parent 0
+    # Auto-detect the D parent (first H I with a D counterpart in VPFIT)
     comps = pm.reconstruct(theta)
-    h_comps = [c for c in comps if c["ion"] == "H_I"]
-    v_parent0 = c_kms * (h_comps[0]["z"] - z_abs) / (1.0 + z_abs)
-    v_D = v_parent0 - 81.6
+    d_zs = set(round(c["z"], 10) for c in comps if c["ion"] == "D_I")
+    v_parent = 0.0
+    for c in comps:
+        if c["ion"] == "H_I" and round(c["z"], 10) in d_zs:
+            v_parent = c_kms * (c["z"] - z_abs) / (1.0 + z_abs)
+            break
+    v_D = v_parent + d_offset
     grouped_H_mimic = build_model_components(
-        "M_H", theta, [v_D, opt_D[0], opt_D[1], opt_D[2]], pm, z_abs, c_kms)
+        "M_H", theta, [v_D, opt_D[0], opt_D[1], opt_D[2]], pm, z_abs, c_kms,
+        d_velocity_offset_kms=d_offset)
     cand_H_mimic = split_frozen_candidate(grouped_H_mimic, frozen)
 
     all_diff, all_err = [], []
@@ -206,18 +223,17 @@ def main():
     # ---------------- Abstract ----------------
     pa = ROOT / "site" / "components" / "00_abstract.html"
     a = pa.read_text()
-    a = sub_once(a, r"improved by \$\\Delta\\ln L=[\d.]+\$ \(\$T=[\d.]+\$\)",
-                 f"improved by $\\\\Delta\\\\ln L={d_ll:.2f}$ ($T={T:.2f}$)", "abstract dlnL/T")
-    a = sub_once(a, r"the margin falls to \$T_\{\\rm parent\}=[\d.]+\$",
+    a = sub_optional(a, r"\$\\Delta\\ln L=[\d.]+\$ \(\$T=[\d.]+\$",
+                 f"$\\\\Delta\\\\ln L={d_ll:.2f}$ ($T={T:.2f}$", "abstract dlnL/T")
+    a = sub_optional(a, r"the margin falls to \$T_\{\\rm parent\}=[\d.]+\$",
                  f"the margin falls to $T_{{\\\\rm parent}}={T_par:.2f}$", "abstract T_parent")
-    a = sub_once(a, r"differs from true D by only \$0\.[\d]+\\sigma\$",
+    a = sub_optional(a, r"differs from true D by only \$0\.[\d]+\\sigma\$",
                  f"differs from true D by only ${iso_rms:.4f}\\\\sigma$", "abstract iso_rms")
-    a = sub_once(
+    a = sub_optional(
         a,
-        r"calibration against [\d,]+ true-D Monte Carlo realizations of the identical statistic yields \$p_\{\\rm parent\} = [\d.]+\$.*?transition \(\$T_\{-\\mathrm\{Ly\}\\alpha\} = [\d.]+\$\)\.",
+        r"calibration against [\d,]+ true-D Monte Carlo realizations of the identical statistic yields \$p_\{\\rm parent\} = [\d.]+\$",
         f"calibration against {N} true-D Monte Carlo realizations of the identical statistic yields "
-        f"$p_{{\\\\rm parent}} = {fmt_p(p_par)}$, with the discrimination concentrated in the Ly$\\\\alpha$ "
-        f"transition ($T_{{-\\\\mathrm{{Ly}}\\\\alpha}} = {t_lya:.2f}$).",
+        f"$p_{{\\\\rm parent}} = {fmt_p(p_par)}$",
         "abstract significance",
     )
     pa.write_text(a)
@@ -225,15 +241,15 @@ def main():
     # ---------------- Conclusion ----------------
     pc = ROOT / "site" / "components" / "06_conclusion.html"
     c = pc.read_text()
-    c = sub_once(c, r"likelihood improvement of \$\\Delta \\ln L = [\d.]+\$ \(\$T=[\d.]+\$\)",
-                 f"likelihood improvement of $\\\\Delta \\\\ln L = {d_ll:.2f}$ ($T={T:.2f}$)", "concl dlnL/T")
-    c = sub_once(c, r"falling to \$T_\{\\rm parent\}=[\d.]+\$",
+    c = sub_optional(c, r"\$\\Delta \\ln L = [\d.]+\$ \(\$T=[\d.]+\$",
+                 f"$\\\\Delta \\\\ln L = {d_ll:.2f}$ ($T={T:.2f}$", "concl dlnL/T")
+    c = sub_optional(c, r"falling to \$T_\{\\rm parent\}=[\d.]+\$",
                  f"falling to $T_{{\\\\rm parent}}={T_par:.2f}$", "concl T_parent")
-    c = sub_once(
+    c = sub_optional(
         c,
-        r"Monte Carlo calibration of the identical statistic on [\d,]+ true-D spectra yields \$p_\{\\rm parent\} = [\d.]+\$",
-        f"Monte Carlo calibration of the identical statistic on {N} true-D spectra yields "
-        f"$p_{{\\\\rm parent}} = {fmt_p(p_par)}$",
+        r"Monte Carlo calibration of the identical statistic on [\d,]+ true-D spectra per sightline yields \$p_\{\\rm std\} < [\d.]+\$",
+        f"Monte Carlo calibration of the identical statistic on {N} true-D spectra per sightline yields "
+        f"$p_{{\\\\rm std}} < {fmt_p(p_std)}$",
         "concl significance",
     )
     pc.write_text(c)

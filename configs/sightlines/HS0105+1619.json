@@ -49,5 +49,6 @@
         "seed_base": 920000
     },
     "output_prefix": "gate_hs0105",
+    "parent_window_kms": 1000.0,
     "data_status": "pending_ingestion"
 }

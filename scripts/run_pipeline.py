@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """TEP-BBN complete isotopic analysis pipeline runner.
 
-Runs the seven final gates that validate the Temporal Equivalence Principle.
+Runs the eight final gates that validate the Temporal Equivalence Principle.
 Each step writes outputs to results/.
 
 Supports multiple sightlines via per-sightline configs in configs/sightlines/.
@@ -39,6 +39,7 @@ PIPELINE_STEPS = [
     ),
     ("step_06_helium", "run_gate6", "Gate 6: Primordial Helium Synthesis"),
     ("step_07_global_opacity", "run_step_07", "Gate 7: Global Opacity Boundary"),
+    ("step_08_light_elements", "run_gate8", "Gate 8: Light-Element Network"),
 ]
 
 
@@ -108,7 +109,7 @@ def run_pipeline(sightline=None):
             json.dump(manifest_data, jf, indent=2)
 
         print_status(
-            "All 7 Gates passed verification perfectly. Repository is fully locked.",
+            "All 8 Gates passed verification perfectly. Repository is fully locked.",
             "SUCCESS",
         )
 

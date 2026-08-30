@@ -73,5 +73,5 @@ data/raw/spectra/
 .devin/
 # IDE workspace
 *.code-workspace
-argos-runner.sh
+argos-runner*
 cline-runner*

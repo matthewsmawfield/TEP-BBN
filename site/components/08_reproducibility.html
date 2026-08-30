@@ -18,7 +18,7 @@
         All steps are orchestrated by <code>scripts/run_pipeline.py</code> with comprehensive per-step logging, SHA-256 checksum manifest generation, and a pipeline summary ledger.
     </p>
     <p>
-        All raw spectroscopic data (Keck/HIRES, VLT/UVES + Keck/HIRES, and VLT/ESPRESSO), structural likelihood matrices, and the temporal-field equation solvers are released in the Zenodo repository (<a href="https://doi.org/10.5281/zenodo.21841148" target="_blank">DOI: 10.5281/zenodo.21841148</a>) under CC-BY 4.0. The full codebase and execution environments are identical to the published version.
+        All raw spectroscopic data (Keck/HIRES, VLT/UVES + Keck/HIRES, and VLT/ESPRESSO), structural likelihood matrices, and the temporal-field equation solvers are released in the Zenodo repository (<a href="https://doi.org/10.5281/zenodo.21841147" target="_blank">DOI: 10.5281/zenodo.21841147</a>) under CC-BY 4.0. The full codebase and execution environments are identical to the published version.
     </p>
 
     <h4>Repository Structure</h4>
@@ -26,7 +26,7 @@
 <pre>
 TEP-BBN/
 ├── data/
-│   ├── raw/                       # Spectroscopic exposures (UVES, UVES+HIRES, ESPRESSO)
+│   ├── raw/                       # Spectroscopic exposures (Keck/HIRES, UVES+HIRES, ESPRESSO)
 │   │   ├── atomic/                # Physical H I, D I line registries (NIST ASD)
 │   │   └── reduced_products/      # Pre-reduced and co-added normalized spectra
 │   ├── literature_components/     # Published VPFIT model files and component tables
@@ -65,7 +65,7 @@ TEP-BBN/
                 <td style="padding: 0.5em;">Keck/HIRES (Zavarygin et al. 2018 <a href="#ref44">[44]</a>)</td>
                 <td style="padding: 0.5em;">Zavarygin et al. 2018 GitHub</td>
                 <td style="padding: 0.5em;">4 coadds (S/N $\approx 47$–$78$ near Ly$\alpha$)</td>
-                <td style="padding: 0.5em;"><code>data/raw/reduced_products/Q1009+2956_z2.504_UVES/</code></td>
+                <td style="padding: 0.5em;"><code>data/raw/reduced_products/Q1009+2956_z2.504_HIRES/</code></td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
                 <td style="padding: 0.5em;">PKS 1937$-$101 Spectra</td>
@@ -267,7 +267,7 @@ TEP-BBN/
         </tr>
         <tr style="border-bottom: 2px solid #4a7fb5; font-weight: 600;">
             <td style="padding: 0.4em;">Total (3 sightlines)</td>
-            <td style="padding: 0.4em;">13</td>
+            <td style="padding: 0.4em;">14</td>
             <td style="padding: 0.4em;">~2 hr</td>
         </tr>
     </table>
@@ -352,7 +352,7 @@ python scripts/run_pipeline.py --n-sims 500
 
     <h4>Version Changelog (v0.1 → v0.2)</h4>
     <p>
-        Three analysis fixes were applied between v0.1 and v0.2, each with a quantitative impact on the primary statistic:
+        Several analysis fixes were applied between v0.1 and v0.2, each with a quantitative impact on the primary statistic:
     </p>
     <table class="data-table" style="font-size: 0.9em;">
         <thead>

@@ -1,27 +1,60 @@
-[19:44:11] [INFO] ================================================================================
-[19:44:11] [INFO] Script: step_08b_calibration
-[19:44:11] [INFO] Started: 2026-08-30T19:44:11.205420
-[19:44:11] [INFO] ================================================================================
-[19:44:11] [SUCCESS] === GATE 8 CALIBRATION: J1332+0052 ===
-[19:44:11] [PROCESS]   Mixed b_D: b_turb=2.800, T=10100, b_therm_H=12.914, b_therm_D=9.132
-[19:44:11] [PROCESS]   b_D_pred = sqrt(2.800^2 + 9.132^2) = 9.551 (vs thermal-only 9.309)
-[19:44:11] [INFO] 
-[19:44:11] [INFO] ================================================================================
-[19:44:11] [INFO] 
+[20:42:00] [INFO] ================================================================================
+[20:42:00] [INFO] Script: step_08b_calibration
+[20:42:00] [INFO] Started: 2026-08-30T20:42:00.693835
+[20:42:00] [INFO] ================================================================================
+[20:42:00] [SUCCESS] === GATE 8 CALIBRATION: J1332+0052 ===
+[20:42:00] [PROCESS]   Mixed b_D: b_turb=2.800, T=10100, b_therm_H=12.914, b_therm_D=9.132
+[20:42:00] [PROCESS]   b_D_pred = sqrt(2.800^2 + 9.132^2) = 9.551 (vs thermal-only 9.309)
+[20:42:00] [INFO] 
+[20:42:00] [INFO] ================================================================================
+[20:42:00] [INFO] 
 --- Observed Parameters ---
-[19:44:11] [INFO] ================================================================================
-[19:44:11] [INFO] 
-[19:44:11] [PROCESS]   v_H=-118.20, b_H=50.73, logN_H=15.35
-[19:44:11] [PROCESS]   v_parent=0.0, b_parent=13.2, logN_parent=19.25
-[19:44:11] [PROCESS]   b_D_pred=9.55, b_ratio=5.311
-[19:44:11] [PROCESS]   v_deviation=-36.6 km/s, logN_diff=0.698 dex
-[19:44:11] [PROCESS]   Frozen cache: 13 blocks
-[19:44:11] [INFO] 
-[19:44:11] [INFO] ================================================================================
-[19:44:11] [INFO] 
+[20:42:00] [INFO] ================================================================================
+[20:42:00] [INFO] 
+[20:42:00] [PROCESS]   v_H=-118.20, b_H=50.73, logN_H=15.35
+[20:42:00] [PROCESS]   v_parent=0.0, b_parent=13.2, logN_parent=19.25
+[20:42:00] [PROCESS]   b_D_pred=9.55, b_ratio=5.311
+[20:42:00] [PROCESS]   v_deviation=-36.6 km/s, logN_diff=0.698 dex
+[20:42:00] [PROCESS]   Frozen cache: 13 blocks
+[20:42:00] [INFO] 
+[20:42:00] [INFO] ================================================================================
+[20:42:00] [INFO] 
 --- Running 200 true-D simulations ---
-[19:44:11] [INFO] ================================================================================
-[19:44:11] [INFO] 
-[19:45:27] [PROCESS]   75/200 done
-[19:59:09] [PROCESS]   25/200 done
-[20:02:07] [PROCESS]   100/200 done
+[20:42:00] [INFO] ================================================================================
+[20:42:00] [INFO] 
+[20:43:44] [PROCESS]   25/200 done
+[20:45:28] [PROCESS]   50/200 done
+[20:46:57] [PROCESS]   75/200 done
+[20:48:35] [PROCESS]   100/200 done
+[20:50:08] [PROCESS]   125/200 done
+[20:52:27] [PROCESS]   150/200 done
+[20:56:36] [PROCESS]   175/200 done
+[21:00:40] [PROCESS]   200/200 done
+[21:00:40] [PROCESS]   Successful fits: 200/200
+[21:00:40] [INFO] 
+[21:00:40] [INFO] ================================================================================
+[21:00:40] [INFO] 
+--- Calibrated Gate 8 Statistics ---
+[21:00:40] [INFO] ================================================================================
+[21:00:40] [INFO] 
+[21:00:40] [PROCESS]   Statistic                 Nominal σ    Calibrated p    Verdict
+[21:00:40] [PROCESS]   ------------------------- ------------ --------------- --------------------
+[21:00:40] [PROCESS]   b-value ratio             3.7          0.045           SIGNIFICANT
+[21:00:40] [PROCESS]   Velocity deviation        2.1          0.090           MARGINAL
+[21:00:40] [PROCESS]   Column density            2.0          0.650           NOT SIGNIFICANT
+[21:00:40] [PROCESS]   Joint (Mahalanobis)                    0.000           SIGNIFICANT
+[21:00:40] [INFO] 
+[21:00:40] [INFO] ================================================================================
+[21:00:40] [INFO] 
+--- Key Finding ---
+[21:00:40] [INFO] ================================================================================
+[21:00:40] [INFO] 
+[21:00:40] [PROCESS]   The nominal sigma values were computed from spectral
+[21:00:40] [PROCESS]   resolution / measurement uncertainty. The calibrated
+[21:00:40] [PROCESS]   p-values show how extreme the observations are relative
+[21:00:40] [PROCESS]   to what true-D simulations actually produce.
+[21:00:40] [PROCESS]   
+[21:00:40] [SUCCESS]   The joint statistic IS significant after calibration.
+[21:00:40] [SUCCESS]   The Gate 8 evidence survives the true-D injection test.
+[21:00:40] [SUCCESS] 
+[COMPLETED] /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate8_calibration_J13320052.json

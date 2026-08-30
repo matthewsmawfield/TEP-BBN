@@ -3,7 +3,7 @@
   "analysis": "C2_freed_scaffold_MC_calibration",
   "n_sims": 200,
   "n_free_components": 5,
-  "T_obs": 350.3579827871363,
+  "T_obs": 385.3495600770366,
   "exceedances": 0,
   "p_value": 0.004975124378109453,
   "T_sim_min": -150.89667993978946,

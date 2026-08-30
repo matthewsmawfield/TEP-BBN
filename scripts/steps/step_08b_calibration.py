@@ -92,7 +92,7 @@ def run_gate8_calibration(sightline="Q1009+2956", n_sims=200):
         g2 = json.load(f)
 
     m_h_obs = g2["results"]["M_Hfree"]
-    obs_params = m_h_obs.get("params", m_h_obs.get("cand_params", []))
+    obs_params = m_h_obs.get("cand_params", m_h_obs.get("params", []))
     v_H_obs = obs_params[0]
     logN_H_obs = obs_params[1]
     # Compute total b from fitted T_K and b_turb (not just b_turb)
@@ -320,6 +320,8 @@ def run_gate8_calibration(sightline="Q1009+2956", n_sims=200):
     sim_vecs = np.array([[s["b_ratio"], s["deviation"], s["logN_diff"]] for s in sim_results])
     sim_mean = np.mean(sim_vecs, axis=0)
     sim_cov = np.cov(sim_vecs.T)
+    # Regularize covariance to handle near-singular matrices from correlated statistics
+    sim_cov += 1e-6 * np.eye(3)
 
     try:
         from scipy.linalg import pinv

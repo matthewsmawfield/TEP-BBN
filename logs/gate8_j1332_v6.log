@@ -44,3 +44,36 @@
 [0;34m[19:31:56] [PROCESS]   50/200 done[0m
 [0;34m[19:45:27] [PROCESS]   75/200 done[0m
 [0;34m[20:02:07] [PROCESS]   100/200 done[0m
+[0;34m[20:14:39] [PROCESS]   125/200 done[0m
+[0;34m[20:21:07] [PROCESS]   150/200 done[0m
+[0;34m[20:23:40] [PROCESS]   175/200 done[0m
+[0;34m[20:25:43] [PROCESS]   200/200 done[0m
+[0;34m[20:25:43] [PROCESS]   Successful fits: 200/200[0m
+[0;37m[20:25:43] [INFO] [0m
+[0;37m[20:25:43] [INFO] ================================================================================[0m
+[0;37m[20:25:43] [INFO] 
+--- Calibrated Gate 8 Statistics ---[0m
+[0;37m[20:25:43] [INFO] ================================================================================[0m
+[0;37m[20:25:43] [INFO] [0m
+[0;34m[20:25:43] [PROCESS]   Statistic                 Nominal σ    Calibrated p    Verdict[0m
+[0;34m[20:25:43] [PROCESS]   ------------------------- ------------ --------------- --------------------[0m
+[0;34m[20:25:43] [PROCESS]   b-value ratio             2.2          0.105           NOT SIGNIFICANT[0m
+[0;34m[20:25:43] [PROCESS]   Velocity deviation        1.8          0.165           NOT SIGNIFICANT[0m
+[0;34m[20:25:43] [PROCESS]   Column density            0.2          0.960           NOT SIGNIFICANT[0m
+[0;34m[20:25:43] [PROCESS]   Joint (Mahalanobis)                    0.210           NOT SIGNIFICANT[0m
+[0;37m[20:25:43] [INFO] [0m
+[0;37m[20:25:43] [INFO] ================================================================================[0m
+[0;37m[20:25:43] [INFO] 
+--- Key Finding ---[0m
+[0;37m[20:25:43] [INFO] ================================================================================[0m
+[0;37m[20:25:43] [INFO] [0m
+[0;34m[20:25:43] [PROCESS]   The nominal sigma values were computed from spectral[0m
+[0;34m[20:25:43] [PROCESS]   resolution / measurement uncertainty. The calibrated[0m
+[0;34m[20:25:43] [PROCESS]   p-values show how extreme the observations are relative[0m
+[0;34m[20:25:43] [PROCESS]   to what true-D simulations actually produce.[0m
+[0;34m[20:25:43] [PROCESS]   [0m
+[0;34m[20:25:43] [PROCESS]   The joint statistic is NOT significant after calibration.[0m
+[0;34m[20:25:43] [PROCESS]   The nominal sigma values were inflated by not accounting[0m
+[0;34m[20:25:43] [PROCESS]   for the true-D null distribution.[0m
+[1;32m[20:25:43] [SUCCESS] 
+[COMPLETED] /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate8_calibration_J13320052.json[0m

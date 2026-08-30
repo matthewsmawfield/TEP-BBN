@@ -12,23 +12,23 @@
     "logN_diff": 0.6980722402652653
   },
   "simulated_stats": {
-    "b_ratio_mean": 0.9753502144620897,
-    "b_ratio_std": 0.5260128946694984,
-    "deviation_mean": -6.13107550235165,
-    "deviation_std": 16.702465066512215,
-    "logN_diff_mean": -0.8885657627213674,
-    "logN_diff_std": 0.4907862364401476
+    "b_ratio_mean": 1.1364263363213813,
+    "b_ratio_std": 1.1708765886776837,
+    "deviation_mean": -6.295595681806458,
+    "deviation_std": 17.48405977661645,
+    "logN_diff_mean": -0.7999680164606638,
+    "logN_diff_std": 0.34874866781815395
   },
   "calibrated_p_values": {
-    "b_value": 0.005,
-    "velocity_deviation": 0.095,
-    "column_density": 0.695,
-    "joint_mahalanobis": 0.01
+    "b_value": 0.045,
+    "velocity_deviation": 0.09,
+    "column_density": 0.65,
+    "joint_mahalanobis": 0.0
   },
   "nominal_sigmas": {
-    "b_value": 8.195387515293305,
-    "velocity_deviation": 2.1915637289636924,
-    "column_density": 1.4223549652260807
+    "b_value": 3.6817539538698463,
+    "velocity_deviation": 2.0935936556912806,
+    "column_density": 2.0016484783513415
   },
-  "mahalanobis_distance": 73.50738640568086
+  "mahalanobis_distance": 24.10927138422347
 }

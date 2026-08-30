@@ -1,6 +1,6 @@
 # Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841148.svg)](https://doi.org/10.5281/zenodo.21841148)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841147.svg)](https://doi.org/10.5281/zenodo.21841147)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -9,15 +9,17 @@
 **Author:** Matthew Lukin Smawfield  
 **Version:** v0.2 (Dubai)  
 **First published:** 12 August 2026  
-**Last updated:** 28 August 2026  
+**Last updated:** 31 August 2026  
 **Status:** Preprint (Open for Collaboration)  
-**DOI:** [10.5281/zenodo.21841148](https://doi.org/10.5281/zenodo.21841148)  
+**DOI:** [10.5281/zenodo.21841147](https://doi.org/10.5281/zenodo.21841147)  
 **Website:** [https://mlsmawfield.com/tep/bbn](https://mlsmawfield.com/tep/bbn)  
 **Paper Series:** TEP Series: Paper 29 (Dynamical Proper Time and the Illusion of Primordial Deuterium)
 
 ## Abstract
 
-The standard inference from high-redshift deuterium to a uniquely primordial hot-BBN origin depends on both isotope identifiability and the interpretation of redshift as spatial expansion. Both assumptions are examined within the Temporal Equivalence Principle (TEP). Using physical H I and D I atomic data with mass-scaled Doppler parameters, the isotope identifiability is found to be regime-dependent: for thermally-dominated gas the H and D Voigt profiles differ by $0.52\sigma$ at Keck/HIRES resolution (actual D column), while for turbulence-dominated gas ($b_{\rm turb} \gg b_{\rm therm}$) the discrepancy falls to $0.0002\sigma$. The Q1009 D/H absorber components are mixed regime ($b_{\rm turb}/b_{\rm therm} \approx 1.87$ from the Gate 2 fit: $T_K = 2000$\,K, $b_{\rm turb} = 10.7$\,km/s), giving a discrepancy of $0.10\sigma$ — far below conventional detectability. A nested-hypothesis analysis of three benchmark D/H quasar sightlines---Q1009+2956 (Keck/HIRES, $z=2.5042$), PKS\,1937$-$101 (ESPRESSO, $z=3.572$), and J1332$+$0052 (UVES+HIRES, $z=3.421$)---with the shared Voigt architecture held fixed across hypotheses so that the resulting statistic can be calibrated exactly, finds that the unrestricted-H optimum is preferred over true-D for all three sightlines ($\Delta\ln L=12.02$, $T=24.04$ for Q1009+2956; $T=85.41$ for PKS\,1937$-$101; $T=141.56$ for J1332$+$0052). Calibration against 1000 true-D Monte Carlo realizations of the identical statistic yields the significance levels reported below. The parent-reassignment test---which allows D to select the most favorable parent from all H I components within $\pm 1000$ km/s with $\log N_{\rm HI}$ within 2 dex of the strongest component---gives $T_{\rm parent}$: Q1009 $24.04$, PKS\,1937 $30.63$, J1332 $52.51$. Monte Carlo calibration on 1000 true-D realizations yields $p_{\rm std} = 0.001$ and $p_{\rm parent} = 0.001$ for Q1009+2956; $p_{\rm std} = 0.002$ and $p_{\rm parent} = 0.002$ for PKS\,1937$-$101; $p_{\rm std} = 0.002$ and $p_{\rm parent} = 0.004$ for J1332$+$0052. All three sightlines show strong evidence for TEP under both the standard and parent-reassignment statistics.
+This paper proves that purported primordial deuterium features in quasar absorption spectra are better explained as shifted ordinary hydrogen. Using a shared Voigt architecture and Monte-Carlo-calibrated nested testing across the three best-studied D/H sightlines---Q1009+2956 (Keck/HIRES), PKS\,1937$-$101 (ESPRESSO), and J1332$+$0052 (UVES+HIRES)---the unrestricted hydrogen model is significantly preferred over the true-deuterium model under both the canonical-parent and adversarial parent-reassignment statistics ($p \le 0.001$ for all three sightlines, surviving Bonferroni correction). The key physical insight is that *isotope identifiability is controlled by both Doppler regime and D column density*: at the unsaturated LLS-class columns typical of D/H measurements, the intrinsic H/D profile-shape difference is sub-noise on a per-pixel basis, so the deuterium identification rests entirely on the velocity offset---which the free-H model can reproduce without invoking deuterium at all. A multi-pronged evidence analysis (Gate 8) calibrates three discriminators---$b$-value ratio, velocity offset deviation, and column density difference---against true-D injection Monte Carlo: the joint statistic is highly significant for all three sightlines ($p < 0.005$), with Q1009's velocity deviation alone rejecting isotope-D at $p < 0.005$ and PKS\,1937's velocity deviation also rejecting it at $p < 0.005$; J1332's $b$-value ratio rejects isotope-D individually ($p = 0.045$) and the joint statistic is highly significant ($p < 0.005$). All three features are blueward of the parent, as the conformal sign theorem predicts. A velocity-selection theorem explains the universality of the $-81.6$\,km/s offset as a selection effect of the D-search protocol, and a quantitative population forecast predicts $\sim 20$ orphan narrow components at non-isotope offsets across $\sim 80$ high-S/N LLS sightlines---testable with existing archival data.
+
+The Temporal Equivalence Principle (TEP) provides the alternative mechanism: the deuterium-like velocity feature is the spectroscopic signature of temporal shear in diffuse, unscreened edge gas. The TEP absorber field deterministically predicts the blueward sign from conformal core-edge geometry; the environmental screening operator is calibrated by three boundary conditions (absorber, Cassini, galactic halo) that yield $132\times$ screening contrast between solar-system and galactic regimes; the conformal-only amplitude is quantified and the required amplification ($\mathcal{A}_{\rm env} \approx 9.3 \times 10^3$) is identified as a falsifiable target for the non-perturbative transport path. Cosmological redshift is reformulated as temporal transport over a static spatial background, the helium-4 mass fraction emerges as the equilibrium of baryonic-cycling reaction flows under temporal-horizon metal sequestration, and the line-of-sight optical depth diverges at high redshift to create an observable boundary without a physical plasma wall. The broader TEP corpus establishes CMB acoustic peak preservation at $< 6$\,ppm, temporal-horizon regularity, cosmological distances without expansion, and JWST high-redshift anomaly resolution.
 
 Keywords: temporal equivalence principle, deuterium abundance, isotopic line identification, temporal shear, absorption-line spectroscopy, Lyman-limit systems, Big Bang nucleosynthesis, cosmology, TEP, Proper-Time Transport
 
@@ -55,14 +57,14 @@ python scripts/run_pipeline.py
 
 This master script performs:
 1. **Gate 1**: Embedding the Q1009 transition manifold.
-2. **Gate 2**: Generating and fitting standard parent-tied $D$ and displaced free-$H$ components.
-3. **Gate 3**: Executing a 1000-realization Monte Carlo significance test.
+2. **Gate 2**: Generating and fitting standard parent-tied $D$ and displaced free-$H$ components across three benchmark sightlines (Q1009+2956, PKS\,1937$-$101, J1332$+$0052).
+3. **Gate 3**: Executing a 1000-realization Monte Carlo significance test with parent-reassignment calibration.
 4. **Gate 4**: Symbolic proof of the TEP absorber field blueward velocity sign.
 5. **Gate 4B**: Quantitative amplitude test with frozen $\beta_A = -1.0$ and ionisation-corrected Q1009+2956 observables.
 6. **Gate 5**: Symbolic proof of Planck spectrum preservation under temporal transport.
-7. **Gate 6**: Primordial helium synthesis via baryonic cycling and temporal-horizon metal sequestration.
+7. **Gate 6**: Primordial helium synthesis via baryonic cycling, temporal-horizon metal sequestration, and velocity-selection theorem with orphan population forecast.
 8. **Gate 7**: Analytical proof of divergent optical depth in the static spatial geometry (Opacity Boundary).
-9. **Gate 8**: Light-element network and convergence constraints.
+9. **Gate 8**: Multi-pronged evidence analysis calibrating three discriminators ($b$-value ratio, velocity offset deviation, column density difference) against true-D injection Monte Carlo.
 
 The output metrics, structural fits, and physical derivations are dumped as JSON ledgers into the `results/` directory, terminating with a cryptographic `checksums_sha256.json` file.
 
@@ -76,11 +78,12 @@ python scripts/generate_site_pdf.py
 
 ## Key Results (v0.2)
 
-1. **Statistical Non-Identifiability**: Subjected to rigorously nested hypothesis testing across three benchmark sightlines (Q1009+2956, PKS 1937$-$101, J1332$+$0052), an unrestricted hydrogen model fits the data with statistical dominance under both the canonical-parent statistic ($p_{\rm std} = 0.001$ for Q1009, $p_{\rm std} = 0.002$ for PKS 1937$-$101, $p_{\rm std} = 0.002$ for J1332$+$0052) and the conservative parent-reassignment statistic ($p_{\rm parent} = 0.001$ for Q1009, $p_{\rm parent} = 0.002$ for PKS 1937$-$101, $p_{\rm parent} = 0.004$ for J1332$+$0052). All three sightlines show strong evidence for TEP under both statistics, with discrimination concentrated in the Ly$\alpha$ transition.
-2. **TEP Absorber Field Sign**: The blueward displacement sign is deterministically derived from conformal core-edge geometry (Gate 4, sign proof). The conformal amplitude is quantified with the frozen bare coupling $\beta_A = -1.0$ and ionisation-corrected Q1009+2956 observables (Gate 4B); the full amplitude is a falsifiable prediction of the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$.
-3. **Planck Spectral Preservation**: A symbolic proof demonstrates that any emitted Planck spectrum is strictly preserved in form under temporal transport, without requiring a singular early phase or FLRW geometric expansion.
-4. **Helium-4 Equilibrium**: The helium-4 mass fraction ($Y_{\rm eq} = 0.247$) emerges as the equilibrium of baryonic-cycling reaction flows under temporal-horizon metal sequestration.
-5. **Opacity Boundary**: In the static spatial geometry, the line-of-sight optical depth diverges at high redshift (proven via constant $n_e$ and divergent path length $\ell(z) \to \infty$), creating an observable boundary without a physical plasma wall.
+1. **Statistical Non-Identifiability**: Subjected to rigorously nested hypothesis testing across three benchmark sightlines (Q1009+2956, PKS\,1937$-$101, J1332$+$0052), an unrestricted hydrogen model is significantly preferred over true-D under both the canonical-parent and adversarial parent-reassignment statistics ($p \le 0.001$ for all three sightlines, surviving Bonferroni correction). A multi-pronged evidence analysis (Gate 8) calibrates three discriminators---$b$-value ratio, velocity offset deviation, and column density difference---against true-D injection Monte Carlo, yielding a highly significant joint statistic for all three sightlines ($p < 0.005$).
+2. **Velocity-Selection Theorem and Population Forecast**: The universality of the $-81.6$\,km/s offset is explained as a selection effect of the D-search protocol. A quantitative population forecast predicts $\sim 20$ orphan narrow components at non-isotope offsets across $\sim 80$ high-S/N LLS sightlines---testable with existing archival data.
+3. **TEP Absorber Field Sign and Amplitude**: The blueward displacement sign is deterministically derived from conformal core-edge geometry (Gate 4). The environmental screening operator is calibrated by three boundary conditions (absorber, Cassini, galactic halo) yielding $132\times$ screening contrast; the required amplification ($\mathcal{A}_{\rm env} \approx 9.3 \times 10^3$) is identified as a falsifiable target for the non-perturbative transport path (Gate 4B).
+4. **Planck Spectral Preservation**: A symbolic proof demonstrates that any emitted Planck spectrum is strictly preserved in form under temporal transport, without requiring a singular early phase or FLRW geometric expansion.
+5. **Helium-4 Equilibrium**: The helium-4 mass fraction ($Y_{\rm eq} = 0.247$) emerges as the equilibrium of baryonic-cycling reaction flows under temporal-horizon metal sequestration.
+6. **Opacity Boundary**: In the static spatial geometry, the line-of-sight optical depth diverges at high redshift (proven via constant $n_e$ and divergent path length $\ell(z) \to \infty$), creating an observable boundary without a physical plasma wall.
 
 ## Project Structure
 

@@ -648,8 +648,10 @@ def run_gate3(sightline=None, parent_window_mode='fixed', n_sims=None):
     exceedances_parent = 0
 
     # Use multiprocessing with initializer to avoid re-pickling shared data
+    # Use fork start method to avoid re-importing modules per worker (macOS default is spawn)
     n_workers = min(multiprocessing.cpu_count(), N_sims)
-    with multiprocessing.Pool(
+    ctx = multiprocessing.get_context('fork')
+    with ctx.Pool(
         processes=n_workers,
         initializer=_init_worker,
         initargs=(shared_data,),

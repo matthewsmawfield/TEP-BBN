@@ -1,0 +1,13 @@
+[0;37m[20:50:53] [INFO] ================================================================================[0m
+[0;37m[20:50:53] [INFO] Script: c2_mc_calibration[0m
+[0;37m[20:50:53] [INFO] Started: 2026-08-30T20:50:53.129394[0m
+[0;37m[20:50:53] [INFO] ================================================================================[0m
+[1;32m[20:50:53] [SUCCESS] === C2': FREED-SCAFFOLD MC CALIBRATION (Q1009+2956) ===[0m
+[0;34m[20:50:53] [PROCESS] N_sims: 200, N_free_components: 5[0m
+[0;34m[20:50:53] [PROCESS] Observed T_scaffold: 385.35[0m
+[0;34m[20:50:53] [PROCESS] Running 200 sims on 15 workers (fork)...[0m
+[0;34m[21:04:15] [PROCESS] Exceedances: 0/200[0m
+[0;34m[21:04:15] [PROCESS] p_C2 (Laplace): 0.004975[0m
+[0;34m[21:04:15] [PROCESS] T_sim range: [-150.90, -39.72][0m
+[0;34m[21:04:15] [PROCESS] T_sim median: -102.79[0m
+[1;32m[21:04:15] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c2_mc_calibration.json[0m

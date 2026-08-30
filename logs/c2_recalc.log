@@ -10,3 +10,9 @@
 [0;34m[19:26:39] [PROCESS]   Component 13: logN=13.91, b=41.19, v=-50.8 km/s[0m
 [0;34m[19:26:39] [PROCESS]   Component 14: logN=12.93, b=17.97, v=52.9 km/s[0m
 [0;34m[19:26:39] [PROCESS]   Component 15: logN=12.75, b=42.74, v=72.4 km/s[0m
+[0;34m[20:25:33] [PROCESS] M_Dfree (scaffold freedom=5): LL = -15397.29[0m
+[0;34m[20:44:26] [PROCESS] M_Hfree (scaffold freedom=5): LL = -15204.62[0m
+[0;34m[20:44:26] [PROCESS] T (original, fixed scaffold) = 161.03[0m
+[0;34m[20:44:26] [PROCESS] T (with 5 freed components) = 385.35[0m
+[0;34m[20:44:26] [PROCESS] ΔT = 224.32[0m
+[1;32m[20:44:26] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c2_scaffold_freedom.json[0m

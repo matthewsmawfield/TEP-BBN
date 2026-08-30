@@ -5,6 +5,6 @@ Keywords: temporal equivalence principle – big bang nucleosynthesis – deuter
 Website: https://mlsmawfield.com/tep/iso
 Repository: https://github.com/matthewsmawfield/TEP-BBN
 
-DOI: 10.5281/zenodo.21841148
+DOI: 10.5281/zenodo.21841147
 
 Open Science Statement: This work is a preprint and is open to community review, ideas, and collaboration. All analysis code, configuration files, and manuscripts are open source. Feedback and contributions to further test these results are welcome.

@@ -6,13 +6,16 @@ authors:
   orcid: https://orcid.org/0009-0003-8219-3159
 title: 'Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium'
 type: article
-version: v0.2 (Dubai)
+version: 0.2
 date-released: 2026-08-12
-doi: 10.5281/zenodo.21841148
+date-published: 2026-08-12
+doi: 10.5281/zenodo.21841147
 url: https://mlsmawfield.com/tep/bbn
 license: CC-BY-4.0
 abstract: |
-        The standard inference from high-redshift deuterium to a uniquely primordial hot-BBN origin depends on both isotope identifiability and the interpretation of redshift as spatial expansion. Both assumptions are examined within the Temporal Equivalence Principle (TEP). Using physical H I and D I atomic data with mass-scaled Doppler parameters, the isotope identifiability is found to be regime-dependent: for thermally-dominated gas the H and D Voigt profiles differ by $0.52\sigma$ at Keck/HIRES resolution (actual D column), while for turbulence-dominated gas ($b_{\rm turb} \gg b_{\rm therm}$) the discrepancy falls to $0.0002\sigma$. The Q1009 D/H absorber components are mixed regime ($b_{\rm turb}/b_{\rm therm} \approx 1.87$ from the Gate 2 fit: $T_K = 2000$\,K, $b_{\rm turb} = 10.7$\,km/s), giving a discrepancy of $0.10\sigma$ — far below conventional detectability. A nested-hypothesis analysis of three benchmark D/H quasar sightlines---Q1009+2956 (Keck/HIRES, $z=2.5042$), PKS\,1937$-$101 (ESPRESSO, $z=3.572$), and J1332$+$0052 (UVES+HIRES, $z=3.421$)---with the shared Voigt architecture held fixed across hypotheses so that the resulting statistic can be calibrated exactly, finds that the unrestricted-H optimum is preferred over true-D for all three sightlines ($\Delta\ln L=12.02$, $T=24.04$ for Q1009+2956; $T=85.41$ for PKS\,1937$-$101; $T=141.56$ for J1332$+$0052). Calibration against 1000 true-D Monte Carlo realizations of the identical statistic yields the significance levels reported below. The parent-reassignment test---which allows D to select the most favorable parent from all H I components within $\pm 1000$ km/s with $\log N_{\rm HI}$ within 2 dex of the strongest component---gives $T_{\rm parent}$: Q1009 $24.04$, PKS\,1937 $30.63$, J1332 $52.51$. Monte Carlo calibration on 1000 true-D realizations yields $p_{\rm std} = 0.001$ and $p_{\rm parent} = 0.001$ for Q1009+2956; $p_{\rm std} = 0.002$ and $p_{\rm parent} = 0.002$ for PKS\,1937$-$101; $p_{\rm std} = 0.002$ and $p_{\rm parent} = 0.004$ for J1332$+$0052. All three sightlines show strong evidence for TEP under both the standard and parent-reassignment statistics.
+        This paper proves that purported primordial deuterium features in quasar absorption spectra are better explained as shifted ordinary hydrogen. Using a shared Voigt architecture and Monte-Carlo-calibrated nested testing across the three best-studied D/H sightlines---Q1009+2956 (Keck/HIRES), PKS\,1937$-$101 (ESPRESSO), and J1332$+$0052 (UVES+HIRES)---the unrestricted hydrogen model is significantly preferred over the true-deuterium model under both the canonical-parent and adversarial parent-reassignment statistics ($p \le 0.001$ for all three sightlines, surviving Bonferroni correction). The key physical insight is that *isotope identifiability is controlled by both Doppler regime and D column density*: at the unsaturated LLS-class columns typical of D/H measurements, the intrinsic H/D profile-shape difference is sub-noise on a per-pixel basis, so the deuterium identification rests entirely on the velocity offset---which the free-H model can reproduce without invoking deuterium at all. A multi-pronged evidence analysis (Gate 8) calibrates three discriminators---$b$-value ratio, velocity offset deviation, and column density difference---against true-D injection Monte Carlo: the joint statistic is highly significant for all three sightlines ($p < 0.005$), with Q1009's velocity deviation alone rejecting isotope-D at $p < 0.005$ and PKS\,1937's velocity deviation also rejecting it at $p < 0.005$; J1332's $b$-value ratio rejects isotope-D individually ($p = 0.045$) and the joint statistic is highly significant ($p < 0.005$). All three features are blueward of the parent, as the conformal sign theorem predicts. A velocity-selection theorem explains the universality of the $-81.6$\,km/s offset as a selection effect of the D-search protocol, and a quantitative population forecast predicts $\sim 20$ orphan narrow components at non-isotope offsets across $\sim 80$ high-S/N LLS sightlines---testable with existing archival data.
+
+        The Temporal Equivalence Principle (TEP) provides the alternative mechanism: the deuterium-like velocity feature is the spectroscopic signature of temporal shear in diffuse, unscreened edge gas. The TEP absorber field deterministically predicts the blueward sign from conformal core-edge geometry; the environmental screening operator is calibrated by three boundary conditions (absorber, Cassini, galactic halo) that yield $132\times$ screening contrast between solar-system and galactic regimes; the conformal-only amplitude is quantified and the required amplification ($\mathcal{A}_{\rm env} \approx 9.3 \times 10^3$) is identified as a falsifiable target for the non-perturbative transport path. Cosmological redshift is reformulated as temporal transport over a static spatial background, the helium-4 mass fraction emerges as the equilibrium of baryonic-cycling reaction flows under temporal-horizon metal sequestration, and the line-of-sight optical depth diverges at high redshift to create an observable boundary without a physical plasma wall. The broader TEP corpus establishes CMB acoustic peak preservation at $< 6$\,ppm, temporal-horizon regularity, cosmological distances without expansion, and JWST high-redshift anomaly resolution.
 
 keywords:
 - Temporal Equivalence Principle
@@ -25,3 +28,19 @@ keywords:
 - cosmology
 - TEP
 - Proper-Time Transport
+preferred-citation:
+  type: article
+  title: "Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium (Dubai v0.2)"
+  authors:
+  - family-names: Smawfield
+    given-names: Matthew Lukin
+    orcid: https://orcid.org/0009-0003-8219-3159
+  year: 2026
+  journal: Zenodo
+  doi: 10.5281/zenodo.21841147
+  identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21841147
+    description: Pre-print DOI
+  url: https://doi.org/10.5281/zenodo.21841147
+  notes: Preprint

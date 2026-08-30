@@ -576,7 +576,9 @@ def run_c3_perturbed_mc(sightline=None, n_sims=200):
     exceedances_standard = 0
     exceedances_parent = 0
 
-    with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+    # Use fork start method to avoid re-importing modules per worker (macOS default is spawn)
+    ctx = multiprocessing.get_context('fork')
+    with ctx.Pool(processes=multiprocessing.cpu_count()) as pool:
         for i, res in enumerate(pool.imap_unordered(_run_c3_wrapper, pool_args)):
             results_ledger.append(res)
             if res["T_standard"] >= T_obs:

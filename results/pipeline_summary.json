@@ -1,0 +1,596 @@
+{
+  "pipeline_run": {
+    "timestamp": "2026-08-30T11:27:44.389574",
+    "sightline": "Q1009+2956",
+    "mode": "quick",
+    "total_steps": 13,
+    "completed": 13,
+    "failed": 0,
+    "skipped": 0,
+    "all_passed": true
+  },
+  "step_results": {
+    "completed": [
+      "step_01_embedding",
+      "step_02_q1009",
+      "step_03_significance",
+      "step_04_prior",
+      "step_04b_amplitude",
+      "step_05_thermodynamics",
+      "step_06_helium",
+      "step_07_global_opacity",
+      "step_08_light_elements",
+      "step_09_disformal_transport",
+      "step_09b_screening_plot",
+      "secondary_analyses",
+      "finalize_manuscript_numbers"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "step_timings": {
+    "step_01_embedding": {
+      "elapsed": 0.5568251609802246,
+      "status": "OK"
+    },
+    "step_02_q1009": {
+      "elapsed": 176.93007802963257,
+      "status": "OK"
+    },
+    "step_03_significance": {
+      "elapsed": 334.00956296920776,
+      "status": "OK"
+    },
+    "step_04_prior": {
+      "elapsed": 0.48663806915283203,
+      "status": "OK"
+    },
+    "step_04b_amplitude": {
+      "elapsed": 0.004774808883666992,
+      "status": "OK"
+    },
+    "step_05_thermodynamics": {
+      "elapsed": 0.024603843688964844,
+      "status": "OK"
+    },
+    "step_06_helium": {
+      "elapsed": 0.7187299728393555,
+      "status": "OK"
+    },
+    "step_07_global_opacity": {
+      "elapsed": 0.02921295166015625,
+      "status": "OK"
+    },
+    "step_08_light_elements": {
+      "elapsed": 0.4818379878997803,
+      "status": "OK"
+    },
+    "step_09_disformal_transport": {
+      "elapsed": 0.13193702697753906,
+      "status": "OK"
+    },
+    "step_09b_screening_plot": {
+      "elapsed": 0.6775341033935547,
+      "status": "OK"
+    },
+    "secondary_analyses": {
+      "elapsed": 2664.4038832187653,
+      "status": "OK"
+    },
+    "finalize_manuscript_numbers": {
+      "elapsed": 0.1629021167755127,
+      "status": "OK"
+    }
+  },
+  "result_files": {
+    "checksum_manifest.json": {
+      "size_bytes": 2376,
+      "keys": [
+        "checksums",
+        "updated"
+      ]
+    },
+    "gate1_embedding.json": {
+      "size_bytes": 1514,
+      "keys": [
+        "h_i_hash",
+        "d_i_hash",
+        "rho_eff",
+        "max_tau_err",
+        "max_F_err",
+        "max_sigma_dev_thermal",
+        "max_sigma_dev_turb",
+        "max_sigma_dev_mixed",
+        "max_sigma_dev",
+        "is_indistinguishable_thermal",
+        "is_indistinguishable_turb",
+        "is_indistinguishable_mixed",
+        "b_D",
+        "b_H_thermal",
+        "b_H_turb",
+        "b_H_mixed",
+        "b_D_mixed",
+        "mixed_regime_T_K",
+        "mixed_regime_b_turb",
+        "mixed_regime_b_turb_over_b_therm",
+        "metric_description",
+        "transitions_tested",
+        "noise_sigma_assumed",
+        "inst_res_kms_assumed"
+      ]
+    },
+    "gate2_parameter_ledger.json": {
+      "size_bytes": 18468,
+      "keys": [
+        "manifest",
+        "statistic_definition",
+        "model_parameters",
+        "n_data_blocks",
+        "n_pixels",
+        "bounds",
+        "results",
+        "nesting_invariants",
+        "likelihood_ratio"
+      ]
+    },
+    "gate3_c2_mc_calibration.json": {
+      "size_bytes": 350,
+      "keys": [
+        "sightline",
+        "analysis",
+        "n_sims",
+        "n_free_components",
+        "T_obs",
+        "exceedances",
+        "p_value",
+        "T_sim_min",
+        "T_sim_max",
+        "T_sim_median",
+        "T_sim_mean"
+      ]
+    },
+    "gate3_c2_scaffold_freedom.json": {
+      "size_bytes": 365,
+      "keys": [
+        "sightline",
+        "analysis",
+        "n_free_components",
+        "freed_component_indices",
+        "LL_D_free_scaffold",
+        "LL_H_free_scaffold",
+        "T_scaffold",
+        "T_original",
+        "delta_T"
+      ]
+    },
+    "gate3_c3_perturbed_mc.json": {
+      "size_bytes": 21219,
+      "keys": [
+        "sightline",
+        "analysis",
+        "perturb_sigma",
+        "N_sims",
+        "T_obs",
+        "T_obs_parent_best",
+        "exceedances_standard",
+        "exceedances_parent",
+        "p_standard",
+        "p_parent",
+        "simulations"
+      ]
+    },
+    "gate3_c4_kinematic.json": {
+      "size_bytes": 604,
+      "keys": [
+        "sightline",
+        "analysis",
+        "LL_Dfree",
+        "LL_Hfree",
+        "LL_kinematic",
+        "k_Dfree",
+        "k_Hfree",
+        "k_kinematic",
+        "best_kinematic_params",
+        "T_H_vs_D",
+        "T_H_vs_kin",
+        "T_kin_vs_D",
+        "AIC_D",
+        "AIC_H",
+        "AIC_kin",
+        "dAIC_kin_vs_D",
+        "dAIC_H_vs_kin"
+      ]
+    },
+    "gate3_significance.json": {
+      "size_bytes": 328413,
+      "keys": [
+        "sightline",
+        "parent_window_mode",
+        "parent_window_kms",
+        "T_obs",
+        "T_obs_parent_best",
+        "N_sims",
+        "exceedances_standard",
+        "exceedances_standard_fair",
+        "p_add_one",
+        "p_add_one_standard_fair",
+        "exceedances_parent",
+        "p_add_one_parent",
+        "binom_95_upper",
+        "binom_95_upper_standard",
+        "binom_95_upper_parent",
+        "leave_one_out",
+        "parent_reassignment",
+        "simulations"
+      ]
+    },
+    "gate3_significance_physical.json": {
+      "size_bytes": 68002,
+      "keys": [
+        "sightline",
+        "parent_window_mode",
+        "parent_window_kms",
+        "T_obs",
+        "T_obs_parent_best",
+        "N_sims",
+        "exceedances_standard",
+        "exceedances_standard_fair",
+        "p_add_one",
+        "p_add_one_standard_fair",
+        "exceedances_parent",
+        "p_add_one_parent",
+        "binom_95_upper",
+        "binom_95_upper_standard",
+        "binom_95_upper_parent",
+        "leave_one_out",
+        "parent_reassignment",
+        "simulations"
+      ]
+    },
+    "gate4_prediction.json": {
+      "size_bytes": 1331,
+      "keys": [
+        "4A_scalar_derivation",
+        "4B_absorber_solution",
+        "4C_sign_prediction",
+        "4D_amplitude_prediction",
+        "4E_corpus_note",
+        "symbolic_relations"
+      ]
+    },
+    "gate4b_amplitude.json": {
+      "size_bytes": 4324,
+      "keys": [
+        "4B_frozen_params",
+        "4B_ionisation_correction",
+        "4B_observational_constraint",
+        "4B_amplitude_results",
+        "4B_gate_status",
+        "4B_reference_case",
+        "4B_falsifiability",
+        "4B_note_on_sign_vs_amplitude",
+        "4B_correction_note"
+      ]
+    },
+    "gate4b_closure.json": {
+      "size_bytes": 2177,
+      "keys": [
+        "gate4b_status",
+        "screening_params",
+        "conformal_amplitude",
+        "perturbative_disformal",
+        "non_perturbative_gap",
+        "gradient_check"
+      ]
+    },
+    "gate4b_edge_calculation.json": {
+      "size_bytes": 5117,
+      "keys": [
+        "gate",
+        "title",
+        "key_physics",
+        "parameters",
+        "thin_shell",
+        "amplification_vs_width",
+        "B_enhancement_vs_mass",
+        "key_result",
+        "conclusion"
+      ]
+    },
+    "gate4b_mechanism.json": {
+      "size_bytes": 4870,
+      "keys": [
+        "gate",
+        "title",
+        "target_A_env",
+        "absorber_params",
+        "screening_params",
+        "mechanism_1_interior",
+        "mechanism_2_edge_transition",
+        "mechanism_2b_edge_enhanced",
+        "mechanism_3_IGM",
+        "conclusion"
+      ]
+    },
+    "gate4b_screening_plot.json": {
+      "size_bytes": 368,
+      "keys": [
+        "Phi_half",
+        "n",
+        "beta_A",
+        "S_absorber",
+        "S_dwarf",
+        "S_solar",
+        "S_galactic",
+        "peak_Phi",
+        "peak_beta_eff_sq_Phi",
+        "plot_file",
+        "assets_copy"
+      ]
+    },
+    "gate5_thermodynamics.json": {
+      "size_bytes": 562,
+      "keys": [
+        "5A_local_clock",
+        "5B_redshift_mechanism",
+        "5C_thermodynamic_closure",
+        "5D_singularity",
+        "symbolic_proof"
+      ]
+    },
+    "gate6_helium_results.json": {
+      "size_bytes": 544,
+      "keys": [
+        "theoretical_equilibrium",
+        "simulations"
+      ]
+    },
+    "gate6_population_prediction.json": {
+      "size_bytes": 2417,
+      "keys": [
+        "gate",
+        "title",
+        "input_parameters",
+        "selection_fraction",
+        "benchmark_sample",
+        "survey_forecast",
+        "forecast_by_delta_v",
+        "observational_signature",
+        "testable_prediction"
+      ]
+    },
+    "gate8_calibration_J13320052.json": {
+      "size_bytes": 929,
+      "keys": [
+        "gate",
+        "sightline",
+        "n_sims",
+        "n_successful",
+        "observed",
+        "simulated_stats",
+        "calibrated_p_values",
+        "nominal_sigmas",
+        "mahalanobis_distance"
+      ]
+    },
+    "gate8_calibration_PKS1937101.json": {
+      "size_bytes": 933,
+      "keys": [
+        "gate",
+        "sightline",
+        "n_sims",
+        "n_successful",
+        "observed",
+        "simulated_stats",
+        "calibrated_p_values",
+        "nominal_sigmas",
+        "mahalanobis_distance"
+      ]
+    },
+    "gate8_calibration_Q10092956.json": {
+      "size_bytes": 932,
+      "keys": [
+        "gate",
+        "sightline",
+        "n_sims",
+        "n_successful",
+        "observed",
+        "simulated_stats",
+        "calibrated_p_values",
+        "nominal_sigmas",
+        "mahalanobis_distance"
+      ]
+    },
+    "gate8_evidence.json": {
+      "size_bytes": 4155,
+      "keys": [
+        "gate",
+        "title",
+        "sightlines",
+        "results"
+      ]
+    },
+    "gate8_light_elements.json": {
+      "size_bytes": 2399,
+      "keys": [
+        "gate",
+        "description",
+        "parameters",
+        "temporal_horizon_convergence",
+        "theoretical_equilibrium",
+        "observed_primordial",
+        "ratios_to_observed",
+        "gate6_reference",
+        "simulations"
+      ]
+    },
+    "gate_j13322_parameter_ledger.json": {
+      "size_bytes": 15485,
+      "keys": [
+        "manifest",
+        "statistic_definition",
+        "model_parameters",
+        "n_data_blocks",
+        "n_pixels",
+        "bounds",
+        "results",
+        "nesting_invariants",
+        "likelihood_ratio"
+      ]
+    },
+    "gate_j13323_significance.json": {
+      "size_bytes": 327422,
+      "keys": [
+        "sightline",
+        "parent_window_mode",
+        "parent_window_kms",
+        "T_obs",
+        "T_obs_parent_best",
+        "N_sims",
+        "exceedances_standard",
+        "exceedances_standard_fair",
+        "p_add_one",
+        "p_add_one_standard_fair",
+        "exceedances_parent",
+        "p_add_one_parent",
+        "binom_95_upper",
+        "binom_95_upper_standard",
+        "binom_95_upper_parent",
+        "leave_one_out",
+        "parent_reassignment",
+        "simulations"
+      ]
+    },
+    "gate_pks19372_parameter_ledger.json": {
+      "size_bytes": 15578,
+      "keys": [
+        "manifest",
+        "statistic_definition",
+        "model_parameters",
+        "n_data_blocks",
+        "n_pixels",
+        "bounds",
+        "results",
+        "nesting_invariants",
+        "likelihood_ratio"
+      ]
+    },
+    "gate_pks19373_significance.json": {
+      "size_bytes": 329793,
+      "keys": [
+        "sightline",
+        "parent_window_mode",
+        "parent_window_kms",
+        "T_obs",
+        "T_obs_parent_best",
+        "N_sims",
+        "exceedances_standard",
+        "exceedances_standard_fair",
+        "p_add_one",
+        "p_add_one_standard_fair",
+        "exceedances_parent",
+        "p_add_one_parent",
+        "binom_95_upper",
+        "binom_95_upper_standard",
+        "binom_95_upper_parent",
+        "leave_one_out",
+        "parent_reassignment",
+        "simulations"
+      ]
+    },
+    "iso_rms_q1009.json": {
+      "size_bytes": 699,
+      "keys": [
+        "sightline",
+        "metric",
+        "description",
+        "iso_rms_sigma",
+        "n_pixels",
+        "n_blocks",
+        "d_velocity_offset_kms",
+        "noise_source",
+        "transitions",
+        "method"
+      ]
+    },
+    "quick_gate3_significance.json": {
+      "size_bytes": 19146,
+      "keys": [
+        "sightline",
+        "parent_window_mode",
+        "parent_window_kms",
+        "T_obs",
+        "T_obs_parent_best",
+        "N_sims",
+        "exceedances_standard",
+        "exceedances_standard_fair",
+        "p_add_one",
+        "p_add_one_standard_fair",
+        "exceedances_parent",
+        "p_add_one_parent",
+        "binom_95_upper",
+        "binom_95_upper_standard",
+        "binom_95_upper_parent",
+        "leave_one_out",
+        "parent_reassignment",
+        "simulations"
+      ]
+    },
+    "secondary_analyses_summary.json": {
+      "size_bytes": 174,
+      "keys": [
+        "sightline",
+        "n_sims_c3",
+        "n_free_components_c2",
+        "results",
+        "all_passed"
+      ]
+    },
+    "step_07_global_opacity.json": {
+      "size_bytes": 974,
+      "keys": [
+        "7A_density_profile",
+        "7B_optical_depth_exp",
+        "7B_optical_depth_pl",
+        "7C_horizon_limit_exp",
+        "7C_horizon_limit_pl",
+        "7D_boundary_verified",
+        "7E_path_length_div_exp",
+        "7E_path_length_div_pl",
+        "7E_path_length_verified",
+        "7F_conclusion"
+      ]
+    },
+    "tep_bbn_summary.json": {
+      "size_bytes": 606,
+      "keys": [
+        "T_OBS",
+        "T_PARENT",
+        "P_PARENT",
+        "P_STD",
+        "T_LYA",
+        "DLNL",
+        "DAIC",
+        "DBIC",
+        "N_SIMS",
+        "EXC_STD",
+        "EXC_PARENT",
+        "BINOM95",
+        "T_OBS_PKS",
+        "T_PARENT_PKS",
+        "P_STD_PKS",
+        "P_PARENT_PKS",
+        "EXC_STD_PKS",
+        "EXC_PARENT_PKS",
+        "BINOM95_PKS",
+        "T_OBS_J1332",
+        "T_PARENT_J1332",
+        "P_STD_J1332",
+        "P_PARENT_J1332",
+        "EXC_STD_J1332",
+        "EXC_PARENT_J1332",
+        "BINOM95_J1332"
+      ]
+    }
+  }
+}

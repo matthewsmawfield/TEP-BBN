@@ -1,0 +1,71 @@
+{
+  "gate": "6-II",
+  "title": "Orphan Feature Population Prediction",
+  "input_parameters": {
+    "v_iso_kms": 81.6,
+    "epsilon_search_kms": 5.0,
+    "v_prior_kms": 500.0,
+    "observed_deviations_kms": [
+      2.7172821441621977,
+      5.658173778810635,
+      36.604516624051314
+    ],
+    "sigma_shear_kms": 18.77351698446915
+  },
+  "selection_fraction": {
+    "f_sel": 0.21001694852577035,
+    "f_orphan": 0.7899830514742296,
+    "ratio_orphan_to_identified": 3.7615204726074474
+  },
+  "benchmark_sample": {
+    "n_identified": 3,
+    "n_orphan_expected": 11.284561417822342
+  },
+  "survey_forecast": {
+    "n_lls_surveyed": 80,
+    "f_detectable_geometry": 0.3,
+    "n_shear_features": 24.0,
+    "n_identified_as_D": 5.0404067646184885,
+    "n_orphan": 18.95959323538151,
+    "n_orphan_per_sightline": 0.2369949154422689
+  },
+  "forecast_by_delta_v": [
+    {
+      "delta_v_kms": 5.0,
+      "probability": 0.7899830514742296,
+      "n_orphan_total": 18.95959323538151,
+      "n_per_10_sightlines": 2.369949154422689
+    },
+    {
+      "delta_v_kms": 10.0,
+      "probability": 0.5942653295850864,
+      "n_orphan_total": 14.262367910042073,
+      "n_per_10_sightlines": 1.7827959887552591
+    },
+    {
+      "delta_v_kms": 20.0,
+      "probability": 0.28672640098573665,
+      "n_orphan_total": 6.88143362365768,
+      "n_per_10_sightlines": 0.86017920295721
+    },
+    {
+      "delta_v_kms": 30.0,
+      "probability": 0.11004392713620059,
+      "n_orphan_total": 2.641054251268814,
+      "n_per_10_sightlines": 0.3301317814086018
+    },
+    {
+      "delta_v_kms": 50.0,
+      "probability": 0.00773723650261493,
+      "n_orphan_total": 0.18569367606275833,
+      "n_per_10_sightlines": 0.02321170950784479
+    }
+  ],
+  "observational_signature": {
+    "b_range_kms": "5-15 (cool edge gas)",
+    "column_range": "log N_HI ~ 12-14 (edge gas)",
+    "doppler_regime": "thermal (low turbulence)",
+    "velocity_distribution": "Gaussian centered on v_iso with sigma ~ 19 km/s"
+  },
+  "testable_prediction": "In a re-analysis of 80 high-S/N LLS spectra, ~19 orphan narrow H I components at |\u0394v - v_iso| > 5.0 km/s are predicted. Under the isotope-D null, no excess of narrow components at non-isotope offsets is expected. Under TEP, an excess of narrow (b < 10 km/s) components with low columns (log N ~ 12-14) and a velocity distribution broader than the isotope shift is predicted. This is testable with existing archival data."
+}

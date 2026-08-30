@@ -2,8 +2,8 @@
   "sightline_id": "J1332+0052",
   "description": "D/H absorber at z_abs = 3.420 (Riemer-S\u00f8rensen et al. 2024, MNRAS stae248, UVES)",
   "manifest_path": "data/processed/J1332+0052_union_manifest.json",
-  "vpfit_model_path": "data/literature_components/J1332+0052_z3.420_vpfit_model.26",
-  "noise_model_path": "configs/tep_noise_model.json",
+  "vpfit_model_path": "data/literature_components/J1332+0052_z3.421_vpfit_model.26",
+  "noise_model_path": "configs/sightlines/J1332+0052_noise_model.json",
   "z_abs": 3.4210863,
   "component_table_path": null,
   "n_h_components": 4,
@@ -243,13 +243,104 @@
         17.0,
         100.0,
         10.0
+      ],
+      [
+        -100.0,
+        15.0,
+        5000.0,
+        50.0
+      ],
+      [
+        -110.0,
+        15.5,
+        5000.0,
+        50.0
+      ],
+      [
+        -120.0,
+        15.0,
+        5000.0,
+        50.0
+      ],
+      [
+        -90.0,
+        15.0,
+        8000.0,
+        50.0
+      ],
+      [
+        -100.0,
+        14.5,
+        5000.0,
+        50.0
+      ],
+      [
+        -110.0,
+        14.0,
+        8000.0,
+        50.0
+      ],
+      [
+        -81.0,
+        15.0,
+        5000.0,
+        50.0
+      ],
+      [
+        -81.0,
+        15.5,
+        5000.0,
+        40.0
+      ],
+      [
+        -130.0,
+        15.0,
+        5000.0,
+        50.0
+      ],
+      [
+        -100.0,
+        15.0,
+        2000.0,
+        50.0
+      ],
+      [
+        -115.0,
+        14.5,
+        8000,
+        100.0
+      ],
+      [
+        -115.0,
+        15.0,
+        8000,
+        120.0
+      ],
+      [
+        -120.0,
+        14.0,
+        8000,
+        150.0
+      ],
+      [
+        -110.0,
+        14.5,
+        10000,
+        100.0
+      ],
+      [
+        -100.0,
+        14.0,
+        5000,
+        112.0
       ]
     ]
   },
   "monte_carlo": {
-    "n_sims": 200,
+    "n_sims": 1000,
     "seed_base": 920000
   },
   "output_prefix": "gate_j1332",
-  "parent_window_kms": 1000.0
+  "parent_window_kms": 1000.0,
+  "resolving_power": 50800
 }

@@ -37,7 +37,7 @@ class TEPShearModel:
         self.mu_0 = 1836.15267343  # Proton-to-electron mass ratio
         
         # Deuterium properties
-        self.deuterium_isotope_shift = 0.000082  # D/H isotope shift (fractional)
+        self.deuterium_isotope_shift = 2.72e-4  # D/H isotope shift (fractional) = 81.6 km/s / c
         self.lyman_alpha_wavelength = 1215.6699  # Lyman alpha wavelength (Å)
     
     def calculate_temporal_shear(self, time_years):

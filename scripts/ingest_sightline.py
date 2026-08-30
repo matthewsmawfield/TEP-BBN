@@ -16,6 +16,7 @@ import argparse
 import hashlib
 import json
 import os
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -25,11 +26,11 @@ project_root = Path(__file__).resolve().parent.parent
 SIGHTLINE_REGISTRY = {
     "Q1009+2956": {
         "eso_target": "Q1009+2956",
-        "eso_program_id": "095.A-0854(A)",
-        "instrument": "UVES",
-        "resolving_power": 115000,
+        "eso_program_id": "N/A (Keck archive)",
+        "instrument": "HIRES",
+        "resolving_power": 49000,
         "z_abs": 2.5042,
-        "reference": "Zavarygin et al. 2018 (SQUAD DR1)",
+        "reference": "Zavarygin et al. 2018 (MNRAS 477, 5536)",
     },
     "PKS1937-101": {
         "eso_target": "PKS1937-101",
@@ -110,6 +111,10 @@ def coadd_spectra(fits_files, resolving_power):
     """
     Coadd multiple spectra, handling wavelength binning and
     inverse-variance weighting.
+
+    Creates a UNION wavelength grid that covers all input spectra,
+    so that spectral regions only covered by some exposures (e.g.
+    UVES CD#3 grating covering the blue-red arm gap) are preserved.
     """
     import numpy as np
 
@@ -119,22 +124,47 @@ def coadd_spectra(fits_files, resolving_power):
     # Load all spectra
     spectra = []
     for f in fits_files:
-        w, fl, er = load_fits_spectrum(f)
-        spectra.append({"wave": w, "flux": fl, "err": er})
+        try:
+            w, fl, er = load_fits_spectrum(f)
+            spectra.append({"wave": w, "flux": fl, "err": er})
+        except Exception as e:
+            print(f"  Warning: skipping {f.name}: {e}")
+            continue
 
-    # Find common wavelength grid (use the highest-resolution one)
-    # For simplicity, use the first spectrum's grid
-    ref = spectra[0]
-    wave_grid = ref["wave"]
+    # Build a union wavelength grid from all spectra.
+    # Use the finest pixel spacing encountered (smallest median dλ).
+    best_dlam = np.inf
+    best_spec = spectra[0]
+    for spec in spectra:
+        dlam = np.median(np.diff(spec["wave"]))
+        if dlam < best_dlam:
+            best_dlam = dlam
+            best_spec = spec
+
+    w_min = min(s["wave"][0] for s in spectra)
+    w_max = max(s["wave"][-1] for s in spectra)
+    wave_grid = np.arange(w_min, w_max + best_dlam, best_dlam)
+
     coadd_flux = np.zeros_like(wave_grid)
     coadd_weight = np.zeros_like(wave_grid)
 
     for spec in spectra:
-        # Interpolate onto common grid
+        # Interpolate onto common grid (np.interp clips to edge values
+        # outside the source range, so mask those out)
         fl_interp = np.interp(wave_grid, spec["wave"], spec["flux"])
         er_interp = np.interp(wave_grid, spec["wave"], spec["err"])
-        # Inverse-variance weighting
-        mask = er_interp > 0
+        # Only use pixels that fall within this spectrum's wavelength range
+        in_range = (wave_grid >= spec["wave"][0]) & (wave_grid <= spec["wave"][-1])
+        # Mask out padding zeros: some UVES reductions pad uncovered
+        # wavelengths with FLUX=0 and a tiny ERR (≈0.01), which would
+        # dominate the inverse-variance coadd.  A real pixel with FLUX≈0
+        # (saturated absorption) has ERR comparable to the continuum
+        # (≈0.05–0.2); a padding zero has ERR well below the spectrum's
+        # typical level.  Flag pixels where FLUX=0 AND ERR < 10% of the
+        # spectrum's median ERR.
+        med_err = np.median(spec["err"][spec["err"] > 0]) if np.any(spec["err"] > 0) else 1.0
+        padding = (fl_interp == 0.0) & (er_interp < 0.1 * med_err)
+        mask = (er_interp > 0) & in_range & (~padding)
         coadd_flux[mask] += fl_interp[mask] / er_interp[mask] ** 2
         coadd_weight[mask] += 1.0 / er_interp[mask] ** 2
 
@@ -293,6 +323,12 @@ def main():
 
     # Find VPFIT model file
     vpfit_model = project_root / f"data/literature_components/{sightline_id}_z{info['z_abs']:.3f}_vpfit_model.26"
+    if not vpfit_model.exists():
+        # Try glob fallback (filename may use a different rounding of z_abs)
+        import glob
+        matches = glob.glob(str(project_root / "data" / "literature_components" / f"{sightline_id}_z*_vpfit_model.26"))
+        if matches:
+            vpfit_model = Path(matches[0])
     if not vpfit_model.exists():
         # Try alternative naming
         vpfit_model = project_root / "data/literature_components/model_6a.26"

@@ -1,0 +1,17 @@
+{
+  "sightline": "Q1009+2956",
+  "analysis": "C2_limited_scaffold_freedom",
+  "n_free_components": 5,
+  "freed_component_indices": [
+    6,
+    8,
+    13,
+    14,
+    15
+  ],
+  "LL_D_free_scaffold": -15491.889498657438,
+  "LL_H_free_scaffold": -15316.71050726387,
+  "T_scaffold": 350.3579827871363,
+  "T_original": 144.37763502512098,
+  "delta_T": 205.9803477620153
+}

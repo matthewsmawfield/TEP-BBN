@@ -3,12 +3,12 @@
     "beta_A_bare": -1.0,
     "log_N_HI": 17.362,
     "N_HI_source": "Zavarygin et al. 2018, Table 5",
-    "z_abs": 2.504,
-    "dv_target_kms": 82.0,
+    "z_abs": 2.5042,
+    "dv_target_kms": 81.6,
     "Gamma": 1e-12,
     "Gamma_source": "Haardt & Madau 2012",
     "alpha_rec": 2.6e-13,
-    "alpha_rec_source": "Case A, T~10^4 K"
+    "alpha_rec_source": "Case B, T~10^4 K"
   },
   "4B_ionisation_correction": {
     "formula": "N_H = sqrt(N_HI * 2R * Gamma / alpha_rec)",
@@ -17,7 +17,7 @@
   "4B_observational_constraint": {
     "main_component_z_min": 2.503587,
     "main_component_z_max": 2.503737,
-    "velocity_span_kms": 12.833904109597126,
+    "velocity_span_kms": 12.833171622632365,
     "note": "Velocity width constrains absorber size but does not directly measure R."
   },
   "4B_amplitude_results": [
@@ -27,7 +27,7 @@
       "x_HI": 0.003113678123018228,
       "n_H_cm3": 0.011975685088531642,
       "dv_conf_kms": 5.3376806855815876e-05,
-      "A_env": 1536247.7605957685
+      "A_env": 1528753.8690806672
     },
     {
       "R_kpc": 10,
@@ -35,7 +35,7 @@
       "x_HI": 0.0009846314769375551,
       "n_H_cm3": 0.0037870441420675195,
       "dv_conf_kms": 0.0016879228389126897,
-      "A_env": 48580.41973815698
+      "A_env": 48343.44208089768
     },
     {
       "R_kpc": 30,
@@ -43,7 +43,7 @@
       "x_HI": 0.0005684772482624763,
       "n_H_cm3": 0.002186450954855678,
       "dv_conf_kms": 0.008770704348758025,
-      "A_env": 9349.306137723317
+      "A_env": 9303.699766319789
     },
     {
       "R_kpc": 100,
@@ -51,7 +51,7 @@
       "x_HI": 0.00031136781230182276,
       "n_H_cm3": 0.0011975685088531642,
       "dv_conf_kms": 0.053376806855815875,
-      "A_env": 1536.2477605957686
+      "A_env": 1528.753869080667
     },
     {
       "R_kpc": 300,
@@ -59,7 +59,7 @@
       "x_HI": 0.00017976829024944223,
       "n_H_cm3": 0.0006914165009593933,
       "dv_conf_kms": 0.2773540242601917,
-      "A_env": 295.65101937397554
+      "A_env": 294.20881927946834
     }
   ],
   "4B_gate_status": {
@@ -74,10 +74,10 @@
     "R_kpc": 30,
     "log_N_H": 20.607286912069977,
     "dv_conf_kms": 0.008770704348758025,
-    "A_env": 9349.306137723317,
+    "A_env": 9303.699766319789,
     "note": "R = 30 kpc is a model parameter, not a direct Q1009 observable."
   },
-  "4B_falsifiability": "The conformal sign proof and amplitude quantification together convert the -82 km/s feature into a quantitative prediction: a first-principles evaluation of S_\u03a3(E) in the absorber regime must yield A_env \u2248 10^4 for physically motivated R. If it does not, the TEP absorber-field explanation is falsified.",
+  "4B_falsifiability": "The conformal/static branch sign theorem and amplitude quantification together convert the -82 km/s feature into a quantitative prediction: a first-principles evaluation of S_\u03a3(E) in the absorber regime must yield A_env \u2248 10^4 for physically motivated R. If it does not, the TEP absorber-field explanation is falsified.",
   "4B_note_on_sign_vs_amplitude": "The clock shift \u0394ln A is purely conformal (since \u2202\u2080\u03c6 = 0 for a static field, the disformal term B(\u03c6)\u2207\u2080\u03c6\u2207\u2080\u03c6 = 0 for g\u2080\u2080). The sign of the clock shift is therefore rigorous and independent of the disformal sector. The mapping from clock shift to observed velocity (\u0394v_T = -c \u0394ln A in the conformal limit) may include disformal corrections to photon propagation through C_{T,\u2225}. The disformal corrections affect the magnitude of the velocity mapping, not the direction of the underlying clock deformation.",
   "4B_correction_note": "This version corrects a critical error in the previous version which used log N_HI = 20.45 (from a different absorber). The correct Q1009+2956 value is log N_HI = 17.362 \u00b1 0.005 (Zavarygin et al. 2018, Table 5). The absorber is a Lyman Limit System, not a DLA. An ionisation correction is applied to derive the total gas column N_H to which the scalar actually couples."
 }

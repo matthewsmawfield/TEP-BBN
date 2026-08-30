@@ -22,7 +22,7 @@ Gate status:
 
 The environmental amplification factor A_env is a quantitative target inferred
 from the target velocity for the first-principles evaluation of S_Σ(E). The
-conformal sign proof and amplitude quantification together convert the -82 km/s
+conformal/static branch sign theorem and amplitude quantification together convert the -82 km/s
 feature into a falsifiable prediction of the TEP matter coupling.
 """
 
@@ -52,8 +52,8 @@ def run_gate4b():
     beta_A = -1.0        # Bare conformal coupling (unscreened; Papers 18, 28)
     log_N_HI = 17.362    # CORRECT Q1009+2956 H I column (Zavarygin et al. 2018, Table 5)
     N_HI = 10**log_N_HI  # cm^-2
-    z_abs = 2.504        # Q1009 absorber redshift
-    dv_target = 82e5     # cm/s (observed |Δv_T| = 82 km/s)
+    z_abs = 2.5042       # Q1009 absorber redshift (exact, from config)
+    dv_target = 81.6e5   # cm/s (exact reduced-mass D/H isotope shift |Δv| = 81.6 km/s)
 
     # ---- Ionisation correction parameters ----
     # The scalar couples to TOTAL mass density ρ, not just neutral H.
@@ -62,7 +62,7 @@ def run_gate4b():
     #   N_HI = x_HI × N_H = α_rec × N_H² / (2R × Γ)
     #   N_H = sqrt(N_HI × 2R × Γ / α_rec)
     Gamma = 1.0e-12      # s^-1 (Haardt & Madau 2012 UV background at z~2.5)
-    alpha_rec = 2.6e-13  # cm^3/s (Case A recombination at T~10^4 K)
+    alpha_rec = 2.6e-13  # cm^3/s (Case B recombination at T~10^4 K)
 
     # ---- Fail-fast validation ----
     print_status(f"\n--- Fail-Fast Validation ---", "TITLE")
@@ -192,7 +192,7 @@ def run_gate4b():
 
     # ---- 4. Falsifiability criterion ----
     print_status(f"\n--- 4. Falsifiability Criterion ---", "TITLE")
-    print_status(f"  The conformal sign proof and amplitude quantification together", "PROCESS")
+    print_status(f"  The conformal/static branch sign theorem and amplitude quantification together", "PROCESS")
     print_status(f"  convert the -82 km/s feature into a quantitative prediction:", "PROCESS")
     print_status(f"  a first-principles evaluation of S_Σ(E) in the absorber regime", "PROCESS")
     print_status(f"  must yield A_env ≈ 10⁴ for physically motivated R. If it does", "PROCESS")
@@ -210,7 +210,7 @@ def run_gate4b():
             "Gamma": Gamma,
             "Gamma_source": "Haardt & Madau 2012",
             "alpha_rec": alpha_rec,
-            "alpha_rec_source": "Case A, T~10^4 K",
+            "alpha_rec_source": "Case B, T~10^4 K",
         },
         "4B_ionisation_correction": {
             "formula": "N_H = sqrt(N_HI * 2R * Gamma / alpha_rec)",
@@ -255,7 +255,7 @@ def run_gate4b():
             "note": "R = 30 kpc is a model parameter, not a direct Q1009 observable.",
         },
         "4B_falsifiability": (
-            "The conformal sign proof and amplitude quantification together convert the "
+            "The conformal/static branch sign theorem and amplitude quantification together convert the "
             "-82 km/s feature into a quantitative prediction: a first-principles evaluation "
             "of S_Σ(E) in the absorber regime must yield A_env ≈ 10^4 for physically "
             "motivated R. If it does not, the TEP absorber-field explanation is falsified."

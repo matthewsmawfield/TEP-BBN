@@ -74,3 +74,4 @@ data/raw/spectra/
 # IDE workspace
 *.code-workspace
 argos-runner.sh
+cline-runner*

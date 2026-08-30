@@ -1,0 +1,13 @@
+{
+    "hash": "5dc0fcf10b8177c7575bee3c6b66adfe",
+    "mu_sys_corrected": -0.37203324679748007,
+    "model": "student_t",
+    "nu": 2.430358531095442,
+    "scale": 0.9356209775522601,
+    "location": 0.0,
+    "source": "Q1009+2956_Dfree_residuals_recalibrated_8610_pixels",
+    "calibration_blocks": "Ly\u03b1,Ly\u03b2,Ly\u03b3,Ly6,Ly13",
+    "n_pixels": 8610,
+    "residual_std": 1.9468314879078332,
+    "residual_mean": 0.05361849886614876
+}

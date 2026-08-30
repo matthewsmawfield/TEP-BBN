@@ -10,7 +10,7 @@ Usage:
     python process_pdf.py <input_pdf> [--quality ebook|printer|prepress|default]
 
 Example:
-    python process_pdf.py site/public/docs/27-TEP-BBN-v0.2-Thika.pdf --quality ebook
+    python process_pdf.py site/public/docs/29-TEP-BBN-v0.2-Dubai.pdf --quality ebook
 """
 
 import argparse
@@ -242,7 +242,7 @@ def main():
     cff_data = parse_citation_cff()
     if cff_data:
         metadata = build_metadata(cff_data)
-        print("Loaded metadata from CITATION.cf")
+        print("Loaded metadata from CITATION.cff")
         print(f"  Title: {metadata.get('Title', 'N/A')[:60]}...")
     else:
         print("Warning: Could not load CITATION.cff, using minimal metadata")

@@ -6,8 +6,9 @@ whether deuterium isotope identification can be contaminated by temporal shear.
 """
 
 import sys
+from pathlib import Path
 
-sys.path.insert(0, "../../")
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 from core.constants import C_KMS as c_kms
 
 
@@ -32,22 +33,23 @@ def deuterium_gate_velocity():
     """
     Return the target velocity shift to mimic deuterium isotope offset.
 
-    The deuterium isotope shift is approximately 82 km/s, corresponding
-    to the D/H abundance ratio offset in absorption-line spectroscopy.
+    The deuterium isotope shift is approximately -81.6 km/s (exact reduced-mass
+    calculation), corresponding to the D/H isotope velocity offset in
+    absorption-line spectroscopy. All sightline configs use -81.6 km/s.
 
     Returns
     -------
     float
         Target velocity shift in km/s
     """
-    return 82.0  # km/s
+    return -81.6  # km/s (exact reduced-mass D/H isotope offset)
 
 
 def required_delta_ln_A():
     """
     Return the required temporal shear to mimic deuterium isotope shift.
 
-    Delta ln A ≈ Delta v / c ≈ 82 / 299792 ≈ 2.7×10^-4
+    Delta ln A ≈ Delta v / c ≈ 81.6 / 299792 ≈ 2.7×10^-4
 
     Returns
     -------

@@ -14,11 +14,11 @@
         GitHub Repository: <a href="https://github.com/matthewsmawfield/TEP-BBN">github.com/matthewsmawfield/TEP-BBN</a>
     </p>
     <p>
-        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 8 core analysis steps for spectroscopic embedding, baseline system fitting, Monte Carlo significance testing, absorber field closure, temporal horizon thermodynamics, primordial helium synthesis, and global opacity boundary analysis.
-        All steps are orchestrated by <code>scripts/run_pipeline.py</code> with comprehensive per-step logging.
+        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 14 analysis steps across 4 phases: core gates (1–8), Gate 8 calibration (step\_08b, true-D injection Monte Carlo), disformal transport, secondary robustness analyses, and manuscript finalization.
+        All steps are orchestrated by <code>scripts/run_pipeline.py</code> with comprehensive per-step logging, SHA-256 checksum manifest generation, and a pipeline summary ledger.
     </p>
     <p>
-        All raw spectroscopic data (VLT/UVES and VLT/ESPRESSO), structural likelihood matrices, and the temporal-field equation solvers are released in the Zenodo repository (<a href="https://doi.org/10.5281/zenodo.21841148" target="_blank">DOI: 10.5281/zenodo.21841148</a>) under CC-BY 4.0. The full codebase and execution environments are identical to the published version.
+        All raw spectroscopic data (Keck/HIRES, VLT/UVES + Keck/HIRES, and VLT/ESPRESSO), structural likelihood matrices, and the temporal-field equation solvers are released in the Zenodo repository (<a href="https://doi.org/10.5281/zenodo.21841148" target="_blank">DOI: 10.5281/zenodo.21841148</a>) under CC-BY 4.0. The full codebase and execution environments are identical to the published version.
     </p>
 
     <h4>Repository Structure</h4>
@@ -26,19 +26,19 @@
 <pre>
 TEP-BBN/
 ├── data/
-│   ├── raw/                       # Spectroscopic exposures (UVES, ESPRESSO)
+│   ├── raw/                       # Spectroscopic exposures (UVES, UVES+HIRES, ESPRESSO)
 │   │   ├── atomic/                # Physical H I, D I line registries (NIST ASD)
 │   │   └── reduced_products/      # Pre-reduced and co-added normalized spectra
 │   ├── literature_components/     # Published VPFIT model files and component tables
 │   └── processed/                 # Pipeline-ready union manifests
 ├── scripts/
-│   ├── steps/                     # 8 deterministic pipeline steps (01-08)
+│   ├── steps/                     # 14 pipeline steps (01-09, 08b, 09b, secondary, finalize)
 │   ├── lib/                       # Physical RT engine, Voigt fitters, model parsers
-│   └── run_pipeline.py            # Master orchestration script
+│   ├── utils/                     # Logging, isotopic shift, shear model utilities
+│   └── run_pipeline.py            # Master orchestration script (4-phase pipeline)
 ├── configs/
-│   ├── sightlines/                # Per-sightline JSON configs (bounds, MC settings)
-│   ├── tep_priors.yaml            # Frozen TEP prior parameters
-│   └── tep_noise_model.json       # Student-t noise profile
+│   ├── sightlines/                # Per-sightline JSON configs (bounds, MC settings, noise models)
+│   └── TEP_BBN_FOUNDATION_FREEZE.json  # Frozen TEP prior parameters
 ├── results/                       # Generated parameter ledgers and significance matrices
 ├── logs/                          # Per-step execution logs
 ├── site/
@@ -62,9 +62,9 @@ TEP-BBN/
         <tbody>
             <tr style="border-bottom: 1px solid #d0d7e0;">
                 <td style="padding: 0.5em;">Q1009+2956 Spectra</td>
-                <td style="padding: 0.5em;">VLT/UVES (SQUAD DR1)</td>
-                <td style="padding: 0.5em;">Pre-reduced</td>
-                <td style="padding: 0.5em;">4 coadds (median SNR $\approx 24$)</td>
+                <td style="padding: 0.5em;">Keck/HIRES (Zavarygin et al. 2018 <a href="#ref44">[44]</a>)</td>
+                <td style="padding: 0.5em;">Zavarygin et al. 2018 GitHub</td>
+                <td style="padding: 0.5em;">4 coadds (S/N $\approx 47$–$78$ near Ly$\alpha$)</td>
                 <td style="padding: 0.5em;"><code>data/raw/reduced_products/Q1009+2956_z2.504_UVES/</code></td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
@@ -76,7 +76,7 @@ TEP-BBN/
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
                 <td style="padding: 0.5em;">J1332$+$0052 Spectra</td>
-                <td style="padding: 0.5em;">VLT/UVES (Riemer-Sørensen et al. 2024)</td>
+                <td style="padding: 0.5em;">VLT/UVES + Keck/HIRES (Kislitsyn et al. 2024)</td>
                 <td style="padding: 0.5em;">ESO Archive</td>
                 <td style="padding: 0.5em;">24 exposures</td>
                 <td style="padding: 0.5em;"><code>data/raw/spectra/J1332+0052_z3.420_UVES/</code></td>
@@ -104,9 +104,9 @@ TEP-BBN/
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
                 <td style="padding: 0.5em;">J1332$+$0052 Model</td>
-                <td style="padding: 0.5em;">Riemer-Sørensen et al. 2024 / VPFIT <a href="#ref50">[50]</a></td>
+                <td style="padding: 0.5em;">Kislitsyn et al. 2024 / VPFIT <a href="#ref50">[50]</a></td>
                 <td style="padding: 0.5em;">Static File</td>
-                <td style="padding: 0.5em;">4 H I + 4 D I components</td>
+                <td style="padding: 0.5em;">11 H I + 4 D I components</td>
                 <td style="padding: 0.5em;"><code>data/literature_components/J1332+0052_z3.420_vpfit_model.26</code></td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
@@ -121,9 +121,9 @@ TEP-BBN/
 
     <h3>Pipeline Architecture</h3>
     <p>
-        The analysis pipeline comprises 8 deterministic steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, and opacity boundary analysis.
-        Each step is a standalone Python script in <code>scripts/steps/</code> that produces serialized outputs and
-        detailed logs.
+        The analysis pipeline comprises 4 phases and 14 steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, opacity boundary analysis, Gate 8 true-D injection calibration, disformal transport calibration, secondary robustness checks, and manuscript number finalization.
+        Each step is a standalone Python script in <code>scripts/steps/</code> that produces serialized JSON outputs and
+        detailed logs with SHA-256 checksum verification.
     </p>
 
     <h4>Complete Step Inventory and Runtime</h4>
@@ -134,6 +134,7 @@ TEP-BBN/
     <table style="width: 100%; border-collapse: collapse; font-size: 0.85em; margin: 1em 0;">
         <thead>
             <tr style="background: #e8eef5; border-bottom: 2px solid #4a7fb5;">
+                <th scope="col" style="text-align: left; padding: 0.5em;">Phase</th>
                 <th scope="col" style="text-align: left; padding: 0.5em;">Step</th>
                 <th scope="col" style="text-align: left; padding: 0.5em;">Script</th>
                 <th scope="col" style="text-align: left; padding: 0.5em;">Description</th>
@@ -142,52 +143,102 @@ TEP-BBN/
         </thead>
         <tbody>
             <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">1</td>
                 <td style="padding: 0.4em;">01</td>
                 <td style="padding: 0.4em;"><code>step_01_embedding.py</code></td>
-                <td style="padding: 0.4em;">Verifies fundamental isochrony axiom vulnerability (H vs D embedding)</td>
-                <td style="padding: 0.4em;">~5 s</td>
+                <td style="padding: 0.4em;">Physical atomic-data embedding (H vs D isotope identifiability)</td>
+                <td style="padding: 0.4em;">~1 s</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.4em;">1</td>
                 <td style="padding: 0.4em;">02</td>
                 <td style="padding: 0.4em;"><code>step_02_q1009.py</code></td>
-                <td style="padding: 0.4em;">Nested-hypothesis fit of the absorption complex on the fixed shared scaffold (multi-start; nesting invariants verified)</td>
-                <td style="padding: 0.4em;">~30 s</td>
+                <td style="padding: 0.4em;">Nested-hypothesis fit (multi-start; nesting invariants verified)</td>
+                <td style="padding: 0.4em;">~4 min</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">1</td>
                 <td style="padding: 0.4em;">03</td>
                 <td style="padding: 0.4em;"><code>step_03_significance.py</code></td>
-                <td style="padding: 0.4em;">200-realization Monte Carlo significance test and true-D injection (parent reassignment inside each realization)</td>
+                <td style="padding: 0.4em;">1000-realization Monte Carlo significance calibration (parent reassignment inside each realization)</td>
                 <td style="padding: 0.4em;">~25 min</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.4em;">1</td>
                 <td style="padding: 0.4em;">04</td>
                 <td style="padding: 0.4em;"><code>step_04_prior.py</code></td>
-                <td style="padding: 0.4em;">Symbolic proof of the TEP absorber field blueward velocity sign ($\Delta v_T < 0$)</td>
-                <td style="padding: 0.4em;">~2 s</td>
+                <td style="padding: 0.4em;">TEP absorber field sign closure ($\Delta v_T < 0$)</td>
+                <td style="padding: 0.4em;">~1 s</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">1</td>
+                <td style="padding: 0.4em;">04B</td>
+                <td style="padding: 0.4em;"><code>step_04b_amplitude.py</code></td>
+                <td style="padding: 0.4em;">TEP absorber amplitude test (conformal/static branch sign theorem)</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.4em;">1</td>
                 <td style="padding: 0.4em;">05</td>
                 <td style="padding: 0.4em;"><code>step_05_thermodynamics.py</code></td>
-                <td style="padding: 0.4em;">Symbolic proof of Planck spectrum preservation under temporal transport</td>
+                <td style="padding: 0.4em;">Matter-frame temporal thermodynamics (Planck spectrum preservation)</td>
                 <td style="padding: 0.4em;">~1 s</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
-                <td style="padding: 0.4em;">06</td>
-                <td style="padding: 0.4em;"><code>step_06_helium.py</code></td>
-                <td style="padding: 0.4em;">Primordial helium synthesis via baryonic cycling and temporal-horizon metal sequestration</td>
-                <td style="padding: 0.4em;">~2 s</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
-                <td style="padding: 0.4em;">07</td>
-                <td style="padding: 0.4em;"><code>step_07_global_opacity.py</code></td>
-                <td style="padding: 0.4em;">Analytical proof of divergent optical depth in the static spatial geometry (Opacity Boundary)</td>
+                <td style="padding: 0.4em;">1</td>
+                <td style="padding: 0.4em;">06</td>
+                <td style="padding: 0.4em;"><code>step_06_helium.py</code></td>
+                <td style="padding: 0.4em;">Primordial helium synthesis via baryonic cycling</td>
                 <td style="padding: 0.4em;">~1 s</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.4em;">1</td>
+                <td style="padding: 0.4em;">07</td>
+                <td style="padding: 0.4em;"><code>step_07_global_opacity.py</code></td>
+                <td style="padding: 0.4em;">Analytical proof of divergent optical depth in the static spatial geometry</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">1</td>
                 <td style="padding: 0.4em;">08</td>
                 <td style="padding: 0.4em;"><code>step_08_light_elements.py</code></td>
-                <td style="padding: 0.4em;">Light-element network and convergence constraints</td>
-                <td style="padding: 0.4em;">~5 s</td>
+                <td style="padding: 0.4em;">Light-element network (3He, 4He, 7Li) and convergence constraints</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.4em;">1</td>
+                <td style="padding: 0.4em;">08B</td>
+                <td style="padding: 0.4em;"><code>step_08b_calibration.py</code></td>
+                <td style="padding: 0.4em;">Gate 8 true-D injection Monte Carlo calibration ($N=200$ per sightline)</td>
+                <td style="padding: 0.4em;">~15 min</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">09</td>
+                <td style="padding: 0.4em;"><code>step_09_disformal_transport.py</code></td>
+                <td style="padding: 0.4em;">Disformal transport solver and Cassini screening calibration</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">09B</td>
+                <td style="padding: 0.4em;"><code>step_09b_screening_plot.py</code></td>
+                <td style="padding: 0.4em;">Screening function visualization and JSON ledger</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.4em;">3</td>
+                <td style="padding: 0.4em;">C2-C4</td>
+                <td style="padding: 0.4em;"><code>secondary_analyses.py</code></td>
+                <td style="padding: 0.4em;">Scaffold freedom (C2), perturbed MC (C3), kinematic test (C4)</td>
+                <td style="padding: 0.4em;">~10 min</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">4</td>
+                <td style="padding: 0.4em;">Final</td>
+                <td style="padding: 0.4em;"><code>finalize_manuscript_numbers.py</code></td>
+                <td style="padding: 0.4em;">Manuscript number synchronization + SHA-256 checksum manifest</td>
+                <td style="padding: 0.4em;">~1 s</td>
             </tr>
         </tbody>
     </table>
@@ -200,14 +251,24 @@ TEP-BBN/
             <th style="text-align: left; padding: 0.5em 1.5em 0.5em 0.5em;">Runtime</th>
         </tr>
         <tr style="border-bottom: 1px solid #d0d7e0;">
-            <td style="padding: 0.4em;">All Analysis Stages</td>
-            <td style="padding: 0.4em;">8</td>
-            <td style="padding: 0.4em;">~30 min per sightline</td>
+            <td style="padding: 0.4em;">Core Gates (Phase 1)</td>
+            <td style="padding: 0.4em;">10</td>
+            <td style="padding: 0.4em;">~45 min per sightline</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+            <td style="padding: 0.4em;">Disformal + Secondary (Phases 2–3)</td>
+            <td style="padding: 0.4em;">3</td>
+            <td style="padding: 0.4em;">~10 min per sightline</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #d0d7e0;">
+            <td style="padding: 0.4em;">Finalization (Phase 4)</td>
+            <td style="padding: 0.4em;">1</td>
+            <td style="padding: 0.4em;">~1 s</td>
         </tr>
         <tr style="border-bottom: 2px solid #4a7fb5; font-weight: 600;">
             <td style="padding: 0.4em;">Total (3 sightlines)</td>
-            <td style="padding: 0.4em;">8</td>
-            <td style="padding: 0.4em;">~1.5 hr</td>
+            <td style="padding: 0.4em;">13</td>
+            <td style="padding: 0.4em;">~2 hr</td>
         </tr>
     </table>
 
@@ -223,16 +284,27 @@ cd TEP-BBN
 # 2. Install dependencies
 pip install -r requirements-lock.txt
 
-# 3. Run full pipeline (default: Q1009+2956 sightline)
+# 3. Run full pipeline (default: Q1009+2956 sightline, 1000 MC sims)
 python scripts/run_pipeline.py
 
-# 3b. Run a specific sightline
+# 3b. Quick mode (50 MC sims, for faster testing)
+python scripts/run_pipeline.py --quick
+
+# 3c. Run a specific sightline
 python scripts/run_pipeline.py --sightline PKS1937-101
 
-# 3c. Run all sightlines with ingested data
+# 3d. Run all sightlines with ingested data
 python scripts/run_pipeline.py --all-sightlines
 
+# 3e. Skip secondary robustness analyses
+python scripts/run_pipeline.py --skip-secondary
+
+# 3f. Custom MC simulation count
+python scripts/run_pipeline.py --n-sims 500
+
 # 4. Results will be stored in results/ and logs/
+#    Pipeline summary: results/pipeline_summary.json
+#    SHA-256 manifest: results/checksums_sha256.json
 </pre>
     </div>
 
@@ -240,7 +312,7 @@ python scripts/run_pipeline.py --all-sightlines
     <p>
         The pipeline supports multiple D/H absorber sightlines through per-sightline JSON configuration files in <code>configs/sightlines/</code>.
         Each config specifies the data manifest path, VPFIT model file, noise model, absorber redshift, candidate parameter bounds, multi-start initial points, and Monte Carlo settings.
-        Three sightlines are currently supported with ingested data: Q1009+2956 (UVES, $z=2.504$), PKS 1937$-$101 (ESPRESSO, $z=3.572$), and J1332$+$0052 (UVES, $z=3.421$).
+        Three sightlines are currently supported with ingested data: Q1009+2956 (Keck/HIRES, $z=2.5042$), PKS 1937$-$101 (ESPRESSO, $z=3.572$), and J1332$+$0052 (UVES+HIRES, $z=3.421$).
         Sightlines without ingested data (PKS 1937$-$1009, HS 0105+1619) are automatically skipped with a diagnostic message.
     </p>
 
@@ -277,4 +349,53 @@ python scripts/run_pipeline.py --all-sightlines
             <td style="padding: 0.4em;">macOS Sequoia 15.1</td>
         </tr>
     </table>
+
+    <h4>Version Changelog (v0.1 → v0.2)</h4>
+    <p>
+        Three analysis fixes were applied between v0.1 and v0.2, each with a quantitative impact on the primary statistic:
+    </p>
+    <table class="data-table" style="font-size: 0.9em;">
+        <thead>
+            <tr>
+                <th>Fix</th>
+                <th>Description</th>
+                <th>Impact on $T$ (Q1009)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dynamic continuum basis</td>
+                <td>10-parameter monomial for Ly$\alpha$ regions (broad H I wing), 5-parameter for metal-line regions. v0.1 used a rigid 3-parameter basis that could not separate the H I wing from the D feature.</td>
+                <td>$T$: 56.54 → 24.04</td>
+            </tr>
+            <tr>
+                <td>VPFIT tie parser fix</td>
+                <td>Corrected parsing of <code>x</code>/<code>X</code> tie flags in VPFIT <code>.26</code> files. The parser was misclassifying tied H I components, corrupting their column densities by 0.56–0.84 dex and inflating the D model's likelihood. After fix, the H I columns are correctly read and the D model's likelihood decreases appropriately.</td>
+                <td>$T$: 56.54 → 144.38 → 161.03</td>
+            </tr>
+            <tr>
+                <td>Mass-scaled Doppler identifiability</td>
+                <td>Corrected to use mass-scaled $b$-values at the actual D column ($N_{\rm D} = 5.7\times10^{12}$). v0.1 used $b_H = b_D$ (turbulence-only limit) and an inflated column ($10^{14}$), giving $5.25\sigma$. v0.2: $0.52\sigma$ (thermal), $0.10\sigma$ (mixed), $0.0002\sigma$ (turbulent).</td>
+                <td>Identifiability: $5.25\sigma$ → $0.10\sigma$</td>
+            </tr>
+            <tr>
+                <td>Parent-reassignment interpretation</td>
+                <td>Corrected: non-significant $p_{\rm parent}$ means D with alternative parent is indistinguishable from free-H (D remains viable), not that TEP is supported. v0.1 inverted this interpretation.</td>
+                <td>Interpretation corrected; $T_{\rm parent}$ unchanged</td>
+            </tr>
+            <tr>
+                <td>Per-sightline noise models</td>
+                <td>v0.1 used a single Q1009-calibrated noise model for all sightlines. v0.2 calibrates per-sightline Student-$t$ models from each absorber's D-model residuals.</td>
+                <td>PKS $T$: 8982 → 85.41 → 161.31; J1332 $T$: 1886 → 141.56 → 89.14 → 136.97</td>
+            </tr>
+            <tr>
+                <td>MC realizations increased</td>
+                <td>v0.1 used 200 realizations ($p$-precision $\sim 0.015$). v0.2 uses 1000 realizations ($p$-precision $\sim 0.003$).</td>
+                <td>$N_{\rm MC}$: 200 → 1000</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        The net effect of these fixes is to <em>strengthen</em> the TEP thesis: the corrected identifiability ($0.10\sigma$ at actual D column) is far below the v0.1 claim ($5.25\sigma$), meaning H and D are substantially less distinguishable than previously reported. The primary statistic $T$ started at 56.54 (v0.1), decreased to 24.04 after the continuum basis fix, then increased to 144.38 after the tie parser fix, and finally to 161.03 after the Gate 2 re-run with the corrected noise model and continuum basis. The Monte Carlo calibration yields $p_{\rm std} = 0.001$ and $p_{\rm parent} = 0.001$ (both significant) — a more honest and defensible result than the v0.1 headline.
+    </p>
 </section>

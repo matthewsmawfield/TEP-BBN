@@ -23,7 +23,7 @@ from collections import OrderedDict
 
 project_root = Path(__file__).resolve().parent.parent.parent
 SOURCE_DIR = project_root / "data" / "raw" / "literature_source" / "2401.12797"
-OUTPUT_PATH = project_root / "data" / "literature_components" / "J1332+0052_z3.420_vpfit_model.26"
+OUTPUT_PATH = project_root / "data" / "literature_components" / "J1332+0052_z3.421_vpfit_model.26"
 MANIFEST_PATH = project_root / "data" / "processed" / "J1332+0052_union_manifest.json"
 
 Z_ABS = 3.4210863
@@ -49,7 +49,18 @@ def dv_to_z(dv_kms, z_abs=Z_ABS):
 
 
 def build_components():
-    """Build H I and D I component list from Table 3 data."""
+    """Build H I and D I component list from Table 3 data.
+
+    Also includes H I interloper components from the paper's Appendix A
+    (interloping absorption systems). These are H I systems at different
+    redshifts whose Lyman series absorption falls within the D/H system's
+    data blocks. Without modeling these interlopers, the unmodeled
+    absorption inflates residuals and the noise model scale, making the
+    MC calibration overly conservative. The interloper redshifts are taken
+    from the figure captions in Appendix A; logN_H and b are estimated
+    from the residual absorption depth at each interloper's Lyman series
+    wavelength within the data blocks.
+    """
     components = []
     z_tie_letters = "ABCD"
 
@@ -84,6 +95,36 @@ def build_components():
             "z_tie": z_tie,
             "b_tie": z_tie.upper(),  # uppercase for D I (mass-scaled thermal tie)
             "N_tie": "%",  # tied to parent H I via D/H offset
+        })
+
+    # Add interloper H I components from Appendix A.
+    # These are H I absorbers at different redshifts whose Lyman series
+    # transitions fall within the D/H system's data blocks. Parameters
+    # (logN_H, b) are estimated from the residual absorption depth.
+    # Each interloper is a simple H I component with independent b
+    # (no thermal block, no D counterpart).
+    interlopers = [
+        # (z, logN_H, b_kms)  — estimated from residual absorption
+        (2.729383, 14.0, 10.0),   # blends with D I λ1026
+        (2.534616, 13.1, 10.0),   # blends with D I λ973
+        (3.475422, 15.2, 12.0),   # blends with D I λ950
+        (2.409310, 13.7, 10.0),   # blends with D I λ938 (first)
+        (3.261862, 15.3, 12.0),   # blends with D I λ938 (second)
+        (3.331398, 14.5, 10.0),   # blends with D I λ931
+        (2.991426, 14.9, 10.0),   # blends with D I λ926
+    ]
+
+    for z_int, logN_int, b_int in interlopers:
+        components.append({
+            "ion": "H_I",
+            "logN": logN_int,
+            "z": z_int,
+            "b": b_int,  # direct b value (no thermal block)
+            "b_turb": None,
+            "T": None,
+            "z_tie": "!",  # independent (no tie)
+            "b_tie": "!",  # independent b
+            "N_tie": "!",  # independent N
         })
 
     # Assign unique N ties for H I
@@ -123,6 +164,11 @@ def format_component_line(c):
         b_str = f"{b_tot:.5f}{c['b_tie']}"
         b_tie_val = "0.00000"
         line = f" {ion_str:<6s} {z_str:>18s}   {z_tie_val}    {b_str:>14s}    {b_tie_val}  {N_str:>14s}   {N_tie_val}  0 ! "
+    elif c.get("b") is not None:
+        # Interloper H I with direct b value (no thermal block)
+        b_str = f"{c['b']:.5f}{c['b_tie']}"
+        b_tie_val = "0.00000"
+        line = f" {ion_str:<6s} {z_str:>18s}   {z_tie_val}    {b_str:>14s}    {b_tie_val}  {N_str:>14s}   {N_tie_val}  0 ! "
     else:
         b_str = f"{'0.00000':>10s}{c['b_tie']}"
         b_tie_val = "0.00000"
@@ -132,7 +178,12 @@ def format_component_line(c):
 
 
 def build_regions():
-    """Build region lines from the manifest, resolving overlaps."""
+    """Build region lines from the manifest, resolving overlaps.
+
+    Also adds a Lyα region manually, since the Lyα damping wings are
+    critical for D/H analysis but may not be present in the manifest
+    if the original ingestion missed the CD#3 grating data.
+    """
     with open(MANIFEST_PATH, "r") as f:
         manifest = json.load(f)
 
@@ -143,6 +194,22 @@ def build_regions():
     for chunk in chunks:
         w = chunk["wave"]
         raw_bounds.append((min(w), max(w)))
+
+    # Add Lyα region if not already covered by a higher-order Lyman region.
+    # Lyα at z_abs: 1215.6701 * (1 + z_abs) = 5374.58 Å
+    # Use a ±500 km/s window to capture the damping wings where D/H
+    # information is concentrated.  A wider window includes quasar
+    # continuum features (emission lines, breaks) that a 10-parameter
+    # Chebyshev cannot capture, inflating residuals.
+    lya_w = 1215.6701 * (1 + Z_ABS)
+    lya_halfwidth = lya_w * 500.0 / C_KMS  # ±500 km/s in Å
+    lya_lo = lya_w - lya_halfwidth
+    lya_hi = lya_w + lya_halfwidth
+    # Remove any existing region that overlaps with Lyα (e.g. a stale
+    # wide Lyα region from a previous manifest) and add the narrow one.
+    raw_bounds = [(lo, hi) for lo, hi in raw_bounds
+                  if hi < lya_lo or lo > lya_hi]
+    raw_bounds.append((lya_lo, lya_hi))
 
     indexed = sorted(enumerate(raw_bounds), key=lambda x: x[1][0])
     sorted_bounds = [b for _, b in indexed]

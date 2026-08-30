@@ -1,0 +1,121 @@
+[0;37m[19:26:51] [INFO] ================================================================================[0m
+[0;37m[19:26:51] [INFO] Script: run_pipeline[0m
+[0;37m[19:26:51] [INFO] Started: 2026-08-30T19:26:51.604227[0m
+[0;37m[19:26:51] [INFO] ================================================================================[0m
+[0;37m[19:26:51] [INFO] [0m
+[0;37m[19:26:51] [INFO] ================================================================================[0m
+[0;37m[19:26:51] [INFO] TEP-BBN ISOTOPIC ANALYSIS PIPELINE — Sightline: Q1009+2956 (default) — Mode: QUICK[0m
+[0;37m[19:26:51] [INFO] ================================================================================[0m
+[0;37m[19:26:51] [INFO] [0m
+[0;37m[19:26:51] [INFO] [0m
+[0;37m[19:26:51] [INFO] ================================================================================[0m
+[0;37m[19:26:51] [INFO] PHASE 1: CORE GATES (1–8)[0m
+[0;37m[19:26:51] [INFO] ================================================================================[0m
+[0;37m[19:26:51] [INFO] [0m
+[0;34m[19:26:51] [PROCESS] [RUN] step_01_embedding: Gate 1R: Physical Atomic-Data Embedding[0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[0;37m[19:26:53] [INFO] Script: step_01_embedding[0m
+[0;37m[19:26:53] [INFO] Started: 2026-08-30T19:26:53.279311[0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[1;32m[19:26:53] [SUCCESS] === GATE 1R: PHYSICAL ATOMIC-DATA EMBEDDING ===[0m
+[0;34m[19:26:53] [PROCESS] H_I_lines.txt SHA-256: e5e64db44a25fbb3254e242a8484e9a9e25d6b917960378c64654d0496074762[0m
+[0;34m[19:26:53] [PROCESS] D_I_lines.txt SHA-256: e4195b3791db0371119af15d0f342fdc77e5499ebc1586387725a5e8d3fe4022[0m
+[0;34m[19:26:53] [PROCESS] 
+Optimal Mapping derived from Lyα ratio: rho = 0.99972665[0m
+[0;34m[19:26:53] [PROCESS] HI_Lyα / DI_Lyα:[0m
+[0;34m[19:26:53] [PROCESS]   eps_tau = 2.9942e-02[0m
+[0;34m[19:26:53] [PROCESS]   eps_F   = 2.8651e-02[0m
+[0;34m[19:26:53] [PROCESS] 
+Global Max eps_tau = 2.9942e-02[0m
+[0;34m[19:26:53] [PROCESS] Global Max eps_F   = 2.8651e-02[0m
+[0;37m[19:26:53] [INFO] [0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[0;37m[19:26:53] [INFO] 
+--- Operational Isotope Identifiability ---[0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[0;37m[19:26:53] [INFO] [0m
+[0;34m[19:26:53] [PROCESS] 
+  Case: thermal (mass-scaled b_H)[0m
+[0;34m[19:26:53] [PROCESS]     b_D = 12.00, b_H = 16.96[0m
+[0;34m[19:26:53] [PROCESS]     HI_Lyα: eps_conv = 2.6084e-02, max |F_D - F_H| / sigma = 0.5217[0m
+[0;34m[19:26:53] [PROCESS]   → Global Max |F_D - F_H| / sigma = 0.5217[0m
+[0;34m[19:26:53] [PROCESS] 
+  Case: turbulence-dominated (b_H=b_D)[0m
+[0;34m[19:26:53] [PROCESS]     b_D = 12.00, b_H = 12.00[0m
+[0;34m[19:26:53] [PROCESS]     HI_Lyα: eps_conv = 1.1805e-05, max |F_D - F_H| / sigma = 0.0002[0m
+[0;34m[19:26:53] [PROCESS]   → Global Max |F_D - F_H| / sigma = 0.0002[0m
+[0;34m[19:26:53] [PROCESS] 
+  Case: mixed (fitted Q1009: T_K=2000, b_turb=10.7)[0m
+[0;34m[19:26:53] [PROCESS]     b_D = 11.45, b_H = 12.15[0m
+[0;34m[19:26:53] [PROCESS]     HI_Lyα: eps_conv = 5.1580e-03, max |F_D - F_H| / sigma = 0.1032[0m
+[0;34m[19:26:53] [PROCESS]   → Global Max |F_D - F_H| / sigma = 0.1032[0m
+[0;37m[19:26:53] [INFO] [0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[0;37m[19:26:53] [INFO] 
+  SUMMARY:[0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[0;37m[19:26:53] [INFO] [0m
+[0;34m[19:26:53] [PROCESS]     Thermal (mass-scaled b):     0.5217 sigma[0m
+[0;34m[19:26:53] [PROCESS]     Turbulence-dominated (b=bD): 0.0002 sigma[0m
+[0;34m[19:26:53] [PROCESS]     Mixed (fitted Q1009 params): 0.1032 sigma[0m
+[0;34m[19:26:53] [PROCESS]     → H and D ARE distinguishable for thermally-dominated gas[0m
+[0;34m[19:26:53] [PROCESS]     → H and D are NOT distinguishable for turbulence-dominated gas[0m
+[0;34m[19:26:53] [PROCESS]     → Q1009 fitted params give mixed regime (b_turb/b_therm ≈ 1.87)[0m
+[1;33m[19:26:53] [WARNING] 
+[RESULT] Isotope IDENTIFIABLE: max discrepancy = 0.5217 sigma (> 0.5 sigma threshold). H and D are distinguishable for thermally-dominated gas.[0m
+[1;32m[19:26:53] [SUCCESS] 
+[SUCCESS] Gate 1R ledger written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate1_embedding.json[0m
+[1;32m[19:26:53] [SUCCESS]   [OK] 2.1s[0m
+[0;34m[19:26:53] [PROCESS] [RUN] step_02_q1009: Gate 2R: Spectroscopic Fit Verification[0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[0;37m[19:26:53] [INFO] Script: step_02_q1009[0m
+[0;37m[19:26:53] [INFO] Started: 2026-08-30T19:26:53.667264[0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[1;32m[19:26:53] [SUCCESS] === GATE 2R: IMMUTABLE FIT VERIFICATION (Q1009+2956) ===[0m
+[0;37m[19:26:53] [INFO] [0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[0;37m[19:26:53] [INFO] 
+--- Data Manifest ---[0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[0;37m[19:26:53] [INFO] [0m
+[0;34m[19:26:53] [PROCESS] wave_hash: e9ad9d7f8702f8a3d3a804e74889ba2421fc5f2ed733530a3da0914806c1ab38[0m
+[0;34m[19:26:53] [PROCESS] flux_hash: bd64c2e618cd0145ae49b870c824b788a5b3268f797be13a5078fc71e918e2c2[0m
+[0;34m[19:26:53] [PROCESS] err_hash: 6f97570884decf32e4b4eff423fc462eb0ce66ef7cf668d32de72f2d09536c52[0m
+[0;34m[19:26:53] [PROCESS] likelihood_cfg: {'hash': '5dc0fcf10b8177c7575bee3c6b66adfe', 'mu_sys_corrected': -0.37203324679748007, 'model': 'student_t', 'nu': 2.430358531095442, 'scale': 0.9356209775522601, 'location': 0.0, 'source': 'Q1009+2956_Dfree_residuals_recalibrated_8610_pixels', 'calibration_blocks': 'Lyα,Lyβ,Lyγ,Ly6,Ly13', 'n_pixels': 8610, 'residual_std': 1.9468314879078332, 'residual_mean': 0.05361849886614876}[0m
+[0;34m[19:26:53] [PROCESS] 
+Shared parameters (fixed scaffold): 142[0m
+[0;34m[19:26:53] [PROCESS] Data blocks: 50[0m
+[0;34m[19:26:53] [PROCESS] Total pixels: 8610[0m
+[0;34m[19:26:53] [PROCESS]   Physical logN cap: 20.0 → 13.9 (parent logN_HI=17.36, cap = parent - 3.5 dex)[0m
+[0;37m[19:26:53] [INFO] [0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[0;37m[19:26:53] [INFO] 
+--- Fitting M_Dfree ---[0m
+[0;37m[19:26:53] [INFO] ================================================================================[0m
+[0;37m[19:26:53] [INFO] [0m
+[0;34m[19:27:19] [PROCESS]  Start 0: LL=-15446.78 | converged=True | logN_D=12.755[0m
+[0;34m[19:27:55] [PROCESS]  Start 1: LL=-15446.77 | converged=True | logN_D=12.753[0m
+[0;34m[19:28:22] [PROCESS]  Start 2: LL=-15447.69 | converged=True | logN_D=12.762[0m
+[0;34m[19:28:44] [PROCESS]  Start 3: LL=-15446.78 | converged=True | logN_D=12.752[0m
+[0;34m[19:29:04] [PROCESS]  Start 4: LL=-15446.78 | converged=True | logN_D=12.753[0m
+[0;34m[19:29:43] [PROCESS]  Start 5: LL=-15446.77 | converged=True | logN_D=12.753[0m
+[0;34m[19:30:19] [PROCESS]  Start 6: LL=-15446.77 | converged=True | logN_D=12.753[0m
+[0;34m[19:31:00] [PROCESS]  Start 7: LL=-15446.77 | converged=True | logN_D=12.753[0m
+[0;34m[19:31:02] [PROCESS]  Start 8: LL=-16165.87 | converged=True | logN_D=0.000[0m
+[0;34m[19:31:02] [PROCESS] M_Dfree Global Best LL: -15446.77[0m
+[0;37m[19:31:02] [INFO] [0m
+[0;37m[19:31:02] [INFO] ================================================================================[0m
+[0;37m[19:31:02] [INFO] 
+--- Fitting M_Hfree (Multistart) ---[0m
+[0;37m[19:31:02] [INFO] ================================================================================[0m
+[0;37m[19:31:02] [INFO] [0m
+[0;34m[19:32:20] [PROCESS]  Start 0: LL=-15366.27 | converged=True | v_H=-131.30[0m
+[0;34m[19:33:20] [PROCESS]  Start 1: LL=-15366.27 | converged=True | v_H=-131.29[0m
+[0;34m[19:33:48] [PROCESS]  Start 2: LL=-16165.92 | converged=True | v_H=-79.82[0m
+[0;34m[19:33:51] [PROCESS]  Start 3: LL=-16165.87 | converged=True | v_H=-87.80[0m
+[0;34m[19:33:54] [PROCESS]  Start 4: LL=-16165.87 | converged=True | v_H=-103.81[0m
+[0;34m[19:34:13] [PROCESS]  Start 5: LL=-16165.87 | converged=True | v_H=-60.00[0m
+[0;34m[19:34:42] [PROCESS]  Start 6: LL=-16165.87 | converged=True | v_H=-81.88[0m
+[0;34m[19:35:37] [PROCESS]  Start 7: LL=-15366.26 | converged=True | v_H=-131.30[0m
+[0;34m[19:36:13] [PROCESS]  Start 8: LL=-15366.26 | converged=True | v_H=-131.31[0m
+[0;34m[19:37:10] [PROCESS]  Start 9: LL=-15366.26 | converged=True | v_H=-131.32[0m

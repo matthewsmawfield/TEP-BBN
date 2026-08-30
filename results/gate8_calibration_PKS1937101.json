@@ -1,0 +1,34 @@
+{
+  "gate": "8-calibration",
+  "sightline": "PKS1937-101",
+  "n_sims": 200,
+  "n_successful": 200,
+  "observed": {
+    "v_H": -67.26017236309448,
+    "b_H": 15.08642519133573,
+    "logN_H": 13.231983093081492,
+    "b_ratio": 1.3066292954272933,
+    "deviation": 5.658173778810635,
+    "logN_diff": -0.09423214883842235
+  },
+  "simulated_stats": {
+    "b_ratio_mean": 1.1784397051308204,
+    "b_ratio_std": 0.10983353840222372,
+    "deviation_mean": 0.03334105541293368,
+    "deviation_std": 0.7030074856206603,
+    "logN_diff_mean": -0.20804294326961392,
+    "logN_diff_std": 0.044737960645722705
+  },
+  "calibrated_p_values": {
+    "b_value": 0.07,
+    "velocity_deviation": 0.0,
+    "column_density": 0.995,
+    "joint_mahalanobis": 0.0
+  },
+  "nominal_sigmas": {
+    "b_value": 2.791763789894301,
+    "velocity_deviation": 8.048525648080739,
+    "column_density": 2.106313016470313
+  },
+  "mahalanobis_distance": 80.57640373411931
+}

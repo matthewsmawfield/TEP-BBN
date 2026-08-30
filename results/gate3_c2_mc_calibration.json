@@ -1,0 +1,13 @@
+{
+  "sightline": "Q1009+2956",
+  "analysis": "C2_freed_scaffold_MC_calibration",
+  "n_sims": 200,
+  "n_free_components": 5,
+  "T_obs": 350.3579827871363,
+  "exceedances": 0,
+  "p_value": 0.004975124378109453,
+  "T_sim_min": -150.89667993978946,
+  "T_sim_max": -39.71501452972734,
+  "T_sim_median": -102.79358085671083,
+  "T_sim_mean": -101.57548861707231
+}

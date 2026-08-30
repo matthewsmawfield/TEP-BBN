@@ -1,0 +1,28 @@
+{
+  "checksums": {
+    "checksums_sha256.json": "653644da5d47db88a237e8233343af02fc9821f5c65b5834a5d0330c8cbfe97b",
+    "gate1_embedding.json": "af08bc05f851ffa3f235b42d72e41ede3934b15779d62cb482a46a28d9a09a6f",
+    "gate2_parameter_ledger.json": "ba9fe0efc8c7be9e43c75e95a11504541843fa7e66f8f0709ab884c2c1be41d3",
+    "gate3_c2_scaffold_freedom.json": "2c04742a5f68ba988c4208f566b56a57de22f50755b658d00014ff393b9dfdc9",
+    "gate3_c3_perturbed_mc.json": "1e9ddbe1ec9dd6a8b79a73d5ef55428f7951ac362312c8c25d69932c5f2058cb",
+    "gate3_c4_kinematic.json": "a5c4e454b11bc45995f22656e0dc3fb2bb5cadf3a41f0ca5bf67f4b37016c112",
+    "gate3_significance.json": "4cdf159c45c6df440aff6a0de032018b1eb1f1b87eca1b6a912d33f107dac320",
+    "gate3_significance_physical.json": "b64e4feba8ea46c7ff39eec054eee7de82ffefaad7c4f11899e25a73ddbc02be",
+    "gate4_prediction.json": "df855c9415922ff1a49e2c9add0499f6d7d2fe66b2322b394f8f7c900c958ca4",
+    "gate4b_amplitude.json": "b2156b454b041ec8362b8d36dc8fc72b94a593836898024916ed276cc816ea23",
+    "gate4b_closure.json": "bb9357828c8f5a29a8eb2a41ed939bd5d790d7dc72f747e665d44fe758ee161d",
+    "gate4b_screening_plot.json": "b74d2226261ae35967f0be2b99cb02a8990487e2677e808cd4928844073ec484",
+    "gate5_thermodynamics.json": "2f8fcb772b672a5994e3ac3a8fa26cf8a4af941da38df47f8fa06e16afc6a53f",
+    "gate6_helium_results.json": "52c59098c7715f9bb177890bf3bb26f7effadf868a1bece477f103f3854da09e",
+    "gate8_light_elements.json": "74ae72181873c4451582238cbff4e51f0341902cbc3907fdf50b598d57b70a7e",
+    "gate_j13322_parameter_ledger.json": "08cf48dd2bcbf3ccbc9a997edbf2d7293f434c7af13fc8c0d3c4e4908dde88e0",
+    "gate_j13323_significance.json": "28413538eb207e72f36f9ef7be3d217088fed1765a896ad02748ea38597f70ae",
+    "gate_pks19372_parameter_ledger.json": "c5de707b426e933380b009cedadb67a0d1c3181e313c90f2bfca1333fa15fc93",
+    "gate_pks19373_significance.json": "fc43d85abec2c79cda9befae8ac2d8204e12bd0f5824541a9591a5028742c5af",
+    "iso_rms_q1009.json": "5b282d9b13ac908076f34afc6275e80c0ba8aaae104534c41aba96d8826458c6",
+    "pipeline_summary.json": "ac6a0086f96b3fb9c6cd19711fd98166f5d4569e361cb98089f94acadf34eac5",
+    "step_07_global_opacity.json": "a2173e5084257b3785fb840915ea14a9ceaf217bfa247e666eee86e4aef3b83f",
+    "tep_bbn_summary.json": "8c07558e9a91de78d74316573d4f5e206606b56dfac678abb8bdedb24dc846a0"
+  },
+  "updated": "2026-08-29"
+}

@@ -1,113 +1,113 @@
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] Script: step_04b_amplitude
-[01:14:56] [INFO] Started: 2026-08-28T01:14:56.191405
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [SUCCESS] === GATE 4B: ABSORBER AMPLITUDE CALCULATION (CORRECTED) ===
-[01:14:56] [INFO] 
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] Script: step_04b_amplitude
+[13:09:44] [INFO] Started: 2026-08-30T13:09:44.604996
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [SUCCESS] === GATE 4B: ABSORBER AMPLITUDE CALCULATION (CORRECTED) ===
+[13:09:44] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
 --- Fail-Fast Validation ---
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
-[01:14:56] [SUCCESS]   ✓ log N_HI = 17.362 matches Zavarygin et al. 2018 Table 5
-[01:14:56] [SUCCESS]   ✓ z_abs = 2.504 within Q1009+2956 range
-[01:14:56] [SUCCESS]   ✓ β_A = -1.0 (bare, unscreened)
-[01:14:56] [SUCCESS]   ✓ N_HI < 10^18 (LLS, not DLA) — no cross-sightline contamination
-[01:14:56] [INFO] 
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
+[13:09:44] [SUCCESS]   ✓ log N_HI = 17.362 matches Zavarygin et al. 2018 Table 5
+[13:09:44] [SUCCESS]   ✓ z_abs = 2.5042 within Q1009+2956 range
+[13:09:44] [SUCCESS]   ✓ β_A = -1.0 (bare, unscreened)
+[13:09:44] [SUCCESS]   ✓ N_HI < 10^18 (LLS, not DLA) — no cross-sightline contamination
+[13:09:44] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
 --- Frozen Parameters ---
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
-[01:14:56] [PROCESS]   β_A (bare, unscreened) = -1.0
-[01:14:56] [PROCESS]   log N_HI = 17.362 ± 0.005 (Zavarygin et al. 2018, Table 5)
-[01:14:56] [PROCESS]   z_abs = 2.504
-[01:14:56] [PROCESS]   |Δv_T| target = 82 km/s
-[01:14:56] [PROCESS]   Γ = 1.0e-12 s⁻¹ (Haardt & Madau 2012)
-[01:14:56] [PROCESS]   α_rec = 2.6e-13 cm³/s (T~10⁴ K)
-[01:14:56] [INFO] 
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
+[13:09:44] [PROCESS]   β_A (bare, unscreened) = -1.0
+[13:09:44] [PROCESS]   log N_HI = 17.362 ± 0.005 (Zavarygin et al. 2018, Table 5)
+[13:09:44] [PROCESS]   z_abs = 2.5042
+[13:09:44] [PROCESS]   |Δv_T| target = 82 km/s
+[13:09:44] [PROCESS]   Γ = 1.0e-12 s⁻¹ (Haardt & Madau 2012)
+[13:09:44] [PROCESS]   α_rec = 2.6e-13 cm³/s (T~10⁴ K)
+[13:09:44] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
 --- Observational Constraint on R ---
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
-[01:14:56] [PROCESS]   Main D/H components: z = 2.503587 to 2.503737
-[01:14:56] [PROCESS]   Velocity span: Δv = 12.8 km/s
-[01:14:56] [PROCESS]   This velocity width constrains the absorber size but does not
-[01:14:56] [PROCESS]   directly measure R. R remains a model parameter.
-[01:14:56] [PROCESS]   Results are presented as a function of R.
-[01:14:56] [INFO] 
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
+[13:09:44] [PROCESS]   Main D/H components: z = 2.503587 to 2.503737
+[13:09:44] [PROCESS]   Velocity span: Δv = 12.8 km/s
+[13:09:44] [PROCESS]   This velocity width constrains the absorber size but does not
+[13:09:44] [PROCESS]   directly measure R. R remains a model parameter.
+[13:09:44] [PROCESS]   Results are presented as a function of R.
+[13:09:44] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
 --- 1. Ionisation-Corrected Amplitude vs R ---
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
-[01:14:56] [PROCESS]   N_H = sqrt(N_HI × 2R × Γ / α_rec)
-[01:14:56] [PROCESS]   |Δv_conf| = 2 β_A² π G m_p N_H R / c
-[01:14:56] [PROCESS]   R =    1 kpc: log N_H = 19.87, x_HI = 3.1e-03, n_H = 1.20e-02 cm⁻³, |Δv_conf| = 0.00005 km/s, A_env = 1.5e+06
-[01:14:56] [PROCESS]   R =   10 kpc: log N_H = 20.37, x_HI = 9.8e-04, n_H = 3.79e-03 cm⁻³, |Δv_conf| = 0.00169 km/s, A_env = 4.9e+04
-[01:14:56] [PROCESS]   R =   30 kpc: log N_H = 20.61, x_HI = 5.7e-04, n_H = 2.19e-03 cm⁻³, |Δv_conf| = 0.00877 km/s, A_env = 9.3e+03
-[01:14:56] [PROCESS]   R =  100 kpc: log N_H = 20.87, x_HI = 3.1e-04, n_H = 1.20e-03 cm⁻³, |Δv_conf| = 0.05338 km/s, A_env = 1.5e+03
-[01:14:56] [PROCESS]   R =  300 kpc: log N_H = 21.11, x_HI = 1.8e-04, n_H = 6.91e-04 cm⁻³, |Δv_conf| = 0.27735 km/s, A_env = 3.0e+02
-[01:14:56] [INFO] 
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
+[13:09:44] [PROCESS]   N_H = sqrt(N_HI × 2R × Γ / α_rec)
+[13:09:44] [PROCESS]   |Δv_conf| = 2 β_A² π G m_p N_H R / c
+[13:09:44] [PROCESS]   R =    1 kpc: log N_H = 19.87, x_HI = 3.1e-03, n_H = 1.20e-02 cm⁻³, |Δv_conf| = 0.00005 km/s, A_env = 1.5e+06
+[13:09:44] [PROCESS]   R =   10 kpc: log N_H = 20.37, x_HI = 9.8e-04, n_H = 3.79e-03 cm⁻³, |Δv_conf| = 0.00169 km/s, A_env = 4.8e+04
+[13:09:44] [PROCESS]   R =   30 kpc: log N_H = 20.61, x_HI = 5.7e-04, n_H = 2.19e-03 cm⁻³, |Δv_conf| = 0.00877 km/s, A_env = 9.3e+03
+[13:09:44] [PROCESS]   R =  100 kpc: log N_H = 20.87, x_HI = 3.1e-04, n_H = 1.20e-03 cm⁻³, |Δv_conf| = 0.05338 km/s, A_env = 1.5e+03
+[13:09:44] [PROCESS]   R =  300 kpc: log N_H = 21.11, x_HI = 1.8e-04, n_H = 6.91e-04 cm⁻³, |Δv_conf| = 0.27735 km/s, A_env = 2.9e+02
+[13:09:44] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
 --- 2. Gate Status Assessment ---
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
-[01:14:56] [PROCESS]   Representative case: R = 30 kpc (model parameter, not directly measured)
-[01:14:56] [PROCESS]   log N_H = 20.61 (ionisation-corrected)
-[01:14:56] [PROCESS]   |Δv_conf| = 0.00877 km/s
-[01:14:56] [PROCESS]   Required A_env = 9.3e+03
-[01:14:56] [PROCESS] 
-[01:14:56] [INFO] 
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO]   GATE 4B STATUS:
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
-[01:14:56] [SUCCESS]     Conformal sign:        PASSED
-[01:14:56] [PROCESS]       (Clock shift Δln A is purely conformal for static field;
-[01:14:56] [PROCESS]        sign follows from β_A² > 0 and core-edge geometry)
-[01:14:56] [PROCESS]     Conformal-only amplitude: quantified, requires environmental operator
-[01:14:56] [PROCESS]       (Poisson Green gives 0.0088 km/s; full TEP metric includes
-[01:14:56] [PROCESS]        disformal sector + S_Σ(E) by construction; conformal-only isolates
-[01:14:56] [PROCESS]        one sector and is not expected to close amplitude alone)
-[01:14:56] [PROCESS]     Full env/disformal closure: open calculation
-[01:14:56] [PROCESS]       (A_env ≈ 9e+03 is quantitative target for S_Σ(E) evaluation)
-[01:14:56] [INFO] 
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
+[13:09:44] [PROCESS]   Representative case: R = 30 kpc (model parameter, not directly measured)
+[13:09:44] [PROCESS]   log N_H = 20.61 (ionisation-corrected)
+[13:09:44] [PROCESS]   |Δv_conf| = 0.00877 km/s
+[13:09:44] [PROCESS]   Required A_env = 9.3e+03
+[13:09:44] [PROCESS] 
+[13:09:44] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO]   GATE 4B STATUS:
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
+[13:09:44] [SUCCESS]     Conformal sign:        PASSED
+[13:09:44] [PROCESS]       (Clock shift Δln A is purely conformal for static field;
+[13:09:44] [PROCESS]        sign follows from β_A² > 0 and core-edge geometry)
+[13:09:44] [PROCESS]     Conformal-only amplitude: quantified, requires environmental operator
+[13:09:44] [PROCESS]       (Poisson Green gives 0.0088 km/s; full TEP metric includes
+[13:09:44] [PROCESS]        disformal sector + S_Σ(E) by construction; conformal-only isolates
+[13:09:44] [PROCESS]        one sector and is not expected to close amplitude alone)
+[13:09:44] [PROCESS]     Full env/disformal closure: open calculation
+[13:09:44] [PROCESS]       (A_env ≈ 9e+03 is quantitative target for S_Σ(E) evaluation)
+[13:09:44] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
 --- 3. Physical Interpretation ---
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
-[01:14:56] [PROCESS]   The conformal sector (A²(φ)g_μν) with the standard Poisson Green
-[01:14:56] [PROCESS]   function produces the correct SIGN. The full TEP metric
-[01:14:56] [PROCESS]   A²g_μν + B(φ)∇_μφ∇_νφ includes the disformal sector and the
-[01:14:56] [PROCESS]   environmental operator S_Σ(E) by construction; the conformal-only
-[01:14:56] [PROCESS]   calculation isolates one sector. The required amplification
-[01:14:56] [PROCESS]   A_env ≈ 9e+03 (for R = 30 kpc) is a quantitative target
-[01:14:56] [PROCESS]   for the first-principles evaluation of S_Σ(E) in the absorber regime.
-[01:14:56] [PROCESS] 
-[01:14:56] [PROCESS]   NOTE on sign vs amplitude:
-[01:14:56] [PROCESS]     The clock shift Δln A is purely conformal (since ∂₀φ = 0 for a
-[01:14:56] [PROCESS]     static field, the disformal term B(φ)∇₀φ∇₀φ = 0 for g₀₀).
-[01:14:56] [PROCESS]     The SIGN of the clock shift is rigorous and independent of the
-[01:14:56] [PROCESS]     disformal sector. The mapping from clock shift to observed
-[01:14:56] [PROCESS]     (Δv_T = -c Δln A in the conformal limit) may include disformal
-[01:14:56] [PROCESS]     corrections to photon propagation through C_T_parallel. The disformal
-[01:14:56] [PROCESS]     corrections affect the magnitude of the velocity mapping, not
-[01:14:56] [PROCESS]     the direction of the underlying clock deformation.
-[01:14:56] [INFO] 
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
+[13:09:44] [PROCESS]   The conformal sector (A²(φ)g_μν) with the standard Poisson Green
+[13:09:44] [PROCESS]   function produces the correct SIGN. The full TEP metric
+[13:09:44] [PROCESS]   A²g_μν + B(φ)∇_μφ∇_νφ includes the disformal sector and the
+[13:09:44] [PROCESS]   environmental operator S_Σ(E) by construction; the conformal-only
+[13:09:44] [PROCESS]   calculation isolates one sector. The required amplification
+[13:09:44] [PROCESS]   A_env ≈ 9e+03 (for R = 30 kpc) is a quantitative target
+[13:09:44] [PROCESS]   for the first-principles evaluation of S_Σ(E) in the absorber regime.
+[13:09:44] [PROCESS] 
+[13:09:44] [PROCESS]   NOTE on sign vs amplitude:
+[13:09:44] [PROCESS]     The clock shift Δln A is purely conformal (since ∂₀φ = 0 for a
+[13:09:44] [PROCESS]     static field, the disformal term B(φ)∇₀φ∇₀φ = 0 for g₀₀).
+[13:09:44] [PROCESS]     The SIGN of the clock shift is rigorous and independent of the
+[13:09:44] [PROCESS]     disformal sector. The mapping from clock shift to observed
+[13:09:44] [PROCESS]     (Δv_T = -c Δln A in the conformal limit) may include disformal
+[13:09:44] [PROCESS]     corrections to photon propagation through C_T_parallel. The disformal
+[13:09:44] [PROCESS]     corrections affect the magnitude of the velocity mapping, not
+[13:09:44] [PROCESS]     the direction of the underlying clock deformation.
+[13:09:44] [INFO] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
 --- 4. Falsifiability Criterion ---
-[01:14:56] [INFO] ================================================================================
-[01:14:56] [INFO] 
-[01:14:56] [PROCESS]   The conformal sign proof and amplitude quantification together
-[01:14:56] [PROCESS]   convert the -82 km/s feature into a quantitative prediction:
-[01:14:56] [PROCESS]   a first-principles evaluation of S_Σ(E) in the absorber regime
-[01:14:56] [PROCESS]   must yield A_env ≈ 10⁴ for physically motivated R. If it does
-[01:14:56] [PROCESS]   not, the TEP absorber-field explanation is falsified.
-[01:14:56] [PROCESS]   This converts an open calculation into a sharp, testable target.
-[01:14:56] [SUCCESS] 
+[13:09:44] [INFO] ================================================================================
+[13:09:44] [INFO] 
+[13:09:44] [PROCESS]   The conformal/static branch sign theorem and amplitude quantification together
+[13:09:44] [PROCESS]   convert the -82 km/s feature into a quantitative prediction:
+[13:09:44] [PROCESS]   a first-principles evaluation of S_Σ(E) in the absorber regime
+[13:09:44] [PROCESS]   must yield A_env ≈ 10⁴ for physically motivated R. If it does
+[13:09:44] [PROCESS]   not, the TEP absorber-field explanation is falsified.
+[13:09:44] [PROCESS]   This converts an open calculation into a sharp, testable target.
+[13:09:44] [SUCCESS] 
 [COMPLETED] Gate 4B results written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4b_amplitude.json

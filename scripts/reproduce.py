@@ -179,7 +179,7 @@ def reproduce_sightline(sightline_id, skip_download=False):
     manifest_path = project_root / info["manifest"]
     if not manifest_path.exists():
         print(f"\n[2/4] Manifest missing: {info['manifest']}")
-        print(f"  Run: python scripts/steps/ingest_sightline.py --sightline {sightline_id}")
+        print(f"  Run: python scripts/ingest_sightline.py --sightline {sightline_id}")
         return False
     print(f"\n[2/4] ✓ Manifest exists")
 

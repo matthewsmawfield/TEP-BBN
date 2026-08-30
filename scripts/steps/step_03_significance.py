@@ -46,8 +46,43 @@ from scripts.lib.residual_engine import (
 from scripts.lib.sightline_config import load_sightline_config, SightlineConfigError
 
 
-def _run_wrapper(args):
-    return run_simulation(*args)
+# ---------------------------------------------------------------------------
+# Multiprocessing initializer: set shared data once per worker process to
+# avoid pickling the same ~1 MB of data 1000 times (once per task).  With
+# the spawn start method (default on macOS), each worker process would
+# otherwise receive a fresh copy of base_fluxes, data_blocks, frozen_cache,
+# etc. for every single simulation.  The initializer sends it once per
+# worker (15 times) instead of once per task (1000 times).
+# ---------------------------------------------------------------------------
+_worker_shared = None
+
+def _init_worker(shared_data):
+    global _worker_shared
+    _worker_shared = shared_data
+
+def _run_worker(seed_and_extras):
+    """Run a single simulation using globally shared data."""
+    seed, starts_H, bounds_D, bounds_H, cfg_multistart_D, d_vel, parent_win, canonical_parent_idx = seed_and_extras
+    return run_simulation(
+        seed,
+        _worker_shared['base_fluxes'],
+        _worker_shared['data_blocks'],
+        _worker_shared['noise_cfg'],
+        _worker_shared['pm'],
+        _worker_shared['z_abs_ref'],
+        _worker_shared['c_kms'],
+        _worker_shared['theta_shared_base'],
+        _worker_shared['engine'],
+        starts_H,
+        bounds_D,
+        bounds_H,
+        _worker_shared['frozen_grouped'],
+        _worker_shared['frozen_cache'],
+        cfg_multistart_D,
+        d_vel,
+        parent_win,
+        canonical_parent_idx,
+    )
 
 
 def run_simulation(
@@ -66,11 +101,35 @@ def run_simulation(
     frozen_grouped,
     frozen_cache,
     cfg_multistart_D,
-    d_velocity_offset_kms=-81.6,
-    parent_window_kms=1000.0,
+    d_velocity_offset_kms,
+    parent_window_kms,
     canonical_parent_idx=0,
 ):
     rng = np.random.default_rng(seed)
+
+    # Precompute Student-t logpdf constants (avoids scipy overhead per call).
+    # logpdf(x, nu, loc, scale) = C0 - ((nu+1)/2) * log(1 + (1/nu) * ((x-loc)/scale)^2)
+    # where C0 = log(Γ((nu+1)/2)) - log(Γ(nu/2)) - 0.5*log(nu*π) - log(scale)
+    from scipy.special import gammaln
+    _nu = noise_cfg["nu"]
+    _loc = noise_cfg["location"]
+    _scale = noise_cfg["scale"]
+    _logpdf_const = (
+        gammaln((_nu + 1) / 2.0)
+        - gammaln(_nu / 2.0)
+        - 0.5 * np.log(_nu * np.pi)
+        - np.log(_scale)
+    )
+    _logpdf_alpha = (_nu + 1) / 2.0
+    _logpdf_inv_nu = 1.0 / _nu
+
+    def _fast_logpdf_sum(residuals):
+        """Sum of Student-t logpdf for residuals below the 100-sigma clip."""
+        v = residuals[np.abs(residuals) < 100.0]
+        z = (v - _loc) / _scale
+        return _logpdf_const * len(v) - _logpdf_alpha * np.sum(
+            np.log1p(_logpdf_inv_nu * z * z)
+        )
 
     # 1. Generate noisy flux realization
     sim_blocks = []
@@ -113,25 +172,23 @@ def run_simulation(
             # evaluation, so only the candidate components are recomputed here.
             cand = split_frozen_candidate(grouped, frozen_grouped)
             res = compute_residuals_fast(cand, blocks, engine, frozen_cache)
-            v_res = res[np.abs(res) < 100.0]
-            ll = np.sum(
-                student_t.logpdf(
-                    v_res, noise_cfg["nu"], noise_cfg["location"], noise_cfg["scale"]
-                )
-            )
+            ll = _fast_logpdf_sum(res)
             return -float(ll)
 
         return obj
 
     # 2. Fit M_Dfree across all eligible parents to find the maximum possible D likelihood
-    # Only parents within the absorber velocity window are considered (see observed scan).
+    # Only parents within the absorber velocity window AND column density threshold
+    # are considered (matching the observed scan criteria).
     comps = pm.reconstruct(theta_shared_base)
     h_comps = [c for c in comps if c["ion"] == "H_I"]
     parent_window_kms = parent_window_kms
+    logN_H_max = max(c["logN"] for c in h_comps)
+    logN_H_min = logN_H_max - 2.0  # Match observed scan: max - 2.0 dex
     valid_parents = []
     for j, c in enumerate(h_comps):
         v = c_kms * (c["z"] - z_abs_ref) / (1.0 + z_abs_ref)
-        if abs(v) <= parent_window_kms:
+        if abs(v) <= parent_window_kms and c["logN"] >= logN_H_min:
             valid_parents.append(j)
     best_ll_D = -np.inf
     ll_D_canonical = -np.inf  # Track D at canonical (auto-detected) parent for fair standard
@@ -142,13 +199,36 @@ def run_simulation(
     opt_D_obs = starts_H["opt_D_obs"]  # Extract from a dict we'll pass
     actual_starts_H = starts_H["starts"]
 
+    # --- Two-phase parent scan for efficiency ---
+    # Phase 1: Quick 1-start scan of all parents to find the best one
+    # Phase 2: Full multistart only on the best parent and canonical parent
+    # This reduces 14×9=126 D fits to 14×1 + 2×9 = 32 D fits (~4x speedup)
+
+    quick_start = opt_D_obs  # Use true generating params as the quick start
+
+    # Phase 1: Quick scan
+    parent_lls = {}
     for j in valid_parents:
         obj_D = make_obj_parent("M_Dfree", sim_blocks, j)
+        res_D = minimize(obj_D, quick_start, method="L-BFGS-B", bounds=bounds_D)
+        parent_lls[j] = -res_D.fun
+        if j == canonical_parent_idx:
+            ll_D_canonical_quick = -res_D.fun
+            res_D_success = res_D.success
 
-        # Use config multistart starts (expanded to cover low-T_K / high-b_turb)
+    # Find best parent from quick scan
+    best_parent = max(parent_lls, key=parent_lls.get)
+
+    # Phase 2: Full multistart on best parent and canonical parent
+    parents_to_refine = set([best_parent, canonical_parent_idx])
+    best_ll_D = -np.inf
+    ll_D_canonical = -np.inf
+
+    for j in parents_to_refine:
+        obj_D = make_obj_parent("M_Dfree", sim_blocks, j)
         starts_D = [list(s) for s in cfg_multistart_D]
         if j == canonical_parent_idx:
-            starts_D.insert(0, opt_D_obs)  # True generating params
+            starts_D.insert(0, opt_D_obs)
 
         best_local_ll_D = -np.inf
         local_success = False
@@ -171,11 +251,19 @@ def run_simulation(
     # parent-independent. This ensures the T_parent comparison is fair:
     # D is best-of-parents (tied to a parent by v_D = parent_v - 81.6),
     # while H is fully free (no parent dependence).
+    # 3. Fit M_Hfree (multi-start, full grid for MC fairness)
+    # The MC H fits must use the same multistart grid as the observed fit
+    # (step_02).  Using a reduced grid risks missing a better H optimum,
+    # which lowers LL_H, lowers T_sim, and makes p-values anti-conservative
+    # (too small).  All configured starts are used.
     obj_H = make_obj_parent("M_H", sim_blocks)
     best_ll_H = -np.inf
     h_success = False
 
-    for x0 in actual_starts_H:
+    # Use all configured starts (same as step_02 observed fit)
+    mc_starts_H = actual_starts_H
+
+    for x0 in mc_starts_H:
         res_H = minimize(obj_H, x0, method="L-BFGS-B", bounds=bounds_H)
         if -res_H.fun > best_ll_H:
             best_ll_H = -res_H.fun
@@ -203,7 +291,29 @@ def run_simulation(
     }
 
 
-def run_gate3(sightline=None):
+def compute_physical_parent_window(pm, theta_shared_base, z_abs_ref, c_kms, factor=3.0):
+    """Compute a physically motivated parent window: ±factor × largest b-value
+    of H I components within ±500 km/s of the absorber systemic velocity.
+
+    This replaces the arbitrary ±1000 km/s fixed window with a window scaled
+    to the velocity structure of the main absorber complex.
+    """
+    comps = pm.reconstruct(theta_shared_base)
+    h_comps = [c for c in comps if c['ion'] == 'H_I']
+    b_values = []
+    for c in h_comps:
+        v = c_kms * (c['z'] - z_abs_ref) / (1.0 + z_abs_ref)
+        if abs(v) <= 500.0:  # main complex definition
+            b_values.append(c['b'])
+    if not b_values:
+        # Fallback: use all H I components
+        b_values = [c['b'] for c in h_comps]
+    b_max = max(b_values)
+    window = factor * b_max
+    return window, b_max, len(b_values)
+
+
+def run_gate3(sightline=None, parent_window_mode='fixed', n_sims=None):
     setup_step_logger(Path(__file__).stem)
 
     # Load per-sightline configuration
@@ -293,6 +403,23 @@ def run_gate3(sightline=None):
         theta_shared_base = np.array(pm.theta_init)
         print_status(f"Using VPFIT init shared params (legacy format)", "PROCESS")
 
+    # Compute parent window: fixed (±1000 km/s) or physical (±3× largest b-value)
+    if parent_window_mode == 'physical':
+        phys_window, b_max, n_complex = compute_physical_parent_window(
+            pm, theta_shared_base, z_abs_ref, c_kms, factor=3.0
+        )
+        cfg["parent_window_kms"] = phys_window
+        print_status(
+            f"Physical parent window: ±{phys_window:.1f} km/s "
+            f"(3 × b_max={b_max:.1f} km/s, {n_complex} components in main complex)",
+            "PROCESS"
+        )
+    else:
+        print_status(
+            f"Fixed parent window: ±{cfg['parent_window_kms']:.0f} km/s",
+            "PROCESS"
+        )
+
     # Pre-calculate base True-D model fluxes
     # Must match the full model used in compute_residuals: all 7 Lyman transitions,
     # all metal ions, and instrumental convolution. The continuum polynomial is
@@ -302,23 +429,25 @@ def run_gate3(sightline=None):
     print_status("Pre-calculating base True-D model fluxes...", "PROCESS")
     grouped_D = build_model_components(
         "M_Dfree", theta_shared_base, opt_D_obs, pm, z_abs_ref, c_kms,
-        d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
-        parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
+        d_velocity_offset_kms=cfg["d_velocity_offset_kms"],
+        parent_window_kms=cfg["parent_window_kms"],
     )
 
-    # Auto-detect the canonical parent index (first H I with a D counterpart
-    # in the VPFIT model).  This is the parent used by build_model_components
-    # when parent_idx='auto' (the default in step_02).  The simulation must
-    # use the same parent for the "fair standard" comparison to be valid.
+    # Auto-detect the canonical parent index (among H I with a D counterpart,
+    # pick the one with the highest logN_H — strongest D signal).  This must
+    # match the logic in build_model_components().  The simulation must use
+    # the same parent for the "fair standard" comparison to be valid.
     comps_for_parent = pm.reconstruct(theta_shared_base)
     d_zs = set(round(c["z"], 10) for c in comps_for_parent if c["ion"] == "D_I")
     canonical_parent_idx = 0
     _h_count = 0
+    _best_logN = float("-inf")
     for c in comps_for_parent:
         if c["ion"] == "H_I":
             if round(c["z"], 10) in d_zs:
-                canonical_parent_idx = _h_count
-                break
+                if c["logN"] > _best_logN:
+                    _best_logN = c["logN"]
+                    canonical_parent_idx = _h_count
             _h_count += 1
     print_status(f"Canonical parent index (auto-detected): {canonical_parent_idx}", "PROCESS")
     lyman_transitions = [
@@ -377,8 +506,8 @@ def run_gate3(sightline=None):
     # and reused for every likelihood evaluation in this step.
     frozen_grouped = build_model_components(
         "M_NULL", theta_shared_base, None, pm, z_abs_ref, c_kms,
-        d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
-        parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
+        d_velocity_offset_kms=cfg["d_velocity_offset_kms"],
+        parent_window_kms=cfg["parent_window_kms"],
     )
     frozen_cache = build_frozen_cache(frozen_grouped, data_blocks, engine)
     print_status(
@@ -386,6 +515,28 @@ def run_gate3(sightline=None):
         f"({len(frozen_grouped['H_I'])} shared H I + metals cached)",
         "PROCESS",
     )
+
+    # Precompute Student-t logpdf constants for the observed-data objectives.
+    from scipy.special import gammaln as _gammaln
+    _nu_obs = noise_cfg["nu"]
+    _loc_obs = noise_cfg["location"]
+    _scale_obs = noise_cfg["scale"]
+    _logpdf_const_obs = (
+        _gammaln((_nu_obs + 1) / 2.0)
+        - _gammaln(_nu_obs / 2.0)
+        - 0.5 * np.log(_nu_obs * np.pi)
+        - np.log(_scale_obs)
+    )
+    _logpdf_alpha_obs = (_nu_obs + 1) / 2.0
+    _logpdf_inv_nu_obs = 1.0 / _nu_obs
+
+    def _fast_logpdf_sum_obs(residuals):
+        """Sum of Student-t logpdf for the observed-data residuals."""
+        v = residuals[np.abs(residuals) < 100.0]
+        z = (v - _loc_obs) / _scale_obs
+        return _logpdf_const_obs * len(v) - _logpdf_alpha_obs * np.sum(
+            np.log1p(_logpdf_inv_nu_obs * z * z)
+        )
 
     # Compute observed parent reassignment T (best parent for D) before MC loop
     # Also builds the parent_reassignment ledger for later use
@@ -398,14 +549,27 @@ def run_gate3(sightline=None):
     # belong to unrelated absorber systems along the line of sight; tying D to
     # them places the D absorption at a completely different wavelength, where
     # it fits unrelated residuals — a physically meaningless comparison.
-    parent_window_kms = cfg.get("parent_window_kms") or 1000.0  # ±window of absorber systemic
+    #
+    # Additionally, require logN_H >= logN_H_max - parent_logN_window_dex
+    # (default 2.0 dex).  Parents more than 2 dex below the strongest H I
+    # component produce D absorption (logN_D = logN_H + log(D/H)) below the
+    # detection threshold, making the parent reassignment test degenerate:
+    # the D model fits nearly as well as the H model simply because the D
+    # absorption is too weak to matter, not because H genuinely explains
+    # the feature.  Restricting to physically meaningful parents prevents
+    # this degeneracy from inflating p_parent.
+    parent_window_kms = cfg["parent_window_kms"]  # ±window of absorber systemic
+    parent_logN_window_dex = cfg.get("parent_logN_window_dex", 2.0)
+    logN_H_max = max(c["logN"] for c in h_comps_obs)
+    logN_H_min = logN_H_max - parent_logN_window_dex
     valid_parent_indices = []
     for j, c in enumerate(h_comps_obs):
         v = c_kms * (c["z"] - z_abs_ref) / (1.0 + z_abs_ref)
-        if abs(v) <= parent_window_kms:
+        if abs(v) <= parent_window_kms and c["logN"] >= logN_H_min:
             valid_parent_indices.append(j)
     print_status(
-        f"Parent reassignment window: ±{parent_window_kms:.0f} km/s → "
+        f"Parent reassignment window: ±{parent_window_kms:.0f} km/s, "
+        f"logN_H >= {logN_H_min:.2f} (max={logN_H_max:.2f} - {parent_logN_window_dex:.1f} dex) → "
         f"{len(valid_parent_indices)}/{len(h_comps_obs)} H I components eligible",
         "PROCESS",
     )
@@ -416,19 +580,12 @@ def run_gate3(sightline=None):
         def _obj_d_parent(p, _j=j):
             grouped = build_model_components(
                 "M_Dfree", theta_shared_base, p, pm, z_abs_ref, c_kms, parent_idx=_j,
-                d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
-                parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
+                d_velocity_offset_kms=cfg["d_velocity_offset_kms"],
+                parent_window_kms=cfg["parent_window_kms"],
             )
             cand = split_frozen_candidate(grouped, frozen_grouped)
             res = compute_residuals_fast(cand, data_blocks, engine, frozen_cache)
-            v = res[np.abs(res) < 100.0]
-            return -float(
-                np.sum(
-                    student_t.logpdf(
-                        v, noise_cfg["nu"], noise_cfg["location"], noise_cfg["scale"]
-                    )
-                )
-            )
+            return -float(_fast_logpdf_sum_obs(res))
         starts_D_obs = [list(s) for s in cfg["multistart"]["M_Dfree"]]
         best_ll_D_parent = -np.inf
         for x0 in starts_D_obs:
@@ -444,7 +601,7 @@ def run_gate3(sightline=None):
         print_status(f"  Parent {j}: LL_D = {best_ll_D_parent:.2f}, T = {t_p:.2f}", "PROCESS")
     print_status(f"Observed T_parent_best = {T_obs_parent_best:.2f}", "PROCESS")
 
-    N_sims = cfg.get("monte_carlo", {}).get("n_sims", 1000)
+    N_sims = n_sims if n_sims is not None else cfg.get("monte_carlo", {}).get("n_sims", 1000)
     seed_base = cfg.get("monte_carlo", {}).get("seed_base", 42)
     print_status(
         f"\n--- Running True-D Monte Carlo Simulations ({N_sims} realizations) ---",
@@ -455,27 +612,32 @@ def run_gate3(sightline=None):
     # Read D multistart starts from config
     cfg_multistart_D = cfg["multistart"]["M_Dfree"]
 
+    # Shared data sent once per worker via initializer (not per task)
+    shared_data = {
+        'base_fluxes': base_fluxes,
+        'data_blocks': data_blocks,
+        'noise_cfg': noise_cfg,
+        'pm': pm,
+        'z_abs_ref': z_abs_ref,
+        'c_kms': c_kms,
+        'theta_shared_base': theta_shared_base,
+        'engine': engine,
+        'frozen_grouped': frozen_grouped,
+        'frozen_cache': frozen_cache,
+    }
+
+    # Per-task args: only the seed and small per-sightline config values
     for i in range(N_sims):
         seed = seed_base + i
         pool_args.append(
             (
                 seed,
-                base_fluxes,
-                data_blocks,
-                noise_cfg,
-                pm,
-                z_abs_ref,
-                c_kms,
-                theta_shared_base,
-                engine,
                 starts_H,
                 bounds_D,
                 bounds_H,
-                frozen_grouped,
-                frozen_cache,
                 cfg_multistart_D,
-                cfg.get("d_velocity_offset_kms") or -81.6,
-                cfg.get("parent_window_kms") or 1000.0,
+                cfg["d_velocity_offset_kms"],
+                cfg["parent_window_kms"],
                 canonical_parent_idx,
             )
         )
@@ -485,9 +647,14 @@ def run_gate3(sightline=None):
     exceedances_standard_fair = 0  # Fair standard: D locked to parent 0 in sims
     exceedances_parent = 0
 
-    # Use multiprocessing for speed
-    with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-        for i, res in enumerate(pool.imap_unordered(_run_wrapper, pool_args)):
+    # Use multiprocessing with initializer to avoid re-pickling shared data
+    n_workers = min(multiprocessing.cpu_count(), N_sims)
+    with multiprocessing.Pool(
+        processes=n_workers,
+        initializer=_init_worker,
+        initargs=(shared_data,),
+    ) as pool:
+        for i, res in enumerate(pool.imap_unordered(_run_worker, pool_args)):
             results_ledger.append(res)
             # Legacy: sim D best-of-parents vs obs D parent-0 (inflated)
             if res["T_parent"] >= T_obs:
@@ -507,8 +674,19 @@ def run_gate3(sightline=None):
     p_add_one_standard_fair = (exceedances_standard_fair + 1) / (N_sims + 1)
     p_add_one_parent = (exceedances_parent + 1) / (N_sims + 1)
 
-    # Compute exact binomial 95% upper bound for the fair standard exceedances
-    binom_95_upper = 1.0 - 0.05 ** (1.0 / N_sims) if exceedances_standard_fair == 0 else None
+    # Compute exact Clopper-Pearson 95% upper bounds for both statistics.
+    # The standard one-sided Clopper-Pearson upper bound is:
+    #   p_upper = Beta^{-1}(1-alpha, k+1, n-k)
+    from scipy.stats import beta as beta_dist
+    binom_95_upper_standard = float(
+        beta_dist.ppf(0.95, exceedances_standard_fair + 1, N_sims - exceedances_standard_fair)
+    )
+    binom_95_upper_parent = float(
+        beta_dist.ppf(0.95, exceedances_parent + 1, N_sims - exceedances_parent)
+    )
+    # Legacy field name (kept for backward compatibility with existing ledgers):
+    # stores the standard-statistic upper bound.
+    binom_95_upper = binom_95_upper_standard
 
     print_status(f"\nObserved T_obs (standard, canonical parent {canonical_parent_idx}) = {T_obs:.2f}", "PROCESS")
     print_status(f"Observed T_obs (best parent) = {T_obs_parent_best:.2f}", "PROCESS")
@@ -532,36 +710,22 @@ def run_gate3(sightline=None):
         def obj_D(p):
             grouped = build_model_components(
                 "M_Dfree", theta_shared_base, p, pm, z_abs_ref, c_kms,
-                d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
-                parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
+                d_velocity_offset_kms=cfg["d_velocity_offset_kms"],
+                parent_window_kms=cfg["parent_window_kms"],
             )
             cand = split_frozen_candidate(grouped, frozen_grouped)
             res = compute_residuals_fast(cand, subset, engine, subset_cache)
-            v = res[np.abs(res) < 100.0]
-            return -float(
-                np.sum(
-                    student_t.logpdf(
-                        v, noise_cfg["nu"], noise_cfg["location"], noise_cfg["scale"]
-                    )
-                )
-            )
+            return -float(_fast_logpdf_sum_obs(res))
 
         def obj_H(p):
             grouped = build_model_components(
                 "M_H", theta_shared_base, p, pm, z_abs_ref, c_kms,
-                d_velocity_offset_kms=cfg.get("d_velocity_offset_kms") or -81.6,
-                parent_window_kms=cfg.get("parent_window_kms") or 1000.0,
+                d_velocity_offset_kms=cfg["d_velocity_offset_kms"],
+                parent_window_kms=cfg["parent_window_kms"],
             )
             cand = split_frozen_candidate(grouped, frozen_grouped)
             res = compute_residuals_fast(cand, subset, engine, subset_cache)
-            v = res[np.abs(res) < 100.0]
-            return -float(
-                np.sum(
-                    student_t.logpdf(
-                        v, noise_cfg["nu"], noise_cfg["location"], noise_cfg["scale"]
-                    )
-                )
-            )
+            return -float(_fast_logpdf_sum_obs(res))
 
         starts_D_loo = [list(s) for s in cfg.get("multistart", {}).get("M_Dfree", [[12.4, 10000.0, 1.0]])]
         best_D = -np.inf
@@ -623,8 +787,8 @@ def run_gate3(sightline=None):
         "Lyα": 1215.6701, "Lyβ": 1025.7223, "Lyγ": 972.5368,
         "Lyδ": 949.7420, "Lyε": 937.8010,
         "Ly6": 930.7483, "Ly7": 926.2265, "Ly8": 923.1504,
-        "Ly9": 921.0263, "Ly10": 919.4295, "Ly11": 918.1294,
-        "Ly12": 917.1061, "Ly13": 916.4290, "Ly14": 915.8240,
+        "Ly9": 920.9731, "Ly10": 919.3514, "Ly11": 918.1294,
+        "Ly12": 917.1806, "Ly13": 916.4290, "Ly14": 915.8240,
         "Ly21": 913.6510,
     }
 
@@ -662,21 +826,37 @@ def run_gate3(sightline=None):
 
     out_dir = project_root / "results"
     out_dir.mkdir(parents=True, exist_ok=True)
-    output_file = out_dir / f"{output_prefix}3_significance.json"
+    window_suffix = f"_{parent_window_mode}" if parent_window_mode != 'fixed' else ""
+    canonical_file = out_dir / f"{output_prefix}3_significance{window_suffix}.json"
+    # Quick-mode runs (N<100) write to a quick_ prefixed file to prevent
+    # overwriting the canonical 1000-sim ledger.
+    if N_sims < 100:
+        output_file = out_dir / f"quick_{output_prefix}3_significance{window_suffix}.json"
+        print_status(
+            f"Quick mode (N={N_sims}<100): writing to {output_file.name} "
+            f"to protect canonical ledger",
+            "PROCESS",
+        )
+    else:
+        output_file = canonical_file
     with open(output_file, "w") as f:
         json.dump(
             {
                 "sightline": sightline_id,
+                "parent_window_mode": parent_window_mode,
+                "parent_window_kms": float(cfg["parent_window_kms"]),
                 "T_obs": float(T_obs),
                 "T_obs_parent_best": float(T_obs_parent_best),
                 "N_sims": N_sims,
                 "exceedances_standard": exceedances_standard,
                 "exceedances_standard_fair": exceedances_standard_fair,
-                "p_add_one": (exceedances_standard + 1) / (N_sims + 1),
+                "p_add_one": p_add_one_standard_fair,  # Use fair standard (not legacy inflated)
                 "p_add_one_standard_fair": p_add_one_standard_fair,
                 "exceedances_parent": exceedances_parent,
                 "p_add_one_parent": p_add_one_parent,
                 "binom_95_upper": binom_95_upper,
+                "binom_95_upper_standard": binom_95_upper_standard,
+                "binom_95_upper_parent": binom_95_upper_parent,
                 "leave_one_out": loo_ledger,
                 "parent_reassignment": parent_ledger,
                 "simulations": results_ledger,
@@ -694,5 +874,9 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Run Gate 3 MC calibration for a sightline")
     parser.add_argument("--sightline", default=None, help="Sightline ID (default: Q1009+2956)")
+    parser.add_argument("--parent-window", default='fixed', choices=['fixed', 'physical'],
+                        help="Parent window mode: 'fixed' (±1000 km/s) or 'physical' (±3× largest b-value)")
+    parser.add_argument("--n-sims", type=int, default=None,
+                        help="Override number of MC simulations (default: config value)")
     args = parser.parse_args()
-    run_gate3(sightline=args.sightline)
+    run_gate3(sightline=args.sightline, parent_window_mode=args.parent_window, n_sims=args.n_sims)

@@ -1,0 +1,144 @@
+{
+  "gate": "8",
+  "title": "Multi-Pronged TEP Evidence Analysis",
+  "sightlines": [
+    "Q1009+2956",
+    "PKS1937-101",
+    "J1332+0052"
+  ],
+  "results": {
+    "b_value_test": {
+      "Q1009+2956": {
+        "b_parent": 18.646948471887413,
+        "b_D_pred": 13.514273482137321,
+        "b_Hfree": 13.403256825376687,
+        "ratio": 0.9917852293793393,
+        "sigma_b": 4.177039211395354,
+        "deviation_sigma": 0.02657783447609767,
+        "consistent_with_D": true,
+        "consistent_with_TEP": true
+      },
+      "PKS1937-101": {
+        "b_parent": 16.3286,
+        "b_D_pred": 11.54606378728266,
+        "b_Hfree": 15.08642519133573,
+        "ratio": 1.3066292954272933,
+        "sigma_b": 3.7077084290657925,
+        "deviation_sigma": 0.9548651065167792,
+        "consistent_with_D": true,
+        "consistent_with_TEP": true
+      },
+      "J1332+0052": {
+        "b_parent": 13.164968290945612,
+        "b_D_pred": 9.551275438390414,
+        "b_Hfree": 50.72567301875477,
+        "ratio": 5.3108795098577,
+        "sigma_b": 7.980745749764589,
+        "deviation_sigma": 5.1592168039658315,
+        "consistent_with_D": false,
+        "consistent_with_TEP": true
+      }
+    },
+    "offset_deviation_correlation": {
+      "spearman_rho": 1.0,
+      "spearman_p": 0.0,
+      "exact_p_n3": 0.167,
+      "deviations": [
+        2.7172821441621977,
+        5.658173778810635,
+        36.604516624051314
+      ],
+      "logN_HIs": [
+        17.360084,
+        17.92361,
+        19.25
+      ],
+      "n_dev_inconsistent": 2,
+      "dev_sigma_map": {
+        "Q1009+2956": 1.0437055054276152,
+        "PKS1937-101": 3.104713149969735,
+        "J1332+0052": 14.576241256140092
+      }
+    },
+    "sign_test": {
+      "n_blueward": 3,
+      "n_total": 3,
+      "p_null": 0.125
+    },
+    "column_density_test": {
+      "Q1009+2956": {
+        "logN_HI": 17.360084,
+        "logN_D_pred": 12.762689241919915,
+        "logN_Hfree": 12.796487592416035,
+        "diff_dex": 0.03379835049612012,
+        "diff_sigma": 0.6759670099224024,
+        "consistent_with_D": true
+      },
+      "PKS1937-101": {
+        "logN_HI": 17.92361,
+        "logN_D_pred": 13.326215241919915,
+        "logN_Hfree": 13.231983093081492,
+        "diff_dex": -0.09423214883842235,
+        "diff_sigma": 1.884642976768447,
+        "consistent_with_D": true
+      },
+      "J1332+0052": {
+        "logN_HI": 19.25,
+        "logN_D_pred": 14.652605241919915,
+        "logN_Hfree": 15.35067748218518,
+        "diff_dex": 0.6980722402652653,
+        "diff_sigma": 13.961444805305305,
+        "consistent_with_D": false
+      }
+    },
+    "d_redundancy_test": {
+      "Q1009+2956": {
+        "logN_D_M_Dfree": 12.753326482873947,
+        "logN_D_M_DH": 0.0,
+        "d_redundant": true,
+        "T_parent": 161.02687389844868,
+        "meaningful": true,
+        "consistent_with_TEP": true,
+        "consistent_with_D": false
+      },
+      "PKS1937-101": {
+        "logN_D_M_Dfree": 13.125501970899977,
+        "logN_D_M_DH": 0.0,
+        "d_redundant": true,
+        "T_parent": 58.99994403159508,
+        "meaningful": true,
+        "consistent_with_TEP": true,
+        "consistent_with_D": false
+      },
+      "J1332+0052": {
+        "logN_D_M_Dfree": 13.622548785844893,
+        "logN_D_M_DH": 0.0,
+        "d_redundant": true,
+        "T_parent": 135.76245227802428,
+        "meaningful": true,
+        "consistent_with_TEP": true,
+        "consistent_with_D": false
+      }
+    },
+    "combined_assessment": {
+      "evidence_for_tep": [
+        "b-value: TEP allows free b (no constraint violated)",
+        "Offset deviation: perfect rank correlation with N_HI (\u03c1=1, p=0.167)",
+        "Sign test: all 3/3 features blueward as conformal sign theorem predicts (p=0.125)",
+        "D-redundancy: 3/3 sightlines show M_D+H drives logN_D \u2192 0 (D redundant)"
+      ],
+      "evidence_against_d": [
+        "b-value: 1/3 sightlines inconsistent with D-predicted b at >2\u03c3",
+        "Offset deviation: 2/3 sightlines deviate from isotope shift at >2\u03c3",
+        "Column density: 1/3 sightlines inconsistent with D/H_BBN prediction at >2\u03c3"
+      ],
+      "n_for_tep": 4,
+      "n_against_d": 3,
+      "strongest_discriminators": [
+        "b-value test (1/3 inconsistent with D at >2\u03c3)",
+        "offset deviation (2/3 deviate from isotope shift at >2\u03c3, \u03c1=1.0)",
+        "D-redundancy test (3/3 sightlines drive logN_D \u2192 0)"
+      ]
+    }
+  }
+}

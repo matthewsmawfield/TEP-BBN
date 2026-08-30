@@ -1,0 +1,157 @@
+{
+  "gate": "4B-III",
+  "title": "Edge-Transition B(phi) Enhancement \u2014 Corrected Calculation",
+  "key_physics": "Screening transition at absorber-galaxy boundary, not inside absorber",
+  "parameters": {
+    "Phi_abs_c2": 9.751728206313128e-09,
+    "Phi_gal_c2": 5.38e-07,
+    "Phi_half": 1.59e-07,
+    "S_gal": 0.012875403104964048,
+    "delta_phi": 9.626170774686799e-09,
+    "delta_conf": 9.751728206313128e-09,
+    "A_env_target": 9303.699766319789
+  },
+  "thin_shell": {
+    "fraction": 0.11741016109045849,
+    "Delta_R_cm": 1.0869832713754647e+22,
+    "Delta_R_kpc": 3.5223048327137545,
+    "Delta_R_AU": 726593095.8392143
+  },
+  "amplification_vs_width": [
+    {
+      "label": "R (full radius)",
+      "dR_cm": 9.258e+22,
+      "A_env_per_B": 1.0263804218627653e-31,
+      "B_needed_for_target": 9.064572519256182e+34
+    },
+    {
+      "label": "R/10",
+      "dR_cm": 9.258e+21,
+      "A_env_per_B": 1.0263804218627655e-30,
+      "B_needed_for_target": 9.06457251925618e+33
+    },
+    {
+      "label": "R/100",
+      "dR_cm": 9.258e+20,
+      "A_env_per_B": 1.0263804218627655e-29,
+      "B_needed_for_target": 9.06457251925618e+32
+    },
+    {
+      "label": "1 kpc",
+      "dR_cm": 3.086e+21,
+      "A_env_per_B": 3.0791412655882962e-30,
+      "B_needed_for_target": 3.021524173085394e+33
+    },
+    {
+      "label": "100 pc",
+      "dR_cm": 3.086e+20,
+      "A_env_per_B": 3.079141265588296e-29,
+      "B_needed_for_target": 3.0215241730853937e+32
+    },
+    {
+      "label": "1 pc",
+      "dR_cm": 3.086e+18,
+      "A_env_per_B": 3.0791412655882963e-27,
+      "B_needed_for_target": 3.0215241730853935e+30
+    },
+    {
+      "label": "Thin shell (chameleon)",
+      "dR_cm": 1.0869832713754647e+22,
+      "A_env_per_B": 8.741836416287616e-31,
+      "B_needed_for_target": 1.0642729197020113e+34
+    },
+    {
+      "label": "100 AU",
+      "dR_cm": 1496000000000000.0,
+      "A_env_per_B": 6.351757985030403e-24,
+      "B_needed_for_target": 1.464744057983068e+27
+    },
+    {
+      "label": "1 AU",
+      "dR_cm": 14960000000000.0,
+      "A_env_per_B": 6.3517579850304015e-22,
+      "B_needed_for_target": 1.4647440579830686e+25
+    },
+    {
+      "label": "0.1 AU",
+      "dR_cm": 1496000000000.0,
+      "A_env_per_B": 6.351757985030403e-21,
+      "B_needed_for_target": 1.464744057983068e+24
+    },
+    {
+      "label": "Solar radius",
+      "dR_cm": 69600000000.0,
+      "A_env_per_B": 1.3652629232191785e-19,
+      "B_needed_for_target": 6.814584654787537e+22
+    }
+  ],
+  "B_enhancement_vs_mass": [
+    {
+      "m_phi_eV": 1e-30,
+      "lambda_cm": 1.974338327091136e+25,
+      "lambda_AU": 1319744871050.2246,
+      "B_enhancement": 399470.72030265996,
+      "A_env": 3.492107689982438e-25
+    },
+    {
+      "m_phi_eV": 1e-28,
+      "lambda_cm": 1.9743383270911362e+23,
+      "lambda_AU": 13197448710.502247,
+      "B_enhancement": 40.94697203026601,
+      "A_env": 3.579517312308899e-29
+    },
+    {
+      "m_phi_eV": 1e-26,
+      "lambda_cm": 1.9743383270911362e+21,
+      "lambda_AU": 131974487.10502248,
+      "B_enhancement": 1.0039946972030267,
+      "A_env": 8.776757405769078e-31
+    },
+    {
+      "m_phi_eV": 1e-24,
+      "lambda_cm": 1.974338327091136e+19,
+      "lambda_AU": 1319744.8710502246,
+      "B_enhancement": 1.0000003994697204,
+      "A_env": 8.741839908386567e-31
+    },
+    {
+      "m_phi_eV": 1e-22,
+      "lambda_cm": 1.9743383270911363e+17,
+      "lambda_AU": 13197.448710502249,
+      "B_enhancement": 1.000000000039947,
+      "A_env": 8.741836416636827e-31
+    },
+    {
+      "m_phi_eV": 1e-20,
+      "lambda_cm": 1974338327091136.2,
+      "lambda_AU": 131.9744871050225,
+      "B_enhancement": 1.000000000000004,
+      "A_env": 8.741836416287651e-31
+    },
+    {
+      "m_phi_eV": 1e-18,
+      "lambda_cm": 19743383270911.36,
+      "lambda_AU": 1.3197448710502246,
+      "B_enhancement": 1.0,
+      "A_env": 8.741836416287616e-31
+    },
+    {
+      "m_phi_eV": 1e-15,
+      "lambda_cm": 19743383270.91136,
+      "lambda_AU": 0.0013197448710502247,
+      "B_enhancement": 1.0,
+      "A_env": 8.741836416287616e-31
+    }
+  ],
+  "key_result": {
+    "required_B_over_Delta_R": 979106990630.3933,
+    "thin_shell_B_needed": 1.0642729197020113e+34,
+    "thin_shell_m_needed_eV": 6.320677742693319e-30,
+    "AU_width_B_needed": 1.4647440579830684e+25,
+    "AU_width_m_needed_eV": 1.1999200967679782e-31,
+    "best_A_env": 3.492107689982438e-25,
+    "best_m_phi": 1e-30,
+    "best_B_enhancement": 399470.72030265996
+  },
+  "conclusion": "The edge-transition amplification depends on B_eff / Delta_R. The required ratio is 9.79e+11 cm^-1. With the chameleon thin-shell width (~726593096 AU), B_eff ~ 1e+34 is needed, corresponding to m_phi ~ 6e-30 eV. With a sharper transition (~1 AU), B_eff ~ 1e+25 is needed (m_phi ~ 1e-31 eV). The B(phi) enhancement from field curvature near the screening transition can reach these values if the Compton wavelength is comparable to the transition width. The gap is reduced from 'impossible' to 'requires non-linear screening dynamics at AU scale with galactic-mass scalar field' \u2014 a physically motivated, falsifiable target."
+}

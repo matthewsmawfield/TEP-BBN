@@ -1,0 +1,32 @@
+[0;37m[14:52:14] [INFO] ================================================================================[0m
+[0;37m[14:52:14] [INFO] Script: secondary_analyses[0m
+[0;37m[14:52:14] [INFO] Started: 2026-08-30T14:52:14.544568[0m
+[0;37m[14:52:14] [INFO] ================================================================================[0m
+[1;32m[14:52:14] [SUCCESS] === C3: NOISY/OFFSET TRUE-D MC (Q1009+2956) ===[0m
+[0;34m[14:52:14] [PROCESS] Perturbation sigmas: {'logN_D': 0.1, 'T_K': 1000.0, 'b_turb': 1.0}[0m
+[0;34m[14:52:14] [PROCESS] N_sims: 200[0m
+[0;34m[14:54:55] [PROCESS] Completed 10/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[14:57:08] [PROCESS] Completed 20/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[14:57:56] [PROCESS] Completed 30/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:00:01] [PROCESS] Completed 40/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:02:35] [PROCESS] Completed 50/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:03:54] [PROCESS] Completed 60/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:05:46] [PROCESS] Completed 70/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:08:15] [PROCESS] Completed 80/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:09:18] [PROCESS] Completed 90/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:11:27] [PROCESS] Completed 100/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:14:19] [PROCESS] Completed 110/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:15:53] [PROCESS] Completed 120/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:18:25] [PROCESS] Completed 130/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:21:46] [PROCESS] Completed 140/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:23:18] [PROCESS] Completed 150/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:25:57] [PROCESS] Completed 160/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:29:10] [PROCESS] Completed 170/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:30:43] [PROCESS] Completed 180/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:33:22] [PROCESS] Completed 190/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:35:00] [PROCESS] Completed 200/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[15:35:00] [PROCESS] 
+T_obs = 144.38, T_parent_best = 144.38[0m
+[0;34m[15:35:00] [PROCESS] Exceedances (standard): 0/200 → p = 0.00498[0m
+[0;34m[15:35:00] [PROCESS] Exceedances (parent): 0/200 → p = 0.00498[0m
+[1;32m[15:35:00] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c3_perturbed_mc.json[0m

@@ -1,0 +1,18 @@
+[0;37m[17:34:06] [INFO] ================================================================================[0m
+[0;37m[17:34:06] [INFO] Script: step_03_significance[0m
+[0;37m[17:34:06] [INFO] Started: 2026-08-30T17:34:06.150631[0m
+[0;37m[17:34:06] [INFO] ================================================================================[0m
+[1;32m[17:34:06] [SUCCESS] === GATE 3R: GENUINE MONTE CARLO CALIBRATION (PKS1937-101) ===[0m
+[0;34m[17:34:06] [PROCESS] Using VPFIT init shared params (legacy format)[0m
+[0;34m[17:34:06] [PROCESS] Fixed parent window: ±1000 km/s[0m
+[0;34m[17:34:06] [PROCESS] Pre-calculating base True-D model fluxes...[0m
+[0;34m[17:34:06] [PROCESS] Canonical parent index (auto-detected): 19[0m
+[0;34m[17:34:07] [PROCESS] Frozen-scaffold cache built for 15 blocks (184 shared H I + metals cached)[0m
+[0;37m[17:34:07] [INFO] [0m
+[0;37m[17:34:07] [INFO] ================================================================================[0m
+[0;37m[17:34:07] [INFO] 
+--- Computing observed parent reassignment T ---[0m
+[0;37m[17:34:07] [INFO] ================================================================================[0m
+[0;37m[17:34:07] [INFO] [0m
+[0;34m[17:34:07] [PROCESS] Parent reassignment window: ±1000 km/s, logN_H >= 15.92 (max=17.92 - 2.0 dex) → 3/184 H I components eligible[0m
+[0;34m[17:34:18] [PROCESS]   Parent 19: LL_D = -9598.98, T = 161.32[0m

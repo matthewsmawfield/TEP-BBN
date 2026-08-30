@@ -1,4 +1,4 @@
-v0.2 (Dubai) — 2026-08-27 — Corrected absorber amplitude, honest significance calibration, data provenance fix
+v0.2 (Dubai) — 2026-08-28 — Corrected absorber amplitude, honest significance calibration, data provenance fix
 
 - Q1009 N_HI correction: 20.45 → 17.362 ± 0.005 (Zavarygin et al. 2018, Table 5; LLS, not DLA)
 - Added ionisation correction: N_H = sqrt(N_HI × 2R × Γ / α_rec) to derive total gas column from neutral H

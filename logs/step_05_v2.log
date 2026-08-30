@@ -1,0 +1,98 @@
+[0;37m[17:35:53] [INFO] ================================================================================[0m
+[0;37m[17:35:53] [INFO] Script: step_05_population_prediction[0m
+[0;37m[17:35:53] [INFO] Started: 2026-08-30T17:35:53.558753[0m
+[0;37m[17:35:53] [INFO] ================================================================================[0m
+[1;32m[17:35:53] [SUCCESS] === GATE 6-II: ORPHAN FEATURE POPULATION PREDICTION ===[0m
+[0;37m[17:35:53] [INFO] [0m
+[0;37m[17:35:53] [INFO] ================================================================================[0m
+[0;37m[17:35:53] [INFO] 
+--- Input Parameters ---[0m
+[0;37m[17:35:53] [INFO] ================================================================================[0m
+[0;37m[17:35:53] [INFO] [0m
+[0;34m[17:35:53] [PROCESS]   v_iso = 81.6 km/s[0m
+[0;34m[17:35:53] [PROCESS]   Search tolerance epsilon = 5.0 km/s[0m
+[0;34m[17:35:53] [PROCESS]   Velocity prior half-width = 500.0 km/s[0m
+[0;34m[17:35:53] [PROCESS]   Observed deviations from v_iso: [  2.7   5.7 -37.6] km/s[0m
+[0;34m[17:35:53] [PROCESS]   Inferred shear spread sigma = 24.2 km/s[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] 
+--- 1. Selection Fraction ---[0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;34m[17:35:54] [PROCESS]   f_sel (identified as D) = 0.164[0m
+[0;34m[17:35:54] [PROCESS]   f_orphan (absorbed into H I) = 0.836[0m
+[0;34m[17:35:54] [PROCESS]   Ratio orphan/identified = 5.1[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] 
+--- 2. Expected Orphans in Benchmark Sample ---[0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;34m[17:35:54] [PROCESS]   N_identified (benchmark) = 3[0m
+[0;34m[17:35:54] [PROCESS]   N_orphan expected = 15.3[0m
+[0;34m[17:35:54] [PROCESS]   These are narrow H I components at non-isotope offsets[0m
+[0;34m[17:35:54] [PROCESS]   that are actually edge-shear features misidentified as H I[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] 
+--- 3. Surface Density in Existing LLS Samples ---[0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;34m[17:35:54] [PROCESS]   N_LLS surveyed (high-S/N, R>30000) ~ 80[0m
+[0;34m[17:35:54] [PROCESS]   Fraction with detectable core-edge geometry ~ 0.3[0m
+[0;34m[17:35:54] [PROCESS]   N_shear features expected ~ 24[0m
+[0;34m[17:35:54] [PROCESS]   N_identified as D ~ 4[0m
+[0;34m[17:35:54] [PROCESS]   N_orphan (misidentified as H I) ~ 20[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] 
+--- 4. Observational Signature of Orphan Features ---[0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;34m[17:35:54] [PROCESS]   Orphan features are predicted to have:[0m
+[0;34m[17:35:54] [PROCESS]     - Narrow b-values (edge gas is cool, b ~ 5-15 km/s)[0m
+[0;34m[17:35:54] [PROCESS]     - Velocity offsets NOT at ±81.6 km/s from parent[0m
+[0;34m[17:35:54] [PROCESS]     - Low columns (log N_HI ~ 12-14, edge gas)[0m
+[0;34m[17:35:54] [PROCESS]     - Thermal Doppler parameters (low turbulence)[0m
+[0;34m[17:35:54] [PROCESS]   The predicted velocity distribution of orphans is:[0m
+[0;34m[17:35:54] [PROCESS]     Gaussian centered on v_iso with sigma ~ 24 km/s[0m
+[0;34m[17:35:54] [PROCESS]     (broader than the isotope shift, set by geometry variation)[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] 
+--- 5. Quantitative Forecast ---[0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;34m[17:35:54] [PROCESS]   In a sample of 80 high-S/N LLS sightlines:[0m
+[0;34m[17:35:54] [PROCESS]   delta_v (km/s)  P(>delta_v)  N_orphan   N_per_10_sightlines [0m
+[0;34m[17:35:54] [PROCESS]   --------------- ------------ ---------- --------------------[0m
+[0;34m[17:35:54] [PROCESS]   5               0.836        20.1       2.51                [0m
+[0;34m[17:35:54] [PROCESS]   10              0.679        16.3       2.04                [0m
+[0;34m[17:35:54] [PROCESS]   20              0.408        9.8        1.22                [0m
+[0;34m[17:35:54] [PROCESS]   30              0.215        5.2        0.64                [0m
+[0;34m[17:35:54] [PROCESS]   50              0.039        0.9        0.12                [0m
+[0;37m[17:35:54] [INFO] [0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] 
+--- 6. Testable Prediction ---[0m
+[0;37m[17:35:54] [INFO] ================================================================================[0m
+[0;37m[17:35:54] [INFO] [0m
+[0;34m[17:35:54] [PROCESS]   In a re-analysis of existing high-S/N LLS spectra:[0m
+[0;34m[17:35:54] [PROCESS]   1. Identify all narrow H I components (b < 15 km/s) at[0m
+[0;34m[17:35:54] [PROCESS]      |v - v_main| < 500 km/s in each sightline[0m
+[0;34m[17:35:54] [PROCESS]   2. Exclude components at |Δv - v_iso| < 5.0 km/s[0m
+[0;34m[17:35:54] [PROCESS]      (these are the identified D candidates)[0m
+[0;34m[17:35:54] [PROCESS]   3. The remaining narrow components are orphan candidates[0m
+[0;34m[17:35:54] [PROCESS]   4. Predicted count: ~20 across 80 sightlines[0m
+[0;34m[17:35:54] [PROCESS]      (~0.3 per sightline)[0m
+[0;34m[17:35:54] [PROCESS]   5. Under the isotope-D null, orphan candidates should show[0m
+[0;34m[17:35:54] [PROCESS]      no excess at low b-values beyond the normal H I population[0m
+[0;34m[17:35:54] [PROCESS]   6. Under TEP, orphan candidates should show:[0m
+[0;34m[17:35:54] [PROCESS]      - An excess of narrow (b < 10 km/s) components[0m
+[0;34m[17:35:54] [PROCESS]      - A velocity distribution broader than v_iso[0m
+[0;34m[17:35:54] [PROCESS]      - Columns tracking the edge-gis prediction (log N ~ 12-14)[0m
+[1;32m[17:35:54] [SUCCESS]   This is a targetable observational program using[0m
+[1;32m[17:35:54] [SUCCESS]   existing archival data (SQUAD, UVES SLS, ESPRESSO D/H survey).[0m
+[1;32m[17:35:54] [SUCCESS] 
+[COMPLETED] Gate 6-II results written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_population_prediction.json[0m

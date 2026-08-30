@@ -248,8 +248,12 @@ def assign_ties(components):
             by_z_tie[zt] = []
         by_z_tie[zt].append(c)
 
-    # Assign b ties: components at the same z get the same b tie (lowercase)
-    # Metals with thermal blocks share b ties
+    # Assign b ties: metals at the same z share b_turb/T via thermal blocks.
+    # H I and D I have independently fitted b values (NOT tied to metals),
+    # because the Cooke et al. 2024 paper fits H I b independently.
+    # Tying H I b to the metal thermal block recomputes b from b_turb and T,
+    # giving b~5.5 km/s instead of the paper's b~16.3 km/s — a 3x error that
+    # makes Voigt profiles too narrow and inflates residuals to 11σ.
     for zt, comps in by_z_tie.items():
         if not zt:
             # Free z, assign unique b and N
@@ -258,21 +262,23 @@ def assign_ties(components):
                 c["N_tie"] = ""
             continue
 
-        # Assign b tie for this z group
+        # Assign b tie for this z group (metals only)
         b_tie = b_tie_letters[b_tie_idx] if b_tie_idx < len(b_tie_letters) else ""
         b_tie_idx += 1
 
         for c in comps:
-            if c["ion"] == "D_I":
-                # D I b tie: uppercase W + lowercase letter
-                c["b_tie"] = "W" + b_tie
-            else:
-                c["b_tie"] = b_tie
-
             # N ties
             if c["ion"] == "D_I":
                 c["N_tie"] = "%"
+                c["b_tie"] = ""  # D I b is independent (paper fits it separately)
+            elif c["ion"] == "H_I":
+                c["b_tie"] = ""  # H I b is independent (paper fits it separately)
+                N_tie = N_tie_letters[N_tie_idx] if N_tie_idx < len(N_tie_letters) else ""
+                N_tie_idx += 1
+                c["N_tie"] = N_tie
             else:
+                # Metals share b_turb/T via thermal block
+                c["b_tie"] = b_tie
                 N_tie = N_tie_letters[N_tie_idx] if N_tie_idx < len(N_tie_letters) else ""
                 N_tie_idx += 1
                 c["N_tie"] = N_tie

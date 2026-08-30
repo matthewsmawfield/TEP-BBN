@@ -1,0 +1,108 @@
+[0;37m[19:38:23] [INFO] ================================================================================[0m
+[0;37m[19:38:23] [INFO] Script: step_02_q1009[0m
+[0;37m[19:38:23] [INFO] Started: 2026-08-30T19:38:23.591850[0m
+[0;37m[19:38:23] [INFO] ================================================================================[0m
+[1;32m[19:38:23] [SUCCESS] === GATE 2R: IMMUTABLE FIT VERIFICATION (J1332+0052) ===[0m
+[0;37m[19:38:23] [INFO] [0m
+[0;37m[19:38:23] [INFO] ================================================================================[0m
+[0;37m[19:38:23] [INFO] 
+--- Data Manifest ---[0m
+[0;37m[19:38:23] [INFO] ================================================================================[0m
+[0;37m[19:38:23] [INFO] [0m
+[0;34m[19:38:23] [PROCESS] wave_hash: c198f5fd2a7c026602801ed16535148d8256fa99132ec5506c23072d66e41174[0m
+[0;34m[19:38:23] [PROCESS] flux_hash: ce8faabe5c3c023a37e221829ad5b93112e55be58da52073c329b8f5583eef1c[0m
+[0;34m[19:38:23] [PROCESS] err_hash: 36809c359866683687786c3c671a25ea1eee53674dee5ca1ed9554d3832a9829[0m
+[0;34m[19:38:23] [PROCESS] likelihood_cfg: {'model': 'student_t', 'nu': 1.9045061172172817, 'scale': 1.4496829755440477, 'location': 0.0, 'source': 'J1332+0052_Dfree_residuals_recalibrated_4072_pixels', 'calibration_blocks': 'all', 'n_pixels': 4072, 'residual_std': 3.051711077822464, 'residual_mean': 0.29487606677410194}[0m
+[0;34m[19:38:23] [PROCESS] 
+Shared parameters (fixed scaffold): 37[0m
+[0;34m[19:38:23] [PROCESS] Data blocks: 13[0m
+[0;34m[19:38:23] [PROCESS] Total pixels: 4072[0m
+[0;34m[19:38:23] [PROCESS]   Physical logN cap: 20.0 → 15.8 (parent logN_HI=19.25, cap = parent - 3.5 dex)[0m
+[0;37m[19:38:23] [INFO] [0m
+[0;37m[19:38:23] [INFO] ================================================================================[0m
+[0;37m[19:38:23] [INFO] 
+--- Fitting M_Dfree ---[0m
+[0;37m[19:38:23] [INFO] ================================================================================[0m
+[0;37m[19:38:23] [INFO] [0m
+[0;34m[19:38:40] [PROCESS]  Start 0: LL=-9609.94 | converged=False | logN_D=13.684[0m
+[0;34m[19:38:50] [PROCESS]  Start 1: LL=-9609.89 | converged=True | logN_D=13.577[0m
+[0;34m[19:39:04] [PROCESS]  Start 2: LL=-9610.73 | converged=True | logN_D=13.607[0m
+[0;34m[19:39:11] [PROCESS]  Start 3: LL=-9609.85 | converged=True | logN_D=13.623[0m
+[0;34m[19:39:23] [PROCESS]  Start 4: LL=-9609.87 | converged=True | logN_D=13.574[0m
+[0;34m[19:39:41] [PROCESS]  Start 5: LL=-9609.88 | converged=True | logN_D=13.560[0m
+[0;34m[19:39:42] [PROCESS]  Start 6: LL=-9611.35 | converged=True | logN_D=0.000[0m
+[0;34m[19:39:42] [PROCESS]  Start 7: LL=-9611.35 | converged=True | logN_D=0.000[0m
+[0;34m[19:39:42] [PROCESS] M_Dfree Global Best LL: -9609.85[0m
+[0;37m[19:39:42] [INFO] [0m
+[0;37m[19:39:42] [INFO] ================================================================================[0m
+[0;37m[19:39:42] [INFO] 
+--- Fitting M_Hfree (Multistart) ---[0m
+[0;37m[19:39:42] [INFO] ================================================================================[0m
+[0;37m[19:39:42] [INFO] [0m
+[0;34m[19:39:53] [PROCESS]  Start 0: LL=-9608.38 | converged=True | v_H=-77.55[0m
+[0;34m[19:39:58] [PROCESS]  Start 1: LL=-9611.18 | converged=False | v_H=-81.00[0m
+[0;34m[19:40:01] [PROCESS]  Start 2: LL=-9611.36 | converged=True | v_H=-49.80[0m
+[0;34m[19:40:07] [PROCESS]  Start 3: LL=-9585.90 | converged=True | v_H=-116.23[0m
+[0;34m[19:40:18] [PROCESS]  Start 4: LL=-9565.28 | converged=True | v_H=-114.78[0m
+[0;34m[19:40:21] [PROCESS]  Start 5: LL=-9611.35 | converged=True | v_H=-59.84[0m
+[0;34m[19:40:23] [PROCESS]  Start 6: LL=-9611.27 | converged=True | v_H=-81.00[0m
+[0;34m[19:40:28] [PROCESS]  Start 7: LL=-9608.31 | converged=True | v_H=-76.52[0m
+[0;34m[19:40:31] [PROCESS]  Start 8: LL=-9611.25 | converged=False | v_H=-81.00[0m
+[0;34m[19:40:42] [PROCESS]  Start 9: LL=-9609.75 | converged=True | v_H=-75.11[0m
+[0;34m[19:40:49] [PROCESS]  Start 10: LL=-9609.86 | converged=True | v_H=-81.04[0m
+[0;34m[19:40:57] [PROCESS]  Start 11: LL=-9608.35 | converged=True | v_H=-77.06[0m
+[0;34m[19:41:00] [PROCESS]  Start 12: LL=-9611.27 | converged=True | v_H=-70.00[0m
+[0;34m[19:41:08] [PROCESS]  Start 13: LL=-9608.30 | converged=True | v_H=-76.65[0m
+[0;34m[19:41:09] [PROCESS]  Start 14: LL=-9611.35 | converged=True | v_H=-79.54[0m
+[0;34m[19:41:09] [PROCESS]  Start 15: LL=-9611.35 | converged=True | v_H=-84.61[0m
+[0;34m[19:41:17] [PROCESS]  Start 16: LL=-9569.71 | converged=True | v_H=-116.11[0m
+[0;34m[19:41:25] [PROCESS]  Start 17: LL=-9541.37 | converged=True | v_H=-118.20[0m
+[0;34m[19:41:31] [PROCESS]  Start 18: LL=-9563.03 | converged=True | v_H=-119.99[0m
+[0;34m[19:41:43] [PROCESS]  Start 19: LL=-9541.81 | converged=True | v_H=-116.92[0m
+[0;34m[19:41:59] [PROCESS]  Start 20: LL=-9561.83 | converged=True | v_H=-123.75[0m
+[0;34m[19:42:17] [PROCESS]  Start 21: LL=-9568.01 | converged=True | v_H=-110.65[0m
+[0;34m[19:42:25] [PROCESS]  Start 22: LL=-9562.55 | converged=True | v_H=-121.31[0m
+[0;34m[19:42:32] [PROCESS]  Start 23: LL=-9566.28 | converged=True | v_H=-82.81[0m
+[0;34m[19:42:38] [PROCESS]  Start 24: LL=-9561.01 | converged=True | v_H=-129.95[0m
+[0;34m[19:42:49] [PROCESS]  Start 25: LL=-9563.53 | converged=True | v_H=-119.67[0m
+[0;34m[19:42:55] [PROCESS]  Start 26: LL=-9565.02 | converged=True | v_H=-115.22[0m
+[0;34m[19:43:01] [PROCESS]  Start 27: LL=-9565.15 | converged=True | v_H=-114.99[0m
+[0;34m[19:43:13] [PROCESS]  Start 28: LL=-9561.61 | converged=True | v_H=-125.22[0m
+[0;34m[19:43:18] [PROCESS]  Start 29: LL=-9568.12 | converged=True | v_H=-110.09[0m
+[0;34m[19:43:22] [PROCESS]  Start 30: LL=-9548.60 | converged=True | v_H=-100.36[0m
+[0;34m[19:43:22] [PROCESS] M_Hfree Global Best LL: -9541.37[0m
+[0;37m[19:43:22] [INFO] [0m
+[0;37m[19:43:22] [INFO] ================================================================================[0m
+[0;37m[19:43:22] [INFO] 
+--- Profiling M_Hfree Velocity Optimum ---[0m
+[0;37m[19:43:22] [INFO] ================================================================================[0m
+[0;37m[19:43:22] [INFO] [0m
+[0;34m[19:43:22] [PROCESS] v_H profile array length: 11. Confirming distinct minimum.[0m
+[0;37m[19:43:22] [INFO] [0m
+[0;37m[19:43:22] [INFO] ================================================================================[0m
+[0;37m[19:43:22] [INFO] 
+--- Reconstructing M_Hfree inside M_D+H space ---[0m
+[0;37m[19:43:22] [INFO] ================================================================================[0m
+[0;37m[19:43:22] [INFO] [0m
+[0;34m[19:43:22] [PROCESS] LL(M_Hfree) = -9541.3670[0m
+[0;34m[19:43:22] [PROCESS] LL(M_D+H | logN_D=0.0, H_params=best_H) = -9541.3670[0m
+[0;37m[19:43:22] [INFO] [0m
+[0;37m[19:43:22] [INFO] ================================================================================[0m
+[0;37m[19:43:22] [INFO] 
+--- Independent Optimization M_D+H ---[0m
+[0;37m[19:43:22] [INFO] ================================================================================[0m
+[0;37m[19:43:22] [INFO] [0m
+[0;34m[19:43:24] [PROCESS] M_D+H LL: -9541.37 (success=True)[0m
+[0;37m[19:43:24] [INFO] [0m
+[0;37m[19:43:24] [INFO] ================================================================================[0m
+[0;37m[19:43:24] [INFO] 
+--- Likelihood Ratio ---[0m
+[0;37m[19:43:24] [INFO] ================================================================================[0m
+[0;37m[19:43:24] [INFO] [0m
+[0;34m[19:43:24] [PROCESS] LL(M_Dfree) = -9609.85[0m
+[0;34m[19:43:24] [PROCESS] LL(M_Hfree) = -9541.37[0m
+[0;34m[19:43:24] [PROCESS] LL(M_D+H)   = -9541.37[0m
+[0;34m[19:43:24] [PROCESS] T_obs = 2*(LL_H - LL_D) = 136.97[0m
+[0;34m[19:43:24] [PROCESS] Nesting: LL(M_D+H) >= LL(M_Hfree)? True[0m
+[1;32m[19:43:24] [SUCCESS] 
+[SUCCESS] Ledger saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate_j13322_parameter_ledger.json[0m

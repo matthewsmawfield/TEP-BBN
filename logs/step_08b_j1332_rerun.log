@@ -1,0 +1,43 @@
+[0;37m[19:44:11] [INFO] ================================================================================[0m
+[0;37m[19:44:11] [INFO] Script: step_08b_calibration[0m
+[0;37m[19:44:11] [INFO] Started: 2026-08-30T19:44:11.205420[0m
+[0;37m[19:44:11] [INFO] ================================================================================[0m
+[1;32m[19:44:11] [SUCCESS] === GATE 8 CALIBRATION: J1332+0052 ===[0m
+[0;34m[19:44:11] [PROCESS]   Mixed b_D: b_turb=2.800, T=10100, b_therm_H=12.914, b_therm_D=9.132[0m
+[0;34m[19:44:11] [PROCESS]   b_D_pred = sqrt(2.800^2 + 9.132^2) = 9.551 (vs thermal-only 9.309)[0m
+[0;37m[19:44:11] [INFO] [0m
+[0;37m[19:44:11] [INFO] ================================================================================[0m
+[0;37m[19:44:11] [INFO] 
+--- Observed Parameters ---[0m
+[0;37m[19:44:11] [INFO] ================================================================================[0m
+[0;37m[19:44:11] [INFO] [0m
+[0;34m[19:44:11] [PROCESS]   v_H=-118.20, b_H=50.73, logN_H=15.35[0m
+[0;34m[19:44:11] [PROCESS]   v_parent=0.0, b_parent=13.2, logN_parent=19.25[0m
+[0;34m[19:44:11] [PROCESS]   b_D_pred=9.55, b_ratio=5.311[0m
+[0;34m[19:44:11] [PROCESS]   v_deviation=-36.6 km/s, logN_diff=0.698 dex[0m
+[0;34m[19:44:11] [PROCESS]   Frozen cache: 13 blocks[0m
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:193: RuntimeWarning: divide by zero encountered in matmul
+  H_mat = P.T @ (W[:, np.newaxis] * P)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:193: RuntimeWarning: overflow encountered in matmul
+  H_mat = P.T @ (W[:, np.newaxis] * P)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:193: RuntimeWarning: invalid value encountered in matmul
+  H_mat = P.T @ (W[:, np.newaxis] * P)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:195: RuntimeWarning: divide by zero encountered in matmul
+  b_vec = P.T @ (W * flux_fit)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:195: RuntimeWarning: overflow encountered in matmul
+  b_vec = P.T @ (W * flux_fit)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:195: RuntimeWarning: invalid value encountered in matmul
+  b_vec = P.T @ (W * flux_fit)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:199: RuntimeWarning: divide by zero encountered in matmul
+  flux_mod = P @ c_opt
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:199: RuntimeWarning: overflow encountered in matmul
+  flux_mod = P @ c_opt
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:199: RuntimeWarning: invalid value encountered in matmul
+  flux_mod = P @ c_opt
+[0;37m[19:44:11] [INFO] [0m
+[0;37m[19:44:11] [INFO] ================================================================================[0m
+[0;37m[19:44:11] [INFO] 
+--- Running 200 true-D simulations ---[0m
+[0;37m[19:44:11] [INFO] ================================================================================[0m
+[0;37m[19:44:11] [INFO] [0m
+[0;34m[19:59:09] [PROCESS]   25/200 done[0m

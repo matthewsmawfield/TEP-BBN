@@ -1,0 +1,83 @@
+[0;37m[15:10:19] [INFO] ================================================================================[0m
+[0;37m[15:10:19] [INFO] Script: step_03_significance[0m
+[0;37m[15:10:19] [INFO] Started: 2026-08-30T15:10:19.300227[0m
+[0;37m[15:10:19] [INFO] ================================================================================[0m
+[1;32m[15:10:19] [SUCCESS] === GATE 3R: GENUINE MONTE CARLO CALIBRATION (Q1009+2956) ===[0m
+[0;34m[15:10:19] [PROCESS] Using VPFIT init shared params (legacy format)[0m
+[0;34m[15:10:19] [PROCESS] Physical parent window: ±170.2 km/s (3 × b_max=56.7 km/s, 14 components in main complex)[0m
+[0;34m[15:10:19] [PROCESS] Pre-calculating base True-D model fluxes...[0m
+[0;34m[15:10:19] [PROCESS] Canonical parent index (auto-detected): 0[0m
+[0;34m[15:10:19] [PROCESS] Frozen-scaffold cache built for 50 blocks (43 shared H I + metals cached)[0m
+[0;37m[15:10:19] [INFO] [0m
+[0;37m[15:10:19] [INFO] ================================================================================[0m
+[0;37m[15:10:19] [INFO] 
+--- Computing observed parent reassignment T ---[0m
+[0;37m[15:10:19] [INFO] ================================================================================[0m
+[0;37m[15:10:19] [INFO] [0m
+[0;34m[15:10:19] [PROCESS] Parent reassignment window: ±170 km/s, logN_H >= 15.36 (max=17.36 - 2.0 dex) → 4/43 H I components eligible[0m
+[0;34m[15:10:49] [PROCESS]   Parent 0: LL_D = -15535.79, T = 144.38[0m
+[0;34m[15:11:24] [PROCESS]   Parent 1: LL_D = -15669.40, T = 411.59[0m
+[0;34m[15:11:56] [PROCESS]   Parent 2: LL_D = -15740.82, T = 554.45[0m
+[0;34m[15:12:08] [PROCESS]   Parent 3: LL_D = -16203.62, T = 1480.04[0m
+[0;34m[15:12:08] [PROCESS] Observed T_parent_best = 144.38[0m
+[0;37m[15:12:08] [INFO] [0m
+[0;37m[15:12:08] [INFO] ================================================================================[0m
+[0;37m[15:12:08] [INFO] 
+--- Running True-D Monte Carlo Simulations (200 realizations) ---[0m
+[0;37m[15:12:08] [INFO] ================================================================================[0m
+[0;37m[15:12:08] [INFO] [0m
+[0;34m[15:13:59] [PROCESS] Completed 10/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:15:10] [PROCESS] Completed 20/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:15:37] [PROCESS] Completed 30/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:16:49] [PROCESS] Completed 40/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:17:49] [PROCESS] Completed 50/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:18:46] [PROCESS] Completed 60/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:19:37] [PROCESS] Completed 70/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:20:37] [PROCESS] Completed 80/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:21:28] [PROCESS] Completed 90/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:22:23] [PROCESS] Completed 100/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:23:16] [PROCESS] Completed 110/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:24:11] [PROCESS] Completed 120/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:25:09] [PROCESS] Completed 130/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:26:15] [PROCESS] Completed 140/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:26:56] [PROCESS] Completed 150/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:28:01] [PROCESS] Completed 160/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:29:01] [PROCESS] Completed 170/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:30:00] [PROCESS] Completed 180/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:30:55] [PROCESS] Completed 190/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:31:47] [PROCESS] Completed 200/200 simulations. Fair standard exceedances (>=T_obs): 0, Parent exceedances (>=144.38): 0[0m
+[0;34m[15:31:48] [PROCESS] 
+Observed T_obs (standard, canonical parent 0) = 144.38[0m
+[0;34m[15:31:48] [PROCESS] Observed T_obs (best parent) = 144.38[0m
+[0;34m[15:31:48] [PROCESS] Exceedances (fair standard, T_sim_standard >= 144.38): 0[0m
+[0;34m[15:31:48] [PROCESS] Calibrated p_add_one (fair standard) = 0.00498[0m
+[0;34m[15:31:48] [PROCESS] Exceedances (parent, T_sim >= 144.38): 0[0m
+[0;34m[15:31:48] [PROCESS] Calibrated p_add_one for parent reassignment = 0.00498[0m
+[0;37m[15:31:48] [INFO] [0m
+[0;37m[15:31:48] [INFO] ================================================================================[0m
+[0;37m[15:31:48] [INFO] 
+--- Genuine Leave-One-Out Robustness Constraints ---[0m
+[0;37m[15:31:48] [INFO] ================================================================================[0m
+[0;37m[15:31:48] [INFO] [0m
+[0;34m[15:33:04] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x2.dat': T = 125.80 (D=-12818.03, H=-12755.13)[0m
+[0;34m[15:34:06] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x1.dat': T = 70.36 (D=-10351.67, H=-10316.48)[0m
+[0;34m[15:35:01] [PROCESS] Leave-one-out coadd 'q1011p2941_C5x2.dat': T = 123.14 (D=-13476.32, H=-13414.75)[0m
+[0;34m[15:35:38] [PROCESS] Leave-one-out coadd 'q1011p2941_C1x1.dat': T = 113.91 (D=-9960.92, H=-9903.96)[0m
+[0;34m[15:36:35] [PROCESS] Leave-one-out transition 'Lyα': T = 30.33 (D=-12633.85, H=-12618.68)[0m
+[0;34m[15:37:20] [PROCESS] Leave-one-out transition 'Lyβ': T = 133.04 (D=-13637.53, H=-13571.01)[0m
+[0;34m[15:38:05] [PROCESS] Leave-one-out transition 'Lyγ': T = 140.20 (D=-13199.81, H=-13129.71)[0m
+[0;34m[15:38:43] [PROCESS] Leave-one-out transition 'Ly6': T = 144.06 (D=-14142.62, H=-14070.59)[0m
+[0;34m[15:39:21] [PROCESS] Leave-one-out transition 'Ly13': T = 144.40 (D=-14454.91, H=-14382.71)[0m
+[0;34m[15:39:58] [PROCESS] Leave-one-out transition 'Ly14': T = 144.38 (D=-14818.68, H=-14746.49)[0m
+[0;37m[15:39:58] [INFO] [0m
+[0;37m[15:39:58] [INFO] ================================================================================[0m
+[0;37m[15:39:58] [INFO] 
+--- Parent Component Reassignment Robustness ---[0m
+[0;37m[15:39:58] [INFO] ================================================================================[0m
+[0;37m[15:39:58] [INFO] [0m
+[0;34m[15:39:58] [PROCESS] Parent 0: LL_D = -15535.79, T = 144.38[0m
+[0;34m[15:39:58] [PROCESS] Parent 1: LL_D = -15669.40, T = 411.59[0m
+[0;34m[15:39:58] [PROCESS] Parent 2: LL_D = -15740.82, T = 554.45[0m
+[0;34m[15:39:58] [PROCESS] Parent 3: LL_D = -16203.62, T = 1480.04[0m
+[1;32m[15:39:58] [SUCCESS] 
+[SUCCESS] Calibration saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_significance_physical.json[0m

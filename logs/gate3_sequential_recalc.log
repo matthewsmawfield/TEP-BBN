@@ -1,0 +1,8 @@
+=== Starting Q1009 Gate 3 at Sun Aug 30 17:40:53 BST 2026 ===
+=== Q1009 done at Sun Aug 30 18:04:44 BST 2026 ===
+=== Starting PKS1937 Gate 3 at Sun Aug 30 18:04:44 BST 2026 ===
+=== PKS1937 done at Sun Aug 30 18:24:35 BST 2026 ===
+=== Starting J1332 Gate 3 at Sun Aug 30 18:24:35 BST 2026 ===
+bash: line 8: 71656 Terminated: 15          python3 scripts/steps/step_03_significance.py --sightline "J1332+0052" --n-sims 1000 > logs/gate3_j1332_recalc.log 2>&1
+=== J1332 done at Sun Aug 30 18:25:29 BST 2026 ===
+=== ALL GATE 3 RUNS COMPLETE at Sun Aug 30 18:25:29 BST 2026 ===

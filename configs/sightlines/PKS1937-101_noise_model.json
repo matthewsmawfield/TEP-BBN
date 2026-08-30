@@ -1,0 +1,12 @@
+{
+    "model": "student_t",
+    "nu": 3.4013849516959214,
+    "scale": 2.09232206372592,
+    "location": 0.0,
+    "source": "PKS1937-101_Dfree_residuals_recalibrated_3889_pixels",
+    "calibration_blocks": "all Lyman transitions",
+    "sightline": "PKS1937-101",
+    "n_pixels": 3889,
+    "residual_std": 3.133016635247908,
+    "residual_mean": 0.08437002115349827
+}

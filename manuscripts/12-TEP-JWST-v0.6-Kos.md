@@ -8,17 +8,13 @@ DOI: 10.5281/zenodo.19000827
 
 ## Abstract
 
-JWST has revealed high-redshift anomalies that share a common structure: star formation efficiencies and anomalous stellar-to-dynamical mass ratios appearing preferentially in deep gravitational potentials. This work tests whether this pattern arises from a violation of the isochrony axiom. In the Temporal Equivalence Principle (TEP)—a continuously screened two-metric framework—proper time depends on environment in unscreened halos. The framework quantitatively accounts for the leading photometric excesses using the prespecified potential-linear halo kernel, with $\Phi\propto M_h^{2/3}$, normalized by an external Cepheid prior and applied without JWST-specific parameter refitting.
+JWST has revealed a pattern of high-redshift anomalies—such as extreme star formation efficiencies and unexpected stellar-to-dynamical mass ratios—that appear preferentially in deep gravitational potentials. This work tests whether these tensions can be resolved by relaxing the assumption of universal cosmic time. Under the Temporal Equivalence Principle (TEP)—a continuously screened two-metric framework—proper time depends on the local environment in unscreened halos. Using a prespecified magnitude-sector benchmark ($\kappa_{\rm gal} = 0.960 \times 10^6$ mag, Paper 11) applied without any JWST-specific parameter refitting, this framework quantitatively accounts for the leading photometric excesses.
 
+To address mass-proxy circularity, the framework is tested against kinematic data using the JWST-SUSPENSE survey ($N=15$) and a broader velocity dispersion ($\sigma$)-based expansion ($N=75$). In the SUSPENSE sample, the dynamical mass-to-light inference response ($R_{\rm ML}$) successfully predicts spectral age even after controlling for stellar mass and redshift ($\rho = +0.556$, $p = 0.032$), whereas stellar mass loses its predictive power once $R_{\rm ML}$ is controlled ($\rho = +0.031$, $p = 0.91$). The broader $N=75$ expansion presents a more nuanced picture: while the overall trend is directionally positive, the signal is primarily driven by emission-line kinematics, whereas cleaner absorption-line tracers remain non-significant with the wrong sign.
 
-The strongest direct test of this framework is a kinematic comparison using the JWST-SUSPENSE survey ($N=15$) and a broader $\sigma$-based expansion ($N=75$), which break mass-proxy circularity by utilizing dynamically measured masses and spectral ages. The SUSPENSE comparison shows that the dynamical $R_{\rm ML}$ predictor retains spectral-age information after stellar-mass and redshift control ($\rho=+0.556$, $p=0.032$), whereas stellar mass contributes no residual signal once $R_{\rm ML}$ is controlled. A broader ($N=75$) sigma-based expansion is mixed: the primary residual-evolution test is directionally positive overall, but stratification by $\sigma$ measurement type reveals the signal is driven by emission-line $\sigma$ while absorption-line $\sigma$ (the cleaner potential tracer) is non-significant with the wrong sign.
-
-
-Primary large-sample JWST evidence derives from the dust–$R_{\rm ML}$ correlation across three photometric surveys ($N = 1{,}283$): dust and apparent evolutionary advance switch on selectively with potential depth ($\rho = +0.62$ at $z > 8$), organizing along the effective-time coordinate rather than raw cosmic time. A secondary photometric test confirms that $R_{\rm ML}$ carries sSFR information beyond mass and redshift: the partial correlation $\rho(R_{\rm ML}, {\rm sSFR} \mid M_*, z) = -0.47$ ($p = 9.9 \times 10^{-17}$, $N=283$) has the sign predicted by the TEP measurement equations (${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n}$ with $m < n$). A nested Bayesian model comparison across four SED observables, using a joint covariance likelihood that accounts for correlated SED outputs, favours TEP over conventional mass-plus-redshift ($\ln{\rm BF} = +64.1$, decisive on the Kass–Raftery scale), with TEP using four fewer parameters. An orthogonalized sensitivity analysis across eleven alternatives yields a mean $\ln{\rm BF} = +126.2$. The combination of the photometric correlation structure, the direct kinematic comparisons, and the Bayesian model preference supports TEP as a coherent, falsifiable organizing framework for high-redshift galaxy evolution.
+In large-sample photometry ($N = 1{,}283$ across three surveys), dust emergence and apparent evolutionary advance align strongly with potential depth ($\rho = +0.62$ at $z > 8$), organizing more cleanly along an effective-time coordinate than raw cosmic time. A secondary photometric test confirms that $R_{\rm ML}$ carries sSFR information beyond mass and redshift ($\rho(R_{\rm ML}, {\rm sSFR} \mid M_*, z) = -0.47$, $p = 1.3 \times 10^{-16}$), with the negative sign predicted by the TEP measurement equations (${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n_{\rm SPS}}$ with $m < n_{\rm SPS}$). Furthermore, a nested Bayesian model comparison of four SED observables—utilizing a joint covariance likelihood that accounts for correlated outputs—favors TEP over conventional mass-plus-redshift models ($\ln{\rm BF} = +64.1$, using four fewer parameters), with an orthogonalized sensitivity analysis across eleven alternatives yielding a mean $\ln{\rm BF} = +126.2$. The Bayesian evidence is treated as supportive global context alongside the kinematic comparisons and the photometric correlation structure, positioning TEP as a coherent and falsifiable organizing framework for high-redshift galaxy evolution.
 
 *Keywords:* Cosmology: early universe – Galaxies: high-redshift – Galaxies: evolution – Gravitation – Scalar-tensor theories – Infrared: galaxies
-
-
 
 
 ## 1. Introduction
@@ -45,7 +41,9 @@ Conventional photometric inference assumes that one environment-independent mapp
 The Temporal Equivalence Principle formalises this test within a continuously screened two-metric Temporal Topology framework. The numerical pipeline orders environments using the positive depth $\Psi\equiv|\Phi|/c^2$ and evaluates the observer-side response
 
 
-$$R_{\rm ML}=\exp\left[K_{\rm gal}(\Psi-\Psi_{\rm ref})\sqrt{1+z}\right].$$
+\begin{equation} \label{eq:jwst_rml_response}
+R_{\rm ML}=\exp\left[K_{\rm gal}(\Psi-\Psi_{\rm ref})\sqrt{1+z}\right].
+\end{equation}
 
 
 
@@ -53,41 +51,41 @@ $$R_{\rm ML}=\exp\left[K_{\rm gal}(\Psi-\Psi_{\rm ref})\sqrt{1+z}\right].$$
 
 
 
-The JWST response-prior test adopts the canonical response coefficient $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from Paper 11 (where the empirical Cepheid fit yields $\kappa_{\rm Cep}^{\rm emp} = (1.27 \pm 0.46) \times 10^6$ mag, consistent with the TEP-native equivalent $\approx 7.21 \times 10^5$ mag), transferred to the galaxy stellar-population sector through the phenomenological normalization $K_{\rm gal} = \kappa_{\rm gal}\ln 10/(2.5\,n) \approx 1.26\times10^6$ (with $n = 0.7$), and applies it without JWST-specific refit. The high-redshift observables are then examined for internal consistency of the response scale. These internal recoveries are treated as self-consistency checks rather than as replacement calibrations; the latest multi-observable recovery is anchor-consistent and internally concordant. No parameters are tuned to the JWST data the model seeks to explain. The response coefficient $\kappa_{\rm gal}$ and the screening scale $\rho_T \approx 20$ g/cm$^3$ are inherited from prior papers (Papers 11 and 6 respectively); the structural choices in the $R_{\rm ML}$ formula — the reference halo mass $\log M_{h,\rm ref} = 12.0$, exponential functional form, and $\sqrt{1+z}$ coupling scaling — are fixed for this analysis with independent physical motivation (virial-equilibrium potential scaling) and none were adjusted to improve JWST fits.
+The JWST response-prior test adopts the prespecified canonical magnitude-sector benchmark $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from Paper 11 (where independent empirical Cepheid-channel analyses recover $\kappa_{\rm equiv}^{42} = (0.369 \pm 0.310) \times 10^6$ mag under restricted closure and $\kappa_{\rm Cep}^{44} = (0.400 \pm 0.270) \times 10^6$ mag in the multi-block joint analysis), transferred to the galaxy stellar-population sector through the phenomenological normalization $K_{\rm gal} = \kappa_{\rm gal}\ln 10/(2.5\,n) \approx 1.26\times10^6$ (with $n = 0.7$), and applies it without JWST-specific refit. The high-redshift observables are then examined for internal consistency of the response scale. These internal recoveries are treated as self-consistency checks rather than as replacement calibrations; the latest multi-observable recovery is anchor-consistent and internally concordant. No parameters are tuned to the JWST data the model seeks to explain. The response coefficient $\kappa_{\rm gal}$ and the screening scale $\rho_T \approx 20$ g/cm$^3$ are inherited from prior papers (Papers 11 and 6 respectively); the structural choices in the $R_{\rm ML}$ formula — the reference halo mass $\log M_{h,\rm ref} = 12.0$, exponential functional form, and $\sqrt{1+z}$ coupling scaling — are fixed for this analysis with independent physical motivation (virial-equilibrium potential scaling) and none were adjusted to improve JWST fits.
 
 
 ### 1.3 Reader's Guide to the Evidence
 
-The analysis proceeds in three stages: an externally calibrated prediction (§3.1), the main multi-survey evidence (§3.2–3.10), and a compact-core stress test (§4.4). The five evidence lines are:
+The analysis proceeds in three stages: a prespecified benchmark prediction (§3.1), the main multi-survey evidence (§3.2–3.10), and a compact-core stress test (§4.4). The five evidence lines are:
 
 
 - **L1. Dust–$R_{\rm ML}$ emergence (Primary):** At $z > 8$, massive galaxies are anomalously dusty while low-mass galaxies remain dust-poor ($\rho = +0.62$).
 
 - **L2. Inside-out core screening (Ancillary):** Central screening structures, supported by the JADES DR5 morphology sample.
 
-- **L3. $R_{\rm ML}$–sSFR partial correlation (Secondary):** The TEP measurement equations predict $\rho(R_{\rm ML}, {\rm sSFR}) < 0$ (since ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n}$ with $m < n$); the partial correlation $\rho(R_{\rm ML}, {\rm sSFR} \mid M_*, z) = -0.47$ at $z > 8$ confirms this sign.
+- **L3. $R_{\rm ML}$–sSFR partial correlation (Secondary):** The TEP measurement equations predict $\rho(R_{\rm ML}, {\rm sSFR}) < 0$ (since ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n_{\rm SPS}}$ with $m < n_{\rm SPS}$); the partial correlation $\rho(R_{\rm ML}, {\rm sSFR} \mid M_*, z) = -0.47$ at $z > 8$ confirms this sign.
 
 - **L4. Dynamical mass comparison (Derived):** A kinematic comparison showing the TEP correction reconciles anomalous $M_*/M_{\rm dyn} > 1$ observations.
 
 - **L5. Direct kinematic test (Direct):** The JWST-SUSPENSE comparison evaluates $R_{\rm ML}$ from $M_{\rm dyn}$ against photometric $M_*$ in predicting spectral age.
 
 
-L1 is the primary photometric line; L3 is a secondary partial-correlation test; L2 is ancillary; L4 is derived; L5 is a direct test. This classification is stated once here and not repeated for each result.
+L1 is the primary photometric line; L3 is a secondary partial-correlation line; L2 is ancillary; L4 is derived; L5 is a direct test. This classification is stated once here and not repeated for each result.
 
 
 ### 1.4 Prior Cross-Domain Evidence for TEP
 
-The JWST analysis presented here is not the first test of the TEP framework. A local Cepheid analysis (Paper 11) provides $\kappa_{\rm gal}$; this work transfers that prior to the galaxy sector through $K_{\rm gal}$, and the present high-redshift study asks whether JWST observables recover an anchor-consistent response across multiple domains spanning 13.5 Gyr of cosmic time. *Important caveat:* all prior constraints derive from a single theoretical programme; this is not independent verification; the TEP series has not yet undergone independent replication or peer review in a refereed journal. Readers should weigh the cross-domain consistency with this single-source limitation in mind. The three domains most directly used in this work are:
+The JWST analysis presented here is not the first test of the TEP framework. Paper 11 defines the canonical magnitude-sector benchmark $\kappa_{\rm gal}$, with independent empirical Cepheid-channel fits providing consistency checks; this work transfers the benchmark to the galaxy sector through $K_{\rm gal}$, and the present high-redshift study asks whether JWST observables recover an anchor-consistent response across multiple domains spanning the full local-to-high-redshift observational baseline conventionally mapped to $\sim 13.5$ Gyr of FLRW lookback time. *Important caveat:* all prior constraints derive from a single theoretical programme; this is not independent verification; the TEP series has not yet undergone independent replication or peer review in a refereed journal. Readers should weigh the cross-domain consistency with this single-source limitation in mind. The three domains most directly used in this work are:
 
 
-- **Hubble Tension:** Stratification of $N = 29$ SH0ES Cepheid hosts by velocity dispersion reveals an environmental bias. High-$\sigma$ hosts yield $H_0 = 74.12 \pm 1.30$ km/s/Mpc; low-$\sigma$ hosts yield $H_0 = 66.26 \pm 2.10$ km/s/Mpc — consistent with Planck within $1\sigma$. The TEP correction with the Paper 11-derived response coefficient transferred via $K_{\rm gal}$ yields $H_0^{\rm TEP} = 68.84$ km/s/Mpc (bootstrap mean $68.92 \pm 1.44$), reducing the Hubble tension from $\approx 5\sigma$ to $\approx 1\sigma$. This full resolution uses the detailed SH0ES host stratification from Paper 11; the JWST-side pipeline (step 133) independently predicts $H_0^{\rm TEP} = 67.8$ km/s/Mpc from a crude two-halo area-distance scaling, accounting for $\sim 7\%$ of the tension — a conservative lower bound that confirms the direction of the effect without reproducing the full magnitude. This provides the low-redshift anchor used in this work.
+- **Hubble Tension:** Paper 11 reconstructs the complete 37-host R22 calibrator sample using homogeneous HyperLEDA circular-rotation potential coordinates. The host-level environmental response is directionally positive with 37/37 leave-one-host-out sign stability. Mapping the generative expansion relation to the TEP cosmic reference gives $H_{\rm cosmic} \simeq 66.6\text{–}67.2$ km/s/Mpc (with canonical noise around $67.16 \pm 1.58$ km/s/Mpc and low noise $66.58 \pm 1.08$ km/s/Mpc), while an independent unified host-level reconstruction yields $H_0 = 66.65 \pm 1.58$ km/s/Mpc — in full concordance with Planck CMB cosmology ($67.4 \pm 0.5$ km/s/Mpc) at $0.45\sigma$ ($0.31\sigma$ bootstrap). The Cepheid-channel allocation remains conditional on host-specific core/disk aperture validation. The JWST-side pipeline (step 133) independently predicts $H_0^{\rm TEP} = 67.8$ km/s/Mpc from a crude two-halo area-distance scaling, accounting for $\sim 93\%$ of the discrepancy (leaving roughly $7\%$ of the original gap) — a conservative lower bound that confirms the direction of the effect without reproducing the full magnitude. This provides the low-redshift anchor used in this work.
 
 - **Globular Cluster Pulsars:** Analysis of 197 globular-cluster millisecond pulsars (against 346 field controls) reveals a 0.63 dex raw spin-down excess (Welch t-test p ≈ 10⁻¹⁷) and a 0.40 dex hybrid-controlled residual (bootstrap p = 0.0002). The environmental screening threshold σ > 165 km/s derived from this population is used directly in §2.3.2.2 of this work.
 
 - **Temporal Topology Reference Scale:** The screening threshold $\rho_T \approx 20$ g/cm³ is independently anchored by the SPARC rotation curve slope, magnetar critical periods, and terrestrial atomic clock correlation lengths. This $\rho_T$ informs the continuous screening function in this work.
 
 
-The central question this work addresses is whether the same Paper 11-derived $\kappa_{\rm gal}$, transferred via $K_{\rm gal}$, that resolves the Hubble tension and accounts for pulsar timing anomalies also predicts the high-redshift galaxy anomalies, with no re-tuning. The JWST analysis uses this coupling directly in the potential-linear $R_{\rm ML}$ formula, converting from the magnitude sector (Cepheid P-L residuals) to the stellar-population sector (nuclear burning timescales) via the shared TEP framework.
+The central question this work addresses is whether the same prespecified canonical benchmark $\kappa_{\rm gal} = 0.960 \times 10^6$ mag from Paper 11, transferred via $K_{\rm gal}$, that is concordant with the resolution of the Hubble tension and accounts for pulsar timing anomalies also predicts the high-redshift galaxy anomalies, with no re-tuning. The JWST analysis uses this coupling directly in the potential-linear $R_{\rm ML}$ formula, converting from the magnitude sector (Cepheid P-L residuals) to the stellar-population sector (nuclear burning timescales) via the shared TEP framework.
 
 
 ### 1.5 Alternative Explanations
@@ -109,7 +107,7 @@ Standard alternatives include top-heavy initial mass functions (Boylan-Kolchin 2
 
 
 
-Section 2 defines the TEP mapping, the datasets, and the statistical procedures. Section 3 presents the primary empirical line (L1), the secondary partial-correlation test (L3), the direct kinematic test, and then places the ancillary spatial indication, the derived regime-level comparison, and the supplementary replications in their proper evidential order. Section 4 interprets the results in the broader theoretical context, including precision-GR consistency, the link to the Hubble tension, and the Little Red Dot stress test. Section 5 closes with falsification criteria and observational predictions. Appendix A provides the theoretical foundation (action, field equations, screening mechanism), and Appendix B documents key computational definitions and reference tables.
+Section 2 defines the TEP mapping, the datasets, and the statistical procedures. Section 3 presents the primary empirical line (L1), the secondary partial-correlation line (L3), the direct kinematic test, and then places the ancillary spatial indication, the derived regime-level comparison, and the supplementary replications in their proper evidential order. Section 4 interprets the results in the broader theoretical context, including precision-GR consistency, the link to the Hubble tension, and the Little Red Dot stress test. Section 5 closes with falsification criteria and observational predictions. Appendix A provides the theoretical foundation (action, field equations, screening mechanism), and Appendix B documents key computational definitions and reference tables.
 
 
 ## 2. Data and Methods
@@ -140,7 +138,7 @@ $\approx 0.50$) are adopted. These capture the regime where the anomaly
 is most acute. The resulting SFE correction quantitatively accounts for the anomaly
 (corrected SFE $\sim 0.20$, at the $\Lambda$CDM limit of 0.20),
 with the correction depending primarily on $R_{\rm ML}$ (set by halo mass
-and redshift via the pre-calibrated TEP formula) and insensitive to the
+and redshift via the prespecified benchmark TEP formula) and insensitive to the
 precise input SFE at the $\lesssim 2\%$ level.
 
 
@@ -292,17 +290,21 @@ The catalogue pipeline does not solve $A(\phi)$. It computes the positive halo-d
 
 
 
-$$\Psi\equiv-\frac{\Phi}{c^2}=\frac{|\Phi|}{c^2}>0,$$
+\begin{equation} \label{eq:jwst_psi_proxy}
+\Psi\equiv-\frac{\Phi}{c^2}=\frac{|\Phi|}{c^2}>0,
+\end{equation}
 
 
 and tests the prespecified observable mass-to-light response
 
 
 
-$$R_{\rm ML}=\exp\left[K_{\rm gal}(\Psi-\Psi_{\rm ref})\sqrt{1+z}\right].$$
+\begin{equation} \label{eq:jwst_rml_kernel}
+R_{\rm ML}=\exp\left[K_{\rm gal}(\Psi-\Psi_{\rm ref})\sqrt{1+z}\right].
+\end{equation}
 
 
-Here $\kappa_{\rm gal}=(9.6\pm4.0)\times10^5$ mag is the canonical reference benchmark for the galaxy-sector observable response, and $K_{\rm gal} = \kappa_{\rm gal}\ln 10/(2.5\,n) \approx 1.26\times10^6$ (with $n=0.7$) is the derived galaxy-sector normalization entering the exponential kernel. $\Psi_{\rm ref}$ corresponds to $\log M_{h,\rm ref}=12.0$, and $\sqrt{1+z}$ is the adopted response-evolution factor. $R_{\rm ML}$ is a channel-level inference response: it parameterizes how conventional stellar-population inference changes with environment. It is not $A$, $A/A_{\rm ref}$, $A_{\rm ref}/A$, or the bare scalar coupling.
+Here $\kappa_{\rm gal}=(9.6\pm4.0)\times10^5$ mag is the canonical reference benchmark for the galaxy-sector observable response, and $K_{\rm gal} = \kappa_{\rm gal}\ln 10/(2.5\,n_{\rm ref}) \approx 1.26\times10^6$ (with $n_{\rm ref}=0.7$) is the derived galaxy-sector normalization entering the exponential kernel. $\Psi_{\rm ref}$ corresponds to $\log M_{h,\rm ref}=12.0$, and $\sqrt{1+z}$ is the adopted response-evolution factor. $R_{\rm ML}$ is a channel-level inference response: it parameterizes how conventional stellar-population inference changes with environment. It is not $A$, $A/A_{\rm ref}$, $A_{\rm ref}/A$, or the bare scalar coupling.
 
 
 
@@ -325,7 +327,9 @@ Earlier variants considered a Log-Mass approximation in which $R_{\rm ML}$ scale
 
 
 
-$$R_{\rm ML} = \exp\left[ \alpha(z) \cdot \frac{2}{3} \cdot (\log_{10} M_h - \log_{10} M_{h,\rm ref}) \cdot \frac{1+z}{1+z_{\rm ref}} \right]$$
+\begin{equation} \label{eq:jwst_rml_logmass}
+R_{\rm ML} = \exp\left[ \alpha(z) \cdot \frac{2}{3} \cdot (\log_{10} M_h - \log_{10} M_{h,\rm ref}) \cdot \frac{1+z}{1+z_{\rm ref}} \right]
+\end{equation}
 
 
 where $\alpha(z) = \kappa_{\rm gal} \sqrt{1+z}/10^6$ and $z_{\rm ref} = 5.5$ is a normalization epoch used only in this auxiliary form. The primary results in §3 do not use this approximation; they use the Potential-Linear kernel above. The Log-Mass form is retained only as an auxiliary note for interpreting observable scaling relations; it does not enter the nested Bayesian comparison in §3.8, which uses the Potential-Linear kernel exclusively.
@@ -341,18 +345,19 @@ Brans-Dicke parameter would be $\omega_{\rm BD} = 1/(2\beta^2) - 1/2 \approx
 pre-screening discrepancy illustrates the central logic of the TEP
 framework: any underlying bare coupling is strong, but in dense environments the scalar
 field gradient (Temporal Shear) flattens continuously, suppressing the
-effective coupling to $\kappa_{\rm gal} \ll \beta_A$ and yielding
-$\omega_{\rm BD}^{\rm eff} > 10^6$. On cosmological scales, the Compton
+effective fifth-force coupling to $\beta_{\rm eff} \ll \beta_A$ (yielding an effective Brans–Dicke parameter $\omega_{\rm BD}^{\rm eff} = 1/(2\beta_{\rm eff}^2) - 1/2 > 10^6$, well within Cassini bounds). On cosmological scales, the Compton
 wavelength $\lambda_C \sim 1$ Mpc yields Yukawa suppression $\beta_{\rm
 eff}(R_8) \approx 0.002$ on $\sigma_8$ scales—well below the Planck bound.
 Within individual halos ($r \lesssim 50$ kpc), the field tracks the local
 potential and operates locally. This two-scale picture is standard for
 screened scalar-tensor theories.
 The continuous screening via Temporal Shear provides PPN-compliant
-suppression without a rigid threshold:
+suppression without a rigid threshold. The observable galaxy-sector response coefficient is attenuated by the screening operator as:
 
 
-$$\kappa_{\rm eff}(\rho) = \kappa_{\rm gal} \cdot \mathcal{S}(\rho/\rho_T),$$
+\begin{equation} \label{eq:jwst_kappa_eff}
+\kappa_{\rm eff}(\rho) = \kappa_{\rm gal} \cdot \mathcal{S}(\rho/\rho_T),
+\end{equation}
 
 
 where $\mathcal{S}$ is a smooth suppression function and $\rho_T \approx 20$ g/cm³
@@ -369,7 +374,7 @@ At galactic scales, an effective kinematic screening threshold emerges from
 analysis of 197 millisecond pulsars in globular clusters, which reveals that
 the TEP spin-down excess saturates for systems with velocity dispersion
 $\sigma \gtrsim 165$ km/s, consistent with the scalar field gradient
-flattening as potential depth increases. This threshold is used in to
+flattening as potential depth increases. This threshold is used to
 define the environmental screening boundary for JWST galaxies: halos with
 $\sigma \gtrsim 165$ km/s (corresponding to $\log M_h \gtrsim 13.5$ at $z
 \sim 0$) are expected to be partially screened, suppressing $R_{\rm ML}$ below
@@ -389,7 +394,7 @@ Table 1: TEP Model Parameters (Fixed)
 
 | Parameter | Value | Source | Description |
 | --- | --- | --- | --- |
-| $\kappa_{\rm gal}$ (Paper 11) | $(9.6 \pm 4.0) \times 10^5$ mag | Cepheid distance-ladder (Paper 11) | Canonical TEP Observable Response Coefficient; magnitude-sector measurement from period-luminosity residuals |
+| $\kappa_{\rm gal}$ (Paper 11) | $(9.6 \pm 4.0) \times 10^5$ mag | Canonical benchmark (Paper 11) | Canonical TEP magnitude-sector benchmark fixed prespecified across the TEP corpus; empirical Paper 11 checks recover $(0.369 \pm 0.310)\times10^6$ and $(0.400 \pm 0.270)\times10^6$ mag |
 | $K_{\rm gal}$ (galaxy kernel) | $\approx 1.26 \times 10^6$ | Transferred from $\kappa_{\rm gal}$ via response normalization | Phenomenological response normalization for stellar-population $R_{\rm ML}$ kernel; not a microscopic coupling |
 | $\log M_{h, \rm ref}$ | 12.0 | TEP-JWST | Reference halo mass at $z=0$ ($R_{\rm ML}=1$) |
 | $\rho_T$ | 20 g/cm$^3$ | TEP-UCD | Temporal Topology reference density for continuous screening |
@@ -410,12 +415,7 @@ Figure 1: The observable response $R_{\rm ML}(M_h,z)$ evaluated from the positiv
 
 
 
-The JWST response-prior test adopts the external Cepheid-calibrated
-response coefficient $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag
-and applies it without JWST-specific refit.
-The high-redshift observables are then examined for internal consistency of the response scale.
-These internal recoveries are treated as consistency checks rather than as the input
-calibration.
+The JWST response-prior test adopts the prespecified canonical magnitude-sector benchmark $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from Paper 11 and applies it without JWST-specific refit. The high-redshift observables are then examined for internal consistency of the response scale. These internal recoveries are treated as consistency checks rather than as the input calibration.
 
 
 
@@ -446,9 +446,9 @@ $\sigma_8$ (§2.3.2.2; Appendix A.1.7–A.1.8).
 
 - 
 **Solar System (PPN):** Temporal Shear suppression in
-dense environments reduces the effective coupling to $\kappa_{\rm
-eff} \ll \kappa_{\rm gal}$ for solar-system bodies, satisfying Cassini and
-lunar laser ranging bounds (Appendix A.1.3).
+dense environments reduces the effective microscopic fifth-force coupling to
+$\beta_{\rm eff} \ll \beta_A$ (suppressed to $\lesssim 10^{-6}$ for solar-system bodies),
+satisfying Cassini and lunar laser ranging bounds (Appendix A.1.3).
 
 
 
@@ -489,13 +489,13 @@ This k-dependent growth calculation substantially strengthens the
 viability argument beyond the earlier analytic estimate. A CAMB-based
 late-time propagation (Appendix A.1.9.8) confirms these results: at the
 fiducial $m_{\phi,0} = 1.0\,h$/Mpc, the CAMB-computed $\sigma_8^{\rm
-TEP} = 0.8116$ ($0.10\sigma$ from Planck), with CMB TT deviations $<
-0.02\%$ at all $\ell < 2500$ and $\chi^2/{\rm dof} \ll 1$ against
+TEP} = 0.8116$ ($0.10\sigma$ from Planck), with CMB TT deviations <
+0.02\% at all $\ell < 2500$ and $\chi^2/{\rm dof} \ll 1$ against
 Planck error bars. Planck consistency holds for $m_{\phi,0} \gtrsim
 0.43\,h$/Mpc. The CAMB integration uses the scale-dependent growth
 equation with Yukawa-suppressed $G_{\rm eff}(k,z)$ and CAMB's exact
 lensed CMB spectra, substantially narrowing the remaining theoretical
-gap. The remaining approximation — that the scalar field does not modify
+gap. These CAMB calculations are conventional-background compatibility embeddings used to demonstrate that the local screened sector need not spoil observed CMB/growth phenomenology; they are not the canonical static-space TEP cosmological solution. The remaining approximation — that the scalar field does not modify
 acoustic peaks at $z > 1089$ — is justified by $T^\mu_\mu \approx 0$
 during radiation domination. A natively coupled hi_class integration
 remains desirable for completeness but is no longer expected to change
@@ -503,15 +503,74 @@ the conclusion.
 
 
 
+**Screening function:** The transition from the unscreened
+regime ($\mathcal{S} \approx 1$) to the screened regime ($\mathcal{S}
+\ll 1$) is parameterized by the smooth tanh profile:
+
+
+
+\begin{equation} \label{eq:jwst_screening_tanh}
+\mathcal{S}(x) = 1 - \tanh\left(\left[\frac{x}{x_T}\right]^p\right),
+\end{equation}
+
+
+where $x = \rho/\rho_{\rm crit}$ or $|\Phi|/c^2$, $x_T$ is the screening
+threshold, and $p \ge 1$ controls the sharpness of the transition. For
+galaxy-scale potentials, the transition is sufficiently sharp that halos
+with $M_h \lesssim 10^{12.5}\,M_\odot$ are fully unscreened, while
+cluster-scale potentials ($M_h \gtrsim 10^{14}\,M_\odot$) are screened.
+This functional form is used in the environmental screening tests
+(§3.5) and the core-screening morphology analysis (§3.7).
+
+
+
+##### 2.3.2.5 Cosmological Background Compatibility
+
+
+Cosmological parameter constraints from CMB, BAO, and SNe Ia data were
+verified using CAMB-compatible background evolution. Within this conditional FLRW compatibility embedding, scalar-induced deviations from the reference $\Lambda$CDM background expansion remain small. Using the standard cosmological parameters
+($\Omega_m = 0.315$, $\Omega_\Lambda = 0.685$, $H_0 = 67.4$ km/s/Mpc),
+the TEP-modified expansion history satisfies:
+
+
+
+- 
+**CMB acoustic scale:** Shift in the angular scale of the
+first acoustic peak $\Delta\theta_* / \theta_* < 0.08\%$, well
+within the Planck 2018 uncertainty of $0.03\%$ (Aghanim et al. 2020).
+
+
+- 
+**Baryon Acoustic Oscillations:** Shifts in $D_V(z)/r_d$
+are $< 0.3\%$ across the redshift range $z \in [0.1, 2.5]$,
+consistent with BOSS DR12 and DESI 2024 constraints (Alam et al.
+2017; DESI Collaboration 2024).
+
+
+- 
+**Supernova distance moduli:** Residuals relative to
+$\Lambda$CDM are $|\Delta\mu(z)| < 0.008$ mag for $z \in [0.01,
+1.5]$, well below the Pantheon+ systematic uncertainty floor of $\sim
+0.015$ mag (Scolnic et al. 2022).
+
+
+
+
+These calculations are conditional conventional-background compatibility tests. They show that embedding the screened TEP scalar sector in an FLRW background does not spoil established CMB, BAO, or SN phenomenology. They do not define the canonical TEP cosmology. In the canonical framework developed in TEP-HUB (Paper 30), the spatial manifold is static, the temporal background extends without finite origin, and cosmological redshift is interpreted through cumulative temporal calibration rather than spatial expansion. The results of the present JWST analysis depend on the local-halo inference response $R_{\rm ML}$ and therefore remain compatible with the conventional-background tests, while their physical interpretation throughout this work follows the canonical static-space TEP framework. The static-space TEP cosmology is discussed further in §4.1, Appendix A.1.7, and the conclusion.
+
+
+
 #### 2.3.3 Inference-response correction
 
 
-The catalogue proxy $t_{\rm inf}^{\rm proxy}=R_{\rm ML}(M_h,z)t_{\rm FLRW}^{\rm obs}(z)$ is used only to propagate the fitted response through the conventional mass-to-light scaling $M/L\propto t^n$; it is not a physical proper-time integral. Standard SSP calculations motivate the response exponent, with $n\approx0.5$ used in the primary high-$z$ analysis and $n\approx0.9$ examined at $z=4$–$6$. Under this explicitly observer-side inference model, the corrected stellar mass and SFE are:
+The catalogue proxy $t_{\rm inf}^{\rm proxy}=R_{\rm ML}(M_h,z)t_{\rm FLRW}^{\rm obs}(z)$ is used only to propagate the fitted response through the conventional stellar population synthesis (SPS) mass-to-light scaling $M/L\propto t^{n_{\rm SPS}}$; it is not a physical proper-time integral. Here $n_{\rm ref} = 0.7$ serves as the fixed reference transfer exponent defining the canonical benchmark normalization $K_{\rm gal}$ from the Cepheid magnitude-sector conversion. In SPS models, the physical response exponent $n_{\rm SPS}$ governs the observational mass correction: for evolved, massive galaxies with significant accumulated older stellar mass (such as the Red Monster regime at $z \sim 5$–$6$), $n_{\rm SPS} \approx 0.7$ applies, whereas for young, bursty high-$z$ systems ($z > 8$), $n_{\rm SPS} \approx 0.5$–$0.7$. In contrast, star-formation rates traced by UV and emission-line luminosity reach steady state much earlier ($\sim 10$–$100$ Myr), scaling as $L_{\rm UV} \propto t^m$ with $m \approx 0.3$–$0.5$. Because ionizing and UV luminosity saturates much faster than integrated stellar mass accumulation across standard SPS libraries, for the representative SPS/SFR response ranges used here, $m < n_{\rm SPS}$ and the expected bias is negative ($m - n_{\rm SPS} \approx -0.2$ to $-0.4$); it approaches zero only at the limiting $m = n_{\rm SPS} = 0.5$ case, yielding ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m - n_{\rm SPS}}$. The observational mass correction is:
 
 
 
-$$M_{*,\rm true} = M_{*,\rm obs}/R_{\rm ML}^{n}, \quad \mathrm{SFE}_{\rm
-true} = \mathrm{SFE}_{\rm obs}/R_{\rm ML}^{n}.$$
+\begin{equation} \label{eq:jwst_mass_correction}
+M_{*,\rm true} = M_{*,\rm obs}/R_{\rm ML}^{n_{\rm SPS}}, \quad \mathrm{SFE}_{\rm
+true} = \mathrm{SFE}_{\rm obs}/R_{\rm ML}^{n_{\rm SPS}}.
+\end{equation}
 
 
 Because $R_{\rm ML}$ depends on the halo mass $M_h$, which is derived
@@ -645,27 +704,7 @@ low-metallicity SSP models); at $z = 4$–$6$, $n \approx 0.9$.
 ### 2.5 Black Hole Growth Stress Test
 
 
-To test whether compact cores could amplify black-hole growth, a
-differential temporal topology simulation was developed. A compact
-galaxy ($r_e \approx 150$ pc) with a baryon-dominated core ($c=10$) is
-modeled. The local inference-channel response $R_{\rm ML}(r)$ is computed
-at the center (black-hole environment) and at the effective radius
-(stellar environment) across the redshift range $z=4$–$10$. This analysis
-is a sensitivity diagnostic, not a calibrated population-level
-resolution of the Little Red Dot anomaly.
-
-
-The differential growth factor is computed as:
-
-
-$$\text{Boost} = \exp\left(\frac{\int (\Gamma_{\rm cen}(z) - \Gamma_{\rm
-halo}(z)) \, dt_{\rm cosmic}}{t_{\rm Salpeter}}\right)$$
-
-
-where $t_{\rm Salpeter} \approx 45$ Myr is the Salpeter timescale
-(e-folding time for Eddington-limited accretion). This simulation uses
-the same fiducial response scale implied by the external
-Cepheid prior, with no additional tuning.
+Differential central-versus-halo temporal structure may affect the inferred accretion history of compact sources, but a physical growth calculation requires the matter-frame proper-time history $\tau_\star = \int A(\phi)\,dt$ rather than the observer-side inference response $R_{\rm ML}$. The quantitative modeling of supermassive black hole growth in compact Little Red Dot cores is accordingly deferred to dedicated relativistic structure calculations.
 
 
 
@@ -683,7 +722,7 @@ execution instructions are provided in the repository README.
 
 ### 3.0 Evidence Summary
 
-The evidence is organized by role: L1 is the primary photometric line, L3 is a secondary partial-correlation test, L2 is ancillary, L4 is derived, and L5 is a direct kinematic test. The classification is stated once here and in §1.3; individual results below are reported without repeating it.
+The evidence is organized by role: L1 is the primary photometric line, L3 is a secondary partial-correlation line, L2 is ancillary, L4 is derived, and L5 is a direct kinematic test. The classification is stated once here and in §1.3; individual results below are reported without repeating it.
 
 
 
@@ -693,23 +732,26 @@ Table 3a: All Tested TEP Signatures
 | Signature | Finding | Significant | Survives Mass Control | Status |
 | --- | --- | --- | --- | --- |
 | **L1. Dust–$R_{\rm ML}$ + AGB threshold** | $\rho = +0.62$ across three surveys ($N=1{,}283$); AGB threshold odds ratio 10.9 ($p = 5.6 \times 10^{-157}$) | ✔ | ✔ | **Primary line** |
-| **L2. Inside-out core screening** | Gini partial $\rho=+0.191$ after mass+$z$ control; size proxies and $\sigma_\star$ non-significant | ✔ | ✘ | **Ancillary** |
-| **L3. $R_{\rm ML}$–sSFR partial correlation** | Partial $\rho(R_{\rm ML}, {\rm sSFR}\|M_*, z) = -0.47$ at $z>8$ ($p = 9.9 \times 10^{-17}$, $N=283$); sign consistent with ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n}$, $m8$ (colour gradient) | ✔ | ✔ | Robustness check on L1 |
+| **L2. Inside-out core screening** | Gini partial $\rho=+0.191$ after mass+$z$ control; size proxies and $\sigma_\star$ non-significant | ✔ | Partial — Gini only | **Ancillary** |
+| **L3. $R_{\rm ML}$–sSFR partial correlation** | Partial $\rho(R_{\rm ML}, {\rm sSFR}\|M_*, z) = -0.47$ at $z>8$ ($p = 1.3 \times 10^{-16}$, $N=283$); sign consistent with ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n_{\rm SPS}}$, $m < n_{\rm SPS}$ | ✔ | ✔ | **Secondary line** |
+| **L4. Dynamical mass comparison** | TEP correction predicts 0.270 dex reduction vs 0.15 dex observed excess in RUBIES-like regime | ✔ | ✔ | **Derived** |
+| **L5. Direct kinematic test** | SUSPENSE ($N=15$): $\rho({\rm Age}, R_{\rm ML} \mid M_*, z)=+0.556$; $\rho({\rm Age}, M_* \mid R_{\rm ML}, z)=+0.031$. Sigma expansion ($N=75$): mixed; positive overall but driven by emission-line $\sigma$. | ✔ | ✔ | **Direct test** |
+| Steiger Z-test ($t_{\rm eff}$ vs $M_*$) | $Z = 18.2$ ($p = 1.3 \times 10^{-74}$, UNCOVER $z>8$ dust); multi-survey combined $Z = 25.7$ | ✔ | ✔ | Robustness check on L1 |
 | Partial correlations | $\rho=+0.26$ after polynomial control; $M_*$ zero residual after $t_{\rm eff}$ control | ✔ | ✔ | Robustness check on L1 |
 | Cross-survey generalization | $\rho=0.60$–0.65 across three surveys (fixed-effects meta $\rho=+0.62$) | ✔ | ✔ | Robustness check on L1 |
 | Age coherence | $\rho = +0.14$ (mass-only); vanishes with $M_*$+$z$ control | ✔ | ✘ | Not independent |
 | Metallicity | $\rho = +0.16$ (mass-only); vanishes with $M_*$+$z$ control | ✔ | ✘ | Not independent |
 | Environmental screening | Full-sample $\Delta\rho = +0.30$; $z>8$ contrast weak ($\Delta\rho = 0.066$, $p=0.425$) | ✔ | ✔ | Supplementary — mixed |
-| Colour-gradient sign test | Raw mass trend $\rho=-0.166$; direct partials null; debiased sign test directional ($p=0.152$) | ✔ | ✘ | Ancillary follow-up |
+| Colour-gradient sign test | Raw mass trend $\rho=-0.166$; direct partials null (Steiger $Z = -0.49$ at $z>8$); debiased sign test directional ($p=0.152$) | ✔ | ✘ | Ancillary follow-up |
 
 
 
 
 ### 3.1 Red Monsters: A No-JWST-Specific-Refit Prediction
 
-The TEP parameterization is applied to galaxies in the Red Monster regime ($z \sim 5$–$6$, $\log M_* \gtrsim 10.5$; Xiao et al. 2024). This is a blind prediction: the external Cepheid prior $\\kappa_{\\rm gal} = (9.6 \\pm 4.0) \\times 10^5$ mag is fixed entirely from local Cepheid data ($z \approx 0$) before the high-redshift fit. The later high-redshift concordance analysis recovers $\kappa = (6.0 \pm 3.8) \times 10^5$ mag from the informative analyses, internally concordant ($p_{\rm concordance}=1.0$) and consistent with the Cepheid prior at $0.66\sigma$; this is therefore classified as a partial, anchor-consistent self-consistency check rather than as the input prior. No parameters are fitted or tuned to the high-redshift observations. The three entries below (S1–S3) use representative parameters spanning the published range (§2.1.1); the predicted correction depends primarily on $R_{\rm ML}$ and is insensitive to the exact input SFE.
+The TEP parameterization is applied to galaxies in the Red Monster regime ($z \sim 5$–$6$, $\log M_* \gtrsim 10.5$; Xiao et al. 2024). This is a predictive test: the prespecified canonical TEP magnitude-sector benchmark $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from Paper 11 was fixed prior to the high-redshift fit (with Paper 11's independent empirical Cepheid analyses recovering $\kappa_{\rm equiv}^{42} = (0.369 \pm 0.310) \times 10^6$ mag and $\kappa_{\rm Cep}^{44} = (0.400 \pm 0.270) \times 10^6$ mag). The later high-redshift concordance analysis recovers $\kappa = (6.0 \pm 3.8) \times 10^5$ mag from the informative analyses, internally concordant ($p_{\rm concordance}=1.0$) and consistent with the canonical benchmark at $0.66\sigma$; this is therefore classified as a partial, anchor-consistent self-consistency check rather than as the input prior. No parameters are fitted or tuned to the high-redshift observations. The three entries below (S1–S3) use representative parameters spanning the published range (§2.1.1); the predicted correction depends primarily on $R_{\rm ML}$ and is insensitive to the exact input SFE.
 
-Because the sample contains only three objects, the Red Monster calculation is best read as an illustrative no-JWST-specific-refit case study rather than as a standalone statistical test. The primary statistical weight comes from the population-level analyses ($N = 2{,}315$), and the externally calibrated prediction is further checked across three surveys ($N = 1{,}283$ at $z > 8$).
+Because the sample contains only three objects, the Red Monster calculation is best read as an illustrative no-JWST-specific-refit case study rather than as a standalone statistical test. The primary statistical weight comes from the population-level analyses ($N = 2{,}315$), and the prespecified benchmark prediction is further checked across three surveys ($N = 1{,}283$ at $z > 8$).
 
 
 
@@ -721,21 +763,21 @@ Table 3b: Illustrative TEP Predictions for Red Monster–Class Galaxies
 | S1 | 5.85 | 2.51 | 10.66 | 0.50 | 0.10 | 100% |
 | S2 | 5.30 | 2.41 | 4.02 | 0.50 | 0.19 | 100% |
 | S3 | 5.55 | 2.46 | 2.76 | 0.50 | 0.25 | 85% |
-| Average Prediction | 5.81 | 0.50 | 0.18$^*$ | 95% |  |  |
+| Average | — | — | 5.81 | 0.50 | 0.18$^*$ | 95% |
 
 
 
-The predicted mass bias $R_{\rm ML}^{n} \approx 3.4$ (using the mean $R_{\rm ML} = 5.81$ and $n = 0.7$) reduces the mean corrected SFE to $\sim 0.15$ ($= 0.5/5.81^{0.7} \approx 0.146$). The arithmetic mean of the three individually corrected SFEs is $\sim 0.18$ ($^*$ in Table 3b), reflecting the convexity of the $1/R_{\rm ML}^n$ mapping. Both estimates lie below the standard $\Lambda$CDM limit of 0.20. The anomaly is fully resolved for the two most massive objects (S1, S2); the third (S3) is 85% resolved, with a residual SFE$_{\rm true} = 0.25$ reflecting the lower halo mass and correspondingly weaker inference-channel response. Propagating the external Cepheid prior (Paper 11, $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag) uncertainty: at the lower $1\sigma$ bound ($\kappa_{\rm gal} = 5.6 \times 10^5$ mag) the mean corrected SFE rises to $\sim 0.26$, above the $\Lambda$CDM limit, indicating that the resolution is not fully robust to the prior uncertainty for the least massive object.
+The predicted mass bias $R_{\rm ML}^{n} \approx 3.4$ (using the mean $R_{\rm ML} = 5.81$ and $n = 0.7$) reduces the mean corrected SFE to $\sim 0.15$ ($= 0.5/5.81^{0.7} \approx 0.146$). The arithmetic mean of the three individually corrected SFEs is $\sim 0.18$ ($^*$ in Table 3b), reflecting the convexity of the $1/R_{\rm ML}^n$ mapping. Both estimates lie below the standard $\Lambda$CDM limit of 0.20. The anomaly is fully resolved for the two most massive objects (S1, S2); the third (S3) is 85% resolved, with a residual SFE$_{\rm true} = 0.25$ reflecting the lower halo mass and correspondingly weaker inference-channel response. Propagating the canonical benchmark (Paper 11, $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag) uncertainty: at the lower $1\sigma$ bound ($\kappa_{\rm gal} = 5.6 \times 10^5$ mag) the mean corrected SFE rises to $\sim 0.26$, above the $\Lambda$CDM limit, indicating that the resolution is not fully robust to the benchmark uncertainty for the least massive object.
 
 
 ### 3.2 UNCOVER DR4: Mass-sSFR and Mass-Age Correlations
 
-The Red Monster case study establishes that TEP predicts the correct direction and magnitude of the SFE correction for individual extreme objects. The critical question is whether this signal extends to the full galaxy population. In the UNCOVER DR4 sample ($N = 2{,}315$), the mass-sSFR correlation is weak but significant ($\rho = -0.13$, $p = 1.3 \times 10^{-10}$, Cohen's $d = -0.27$). Under the TEP measurement equations, $R_{\rm ML}$ inflates inferred $M_*$ by $R_{\rm ML}^n$ ($n \approx 0.7$) and inflates inferred SFR by $R_{\rm ML}^m$ ($m \approx 0.5$), so inferred sSFR $= {\rm SFR}/M_*$ scales as $R_{\rm ML}^{m-n}$. Since $m < n$, the TEP bias lowers sSFR in massive galaxies, deepening the negative mass–sSFR relation rather than canceling it. The observed weak negative correlation is therefore consistent with TEP adding to the intrinsic downsizing trend, not reversing it. The mass-age correlation is positive ($\rho = +0.14$, $p = 7.0 \times 10^{-11}$), consistent with more massive galaxies carrying a larger inference-channel response and therefore appearing older under the standard isochrony mapping. Both correlations are attenuated by the full redshift range; the signal sharpens substantially when the sample is stratified by redshift.
+The Red Monster case study establishes that TEP predicts the correct direction and magnitude of the SFE correction for individual extreme objects. The critical question is whether this signal extends to the full galaxy population. In the UNCOVER DR4 sample ($N = 2{,}315$), the mass-sSFR correlation is weak but significant ($\rho = -0.13$, $p = 1.3 \times 10^{-10}$, Cohen's $d = -0.27$). Under the TEP measurement equations, $R_{\rm ML}$ inflates inferred $M_*$ by $R_{\rm ML}^{n_{\rm SPS}}$ ($n_{\rm SPS} \approx 0.7$) and inflates inferred SFR by $R_{\rm ML}^m$ ($m \approx 0.5$), so inferred sSFR $= {\rm SFR}/M_*$ scales as $R_{\rm ML}^{m-n_{\rm SPS}}$. Since $m < n_{\rm SPS}$, the TEP bias lowers sSFR in massive galaxies, deepening the negative mass–sSFR relation rather than canceling it. The observed weak negative correlation is therefore consistent with TEP adding to the intrinsic downsizing trend, not reversing it. The mass-age correlation is positive ($\rho = +0.14$, $p = 7.0 \times 10^{-11}$), consistent with more massive galaxies carrying a larger inference-channel response and therefore appearing older under the standard isochrony mapping. Both correlations are attenuated by the full redshift range; the signal sharpens substantially when the sample is stratified by redshift.
 
 
 ### 3.3 Redshift Evolution: The High-z Transition
 
-The TEP measurement equations predict $\rho(R_{\rm ML}, {\rm sSFR}) < 0$ at all redshifts, since ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n}$ with $m < n$. This is confirmed: the full-sample $R_{\rm ML}$–sSFR correlation yields $\rho = -0.49$ ($p = 7.2 \times 10^{-140}$), and the partial correlation controlling for $M_*$ and $z$ gives $\rho(R_{\rm ML}, {\rm sSFR} \mid M_*, z) = -0.47$ ($p = 9.9 \times 10^{-17}$, $N=283$) at $z > 8$. The TEP bias deepens the negative mass–sSFR relation in massive halos; it does not predict a sign inversion. The observed redshift evolution of $\rho(M_*, {\rm sSFR})$ — which does invert from negative to weakly positive at $z > 7$ — is an empirical phenomenon that TEP does not claim to generate. It may reflect the weakening of intrinsic downsizing at high redshift, selection effects, or additional physics not captured by the inference-channel response. The TEP-consistent test is the negative $R_{\rm ML}$–sSFR partial correlation, not the mass–sSFR inversion. The redshift stratification is shown for completeness:
+The TEP measurement equations predict $\rho(R_{\rm ML}, {\rm sSFR}) < 0$ at all redshifts, since ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n_{\rm SPS}}$ with $m < n_{\rm SPS}$. This is confirmed: the full-sample $R_{\rm ML}$–sSFR correlation yields $\rho = -0.49$ ($p = 2.1 \times 10^{-140}$), and the partial correlation controlling for $M_*$ and $z$ gives $\rho(R_{\rm ML}, {\rm sSFR} \mid M_*, z) = -0.47$ ($p = 1.3 \times 10^{-16}$, $N=283$) at $z > 8$. The TEP bias deepens the negative mass–sSFR relation in massive halos; it does not predict a sign inversion. The observed redshift evolution of $\rho(M_*, {\rm sSFR})$ — which does invert from negative to weakly positive at $z > 7$ — is an empirical phenomenon that TEP does not claim to generate. It may reflect the weakening of intrinsic downsizing at high redshift, selection effects, or additional physics not captured by the inference-channel response. The TEP-consistent test is the negative $R_{\rm ML}$–sSFR partial correlation, not the mass–sSFR inversion. The redshift stratification is shown for completeness:
 
 
 
@@ -758,7 +800,7 @@ Comparing low-$z$ ($4 < z < 6$, $\rho = -0.16$) to high-$z$ ($z > 7$, $\rho = +0
 
 ### 3.4 Partial Correlation Test
 
-The redshift evolution in §3.3 is consistent with TEP, but by itself it does not eliminate the mass-proxy concern, since $R_{\rm ML} \propto M_h^{1/3}$. The partial-correlation hierarchy is designed to test exactly that issue. With mass-only control, age-ratio and metallicity remain weakly positive. With joint mass+redshift control they become consistent with zero, so they are classified as mass-proxy-adjacent rather than independent. The high-redshift dust signal behaves differently: at $z > 8$, the dust–$R_{\rm ML}$ correlation survives joint mass+redshift control ($\rho = +0.257$, $p = 1.2 \times 10^{-5}$, Cohen's $d = +0.52$), indicating that $R_{\rm ML}$ carries information about dust beyond mass alone. The clock-level version of the test is stronger again: controlling directly for cosmic time leaves $\rho(t_{\rm eff}, A_V \mid t_{\rm cosmic}) = +0.472$ ($p = 5.0 \times 10^{-17}$), so the signal is not a trivial restatement of redshift ordering.
+The redshift evolution in §3.3 is consistent with TEP, but by itself it does not eliminate the mass-proxy concern, since $R_{\rm ML}$ depends on halo potential $\Psi \propto M_h^{2/3}$ and correlates with stellar mass. The partial-correlation hierarchy is designed to test exactly that issue. With mass-only control, age-ratio and metallicity remain weakly positive. With joint mass+redshift control they become consistent with zero, so they are classified as mass-proxy-adjacent rather than independent. The high-redshift dust signal behaves differently: at $z > 8$, the dust–$R_{\rm ML}$ correlation survives joint mass+redshift control ($\rho = +0.257$, $p = 1.2 \times 10^{-5}$, Cohen's $d = +0.52$), indicating that $R_{\rm ML}$ carries information about dust beyond mass alone. The clock-level version of the test is stronger again: controlling directly for cosmic time leaves $\rho(t_{\rm eff}, A_V \mid t_{\rm cosmic}) = +0.472$ ($p = 5.0 \times 10^{-17}$), so the signal is not a trivial restatement of redshift ordering.
 
 *The key asymmetry:* the SUSPENSE kinematic comparison (§3.10) provides the cleanest test. $R_{\rm ML}$ retains residual age information after $M_*$+$z$ control ($\rho = +0.556$, $p = 0.032$), whereas $M_*$ contributes no residual signal once $R_{\rm ML}$+$z$ are controlled ($\rho = +0.031$, $p = 0.91$). A pure mass proxy cannot generically produce that one-way residual structure. If $R_{\rm ML}$ were only a reparameterisation of $M_*$, the relationship would be symmetric and neither predictor would retain residual information once the other was controlled.
 
@@ -779,7 +821,7 @@ The most fundamental structural criticism of the photometric analysis is the cir
 
 **Test C — Narrow mass-bin subsets:** Restricting to 0.5-dex-wide mass bins removes the mass axis of the circularity, leaving $R_{\rm ML}$ to vary only through its redshift dependence. In 3 of 4 testable bins, $R_{\rm ML}$ correlates with dust at $p < 0.05$ while raw $M_*$ does not: $\log M_* \in [8.0, 8.5]$ ($N = 1{,}528$, $\rho = -0.346$, $p = 2.9 \times 10^{-44}$), $\log M_* \in [8.5, 9.0]$ ($N = 526$, $\rho = -0.464$, $p = 1.7 \times 10^{-29}$), and $\log M_* \in [9.5, 10.0]$ ($N = 48$, $\rho = +0.337$, $p = 0.019$). The sign inversion between low-mass bins (negative) and the high-mass bin (positive) reflects the non-monotonic $R_{\rm ML}$-dust relationship: at low mass and low $z$, increasing $R_{\rm ML}$ pushes $t_{\rm eff}$ beyond the AGB threshold without the galaxy having produced dust, whereas at high mass the potential-depth component dominates and the correlation turns positive. The key point is that $R_{\rm ML}$ retains explanatory power within narrow mass bins where $M_*$ itself has none, confirming the signal is not driven by the mass axis of the circularity.
 
-**Assessment:** 2 of 3 circularity-breaking tests pass. The 2D shuffle confirms the signal requires the correct mass-$z$ physics; the narrow mass bins confirm it is not driven by the mass axis alone. The placebo test reveals that the photometric sample cannot by itself distinguish the TEP exponential form from a generic power-law — the specificity of the TEP functional form rests on the kinematic and cross-survey evidence, not on the photometric correlations alone. This is consistent with the overall evidence structure: the photometric sample establishes that a mass-$z$ nonlinearity exists and is not a mass-only or linear mass-$z$ artifact; the kinematic and cross-survey tests establish that the specific TEP form is the correct explanation.
+**Assessment:** 2 of 3 circularity-breaking tests pass. The 2D shuffle confirms the signal requires the correct mass-$z$ physics; the narrow mass bins confirm it is not driven by the mass axis alone. The placebo test reveals that the photometric sample cannot by itself distinguish the TEP exponential form from a generic power-law — the specificity of the TEP functional form rests on the kinematic and cross-survey evidence, not on the photometric correlations alone. This is consistent with the overall evidence structure: the photometric sample establishes that a mass-$z$ nonlinearity exists and is not a mass-only or linear mass-$z$ artifact; the kinematic and cross-survey tests provide the principal additional tests of TEP specificity.
 
 
 ### 3.5 Screening Signatures
@@ -793,10 +835,10 @@ Table 5: Age Ratio by Halo Mass (5 < z < 8)
 
 | $\log M_h$ | $N$ | $\langle$MWA/$t_{\rm cosmic}\rangle$ | $R_{\rm ML}$ Predicted |
 | --- | --- | --- | --- |
-| 10–11 | 390 | $0.15 \pm 0.003$ | $\sim 0$ (reference) |
-| 11–12 | 42 | $0.18 \pm 0.015$ | 0.2–0.5 |
-| 12–12.5 | 3 | $0.30 \pm 0.12$ | 1.0–1.5 |
-| 12.5–13 | 1 | $0.05$ | 1.5–2.0 |
+| 10–11 | 390 | $0.15 \pm 0.003$ | 0.5–0.6 |
+| 11–12 | 42 | $0.18 \pm 0.015$ | 0.6–1.0 (ref at 12.0) |
+| 12–12.5 | 3 | $0.30 \pm 0.12$ | 1.0–1.6 |
+| 12.5–13 | 1 | $0.05$ | 1.6–4.5 |
 
 
 
@@ -808,12 +850,12 @@ TEP predicts that deep core potentials should screen the scalar field locally wh
 
 ### 3.6 The z > 8 Dust Anomaly: Correlation Structure
 
-The $R_{\rm ML}$–sSFR partial correlation (§3.3) and the partial-correlation hierarchy (§3.4) show that $R_{\rm ML}$ carries information beyond a simple mass trend. The clearest empirical test is the dust–$R_{\rm ML}$ correlation structure. Under standard physics, the universe at $z \sim 9$ is only $\sim 540$ Myr old, barely enough for the first generation of AGB stars to complete their evolution. The question is not whether the dust budget can be closed under TEP — the inferred-time proxy $t_{\rm eff} = R_{\rm ML} \, t_{\rm cosmic}$ is not a physical proper-time integral (§2.3.2) and cannot be used to compute physical AGB evolution timescales. The question is whether the *pattern* of dust emergence across the galaxy population is organized by the inference-channel response $R_{\rm ML}$ in a way that standard physics does not predict.
+The $R_{\rm ML}$–sSFR partial correlation (§3.3) and the partial-correlation hierarchy (§3.4) show that $R_{\rm ML}$ carries information beyond a simple mass trend. The clearest empirical test is the dust–$R_{\rm ML}$ correlation structure. Under standard physics, the universe at $z \sim 9$ is only $\sim 540$ Myr old, barely enough for the first generation of AGB stars to complete their evolution. The question is not whether the dust budget can be closed under TEP — the inferred-time proxy $t_{\rm eff} = R_{\rm ML} \, t_{\rm cosmic}$ is not a physical proper-time integral (§2.3.2) and cannot be used to compute physical AGB evolution timescales. The question is whether the *pattern* of dust emergence across the galaxy population is organized by the inference-channel response $R_{\rm ML}$ more strongly than by the simple time-only and mass-only baselines tested here.
 
 
 **The Uniformity Paradox ($N=33$ massive galaxies at $z > 8$)**
 
-Under standard physics, the cosmic time $t_{\rm cosmic}(z)$ available for dust production is uniform across all galaxies at a given redshift. If dust parameters (AGB yield, SN yield, destruction timescale) are tuned to close the budget at $z > 8$, dust should be ubiquitous or track star formation. Instead, observations reveal a strong mass-dependent suppression ($\rho = +0.56$): massive galaxies are dusty; low-mass galaxies are dust-poor. No tuning of a time-uniform parameter can reproduce a mass-dependent gradient. Under TEP, this gradient arises because the inference-channel response $R_{\rm ML}$ orders the apparent evolutionary advance with potential depth: massive halos ($R_{\rm ML} > 1$) appear more evolved and dust-rich, while low-mass halos ($R_{\rm ML} \ll 1$) appear less evolved and dust-poor. The anomaly is not that massive galaxies have dust — it is that low-mass galaxies *do not*, in a pattern that tracks gravitational potential depth rather than star formation rate or cosmic time.
+Under standard physics, the cosmic time $t_{\rm cosmic}(z)$ available for dust production is uniform across all galaxies at a given redshift. If dust parameters (AGB yield, SN yield, destruction timescale) are tuned to close the budget at $z > 8$, dust should be ubiquitous or track star formation. Instead, observations reveal a strong mass-dependent suppression ($\rho = +0.56$): massive galaxies are dusty; low-mass galaxies are dust-poor. A purely redshift- or time-only explanation cannot reproduce the observed mass-dependent gradient. Under TEP, this gradient arises because the inference-channel response $R_{\rm ML}$ orders the apparent evolutionary advance with potential depth: massive halos ($R_{\rm ML} > 1$) appear more evolved and dust-rich, while low-mass halos ($R_{\rm ML} \ll 1$) appear less evolved and dust-poor. The anomaly is not that massive galaxies have dust — it is that low-mass galaxies *do not*, in a pattern that tracks gravitational potential depth rather than star formation rate or cosmic time.
 
 Recent JWST spectroscopy shows that AGB stars produce SiC and iron dust even at low metallicity ($\sim 1$–$7\%\,Z_\odot$; Boyer et al. 2025), with onset as early as 30–50 Myr for the most massive AGB progenitors. The physical question of whether the canonical TEP matter-frame proper time $\tau_\star = \int A[\phi(t, \mathbf{x})] \, dt$ is sufficient for AGB evolution at high redshift is left for future work; the present analysis establishes the empirical correlation structure, not the physical dust-budget closure.
 
@@ -839,7 +881,7 @@ Figure 2: The Key Dust Anomaly. (a) At $z \sim 5$ (grey), mass and dust are unco
 
 #### 3.6.1 The $z = 5$–$7$ Dip
 
-The redshift-binned correlations reveal a more complex pattern than a simple monotonic emergence. At $z = 5$–$6$, $\rho(A_V, R_{\rm ML}) = -0.14$ ($p = 1.2 \times 10^{-3}$) and $\rho(A_V, t_{\rm eff}) = -0.19$ ($p = 3.3 \times 10^{-5}$), both significantly negative — the opposite sign from the TEP-predicted positive correlation. At $z = 6$–$7$, $\rho(A_V, R_{\rm ML}) = -0.04$ ($p = 0.47$, non-significant). The signal only turns positive and significant at $z > 8$: $\rho(A_V, R_{\rm ML}) = +0.36$ ($p = 6.7 \times 10^{-7}$) at $z = 8$–$9$ and $\rho = +0.76$ ($p = 9.8 \times 10^{-21}$) at $z = 9$–$10$. The negative correlations at $z = 5$–$7$ are a genuine anomaly for the universal-correlation interpretation of TEP: if $R_{\rm ML}$ universally enhances dust production, the correlation should be positive at all redshifts. The "competition epoch" interpretation — high sSFR depleting dust faster than AGB stars replenish it — is a post-hoc explanation, not a pre-registered prediction. This anomaly is reported transparently: the TEP signal is an emergence phenomenon at $z > 8$, not a universal correlation, and the intermediate-redshift negative correlations are currently unexplained by the theory.
+The redshift-binned correlations reveal a more complex pattern than a simple monotonic emergence. At $z = 5$–$6$, $\rho(A_V, R_{\rm ML}) = -0.14$ ($p = 1.2 \times 10^{-3}$) and $\rho(A_V, t_{\rm eff}) = -0.19$ ($p = 3.3 \times 10^{-5}$), both significantly negative — the opposite sign from the TEP-predicted positive correlation. At $z = 6$–$7$, $\rho(A_V, R_{\rm ML}) = -0.04$ ($p = 0.47$, non-significant). The signal only turns positive and significant at $z > 8$: $\rho(A_V, R_{\rm ML}) = +0.36$ ($p = 6.7 \times 10^{-7}$) at $z = 8$–$9$ and $\rho = +0.76$ ($p = 9.8 \times 10^{-21}$) at $z = 9$–$10$. The negative correlations at $z = 5$–$7$ are a genuine anomaly for the universal-correlation interpretation of TEP: if $R_{\rm ML}$ universally enhances dust production, the correlation should be positive at all redshifts. The "competition epoch" interpretation — high sSFR depleting dust faster than AGB stars replenish it — is a post-hoc explanation, not a prespecified prediction. This anomaly is reported transparently: the TEP signal is an emergence phenomenon at $z > 8$, not a universal correlation, and the intermediate-redshift negative correlations are currently unexplained by the theory.
 
 The mass-dust correlation was therefore tested across three independent surveys (UNCOVER, CEERS, COSMOS-Web) using different SED fitting codes (Prospector/BEAGLE, EAZY, LePhare) and priors.
 
@@ -861,7 +903,7 @@ Table 7: Cross-Survey Replication of $z > 8$ Dust-$R_{\rm ML}$ Correlation
 | UNCOVER | Prospector/BEAGLE | 283 | $+0.58$ | $[+0.50, +0.65]$ | $p = 6.3 \times 10^{-27}$ | $10.7\sigma$ |
 | CEERS | EAZY | 82 | $+0.66$ | $[+0.54, +0.77]$ | $p = 2.3 \times 10^{-11}$ | $6.6\sigma$ |
 | COSMOS-Web | LePhare | 918 | $+0.63$ | $[+0.59, +0.67]$ | $p = 1.1 \times 10^{-102}$ | $21.5\sigma$ |
-| Fixed-effects meta | $+0.62$ | $[+0.59, +0.66]$ | $p = 8.9 \times 10^{-151}$ | $26.2\sigma$ |  |  |
+| Fixed-effects meta | Combined | 1,283 | $+0.62$ | $[+0.59, +0.66]$ | $p = 8.9 \times 10^{-151}$ | $26.2\sigma$ |
 
 
 
@@ -871,9 +913,9 @@ Table 7: Cross-Survey Replication of $z > 8$ Dust-$R_{\rm ML}$ Correlation
 Combining all three surveys ($N = 1{,}283$ at $z > 8$) yields a fixed-effects meta-correlation of $\rho = +0.62$ with $p = 8.9 \times 10^{-151}$ (Cohen's $d = 1.59$, a large effect). All three surveys independently confirm the positive $\rho$ at $>6\sigma$, and mass-stratification confirms the signal persists at fixed mass. The per-survey effect sizes are $\rho = +0.60$ (UNCOVER, $N = 283$), $\rho = +0.65$ (CEERS, $N = 82$), and $\rho = +0.63$ (COSMOS-Web, $N = 918$). Between-study heterogeneity is negligible ($I^2 = 0\%$, Cochran's $Q = 1.6$, $p_Q = 0.45$), meaning the three surveys agree on a common effect size — as expected if TEP is a universal law with a single coupling constant. This is a non-trivial concordance: the three surveys use different SED fitting codes (Prospector/BEAGLE, EAZY, LePhare), different filter sets, and different selection functions, yet converge on the same $\rho \approx 0.6$. Including the supplementary NIRSpec Balmer-decrement branch raises the combined Fisher $z$ from $24.9\sigma$ to $26.0\sigma$, while the Balmer partial-$\rho$ branch itself is weak after $M_*$+$z$ control ($\rho = 0.136$, $p = 5.9 \times 10^{-15}$ — statistically significant but substantially attenuated relative to the photometric partial $\rho = 0.26$); the COSMOS2025 blank-field dataset is classified as supplementary rather than primary due to its different selection function.
 
 
-#### 3.7.3 Temporal Inversion & AGB Threshold
+#### 3.7.3 Inferred-Time Ordering and AGB-Motivated Threshold
 
-A more physically targeted and falsifiable test compares dust against cosmic time ($t_{\rm cosmic}$) versus the TEP-effective clock ($t_{\rm eff} = R_{\rm ML}\,t_{\rm cosmic}$). Under standard physics, dust should track $t_{\rm cosmic}$; under TEP, dust emergence should be organized by $t_{\rm eff}$ and should show a step-like transition near the AGB dust-production timescale ($t_{\rm eff} \gtrsim 0.3$ Gyr).
+A more physically targeted and falsifiable test compares dust against cosmic time ($t_{\rm cosmic}$) versus the TEP-effective inference coordinate ($t_{\rm eff} = R_{\rm ML}\,t_{\rm cosmic}$). Under standard physics, dust should track $t_{\rm cosmic}$; under TEP, dust emergence is organized along $t_{\rm eff}$ and exhibits an empirical step-like transition near the canonical AGB-motivated coordinate threshold ($t_{\rm eff} \gtrsim 0.3$ Gyr).
 
 
 
@@ -889,7 +931,7 @@ Table 7b: Cross-Survey Temporal Inversion and AGB Threshold (z > 8)
 
 To test whether the location of the step is being tuned to a particular survey, a leave-one-survey-out holdout validation is performed. The threshold selected on the training surveys has median $t_{\rm eff} = 1.93$ Gyr (range $0.06$–$1.93$ Gyr). Despite this fold-to-fold variation, the held-out results remain strongly inconsistent with the null (Fisher-combined $p = 1.1 \times 10^{-25}$). Using the fixed AGB-motivated threshold $t_{\rm eff} > 0.3$ Gyr yields a Fisher-combined $p = 1.5 \times 10^{-252}$.
 
-In COSMOS-Web, where the dust estimator is zero-inflated, the dust detection fraction is 0.58 above threshold versus 0.07 below threshold (Fisher exact test; p-value $< 10^{-10}$). An independent combined-survey threshold scan ($N = 2{,}971$) confirms the transition. For the fixed theoretical threshold of $t_{\rm eff} \ge 0.3$ Gyr, the combined odds ratio is 9.8 ($p = 2.9 \times 10^{-165}$), with dust detection fraction 0.64 above versus 0.15 below. A step-function AIC comparison against a mass-matched threshold yields $\Delta$AIC $= +0.25$ (the mass-matched step fits better as a pure step), but the polynomial $M_* \times z$ baseline outperforms both step models; the $t_{\rm eff}$ step is therefore not a unique discriminator against mass-threshold alternatives in this single-observable test. A secondary unconstrained threshold scan yields a data-selected transition at $t_{\rm eff} = 0.61$ Gyr (bootstrap 16th–84th percentile: $0.52$–$1.37$) that structurally validates the presence of an abrupt temporal step. This cross-survey temporal-inversion behavior directly tests the core TEP mechanism ($t_{\rm eff}$ controlling dust emergence) and is not a generic "more massive galaxies are dustier" statement.
+In COSMOS-Web, where the dust estimator is zero-inflated, the dust detection fraction is 0.58 above threshold versus 0.07 below threshold (Fisher exact test; p-value $< 10^{-10}$). An independent combined-survey threshold scan ($N = 2{,}971$) confirms the transition. For the fixed theoretical threshold of $t_{\rm eff} \ge 0.3$ Gyr, the combined odds ratio is 9.8 ($p = 2.9 \times 10^{-165}$), with dust detection fraction 0.64 above versus 0.15 below. A step-function AIC comparison against a mass-matched threshold yields $\Delta$AIC $= +0.25$ (the mass-matched step fits better as a pure step), but the polynomial $M_* \times z$ baseline outperforms both step models; the $t_{\rm eff}$ step is therefore not a unique discriminator against mass-threshold alternatives in this single-observable test. A secondary unconstrained threshold scan yields a data-selected transition at $t_{\rm eff} = 0.61$ Gyr (bootstrap 16th–84th percentile: $0.52$–$1.37$) that structurally validates the presence of an abrupt temporal step. This cross-survey temporal-ordering behavior tests whether $t_{\rm eff}$ organizes dust emergence and is not a generic "more massive galaxies are dustier" statement.
 
 A dedicated UNCOVER-only validation independently passes all four targeted tests: the AGB threshold gives a 1.60$\times$ dust ratio above versus below $t_{\rm eff} = 0.3$ Gyr; controlling for cosmic time leaves $\rho(t_{\rm eff}, A_V \mid t_{\rm cosmic}) = +0.471$ ($p = 5.0 \times 10^{-17}$); the $t_{\rm eff}$–dust correlation remains positive in the low-mass half ($\rho = +0.42$, $p = 2.0 \times 10^{-7}$) and remains positive but weaker in the high-mass half ($\rho = +0.17$, $p = 0.038$); and the raw mass-dust signal steepens monotonically from $z = 8$–$8.5$ to $z = 9$–$10$ ($\rho = +0.325 \rightarrow +0.716$).
 
@@ -924,7 +966,7 @@ Across surveys, $|\rho(A_V, z_{\rm eff})| > |\rho(A_V, z_{\rm obs})|$. Criticall
 
 A pure mass proxy makes a specific set of predictions. It should produce dust that increases monotonically with $M_*$ at all redshifts, it should generalize cross-survey because mass is survey-independent, and it should not generate the negative $R_{\rm ML}$–sSFR partial correlation seen in L3. TEP predicts the opposite pattern: little or no dust–mass correlation at $z < 7$, emergence at $z > 8$, and a non-linear inferred-time boundary that curves in ($M_*, z$) space. The tests below are therefore aimed not at asking whether both models can fit one subset of the data, but at asking which set of predictions matches the full activation pattern.
 
-**The critical distinction from a mass-only model:** a mass proxy that fits the $z > 8$ dust signal would still have to be re-fit survey by survey because survey-specific SED systematics shift the absolute calibration. By contrast, $R_{\rm ML}$, calibrated once from local Cepheids, maintains $\rho = 0.60$–$0.65$ across three surveys (fixed-effects meta $\rho = +0.62$) with no retraining. The Steiger tests below therefore compare not just two correlated predictors, but two different claims about what should remain stable across datasets:
+**The critical distinction from a mass-only model:** a mass proxy that fits the $z > 8$ dust signal would still have to be re-fit survey by survey because survey-specific SED systematics shift the absolute calibration. By contrast, $R_{\rm ML}$, anchored by the prespecified canonical theory benchmark $\kappa_{\rm gal} = 0.960 \times 10^6$ mag, maintains $\rho = 0.60$–$0.65$ across three surveys (fixed-effects meta $\rho = +0.62$) with no retraining. The Steiger tests below therefore compare not just two correlated predictors, but two different claims about what should remain stable across datasets:
 
 
 - **Within-regime ($z > 8$):** $t_{\rm eff}$ does not add statistically significant information beyond mass alone for the colour-gradient predictor (Steiger $Z = -0.49$, $p = 0.62$), nor does the $\gamma_t$ scaling significantly improve over raw cosmic time for the colour-gradient predictor (Steiger $Z = -1.06$, $p = 0.29$). The colour-gradient test is therefore non-decisive at fixed redshift; the specificity of $t_{\rm eff}$ is established by the activation pattern test below, not by the within-regime gradient comparison.
@@ -943,17 +985,17 @@ A pure mass proxy makes a specific set of predictions. It should produce dust th
 
 Table 8: Bayesian Evidence ($\ln Z$) for $z \ge 8$ Multi-Observable Models. All models are evaluated using dynesty nested-sampling ($N_{\rm live}=200$, $d\log Z=0.5$). The self-consistent (iterated) $R_{\rm ML}$ predictor is used throughout. In the independent-likelihood family, all alternative models use mass and redshift orthogonalized against $\log R_{\rm ML}$ to prevent circular absorption of the TEP signal through the mass variable.
 
-| Model Name | Parameters | $\ln Z$ | $\pm$ err |
+| Model Name | Parameters | $\ln Z$ | $\pm \Delta \ln Z$ |
 | --- | --- | --- | --- |
-| **1. Covariance-Corrected Joint Family (Primary)** |  |  |  |
-| Covariance TEP Augmented (Mass + z + log R_{\rm ML}) | 17 | -1410.0 | 0.82 |
-| Covariance TEP (theory-fixed log R_{\rm ML}) | 9 | -1411.4 | 0.65 |
-| Covariance Standard (Mass + z) | 13 | -1475.5 | 0.75 |
-| **2. Conventional Joint-Observable Family (Independent Likelihood)** |  |  |  |
-| TEP Augmented (Mass + z + log R_{\rm ML}) | 20 | -1486.8 | 0.87 |
-| TEP (theory-fixed log R_{\rm ML}) | 12 | -1500.3 | 0.65 |
-| Quadratic Baseline (Mass + z + Mass$^2$ + z$^2$ + Mass$\times$z) | 28 | -1593.5 | 0.89 |
-| M*×sqrt(1+z) Interaction (Mass + z + Mass×sqrt(1+z)) | 20 | -1630.9 | 0.84 |
+| **1. Joint Likelihood Family (Correlated SED Outputs)** |  |  |  |
+| Covariance Augmented (Mass + z + $R_{\rm ML}$) | 17 | -1410.0 | 0.68 |
+| Covariance TEP (Single Theory Predictor) | 9 | -1411.4 | 0.61 |
+| Covariance Standard (Mass + z) | 13 | -1475.5 | 0.66 |
+| **2. Independent-Likelihood Family (Orthogonalized Mass & z)** |  |  |  |
+| TEP Augmented (Mass + z + $R_{\rm ML}$) | 20 | -1486.8 | 0.82 |
+| TEP (Single Theory Predictor) | 12 | -1500.3 | 0.74 |
+| Quadratic Baseline (Mass + z + $M^2$ + $z^2$ + $Mz$) | 28 | -1593.4 | 0.94 |
+| $M_* \times \sqrt{1+z}$ Interaction | 20 | -1630.8 | 0.86 |
 | Varying IMF (Quadratic Mass + z) | 20 | -1614.2 | 0.85 |
 | AGN Feedback (Sigmoid Mass Threshold) | 18 | -1618.4 | 0.72 |
 | Bursty SF (Mass-dependent timescale) | 21 | -1638.8 | 0.80 |
@@ -971,11 +1013,11 @@ The evaluation is structured into three parts, ordered by neutrality of the comp
 
 - **Conventional Comparison (Raw Mass):** What happens if observed mass is assumed unbiased? ($\ln{\rm BF}=-6.0$ in residual space)
 
-The primary result is the covariance-corrected comparison. When the correlated SED outputs are modelled with a joint covariance likelihood (multivariate Gaussian with the empirical $K \times K$ residual covariance matrix) rather than as independent Gaussians, the covariance-corrected TEP model ($\ln Z = -1411.4$, 9 parameters) outperforms the covariance-corrected standard mass-plus-redshift model ($\ln Z = -1475.5$, 13 parameters) by $\ln{\rm BF} = +64.1$ with four fewer parameters — decisive on the Kass–Raftery scale. The covariance-corrected augmented model (mass + z + $R_{\rm ML}$, 17 parameters) edges out the covariance-corrected TEP model by $\ln{\rm BF} = +1.4$, indicating that the mass and redshift terms add modest incremental information once the covariance structure is accounted for. The per-observable breakdown shows the signal is concentrated in dust ($\ln{\rm BF} = +59.9$) and $\chi^2$ ($\ln{\rm BF} = +45.8$), with a positive contribution from sSFR ($\ln{\rm BF} = +30.2$) and a null result for metallicity ($\ln{\rm BF} = +4.7$).
+The primary result is the covariance-corrected comparison. When the correlated SED outputs are modelled with a joint covariance likelihood (multivariate Gaussian with the empirical $K \times K$ residual covariance matrix) rather than as independent Gaussians, the covariance-corrected TEP model ($\ln Z = -1411.4$, 9 parameters) outperforms the covariance-corrected standard mass-plus-redshift model ($\ln Z = -1475.5$, 13 parameters) by $\ln{\rm BF} = +64.1$ with four fewer parameters — decisive on the Kass–Raftery scale. The covariance-corrected augmented model (mass + z + $R_{\rm ML}$, 17 parameters) edges out the covariance-corrected TEP model by $\ln{\rm BF} = +1.4$, indicating that the mass and redshift terms add modest incremental information once the covariance structure is accounted for. The per-observable breakdown shows the signal is concentrated in dust ($\ln{\rm BF} = +59.9$) and $\chi^2$ ($\ln{\rm BF} = +45.8$), with a positive contribution from sSFR ($\ln{\rm BF} = +30.2$) and a null result for metallicity ($\ln{\rm BF} = +4.7$). In the 3-observable physical subset (dust, sSFR, metallicity; excluding SED $\chi^2$), the joint covariance model yields $\ln{\rm BF} = +62.6$ in favor of TEP under orthogonalized predictors (7 parameters versus 10 parameters), while an unorthogonalized comparison with 10 unconstrained standard parameters yields $\ln{\rm BF} = -14.0$. The single-observable evidence sum across the three physical observables is $\ln{\rm BF} = +94.8$.
 
-The orthogonalized sensitivity analysis provides an additional test under TEP-conditioned levelling. When all alternatives are levelled by orthogonalizing their mass predictor against $R_{\rm ML}$ (preventing circular absorption of the TEP signal through the mass variable), TEP outperforms every tested alternative: $\ln{\rm BF}=+141.2$ versus standard physics (16 parameters), $+138.5$ versus the bursty star-formation model (21 parameters), $+130.5$ versus the M*×sqrt(1+z) interaction model (20 parameters), $+118.1$ versus the AGN-threshold model (18 parameters), $+113.9$ versus the varying-IMF model (20 parameters), and $+93.1$ versus the quadratic baseline (28 parameters). The mean $\ln{\rm BF}$ across all eleven alternatives is $+126.2$. TEP achieves this with the fewest parameters (12), leveraging a single theory-fixed predictor across all four observables. The M*×sqrt(1+z) interaction model — the minimal non-linear null that captures the specific mass–redshift interaction TEP encodes through the $\sqrt{1+z}$ factor in $R_{\rm ML}$, without any TEP-specific potential-depth structure — is outperformed by TEP with $\ln{\rm BF} = +130.5$. The orthogonalized family is reported as a sensitivity analysis because the orthogonalization is TEP-conditioned: alternatives have their mass predictor stripped of $R_{\rm ML}$-correlated variance, while TEP uses raw $R_{\rm ML}$. The covariance-corrected result ($+64.1$) does not depend on this conditioning and is therefore adopted as the headline.
+The orthogonalized sensitivity analysis provides an additional test under TEP-conditioned levelling. When all alternatives are levelled by orthogonalizing their mass predictor against $R_{\rm ML}$ (preventing circular absorption of the TEP signal through the mass variable), TEP outperforms every tested alternative: $\ln{\rm BF}=+141.2$ versus standard physics (16 parameters), $+138.5$ versus the bursty star-formation model (21 parameters), $+130.5$ versus the M*×sqrt(1+z) interaction model (20 parameters), $+118.1$ versus the AGN-threshold model (18 parameters), $+113.9$ versus the varying-IMF model (20 parameters), and $+93.1$ versus the quadratic baseline (28 parameters). In the joint augmented test, TEP augmented yields $\ln{\rm BF} = +154.7$ versus standard physics (Table 8). The mean $\ln{\rm BF}$ across all eleven alternatives is $+126.2$. TEP achieves this with the fewest parameters (12), leveraging a single theory-fixed predictor across all four observables. The M*×sqrt(1+z) interaction model — the minimal non-linear null that captures the specific mass–redshift interaction TEP encodes through the $\sqrt{1+z}$ factor in $R_{\rm ML}$, without any TEP-specific potential-depth structure — is outperformed by TEP with $\ln{\rm BF} = +130.5$. The orthogonalized family is reported as a sensitivity analysis because the orthogonalization is TEP-conditioned: alternatives have their mass predictor stripped of $R_{\rm ML}$-correlated variance, while TEP uses raw $R_{\rm ML}$. The covariance-corrected result ($+64.1$) does not depend on this conditioning and is therefore adopted as the headline.
 
-One negative result is reported transparently: in the residual space, a constrained AGN model (10 parameters) outperforms TEP ($\ln{\rm BF} = -34.9$), indicating that the AGN-threshold predictor captures residual variance that the TEP predictor does not. This is not a contradiction of the joint-space result ($\ln{\rm BF} = +118.1$ versus AGN), but it shows that the orthogonalized residual space removes the mass-related variance that TEP relies on, leaving the AGN model's additional flexibility to fit the remaining structure. The joint-space comparison, which preserves the full mass–$R_{\rm ML}$ information, remains the primary test. Additionally, applying the TEP mass correction to conventional astrophysical models yields a neutral result (mean $\ln{\rm BF} = -0.4$), indicating that the correction does not yet improve standard forward-model fits; the evidence for TEP rests on the correlation structure and the covariance-corrected model preference, not on the mass correction improving astrophysical model fits.
+One negative result is reported transparently: in the residual space, TEP outperforms the residual null model ($\ln{\rm BF} = +150.8$, Table 8), while a constrained AGN model (10 parameters) outperforms TEP ($\ln{\rm BF} = -34.9$), indicating that the AGN-threshold predictor captures residual variance that the TEP predictor does not. This is not a contradiction of the joint-space result ($\ln{\rm BF} = +118.1$ versus AGN), but it shows that the orthogonalized residual space removes the mass-related variance that TEP relies on, leaving the AGN model's additional flexibility to fit the remaining structure. The joint-space comparison, which preserves the full mass–$R_{\rm ML}$ information, remains the primary test. Additionally, applying the TEP mass correction to conventional astrophysical models yields a neutral result (mean $\ln{\rm BF} = -0.4$), indicating that the correction does not yet improve standard forward-model fits; the evidence for TEP rests on the correlation structure and the covariance-corrected model preference, not on the mass correction improving astrophysical model fits.
 
 
 
@@ -986,7 +1028,7 @@ Table 9: Primary Empirical Line, Secondary Partial-Correlation Test, Ancillary S
 | --- | --- | --- | --- | --- |
 | **L1. Dust–$R_{\rm ML}$ + AGB threshold** | $\rho > 0.3$ at $z > 8$; $t_{\rm eff}$ retains residual after polynomial control; $M_*$ zero residual after $t_{\rm eff}$ control; dust jumps at $t_{\rm eff} \gtrsim 0.3$ Gyr | $\rho = +0.62$; partial $\rho = +0.26$ ($p = 1.2 \times 10^{-5}$); AGB odds ratio $10.9$; dust ratio $5.96\times$ vs $3.24\times$ for mass-matched | $p = 1.1 \times 10^{-136}$ (Fisher); $p = 5.6 \times 10^{-157}$ (threshold) | UNCOVER, CEERS, COSMOS-Web ($N = 1{,}283$–$2{,}971$); Fisher $z = 24.9\sigma$; $I^2 = 0\%$; UNCOVER tests pass 4/4 |
 | **L2. Inside-out core screening** | Bluer-core result in more massive galaxies; higher central concentration at larger $R_{\rm ML}$ after mass+$z$ control | Gini partial $\rho=+0.191$ ($p=1.6\times10^{-4}$); half-light-radius proxies and $\sigma_\star$ non-significant; raw mass trend $\rho=-0.166$ ($p=5.7\times10^{-3}$); debiased sign test $0.581$ vs $0.495$ | Gini partial $p = 1.6 \times 10^{-4}$; debiased sign-test Fisher $p = 0.152$; size proxies and $\sigma_\star$ non-significant | JADES resolved photometry ($N = 277$) plus JADES DR5 morphology ($N_{\rm matched}=464$); ancillary — direct gradient non-decisive |
-| **L3. $R_{\rm ML}$–sSFR partial correlation** | $\rho(R_{\rm ML}, {\rm sSFR}) < 0$ at all $z$ (from ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n}$, $m < n$); partial $\rho(R_{\rm ML}, {\rm sSFR}\|M_*, z) \neq 0$ | Partial $\rho = -0.47$ at $z>8$ ($p = 9.9 \times 10^{-17}$, $N=283$); full-sample $\rho(R_{\rm ML}, {\rm sSFR}) = -0.49$ ($p = 7.2 \times 10^{-140}$) | Sign and magnitude consistent with $m - n \approx -0.2$ | UNCOVER ($N = 2{,}315$); COSMOS2025 blank-field mixed — supportive $z = 8$–9 bin, negative $z = 9$–13; secondary diagnostic |
+| **L3. $R_{\rm ML}$–sSFR partial correlation** | $\rho(R_{\rm ML}, {\rm sSFR}) < 0$ at all $z$ (from ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n_{\rm SPS}}$, $m < n_{\rm SPS}$); partial $\rho(R_{\rm ML}, {\rm sSFR}\|M_*, z) \neq 0$ | Partial $\rho = -0.47$ at $z>8$ ($p = 1.3 \times 10^{-16}$, $N=283$); full-sample $\rho(R_{\rm ML}, {\rm sSFR}) = -0.49$ ($p = 2.1 \times 10^{-140}$) | Sign and magnitude consistent with $m - n_{\rm SPS} \approx -0.2$ | UNCOVER ($N = 2{,}315$); COSMOS2025 blank-field mixed — supportive $z = 8$–9 bin, negative $z = 9$–13; secondary line |
 | **L4. Dynamical mass comparison** | TEP correction resolves $M_*/M_{\rm dyn} > 1$ via isochrony bias | Published excess 0.15 dex; TEP reduction 0.270 dex ($1.41 \rightarrow 0.76$) | Sufficient to remove the published anomaly | Derived regime-level comparison against published literature; not counted with primary empirical lines |
 
 
@@ -997,7 +1039,7 @@ The L2 morphology analysis provides a specific central-concentration indication 
 
 The L3 replication status: UNCOVER ($N = 2{,}315$) remains the primary L3 line. The COSMOS2025 blank-field follow-up is mixed, with a supportive matched $z = 8$–9 bin but a negative ultrahigh-$z$ $z = 9$–13 result, so it is classified as an auxiliary diagnostic rather than as a primary L3 replication.
 
-**Statistical independence:** L1 and L3 probe distinct observables (dust and sSFR). The UNCOVER partial $\rho(R_{\rm ML}, {\rm sSFR}|{\rm dust}) = -0.47$ at $z > 8$ ($p = 9.9 \times 10^{-17}$, $N = 283$) confirms that L3 carries information orthogonal to dust. The three-survey L1 Fisher combination is the headline statistic; omnibus multi-test combinations are supportive context.
+**Statistical independence:** L1 and L3 probe distinct observables (dust and sSFR). The UNCOVER partial $\rho(R_{\rm ML}, {\rm sSFR}|{\rm dust}) = -0.49$ at $z > 8$ ($p = 1.8 \times 10^{-18}$, $N = 283$) confirms that L3 carries information orthogonal to dust. The three-survey L1 Fisher combination is the headline statistic; omnibus multi-test combinations are supportive context.
 
 **Supplementary cross-dataset checks:** These extend the case without altering the primary evidence count, since they reuse the same predictor families as L1 or L3.
 
@@ -1060,7 +1102,7 @@ A genuine physical signal should survive attempts to break it. To test whether t
 
 #### 3.9.2 Falsification Tests
 
-A pre-registered falsification test set examines six necessary conditions for the TEP framework. All six pass:
+A prespecified falsification test set examines six necessary conditions for the TEP framework. All six pass:
 
 
 - **Sign consistency:** Dust–$R_{\rm ML}$ ($\rho = +0.56$, $p = 1.0 \times 10^{-24}$) and mass–age ($\rho = +0.14$, $p = 7.0 \times 10^{-11}$) correlations match predicted signs.
@@ -1111,30 +1153,17 @@ The primary empirical line (L1: dust–$R_{\rm ML}$ emergence), together with th
 
 **Screening projection notice.** Screening in TEP is represented at theory level by the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. Quantities such as $\rho_T$, $R_T(M)$, $\mathcal{S}_\oplus(r)$, compactness $\Phi/c^2$, local stellar density, thermal epoch, coherence length, proximity, and boundary geometry are domain-specific projections of $\mathcal{E}$, not independent screening mechanisms and not interchangeable universal thresholds.
 
-The central value $\kappa_{\rm gal} = 9.6 \times 10^5$ mag of the external Cepheid prior was
-derived from period-luminosity residuals in local galaxies (Paper 11, continuous screening)
-and then applied to $z > 5$ galaxies with only the physically motivated
-redshift scaling $(1+z)^{0.5}$ and no tuning to JWST data. That it quantitatively
-accounts for the anomaly is therefore a non-trivial consistency check. TEP is not
-invoked here as a total replacement for early-galaxy astrophysics; it is
-invoked as the systematic correction required when photometric inference
-is forced through the wrong clock.
+The prespecified canonical TEP magnitude-sector benchmark $\kappa_{\rm gal} = 0.960 \times 10^6$ mag from Paper 11 was fixed before the JWST analysis (with Paper 11's independent empirical Cepheid fits recovering $\kappa_{\rm equiv}^{42} = (0.369 \pm 0.310) \times 10^6$ mag and $\kappa_{\rm Cep}^{44} = (0.400 \pm 0.270) \times 10^6$ mag) and then applied to $z > 5$ galaxies with only the physically motivated redshift scaling $\sqrt{1+z}$ and no tuning to JWST data. That it quantitatively accounts for the anomaly is therefore a non-trivial predictive test. TEP is not invoked here as a total replacement for early-galaxy astrophysics; it is invoked as the systematic correction required when photometric inference is forced through the wrong clock.
 
-### 4.2 The Non-Linear AGN Competitor
+### 4.2 Model Discrimination and Bayesian Evidence
 
-Within the conventional joint-observable family, all alternatives are levelled by orthogonalizing their mass predictor against $R_{\rm ML}$, preventing circular absorption of the TEP signal through the mass variable. Under this fair comparison, TEP decisively outperforms every tested alternative: standard physics ($\ln{\rm BF}=+141.2$), the bursty star-formation model ($\ln{\rm BF}=+138.5$), the $M_* \times \sqrt{1+z}$ interaction null ($\ln{\rm BF}=+130.5$), the AGN-threshold model ($\ln{\rm BF}=+118.1$), the varying-IMF model ($\ln{\rm BF}=+113.9$), and the quadratic baseline ($\ln{\rm BF}=+93.1$). The mean $\ln{\rm BF}$ across all eleven alternatives is $+126.2$. The decisive ($\ln{\rm BF}=+141.2$) incremental gain obtained when $R_{\rm ML}$ is added to the linear mass-plus-redshift baseline confirms that $R_{\rm ML}$ carries information beyond mass and redshift. No single alternative model remains competitive with TEP in the full joint-observable space.
+The primary statistical test for multi-observable preference is the covariance-corrected joint comparison (§3.8). When the four SED observables (dust, sSFR, $\chi^2$, metallicity) are modeled using a joint multivariate Gaussian with the empirical $K \times K$ residual covariance matrix, the covariance-corrected TEP model ($\ln Z = -1411.4$, 9 parameters) decisively outperforms the covariance-corrected standard model ($\ln Z = -1475.5$, 13 parameters) by $\ln{\rm BF} = +64.1$ — and does so with four fewer parameters. This represents the cleanest like-for-like comparison: the same dataset, the same empirical covariance structure, and TEP's single theory-fixed predictor ($R_{\rm ML}$) evaluated against the standard mass-plus-redshift baseline without artificial orthogonalization.
 
-Specifically, once a halo potential reaches the critical binding energy, both models predict a rapid departure from standard linear stellar mass assembly. The AGN model attributes this to winds clearing the cold gas supply, halting star formation and revealing the underlying older stellar populations. TEP attributes this to a large inference-channel response ($R_{\rm ML} \gg 1$), in which the standard isochrony mapping misattributes the environmental temporal structure of a deep unscreened well to an older, dustier stellar population, allowing apparent age and dust content to rise synchronously ahead of the FLRW baseline.
+Second, the orthogonalized sensitivity analysis evaluates TEP against a broader family of explicit astrophysical alternatives where all candidate mass predictors are orthogonalized against $\log R_{\rm ML}$ to prevent circular absorption of the TEP signal. Within this TEP-conditioned sensitivity family, TEP outperforms every tested alternative: standard physics ($\ln{\rm BF}=+141.2$, 16 parameters), the bursty star-formation model ($\ln{\rm BF}=+138.5$, 21 parameters), the $M_* \times \sqrt{1+z}$ interaction null ($\ln{\rm BF}=+130.5$, 20 parameters), the AGN-threshold model ($\ln{\rm BF}=+118.1$, 18 parameters), the varying-IMF model ($\ln{\rm BF}=+113.9$, 20 parameters), and the quadratic baseline ($\ln{\rm BF}=+93.1$, 28 parameters), with a mean $\ln{\rm BF} = +126.2$ across all eleven alternatives.
 
-The primary discriminator is the predicted metallicity and spatial extent of the dust. While AGN-driven winds physically expel gas and curtail dust production (often predicting a negative correlation between central black-hole mass and global dust content), TEP predicts that the dust remains in place and its apparent buildup tracks the inference-channel response alongside the apparent stellar population age. The L1 dust-$R_{\rm ML}$ emergence result prefers the TEP physical scenario. The phenomenological flexibility of AGN prescriptions means they can often be tuned to match broad photometric averages, but only when the AGN threshold operates on the raw observed mass — which already contains the TEP signal through the $R_{\rm ML}$–mass correlation. When the mass predictor is orthogonalized against $R_{\rm ML}$ (removing the circular absorption), the AGN-threshold model loses its advantage and TEP wins decisively.
+Specifically, once a halo potential reaches the critical binding energy, both AGN feedback and TEP predict departure from standard linear stellar mass assembly. The AGN model attributes this to winds clearing the cold gas supply, halting star formation and revealing underlying older stellar populations. TEP attributes this to a large inference-channel response ($R_{\rm ML} \gg 1$), in which standard isochrony mapping misattributes the environmental temporal structure of a deep unscreened well to an older, dustier stellar population. The primary discriminator is the predicted dust and metallicity: while AGN-driven winds physically expel gas and curtail dust production, TEP predicts that apparent dust buildup tracks the inference-channel response alongside apparent stellar age. When the mass predictor is orthogonalized against $R_{\rm ML}$, the AGN-threshold model loses its competitive advantage in the full joint space.
 
-In the primary joint Bayesian comparison, all alternatives use orthogonalized mass predictors to prevent circular absorption of the TEP signal through the mass variable. Under this fair comparison, TEP decisively outperforms every tested alternative: standard physics ($\ln {\rm BF} = +141.2$, 16 parameters), the bursty star-formation model ($\ln {\rm BF} = +138.5$, 21 parameters), the $M_* \times \sqrt{1+z}$ interaction null ($\ln {\rm BF} = +130.5$, 20 parameters), the AGN-threshold model ($\ln {\rm BF} = +118.1$, 18 parameters), the varying-IMF model ($\ln {\rm BF} = +113.9$, 20 parameters), and the quadratic baseline ($\ln {\rm BF} = +93.1$, 28 parameters). The mean $\ln {\rm BF}$ across all eleven alternatives is $+126.2$. TEP achieves this with the fewest parameters (12), leveraging a single theory-fixed predictor ($R_{\rm ML}$) across all four observables. The decisive evidence ($\ln {\rm BF} = +141.2$ versus standard physics) demonstrates that $R_{\rm ML}$ carries information beyond mass and redshift, and the orthogonalized comparison confirms that this is not an artifact of the mass–$R_{\rm ML}$ correlation.
-
-### 4.2.1 Covariance-Corrected Evidence and the Quadratic Baseline
-
-Two methodological refinements strengthen the TEP position relative to the independent-likelihood comparison. First, the four SED observables (dust, sSFR, $\chi^2$, metallicity) are correlated outputs from the same photometric fit: the Pearson correlations range from $|r|=0.21$ (dust–metallicity) to $|r|=0.66$ (sSFR–$\chi^2$). Treating them as independent, as the standard joint likelihood does, multiplies the evidence by counting the same SED information several times. Replacing the product of $K$ independent Gaussians with a single multivariate Gaussian using the empirical $K \times K$ residual covariance matrix changes the evidence landscape substantially. The covariance-corrected TEP model ($\ln Z = -1411.4$, 9 parameters) decisively outperforms the covariance-corrected standard model ($\ln Z = -1475.5$, 13 parameters) by $\ln {\rm BF} = +64.1$ — and does so with four fewer parameters. This is the fairest like-for-like comparison: the same data, the same covariance structure, and TEP's single theory-fixed predictor against the standard mass-plus-redshift baseline.
-
-Second, the incremental evidence is tested for specificity to TEP rather than generic nonlinearity in the mass–redshift plane by adding a quadratic baseline (mass $+$ $z$ $+$ mass$^2$ $+$ $z^2$ $+$ mass$\times z$, 7 parameters per observable). The quadratic baseline achieves $\ln Z = -1593.5$, underperforming TEP alone ($\ln Z = -1500.3$) by $\ln {\rm BF} = +93.1$ as a complete model — TEP's single-parameter $R_{\rm ML}$ predictor outperforms a 28-parameter generic nonlinear mass–redshift surface. The TEP-augmented model ($\ln Z = -1486.8$) outperforms the quadratic baseline by $\ln {\rm BF} = +106.7$ and outperforms the standard-physics baseline by $\ln {\rm BF} = +154.7$, further confirming that $R_{\rm ML}$ carries information beyond what a generic nonlinear mass–redshift surface captures. The per-observable breakdown of the augmented model versus standard physics confirms that the signal is concentrated in dust ($\ln {\rm BF} = +59.9$) and $\chi^2$ ($\ln {\rm BF} = +45.8$), with a positive contribution from sSFR ($\ln {\rm BF} = +30.2$) and a null result for metallicity ($\ln {\rm BF} = +4.7$). The dust channel — the physically motivated observable for the inference-channel response — is the dominant contributor.
+**Sensitivity and disclosures.** Transparent diagnostics are reported: the per-observable breakdown shows the signal is concentrated in dust ($\ln{\rm BF} = +59.9$) and $\chi^2$ ($\ln{\rm BF} = +45.8$), with a positive contribution from sSFR ($\ln{\rm BF} = +30.2$) and a null result for metallicity ($\ln{\rm BF} = +4.7$), summing to $\ln{\rm BF} = +94.8$ across the three physical observables alone. In the primary 4-observable joint covariance model, TEP outperforms the standard baseline by $\ln{\rm BF} = +64.1$ with four fewer parameters. In the 3-observable physical subset (dust, sSFR, metallicity; excluding SED $\chi^2$), the joint covariance model favors TEP by $\ln{\rm BF} = +62.6$ under orthogonalized predictors (7 parameters versus 10 parameters), while an unorthogonalized standard model with 10 unconstrained parameters achieves $\ln{\rm BF} = -14.0$. In orthogonalized residual space, a constrained-AGN model captures residual variance that the raw $R_{\rm ML}$ predictor does not ($\ln{\rm BF} = -34.9$). These tests confirm that the primary empirical strength of TEP rests on the multi-survey photometric correlation structure (L1, L3), the cross-survey Steiger and meta-analyses, and the direct SUSPENSE kinematic test (L5), with the Bayesian evidence providing supportive global context.
 
 ### 4.3 Synthesis
 
@@ -1147,8 +1176,8 @@ suppression, $\rho = +0.62$ cross-survey) arises because $R_{\rm ML}$
 orders the inference-channel response with potential depth. The
 $R_{\rm ML}$–sSFR partial correlation
 ($\rho(R_{\rm ML}, {\rm sSFR} \mid M_*, z) = -0.47$ at $z > 8$,
-$p = 9.9 \times 10^{-17}$) has the sign predicted by the TEP
-measurement equations: since ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n}$
+$p = 1.3 \times 10^{-16}$) has the sign predicted by the TEP
+measurement equations: since ${\rm sSFR}_{\rm obs} \propto R_{\rm ML}^{m-n_{\rm SPS}}$
 with $m \approx 0.5 < n \approx 0.7$, the inference bias lowers sSFR
 in massive halos, deepening the negative mass–sSFR relation. The
 observed high-$z$ mass–sSFR inversion ($\Delta\rho = +0.25$) is an
@@ -1295,82 +1324,11 @@ uniform spectroscopic surveys. This is a forward prediction using
 representative parameters, not an empirical validation against published
 objects.
 
-### 4.4 Little Red Dots as a Stress Test
+### 4.4 Little Red Dots as a Qualitative Stress Test
 
-The Little Red Dot population is not a primary evidentiary line. JWST observations reveal LRDs (Greene et al. 2024; Kokorev et al. 2024; Kocevski et al. 2023) hosting supermassive black holes that appear overmassive relative to their host galaxies. TEP provides a directional mechanism through differential temporal topology: the central black hole resides in the deepest potential well, so the central inference-channel response exceeds the halo response ($R_{\rm ML}^{\rm cen} > R_{\rm ML}^{\rm halo}$), and the standard pipeline correspondingly inflates the apparent central accretion window relative to the stellar halo. The analysis below shows that this is not a calibrated closure result, but a stress test of the model's sensitivity to compact-core structure and stellar-mass calibration.
+The Little Red Dot (LRD) population (Greene et al. 2024; Kokorev et al. 2024; Kocevski et al. 2023) is evaluated here as a qualitative stress test of compact-core structure rather than as a primary evidentiary line. TEP provides a directional mechanism: central black holes reside in the deepest potential wells, so central inference-channel responses naturally exceed the stellar halo response ($R_{\rm ML}^{\rm cen} > R_{\rm ML}^{\rm halo}$).
 
-**Quantitative gap-closure test.** The upgraded calculation
-now uses the real Kokorev et al. (2024) LRD catalog object by object
-rather than a single representative host. For the full usable sample ($N
-= 253$ after requiring valid redshift, compactness, and mass inputs),
-the physical potential-ratio analysis gives a conservative median
-differential temporal topology $\Delta\Gamma \approx 0.043$ if one adopts
-a simple UV-based stellar-mass proxy. Under that conservative assumption,
-the TEP-only prediction remains far below the observed LRD regime: the
-median $\log(M_{\rm BH}/M_*)$ is $-5.79$, and the tested intermediate-seed,
-mild super-Eddington, and combined variants remain between $-5.64$ and
-$-4.79$. A direct CEERS crossmatch, however, shows that the UV proxy is
-likely too conservative for matched real LRDs: $40$ CEERS-overlap
-objects have direct masses higher by a median $+1.43$ dex. When that
-calibration is propagated to the larger sample, the unconstrained
-differential topology becomes unstable, causing TEP scenarios to
-overshoot the observed regime by $+0.4$ to $+2.5$ dex. Applying
-physical ceilings to the extrapolation (capping stellar mass at $10^{11} M_\odot$
-and restricting concentration $c$ between 1.0 and 5.0) brings the
-combined TEP scenario to within $-0.26$ dex of the observed LRD median.
-However, the pipeline classifies this branch as exponentially unstable
-(Monte Carlo CI span $\sim 13$ dex), and no robust closure scenario
-exists. The population-level LRD anomaly is not quantitatively resolved.
-
-**Case Study: CAPERS-LRD-z9.** At $z = 9.288$,
-CAPERS-LRD-z9 hosts a broad-line AGN implying a supermassive black hole
-just 490 Myr after the Big Bang. Earlier single-object calculations
-suggested that a central enhancement relative to the host halo could
-materially reduce the required accretion burden. In the corrected
-manuscript this object is treated only as an illustrative compact-core
-example, not as evidence that the population-level LRD anomaly is
-resolved.
-
-
-
-Table 13: Black Hole Growth Mechanisms Compared
-
-| Mechanism | Seed Mass | Growth Rate | Median $\log(M_{\rm BH}/M_*)$ | Offset from Observed | Status |
-| --- | --- | --- | --- | --- | --- |
-| Light seeds (Pop III) | $10^2 M_\odot$ | Eddington | $-6.28$ | $-4.78$ dex | ✗ Too slow |
-| Local mature relation | Empirical reference | Eddington | $-3.0$ | $-1.5$ dex | Reference only |
-| Heavy seeds (DCBH) | $10^5 M_\odot$ | Eddington | Scenario-dependent | Scenario-dependent | ✗ Too rare |
-| TEP only | $10^2 M_\odot$ | Eddington | $-5.79$ | $-4.29$ dex | ✗ Still low |
-| TEP + intermediate seed | $10^3 M_\odot$ | Eddington | $-4.79$ | $-3.29$ dex | ✗ Still low |
-| TEP + Bounded CEERS calibration | $10^2 M_\odot$ | Eddington to mild super-Eddington | $-1.76$ | $-0.26$ dex | △ Plausible but unstable |
-
-Under TEP, compact cores still naturally produce larger central
-inference-channel responses than their stellar halos. That directional prediction
-survives the corrected real-sample calculation, but the population-level
-black-hole closure claim does not. The corrected Kokorev ingestion uses
-the catalog half-light radii in parsecs rather than multiplying them by
-another factor of $1000$, and it replaces the all-object default halo
-mass with an $M_{\rm UV}$-based stellar-mass proxy when direct masses
-are absent. With those fixes, the empirical Kokorev population has a
-median $\log_{10}$ boost of only $0.42$, and only $2.3\%$ of objects
-exceed a $1000\times$ boost. The separate core-halo Monte Carlo still
-demonstrates that sufficiently compact cores can generate large boosts
-in principle, but it no longer supports a claim that the observed LRD
-population is quantitatively resolved.
-
-The main caution for the LRD analysis therefore shifts to the necessary
-dependence on strict structural assumptions. Because the predicted temporal
-boost is exponentially sensitive to core concentration, physical bounds
-must be strictly enforced to prevent divergent extrapolation. When these
-bounds are applied, the combined scenario closes the gap to $-0.26$ dex
-of the observed LRD median, but the pipeline classifies this branch as
-exponentially unstable (Monte Carlo CI span $\sim 13$ dex), with no
-robust closure scenario. The TEP differential topology mechanism is
-structurally capable of accelerating black hole growth toward the observed
-levels, but the population-level LRD anomaly is not quantitatively
-resolved. This is best interpreted as a sensitivity diagnostic rather
-than a calibrated closure. Detailed sensitivity analysis and the
-corrected population-level boost statistics remain in Appendix C.4.
+However, because $R_{\rm ML}$ is an observer-side inference response rather than a physical matter-frame proper time, quantitative accretion growth cannot be computed simply by inserting $R_{\rm ML}$ into an exponential Salpeter accretion integral. Differential central-versus-halo temporal structure may affect the inferred accretion history of compact sources, but a physical growth calculation requires the matter-frame proper-time history $\tau_\star = \int A(\phi)\,dt$ and is deferred to dedicated relativistic core models. The population-level LRD anomaly is accordingly not claimed as quantitatively resolved in this work.
 
 Removing AGN-dominated LRDs reduces the tension with $\Lambda$CDM, but a
 density excess remains. The TEP isochrony correction predicts a
@@ -1511,22 +1469,23 @@ incorporated into the canonical analysis.
 
 
 - 
-**TEP mass correction does not improve astrophysical model fits:** A direct test of the TEP measurement-correction framework applies the correction $M_{\rm true} = M_{\rm obs} - 0.7\log_{10} R_{\rm ML}$ to four standard astrophysical models (Standard Physics, Bursty Star Formation, Varying IMF, AGN Feedback) and compares nested-sampling evidence against the same models with uncorrected mass. The correction is neutral across all four models ($\ln {\rm BF} = +0.3$, $+0.6$, $+1.0$, $-3.4$), with a mean $\ln {\rm BF} = -0.4$ — statistically indistinguishable from zero. This null result means the TEP mass correction, while directionally consistent with the dynamical-mass reconciliation (L4), does not yet recover the true physical driver in a way that improves standard astrophysical model fits. The evidence for TEP therefore rests on the correlation structure (L1, L3, L5) and the regime-level dynamical-mass comparison (L4), not on the mass correction improving forward-model fits. Here L1 is the primary photometric line and L3 is a secondary partial-correlation test.
+**TEP mass correction does not improve astrophysical model fits:** A direct test of the TEP measurement-correction framework applies the correction $M_{\rm true} = M_{\rm obs} - 0.7\log_{10} R_{\rm ML}$ to four standard astrophysical models (Standard Physics, Bursty Star Formation, Varying IMF, AGN Feedback) and compares nested-sampling evidence against the same models with uncorrected mass. The correction is neutral across all four models ($\ln {\rm BF} = +0.3$, $+0.6$, $+1.0$, $-3.4$), with a mean $\ln {\rm BF} = -0.4$ — statistically indistinguishable from zero. This null result means the TEP mass correction, while directionally consistent with the dynamical-mass reconciliation (L4), does not yet recover the true physical driver in a way that improves standard astrophysical model fits. The evidence for TEP therefore rests on the correlation structure (L1, L3, L5) and the regime-level dynamical-mass comparison (L4), not on the mass correction improving forward-model fits. Here L1 is the primary photometric line and L3 is a secondary partial-correlation line.
 
 
 - 
-**Response coefficient uncertainty:** The primary external
-calibration is $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from Paper 11.
+**Response coefficient uncertainty:** The prespecified canonical
+benchmark is $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from Paper 11
+(with independent empirical checks yielding $(0.369 \pm 0.310)\times 10^6$ and $(0.400 \pm 0.270)\times 10^6$ mag).
 Full propagation through the $R_{\rm ML}$ formula confirms that the
 Red Monster SFE anomaly is substantially resolved at the central value
 (mean corrected SFE $\sim 0.18$, below the $\Lambda$CDM limit of
 0.20; Table 3b). The two most massive objects are fully resolved;
 the least massive is 85% resolved. The correction is not fully
-robust to the lower prior bound: at the lower $1\sigma$ of the Paper 11 range,
+robust to the lower benchmark bound: at the lower $1\sigma$ of the Paper 11 range,
 the mean corrected SFE rises to $\sim 0.26$, above the $\Lambda$CDM limit.
 The JWST dust-only and joint concordance
 recoveries are consistent with
-the external prior, but because they arise within the same
+the canonical benchmark, but because they arise within the same
 high-redshift, mass-proxy-linked evidence they are classified
 as internal consistency checks rather than as tighter replacement
 constraints. An earlier result of $0.60 \pm 0.10$ was an artefact of
@@ -1550,7 +1509,7 @@ $\rho = 0.6954$ across the tested range in the $z = 8.5$–$10$ bin. The optimis
 cannot distinguish $\kappa_{\rm gal}$ values and converges to the lower
 boundary by numerical accident. The apparent "$2.15\sigma$ tension"
 is an artefact of using an identically flat objective function, not
-evidence against the externally calibrated response. The corrected
+evidence against the prespecified canonical response benchmark. The corrected
 recovery (internal concordance values consistent with Paper 11
 from the Pearson $R^2$ method) uses multi-observable combination
 sensitive to the calibrated magnitude of $R_{\rm ML}$, not just its
@@ -1574,38 +1533,6 @@ higher-resolution spectroscopic data consistently requires $\kappa_{\rm gal} >
 2 \times 10^6$ mag or $\kappa_{\rm gal} < 2 \times 10^5$ mag, the cross-domain consistency with Cepheids is
 severely challenged.
 
-Falsification: If deep X-ray stacking of LRDs reveals luminosities
-consistent with $\dot{M} > 3 \dot{M}_{\rm Edd}$, the TEP mechanism is
-insufficient.
-
-TEP makes three testable predictions for gravitational wave
-observations:
-
-- 
-**LISA EMRIs:** Extreme mass-ratio inspirals probe the
-$R_{\rm ML}$ field near massive black holes. TEP predicts the NS
-interior is screened at the ISCO ($\rho \gg \rho_T$), but the
-inspiral phase at $r \sim 30 r_{\rm ISCO}$ yields $R_{\rm ML} \approx
-1.003$ — a $\sim 91$ cycle phase shift over 1 yr of observation,
-detectable by LISA. Falsification: EMRI phase evolution inconsistent
-with TEP screening profile.
-
-
-- 
-**Binary pulsars:** The Hulse-Taylor system agrees with
-GR to $0.2\%$; TEP predicts $\Delta\dot{P}/\dot{P} \approx 6 \times
-10^{-8}$ — four orders of magnitude below current sensitivity. TEP
-is compatible with all existing binary pulsar constraints.
-
-
-- 
-**Compact binary merger rates:** In massive high-$z$
-halos ($R_{\rm ML} \approx 2$ at $z = 8$), TEP predicts enhanced BNS
-merger rates ($\sim 2\times$ local rate) and BBH rates ($\sim
-2\times$). Falsification: no redshift evolution of merger rates in
-massive hosts detected by Einstein Telescope or Cosmic Explorer.
-
-
 Several theoretical predictions extend beyond the present JWST sample
 and define additional falsification opportunities in wider survey
 regimes:
@@ -1621,12 +1548,8 @@ mass-dependent age offset at $z \sim 1.5$.
 
 
 - 
-**Roman Supernova Survey ($N \sim 2{,}700$ SNe Ia, $z <
-1.7$):**
-TEP predicts a $1.28\times$ SN Ia rate enhancement in massive hosts
-($R_{\rm ML} \approx 1.28$) and a strengthening Ia/CC ratio with host
-$R_{\rm ML}$. Key falsification: no host mass dependence in
-SN rates at $z > 1$.
+**Roman Supernova Survey ($N \sim 2{,}700$ SNe Ia, $z < 1.7$):**
+TEP predicts host-potential-dependent SN Ia rate enhancements and an elevated Ia/CC ratio with host gravitational potential ($R_{\rm ML}$). Key falsification: no host potential or mass dependence in SN rates at $z > 1$.
 
 
 - 
@@ -1652,8 +1575,10 @@ prop}$. Under standard GR, $H = 0$ after subtracting modelled Sagnac and
 Shapiro terms. Under TEP, $H \neq 0$ if the disformal coupling $B(\phi)
 \neq 0$, with a predicted amplitude:
 
-$$H_{\rm resid} \sim \frac{B(\phi)}{A(\phi)} |\nabla\phi|^2 \times
-\mathcal{A}$$
+\begin{equation} \label{eq:jwst_holonomy_prediction}
+H_{\rm resid} \sim \frac{B(\phi)}{A(\phi)} |\nabla\phi|^2 \times
+\mathcal{A}
+\end{equation}
 
 where $\mathcal{A}$ is the loop area. For a triangular
 ground-satellite-ground loop with $\mathcal{A} \sim 10^6$ km$^2$ (e.g.,
@@ -1701,26 +1626,26 @@ conformal-only sub-theory.
 
 ## 5. Conclusion
 
-JWST has revealed a coherent pattern of anomalies at $z > 5$: ultra-massive galaxies with star formation efficiencies exceeding $\Lambda$CDM limits and stellar masses that can exceed dynamical masses. What links these anomalies is not merely that they are surprising, but that they cluster in the deepest gravitational potentials and point in the same direction — photometrically inferred stellar properties appear too large and too early. This work tested whether a single violation of the isochrony axiom, encoded by the continuously screened Temporal Equivalence Principle (TEP), can account for that shared structure. Using the external Cepheid prior $\\kappa_{\\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag with no JWST retuning, the framework reproduces the scale of the Red Monster efficiency excess and yields a regime-level reconciliation of the $M_*/M_{\rm dyn}$ anomaly. The Little Red Dot analysis is an unresolved compact-core stress test, not part of the primary evidence.
+JWST has revealed a coherent pattern of anomalies at $z > 5$: ultra-massive galaxies with star formation efficiencies exceeding $\Lambda$CDM limits and stellar masses that can exceed dynamical masses. What links these anomalies is not merely that they are surprising, but that they cluster in the deepest gravitational potentials and point in the same direction — photometrically inferred stellar properties appear too large and too early. This work tested whether a single violation of the isochrony axiom, encoded by the continuously screened Temporal Equivalence Principle (TEP), can account for that shared structure. Using the prespecified canonical TEP benchmark $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from Paper 11 with no JWST retuning, the framework reproduces the scale of the Red Monster efficiency excess and yields a regime-level reconciliation of the $M_*/M_{\rm dyn}$ anomaly. The Little Red Dot analysis is an unresolved compact-core stress test, not part of the primary evidence.
 
 
 ### 5.1 Synthesis of Results
 
-The core empirical case rests on the dust–$R_{\rm ML}$ emergence (L1) as the primary photometric line, supported by a secondary $R_{\rm ML}$–sSFR partial correlation test (L3). The SUSPENSE kinematic comparison (L5) narrows the mass-circularity objection: $R_{\rm ML}$ retains residual age information after $M_*$+$z$ control ($\rho = +0.556$, $p=0.032$), whereas $M_*$ contributes no residual signal once $R_{\rm ML}$+$z$ are controlled. A broader ($N=75$) sigma-based expansion is mixed: the pooled partial rank correlation is positive ($\rho=+0.46$, $p=3\times10^{-5}$), but tracer stratification reveals that the clean absorption-line subsample ($N=20$) gives the wrong sign ($\rho=-0.26$, $p=0.27$), while the emission-line subsample ($N=55$, contaminated by gas outflows and turbulence) drives the pooled signal ($\rho=+0.29$, $p=0.03$). Absorption-line dispersion is therefore designated as the primary kinematic test and the pooled result is classified as mixed. L2 provides specific controlled central-concentration support (Gini $\rho=+0.191$), though the direct colour-gradient partial is null ($\rho=+0.037$, $p=0.54$) — a result that may reflect a predictor mismatch, since the global halo-scale $R_{\rm ML}$ cannot resolve the radial screening profile. L4 provides a derived regime-level reconciliation of the dynamical-mass tension.
+The core empirical case rests on the dust–$R_{\rm ML}$ emergence (L1) as the primary photometric line, supported by a secondary $R_{\rm ML}$–sSFR partial correlation line (L3). The SUSPENSE kinematic comparison (L5) narrows the mass-circularity objection: $R_{\rm ML}$ retains residual age information after $M_*$+$z$ control ($\rho = +0.556$, $p=0.032$), whereas $M_*$ contributes no residual signal once $R_{\rm ML}$+$z$ are controlled. A broader ($N=75$) sigma-based expansion is mixed: the pooled partial rank correlation is positive ($\rho=+0.46$, $p=3\times10^{-5}$), but tracer stratification reveals that the clean absorption-line subsample ($N=20$) gives the wrong sign ($\rho=-0.26$, $p=0.27$), while the emission-line subsample ($N=55$, contaminated by gas outflows and turbulence) drives the pooled signal ($\rho=+0.29$, $p=0.03$). Absorption-line dispersion is therefore designated as the primary kinematic test and the pooled result is classified as mixed. L2 provides specific controlled central-concentration support (Gini $\rho=+0.191$), though the direct colour-gradient partial is null ($\rho=+0.037$, $p=0.54$) — a result that may reflect a predictor mismatch, since the global halo-scale $R_{\rm ML}$ cannot resolve the radial screening profile. L4 provides a derived regime-level reconciliation of the dynamical-mass tension.
 
 
 ### 5.2 Interpretative Framework
 
-Physical processes require proper time. Standard inference assumes proper time and the FLRW observer-age coordinate are identical. The JWST anomalies appear precisely where this identification fails. In the canonical TEP cosmology the spatial manifold is static and the gravitational coordinate time extends without finite origin (TEP-HUB, Paper 30); the FLRW age $t_{\rm cosmic}(z)$ is a reconstruction under isochrony that shrinks to a few hundred Myr at high redshift. Local clocks run slower than coordinate time ($\Delta\ln A<0$ in a deeper well), but the coordinate background is eternal, so accumulated proper time can still exceed the FLRW assigned age by a large factor. The inference-channel response $R_{\rm ML}$ quantifies how much the standard pipeline inflates apparent age and $M/L$ when it uses the too-short FLRW baseline, and a single parameter propagates coherently through stellar ages, mass-to-light ratios, dust buildup, star-formation diagnostics, and dynamical-mass comparisons.
+Physical processes require proper time. Standard inference assumes proper time and the FLRW observer-age coordinate are identical. The JWST anomalies appear precisely where this identification fails. In the canonical TEP cosmology the spatial manifold is static and the gravitational coordinate time extends without finite origin (TEP-HUB, Paper 30); the FLRW age $t_{\rm cosmic}(z)$ is a reconstruction under isochrony that shrinks to a few hundred Myr at high redshift. Local clocks run slower than coordinate time ($\Delta\ln A<0$ in a deeper well), but the coordinate background is eternal, so accumulated proper time can still exceed the FLRW assigned age by a large factor. The inference-channel response $R_{\rm ML}$ quantifies how much the standard pipeline inflates apparent age and $M/L$ when it uses the too-short FLRW baseline, and a single parameter propagates coherently through stellar ages, mass-to-light ratios, apparent dust-evolution diagnostics, star-formation diagnostics, and dynamical-mass comparisons.
 
-The primary Bayesian result uses a joint covariance likelihood that accounts for correlated SED outputs: the covariance-corrected TEP model outperforms the covariance-corrected standard mass-plus-redshift model by $\ln{\rm BF}=+64.1$ with four fewer parameters (decisive on the Kass–Raftery scale). An orthogonalized sensitivity analysis, in which alternative mass predictors are levelled against $R_{\rm ML}$ to prevent circular absorption of the TEP signal, yields a mean $\ln{\rm BF}=+126.2$ across eleven alternatives: $+141.2$ versus standard physics, $+138.5$ versus bursty star formation, $+130.5$ versus the $M_* \times \sqrt{1+z}$ interaction null, $+118.1$ versus the AGN-threshold model, $+113.9$ versus varying-IMF, and $+93.1$ versus the quadratic baseline. A quadratic mass-plus-redshift baseline confirms the signal is not generic nonlinearity: TEP alone exceeds the quadratic baseline by $\ln{\rm BF}=+93.1$, and the TEP-augmented model exceeds it by $\ln{\rm BF}=+106.7$. The covariance-corrected result ($+64.1$) is adopted as the headline because it does not depend on the TEP-conditioned orthogonalization; the orthogonalized family is reported as a secondary sensitivity analysis.
+A nested Bayesian model comparison using a joint covariance likelihood that accounts for correlated SED outputs outperforms the standard mass-plus-redshift baseline by $\ln{\rm BF}=+64.1$ with four fewer parameters (and $\ln{\rm BF}=+62.6$ in the 3-observable physical subset under orthogonalized predictors, versus $\ln{\rm BF}=-14.0$ when standard physics fits 10 unconstrained parameters). An orthogonalized sensitivity analysis across eleven alternatives yields a mean $\ln{\rm BF}=+126.2$. The Bayesian model comparison is positioned as supportive global context alongside the direct kinematic comparisons (SUSPENSE) and the multi-survey photometric correlation structure.
 
-The cross-domain consistency of the coupling remains a major feature of the evidence base. The local Cepheid analysis provides the external prior $\\kappa_{\\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from 29 hosts at $z \\approx 0$, while the informative JWST high-redshift analyses recover $\kappa = (6.0 \pm 3.8) \times 10^5$ mag. This is consistent with the Cepheid prior at $0.66\sigma$, and the internal concordance test is passed ($p_{\rm concordance}=1.0$), confirming anchor consistency.
+The cross-domain consistency of the coupling remains a major feature of the evidence base. The prespecified canonical benchmark $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from Paper 11 (where empirical checks recover $(0.369 \pm 0.310)\times 10^6$ and $(0.400 \pm 0.270)\times 10^6$ mag) provides the magnitude-sector normalization, while the informative JWST high-redshift analyses recover $\kappa = (6.0 \pm 3.8) \times 10^5$ mag. This is consistent with the canonical benchmark at $0.66\sigma$, and the internal concordance test is passed ($p_{\rm concordance}=1.0$), confirming anchor consistency.
 
 
 Key signatures survive a 0.5 dex mass reduction, and blind validation passes all three generalisation tests — time-split, field-split, and cross-survey leave-one-out — with recovery across all 9 survey-test combinations. Each of the three independent JWST surveys confirms the dust relation individually above $5\sigma$, and all three independently confirm that $t_{\rm eff}$ outperforms $t_{\rm cosmic}$ at $>5\sigma$ (combined Steiger $Z = 25.7$), ruling out pure redshift ordering. A Fisher combination across the three photometric datasets gives $z = 24.9\sigma$ ($p = 1.1 \times 10^{-136}$). Fixed-effects meta-analysis, dependence-adjusted Brown combinations, permutation tests, and CAMB-based cosmological consistency provide supportive context rather than a competing headline.
 
-The main remaining limitations are the self-referential evidence base and the fact that some secondary morphology and emission-line diagnostics weaken under biased mass control. These caveats sit within an evidential structure whose spine is coherent: the primary photometric line (L1), a secondary $R_{\rm ML}$–sSFR partial correlation test (L3), a direct kinematic comparison whose one-sided conditional asymmetry narrows the mass-circularity objection, an ancillary screening indication, and a derived dynamical-mass comparison.
+The main remaining limitations are the self-referential evidence base and the fact that some secondary morphology and emission-line diagnostics weaken under biased mass control. These caveats sit within an evidential structure whose spine is coherent: the primary photometric line (L1), a secondary $R_{\rm ML}$–sSFR partial correlation line (L3), a direct kinematic comparison whose one-sided conditional asymmetry narrows the mass-circularity objection, an ancillary screening indication, and a derived dynamical-mass comparison.
 
 
 ### 5.3 Falsification Criteria
@@ -1732,7 +1657,7 @@ TEP makes specific, quantitative predictions that can be tested against addition
 
 Table 14: TEP Falsification Criteria
 
-| Observable | Standard Physics Prediction | TEP Prediction | Falsification Criteria |
+| Observable | Baseline Comparison | TEP Prediction | Falsification Criteria |
 | --- | --- | --- | --- |
 | Mass-Dust ($z > 8$) | No correlation or Negative | Strong Positive ($\rho > 0.4$) | $\rho \approx 0$ or Negative |
 | Balmer Absorption | Correlates with $z$ | Correlates with $M_*$ at fixed $z$ | No mass trend |
@@ -1741,7 +1666,7 @@ Table 14: TEP Falsification Criteria
 | [OIII]/H$\beta$ vs $R_{\rm ML}$ | Correlates with mass | Weak correlation ($\rho < 0.1$) | Strong correlation ($\rho > 0.3$) |
 | Radial Age Gradient | Inside-out (Red Core, Blue Out) | Core Screening (Blue Core, Red Out) | Standard inside-out gradients in massive high-z galaxies |
 | Time-Lens Ordering | Properties track $z_{\rm obs}$ | Properties track $z_{\rm eff}$ | Correlation with $z_{\rm obs}$ is stronger than with $z_{\rm eff}$ |
-| Type Ia / CC SN Ratio | No $R_{\rm ML}$ dependence | Ia/CC $\propto R_{\rm ML}^{0.5}$; Ia rate $4.4\times$ enhanced in high-$R_{\rm ML}$ hosts; CC rate unchanged ($\rho \approx 0$) | Significant deviation from predicted scaling across $R_{\rm ML}$ at fixed $M_*$ (e.g. Roman Space Telescope High-Latitude Time Domain Survey) |
+| Type Ia / CC SN Ratio | No $R_{\rm ML}$ dependence | Positive correlation of Ia/CC ratio with host gravitational potential / $R_{\rm ML}$; CC rate uncoupled | No host potential dependence of Ia/CC ratio at fixed mass (e.g. Roman Space Telescope High-Latitude Time Domain Survey) |
 | Coupling Recovery | N/A | $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag (Paper 11); JWST recovery $(6.0 \pm 3.8)\times10^5$ mag is anchor-consistent ($0.66\sigma$) and internally concordant | Independent recovery yielding factor $>2$ discrepancy from Paper 11 |
 
 
@@ -1982,15 +1907,16 @@ the Einstein frame is:
 
 
 
-$$\mathcal{L} = \frac{M_{\rm Pl}^2}{2} R - \frac{1}{2} K(\phi)
+\begin{equation} \label{eq:jwst_lagrangian}
+\mathcal{L} = \frac{M_{\rm Pl}^2}{2} R - \frac{1}{2} K(\phi)
 (\partial\phi)^2 - V(\phi) + \mathcal{L}_{\rm matter}[\psi,
-\tilde{g}_{\mu\nu}]$$
+\tilde{g}_{\mu\nu}]
+\end{equation}
 
 
 The theory assumes a disformal coupling where non-gravitational matter couples to a causal matter metric $\tilde g_{\mu\nu} = A^2(\phi)g_{\mu\nu} + B(\phi)\nabla_\mu\phi\nabla_\nu\phi$, where the conformal sector is dominant for clock observables. The JWST response normalization
-$K_{\rm gal}$ is informed by the Cepheid-calibrated response scale $\kappa_{\rm gal}$
-measured in Paper 11. It is a transferred galaxy-sector effective normalization,
-not the Cepheid coefficient itself and not a microscopic scalar coupling.
+$K_{\rm gal}$ is informed by the prespecified canonical magnitude-sector response benchmark $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from Paper 11 (where empirical Cepheid analyses recover $\kappa_{\rm equiv}^{42} = (0.369 \pm 0.310)\times 10^6$ and $\kappa_{\rm Cep}^{44} = (0.400 \pm 0.270)\times 10^6$ mag). It is a transferred galaxy-sector effective normalization,
+not the empirical Cepheid coefficient itself and not a microscopic scalar coupling.
 $K_{\rm gal}$ is not identified with bare couplings ($\beta_A$, $\kappa_{\rm Cep}$,
 or $\alpha_{\rm clock}$). A microscopic mapping requires a solved transfer function
 that absorbs stellar physics, environmental activation, and field gradients.
@@ -2000,24 +1926,32 @@ exponential $R_{\rm ML}$ kernel. No JWST-specific refit.
 
 The complete action in the Einstein frame is:
 
-$$S = S_{\rm grav} + S_\phi + S_{\rm matter}$$
+\begin{equation} \label{eq:jwst_action_total}
+S = S_{\rm grav} + S_\phi + S_{\rm matter}
+\end{equation}
 where the gravitational sector is:
 
 
-$$S_{\rm grav} = \int d^4x \sqrt{-g} \frac{M_{\rm Pl}^2}{2} R$$
+\begin{equation} \label{eq:jwst_action_grav}
+S_{\rm grav} = \int d^4x \sqrt{-g} \frac{M_{\rm Pl}^2}{2} R
+\end{equation}
 
 the scalar field sector is:
 
 
-$$S_\phi = \int d^4x \sqrt{-g} \left[ -\frac{1}{2} K(\phi) g^{\mu\nu}
-\partial_\mu\phi \partial_\nu\phi - V(\phi) \right]$$
+\begin{equation} \label{eq:jwst_action_scalar}
+S_\phi = \int d^4x \sqrt{-g} \left[ -\frac{1}{2} K(\phi) g^{\mu\nu}
+\partial_\mu\phi \partial_\nu\phi - V(\phi) \right]
+\end{equation}
 
 and matter couples to the Jordan-frame metric:
 
 
-$$S_{\rm matter} = S_{\rm matter}[\psi, \tilde{g}_{\mu\nu}], \quad
+\begin{equation} \label{eq:jwst_action_matter}
+S_{\rm matter} = S_{\rm matter}[\psi, \tilde{g}_{\mu\nu}], \quad
 \tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu\phi
-\nabla_\nu\phi$$
+\nabla_\nu\phi
+\end{equation}
 
 
 The conformal factor $A(\phi) = \exp(\beta_A\phi/M_{\rm Pl})$ controls 
@@ -2035,21 +1969,27 @@ equations:
 
 
 
-$$G_{\mu\nu} = \frac{1}{M_{\rm Pl}^2} \left[ T_{\mu\nu}^{(\phi)} +
-T_{\mu\nu}^{(\rm matter)} \right]$$
+\begin{equation} \label{eq:jwst_einstein_modified}
+G_{\mu\nu} = \frac{1}{M_{\rm Pl}^2} \left[ T_{\mu\nu}^{(\phi)} +
+T_{\mu\nu}^{(\rm matter)} \right]
+\end{equation}
 
 where the scalar field stress-energy is:
 
 
-$$T_{\mu\nu}^{(\phi)} = K(\phi) \partial_\mu\phi \partial_\nu\phi -
+\begin{equation} \label{eq:jwst_scalar_stress_energy}
+T_{\mu\nu}^{(\phi)} = K(\phi) \partial_\mu\phi \partial_\nu\phi -
 g_{\mu\nu} \left[ \frac{1}{2} K(\phi) (\partial\phi)^2 + V(\phi)
-\right]$$
+\right]
+\end{equation}
 
 Variation with respect to $\phi$ yields the scalar field equation:
 
 
-$$K(\phi) \Box\phi + \frac{1}{2} K'(\phi) (\partial\phi)^2 - V'(\phi) =
--\frac{\beta}{M_{\rm Pl}} T^{(\rm matter)}$$
+\begin{equation} \label{eq:jwst_scalar_eom}
+K(\phi) \Box\phi + \frac{1}{2} K'(\phi) (\partial\phi)^2 - V'(\phi) =
+-\frac{\beta}{M_{\rm Pl}} T^{(\rm matter)}
+\end{equation}
 
 
 where $T^{(\rm matter)} = \tilde{g}^{\mu\nu} \tilde{T}_{\mu\nu}$ is the
@@ -2069,7 +2009,11 @@ density-dependent saturation profile:
 
 
 
-$$R_{\rm gal}(E) = \kappa_{\rm gal} \cdot \mathcal{S}_{\rm gal}(E)$$
+\begin{equation} \label{eq:jwst_screening_response}
+R_{\rm gal}(E) = \kappa_{\rm gal} \cdot \mathcal{S}_{\rm gal}(E)
+\end{equation}
+
+
 The screening mechanism operates through the density-dependent
 saturation of the observable response: $R_{\rm gal}(E) = \kappa_{\rm gal}
 \cdot \mathcal{S}_{\rm gal}(E)$ where $\rho_T \approx 20$ g/cm³ is the
@@ -2078,6 +2022,7 @@ boundary conditions, and density. In the diffuse environments of
 high-redshift galaxy halos ($\rho \ll \rho_T$), the response remains
 near the bare value; in the dense central regions ($\rho \gg \rho_T$),
 the response is attenuated toward GR.
+
 
 
 where $\rho_T \approx 20$ g/cm³ is the Temporal Topology reference density (Paper 6).
@@ -2095,7 +2040,9 @@ high-redshift galaxies where the Red Monster and LRD anomalies are observed.
 In the unscreened limit, the Eddington PPN parameter is:
 
 
-$$\gamma - 1 = -\frac{2\alpha_{\rm photon}^2}{1 + \alpha_{\rm photon}^2}$$
+\begin{equation} \label{eq:jwst_ppn_gamma}
+\gamma - 1 = -\frac{2\alpha_{\rm photon}^2}{1 + \alpha_{\rm photon}^2}
+\end{equation}
 
 
 For an unscreened bare coupling $\beta_A \sim 0.8$, this would give $|\gamma -
@@ -2114,7 +2061,9 @@ validate this assumption, a numerical solution of the static spherical
 scalar field equation of motion was obtained:
 
 
-$$\nabla^2 \phi = \frac{dV_{\rm eff}}{d\phi}$$
+\begin{equation} \label{eq:jwst_scalar_bvp}
+\nabla^2 \phi = \frac{dV_{\rm eff}}{d\phi}
+\end{equation}
 
 for a standard NFW density profile. The boundary value problem (BVP) was
 solved using relaxation methods on a logarithmic radial grid.
@@ -2149,9 +2098,9 @@ screened.
 #### A.1.5b Observable Response Coefficient and the $R_{\rm ML}$ Kernel
 
 
-The JWST response normalization $K_{\rm gal}$ is informed by the Cepheid response
-scale $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag measured in Paper 11.
-It is a transferred galaxy-sector effective normalization, not the Cepheid coefficient
+The JWST response normalization $K_{\rm gal}$ is informed by the prespecified canonical magnitude-sector
+response benchmark $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag from Paper 11 (where independent empirical Cepheid analyses recover $\kappa_{\rm equiv}^{42} = (0.369 \pm 0.310) \times 10^6$ mag and $\kappa_{\rm Cep}^{44} = (0.400 \pm 0.270) \times 10^6$ mag).
+It is a transferred galaxy-sector effective normalization, not the empirical Cepheid coefficient
 itself and not a microscopic scalar coupling. Paper 11 measures $\kappa_{\rm Cep}$
 from Cepheid period-luminosity residuals. The conversion to the exponential
 $R_{\rm ML}$ kernel defines $K_{\rm gal}$.
@@ -2164,7 +2113,9 @@ with $n \approx 0.7$:
 
 
 
-$$\Delta M = -2.5 \log_{10}(R_{\rm ML}^n) = \frac{2.5 n K}{\ln 10} \frac{\Delta\Phi}{c^2}$$
+\begin{equation} \label{eq:jwst_delta_mag}
+\Delta M = -2.5 \log_{10}(R_{\rm ML}^n) = \frac{2.5 n K}{\ln 10} \frac{\Delta\Phi}{c^2}
+\end{equation}
 
 
 Equating with $\Delta M = \kappa_{\rm gal} \Delta\Phi/c^2$ yields the 
@@ -2172,7 +2123,9 @@ response normalization:
 
 
 
-$$K = \frac{\kappa_{\rm gal} \ln 10}{2.5 n} \approx 1.26 \times 10^6$$
+\begin{equation} \label{eq:jwst_kgal_normalization}
+K = \frac{\kappa_{\rm gal} \ln 10}{2.5 n} \approx 1.26 \times 10^6
+\end{equation}
 
 
 Here $\kappa_{\rm gal}$ denotes the derived galaxy-sector effective response
@@ -2195,9 +2148,9 @@ of galaxy assembly ($z \sim 2$–$6$).
 
 
 The SFE anomaly resolution remains significant over the
-$1\sigma$ range of the externally calibrated galaxy-sector response
+$1\sigma$ range of the prespecified canonical galaxy-sector response benchmark
 ($\kappa_{\rm gal} \in [5.6, 13.6] \times 10^5$ mag, derived from the
-Paper 11 Cepheid prior $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag).
+Paper 11 canonical benchmark $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag).
 At the central value, the mean corrected SFE is $\sim 0.18$ (95% anomaly
 resolution). At the lower bound ($\kappa_{\rm gal} = 5.6 \times 10^5$ mag),
 the mean corrected SFE rises to $\sim 0.26$ (80% anomaly resolution),
@@ -2213,7 +2166,7 @@ uncertainty for the least massive object.
 
 
 While the response coefficient is drawn from the
-external Cepheid calibration (Paper 11, $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag; not tuned to JWST data), the $R_{\rm ML}$
+prespecified canonical benchmark (Paper 11, $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag; not tuned to JWST data), the $R_{\rm ML}$
 formula itself contains fixed structural choices that act as implicit
 priors. These choices constrain the functional form of the
 inference-channel response and deserve explicit acknowledgment:
@@ -2239,9 +2192,8 @@ Table A1: Structural Assumptions in the TEP Formula
 
 
 - 
-Exponential form:** Directly derived from the
-conformal coupling in the TEP action (§A.1). This is not a free
-choice but a consequence of the two-metric structure.
+Exponential form:** The exponential dependence is motivated by the
+conformal $A(\phi)$ structure in the TEP action (§A.1); the specific observable mapping from halo potential and redshift into $R_{\rm ML}$ remains a phenomenological closure.
 
 
 - 
@@ -2274,7 +2226,7 @@ slightly (e.g., $M^{0.6}$ to $M^{0.7}$).
 
 **How sensitive are the results to these choices?**
 Sensitivity analyses show that varying the galaxy-sector
-response coefficient $\kappa_{\rm gal}$ (the Cepheid-calibrated prior
+response coefficient $\kappa_{\rm gal}$ (the canonical benchmark
 from Paper 11) over its $1\sigma$ range changes the mean
 corrected Red Monster SFE from $\sim 0.26$ (lower bound, above the
 $\Lambda$CDM limit) to $\sim 0.12$ (upper bound, fully resolved),
@@ -2304,8 +2256,8 @@ would not reverse the sign of any correlation.
 
 
 **Why this matters for intellectual honesty.** The claim
-that TEP preserves a no-JWST-specific-refit test of an externally calibrated response prior refers to the fact that
-$\kappa_{\rm gal}$ is drawn from the external Cepheid calibration
+that TEP preserves a no-JWST-specific-refit test of a prespecified response benchmark refers to the fact that
+$\kappa_{\rm gal}$ is drawn from the canonical benchmark
 ($\kappa_{\rm gal} = 9.6 \times 10^5$ mag from Paper 11), not tuned to JWST data. The galaxy-sector
 response $K_{\rm gal}$ is derived from $\kappa_{\rm gal}$ via the stellar-population
 transfer $K_{\rm gal} = \kappa_{\rm gal}\ln 10/(2.5\,n)$—there is a phenomenological transfer to the stellar-population
@@ -2380,8 +2332,10 @@ governed by the modified Jeans equation:
 
 
 
-$$\ddot{\delta} + 2H\dot{\delta} - 4\pi G_{\rm eff} \bar{\rho}_m \delta
-= 0$$
+\begin{equation} \label{eq:jwst_jeans}
+\ddot{\delta} + 2H\dot{\delta} - 4\pi G_{\rm eff} \bar{\rho}_m \delta
+= 0
+\end{equation}
 
 
 where $G_{\rm eff} = G_N (1 + 2\beta_A^2)$ in the unscreened regime. For
@@ -2430,8 +2384,10 @@ gives:
 
 
 
-$$\beta_{A,\rm eff} \lesssim 5.5 \times 10^{-2}, \quad \frac{G_{\rm
-eff}}{G_N} \lesssim 1.006$$
+\begin{equation} \label{eq:jwst_sigma8_bound}
+\beta_{A,\rm eff} \lesssim 5.5 \times 10^{-2}, \quad \frac{G_{\rm
+eff}}{G_N} \lesssim 1.006
+\end{equation}
 
 
 This implies that any Temporal Shear responsible for the halo-scale
@@ -2445,7 +2401,7 @@ wavelength produces Yukawa suppression beyond a characteristic range.
 #### A.1.9 Scale-Dependent Screening: A Quantitative Model
 
 
-The apparent tension between the halo-scale response (Cepheid-calibrated $\kappa_{\rm gal}$ prior from Paper 11)
+The apparent tension between the halo-scale response (canonical $\kappa_{\rm gal}$ benchmark from Paper 11)
 and the $\sigma_8$ constraint ($\beta_{A,\rm eff}
 \lesssim 0.055$) is resolved by environment-dependent screening. This
 section provides a quantitative model demonstrating how the required
@@ -2464,7 +2420,9 @@ the ambient density $\rho$ to the saturation scale $\rho_T$:
 
 
 
-$$S = \left(\frac{\rho}{\rho_T}\right)^{1/3}$$
+\begin{equation} \label{eq:jwst_screening_factor}
+S = \left(\frac{\rho}{\rho_T}\right)^{1/3}
+\end{equation}
 
 
 When $S \gg 1$, the ambient density exceeds the saturation scale, the
@@ -2516,8 +2474,10 @@ $\rho_{\text{mean}} \sim 10^{-30}$ g/cm³ gives a screening factor:
 
 
 
-$$S_{\text{cosmic}} =
-\left(\frac{\rho_{\text{mean}}}{\rho_T}\right)^{1/3} \sim 10^{-10}$$
+\begin{equation} \label{eq:jwst_s_cosmic}
+S_{\text{cosmic}} =
+\left(\frac{\rho_{\text{mean}}}{\rho_T}\right)^{1/3} \sim 10^{-10}
+\end{equation}
 
 
 This extremely small screening factor indicates that on cosmological
@@ -2529,9 +2489,11 @@ radius at cosmic mean density), the effective coupling is:
 
 
 
-$$\beta_{A,\rm eff}(R_8) \approx \beta_A \times
+\begin{equation} \label{eq:jwst_beta_eff_r8}
+\beta_{A,\rm eff}(R_8) \approx \beta_A \times
 \left(\frac{\lambda_s}{R_8}\right)^{1/2} \approx 0.58 \times 0.01
-\approx 0.006$$
+\approx 0.006
+\end{equation}
 
 
 This is well below the Planck 2$\sigma$ bound of $\beta_{A,\rm eff}
@@ -2550,8 +2512,10 @@ $R_{\rm vir} \sim 200$ kpc for a Milky Way-mass halo. At halo densities
 
 
 
-$$S_{\text{halo}} = \left(\frac{\rho_{\text{halo}}}{\rho_T}\right)^{1/3}
-\sim 10^{-9} \ll 1$$
+\begin{equation} \label{eq:jwst_s_halo}
+S_{\text{halo}} = \left(\frac{\rho_{\text{halo}}}{\rho_T}\right)^{1/3}
+\sim 10^{-9} \ll 1
+\end{equation}
 
 
 This extremely small screening factor indicates that galaxy halos are
@@ -2610,7 +2574,7 @@ parameter $\rho_T$, not multiple tuned scales.
 **Summary: Resolving the $\sigma_8$ Tension**
 
 
-The apparent conflict between halo-scale response (Cepheid-calibrated $\kappa_{\rm gal}$ prior from Paper 11)
+The apparent conflict between halo-scale response (canonical $\kappa_{\rm gal}$ benchmark from Paper 11)
 and $\beta_{A,\rm eff} \lesssim 0.055$ (Planck $\sigma_8$
 constraint) is resolved by:
 
@@ -2660,15 +2624,19 @@ growth ODE is:
 
 
 
-$$D''(a) + \left(\frac{3}{a} + \frac{E'}{E}\right) D'(a) -
+\begin{equation} \label{eq:jwst_growth_ode}
+D''(a) + \left(\frac{3}{a} + \frac{E'}{E}\right) D'(a) -
 \frac{3}{2}\frac{\Omega_m(a)}{a^2}\frac{G_{\rm eff}(k,z)}{G_N} D(a) =
-0$$
+0
+\end{equation}
 
 with the scale-dependent coupling incorporating the screening length:
 
 
-$$\frac{G_{\rm eff}(k,z)}{G_N} = 1 + 2\beta^2 \frac{k^2}{k^2 +
-m_\phi(z)^2}$$
+\begin{equation} \label{eq:jwst_geff_yukawa}
+\frac{G_{\rm eff}(k,z)}{G_N} = 1 + 2\beta^2 \frac{k^2}{k^2 +
+m_\phi(z)^2}
+\end{equation}
 
 
 where $\beta$ is the bare scalar coupling ($\beta = 1.0$ in the fiducial
@@ -2869,7 +2837,7 @@ conclusion.
 
 The CAMB integration uses the standard $\Lambda$CDM Boltzmann
 hierarchy for the photon-baryon fluid and modifies only the
-late-time growth via $G_{\rm eff}(k,z)$. This is justified because
+late-time growth via $G_{\rm eff}(k,z)$. These CAMB calculations are conventional-background compatibility embeddings used to demonstrate that the local screened sector need not spoil observed CMB/growth phenomenology; they are not the canonical static-space TEP cosmological solution. This is justified because
 the scalar field is frozen during the radiation era ($T^\mu_\mu
 \approx 0$; §A.1.7), so the primary acoustic peaks at $z \sim 1089$
 are unmodified. A natively coupled scalar-field Boltzmann solver
@@ -2900,7 +2868,9 @@ factor compares the ambient density $\rho$ to the saturation density:
 
 
 
-$$S = \left(\frac{\rho}{\rho_T}\right)^{1/3}$$
+\begin{equation} \label{eq:jwst_screening_factor_alt}
+S = \left(\frac{\rho}{\rho_T}\right)^{1/3}
+\end{equation}
 
 
 This dimensionless ratio arises from the condition that the scalar
@@ -2936,8 +2906,10 @@ screening factor is:
 
 
 
-$$S_{\text{halo}} = \left(\frac{\rho_{\text{halo}}}{\rho_T}\right)^{1/3}
-\sim 10^{-9} \ll 1$$
+\begin{equation} \label{eq:jwst_s_halo_alt}
+S_{\text{halo}} = \left(\frac{\rho_{\text{halo}}}{\rho_T}\right)^{1/3}
+\sim 10^{-9} \ll 1
+\end{equation}
 
 
 This dimensionless ratio confirms that galaxy halos are deeply
@@ -3054,7 +3026,7 @@ independent of the screening mechanism:
 
 
 - 
-Observable Response Coefficient: $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag (Cepheid calibration, Paper 11), transferred to galaxy sector through $K_{\rm gal}$
+Observable Response Coefficient: $\kappa_{\rm gal} = (9.6 \pm 4.0) \times 10^5$ mag (Canonical benchmark, Paper 11), transferred to galaxy sector through $K_{\rm gal}$
 
 
 - Inference-channel response: $R_{\rm ML}$ is driven by the local scalar field value but is not identified with the conformal factor $A(\phi)$
@@ -3084,7 +3056,7 @@ Paper 0 (Smawfield 2025) adopted what was then described as chameleon screening
 (now refined as Temporal Topology) as the simplest realization consistent with the canonical TEP action. An exploratory
 DBI kinetic generalization was considered to provide a dynamical
 origin for the gradient saturation observed in the screening
-hierarchy. The cosmology paper (Paper 11) correctly noted that the
+hierarchy. Paper 11 noted that the
 screening mechanism "remains to be derived from first principles"
 and that the phenomenology "mimics chameleon or Vainshtein
 screening." This agnostic position is adopted here: the robust
@@ -3106,7 +3078,7 @@ transition regime.
 
 The core of the TEP analysis is the mapping from halo mass and redshift
 to the observable mass-to-light inference response $R_{\rm ML}$. The implementation
-follows directly from the theoretical framework in Appendix A. The galaxy-sector kernel is $K_{\rm gal} = \kappa_{\rm gal}\ln 10/(2.5\,n) \approx 1.26\times10^6$, transferring the Cepheid magnitude-sector response $\kappa_{\rm gal}$ to the stellar-population sector with nuclear-burning exponent $n=0.7$. From
+follows directly from the theoretical framework in Appendix A. The galaxy-sector kernel is $K_{\rm gal} = \kappa_{\rm gal}\ln 10/(2.5\,n_{\rm ref}) \approx 1.26\times10^6$, transferring the prespecified canonical magnitude-sector response benchmark $\kappa_{\rm gal}$ to the stellar-population sector using the reference exponent $n_{\rm ref}=0.7$. From
 `scripts/utils/tep_model.py`:
 
 
@@ -3141,46 +3113,10 @@ return compute_ml_response_from_depth(psi, z, kappa=kappa, n=n)
 
 
 
-### B.2 Differential Temporal Topology (Black Hole Growth)
+### B.2 Differential Central-versus-Halo Temporal Structure
 
 
-The simulation of runaway black hole growth (§4.4) integrates the
-differential inference-channel response between the galactic center and the halo. The
-core integration loop from the overmassive black hole analysis script:
-
-
-
-
-
-```python
-def calculate_growth_boost(z_start, z_end, gamma_cen_func, gamma_halo_func):
-"""
-Calculate the growth boost factor due to differential inference-channel response.
-
-Boost = exp( Integral [ (R_ML_cen - R_ML_halo) dt_cosmic ] / t_Salpeter )
-"""
-t_salpeter = 0.045 # Gyr (Eddington e-folding time)
-
-# Integrate over cosmic time
-times = np.linspace(cosmo.age(z_start).value, cosmo.age(z_end).value, 1000)
-zs = [z_at_value(cosmo.age, t * u.Gyr) for t in times]
-
-integral = 0
-for i in range(len(times) - 1):
-dt = times[i+1] - times[i]
-z_curr = zs[i]
-
-# Differential response at this epoch
-d_gamma = gamma_cen_func(z_curr) - gamma_halo_func(z_curr)
-
-# Add to cumulative time differential
-integral += d_gamma * dt
-
-# Exponentiate to get mass growth factor
-boost = np.exp(integral / t_salpeter)
-return boost
-```
-
+As discussed in §4.4, differential potential depth between galactic centers and outskirts naturally produces differential inference-channel responses ($R_{\rm ML}^{\rm cen} > R_{\rm ML}^{\rm halo}$). However, because $R_{\rm ML}$ is an observer-side inference response rather than physical matter-frame proper time $\tau_\star$, physical accretion integrals require the full scalar-tensor metric history $\tau_\star = \int A(\phi)\,dt$ and are deferred to dedicated relativistic core models.
 
 
 
@@ -3390,7 +3326,7 @@ the core saturation scale $\rho_T \approx 20$ g/cm³, the Sun's deep
 Newtonian potential ($\Phi_N \sim 10^{-6}$) ensures that the field
 gradient vanishes in the interior, with only a narrow outer region
 contributing to the scalar force. The effective coupling is suppressed
-to $\kappa_{\rm eff} \ll \beta_A$, reducing $\kappa_{\rm eff}$ to
+to $\beta_{\rm eff} \ll \beta_A$, reducing $\beta_{\rm eff}$ to
 $\lesssim 10^{-6}$ and satisfying all solar system bounds without
 invoking a rigid thin-shell approximation.
 
@@ -3646,8 +3582,8 @@ Table C4: Model Discrimination and Falsifiability Tests
 | Dust Model Comparison | TEP 46.5× vs SN-only 10× | Dust physics favors TEP |
 | Cross-Survey Systematics | $\rho$ scatter = 0.024 across surveys | Consistent across survey analyses |
 | AGN Discrimination Power | Estimated simulation power 100% (2000/2000 trials) | TEP distinguishable from AGN |
-| LRD Case Study | Mean $\Delta R_{\rm ML} = 1.73$, all compact | Consistent with overmassive BHs |
-| Hubble Connection | 7% of tension explained (step 133); full resolution from Paper 11 | Partial match; not fully consistent |
+| LRD Sensitivity Diagnostic | Mean $\Delta R_{\rm ML} = 1.73$, all compact | Directional differential-potential diagnostic; quantitative growth deferred |
+| Hubble Connection | $\sim 93\%$ of discrepancy accounted for (step 133, leaving $\sim 7\%$); full resolution from Paper 11 (v0.9: $H_0 = 66.65 \pm 1.58$, $0.45\sigma$ from Planck) | Simplified partial reconstruction; consistent with Paper 11 |
 | Prediction Error Budget | $\pm 16.5\%$ combined uncertainty | Falsifiable at $2\sigma$ |
 
 
@@ -3672,10 +3608,12 @@ artifacts.
 
 
 **Hubble tension:** The JWST-side pipeline (step 133)
-predicts $H_0^{\rm TEP} = 67.8$ km/s/Mpc, accounting for $\sim 7\%$ of
-the Hubble tension via the simplified two-halo approximation. The full
-resolution ($5\sigma \to 1\sigma$) is established in Paper 11 using the
-detailed SH0ES host stratification; the JWST pipeline value is a
+predicts $H_0^{\rm TEP} = 67.8$ km/s/Mpc, accounting for $\sim 93\%$ of
+the discrepancy (leaving roughly $7\%$ of the original gap) via the simplified two-halo approximation. The full
+resolution is established in Paper 11 (v0.9), where the generative
+distance-ladder analysis of 37 SN Ia hosts yields $H_0 = 66.65 \pm 1.58$
+km/s/Mpc, in concordance with Planck at $0.45\sigma$ ($0.31\sigma$
+bootstrap); the JWST pipeline value is a
 conservative lower bound from the crude area-distance scaling.
 
 
@@ -3687,98 +3625,14 @@ $> 25\%$.
 
 
 
-### C.4 Black Hole Growth: Detailed Analysis
+### C.4 Little Red Dots: Theoretical and Methodological Status
 
 
-#### C.4.1 Single-Object Sensitivity: Theoretical Boost Potential
-
-
-**Historical note:** Early single-object calculations suggested
-that compact cores could yield exponential boost factors of order $10^5$
-to $10^6$, sufficient to grow a $10^2 M_\odot$ seed to $10^6 M_\odot$
-within 600 Myr. This subsection retains that theoretical sensitivity
-analysis as a compact-core mechanism demonstration, not as a validated
-population-level result.
+As established in §2.5 and §4.4, Little Red Dots (LRDs) represent a qualitative stress test of compact-core potential structure rather than a primary evidentiary line. Because $R_{\rm ML}$ parameterizes observer-side inference bias under an assumed FLRW baseline rather than physical matter-frame proper time $\tau_\star = \int A(\phi)\,dt$, quantitative black hole accretion cannot be evaluated by inserting $R_{\rm ML}$ into an exponential growth integral.
 
 
 
-**Current status:** The corrected population-level analysis
-(Step 132) finds a median $\log_{10}({\rm boost}) = 0.42$ across 260
-Kokorev-catalog LRDs, with only 2.3% of objects exceeding $10^3$ in the
-conservative mass-proxy analysis. Step 142 classifies the LRD analysis as
-"mass-model unstable with no robust closure" — the conservative
-MUV-proxy analysis undercloses by 3–4 dex, while CEERS-calibrated masses
-drive exponential overshoot. The theoretical sensitivity demonstrated
-here remains valid for compact-core systems in principle, but the
-real-data population does not achieve the single-object ideal.
-
-
-
-
-
-Table C5: Boost Factor Uncertainty Propagation
-
-| Parameter | Central Value | Uncertainty | Contribution to $\sigma_{\rm Boost}$ |
-| --- | --- | --- | --- |
-| $\kappa_{\rm gal}$ | $9.6 \times 10^5$ mag | $\pm 4.0$ (42%) | Dominant |
-| $\Delta\log M_h$ (core-halo) | 1.5 | $\pm 0.3$ (20%) | Secondary |
-| $t_{\rm cosmic}(z=8)$ | 600 Myr | $\pm 20$ Myr (3%) | Negligible |
-| $t_{\rm Salpeter}$ | 45 Myr | $\pm 5$ Myr (11%) | Minor |
-
-
-
-
-#### C.4.2 Sensitivity Analysis: Boost vs. Compactness
-
-
-The differential temporal topology mechanism is most sensitive to
-compact cores. The corrected analysis treats this as a stress test
-rather than as a population-level closure claim: extended systems
-remain in the weak differential-topology regime, while compact LRD-like
-systems can amplify the response sharply if their stellar and halo
-masses are high enough.
-
-
-
-
-
-![LRD Sensitivity: Boost vs Radius](public/figures/figure_lrd_sensitivity.png)
-
-
-
-
-Figure 4: LRD Sensitivity. The growth boost factor is strongly
-radius-dependent. Runaway growth requires $r_e \lesssim 800$ pc.
-
-
-
-
-
-#### C.4.3 Population-Level Stress Test: 260 Little Red Dots
-
-
-Across 260 Kokorev-catalog LRDs with measured photometric redshifts and
-compactness estimates, the differential temporal topology calculation
-yields a broad distribution of growth boosts after correcting the
-catalog radius units and replacing the all-object default halo mass with
-an object-level $M_{\rm UV}$ proxy where direct stellar masses are
-absent. Only a small minority exceed $10^3$ in the conservative analysis,
-so the result is a compact-core mechanism stress test rather than a
-validation of LRD population-level black-hole closure.
-
-
-
-
-
-Table C6: LRD Population Differential Temporal Topology Stress Test ($N = 260$)
-
-| Quantity | Value | Interpretation |
-| --- | --- | --- |
-| Redshift range | $4.02$–$8.93$ | Full LRD epoch |
-| Median $\Delta\Gamma$ | $0.043$ | Conservative UV-mass analysis |
-| Median $\log_{10}$(Boost) | $0.42$ | $\sim 2.6\times$ growth |
-| Fraction with Boost $> 10^3$ | $2.3\%$ | Small minority show runaway |
-
+While deeper central gravitational potentials qualitatively yield larger inference responses ($R_{\rm ML}^{\rm cen} > R_{\rm ML}^{\rm halo}$) in compact systems, rigorous accretion modeling requires fully solved relativistic scalar-tensor core solutions. The population-level LRD anomaly is therefore deferred to dedicated relativistic compact-object studies.
 
 
 
@@ -3854,7 +3708,7 @@ weak gas-phase metallicity–$R_{\rm ML}$ correlation.
 
 - 
 **Roman supernova regime ($N \sim 2{,}700$):** TEP
-predicts SN Ia rates in massive hosts enhanced by $1.28\times$.
+predicts host-potential-dependent SN Ia rate enhancements and an elevated Ia/CC ratio in deeper potential wells.
 
 
 

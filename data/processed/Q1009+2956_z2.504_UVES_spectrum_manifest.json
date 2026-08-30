@@ -1,5 +1,5 @@
 {
-  "system_id": "Q1009+2956_z2.504_UVES",
+  "system_id": "Q1009+2956_z2.504_HIRES",
   "archive_object_id": "Q1009+2956",
   "kinematic_reference_redshift": 2.5035873411,
   "wavelength_frame": "vacuum_heliocentric",
@@ -30,6 +30,6 @@
       "sha256": "94c84bfbacd534b7f1c4090a1c4741c90f15f077e2d3568fc027dff144199b0d"
     }
   ],
-  "instrument": "VLT/UVES",
-  "archive": "SQUAD_DR1"
+  "instrument": "Keck/HIRES",
+  "archive": "Zavarygin_et_al_2018"
 }

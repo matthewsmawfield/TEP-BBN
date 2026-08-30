@@ -1,0 +1,31 @@
+[18:42:24] [INFO] ================================================================================
+[18:42:24] [INFO] Script: finalize_manuscript_numbers
+[18:42:24] [INFO] Started: 2026-08-30T18:42:24.073404
+[18:42:24] [INFO] ================================================================================
+[18:42:24] [SUCCESS] === FINALIZE: MANUSCRIPT NUMBER SYNCHRONISATION ===
+[18:42:24] [PROCESS] iso_rms saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/iso_rms_q1009.json: 0.0914σ
+[18:42:24] [WARNING] SKIP (anchor not found): isotope RMS
+[18:42:24] [WARNING] SKIP (anchor not found): p_standard
+[18:42:24] [WARNING] SKIP (anchor not found): p_parent
+[18:42:24] [WARNING] SKIP (anchor not found): T_parent inline
+[18:42:24] [WARNING] SKIP (anchor not found): T_parent threshold
+[18:42:24] [WARNING] SKIP (anchor not found): parent count
+[18:42:24] [WARNING] SKIP (anchor not found): summary table Q1009 row
+[18:42:24] [WARNING] SKIP (anchor not found): parent-reassignment PKS1937 T
+[18:42:24] [WARNING] SKIP (anchor not found): parent-reassignment J1332 T
+[18:42:24] [WARNING] SKIP (anchor not found): LOO equation
+[18:42:24] [PROCESS]   Updated LOO coadd row: C5x1 → T=77.31
+[18:42:24] [PROCESS]   Updated LOO transition row: Lyγ → T=156.16
+[18:42:24] [WARNING] SKIP (anchor not found): abstract dlnL/T
+[18:42:24] [WARNING] SKIP (anchor not found): abstract T_parent
+[18:42:24] [WARNING] SKIP (anchor not found): abstract iso_rms
+[18:42:24] [WARNING] SKIP (anchor not found): abstract significance
+[18:42:24] [WARNING] SKIP (anchor not found): concl dlnL/T
+[18:42:24] [WARNING] SKIP (anchor not found): concl T_parent
+[18:42:24] [WARNING] SKIP (anchor not found): concl significance
+[18:42:24] [SUCCESS] Manuscript numbers synchronised with ledgers:
+[18:42:24] [PROCESS]   LL_D=-15446.77 LL_H=-15366.26 LL_DH=-15366.26 n=8610
+[18:42:24] [PROCESS]   dlnL=80.51 T=161.03 dAIC=-159.03 dBIC=-151.97
+[18:42:24] [PROCESS]   T_parent=161.03  T_-Lya=34.15
+[18:42:24] [PROCESS]   N=1000  p_std=0.001 (0 exc)  p_parent=0.001 (0 exc)  binom95=0.0030
+[18:42:24] [SUCCESS] Finalization complete.

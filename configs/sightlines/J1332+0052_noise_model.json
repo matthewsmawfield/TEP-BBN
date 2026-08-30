@@ -1,0 +1,11 @@
+{
+    "model": "student_t",
+    "nu": 1.9045061172172817,
+    "scale": 1.4496829755440477,
+    "location": 0.0,
+    "source": "J1332+0052_Dfree_residuals_recalibrated_4072_pixels",
+    "calibration_blocks": "all",
+    "n_pixels": 4072,
+    "residual_std": 3.051711077822464,
+    "residual_mean": 0.29487606677410194
+}

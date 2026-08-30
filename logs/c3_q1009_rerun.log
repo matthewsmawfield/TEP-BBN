@@ -1,0 +1,17 @@
+[0;37m[19:45:54] [INFO] ================================================================================[0m
+[0;37m[19:45:54] [INFO] Script: secondary_analyses[0m
+[0;37m[19:45:54] [INFO] Started: 2026-08-30T19:45:54.162639[0m
+[0;37m[19:45:54] [INFO] ================================================================================[0m
+[1;32m[19:45:54] [SUCCESS] === C3: NOISY/OFFSET TRUE-D MC (Q1009+2956) ===[0m
+[0;34m[19:45:54] [PROCESS] Perturbation sigmas: {'logN_D': 0.1, 'T_K': 1000.0, 'b_turb': 1.0}[0m
+[0;34m[19:45:54] [PROCESS] N_sims: 200[0m
+[0;34m[19:49:09] [PROCESS] Completed 10/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[19:52:23] [PROCESS] Completed 20/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[19:52:44] [PROCESS] Completed 30/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[19:55:42] [PROCESS] Completed 40/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[19:58:12] [PROCESS] Completed 50/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[19:59:09] [PROCESS] Completed 60/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[20:01:17] [PROCESS] Completed 70/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[20:03:51] [PROCESS] Completed 80/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[20:04:50] [PROCESS] Completed 90/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[20:07:35] [PROCESS] Completed 100/200. Std exc: 0, Parent exc: 0[0m

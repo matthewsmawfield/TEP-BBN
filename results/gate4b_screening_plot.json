@@ -1,0 +1,13 @@
+{
+  "Phi_half": 1.59e-07,
+  "n": 3.56,
+  "beta_A": -1.0,
+  "S_absorber": 0.9999471550749165,
+  "S_dwarf": 0.839011718610088,
+  "S_solar": 9.889518470325912e-05,
+  "S_galactic": 0.012875403104964048,
+  "peak_Phi": 9.516762793940348e-08,
+  "peak_beta_eff_sq_Phi": 7.06203040489349e-08,
+  "plot_file": "results/gate4b_screening.png",
+  "assets_copy": "site/assets/gate4b_screening.png"
+}

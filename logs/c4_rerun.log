@@ -1,0 +1,16 @@
+[0;37m[14:52:23] [INFO] ================================================================================[0m
+[0;37m[14:52:23] [INFO] Script: secondary_analyses[0m
+[0;37m[14:52:23] [INFO] Started: 2026-08-30T14:52:23.341058[0m
+[0;37m[14:52:23] [INFO] ================================================================================[0m
+[1;32m[14:52:23] [SUCCESS] === C4: PURE KINEMATIC PRIOR TEST (Q1009+2956) ===[0m
+[0;34m[14:53:10] [PROCESS] M_Dfree: LL = -15535.79 (k=3)[0m
+[0;34m[14:53:10] [PROCESS] M_Hfree: LL = -15463.60 (k=4)[0m
+[0;34m[14:53:10] [PROCESS] M_kinematic: LL = -15562.74 (k=2, b=parent)[0m
+[0;34m[14:53:10] [PROCESS]   Best v_H = -130.60 km/s, logN_H = 12.87[0m
+[0;34m[14:53:10] [PROCESS] T (M_H vs M_D) = 144.38[0m
+[0;34m[14:53:10] [PROCESS] T (M_H vs M_kin) = 198.28[0m
+[0;34m[14:53:10] [PROCESS] T (M_kin vs M_D) = -53.91[0m
+[0;34m[14:53:10] [PROCESS] AIC: M_D=31077.58, M_H=30935.20, M_kin=31129.48[0m
+[0;34m[14:53:10] [PROCESS] ΔAIC (M_kin - M_D) = 51.91[0m
+[0;34m[14:53:10] [PROCESS] ΔAIC (M_H - M_kin) = -194.28[0m
+[1;32m[14:53:10] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c4_kinematic.json[0m

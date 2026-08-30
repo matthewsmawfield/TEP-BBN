@@ -73,12 +73,14 @@ class PhysicalRadiativeTransferEngine:
         self.z_abs = z_abs
 
         # Load physical registries
-        h_data = parse_atomic_file(
-            project_root / "data" / "raw" / "atomic" / "H_I" / "H_I_lines.txt"
-        )
-        d_data = parse_atomic_file(
-            project_root / "data" / "raw" / "atomic" / "D_I" / "D_I_lines.txt"
-        )
+        h_file = project_root / "data" / "raw" / "atomic" / "H_I" / "H_I_lines.txt"
+        d_file = project_root / "data" / "raw" / "atomic" / "D_I" / "D_I_lines.txt"
+        if not h_file.exists():
+            raise FileNotFoundError(f"H I atomic data not found: {h_file}")
+        if not d_file.exists():
+            raise FileNotFoundError(f"D I atomic data not found: {d_file}")
+        h_data = parse_atomic_file(h_file)
+        d_data = parse_atomic_file(d_file)
 
         self.h_lines = {}
         self.d_lines = {}
@@ -169,15 +171,35 @@ def run_gate1():
     lam_d_base = engine.d_lines["DI_Lyα"][0]
     rho_eff = lam_d_base / lam_h_base
 
-    N_D = 10**14.0
+    # Use the ACTUAL D column from D/H ratio and N_HI, not an inflated value.
+    # Q1009: D/H = 2.48e-5, logN_HI = 17.362 → N_D = 5.7e12
+    # The previous value (1e14) was 22.5x too high, inflating the identifiability.
+    N_D = 5.7e12  # Actual Q1009 D column from D/H = 2.48e-5 × N_HI
     b_D = 12.0
     v_D = 0.0
     comp_D = {"N": N_D, "b": b_D, "v": v_D}
 
     v_H_equiv = c_kms * (rho_eff * (1.0 + v_D / c_kms) - 1.0)
     N_H_equiv = N_D * rho_eff
-    b_H_equiv = b_D
-    comp_H = {"N": N_H_equiv, "b": b_H_equiv, "v": v_H_equiv}
+    # Physical mass-scaled Doppler parameter: b_H = b_D * sqrt(m_D / m_H)
+    # For thermally-dominated gas, H and D have different b-values because
+    # the thermal broadening depends on mass.  For turbulence-dominated gas
+    # (b_turb >> b_therm), the b-values are nearly identical.  We compute
+    # BOTH cases and report them separately.
+    mass_H = 1.00784
+    mass_D = 2.01410
+    b_H_thermal = b_D * np.sqrt(mass_D / mass_H)  # physical mass-scaled b
+    comp_H_thermal = {"N": N_H_equiv, "b": b_H_thermal, "v": v_H_equiv}
+    # Also compute the turbulence-dominated case (b_H = b_D) for comparison
+    comp_H_turb = {"N": N_H_equiv, "b": b_D, "v": v_H_equiv}
+    # Mixed regime: use the actual fitted Q1009 Gate 2 parameters
+    # T_K=2000, b_turb=10.70 → b_H=12.15, b_D=11.45 (b_turb/b_therm ≈ 1.87)
+    from scripts.lib.doppler_physics import compute_doppler_b as _cdb
+    _T_K_fit, _b_turb_fit = 2000.0, 10.70
+    _b_H_fit = _cdb(_T_K_fit, _b_turb_fit, 'H')
+    _b_D_fit = _cdb(_T_K_fit, _b_turb_fit, 'D')
+    comp_H_mixed = {"N": N_H_equiv, "b": _b_H_fit, "v": v_H_equiv}
+    comp_D_mixed = {"N": N_D, "b": _b_D_fit, "v": v_D}
 
     print_status(
         f"\nOptimal Mapping derived from Lyα ratio: rho = {rho_eff:.8f}", "PROCESS"
@@ -193,7 +215,7 @@ def run_gate1():
         wave_obs = np.linspace(lam_obs - 1.0, lam_obs + 1.0, 20000)
 
         tau_D = engine.compute_optical_depth(wave_obs, [t_d], comp_D, is_d=True)
-        tau_H = engine.compute_optical_depth(wave_obs, [t_h], comp_H, is_d=False)
+        tau_H = engine.compute_optical_depth(wave_obs, [t_h], comp_H_thermal, is_d=False)
 
         max_tau_diff = np.max(np.abs(tau_D - tau_H))
         max_tau = np.max([1.0, np.max(tau_D)])
@@ -213,60 +235,81 @@ def run_gate1():
     print_status(f"Global Max eps_F   = {max_F_err:.4e}", "PROCESS")
 
     # 3. Convolved Flux and Likelihood across ALL common Lyman transitions
-    print_status("\n--- Operational Isotope Non-Identifiability ---", "TITLE")
+    # Compute BOTH the physical (mass-scaled b) and turbulence-dominated (b_H=b_D) cases.
+    print_status("\n--- Operational Isotope Identifiability ---", "TITLE")
 
-    inst_res_kms = 3.0  # Conservative representative vsig for Q1009 (C1: 2.6, C5: 3.4 km/s)
+    # Use actual Keck/HIRES resolution from Zavarygin et al. 2018
+    # C1 settings: vsig=2.6 km/s (R≈49,000), C5 settings: vsig=3.4 km/s (R≈37,000)
+    # Use the C1 value (higher resolution) as the representative case
+    inst_res_kms = 2.6  # Keck/HIRES C1 sigma (Zavarygin et al. 2018)
     noise_sigma = 0.05
 
-    global_wave = []
-    global_C_F_D = []
-    global_C_F_H = []
+    for case_name, comp_H_case, comp_D_case in [
+        ("thermal (mass-scaled b_H)", comp_H_thermal, comp_D),
+        ("turbulence-dominated (b_H=b_D)", comp_H_turb, comp_D),
+        ("mixed (fitted Q1009: T_K=2000, b_turb=10.7)", comp_H_mixed, comp_D_mixed),
+    ]:
+        print_status(f"\n  Case: {case_name}", "PROCESS")
+        print_status(f"    b_D = {comp_D_case['b']:.2f}, b_H = {comp_H_case['b']:.2f}", "PROCESS")
 
-    max_sigma_dev = 0.0
+        max_sigma_dev = 0.0
 
-    for t_h, t_d in zip(transitions, [k.replace("HI", "DI") for k in transitions]):
-        lam_obs = engine.h_lines[t_h][0] * (1 + z_abs)
-        wave_obs = np.linspace(lam_obs - 1.0, lam_obs + 1.0, 20000)
+        for t_h, t_d in zip(transitions, [k.replace("HI", "DI") for k in transitions]):
+            lam_obs = engine.h_lines[t_h][0] * (1 + z_abs)
+            wave_obs = np.linspace(lam_obs - 1.0, lam_obs + 1.0, 20000)
 
-        tau_D = engine.compute_optical_depth(wave_obs, [t_d], comp_D, is_d=True)
-        tau_H = engine.compute_optical_depth(wave_obs, [t_h], comp_H, is_d=False)
+            tau_D = engine.compute_optical_depth(wave_obs, [t_d], comp_D_case, is_d=True)
+            tau_H = engine.compute_optical_depth(wave_obs, [t_h], comp_H_case, is_d=False)
 
-        F_D = np.exp(-tau_D)
-        F_H = np.exp(-tau_H)
+            F_D = np.exp(-tau_D)
+            F_H = np.exp(-tau_H)
 
-        C_F_D = engine.apply_convolution(F_D, wave_obs, inst_res_kms)
-        C_F_H = engine.apply_convolution(F_H, wave_obs, inst_res_kms)
+            C_F_D = engine.apply_convolution(F_D, wave_obs, inst_res_kms)
+            C_F_H = engine.apply_convolution(F_H, wave_obs, inst_res_kms)
 
-        valid = slice(100, -100)
+            valid = slice(100, -100)
 
-        max_dev = np.max(np.abs(C_F_D[valid] - C_F_H[valid]) / noise_sigma)
-        max_sigma_dev = max(max_sigma_dev, max_dev)
+            max_dev = np.max(np.abs(C_F_D[valid] - C_F_H[valid]) / noise_sigma)
+            max_sigma_dev = max(max_sigma_dev, max_dev)
 
-        eps_conv = np.max(np.abs(C_F_D[valid] - C_F_H[valid]))
+            eps_conv = np.max(np.abs(C_F_D[valid] - C_F_H[valid]))
+            print_status(
+                f"    {t_h}: eps_conv = {eps_conv:.4e}, max |F_D - F_H| / sigma = {max_dev:.4f}",
+                "PROCESS",
+            )
+
+        print_status(f"  → Global Max |F_D - F_H| / sigma = {max_sigma_dev:.4f}", "PROCESS")
+
+        if "thermal" in case_name:
+            max_sigma_dev_thermal = max_sigma_dev
+        elif "turbulence" in case_name:
+            max_sigma_dev_turb = max_sigma_dev
+        else:
+            max_sigma_dev_mixed = max_sigma_dev
+
+    print_status(f"\n  SUMMARY:", "TITLE")
+    print_status(f"    Thermal (mass-scaled b):     {max_sigma_dev_thermal:.4f} sigma", "PROCESS")
+    print_status(f"    Turbulence-dominated (b=bD): {max_sigma_dev_turb:.4f} sigma", "PROCESS")
+    print_status(f"    Mixed (fitted Q1009 params): {max_sigma_dev_mixed:.4f} sigma", "PROCESS")
+    print_status(f"    → H and D ARE distinguishable for thermally-dominated gas", "PROCESS")
+    print_status(f"    → H and D are NOT distinguishable for turbulence-dominated gas", "PROCESS")
+    print_status(f"    → Q1009 fitted params give mixed regime (b_turb/b_therm ≈ 1.87)", "PROCESS")
+
+    # The physical case is the thermal one.  The turbulence-dominated case
+    # is the optimistic (for TEP) lower bound.  Both are reported.
+    max_sigma_dev = max_sigma_dev_thermal
+
+    if max_sigma_dev < 0.5:
         print_status(
-            f"Convolved eps_conv ({t_h}) = {eps_conv:.4e}  |  max |F_D - F_H| / sigma_F = {max_dev:.4f}",
-            "PROCESS",
+            "\n[RESULT] Isotope non-identifiability verified for this b-regime.",
+            "SUCCESS",
         )
-
-        global_wave.extend(wave_obs[valid])
-        global_C_F_D.extend(C_F_D[valid])
-        global_C_F_H.extend(C_F_H[valid])
-
-    global_C_F_D = np.array(global_C_F_D)
-    global_C_F_H = np.array(global_C_F_H)
-
-    print_status(f"\nGlobal Max |F_D - F_H| / sigma_F = {max_sigma_dev:.4f}", "PROCESS")
-
-    # The requirement is operational indistinguishability without synthesizing mock data.
-    # Compare the maximum analytical discrepancy directly to the instrumental 1-sigma floor.
-    assert (
-        max_sigma_dev < 0.5
-    ), f"Maximum analytical discrepancy ({max_sigma_dev:.4f} sigma) exceeds operational threshold!"
-    
-    print_status(
-        "\n[SUCCESS] Operational Isotope Non-Identifiability verified. Theoretical maximum discrepancy is strictly bounded below instrumental noise.",
-        "SUCCESS",
-    )
+    else:
+        print_status(
+            f"\n[RESULT] Isotope IDENTIFIABLE: max discrepancy = {max_sigma_dev:.4f} sigma "
+            f"(> 0.5 sigma threshold). H and D are distinguishable for thermally-dominated gas.",
+            "WARNING",
+        )
 
     ledger = {
         "h_i_hash": h_hash,
@@ -274,8 +317,33 @@ def run_gate1():
         "rho_eff": rho_eff,
         "max_tau_err": max_tau_err,
         "max_F_err": max_F_err,
+        "max_sigma_dev_thermal": max_sigma_dev_thermal,
+        "max_sigma_dev_turb": max_sigma_dev_turb,
+        "max_sigma_dev_mixed": max_sigma_dev_mixed,
         "max_sigma_dev": max_sigma_dev,
-        "is_indistinguishable": bool(max_sigma_dev < 0.5),
+        "is_indistinguishable_thermal": bool(max_sigma_dev_thermal < 0.5),
+        "is_indistinguishable_turb": bool(max_sigma_dev_turb < 0.5),
+        "is_indistinguishable_mixed": bool(max_sigma_dev_mixed < 0.5),
+        "b_D": b_D,
+        "b_H_thermal": b_H_thermal,
+        "b_H_turb": b_D,
+        "b_H_mixed": _b_H_fit,
+        "b_D_mixed": _b_D_fit,
+        "mixed_regime_T_K": _T_K_fit,
+        "mixed_regime_b_turb": _b_turb_fit,
+        "mixed_regime_b_turb_over_b_therm": _b_turb_fit / (np.sqrt(2 * 1.380649e-23 * _T_K_fit / (1.00784 * 1.6726219e-27)) / 1e3),
+        "metric_description": (
+            "max_sigma_dev is the MAXIMUM (not RMS) deviation between convolved H "
+            "and D fluxes, divided by a conservative constant noise_sigma=0.05. "
+            "Two cases are computed: (1) thermal (mass-scaled b_H = b_D * sqrt(m_D/m_H)), "
+            "which is the physical case for thermally-dominated gas; and (2) turbulence-dominated "
+            "(b_H = b_D), which applies when b_turb >> b_therm. The thermal case determines "
+            "whether H and D are fundamentally distinguishable; the turbulence case is the "
+            "optimistic lower bound for TEP."
+        ),
+        "transitions_tested": ["Lyα", "Lyβ", "Lyγ", "Lyδ", "Lyε"],
+        "noise_sigma_assumed": noise_sigma,
+        "inst_res_kms_assumed": inst_res_kms,
     }
 
     with open(out_dir / "gate1_embedding.json", "w") as f:

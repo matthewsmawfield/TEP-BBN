@@ -1,0 +1,12 @@
+[0;37m[19:26:39] [INFO] ================================================================================[0m
+[0;37m[19:26:39] [INFO] Script: secondary_analyses[0m
+[0;37m[19:26:39] [INFO] Started: 2026-08-30T19:26:39.033408[0m
+[0;37m[19:26:39] [INFO] ================================================================================[0m
+[1;32m[19:26:39] [SUCCESS] === C2: LIMITED SCAFFOLD FREEDOM (Q1009+2956) ===[0m
+[0;34m[19:26:39] [PROCESS] D parent components (excluded from freeing): [0, 1, 2][0m
+[0;34m[19:26:39] [PROCESS] Freeing 5 strongest non-parent H I components (by logN, within ±1000 km/s)[0m
+[0;34m[19:26:39] [PROCESS]   Component 6: logN=15.57, b=23.17, v=12.5 km/s[0m
+[0;34m[19:26:39] [PROCESS]   Component 8: logN=13.11, b=27.29, v=-294.1 km/s[0m
+[0;34m[19:26:39] [PROCESS]   Component 13: logN=13.91, b=41.19, v=-50.8 km/s[0m
+[0;34m[19:26:39] [PROCESS]   Component 14: logN=12.93, b=17.97, v=52.9 km/s[0m
+[0;34m[19:26:39] [PROCESS]   Component 15: logN=12.75, b=42.74, v=72.4 km/s[0m

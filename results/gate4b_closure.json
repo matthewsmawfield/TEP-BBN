@@ -1,0 +1,59 @@
+{
+  "gate4b_status": {
+    "conformal_screening": "CLOSED",
+    "conformal_amplitude": "QUANTIFIED",
+    "perturbative_disformal": "INSUFFICIENT",
+    "non_perturbative_CT_parallel": "OPEN",
+    "overall": "PARTIALLY_CLOSED"
+  },
+  "screening_params": {
+    "variable": "|\u03a6|/c\u00b2",
+    "Phi_half": 1.59e-07,
+    "n": 3.56,
+    "S_absorber": 0.9999471550749165,
+    "S_solar": 9.889518470325912e-05,
+    "S_galactic": 0.012875403104964048,
+    "S_dwarf": 0.839011718610088,
+    "formula": "S_\u03a3(|\u03a6|/c\u00b2) = 1/(1 + (|\u03a6|/c\u00b2/\u03a6_half)^n)",
+    "boundary_conditions": [
+      "Absorber: |\u03a6|/c\u00b2=1e-8 \u2192 S_\u03a3>0.999 (unscreened)",
+      "Solar: |\u03a6|/c\u00b2=2.12e-6 \u2192 S_\u03a3\u22481e-4 (Cassini: |\u03b2_eff|<3.4e-3)",
+      "Galactic: |\u03a6|/c\u00b2=5.38e-7 \u2192 S_\u03a3\u22480.013 (corpus value)"
+    ],
+    "free_predictions": [
+      "Galaxy: S_\u03a3\u22480.013 (screened, galactic dynamics safe)",
+      "Dwarf: S_\u03a3~0.5 (transition regime)"
+    ]
+  },
+  "conformal_amplitude": {
+    "R_30kpc": {
+      "dv_conf_kms": 0.008770704348758025,
+      "log_N_H": 20.607286912069977
+    },
+    "required_A_env": 9303.699766319789,
+    "dv_target_kms": 81.6,
+    "source": "gate4b_amplitude.json"
+  },
+  "perturbative_disformal": {
+    "status": "INSUFFICIENT",
+    "constant_coupling": "B\u2080\u00d7(|\u03a6|/c\u00b2)\u00b2/r\u00b2 ~ B\u2080\u00d710\u207b\u2076\u00b2 \u2192 need B\u2080~10\u2076\u2070",
+    "inverse_field_coupling": "B\u2080\u00d7(\u2207\u03c8/\u03c8)\u00b2 ~ B\u2080\u00d710\u207b\u2074\u2078 \u2192 still insufficient",
+    "conclusion": "No local B(\u03c6) can close the 10\u2074 gap perturbatively"
+  },
+  "non_perturbative_gap": {
+    "A_np_target": 9303.699766319789,
+    "mechanism": "Non-exact transport path C_{T,\u2225}",
+    "candidate_mechanisms": [
+      "Modified scalar propagator in transition regime",
+      "Non-perturbative field soliton at absorber scale",
+      "Cumulative transport phase over cosmological distance",
+      "Disformal lensing: curved photon path through non-exact geometry"
+    ],
+    "requirement": "Full non-linear TEP field equations beyond weak-field"
+  },
+  "gradient_check": {
+    "cassini_ok": true,
+    "rotation_ok": true,
+    "absorber_ok": true
+  }
+}

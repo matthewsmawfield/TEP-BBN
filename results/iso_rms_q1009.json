@@ -1,0 +1,12 @@
+{
+  "sightline": "Q1009+2956",
+  "metric": "isotope_rms_sigma",
+  "description": "RMS discrepancy between H and D Voigt profiles (H placed at the D position with identical column, temperature and turbulent width \u2014 only the isotope mass differs), relative to the instrumental noise level.",
+  "iso_rms_sigma": 0.09135435344378656,
+  "n_pixels": 8610,
+  "n_blocks": 50,
+  "d_velocity_offset_kms": -81.6,
+  "noise_source": "Q1009_union_manifest.json (per-pixel error array)",
+  "transitions": "All 15 Lyman series (Ly\u03b1\u2013Ly14 + Ly21)",
+  "method": "build_model_components M_Dfree with opt_D params vs M_H with H placed at D position (same N, T_K, b_turb); RMS of (flux_D - flux_H) / err"
+}

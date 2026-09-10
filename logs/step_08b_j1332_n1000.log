@@ -1,0 +1,110 @@
+[0;37m[23:14:21] [INFO] ================================================================================[0m
+[0;37m[23:14:21] [INFO] Script: step_08b_calibration[0m
+[0;37m[23:14:21] [INFO] Started: 2026-09-09T23:14:21.689070[0m
+[0;37m[23:14:21] [INFO] ================================================================================[0m
+[1;32m[23:14:21] [SUCCESS] === GATE 8 CALIBRATION: J1332+0052 ===[0m
+[0;34m[23:14:21] [PROCESS]   Mixed b_D: b_turb=2.800, T=10100, b_therm_H=12.914, b_therm_D=9.132[0m
+[0;34m[23:14:21] [PROCESS]   b_D_pred = sqrt(2.800^2 + 9.132^2) = 9.551 (vs thermal-only 9.309)[0m
+[0;37m[23:14:21] [INFO] [0m
+[0;37m[23:14:21] [INFO] ================================================================================[0m
+[0;37m[23:14:21] [INFO] 
+--- Observed Parameters ---[0m
+[0;37m[23:14:21] [INFO] ================================================================================[0m
+[0;37m[23:14:21] [INFO] [0m
+[0;34m[23:14:21] [PROCESS]   v_H=-118.20, b_H=50.73, logN_H=15.35[0m
+[0;34m[23:14:21] [PROCESS]   v_parent=0.0, b_parent=13.2, logN_parent=19.25[0m
+[0;34m[23:14:21] [PROCESS]   b_D_pred=9.55, b_ratio=5.311[0m
+[0;34m[23:14:21] [PROCESS]   v_deviation=-36.6 km/s, logN_diff=0.698 dex[0m
+[0;34m[23:14:21] [PROCESS]   Frozen cache: 13 blocks[0m
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:193: RuntimeWarning: divide by zero encountered in matmul
+  H_mat = P.T @ (W[:, np.newaxis] * P)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:193: RuntimeWarning: overflow encountered in matmul
+  H_mat = P.T @ (W[:, np.newaxis] * P)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:193: RuntimeWarning: invalid value encountered in matmul
+  H_mat = P.T @ (W[:, np.newaxis] * P)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:195: RuntimeWarning: divide by zero encountered in matmul
+  b_vec = P.T @ (W * flux_fit)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:195: RuntimeWarning: overflow encountered in matmul
+  b_vec = P.T @ (W * flux_fit)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:195: RuntimeWarning: invalid value encountered in matmul
+  b_vec = P.T @ (W * flux_fit)
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:199: RuntimeWarning: divide by zero encountered in matmul
+  flux_mod = P @ c_opt
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:199: RuntimeWarning: overflow encountered in matmul
+  flux_mod = P @ c_opt
+/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/scripts/lib/residual_engine.py:199: RuntimeWarning: invalid value encountered in matmul
+  flux_mod = P @ c_opt
+[0;37m[23:14:21] [INFO] [0m
+[0;37m[23:14:21] [INFO] ================================================================================[0m
+[0;37m[23:14:21] [INFO] 
+--- Running 1000 true-D simulations ---[0m
+[0;37m[23:14:21] [INFO] ================================================================================[0m
+[0;37m[23:14:21] [INFO] [0m
+[0;34m[23:16:46] [PROCESS]   25/1000 done[0m
+[0;34m[23:18:50] [PROCESS]   50/1000 done[0m
+[0;34m[23:20:27] [PROCESS]   75/1000 done[0m
+[0;34m[23:22:24] [PROCESS]   100/1000 done[0m
+[0;34m[23:24:17] [PROCESS]   125/1000 done[0m
+[0;34m[23:26:10] [PROCESS]   150/1000 done[0m
+[0;34m[23:28:25] [PROCESS]   175/1000 done[0m
+[0;34m[23:30:11] [PROCESS]   200/1000 done[0m
+[0;34m[23:31:55] [PROCESS]   225/1000 done[0m
+[0;34m[23:33:35] [PROCESS]   250/1000 done[0m
+[0;34m[23:35:26] [PROCESS]   275/1000 done[0m
+[0;34m[23:37:17] [PROCESS]   300/1000 done[0m
+[0;34m[23:39:11] [PROCESS]   325/1000 done[0m
+[0;34m[23:40:48] [PROCESS]   350/1000 done[0m
+[0;34m[23:42:27] [PROCESS]   375/1000 done[0m
+[0;34m[23:44:24] [PROCESS]   400/1000 done[0m
+[0;34m[23:46:31] [PROCESS]   425/1000 done[0m
+[0;34m[23:48:27] [PROCESS]   450/1000 done[0m
+[0;34m[23:50:19] [PROCESS]   475/1000 done[0m
+[0;34m[23:52:29] [PROCESS]   500/1000 done[0m
+[0;34m[23:54:15] [PROCESS]   525/1000 done[0m
+[0;34m[23:56:02] [PROCESS]   550/1000 done[0m
+[0;34m[23:57:54] [PROCESS]   575/1000 done[0m
+[0;34m[23:59:47] [PROCESS]   600/1000 done[0m
+[0;34m[00:01:46] [PROCESS]   625/1000 done[0m
+[0;34m[00:03:49] [PROCESS]   650/1000 done[0m
+[0;34m[00:05:37] [PROCESS]   675/1000 done[0m
+[0;34m[00:07:40] [PROCESS]   700/1000 done[0m
+[0;34m[00:09:18] [PROCESS]   725/1000 done[0m
+[0;34m[00:11:18] [PROCESS]   750/1000 done[0m
+[0;34m[00:13:23] [PROCESS]   775/1000 done[0m
+[0;34m[00:15:15] [PROCESS]   800/1000 done[0m
+[0;34m[00:17:10] [PROCESS]   825/1000 done[0m
+[0;34m[00:19:16] [PROCESS]   850/1000 done[0m
+[0;34m[00:21:15] [PROCESS]   875/1000 done[0m
+[0;34m[00:23:10] [PROCESS]   900/1000 done[0m
+[0;34m[00:25:04] [PROCESS]   925/1000 done[0m
+[0;34m[00:26:56] [PROCESS]   950/1000 done[0m
+[0;34m[00:28:36] [PROCESS]   975/1000 done[0m
+[0;34m[00:30:24] [PROCESS]   1000/1000 done[0m
+[0;34m[00:30:24] [PROCESS]   Successful fits: 1000/1000[0m
+[0;37m[00:30:24] [INFO] [0m
+[0;37m[00:30:24] [INFO] ================================================================================[0m
+[0;37m[00:30:24] [INFO] 
+--- Calibrated Gate 8 Statistics ---[0m
+[0;37m[00:30:24] [INFO] ================================================================================[0m
+[0;37m[00:30:24] [INFO] [0m
+[0;34m[00:30:24] [PROCESS]   Statistic                 Nominal σ    Calibrated p    Verdict[0m
+[0;34m[00:30:24] [PROCESS]   ------------------------- ------------ --------------- --------------------[0m
+[0;34m[00:30:24] [PROCESS]   b-value ratio             3.3          0.059           MARGINAL[0m
+[0;34m[00:30:24] [PROCESS]   Velocity deviation        2.1          0.094           MARGINAL[0m
+[0;34m[00:30:24] [PROCESS]   Column density            1.1          0.688           NOT SIGNIFICANT[0m
+[0;34m[00:30:24] [PROCESS]   Joint (Mahalanobis)                    0.023           SIGNIFICANT[0m
+[0;37m[00:30:24] [INFO] [0m
+[0;37m[00:30:24] [INFO] ================================================================================[0m
+[0;37m[00:30:24] [INFO] 
+--- Key Finding ---[0m
+[0;37m[00:30:24] [INFO] ================================================================================[0m
+[0;37m[00:30:24] [INFO] [0m
+[0;34m[00:30:24] [PROCESS]   The nominal sigma values were computed from spectral[0m
+[0;34m[00:30:24] [PROCESS]   resolution / measurement uncertainty. The calibrated[0m
+[0;34m[00:30:24] [PROCESS]   p-values show how extreme the observations are relative[0m
+[0;34m[00:30:24] [PROCESS]   to what true-D simulations actually produce.[0m
+[0;34m[00:30:24] [PROCESS]   [0m
+[1;32m[00:30:24] [SUCCESS]   The joint statistic IS significant after calibration.[0m
+[1;32m[00:30:24] [SUCCESS]   The Gate 8 evidence survives the true-D injection test.[0m
+[1;32m[00:30:24] [SUCCESS] 
+[COMPLETED] /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate8_calibration_J13320052.json[0m

@@ -1,0 +1,201 @@
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] Script: step_04f_ct_transport_closure
+[02:38:55] [INFO] Started: 2026-09-10T02:38:55.563095
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [SUCCESS] === GATE 4B-0-II: C_T TRANSPORT CLOSURE AT ABSORBER SCALES ===
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- Parameters ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   R = 30 kpc, |Phi_abs|/c^2 = 9.75e-09, S_abs = 0.999952
+[02:38:55] [PROCESS]   |Phi_gal|/c^2 = 5.38e-07, S_gal = 0.012875
+[02:38:55] [PROCESS]   dv_conf = 0.00877 km/s, A_env target = 8995.9
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 1. Screening Transition Geometry ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   Thin-shell fraction: 0.1174
+[02:38:55] [PROCESS]   Delta_R = 3.52 kpc = 7.27e+08 AU
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 2. C_T Transport Model ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   S_trans (midpoint) = 0.5
+[02:38:55] [PROCESS]   Screening contrast (1 - S_gal^2) = 0.999834
+[02:38:55] [PROCESS]   nabla C_Theta = C_Theta^uns * 0.999834 / 1.09e+22 cm
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 3. C_T Velocity Shift ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   dv_CT = c * alpha_T * S_trans * C_Theta^uns * (1 - S_gal^2)
+[02:38:55] [PROCESS]   A_env = alpha_T * C_Theta^uns * 1.71e+07
+[02:38:55] [PROCESS]   Required: alpha_T * C_Theta^uns = 5.26e-04
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 4. Required Microscopic Variance ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   Required alpha_T * C_Theta^uns = 5.26e-04
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 5. Cassini Safety ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   Solar system screening:
+[02:38:55] [PROCESS]     Sun surface:   |Phi|/c^2 = 2.12e-06, S = 9.89e-05
+[02:38:55] [PROCESS]     Earth surface:  |Phi|/c^2 = 7.00e-10, S = 1.000000
+[02:38:55] [PROCESS]     Lunar surface:  |Phi|/c^2 = 3.00e-11, S = 1.000000
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   Key: the solar system is UNIFORMLY SCREENED.
+[02:38:55] [PROCESS]   S ranges from 9.89e-05 (Sun) to 1.000000 (Earth).
+[02:38:55] [PROCESS]   There is NO transition from unscreened (S~1) to screened (S~0.01).
+[02:38:55] [PROCESS]   Therefore nabla C_Theta = 0 in the solar system.
+[02:38:55] [PROCESS]   Therefore C_T = 0 in the solar system, IDENTICALLY.
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   Phi_half = 1.59e-07
+[02:38:55] [PROCESS]   Earth |Phi|/c^2 = 7.00e-10 < Phi_half → S = 1.000000 (partially unscreened)
+[02:38:55] [PROCESS]   Sun |Phi|/c^2 = 2.12e-06 > Phi_half → S = 9.89e-05 (screened)
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   Solar system C_T contribution:
+[02:38:55] [PROCESS]     delta_theta_solar = 2.12e-06
+[02:38:55] [PROCESS]     C_Theta_solar = 4.49e-12
+[02:38:55] [PROCESS]     nabla_C_Theta_solar = 3.00e-25 cm^-1
+[02:38:55] [PROCESS]     C_T_solar (per alpha_T) = 2.97e-29
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   Absorber C_T contribution:
+[02:38:55] [PROCESS]     delta_theta_abs = 9.75e-09
+[02:38:55] [PROCESS]     C_Theta_abs = 9.51e-17
+[02:38:55] [PROCESS]     nabla_C_Theta_abs = 8.75e-39 cm^-1
+[02:38:55] [PROCESS]     C_T_abs (per alpha_T) = 4.37e-39
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   Ratio C_T_solar / C_T_abs = 6.79e+09
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 6. Cassini Constraint on C_T ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   C_T is a TRANSPORT correction, not a METRIC correction.
+[02:38:55] [PROCESS]   Cassini constrains the Shapiro delay (metric), not frequency shifts.
+[02:38:55] [PROCESS]   C_T does NOT contribute to the Shapiro delay.
+[02:38:55] [PROCESS]   Therefore C_T is NOT constrained by Cassini.
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   C_T IS constrained by solar-system frequency-shift observations:
+[02:38:55] [PROCESS]     alpha_T required = 5.54e+12
+[02:38:55] [PROCESS]     dv_solar = 7.38e+02 km/s
+[02:38:55] [PROCESS]     fractional shift = 2.46e-03
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   Observational bounds:
+[02:38:55] [PROCESS]     Solar grav redshift: |dv|/c < 1e-05
+[02:38:55] [PROCESS]     Spacecraft Doppler:  |dv|/c < 1e-15
+[02:38:55] [PROCESS]     LLR:                 |dv|/c < 1e-12
+[02:38:55] [PROCESS]     C_T solar shift:     |dv|/c = 2.46e-03
+[02:38:55] [PROCESS] 
+[02:38:55] [WARNING]   Solar grav redshift: FAIL (margin: 4.06e-03x)
+[02:38:55] [WARNING]   Spacecraft Doppler:  FAIL (margin: 4.06e-13x)
+[02:38:55] [WARNING]   LLR:                 FAIL (margin: 4.06e-10x)
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 7. Differential Edge-Minus-Core Transport ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   Edge ray: crosses screening transition → C_T active
+[02:38:55] [PROCESS]   Core ray: interior (uniform, unscreened) → C_T = 0
+[02:38:55] [PROCESS]   Differential: dv_ec = c * alpha_T * S_trans * C_Theta * (1 - S_gal^2)
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   dv_ec = 78.90 km/s
+[02:38:55] [PROCESS]   A_env = 8995.9
+[02:38:55] [PROCESS]   Target A_env = 8995.9
+[02:38:55] [SUCCESS]   Match: YES
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 8. Consistency with Corpus: Saturation Scale ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   Natural C_Theta (from macroscopic potential): 9.51e-17
+[02:38:55] [PROCESS]   Required alpha_T * C_Theta: 5.26e-04
+[02:38:55] [PROCESS]   Ratio (required / natural) = 5.54e+12
+[02:38:55] [PROCESS] 
+[02:38:55] [WARNING]   RESULT: Closure requires large enhancement (6e+12x).
+[02:38:55] [WARNING]   The microscopic defect variance must exceed the macroscopic potential variance.
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 9. Microscopic Variance from Defect Density ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   Saturation scale: rho_T = 20.0 g/cm^3
+[02:38:55] [PROCESS]   Absorber density: rho_abs = 3.66e-27 g/cm^3
+[02:38:55] [PROCESS]   rho_abs / rho_T = 1.83e-28
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   Defect phase winding: 4*pi * beta_A ~ 12.6
+[02:38:55] [PROCESS]   Defect variance (core): (4*pi * beta_A)^2 ~ 157.9
+[02:38:55] [PROCESS]   Macroscopic variance: (beta_A * Phi_abs/c^2)^2 ~ 9.51e-17
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   m_phi (eV)      r_c (cm)        r_c/l_T         C_Theta_coarse  alpha_T needed 
+[02:38:55] [PROCESS]   --------------- --------------- --------------- --------------- ---------------
+[02:38:55] [PROCESS]   1e-30           1.97e+25        1.82e+03        1.58e+02        3.33e-06       
+[02:38:55] [PROCESS]   1e-28           1.97e+23        1.82e+01        1.58e+02        3.33e-06       
+[02:38:55] [PROCESS]   1e-26           1.97e+21        1.82e-01        9.46e-01        5.56e-04       
+[02:38:55] [PROCESS]   1e-24           1.97e+19        1.82e-03        9.46e-07        5.56e+02       
+[02:38:55] [PROCESS]   1e-22           1.97e+17        1.82e-05        9.46e-13        5.56e+08       
+[02:38:55] [PROCESS]   1e-20           1.97e+15        1.82e-07        9.46e-19        5.56e+14       
+[02:38:55] [PROCESS]   1e-18           1.97e+13        1.82e-09        9.46e-25        5.56e+20       
+[02:38:55] [PROCESS]   1e-15           1.97e+10        1.82e-12        9.46e-34        5.56e+29       
+[02:38:55] [PROCESS] 
+  Solar system transition radius:
+[02:38:55] [PROCESS]     r_trans = GM_sun / (Phi_half * c^2) = 9.29e+11 cm = 0.1 AU
+[02:38:55] [PROCESS]     This is where |Phi|/c^2 = Phi_half, S = 0.5
+[02:38:55] [PROCESS]     r_trans / R_sun = 1.33e+01
+[02:38:55] [PROCESS]     Delta_R_solar = 8.59e+11 cm = 0.06 AU
+[02:38:55] [PROCESS]     Delta_R_abs / Delta_R_solar = 1.26e+10
+[02:38:55] [PROCESS]     => Solar gradient is 1e+10x SHARPER than absorber gradient
+[02:38:55] [PROCESS]     C_T_solar / C_T_abs = 1.26e+10
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 10. Key Insight: Solar System Transition Direction ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   Earth orbit: 1.50e+13 cm = 1 AU
+[02:38:55] [PROCESS]   r_trans = 9.29e+11 cm = 0.06 AU
+[02:38:55] [PROCESS]   Earth is OUTSIDE r_trans
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   If r_trans < 1 AU, Cassini (at 1 AU) is OUTSIDE the transition.
+[02:38:55] [PROCESS]   Photons from Cassini to Earth never cross the transition.
+[02:38:55] [PROCESS]   Therefore C_T = 0 for Cassini.
+[02:38:55] [PROCESS]   This is STRUCTURAL ZERO, not suppression.
+[02:38:55] [PROCESS] 
+[02:38:55] [PROCESS]   r_trans = 0.0621 AU
+[02:38:55] [PROCESS]   Cassini at ~1 AU: OUTSIDE r_trans
+[02:38:55] [PROCESS]   C_T for Cassini: = 0 (structural zero)
+[02:38:55] [INFO] 
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+--- 11. Final Closure Assessment ---
+[02:38:55] [INFO] ================================================================================
+[02:38:55] [INFO] 
+[02:38:55] [PROCESS]   Required C_Theta (with alpha_T = 1): 5.26e-04
+[02:38:55] [PROCESS]   Natural macroscopic C_Theta: 9.51e-17
+[02:38:55] [PROCESS]   Maximum defect C_Theta (r_c = l_T): 1.58e+02
+[02:38:55] [PROCESS] 
+[02:38:55] [SUCCESS]   CLOSURE: ACHIEVED
+[02:38:55] [SUCCESS]   The required C_Theta (5.26e-04) is within the defect range
+[02:38:55] [SUCCESS]   (macro: 9.51e-17 to defect: 1.58e+02)
+[02:38:55] [PROCESS] 
+[02:38:55] [SUCCESS]   Required scalar mass: m_phi = 1.22e-25 eV
+[02:38:55] [PROCESS]   (Compton wavelength r_c = 0.05 kpc = 1.09e+07 AU)
+[02:38:55] [SUCCESS] 
+[COMPLETED] Gate 4B-0-II results written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4b_0_ct_closure.json

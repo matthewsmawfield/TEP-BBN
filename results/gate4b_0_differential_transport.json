@@ -1,0 +1,72 @@
+{
+  "gate": "4B-0",
+  "title": "Differential Edge-Minus-Core Transport Calculation",
+  "key_question": "Can the differential frequency shift between edge and core rays, after the shared post-absorber path cancels, be ~10^4 times the conformal-only shift without violating Cassini, cavity, and LLR?",
+  "absorber_params": {
+    "R_kpc": 30,
+    "log_N_HI": 17.362,
+    "log_N_H": 20.607286912069977,
+    "Phi_abs_c2": 9.751728206313128e-09,
+    "S_absorber": 0.9999516790230624,
+    "dv_conf_kms": 0.008770704348758025,
+    "A_env_target": 8995.856759345972
+  },
+  "conformal_differential": {
+    "delta_phi_ec": -4.875864103156564e-09,
+    "delta_ln_A_conf": 4.875864103156564e-09,
+    "dv_conf_diff_kms": 0.001461784058126338,
+    "ratio_to_conformal_shift": 0.1666666666666667,
+    "result": "Conformal differential is ~1/3 of conformal shift. Standard scalar-tensor CANNOT produce 10^4 amplification."
+  },
+  "disformal_transport": {
+    "model": "Path-dependent integral of (grad_phi_perp)^2 along photon chord",
+    "max_impact_parameter_kpc": 24.497297297297294,
+    "max_path_integral_cm_inv": 7.90722477767439e-40,
+    "A_env_per_B0": 1.3514228128567967e-32,
+    "B0_needed": 6.656581991782032e+35
+  },
+  "constraints": {
+    "cassini": {
+      "bound": 2.3e-05,
+      "delta_gamma_per_B0": 3.1637928058719847e-31,
+      "delta_gamma_at_B0_needed": 210600.45004092943,
+      "pass": false,
+      "A_env_max": 9.824513927902157e-07
+    },
+    "llr": {
+      "bound": 0.0001,
+      "pass": false,
+      "A_env_max": 4.271527794740069e-06
+    },
+    "cavity": {
+      "bound": 1e-05,
+      "S_lab": 1.0,
+      "delta_gamma_per_B0": 2.756867508185203e-51,
+      "delta_gamma_at_B0_needed": 1.835131355155221e-15,
+      "pass": true,
+      "A_env_max": 49020233533010.914
+    },
+    "all_pass": false,
+    "A_env_max_all": 9.824513927902157e-07,
+    "gap_factor": 9156541306.127367
+  },
+  "screening_contrast": {
+    "absorber_to_solar": 1.6231774418732602e-09,
+    "absorber_to_cavity": 186276529358.23724
+  },
+  "B_enhancement_at_transition": {
+    "delta_phi_transition": 9.626170774686799e-09,
+    "Delta_R_shell_kpc": 3.5223048327137545,
+    "d2phi_dr2": 8.147189939523505e-53,
+    "phi_trans": 7.95e-08,
+    "best_scenario": {
+      "m_phi_eV": 1e-30,
+      "lambda_cm": 1.974338327091136e+25,
+      "B_enhancement": 399470.72030265996,
+      "A_env_with_cassini": 0.39246056554025893,
+      "cassini_pass": false
+    },
+    "key_insight": "B(phi) enhancement from field curvature is LOCALIZED to the screening transition. In the solar system, there is no screening transition (field is uniformly screened), so B_eff = B_0 and the Cassini constraint applies to B_0, not B_enhanced. This means the enhancement factor multiplies the allowed A_env by B_enhance."
+  },
+  "conclusion": "Standard disformal path integral: A_env max = 9.82e-07, required = 8996, gap = 9e+09x. With B(phi) enhancement localized to the screening transition: best A_env = 3.92e-01 (m_phi = 1e-30 eV). Cassini FAIL (enhancement is localized to transition, not present in solar system). The decisive question is whether the non-exact transport C_{T,||} has the structure of the standard disformal path integral (constrained) or a different, non-local/topological structure (unconstrained by Cassini)."
+}

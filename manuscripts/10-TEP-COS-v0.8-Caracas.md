@@ -1,7 +1,7 @@
 # TEP: Suppressed Density Scaling in Globular Cluster Pulsars
 **Matthew Lukin Smawfield**
 Version: v0.8 (Caracas)
-First published: 9 January 2026 · Last updated: 19 August 2026
+First published: 9 January 2026 · Last updated: 9 September 2026
 DOI: 10.5281/zenodo.18165798
 
 ---
@@ -1834,7 +1834,7 @@ The repository includes a comprehensive reproduction guide (see `README.md`) to 
 
 ## TEP Series: Foundational Theory
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.11 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
 

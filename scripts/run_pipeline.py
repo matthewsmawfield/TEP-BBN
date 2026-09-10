@@ -59,6 +59,7 @@ CORE_STEPS = [
 # Phase 2: Disformal Transport
 DISFORMAL_STEPS = [
     ("step_09_disformal_transport", "run_gate4b_closure", "Gate 4B Closure: Disformal Transport Solver", "disformal"),
+    ("step_04h_disformal_clock", "run_disformal_clock", "Gate 4B-IV: Disformal Clock Closure (cosmological d0phi)", "disformal"),
     ("step_09b_screening_plot", "main", "Gate 4B: Screening Function Plot", "disformal"),
 ]
 

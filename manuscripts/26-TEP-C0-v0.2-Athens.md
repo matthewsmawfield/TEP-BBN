@@ -591,7 +591,7 @@ The author declares no competing interests. No external funding was received for
 
 ## 8.1 TEP Series
 
-- Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. v0.10 (Jakarta). DOI: 10.5281/zenodo.16921911.
+- Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. v0.11 (Jakarta). DOI: 10.5281/zenodo.16921911.
 
 - Smawfield, M. L. (2026). *The Cepheid Bias: Resolving the Hubble Tension*. v0.6 (Kingston upon Hull). DOI: 10.5281/zenodo.18209702.
 

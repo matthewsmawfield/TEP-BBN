@@ -1,7 +1,7 @@
 # Cosmological Voids vs Temporal Shear: An Empirical Falsification of Kinematic Hubble Tension Solutions
 **Matthew Lukin Smawfield**
 Version: v0.2 (Valencia)
-First published: 29 August 2026 · Last updated: 30 August 2026
+First published: 29 August 2026 · Last updated: 9 September 2026
 DOI: 10.5281/zenodo.22150139
 
 ---
@@ -1319,7 +1319,7 @@ Vagnozzi, S. (2023). "Seven Hints That Early-Time New Physics Alone Is Not Suffi
 
 Planck Collaboration (2020). "Planck 2018 Results VI. Cosmological Parameters." *Astronomy & Astrophysics*, 641, A6. CMB inference of $H_0 = 67.4 \pm 0.5\ {\rm km\,s^{-1}\,Mpc^{-1}}$.
 
-Smawfield, M. L. (2025). "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed." Preprint, Zenodo DOI: 10.5281/zenodo.16921911. Foundational TEP framework; scalar-tensor action; disformal metric transformation; synchronization holonomy.
+Smawfield, M. L. (2025). "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed." Preprint v0.11 (Jakarta), Zenodo DOI: 10.5281/zenodo.16921911. Foundational TEP framework; scalar-tensor action; disformal metric transformation; synchronization holonomy.
 
 Smawfield, M. L. (2025). "Global Time Echoes: Distance-Structured Correlations in GNSS Clocks." Preprint, Zenodo DOI: 10.5281/zenodo.17127229. (TEP-GNSS, Paper 1). GNSS clock-network test of residual synchronization holonomy at the $10^{-18}$–$10^{-19}$ fractional level.
 

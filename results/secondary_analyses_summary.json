@@ -1,6 +1,6 @@
 {
   "sightline": "Q1009+2956",
-  "n_sims_c3": 50,
+  "n_sims_c3": 1000,
   "n_free_components_c2": 5,
   "results": {
     "c2": "PASS",

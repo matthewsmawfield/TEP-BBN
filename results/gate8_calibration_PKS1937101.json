@@ -1,8 +1,8 @@
 {
   "gate": "8-calibration",
   "sightline": "PKS1937-101",
-  "n_sims": 200,
-  "n_successful": 200,
+  "n_sims": 1000,
+  "n_successful": 1000,
   "observed": {
     "v_H": -67.26017236309448,
     "b_H": 15.08642519133573,
@@ -12,23 +12,23 @@
     "logN_diff": -0.09423214883842235
   },
   "simulated_stats": {
-    "b_ratio_mean": 1.1784397051308204,
-    "b_ratio_std": 0.10983353840222372,
-    "deviation_mean": 0.03334105541293368,
-    "deviation_std": 0.7030074856206603,
-    "logN_diff_mean": -0.20804294326961392,
-    "logN_diff_std": 0.044737960645722705
+    "b_ratio_mean": 1.1869077688298115,
+    "b_ratio_std": 0.08317338252474975,
+    "deviation_mean": 0.013456162584205955,
+    "deviation_std": 0.5119971805133374,
+    "logN_diff_mean": -0.2045156231215852,
+    "logN_diff_std": 0.035368434851338726
   },
   "calibrated_p_values": {
-    "b_value": 0.07,
+    "b_value": 0.05,
     "velocity_deviation": 0.0,
-    "column_density": 0.995,
+    "column_density": 1.0,
     "joint_mahalanobis": 0.0
   },
   "nominal_sigmas": {
-    "b_value": 2.791763789894301,
-    "velocity_deviation": 8.048525648080739,
-    "column_density": 2.106313016470313
+    "b_value": 3.6866276940949256,
+    "velocity_deviation": 11.05118151849518,
+    "column_density": 2.6643007878211376
   },
-  "mahalanobis_distance": 80.57640373411931
+  "mahalanobis_distance": 130.4152148153658
 }

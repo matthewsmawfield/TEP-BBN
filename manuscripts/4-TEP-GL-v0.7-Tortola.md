@@ -1002,16 +1002,16 @@ gravity \(c_g\) and the speed of light \(c_{\gamma}\) to (e.g., Baker et al.
 Jain 2017):
 
 Screening in TEP is represented at the theory level by the environmental operator
-\(\mathcal{S}_\Sigma(\mathcal{E})\).
+*S*<sub>&Sigma;</sub>(*&Epsilon;*).
 Quantities such as
-\(\rho_T\),
-\(R_T(M)\),
-\(\mathcal{S}_\oplus(r)\),
-compactness \(\Phi/c^2\),
+&rho;<sub>T</sub>,
+*R*<sub>T</sub>(*M*),
+*S*<sub>&oplus;</sub>(*r*),
+compactness &Phi;/*c*<sup>2</sup>,
 local stellar density,
 geometric coherence length,
 and channel-specific response coefficients
-are domain-specific projections of \(\mathcal{E}\),
+are domain-specific projections of *&Epsilon;*,
 not independent screening mechanisms
 and not interchangeable universal thresholds.
 Each is an observational transfer model
@@ -1993,7 +1993,7 @@ J. 2012, *A&A*, 544, A62
 
 Smette, A., Surdej, J., et al. 1992, *ApJ*, 389, 39
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.11 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
 

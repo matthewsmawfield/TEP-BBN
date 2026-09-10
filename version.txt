@@ -1,7 +1,15 @@
-v0.2 (Dubai) — 2026-08-31 — Three-sightline spectroscopic analysis with TEP absorber field
+v0.3 (Dubai) — 2026-09-10 — Three-sightline spectroscopic analysis with TEP absorber field
 
-- Corrected Q1009 column density (LLS, not DLA) and added ionisation correction
-- New Gate 4B amplitude test: conformal sign verified, amplitude gap quantified as falsifiable target
-- Honest significance calibration with Lyα fragility disclosed
-- Fixed instrument provenance, reference numbering, and notation
-- Corrected primordial helium value (Y_p = 0.245)
+- Replaced beta_eff with Paper 0 alpha_eff convention; Cassini bound now S_Sigma^odot <= 3.4e-3
+- Separated S_A^abs (absorber amplitude) from S_Sigma (source-charge response); removed three-anchor calibration and 132x contrast claims
+- Added Gate 4B-IV disformal clock mechanism: temporal-disformal channel via cosmological d_0 phi, exact lapse, three-sightline diagnostic/transfer/predictive closure test
+- Added Gate 4B-0 differential transport, CT closure, and honest one-LOS calculation
+- Added Gate 6-III orphan pilot search (6 candidates) and KODIAQ archival null test
+- Monte Carlo increased from N=200 to N=1000 per sightline
+- Restructured Bonferroni: primary 6-test family (alpha/6), Gate 8 as separate secondary family (alpha/3)
+- Added wavelength-systematics sensitivity analysis for Gate 8 velocity deviations
+- Recast A_env per sightline using fitted free-H displacement; added J1332 b_turb boundary check
+- Completed helium attractor analysis (Y0=0 to 0.8 all converge to Y_eq=0.247)
+- Softened TEP identification to candidate framing throughout (displaced-H phenomenology, not definitive edge-gas signature)
+- Noted D-selected sample is not an independent sign test
+- Updated reference [1] to v0.11 Jakarta; added SQUAD/KODIAQ data to reproducibility table

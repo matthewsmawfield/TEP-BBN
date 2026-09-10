@@ -2837,7 +2837,7 @@ Planck Collaboration, Aghanim, N., et al. 2020, A&A, 641, A6. *Planck 2018 resul
 
 #### TEP Framework (This Series)
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: 10.5281/zenodo.16921911 (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.11 (Jakarta). Zenodo. DOI: 10.5281/zenodo.16921911 (Paper 0)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: 10.5281/zenodo.17127229 (Paper 1)
 

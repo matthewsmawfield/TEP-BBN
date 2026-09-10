@@ -1,14 +1,14 @@
-[10:43:18] [INFO] ================================================================================
-[10:43:18] [INFO] Script: step_06_helium
-[10:43:18] [INFO] Started: 2026-08-30T10:43:18.024524
-[10:43:18] [INFO] ================================================================================
-[10:43:18] [SUCCESS] === GATE 6: GCE BARYONIC-CYCLING EQUILIBRIUM ===
-[10:43:18] [PROCESS] Integrating GCE ODEs with Temporal Horizon sequestration...
-[10:43:18] [SUCCESS]   IC: Y=0.00, Z=0.00 -> Present Day: Y=0.2470, Z=0.0001
-[10:43:18] [SUCCESS]   IC: Y=0.80, Z=0.10 -> Present Day: Y=0.2470, Z=0.0001
-[10:43:18] [SUCCESS]   IC: Y=0.50, Z=0.50 -> Present Day: Y=0.2470, Z=0.0001
-[10:43:18] [PROCESS] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] Script: step_06_helium
+[20:56:43] [INFO] Started: 2026-09-10T20:56:43.156700
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [SUCCESS] === GATE 6: GCE BARYONIC-CYCLING EQUILIBRIUM ===
+[20:56:43] [PROCESS] Integrating GCE ODEs with Temporal Horizon sequestration...
+[20:56:43] [SUCCESS]   IC: Y=0.00, Z=0.00 -> Present Day: Y=0.2470, Z=0.0001
+[20:56:43] [SUCCESS]   IC: Y=0.80, Z=0.10 -> Present Day: Y=0.2470, Z=0.0001
+[20:56:43] [SUCCESS]   IC: Y=0.50, Z=0.50 -> Present Day: Y=0.2470, Z=0.0001
+[20:56:43] [PROCESS] 
 Theoretical Equilibrium: Y_eq = 0.2470, Z_eq = 0.0001
-[10:43:18] [SUCCESS] Gate 6 baryonic-cycling equilibrium verified. Plot saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_equilibrium.png
-[10:43:18] [SUCCESS]   [OK] 0.7s
-[10:43:18] [PROCESS] [RUN] step_07_global_opacity: Gate 7: Global Opacity Boundary
+[20:56:43] [SUCCESS] Gate 6 baryonic-cycling equilibrium verified. Plot saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_equilibrium.png
+[20:56:43] [SUCCESS]   [OK] 0.5s
+[20:56:43] [PROCESS] [RUN] step_07_global_opacity: Gate 7: Global Opacity Boundary

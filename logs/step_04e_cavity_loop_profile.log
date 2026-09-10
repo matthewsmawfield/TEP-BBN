@@ -1,0 +1,109 @@
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] Script: step_04e_cavity_loop_profile
+[23:21:34] [INFO] Started: 2026-09-09T23:21:34.185284
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [SUCCESS] === GATE 4B-0: CAVITY-VS-LOOP PROFILE ===
+[23:21:34] [INFO] 
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+--- Absorber Parameters ---
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+[23:21:34] [PROCESS]   R = 30 kpc, log N_H = 20.61
+[23:21:34] [PROCESS]   rho = 3.66e-27 g/cm³, n_H = 2.19e-03 cm⁻³
+[23:21:34] [PROCESS]   |Phi_abs|/c² = 9.75e-09 (S = 1.0000)
+[23:21:34] [PROCESS]   |Phi_gal|/c² = 5.38e-07 (S = 0.0129)
+[23:21:34] [PROCESS]   |dv_conf| (center vs. background) = 0.00877 km/s
+[23:21:34] [PROCESS]   A_env target = 9.30e+03
+[23:21:34] [INFO] 
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+--- Scalar Field Profile (Uniform Sphere) ---
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+[23:21:34] [PROCESS]   |Φ(0)|/c² = 1.46e-08 (center)
+[23:21:34] [PROCESS]   |Φ(R)|/c² = 9.75e-09 (surface)
+[23:21:34] [PROCESS]   Δln A(0) = -β_A² × 2|Φ(0)|/c² = -2.93e-08
+[23:21:34] [PROCESS]   Δln A(R) = -β_A² × 2|Φ(R)|/c² = -1.95e-08
+[23:21:34] [PROCESS]   Δln A(edge-core) = 9.75e-09
+[23:21:34] [PROCESS]   |Δv_conf(edge-core)| = 0.00292 km/s
+[23:21:34] [PROCESS]   (This is 1/3 of the full conformal amplitude, since |Φ(R)| = (2/3)|Φ(0)|)
+[23:21:34] [INFO] 
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+--- Cavity Profile: Sightline at Impact Parameter b ---
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+[23:21:34] [PROCESS]   Conformal: clock shift (endpoint difference, spectroscopic)
+[23:21:34] [PROCESS]   Disformal: transport integral (path integral, time-transfer)
+[23:21:34] [PROCESS]   B_eff has units of cm; I_dis has units of cm⁻¹ per B_eff
+[23:21:34] [PROCESS] 
+  b/R      s_max/R    Δln A(cavity)   Δv_conf(km/s)   I_dis/B(cm⁻¹)   Δv_dis/B(km/s) 
+[23:21:34] [PROCESS]   -------- ---------- --------------- --------------- --------------- ---------------
+[23:21:34] [PROCESS]   0.0      1.000      9.75e-09        0.00292         6.85e-40        2.05e-34       
+[23:21:34] [PROCESS]   0.1      0.995      9.65e-09        0.00289         6.75e-40        2.02e-34       
+[23:21:34] [PROCESS]   0.3      0.954      8.87e-09        0.00266         5.94e-40        1.78e-34       
+[23:21:34] [PROCESS]   0.5      0.866      7.31e-09        0.00219         4.45e-40        1.33e-34       
+[23:21:34] [PROCESS]   0.7      0.714      4.97e-09        0.00149         2.49e-40        7.48e-35       
+[23:21:34] [PROCESS]   0.9      0.436      1.85e-09        0.00056         5.67e-41        1.70e-35       
+[23:21:34] [INFO] 
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+--- Loop Profile: Two Parallel Sightlines ---
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+[23:21:34] [PROCESS]   Loop = sightline at b₁ (forward) + sightline at b₂ (backward)
+[23:21:34] [PROCESS]   Conformal loop integral = 0 (exact differential)
+[23:21:34] [PROCESS]   Disformal loop integral = I_dis(b₁) + I_dis(b₂) (accumulates, not cancels)
+[23:21:34] [PROCESS]   (∂_ℓ φ)² is always positive — backward traversal does not change sign
+[23:21:34] [PROCESS] 
+  b₂/R     Δv_conf(loop)   I_dis/B(loop)   Δv_dis/B(loop)  Loop/cavity ratio 
+[23:21:34] [PROCESS]   -------- --------------- --------------- --------------- ------------------
+[23:21:34] [PROCESS]   0.1      0.0             1.36e-39        4.08e-34        1.9850            
+[23:21:34] [PROCESS]   0.3      0.0             1.28e-39        3.84e-34        1.8681            
+[23:21:34] [PROCESS]   0.5      0.0             1.13e-39        3.39e-34        1.6495            
+[23:21:34] [PROCESS]   0.7      0.0             9.34e-40        2.80e-34        1.3642            
+[23:21:34] [PROCESS]   0.9      0.0             7.41e-40        2.22e-34        1.0828            
+[23:21:34] [INFO] 
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+--- Key Result ---
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+[23:21:34] [PROCESS]   Conformal cavity signal (b=0): |Δv_conf| = 0.00292 km/s
+[23:21:34] [PROCESS]     (clock shift — endpoint difference, spectroscopic observable)
+[23:21:34] [PROCESS]   Conformal loop signal: 0 (exact differential — cancels on any closed loop)
+[23:21:34] [PROCESS]   Disformal cavity signal (b=0, per B_eff=1 cm): |Δv_dis| = 2.05e-34 km/s
+[23:21:34] [PROCESS]     (photon transport — path integral, time-transfer observable)
+[23:21:34] [PROCESS]   Disformal loop signal (b₁=0, b₂=0.5, per B_eff=1 cm): |Δv_dis| = 3.39e-34 km/s
+[23:21:34] [PROCESS]   Loop/cavity ratio: 1.6495 (analytical: 1.6495)
+[23:21:34] [PROCESS] 
+[23:21:34] [SUCCESS]   The conformal clock shift is a cavity-only signal.
+[23:21:34] [SUCCESS]   It vanishes on any closed loop (exact differential).
+[23:21:34] [SUCCESS]   The disformal transport accumulates around the loop:
+[23:21:34] [PROCESS]   both legs contribute positively ((∂_ℓ φ)² is always positive),
+[23:21:34] [PROCESS]   so the loop signal is 165.0% of the
+[23:21:34] [PROCESS]   single-leg cavity signal for b₂/R = 0.5.
+[23:21:34] [PROCESS] 
+[23:21:34] [SUCCESS]   The loop ISOLATES the disformal transport by canceling
+[23:21:34] [SUCCESS]   the conformal clock shift. The conformal part is removed
+[23:21:34] [PROCESS]   cleanly; the disformal part is the accumulated transport
+[23:21:34] [PROCESS]   from both legs.
+[23:21:34] [PROCESS] 
+[23:21:34] [INFO] 
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO]   Gate 4B-0 assessment:
+[23:21:34] [INFO] ================================================================================
+[23:21:34] [INFO] 
+[23:21:34] [PROCESS]   The differential edge-core observable (conformal clock shift)
+[23:21:34] [PROCESS]   is a cavity-only signal that does not survive loop closure.
+[23:21:34] [PROCESS]   The disformal transport integral accumulates on a closed loop
+[23:21:34] [PROCESS]   and is the only nonzero residue. Its magnitude depends on
+[23:21:34] [PROCESS]   B_eff (with units of cm) and the impact parameters of both legs.
+[23:21:34] [PROCESS]   For a static field, the disformal sector does not affect g̃₀₀
+[23:21:34] [PROCESS]   (clock rates) — it affects photon propagation (spatial metric).
+[23:21:34] [PROCESS]   The two observables are physically distinct: the conformal
+[23:21:34] [PROCESS]   part is a spectroscopic velocity shift; the disformal part
+[23:21:34] [PROCESS]   is an optical time-transfer phase delay.
+[23:21:34] [SUCCESS] 
+[COMPLETED] Gate 4B-0 results written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4b0_cavity_loop_profile.json

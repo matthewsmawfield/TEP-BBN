@@ -1703,7 +1703,7 @@ All numbers are computed at $\eta = -0.1$ in the perturbative regime. Note that 
 
 # References
 
-- Smawfield, M. L. (2025). Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed. Paper 0 (Jakarta). DOI: 10.5281/zenodo.16921911.
+- Smawfield, M. L. (2025). Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed. Paper 0, v0.11 (Jakarta). DOI: 10.5281/zenodo.16921911.
 
 - Schwarzschild, K. (1916). Über das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie. *Sitzungsber. Preuss. Akad. Wiss.*, 189–196.
 

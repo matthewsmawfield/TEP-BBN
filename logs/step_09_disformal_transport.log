@@ -1,123 +1,125 @@
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] Script: step_09_disformal_transport
-[15:43:51] [INFO] Started: 2026-08-30T15:43:51.985299
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [SUCCESS] === GATE 4B: DISFORMAL TRANSPORT SOLVER ===
-[15:43:51] [PROCESS]   Read conformal amplitude from gate4b_amplitude.json
-[15:43:51] [PROCESS]   R=30 kpc: dv_conf=0.008771 km/s, A_env=9303.7
-[15:43:51] [INFO] 
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] Script: step_09_disformal_transport
+[20:56:43] [INFO] Started: 2026-09-10T20:56:43.773912
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [SUCCESS] === GATE 4B: DISFORMAL TRANSPORT SOLVER ===
+[20:56:43] [PROCESS]   Read conformal amplitude from gate4b_amplitude.json
+[20:56:43] [PROCESS]   R=30 kpc: dv_conf=0.008771 km/s, A_env=9303.7
+[20:56:43] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
 --- Step 1: Conformal Screening Operator ---
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
-[15:43:51] [PROCESS]   Variable: |Φ|/c² (potential depth, not local density)
-[15:43:51] [PROCESS]   Absorber: |Φ|/c²=1e-8 → S_Σ=0.999947 (unscreened)
-[15:43:51] [PROCESS]   Solar: |Φ|/c²=1e-6 → S_Σ=0.000099 (Cassini)
-[15:43:51] [PROCESS]   Frozen: Φ_half=1.6e-07, n=3.5600
-[15:43:51] [PROCESS]   FREE PREDICTIONS:
-[15:43:51] [PROCESS]     Galaxy: S_Σ=0.0129 (screened → rotation curves safe)
-[15:43:51] [PROCESS]     Dwarf: S_Σ=0.8390 (transition)
-[15:43:51] [INFO] 
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
+[20:56:43] [PROCESS]   Variable: |Φ|/c² (potential depth, not local density)
+[20:56:43] [PROCESS]   Absorber: |Φ|/c²=1e-8 → S_Σ=0.999947 (unscreened)
+[20:56:43] [PROCESS]   Solar: |Φ|/c²=1e-6 → S_Σ=0.000099 (Cassini)
+[20:56:43] [PROCESS]   Frozen: Φ_half=1.6e-07, n=3.5600
+[20:56:43] [PROCESS]   FREE PREDICTIONS:
+[20:56:43] [PROCESS]     Galaxy: S_Σ=0.0129 (screened → rotation curves safe)
+[20:56:43] [PROCESS]     Dwarf: S_Σ=0.8390 (transition)
+[20:56:43] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
 --- Step 2: Potential Gradient Validation ---
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
-[15:43:51] [PROCESS]   Cassini: ✓ S_Σ=0.0001
-[15:43:51] [PROCESS]   Absorber: ✓ S_Σ=0.9999
-[15:43:51] [PROCESS]   Rotation: ✓ S_Σ=0.0129
-[15:43:51] [PROCESS]   β_eff²×|Φ|/c² peaks at |Φ|/c²=9.6e-08 (unscreened)
-[15:43:51] [INFO] 
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
+[20:56:43] [PROCESS]   Cassini: ✓ S_Σ=0.0001
+[20:56:43] [PROCESS]   Absorber: ✓ S_Σ=0.9999
+[20:56:43] [PROCESS]   Rotation: ✓ S_Σ=0.0129
+[20:56:43] [PROCESS]   β_eff²×|Φ|/c² peaks at |Φ|/c²=9.6e-08 (unscreened)
+[20:56:43] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
 --- Step 3: Conformal-Only Baseline (from gate4b_amplitude.json) ---
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
-[15:43:51] [PROCESS]   Reference (R=30 kpc): |Δv_conf| = 0.008771 km/s
-[15:43:51] [PROCESS]   Target: |Δv_T| = 81.6 km/s
-[15:43:51] [PROCESS]   Required A_env = 9.30e+03
-[15:43:51] [INFO] 
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
+[20:56:43] [PROCESS]   Reference (R=30 kpc): |Δv_conf| = 0.008771 km/s
+[20:56:43] [PROCESS]   Target: |Δv_T| = 81.6 km/s
+[20:56:43] [PROCESS]   Required A_env = 9.30e+03
+[20:56:43] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
 --- Step 4: Perturbative Disformal Assessment ---
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
-[15:43:51] [PROCESS]   B(φ) = B₀/M_Pl² (constant coupling):
-[15:43:51] [PROCESS]     Disformal ratio ~ B₀×(∇ψ)² ~ B₀×(|Φ|/c²)²/r²
-[15:43:51] [PROCESS]     For |Φ|/c²~10⁻⁸, r~10²³ cm: ratio ~ B₀×10⁻⁶² cm⁻²
-[15:43:51] [PROCESS]     → Need B₀~10⁶⁰ for A_env~10⁴: ABSURDLY UNNATURAL
-[15:43:51] [PROCESS] 
-[15:43:51] [PROCESS]   B(φ) = B₀×M_Pl²/φ² (inverse field coupling):
-[15:43:51] [PROCESS]     Disformal ratio ~ B₀×(∇ψ/ψ)²
-[15:43:51] [PROCESS]     For extended mass: ∇ψ/ψ ~ 0.1/R ~ 10⁻²⁴ cm⁻¹
-[15:43:51] [PROCESS]     → ratio ~ B₀×10⁻⁴⁸: still insufficient
-[15:43:51] [PROCESS] 
-[15:43:51] [PROCESS]   CONCLUSION: Perturbative disformal mechanism (local B(φ))
-[15:43:51] [PROCESS]   cannot close the 10⁴ gap. The amplification requires a
-[15:43:51] [PROCESS]   NON-PERTURBATIVE mechanism from C_{T,∥}.
-[15:43:51] [INFO] 
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
+[20:56:43] [PROCESS]   B(φ) = B₀/M_Pl² (constant coupling):
+[20:56:43] [PROCESS]     Disformal ratio ~ B₀×(∇ψ)² ~ B₀×(|Φ|/c²)²/r²
+[20:56:43] [PROCESS]     For |Φ|/c²~10⁻⁸, r~10²³ cm: ratio ~ B₀×10⁻⁶² cm⁻²
+[20:56:43] [PROCESS]     → Need B₀~10⁶⁰ for A_env~10⁴: ABSURDLY UNNATURAL
+[20:56:43] [PROCESS] 
+[20:56:43] [PROCESS]   B(φ) = B₀×M_Pl²/φ² (inverse field coupling):
+[20:56:43] [PROCESS]     Disformal ratio ~ B₀×(∇ψ/ψ)²
+[20:56:43] [PROCESS]     For extended mass: ∇ψ/ψ ~ 0.1/R ~ 10⁻²⁴ cm⁻¹
+[20:56:43] [PROCESS]     → ratio ~ B₀×10⁻⁴⁸: still insufficient
+[20:56:43] [PROCESS] 
+[20:56:43] [PROCESS]   CONCLUSION: Perturbative disformal mechanism (local B(φ))
+[20:56:43] [PROCESS]   cannot close the 10⁴ gap. The amplification requires a
+[20:56:43] [PROCESS]   NON-PERTURBATIVE mechanism from C_{T,∥}.
+[20:56:43] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
 --- Step 5: Non-Perturbative Gap Analysis ---
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
-[15:43:51] [PROCESS]   Conformal baseline: |Δv_conf| = 0.008771 km/s
-[15:43:51] [PROCESS]   Observed target:    |Δv_T|    = 81.6 km/s
-[15:43:51] [PROCESS]   Perturbative disformal: ~10⁻⁴⁰ × B₀ km/s (negligible)
-[15:43:51] [PROCESS]   Non-perturbative gap: A_np = 9.30e+03
-[15:43:51] [PROCESS] 
-[15:43:51] [PROCESS]   The non-perturbative amplification must arise from the
-[15:43:51] [PROCESS]   GLOBAL structure of the non-exact transport path C_{T,∥}.
-[15:43:51] [PROCESS]   Candidate mechanisms:
-[15:43:51] [PROCESS]     1. Modified scalar propagator in the transition regime
-[15:43:51] [PROCESS]        (S_Σ varies rapidly → Green's function enhancement)
-[15:43:51] [PROCESS]     2. Non-perturbative field soliton at the absorber scale
-[15:43:51] [PROCESS]        (self-consistent solution beyond weak-field)
-[15:43:51] [PROCESS]     3. Cumulative transport phase over cosmological distance
-[15:43:51] [PROCESS]        (integral effect, not local perturbation)
-[15:43:51] [PROCESS]     4. Disformal lensing: curved photon path through
-[15:43:51] [PROCESS]        the non-exact spatial geometry (path length > Euclidean)
-[15:43:51] [INFO] 
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
+[20:56:43] [PROCESS]   Conformal baseline: |Δv_conf| = 0.008771 km/s
+[20:56:43] [PROCESS]   Observed target:    |Δv_T|    = 81.6 km/s
+[20:56:43] [PROCESS]   Perturbative disformal: ~10⁻⁴⁰ × B₀ km/s (negligible)
+[20:56:43] [PROCESS]   Non-perturbative gap: A_np = 9.30e+03
+[20:56:43] [PROCESS] 
+[20:56:43] [PROCESS]   The non-perturbative amplification must arise from the
+[20:56:43] [PROCESS]   GLOBAL structure of the non-exact transport path C_{T,∥}.
+[20:56:43] [PROCESS]   Candidate mechanisms:
+[20:56:43] [PROCESS]     1. Modified scalar propagator in the transition regime
+[20:56:43] [PROCESS]        (S_Σ varies rapidly → Green's function enhancement)
+[20:56:43] [PROCESS]     2. Non-perturbative field soliton at the absorber scale
+[20:56:43] [PROCESS]        (self-consistent solution beyond weak-field)
+[20:56:43] [PROCESS]     3. Cumulative transport phase over cosmological distance
+[20:56:43] [PROCESS]        (integral effect, not local perturbation)
+[20:56:43] [PROCESS]     4. Disformal lensing: curved photon path through
+[20:56:43] [PROCESS]        the non-exact spatial geometry (path length > Euclidean)
+[20:56:43] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
 --- Step 6: Effective Amplification Parameterization ---
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
-[15:43:51] [PROCESS]   Parameterize: A_env = A_pert × A_np
-[15:43:51] [PROCESS]   A_pert ≈ 1 (perturbative disformal negligible)
-[15:43:51] [PROCESS]   A_np ≈ 9e+03 (non-perturbative, from C_{T,∥})
-[15:43:51] [PROCESS] 
-[15:43:51] [PROCESS]   The non-perturbative factor A_np is NOT a free parameter:
-[15:43:51] [PROCESS]   it is determined by the full TEP field equations with the
-[15:43:51] [PROCESS]   Cassini-frozen S_Σ. The calculation requires solving the
-[15:43:51] [PROCESS]   non-linear field equations beyond the weak-field expansion.
-[15:43:51] [INFO] 
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
+[20:56:43] [PROCESS]   Parameterize: A_env = A_pert × A_np
+[20:56:43] [PROCESS]   A_pert ≈ 1 (perturbative disformal negligible)
+[20:56:43] [PROCESS]   A_np ≈ 9e+03 (non-perturbative, from C_{T,∥})
+[20:56:43] [PROCESS] 
+[20:56:43] [PROCESS]   The non-perturbative factor A_np is NOT a free parameter:
+[20:56:43] [PROCESS]   it is determined by the full TEP field equations with the
+[20:56:43] [PROCESS]   Cassini-frozen S_Σ. The calculation requires solving the
+[20:56:43] [PROCESS]   non-linear field equations beyond the weak-field expansion.
+[20:56:43] [INFO] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
 --- Step 7: Gate 4B Status ---
-[15:43:51] [INFO] ================================================================================
-[15:43:51] [INFO] 
-[15:43:51] [SUCCESS]   Conformal screening:     CLOSED
-[15:43:51] [SUCCESS]     S_Σ(|Φ|/c²) frozen by Cassini + absorber BCs
-[15:43:51] [SUCCESS]     Galactic rotation: FREE PREDICTION (PASS)
-[15:43:51] [SUCCESS]     Cassini bound: PASS (S_Σ = 0.0001)
-[15:43:51] [SUCCESS]     Absorber unscreened: PASS (S_Σ = 0.9999)
-[15:43:51] [SUCCESS]   Conformal amplitude:     QUANTIFIED
-[15:43:51] [PROCESS]     |Δv_conf| = 0.008771 km/s (R=30 kpc)
-[15:43:51] [PROCESS]     Required A_env = 9.30e+03
-[15:43:51] [INFO]   Perturbative disformal:  INSUFFICIENT
-[15:43:51] [PROCESS]     Weak-field B(∇φ)² suppressed by (|Φ|/c²)²
-[15:43:51] [PROCESS]     No natural B(φ) closes the gap perturbatively
-[15:43:51] [INFO]   Non-perturbative C_{T,∥}: OPEN
-[15:43:51] [PROCESS]     Requires full non-linear field solution
-[15:43:51] [PROCESS]     Candidate mechanisms identified (Step 5)
-[15:43:51] [PROCESS]     A_np = 9e+03 is the quantitative target
-[15:43:51] [PROCESS] 
-[15:43:51] [SUCCESS]   ═══════════════════════════════════════════
-[15:43:51] [PROCESS]   GATE 4B: PARTIALLY CLOSED
-[15:43:51] [SUCCESS]     Screening: CLOSED
-[15:43:51] [INFO]     Amplitude: OPEN (non-perturbative calculation needed)
-[15:43:51] [SUCCESS]   ═══════════════════════════════════════════
-[15:43:51] [SUCCESS] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] 
+[20:56:43] [SUCCESS]   Conformal screening:     CLOSED
+[20:56:43] [SUCCESS]     S_Σ(|Φ|/c²) frozen by Cassini + absorber BCs
+[20:56:43] [SUCCESS]     Galactic rotation: FREE PREDICTION (PASS)
+[20:56:43] [SUCCESS]     Cassini bound: PASS (S_Σ = 0.0001)
+[20:56:43] [SUCCESS]     Absorber unscreened: PASS (S_Σ = 0.9999)
+[20:56:43] [SUCCESS]   Conformal amplitude:     QUANTIFIED
+[20:56:43] [PROCESS]     |Δv_conf| = 0.008771 km/s (R=30 kpc)
+[20:56:43] [PROCESS]     Required A_env = 9.30e+03
+[20:56:43] [INFO]   Perturbative disformal:  INSUFFICIENT
+[20:56:43] [PROCESS]     Weak-field B(∇φ)² suppressed by (|Φ|/c²)²
+[20:56:43] [PROCESS]     No natural B(φ) closes the gap perturbatively
+[20:56:43] [INFO]   Non-perturbative C_{T,∥}: OPEN
+[20:56:43] [PROCESS]     Requires full non-linear field solution
+[20:56:43] [PROCESS]     Candidate mechanisms identified (Step 5)
+[20:56:43] [PROCESS]     A_np = 9e+03 is the quantitative target
+[20:56:43] [PROCESS] 
+[20:56:43] [SUCCESS]   ═══════════════════════════════════════════
+[20:56:43] [PROCESS]   GATE 4B: PARTIALLY CLOSED
+[20:56:43] [SUCCESS]     Screening: CLOSED
+[20:56:43] [INFO]     Amplitude: OPEN (non-perturbative calculation needed)
+[20:56:43] [SUCCESS]   ═══════════════════════════════════════════
+[20:56:43] [SUCCESS] 
 [COMPLETED] Results: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4b_closure.json
+[20:56:43] [SUCCESS]   [OK] 0.0s
+[20:56:43] [PROCESS] [RUN] step_04h_disformal_clock: Gate 4B-IV: Disformal Clock Closure (cosmological d0phi)

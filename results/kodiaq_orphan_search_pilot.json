@@ -1,0 +1,38 @@
+[
+  {
+    "name": "J101723-204658",
+    "z_abs": 2.45053,
+    "log_nhi": 17.23,
+    "status": "saturated"
+  },
+  {
+    "name": "J162557+264448",
+    "z_abs": 2.55105,
+    "log_nhi": 17.75,
+    "status": "saturated"
+  },
+  {
+    "name": "J025905+001121",
+    "z_abs": 3.08465,
+    "log_nhi": 17.25,
+    "status": "no_coverage"
+  },
+  {
+    "name": "J212912-153841",
+    "z_abs": 2.96755,
+    "log_nhi": 17.32,
+    "status": "saturated"
+  },
+  {
+    "name": "J064204+675835",
+    "z_abs": 2.90469,
+    "log_nhi": 18.42,
+    "status": "no_coverage"
+  },
+  {
+    "name": "J030341-002321",
+    "z_abs": 2.94076,
+    "log_nhi": 18.65,
+    "status": "saturated"
+  }
+]

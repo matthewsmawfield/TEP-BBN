@@ -1,54 +1,54 @@
-[19:26:53] [INFO] ================================================================================
-[19:26:53] [INFO] Script: step_01_embedding
-[19:26:53] [INFO] Started: 2026-08-30T19:26:53.279311
-[19:26:53] [INFO] ================================================================================
-[19:26:53] [SUCCESS] === GATE 1R: PHYSICAL ATOMIC-DATA EMBEDDING ===
-[19:26:53] [PROCESS] H_I_lines.txt SHA-256: e5e64db44a25fbb3254e242a8484e9a9e25d6b917960378c64654d0496074762
-[19:26:53] [PROCESS] D_I_lines.txt SHA-256: e4195b3791db0371119af15d0f342fdc77e5499ebc1586387725a5e8d3fe4022
-[19:26:53] [PROCESS] 
+[20:28:40] [INFO] ================================================================================
+[20:28:40] [INFO] Script: step_01_embedding
+[20:28:40] [INFO] Started: 2026-09-10T20:28:40.576078
+[20:28:40] [INFO] ================================================================================
+[20:28:40] [SUCCESS] === GATE 1R: PHYSICAL ATOMIC-DATA EMBEDDING ===
+[20:28:40] [PROCESS] H_I_lines.txt SHA-256: e5e64db44a25fbb3254e242a8484e9a9e25d6b917960378c64654d0496074762
+[20:28:40] [PROCESS] D_I_lines.txt SHA-256: e4195b3791db0371119af15d0f342fdc77e5499ebc1586387725a5e8d3fe4022
+[20:28:40] [PROCESS] 
 Optimal Mapping derived from Lyα ratio: rho = 0.99972665
-[19:26:53] [PROCESS] HI_Lyα / DI_Lyα:
-[19:26:53] [PROCESS]   eps_tau = 2.9942e-02
-[19:26:53] [PROCESS]   eps_F   = 2.8651e-02
-[19:26:53] [PROCESS] 
+[20:28:40] [PROCESS] HI_Lyα / DI_Lyα:
+[20:28:40] [PROCESS]   eps_tau = 2.9942e-02
+[20:28:40] [PROCESS]   eps_F   = 2.8651e-02
+[20:28:40] [PROCESS] 
 Global Max eps_tau = 2.9942e-02
-[19:26:53] [PROCESS] Global Max eps_F   = 2.8651e-02
-[19:26:53] [INFO] 
-[19:26:53] [INFO] ================================================================================
-[19:26:53] [INFO] 
+[20:28:40] [PROCESS] Global Max eps_F   = 2.8651e-02
+[20:28:40] [INFO] 
+[20:28:40] [INFO] ================================================================================
+[20:28:40] [INFO] 
 --- Operational Isotope Identifiability ---
-[19:26:53] [INFO] ================================================================================
-[19:26:53] [INFO] 
-[19:26:53] [PROCESS] 
+[20:28:40] [INFO] ================================================================================
+[20:28:40] [INFO] 
+[20:28:40] [PROCESS] 
   Case: thermal (mass-scaled b_H)
-[19:26:53] [PROCESS]     b_D = 12.00, b_H = 16.96
-[19:26:53] [PROCESS]     HI_Lyα: eps_conv = 2.6084e-02, max |F_D - F_H| / sigma = 0.5217
-[19:26:53] [PROCESS]   → Global Max |F_D - F_H| / sigma = 0.5217
-[19:26:53] [PROCESS] 
+[20:28:40] [PROCESS]     b_D = 12.00, b_H = 16.96
+[20:28:40] [PROCESS]     HI_Lyα: eps_conv = 2.6084e-02, max |F_D - F_H| / sigma = 0.5217
+[20:28:40] [PROCESS]   → Global Max |F_D - F_H| / sigma = 0.5217
+[20:28:40] [PROCESS] 
   Case: turbulence-dominated (b_H=b_D)
-[19:26:53] [PROCESS]     b_D = 12.00, b_H = 12.00
-[19:26:53] [PROCESS]     HI_Lyα: eps_conv = 1.1805e-05, max |F_D - F_H| / sigma = 0.0002
-[19:26:53] [PROCESS]   → Global Max |F_D - F_H| / sigma = 0.0002
-[19:26:53] [PROCESS] 
+[20:28:40] [PROCESS]     b_D = 12.00, b_H = 12.00
+[20:28:40] [PROCESS]     HI_Lyα: eps_conv = 1.1805e-05, max |F_D - F_H| / sigma = 0.0002
+[20:28:40] [PROCESS]   → Global Max |F_D - F_H| / sigma = 0.0002
+[20:28:40] [PROCESS] 
   Case: mixed (fitted Q1009: T_K=2000, b_turb=10.7)
-[19:26:53] [PROCESS]     b_D = 11.45, b_H = 12.15
-[19:26:53] [PROCESS]     HI_Lyα: eps_conv = 5.1580e-03, max |F_D - F_H| / sigma = 0.1032
-[19:26:53] [PROCESS]   → Global Max |F_D - F_H| / sigma = 0.1032
-[19:26:53] [INFO] 
-[19:26:53] [INFO] ================================================================================
-[19:26:53] [INFO] 
+[20:28:40] [PROCESS]     b_D = 11.45, b_H = 12.15
+[20:28:40] [PROCESS]     HI_Lyα: eps_conv = 5.1580e-03, max |F_D - F_H| / sigma = 0.1032
+[20:28:40] [PROCESS]   → Global Max |F_D - F_H| / sigma = 0.1032
+[20:28:40] [INFO] 
+[20:28:40] [INFO] ================================================================================
+[20:28:40] [INFO] 
   SUMMARY:
-[19:26:53] [INFO] ================================================================================
-[19:26:53] [INFO] 
-[19:26:53] [PROCESS]     Thermal (mass-scaled b):     0.5217 sigma
-[19:26:53] [PROCESS]     Turbulence-dominated (b=bD): 0.0002 sigma
-[19:26:53] [PROCESS]     Mixed (fitted Q1009 params): 0.1032 sigma
-[19:26:53] [PROCESS]     → H and D ARE distinguishable for thermally-dominated gas
-[19:26:53] [PROCESS]     → H and D are NOT distinguishable for turbulence-dominated gas
-[19:26:53] [PROCESS]     → Q1009 fitted params give mixed regime (b_turb/b_therm ≈ 1.87)
-[19:26:53] [WARNING] 
+[20:28:40] [INFO] ================================================================================
+[20:28:40] [INFO] 
+[20:28:40] [PROCESS]     Thermal (mass-scaled b):     0.5217 sigma
+[20:28:40] [PROCESS]     Turbulence-dominated (b=bD): 0.0002 sigma
+[20:28:40] [PROCESS]     Mixed (fitted Q1009 params): 0.1032 sigma
+[20:28:40] [PROCESS]     → H and D ARE distinguishable for thermally-dominated gas
+[20:28:40] [PROCESS]     → H and D are NOT distinguishable for turbulence-dominated gas
+[20:28:40] [PROCESS]     → Q1009 fitted params give mixed regime (b_turb/b_therm ≈ 1.87)
+[20:28:40] [WARNING] 
 [RESULT] Isotope IDENTIFIABLE: max discrepancy = 0.5217 sigma (> 0.5 sigma threshold). H and D are distinguishable for thermally-dominated gas.
-[19:26:53] [SUCCESS] 
+[20:28:40] [SUCCESS] 
 [SUCCESS] Gate 1R ledger written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate1_embedding.json
-[19:26:53] [SUCCESS]   [OK] 2.1s
-[19:26:53] [PROCESS] [RUN] step_02_q1009: Gate 2R: Spectroscopic Fit Verification
+[20:28:40] [SUCCESS]   [OK] 0.5s
+[20:28:40] [PROCESS] [RUN] step_02_q1009: Gate 2R: Spectroscopic Fit Verification

@@ -1,6 +1,6 @@
 {
   "name": "tep-bbn-site",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "TEP-BBN: Dynamical Proper Time and the Illusion of Primordial Deuterium",
   "main": "index.html",
   "scripts": {

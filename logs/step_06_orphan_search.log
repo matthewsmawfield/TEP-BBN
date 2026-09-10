@@ -1,0 +1,118 @@
+[14:06:22] [INFO] ================================================================================
+[14:06:22] [INFO] Script: step_06_orphan_search
+[14:06:22] [INFO] Started: 2026-09-10T14:06:22.007065
+[14:06:22] [INFO] ================================================================================
+[14:06:22] [SUCCESS] === GATE 6-III: ORPHAN FEATURE SEARCH IN VPFIT MODELS ===
+[14:06:22] [INFO] 
+[14:06:22] [INFO] ================================================================================
+[14:06:22] [INFO] 
+--- Q1009+2956 (Keck/HIRES, vsig=2.6 km/s) ---
+[14:06:22] [INFO] ================================================================================
+[14:06:22] [INFO] 
+[14:06:22] [PROCESS]   Parent z = 2.503587
+[14:06:22] [PROCESS]   Total H I components: 40
+[14:06:22] [PROCESS]   Total D I components: 0
+[14:06:22] [PROCESS]   H I in system (|dv| < 500.0 km/s): 11
+[14:06:22] [PROCESS]   D-associated (|dv + 81.6| < 5.0 km/s): 0
+[14:06:22] [PROCESS]   Orphan candidates (b<15.0, logN<15.0, |dv+81.6|>10.0): 3
+[14:06:22] [PROCESS]   dv_parent (km/s)   b (km/s)     logN       z             
+[14:06:22] [PROCESS]   ------------------ ------------ ---------- --------------
+[14:06:22] [PROCESS]         -155.5           10.34     11.509   2.5017696392
+[14:06:22] [PROCESS]         -229.0            4.49     11.478   2.5009111650
+[14:06:22] [PROCESS]         -288.7            6.85     11.309   2.5002133345
+[14:06:22] [PROCESS] 
+  All system H I components:
+[14:06:22] [PROCESS]   dv_parent (km/s)   b (km/s)     logN       orphan?   
+[14:06:22] [PROCESS]   ------------------ ------------ ---------- ----------
+[14:06:22] [PROCESS]         -288.7            6.85     11.309   ORPHAN
+[14:06:22] [PROCESS]         -241.7           27.29     13.107   
+[14:06:22] [PROCESS]         -229.0            4.49     11.478   ORPHAN
+[14:06:22] [PROCESS]         -210.5           39.96     12.155   
+[14:06:22] [PROCESS]         -155.5           10.34     11.509   ORPHAN
+[14:06:22] [PROCESS]         -110.3           25.39     12.421   
+[14:06:22] [PROCESS]            1.6           41.19     13.906   
+[14:06:22] [PROCESS]           65.0           23.17     15.567   
+[14:06:22] [PROCESS]          105.4           17.97     12.935   
+[14:06:22] [PROCESS]          124.9           42.74     12.746   
+[14:06:22] [PROCESS]          206.8           56.75     12.236   
+[14:06:22] [INFO] 
+[14:06:22] [INFO] ================================================================================
+[14:06:22] [INFO] 
+--- PKS1937-101 (ESPRESSO, vsig=1.82 km/s) ---
+[14:06:22] [INFO] ================================================================================
+[14:06:22] [INFO] 
+[14:06:22] [PROCESS]   Parent z = 3.572132
+[14:06:22] [PROCESS]   Total H I components: 184
+[14:06:22] [PROCESS]   Total D I components: 3
+[14:06:22] [PROCESS]   H I in system (|dv| < 500.0 km/s): 20
+[14:06:22] [PROCESS]   D-associated (|dv + 81.6| < 5.0 km/s): 0
+[14:06:22] [PROCESS]   Orphan candidates (b<15.0, logN<15.0, |dv+81.6|>10.0): 3
+[14:06:22] [PROCESS]   dv_parent (km/s)   b (km/s)     logN       z             
+[14:06:22] [PROCESS]   ------------------ ------------ ---------- --------------
+[14:06:22] [PROCESS]         -452.2           11.34     13.168   3.5652351000
+[14:06:22] [PROCESS]         -481.8           14.56     13.561   3.5647841000
+[14:06:22] [PROCESS]          336.2           12.88     12.575   3.5772601000
+[14:06:22] [PROCESS] 
+  All system H I components:
+[14:06:22] [PROCESS]   dv_parent (km/s)   b (km/s)     logN       orphan?   
+[14:06:22] [PROCESS]   ------------------ ------------ ---------- ----------
+[14:06:22] [PROCESS]         -481.8           14.56     13.561   ORPHAN
+[14:06:22] [PROCESS]         -472.9           34.58     14.206   
+[14:06:22] [PROCESS]         -452.2           11.34     13.168   ORPHAN
+[14:06:22] [PROCESS]         -376.6           27.53     14.038   
+[14:06:22] [PROCESS]         -332.2           35.28     13.553   
+[14:06:22] [PROCESS]         -246.8           21.57     12.140   
+[14:06:22] [PROCESS]         -172.0           31.49     13.046   
+[14:06:22] [PROCESS]            0.0           16.33     17.924   
+[14:06:22] [PROCESS]            9.2           17.09     17.384   
+[14:06:22] [PROCESS]           21.4           18.36     17.464   
+[14:06:22] [PROCESS]           45.2           29.08     15.768   
+[14:06:22] [PROCESS]           93.5           21.51     13.721   
+[14:06:22] [PROCESS]          190.1           57.68     13.108   
+[14:06:22] [PROCESS]          235.5           17.23     12.231   
+[14:06:22] [PROCESS]          299.2           20.55     13.647   
+[14:06:22] [PROCESS]          336.2           12.88     12.575   ORPHAN
+[14:06:22] [PROCESS]          368.5           20.12     13.546   
+[14:06:22] [PROCESS]          415.6           19.75     13.609   
+[14:06:22] [PROCESS]          438.4           22.33     12.557   
+[14:06:22] [PROCESS]          490.6           16.44     12.236   
+[14:06:22] [INFO] 
+[14:06:22] [INFO] ================================================================================
+[14:06:22] [INFO] 
+--- J1332+0052 (UVES, vsig=2.51 km/s) ---
+[14:06:22] [INFO] ================================================================================
+[14:06:22] [INFO] 
+[14:06:22] [PROCESS]   Parent z = 3.420830
+[14:06:22] [PROCESS]   Total H I components: 4
+[14:06:22] [PROCESS]   Total D I components: 4
+[14:06:22] [PROCESS]   H I in system (|dv| < 500.0 km/s): 4
+[14:06:22] [PROCESS]   D-associated (|dv + 81.6| < 5.0 km/s): 0
+[14:06:22] [PROCESS]   Orphan candidates (b<15.0, logN<15.0, |dv+81.6|>10.0): 0
+[14:06:22] [PROCESS] 
+  All system H I components:
+[14:06:22] [PROCESS]   dv_parent (km/s)   b (km/s)     logN       orphan?   
+[14:06:22] [PROCESS]   ------------------ ------------ ---------- ----------
+[14:06:22] [PROCESS]           -0.0           18.57     16.680   
+[14:06:22] [PROCESS]           17.4           13.21     19.250   
+[14:06:22] [PROCESS]           26.1           15.82     18.390   
+[14:06:22] [PROCESS]           38.7           19.60     16.800   
+[14:06:22] [SUCCESS] 
+======================================================================
+[14:06:22] [SUCCESS] SUMMARY: 6 orphan candidates across 3 benchmark sightlines
+[14:06:22] [PROCESS] Prediction: ~11 orphans expected (gate6_population_prediction.json)
+[14:06:22] [PROCESS] 
+  Orphan velocity distribution (dv - v_iso):
+[14:06:22] [PROCESS]     Mean: -130.2 km/s
+[14:06:22] [PROCESS]     Std:  296.8 km/s
+[14:06:22] [PROCESS]     Range: [-400.2, 417.8] km/s
+[14:06:22] [PROCESS] 
+  Orphan b-values: mean=10.1, range=[4.5, 14.6]
+[14:06:22] [PROCESS]   Orphan logN: mean=12.27, range=[11.31, 13.56]
+[14:06:22] [SUCCESS] 
+  Results saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_orphan_search.json
+[14:06:22] [INFO] ======================================================================
+[14:06:22] [INFO] Gate 6-III (Archival): Public-data orphan search
+[14:06:22] [INFO] ======================================================================
+[14:06:22] [PROCESS]   KODIAQ Z: 26 pLLSs/LLSs, 9 LLS-class
+[14:06:22] [PROCESS]   Searched: 0, Saturated: 7, Orphan candidates: 0
+[14:06:22] [SUCCESS]   Results saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_archival_search.json

@@ -1,38 +1,12 @@
-[19:45:54] [INFO] ================================================================================
-[19:45:54] [INFO] Script: secondary_analyses
-[19:45:54] [INFO] Started: 2026-08-30T19:45:54.162639
-[19:45:54] [INFO] ================================================================================
-[19:45:54] [SUCCESS] === C3: NOISY/OFFSET TRUE-D MC (Q1009+2956) ===
-[19:45:54] [PROCESS] Perturbation sigmas: {'logN_D': 0.1, 'T_K': 1000.0, 'b_turb': 1.0}
-[19:45:54] [PROCESS] N_sims: 200
-[19:49:09] [PROCESS] Completed 10/200. Std exc: 0, Parent exc: 0
-[19:52:23] [PROCESS] Completed 20/200. Std exc: 0, Parent exc: 0
-[19:52:44] [PROCESS] Completed 30/200. Std exc: 0, Parent exc: 0
-[19:55:42] [PROCESS] Completed 40/200. Std exc: 0, Parent exc: 0
-[19:58:12] [PROCESS] Completed 50/200. Std exc: 0, Parent exc: 0
-[19:59:09] [PROCESS] Completed 60/200. Std exc: 0, Parent exc: 0
-[20:01:17] [PROCESS] Completed 70/200. Std exc: 0, Parent exc: 0
-[20:03:51] [PROCESS] Completed 80/200. Std exc: 0, Parent exc: 0
-[20:04:50] [PROCESS] Completed 90/200. Std exc: 0, Parent exc: 0
-[20:07:35] [PROCESS] Completed 100/200. Std exc: 0, Parent exc: 0
-[20:09:51] [PROCESS] Completed 110/200. Std exc: 0, Parent exc: 0
-[20:11:10] [PROCESS] Completed 120/200. Std exc: 0, Parent exc: 0
-[20:12:20] [PROCESS] Completed 130/200. Std exc: 0, Parent exc: 0
-[20:13:45] [PROCESS] Completed 140/200. Std exc: 0, Parent exc: 0
-[20:14:30] [PROCESS] Completed 150/200. Std exc: 0, Parent exc: 0
-[20:15:32] [PROCESS] Completed 160/200. Std exc: 0, Parent exc: 0
-[20:16:56] [PROCESS] Completed 170/200. Std exc: 0, Parent exc: 0
-[20:17:37] [PROCESS] Completed 180/200. Std exc: 0, Parent exc: 0
-[20:18:47] [PROCESS] Completed 190/200. Std exc: 0, Parent exc: 0
-[20:19:43] [PROCESS] Completed 200/200. Std exc: 0, Parent exc: 0
-[20:19:43] [PROCESS] 
-T_obs = 161.03, T_parent_best = 161.03
-[20:19:43] [PROCESS] Exceedances (standard): 0/200 → p = 0.00498
-[20:19:43] [PROCESS] Exceedances (parent): 0/200 → p = 0.00498
-[20:19:43] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c3_perturbed_mc.json
-[20:25:33] [PROCESS] M_Dfree (scaffold freedom=5): LL = -15397.29
-[20:44:26] [PROCESS] M_Hfree (scaffold freedom=5): LL = -15204.62
-[20:44:26] [PROCESS] T (original, fixed scaffold) = 161.03
-[20:44:26] [PROCESS] T (with 5 freed components) = 385.35
-[20:44:26] [PROCESS] ΔT = 224.32
-[20:44:26] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c2_scaffold_freedom.json
+[21:28:50] [INFO] ================================================================================
+[21:28:50] [INFO] Script: secondary_analyses
+[21:28:50] [INFO] Started: 2026-09-10T21:28:50.414326
+[21:28:50] [INFO] ================================================================================
+[21:28:50] [SUCCESS] === C3: NOISY/OFFSET TRUE-D MC (Q1009+2956) ===
+[21:28:50] [PROCESS] Perturbation sigmas: {'logN_D': 0.1, 'T_K': 1000.0, 'b_turb': 1.0}
+[21:28:50] [PROCESS] N_sims: 1000
+[21:29:27] [PROCESS] Completed 10/1000. Std exc: 0, Parent exc: 0
+[21:30:06] [PROCESS] Completed 20/1000. Std exc: 0, Parent exc: 0
+[21:30:12] [PROCESS] Completed 30/1000. Std exc: 0, Parent exc: 0
+[21:30:51] [PROCESS] Completed 40/1000. Std exc: 0, Parent exc: 0
+[21:31:29] [PROCESS] Completed 50/1000. Std exc: 0, Parent exc: 0

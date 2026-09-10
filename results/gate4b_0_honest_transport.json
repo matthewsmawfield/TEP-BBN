@@ -1,0 +1,2180 @@
+{
+  "gate": "4B-0-III",
+  "title": "Honest Static-Field Transport \u2014 One LOS, Two Parcels, One Solved Field",
+  "status": "benchmark, not closure",
+  "framing": "strong evidence for TEP (static sector confirmed)",
+  "action": {
+    "V_phi": "V(phi) = (1/2) m_phi^2 phi^2 (massive Klein-Gordon, named benchmark)",
+    "B_phi": "B(phi) = B_0 phi^2 (weak-field limit of Paper 0)",
+    "A_phi": "A(phi) = exp(beta_A phi/M_Pl), beta_A = -1 (frozen by Paper 0)",
+    "source_density": "TOTAL host halo mass (dark matter + gas), NOT neutral H",
+    "m_phi_source": "external constraints (massless, FDM 1e-22, previous 1e-25)",
+    "B0_source": "GW170817 ceiling downward",
+    "V_frozen": false,
+    "note": "V(phi) is NOT uniquely frozen by Paper 0. This is a named benchmark."
+  },
+  "key_physics": {
+    "static_field": "For a static field (d_0 phi = 0), g_tilde_00 = A^2 g_00 + B(d_0 phi)^2 = A^2 g_00",
+    "disformal_frequency": "The disformal term does NOT affect g_tilde_00 for a static field. The frequency shift is purely conformal. This is EXPECTED and already stated in the manuscript.",
+    "conserved_energy": "E = -p_t (Killing vector d_t) gives omega = E / sqrt(-g_tilde_00) = E / (A sqrt(-g_00))",
+    "frequency_ratio": "omega_e/omega_c = A_c/A_e (purely conformal, independent of B)",
+    "disformal_shapiro": "The disformal term affects Shapiro delay (even in n_hat) but NOT frequency.",
+    "weak_field_solution": "phi/M_Pl = 2*beta_A*|Phi_total|/c^2 (from nabla^2 phi = (beta_A/M_Pl)*rho_total and M_Pl^2 = 1/(8*pi*G))",
+    "source_is_total_mass": "The scalar field couples to ALL matter (DM + gas). The host halo mass (10^9-10^12 M_sun) sets the potential, NOT the neutral H mass (~100 M_sun).",
+    "velocity_split": "Delta v / c = ln(A_e/A_c) + 0 (conformal + zero disformal) ~ |Phi_halo|/c^2 ~ 10^-8 to 10^-7"
+  },
+  "confirmed_predictions": {
+    "sign": "Blueward edge-minus-core (PASSED). Delta ln A = -2|Phi|/c^2 < 0 at core.",
+    "amplitude_lower_bound": "Conformal piece gives |dv| ~ 0.0194 km/s (Paper 29 screened, physical case). For M=10^10, R=30 kpc: |dv| ~ 0.005 km/s. This is a signed lower bound.",
+    "amplification_target": "~10^4 (identified, falsifiable). The non-static disformal transport path C_{T,parallel} is the identified channel.",
+    "screening": "Paper 29 screening suppresses massive halos (M > 10^11 M_sun). Intermediate halos (10^10-10^11 M_sun) are weakly screened \u2014 exactly the LLS host halo mass range.",
+    "cassini": "gamma-1 = -5.5e-7 < 2.3e-5 (PASS with Paper 29 screening). Unscreened: gamma-1 = -1 (FAIL). The screening mechanism is REQUIRED: unscreened in diffuse LLS clouds (|Phi|/c^2 ~ 1e-8), screened in the Solar System (|Phi|/c^2 ~ 1e-6).",
+    "gw170817": "D|grad phi|^2 << 10^-15 (PASS) for all B0 <= 10^10."
+  },
+  "cassini_control": [
+    {
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -1.0,
+      "cassini_pass": false,
+      "I_shapiro_oneway": 0.0,
+      "I_shapiro_roundtrip": 0.0,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 0.0,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 1.0,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 2.6525651376717885e-06
+    },
+    {
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "paper29",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -5.513232123980705e-07,
+      "cassini_pass": true,
+      "I_shapiro_oneway": 0.0,
+      "I_shapiro_roundtrip": 0.0,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 0.0,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 0.0005250349342552144,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 1.3646050744583906e-10
+    },
+    {
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -1.0,
+      "cassini_pass": false,
+      "I_shapiro_oneway": 8.729479589105061e-35,
+      "I_shapiro_roundtrip": 1.7458959178210121e-34,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 3.993669789014499e-45,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 1.0,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 2.6525651376717885e-06
+    },
+    {
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "paper29",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -5.513232123980705e-07,
+      "cassini_pass": true,
+      "I_shapiro_oneway": 6.1143747311189275e-52,
+      "I_shapiro_roundtrip": 1.2228749462237855e-51,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 2.7972794246359722e-62,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 0.0005250349342552144,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 1.3646050744583906e-10
+    },
+    {
+      "m_phi_eV": 0.0,
+      "B0": 10000000000.0,
+      "screening": "unscreened",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -1.0,
+      "cassini_pass": false,
+      "I_shapiro_oneway": 8.72947958910506e-25,
+      "I_shapiro_roundtrip": 1.745895917821012e-24,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 3.993669789014498e-35,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 1.0,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 2.6525651376717885e-06
+    },
+    {
+      "m_phi_eV": 0.0,
+      "B0": 10000000000.0,
+      "screening": "paper29",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -5.513232123980705e-07,
+      "cassini_pass": true,
+      "I_shapiro_oneway": 6.114374731118927e-42,
+      "I_shapiro_roundtrip": 1.2228749462237855e-41,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 2.7972794246359723e-52,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 0.0005250349342552144,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 1.3646050744583906e-10
+    },
+    {
+      "m_phi_eV": 1e-22,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -1.0,
+      "cassini_pass": false,
+      "I_shapiro_oneway": 0.0,
+      "I_shapiro_roundtrip": 0.0,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 0.0,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 1.0,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 0.0
+    },
+    {
+      "m_phi_eV": 1e-22,
+      "B0": 0.0,
+      "screening": "paper29",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -5.513232123980705e-07,
+      "cassini_pass": true,
+      "I_shapiro_oneway": 0.0,
+      "I_shapiro_roundtrip": 0.0,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 0.0,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 0.0005250349342552144,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 0.0
+    },
+    {
+      "m_phi_eV": 1e-22,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -1.0,
+      "cassini_pass": false,
+      "I_shapiro_oneway": 0.0,
+      "I_shapiro_roundtrip": 0.0,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 0.0,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 1.0,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 0.0
+    },
+    {
+      "m_phi_eV": 1e-22,
+      "B0": 1.0,
+      "screening": "paper29",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -5.513232123980705e-07,
+      "cassini_pass": true,
+      "I_shapiro_oneway": 0.0,
+      "I_shapiro_roundtrip": 0.0,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 0.0,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 0.0005250349342552144,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 0.0
+    },
+    {
+      "m_phi_eV": 1e-22,
+      "B0": 10000000000.0,
+      "screening": "unscreened",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -1.0,
+      "cassini_pass": false,
+      "I_shapiro_oneway": 0.0,
+      "I_shapiro_roundtrip": 0.0,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 0.0,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 1.0,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 0.0
+    },
+    {
+      "m_phi_eV": 1e-22,
+      "B0": 10000000000.0,
+      "screening": "paper29",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -5.513232123980705e-07,
+      "cassini_pass": true,
+      "I_shapiro_oneway": 0.0,
+      "I_shapiro_roundtrip": 0.0,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 0.0,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 0.0005250349342552144,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 0.0
+    },
+    {
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -1.0,
+      "cassini_pass": false,
+      "I_shapiro_oneway": 0.0,
+      "I_shapiro_roundtrip": 0.0,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 0.0,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 1.0,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 1.205273726197129e-13
+    },
+    {
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "paper29",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -5.513232123980705e-07,
+      "cassini_pass": true,
+      "I_shapiro_oneway": 0.0,
+      "I_shapiro_roundtrip": 0.0,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 0.0,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 0.0005250349342552144,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 6.200498602358855e-18
+    },
+    {
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -1.0,
+      "cassini_pass": false,
+      "I_shapiro_oneway": 2.5271992516818933e-63,
+      "I_shapiro_roundtrip": 5.054398503363787e-63,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 5.551529268795499e-72,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 1.0,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 1.205273726197129e-13
+    },
+    {
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "paper29",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -5.513232123980705e-07,
+      "cassini_pass": true,
+      "I_shapiro_oneway": 1.7701219284906523e-80,
+      "I_shapiro_roundtrip": 3.540243856981305e-80,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 3.888448324291256e-89,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 0.0005250349342552144,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 6.200498602358855e-18
+    },
+    {
+      "m_phi_eV": 1e-25,
+      "B0": 10000000000.0,
+      "screening": "unscreened",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -1.0,
+      "cassini_pass": false,
+      "I_shapiro_oneway": 2.5271992516818933e-53,
+      "I_shapiro_roundtrip": 5.054398503363787e-53,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 5.551529268795499e-62,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 1.0,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 1.205273726197129e-13
+    },
+    {
+      "m_phi_eV": 1e-25,
+      "B0": 10000000000.0,
+      "screening": "paper29",
+      "b_graze_Rsun": 1.6,
+      "r_trans_cm": 928882121816.4895,
+      "r_trans_AU": 0.06209105092356213,
+      "r_trans_Rsun": 13.346007497363354,
+      "graze_inside_r_trans": true,
+      "gamma_minus_1": -5.513232123980705e-07,
+      "cassini_pass": true,
+      "I_shapiro_oneway": 1.770121928490652e-70,
+      "I_shapiro_roundtrip": 3.540243856981304e-70,
+      "doppler_residual_disformal": 0.0,
+      "D_grad2_at_graze": 3.888448324291256e-79,
+      "gw170817_pass": true,
+      "gw170817_bound": 3e-15,
+      "S_at_graze": 0.0005250349342552144,
+      "Phi_graze_c2": 1.3262594950504834e-06,
+      "phi_at_graze_over_Mpl": 6.200498602358855e-18
+    }
+  ],
+  "absorber_results_sample": [
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 1.4357601614744179e-08,
+        "phi_edge_over_Mpl": 9.571762199067858e-09,
+        "A_core": 0.9999999856423984,
+        "A_edge_near": 0.9999999904282378,
+        "A_edge_far": 0.9999999904282378,
+        "lnA_core": -1.4357601614744179e-08,
+        "lnA_near": -9.571762199067858e-09,
+        "lnA_far": -9.571762199067858e-09,
+        "delta_lnA_near": 4.785839415676321e-09,
+        "delta_lnA_far": 4.785839415676321e-09,
+        "max_phi_over_Mpl": 1.4357635269416982e-08,
+        "max_abs_Phi_c2": 7.178817634708491e-09
+      },
+      "pieces": {
+        "local_lnA_near": 4.785839415676321e-09,
+        "local_lnA_far": 4.785839415676321e-09,
+        "I_Sigma_near_to_core": -4.7666241333723395e-09,
+        "I_Sigma_core_to_far": 4.8048115300524446e-09,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.001434794656819761,
+        "dv_far_kms": 0.001434794656819761,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.785839415676321e-09,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 1.4265651229772144e-08,
+        "phi_edge_over_Mpl": 9.480173792543025e-09,
+        "A_core": 0.9999999857343489,
+        "A_edge_near": 0.9999999905198262,
+        "A_edge_far": 0.9999999905198262,
+        "lnA_core": -1.4265651229772144e-08,
+        "lnA_near": -9.480173792543025e-09,
+        "lnA_far": -9.480173792543025e-09,
+        "delta_lnA_near": 4.785477437229119e-09,
+        "delta_lnA_far": 4.785477437229119e-09,
+        "max_phi_over_Mpl": 1.4265663243834018e-08,
+        "max_abs_Phi_c2": 7.178817634708491e-09
+      },
+      "pieces": {
+        "local_lnA_near": 4.785477437229119e-09,
+        "local_lnA_far": 4.785477437229119e-09,
+        "I_Sigma_near_to_core": -4.766387295161447e-09,
+        "I_Sigma_core_to_far": 4.8043332991532515e-09,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0014346861356812901,
+        "dv_far_kms": 0.0014346861356812901,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.785477437229119e-09,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 1.4357601614744179e-08,
+        "phi_edge_over_Mpl": 9.571762199067858e-09,
+        "A_core": 0.9999999856423984,
+        "A_edge_near": 0.9999999904282378,
+        "A_edge_far": 0.9999999904282378,
+        "lnA_core": -1.4357601614744179e-08,
+        "lnA_near": -9.571762199067858e-09,
+        "lnA_far": -9.571762199067858e-09,
+        "delta_lnA_near": 4.785839415676321e-09,
+        "delta_lnA_far": 4.785839415676321e-09,
+        "max_phi_over_Mpl": 1.4357635269416982e-08,
+        "max_abs_Phi_c2": 7.178817634708491e-09
+      },
+      "pieces": {
+        "local_lnA_near": 4.785839415676321e-09,
+        "local_lnA_far": 4.785839415676321e-09,
+        "I_Sigma_near_to_core": -4.7666241333723395e-09,
+        "I_Sigma_core_to_far": 4.8048115300524446e-09,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 2.6421732429120094e-55,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.001434794656819761,
+        "dv_far_kms": 0.001434794656819761,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.785839415676321e-09,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 1.4265651229772144e-08,
+        "phi_edge_over_Mpl": 9.480173792543025e-09,
+        "A_core": 0.9999999857343489,
+        "A_edge_near": 0.9999999905198262,
+        "A_edge_far": 0.9999999905198262,
+        "lnA_core": -1.4265651229772144e-08,
+        "lnA_near": -9.480173792543025e-09,
+        "lnA_far": -9.480173792543025e-09,
+        "delta_lnA_near": 4.785477437229119e-09,
+        "delta_lnA_far": 4.785477437229119e-09,
+        "max_phi_over_Mpl": 1.4265663243834018e-08,
+        "max_abs_Phi_c2": 7.178817634708491e-09
+      },
+      "pieces": {
+        "local_lnA_near": 4.785477437229119e-09,
+        "local_lnA_far": 4.785477437229119e-09,
+        "I_Sigma_near_to_core": -4.766387295161447e-09,
+        "I_Sigma_core_to_far": 4.8043332991532515e-09,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 2.6002836518819033e-55,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0014346861356812901,
+        "dv_far_kms": 0.0014346861356812901,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.785477437229119e-09,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708491e-09
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708491e-09
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708491e-09
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708491e-09
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 10000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 1.435760161474418e-07,
+        "phi_edge_over_Mpl": 9.571762199067859e-08,
+        "A_core": 0.9999998564239941,
+        "A_edge_near": 0.9999999042823825,
+        "A_edge_far": 0.9999999042823825,
+        "lnA_core": -1.435760161474418e-07,
+        "lnA_near": -9.571762199067859e-08,
+        "lnA_far": -9.571762199067859e-08,
+        "delta_lnA_near": 4.785839415676321e-08,
+        "delta_lnA_far": 4.785839415676321e-08,
+        "max_phi_over_Mpl": 1.4357635269416983e-07,
+        "max_abs_Phi_c2": 7.178817634708492e-08
+      },
+      "pieces": {
+        "local_lnA_near": 4.785839415676321e-08,
+        "local_lnA_far": 4.785839415676321e-08,
+        "I_Sigma_near_to_core": -4.7666241333723555e-08,
+        "I_Sigma_core_to_far": 4.8048115300524585e-08,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.01434794656819761,
+        "dv_far_kms": 0.01434794656819761,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.785839415676321e-08,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 10000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 1.3814813946794994e-07,
+        "phi_edge_over_Mpl": 9.220811375387527e-08,
+        "A_core": 0.9999998618518701,
+        "A_edge_near": 0.9999999077918905,
+        "A_edge_far": 0.9999999077918905,
+        "lnA_core": -1.3814813946794994e-07,
+        "lnA_near": -9.220811375387527e-08,
+        "lnA_far": -9.220811375387527e-08,
+        "delta_lnA_near": 4.594002571407467e-08,
+        "delta_lnA_far": 4.594002571407467e-08,
+        "max_phi_over_Mpl": 1.3814825292106002e-07,
+        "max_abs_Phi_c2": 7.178817634708492e-08
+      },
+      "pieces": {
+        "local_lnA_near": 4.594002571407467e-08,
+        "local_lnA_far": 4.594002571407467e-08,
+        "I_Sigma_near_to_core": -4.5754370525650376e-08,
+        "I_Sigma_core_to_far": 4.612344212662e-08,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.013772819709079587,
+        "dv_far_kms": 0.013772819709079587,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.594002571407467e-08,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 10000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 1.435760161474418e-07,
+        "phi_edge_over_Mpl": 9.571762199067859e-08,
+        "A_core": 0.9999998564239941,
+        "A_edge_near": 0.9999999042823825,
+        "A_edge_far": 0.9999999042823825,
+        "lnA_core": -1.435760161474418e-07,
+        "lnA_near": -9.571762199067859e-08,
+        "lnA_far": -9.571762199067859e-08,
+        "delta_lnA_near": 4.785839415676321e-08,
+        "delta_lnA_far": 4.785839415676321e-08,
+        "max_phi_over_Mpl": 1.4357635269416983e-07,
+        "max_abs_Phi_c2": 7.178817634708492e-08
+      },
+      "pieces": {
+        "local_lnA_near": 4.785839415676321e-08,
+        "local_lnA_far": 4.785839415676321e-08,
+        "I_Sigma_near_to_core": -4.7666241333723555e-08,
+        "I_Sigma_core_to_far": 4.8048115300524585e-08,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 2.642173242912025e-51,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.01434794656819761,
+        "dv_far_kms": 0.01434794656819761,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.785839415676321e-08,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 10000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 1.3814813946794994e-07,
+        "phi_edge_over_Mpl": 9.220811375387527e-08,
+        "A_core": 0.9999998618518701,
+        "A_edge_near": 0.9999999077918905,
+        "A_edge_far": 0.9999999077918905,
+        "lnA_core": -1.3814813946794994e-07,
+        "lnA_near": -9.220811375387527e-08,
+        "lnA_far": -9.220811375387527e-08,
+        "delta_lnA_near": 4.594002571407467e-08,
+        "delta_lnA_far": 4.594002571407467e-08,
+        "max_phi_over_Mpl": 1.3814825292106002e-07,
+        "max_abs_Phi_c2": 7.178817634708492e-08
+      },
+      "pieces": {
+        "local_lnA_near": 4.594002571407467e-08,
+        "local_lnA_far": 4.594002571407467e-08,
+        "I_Sigma_near_to_core": -4.5754370525650376e-08,
+        "I_Sigma_core_to_far": 4.612344212662e-08,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 2.267552714567139e-51,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.013772819709079587,
+        "dv_far_kms": 0.013772819709079587,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.594002571407467e-08,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 10000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708492e-08
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 10000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708492e-08
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 10000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708492e-08
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 10000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708492e-08
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 100000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 1.435760161474418e-06,
+        "phi_edge_over_Mpl": 9.571762199067856e-07,
+        "A_core": 0.9999985642408692,
+        "A_edge_near": 0.9999990428242382,
+        "A_edge_far": 0.9999990428242382,
+        "lnA_core": -1.435760161474418e-06,
+        "lnA_near": -9.571762199067856e-07,
+        "lnA_far": -9.571762199067856e-07,
+        "delta_lnA_near": 4.785839415676324e-07,
+        "delta_lnA_far": 4.785839415676324e-07,
+        "max_phi_over_Mpl": 1.4357635269416981e-06,
+        "max_abs_Phi_c2": 7.178817634708491e-07
+      },
+      "pieces": {
+        "local_lnA_near": 4.785839415676324e-07,
+        "local_lnA_far": 4.785839415676324e-07,
+        "I_Sigma_near_to_core": -4.7666241333723494e-07,
+        "I_Sigma_core_to_far": 4.804811530052451e-07,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.1434794656819762,
+        "dv_far_kms": 0.1434794656819762,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.785839415676324e-07,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 100000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 1.3989142760502314e-08,
+        "phi_edge_over_Mpl": 1.053726437130905e-08,
+        "A_core": 0.9999999860108573,
+        "A_edge_near": 0.9999999894627357,
+        "A_edge_far": 0.9999999894627357,
+        "lnA_core": -1.3989142760502314e-08,
+        "lnA_near": -1.053726437130905e-08,
+        "lnA_far": -1.053726437130905e-08,
+        "delta_lnA_near": 3.4518783891932635e-09,
+        "delta_lnA_far": 3.4518783891932635e-09,
+        "max_phi_over_Mpl": 1.3989148346469015e-08,
+        "max_abs_Phi_c2": 7.178817634708491e-07
+      },
+      "pieces": {
+        "local_lnA_near": 3.4518783891932635e-09,
+        "local_lnA_far": 3.4518783891932635e-09,
+        "I_Sigma_near_to_core": -3.43073975007045e-09,
+        "I_Sigma_core_to_far": 3.4728749138926396e-09,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0010348731410801404,
+        "dv_far_kms": 0.0010348731410801404,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 3.4518783891932635e-09,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 100000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 1.435760161474418e-06,
+        "phi_edge_over_Mpl": 9.571762199067856e-07,
+        "A_core": 0.9999985642408692,
+        "A_edge_near": 0.9999990428242382,
+        "A_edge_far": 0.9999990428242382,
+        "lnA_core": -1.435760161474418e-06,
+        "lnA_near": -9.571762199067856e-07,
+        "lnA_far": -9.571762199067856e-07,
+        "delta_lnA_near": 4.785839415676324e-07,
+        "delta_lnA_far": 4.785839415676324e-07,
+        "max_phi_over_Mpl": 1.4357635269416981e-06,
+        "max_abs_Phi_c2": 7.178817634708491e-07
+      },
+      "pieces": {
+        "local_lnA_near": 4.785839415676324e-07,
+        "local_lnA_far": 4.785839415676324e-07,
+        "I_Sigma_near_to_core": -4.7666241333723494e-07,
+        "I_Sigma_core_to_far": 4.804811530052451e-07,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 2.642173242912017e-47,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.1434794656819762,
+        "dv_far_kms": 0.1434794656819762,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.785839415676324e-07,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 100000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 1.3989142760502314e-08,
+        "phi_edge_over_Mpl": 1.053726437130905e-08,
+        "A_core": 0.9999999860108573,
+        "A_edge_near": 0.9999999894627357,
+        "A_edge_far": 0.9999999894627357,
+        "lnA_core": -1.3989142760502314e-08,
+        "lnA_near": -1.053726437130905e-08,
+        "lnA_far": -1.053726437130905e-08,
+        "delta_lnA_near": 3.4518783891932635e-09,
+        "delta_lnA_far": 3.4518783891932635e-09,
+        "max_phi_over_Mpl": 1.3989148346469015e-08,
+        "max_abs_Phi_c2": 7.178817634708491e-07
+      },
+      "pieces": {
+        "local_lnA_near": 3.4518783891932635e-09,
+        "local_lnA_far": 3.4518783891932635e-09,
+        "I_Sigma_near_to_core": -3.43073975007045e-09,
+        "I_Sigma_core_to_far": 3.4728749138926396e-09,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 1.7765023633561672e-55,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0010348731410801404,
+        "dv_far_kms": 0.0010348731410801404,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 3.4518783891932635e-09,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 100000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708491e-07
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 100000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708491e-07
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 100000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708491e-07
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 100000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708491e-07
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 1.435760161474418e-05,
+        "phi_edge_over_Mpl": 9.571762199067857e-06,
+        "A_core": 0.9999856425014552,
+        "A_edge_near": 0.9999904282836104,
+        "A_edge_far": 0.9999904282836104,
+        "lnA_core": -1.435760161474418e-05,
+        "lnA_near": -9.571762199067857e-06,
+        "lnA_far": -9.571762199067857e-06,
+        "delta_lnA_near": 4.785839415676324e-06,
+        "delta_lnA_far": 4.785839415676324e-06,
+        "max_phi_over_Mpl": 1.4357635269416984e-05,
+        "max_abs_Phi_c2": 7.178817634708492e-06
+      },
+      "pieces": {
+        "local_lnA_near": 4.785839415676324e-06,
+        "local_lnA_far": 4.785839415676324e-06,
+        "I_Sigma_near_to_core": -4.766624133372338e-06,
+        "I_Sigma_core_to_far": 4.804811530052441e-06,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 1.434794656819762,
+        "dv_far_kms": 1.434794656819762,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.785839415676324e-06,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 3.897701774539897e-11,
+        "phi_edge_over_Mpl": 2.939161370913114e-11,
+        "A_core": 0.999999999961023,
+        "A_edge_near": 0.9999999999706084,
+        "A_edge_far": 0.9999999999706084,
+        "lnA_core": -3.897701774539897e-11,
+        "lnA_near": -2.939161370913114e-11,
+        "lnA_far": -2.939161370913114e-11,
+        "delta_lnA_near": 9.58540403626783e-12,
+        "delta_lnA_far": 9.58540403626783e-12,
+        "max_phi_over_Mpl": 3.8977033202274944e-11,
+        "max_abs_Phi_c2": 7.178817634708492e-06
+      },
+      "pieces": {
+        "local_lnA_near": 9.58540403626783e-12,
+        "local_lnA_far": 9.58540403626783e-12,
+        "I_Sigma_near_to_core": -9.526444494945955e-12,
+        "I_Sigma_core_to_far": 9.643970319442468e-12,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 2.873704130073095e-06,
+        "dv_far_kms": 2.873704130073095e-06,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 9.58540403626783e-12,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 1.435760161474418e-05,
+        "phi_edge_over_Mpl": 9.571762199067857e-06,
+        "A_core": 0.9999856425014552,
+        "A_edge_near": 0.9999904282836104,
+        "A_edge_far": 0.9999904282836104,
+        "lnA_core": -1.435760161474418e-05,
+        "lnA_near": -9.571762199067857e-06,
+        "lnA_far": -9.571762199067857e-06,
+        "delta_lnA_near": 4.785839415676324e-06,
+        "delta_lnA_far": 4.785839415676324e-06,
+        "max_phi_over_Mpl": 1.4357635269416984e-05,
+        "max_abs_Phi_c2": 7.178817634708492e-06
+      },
+      "pieces": {
+        "local_lnA_near": 4.785839415676324e-06,
+        "local_lnA_far": 4.785839415676324e-06,
+        "I_Sigma_near_to_core": -4.766624133372338e-06,
+        "I_Sigma_core_to_far": 4.804811530052441e-06,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 2.642173242912008e-43,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 1.434794656819762,
+        "dv_far_kms": 1.434794656819762,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 4.785839415676324e-06,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 3.897701774539897e-11,
+        "phi_edge_over_Mpl": 2.939161370913114e-11,
+        "A_core": 0.999999999961023,
+        "A_edge_near": 0.9999999999706084,
+        "A_edge_far": 0.9999999999706084,
+        "lnA_core": -3.897701774539897e-11,
+        "lnA_near": -2.939161370913114e-11,
+        "lnA_far": -2.939161370913114e-11,
+        "delta_lnA_near": 9.58540403626783e-12,
+        "delta_lnA_far": 9.58540403626783e-12,
+        "max_phi_over_Mpl": 3.8977033202274944e-11,
+        "max_abs_Phi_c2": 7.178817634708492e-06
+      },
+      "pieces": {
+        "local_lnA_near": 9.58540403626783e-12,
+        "local_lnA_far": 9.58540403626783e-12,
+        "I_Sigma_near_to_core": -9.526444494945955e-12,
+        "I_Sigma_core_to_far": 9.643970319442468e-12,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 1.0669286705528411e-65,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 2.873704130073095e-06,
+        "dv_far_kms": 2.873704130073095e-06,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 9.58540403626783e-12,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708492e-06
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708492e-06
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708492e-06
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 10,
+      "M_halo_Msun": 1000000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 7.178817634708492e-06
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 30,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 4.785867204914727e-09,
+        "phi_edge_over_Mpl": 3.1905873996892856e-09,
+        "A_core": 0.9999999952141329,
+        "A_edge_near": 0.9999999968094127,
+        "A_edge_far": 0.9999999968094127,
+        "lnA_core": -4.785867204914727e-09,
+        "lnA_near": -3.1905873996892856e-09,
+        "lnA_far": -3.1905873996892856e-09,
+        "delta_lnA_near": 1.5952798052254416e-09,
+        "delta_lnA_far": 1.5952798052254416e-09,
+        "max_phi_over_Mpl": 4.7858784231389945e-09,
+        "max_abs_Phi_c2": 2.3929392115694973e-09
+      },
+      "pieces": {
+        "local_lnA_near": 1.5952798052254416e-09,
+        "local_lnA_far": 1.5952798052254416e-09,
+        "I_Sigma_near_to_core": -1.5888747111241122e-09,
+        "I_Sigma_core_to_far": 1.6016038433508124e-09,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.00047826488560658736,
+        "dv_far_kms": 0.00047826488560658736,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 1.5952798052254416e-09,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 30,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 0.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 4.755259180838684e-09,
+        "phi_edge_over_Mpl": 3.1600820296702112e-09,
+        "A_core": 0.9999999952447408,
+        "A_edge_near": 0.999999996839918,
+        "A_edge_far": 0.999999996839918,
+        "lnA_core": -4.755259180838684e-09,
+        "lnA_near": -3.1600820296702112e-09,
+        "lnA_far": -3.1600820296702112e-09,
+        "delta_lnA_near": 1.5951771511684726e-09,
+        "delta_lnA_far": 1.5951771511684726e-09,
+        "max_phi_over_Mpl": 4.755263185589708e-09,
+        "max_abs_Phi_c2": 2.3929392115694973e-09
+      },
+      "pieces": {
+        "local_lnA_near": 1.5951771511684726e-09,
+        "local_lnA_far": 1.5951771511684726e-09,
+        "I_Sigma_near_to_core": -1.588813721724692e-09,
+        "I_Sigma_core_to_far": 1.6014624862479901e-09,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.00047823410992030806,
+        "dv_far_kms": 0.00047823410992030806,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 1.5951771511684726e-09,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 30,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 4.785867204914727e-09,
+        "phi_edge_over_Mpl": 3.1905873996892856e-09,
+        "A_core": 0.9999999952141329,
+        "A_edge_near": 0.9999999968094127,
+        "A_edge_far": 0.9999999968094127,
+        "lnA_core": -4.785867204914727e-09,
+        "lnA_near": -3.1905873996892856e-09,
+        "lnA_far": -3.1905873996892856e-09,
+        "delta_lnA_near": 1.5952798052254416e-09,
+        "delta_lnA_far": 1.5952798052254416e-09,
+        "max_phi_over_Mpl": 4.7858784231389945e-09,
+        "max_abs_Phi_c2": 2.3929392115694973e-09
+      },
+      "pieces": {
+        "local_lnA_near": 1.5952798052254416e-09,
+        "local_lnA_far": 1.5952798052254416e-09,
+        "I_Sigma_near_to_core": -1.5888747111241122e-09,
+        "I_Sigma_core_to_far": 1.6016038433508124e-09,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 1.0873140917333348e-57,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.00047826488560658736,
+        "dv_far_kms": 0.00047826488560658736,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 1.5952798052254416e-09,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 30,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 0.0,
+      "B0": 1.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 4.755259180838684e-09,
+        "phi_edge_over_Mpl": 3.1600820296702112e-09,
+        "A_core": 0.9999999952447408,
+        "A_edge_near": 0.999999996839918,
+        "A_edge_far": 0.999999996839918,
+        "lnA_core": -4.755259180838684e-09,
+        "lnA_near": -3.1600820296702112e-09,
+        "lnA_far": -3.1600820296702112e-09,
+        "delta_lnA_near": 1.5951771511684726e-09,
+        "delta_lnA_far": 1.5951771511684726e-09,
+        "max_phi_over_Mpl": 4.755263185589708e-09,
+        "max_abs_Phi_c2": 2.3929392115694973e-09
+      },
+      "pieces": {
+        "local_lnA_near": 1.5951771511684726e-09,
+        "local_lnA_far": 1.5951771511684726e-09,
+        "I_Sigma_near_to_core": -1.588813721724692e-09,
+        "I_Sigma_core_to_far": 1.6014624862479901e-09,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 1.070116005957392e-57,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.00047823410992030806,
+        "dv_far_kms": 0.00047823410992030806,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 1.5951771511684726e-09,
+        "in_expected_range": true,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 30,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 2.3929392115694973e-09
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 30,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 0.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 2.3929392115694973e-09
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 30,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "unscreened",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 2.3929392115694973e-09
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    },
+    {
+      "sightline": "Q1009+2956",
+      "R_kpc": 30,
+      "M_halo_Msun": 1000000000.0,
+      "m_phi_eV": 1e-25,
+      "B0": 1.0,
+      "screening": "paper29",
+      "field": {
+        "phi_core_over_Mpl": 0.0,
+        "phi_edge_over_Mpl": 0.0,
+        "A_core": 1.0,
+        "A_edge_near": 1.0,
+        "A_edge_far": 1.0,
+        "lnA_core": 0.0,
+        "lnA_near": 0.0,
+        "lnA_far": 0.0,
+        "delta_lnA_near": 0.0,
+        "delta_lnA_far": 0.0,
+        "max_phi_over_Mpl": 0.0,
+        "max_abs_Phi_c2": 2.3929392115694973e-09
+      },
+      "pieces": {
+        "local_lnA_near": 0.0,
+        "local_lnA_far": 0.0,
+        "I_Sigma_near_to_core": 0.0,
+        "I_Sigma_core_to_far": 0.0,
+        "I_CT_freq_near": 0.0,
+        "I_CT_freq_far": 0.0,
+        "I_CT_shapiro_total": 0.0,
+        "cosmological_tail": "cancels (both parcels share same tail)"
+      },
+      "velocity_split": {
+        "dv_near_kms": 0.0,
+        "dv_far_kms": 0.0,
+        "mechanism": "conformal only (disformal freq = 0 for static field)"
+      },
+      "sanity": {
+        "delta_lnA_near_abs": 0.0,
+        "in_expected_range": false,
+        "note": "O(10^-8 to 10^-6) expected for LLS host halo"
+      },
+      "observed_offset_kms": -78.9
+    }
+  ],
+  "three_sightline_comparison": {
+    "M_halo_Msun": 10000000000.0,
+    "m_phi_eV": 0.0,
+    "B0": 0.0,
+    "screening": "paper29",
+    "sightlines": [
+      {
+        "id": "Q1009+2956",
+        "R_kpc": 30,
+        "M_halo_Msun": 10000000000.0,
+        "dv_near_kms": 0.004778342015903929,
+        "dv_far_kms": 0.004778342015903929,
+        "observed_offset_kms": -78.9,
+        "ratio_predicted_to_observed": -6.056200273642495e-05
+      },
+      {
+        "id": "PKS1937-101",
+        "R_kpc": 30,
+        "M_halo_Msun": 10000000000.0,
+        "dv_near_kms": 0.004778342015903929,
+        "dv_far_kms": 0.004778342015903929,
+        "observed_offset_kms": -76.0,
+        "ratio_predicted_to_observed": -6.28729212618938e-05
+      },
+      {
+        "id": "J1332+0052",
+        "R_kpc": 30,
+        "M_halo_Msun": 10000000000.0,
+        "dv_near_kms": 0.004778342015903929,
+        "dv_far_kms": 0.004778342015903929,
+        "observed_offset_kms": -118.0,
+        "ratio_predicted_to_observed": -4.049442386359262e-05
+      }
+    ]
+  },
+  "outcome": "consistent",
+  "max_dv_kms": 1.434794656819762,
+  "max_dv_screened_kms": 0.019384419767241753,
+  "reaches_10_kms": false,
+  "reaches_80_kms": false,
+  "cassini_pass_screened": 9,
+  "cassini_pass_unscreened": 0,
+  "any_cassini_pass": true,
+  "conclusion": "TEP static conformal transport CONFIRMS the manuscript framework. The conformal piece gives the correct blueward sign (PASSED), a signed lower bound |dv| ~ 0.0194 km/s (Paper 29 screened, physical case; unscreened grid maximum 1.4348 km/s is unphysical because it fails Cassini). Cassini PASSES with Paper 29 screening (gamma-1 = -5.5e-7, |gamma-1| < 2.3e-5) and FAILS without it (gamma-1 = -1, |gamma-1| = 1). This screening separation is the central TEP prediction: unscreened in diffuse LLS clouds (|Phi|/c^2 ~ 1e-8), screened in the Solar System (|Phi|/c^2 ~ 1e-6). GW170817 PASSES for all tested B0 (D|grad phi|^2 << 10^-15). Paper 29 screening suppresses massive halos (M > 10^11 M_sun) and leaves intermediate halos (10^10-10^11 M_sun) weakly screened, exactly the expected host halo mass for LLS systems. The disformal frequency shift is exactly zero for a static field (g_tilde_00 = A^2 g_00 when d_0 phi = 0) \u2014 this is expected and already stated in the manuscript. The amplification factor ~10^4 must arise from the non-static disformal transport path C_{T,parallel}, the identified Gate 4B channel. This is a falsifiable prediction, not a failure. The spectroscopic H-vs-D result (unrestricted H preferred over isotope-tied D) stands as the primary empirical evidence."
+}

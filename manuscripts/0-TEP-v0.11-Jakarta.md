@@ -1,15 +1,15 @@
 # Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed
 **Matthew Lukin Smawfield**
-Version: v0.10 (Jakarta)
-First published: 18 August 2025 · Last updated: 7 August 2026
+Version: v0.11 (Jakarta)
+First published: 18 August 2025 · Last updated: 9 September 2026
 DOI: 10.5281/zenodo.16921911
 
 ---
 
 ## Abstract
-This paper proposes a covariant, testable reformulation of relativity in which proper time is a dynamical field and the "speed of light" is an emergent, strictly local invariant rather than a global constant. The framework is built on a single spacetime manifold endowed with two metrics: a gravitational metric $g_{\mu\nu}$ and a causal (matter) metric $\tilde{g}_{\mu\nu}$ to which all non-gravitational fields and clocks couple. The metrics are related by a controlled disformal map, $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu\phi \nabla_\nu\phi$, where $\phi$ is the time field, $A(\phi) = \exp(\beta_A \phi/M_{\text{Pl}})$ is a universal conformal factor, and $B(\phi)$ encodes tiny, direction-dependent deformations of the light cone consistent with GW170817-class multi-messenger constraints ($|c_\gamma - c_g|/c \lesssim \text{few}\times10^{-15}$ today). Proper time is elevated to a field by postulating that all matter, electromagnetism, and quantum phases evolve with respect to $\tilde{g}$-proper time $\tau$; in local freely falling frames, this guarantees exact local Lorentz invariance and a locally invariant c, while globally it implies that synchronization procedures and one-way light-time measurements can become path-dependent in the disformal/non-exact sector of a dynamical-time background. The covariant action, field equations, conservation laws, Parametrized Post-Newtonian (PPN) mapping, and screening mechanisms are developed to reconcile terrestrial tests with cosmological dynamics. The breakdown of global simultaneity is formalized using a synchronization-transport law, deriving a convention-independent "synchronization holonomy," an invariant measure of non-integrability of time transport around closed loops. In the purely conformal subclass this holonomy vanishes after subtraction of the full GR, kinematic, clock-scale, and reference-frame synchronization model; nonzero holonomy at leading order requires residual non-exact synchronization structure, supplied in the minimal TEP model by disformal coupling $B(\phi)\neq0$, and in more general extensions by non-metricity or other explicitly non-exact transport structure. Explicit small-$B$ formulas are provided for the holonomy and the effective photon phase speed, showing how the measured one-way asymmetry is related to $\phi$-gradients and disformal scales under current constraints. The analysis demonstrates that Einstein's assumption of a universal c was a brilliant local theorem arising from the Temporal Equivalence Principle; transcending it demands dynamical time: c remains exactly invariant locally, but global, one-way-inferred "c" values differ by path-dependent amounts that experiments can detect or bound. A staged, falsifiable experimental program is outlined: (1) a closed-loop, multi-leg, one-way time-transfer "triangle test" designed to detect synchronization holonomy at the $10^{-19}$ fractional level (after averaging) and subtracting known GR effects; (2) interplanetary one-way optical time transfer targeting picosecond-level asymmetries over AU baselines; (3) distance-correlation analysis and environment-dependent screening maps with precision clock networks; (4) multi-messenger searches for distance-correlated photon–gravitational-wave arrival differentials consistent with tightly bounded disformal propagation; (5) matter-wave interferometry and torsion-balance tests sensitive to environment-dependent couplings. Cosmologically, the time field can modify late-time distance and growth observables. Early-universe closure is achieved natively without a Big Bang singularity or phenomenological thermal screening: the framework establishes a regular temporal horizon with an unbounded local proper-time history, while the associated conformal temporal geometry preserves the observed CMB acoustic structure. Known weaknesses in the variable-c literature are addressed by supplying a correct, operationally invariant observable (holonomy), clarifying when conformal couplings cannot produce a signal, and providing realistic, constraint-consistent signal forecasts with explicit error budgets and statistical plans (pre-registration, blinding, publicly released code and data). The resulting theory preserves the empirical pillars of relativity (local Lorentz invariance, gravitational-wave causality, PPN bounds) while extending its conceptual foundation: simultaneity is not only relative but generally non-integrable; the speed of light is not a global constant but the local echo of a deeper, dynamical temporal geometry.
+This paper proposes a covariant, testable reformulation of relativity in which proper time is a dynamical field and the "speed of light" is an emergent, strictly local invariant rather than a global constant. The framework is built on a single spacetime manifold endowed with two metrics: a gravitational metric $g_{\mu\nu}$ and a causal (matter) metric $\tilde{g}_{\mu\nu}$ to which all non-gravitational fields and clocks couple. The metrics are related by a controlled disformal map, $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu\phi \nabla_\nu\phi$, where $\phi$ is the time field, $A(\phi) = \exp(\beta_A \phi/M_{\text{Pl}})$ is a universal conformal factor, and $B(\phi)$ encodes tiny, direction-dependent deformations of the light cone consistent with GW170817-class multi-messenger constraints ($|c_\gamma - c_g|/c \lesssim \text{few}\times10^{-15}$ today). Proper time is elevated to a field by postulating that all matter, electromagnetism, and quantum phases evolve with respect to $\tilde{g}$-proper time $\tau$; in local freely falling frames, this guarantees exact local Lorentz invariance and a locally invariant c, while globally it implies that synchronization procedures and one-way light-time measurements can become path-dependent in the disformal/non-exact sector of a dynamical-time background. The covariant action, field equations, conservation laws, and PPN mapping are developed; screening is formulated as continuous Temporal Topology, with the microscopic potential left open. The breakdown of global simultaneity is formalized using a synchronization-transport law, deriving a convention-independent "synchronization holonomy," an invariant measure of non-integrability of time transport around closed loops. In the purely conformal subclass this holonomy vanishes after subtraction of the full GR, kinematic, clock-scale, and reference-frame synchronization model; nonzero holonomy at leading order requires residual non-exact synchronization structure, supplied in the minimal TEP model by disformal coupling $B(\phi)\neq0$, and in more general extensions by non-metricity or other explicitly non-exact transport structure. Explicit small-$B$ formulas are provided for the holonomy and the effective photon phase speed, showing how the measured one-way asymmetry is related to $\phi$-gradients and disformal scales under current constraints. The analysis demonstrates that Einstein's assumption of a universal c was a brilliant local theorem arising from the Temporal Equivalence Principle; transcending it demands dynamical time: c remains exactly invariant locally, but global, one-way-inferred "c" values differ by path-dependent amounts that experiments can detect or bound. Cosmologically, TEP adopts an eternal, static spatial background: observed redshift and the apparent Hubble relation are reconstructed through dynamical proper-time transport, $1+z=A_0/A_{\rm em}$, rather than physical expansion of the underlying spatial manifold. Early-universe closure is achieved natively without a Big Bang singularity or phenomenological thermal screening: the framework establishes a regular temporal horizon with an unbounded local proper-time history, while the associated conformal temporal geometry preserves the observed CMB acoustic structure. Known weaknesses in the variable-c literature are addressed by supplying a correct, operationally invariant observable (holonomy), clarifying when conformal couplings cannot produce a signal, and providing realistic, constraint-consistent benchmark sensitivity windows with explicit error budgets and statistical plans (pre-registration, blinding, publicly released code and data). The resulting theory preserves the empirical pillars of relativity (local Lorentz invariance, gravitational-wave causality, PPN bounds) while extending its conceptual foundation: simultaneity is not only relative but generally non-integrable; the speed of light is not a global constant but the local echo of a deeper, dynamical temporal geometry.
 
-Long-standing confusions about "variable $c$" are resolved by replacing convention-dependent statements with invariant observables tied to measurement procedures. A synchronization one-form $\tilde{\sigma}$ is defined on spacelike slices of the matter metric; its curl $d\tilde{\sigma}$, after subtraction of the full GR, kinematic, clock-scale, and reference-frame synchronization model, yields a residual "temporal holonomy" $H$ that vanishes in GR and becomes nonzero only when time is dynamical in this sense. Two key theorems are proven: (i) conformal matter coupling preserves null cones, so photons and gravitons share the same causal structure at late times; (ii) a static $\phi$-gradient generates no first-order one-way light-time anisotropy, placing effects in the femto-to-picosecond regime over astronomical baselines under current bounds. Disformal tilts ($B \neq 0$) are tightly constrained by GW170817-class multi-messenger observations but can source holonomy at levels within reach of next-generation metrology. The covariant action is presented; field equations, conservation laws, invertibility/causality conditions, and a 3+1 decomposition are derived to make the observables explicit. Screening via a continuous Temporal Topology governed by non-linear superposition of field gradients (Temporal Shear) reconciles precision local tests with cosmological evolution, with mapping to Parametrized Post-Newtonian parameters and to the EFT-of-dark-energy $\alpha$-functions with $c_T = 1$ enforced. Decisive experiments with quantitative error budgets are outlined: (1) a ground–ground–satellite triangle time-transfer experiment targeting holonomy at below $10^{-18}$ fractional after GR subtraction; (2) portable-clock "clock anholonomy" around closed paths at the $10^{-19}$ level over days; (3) multi-species clock networks seeking phase-locked annual modulations at $10^{-19}$–$10^{-17}$; (4) interplanetary one-way optical links at picoseconds over AU; (5) altitude-dependent screening maps with optical clocks and atom interferometers; and (6) ensemble multi-messenger tests. A cosmological pipeline plan for CLASS/HyRec modifications and MCMC inference is provided, with commitment to open data and blinded analyses.
+Long-standing confusions about "variable $c$" are resolved by replacing convention-dependent statements with invariant observables tied to measurement procedures. A synchronization one-form $\tilde{\sigma}$ is defined on spacelike slices of the matter metric; its curl $d\tilde{\sigma}$, after subtraction of the full GR, kinematic, clock-scale, and reference-frame synchronization model, yields a residual "temporal holonomy" $H$ that vanishes in GR and becomes nonzero only when time is dynamical in this sense. Two key theorems are proven: (i) conformal matter coupling preserves null cones, so photons and gravitons share the same causal structure at late times; (ii) a static $\phi$-gradient produces no direct propagation asymmetry in the static purely conformal limit—the cancellation is exact, not merely first-order. Disformal tilts ($B \neq 0$) are tightly constrained by GW170817-class multi-messenger observations but can source holonomy at levels within reach of next-generation metrology. The effective covariant architecture is presented; field equations, conservation laws, invertibility/causality conditions, and a 3+1 decomposition are derived to make the observables explicit. Screening via a continuous Temporal Topology governed by non-linear superposition of field gradients (Temporal Shear) reconciles precision local tests with cosmological evolution, with mapping to Parametrized Post-Newtonian parameters and to the EFT-of-dark-energy $\alpha$-functions with $c_T = 1$ enforced. Decisive experiments with quantitative error budgets are outlined: (1) a ground–ground–satellite triangle time-transfer experiment targeting holonomy at below $10^{-18}$ fractional after GR subtraction; (2) portable-clock "clock anholonomy" around closed paths at the $10^{-19}$ level over days; (3) multi-species clock networks seeking phase-locked annual modulations at $10^{-19}$–$10^{-17}$; (4) interplanetary one-way optical links at picoseconds over AU; (5) altitude-dependent screening maps with optical clocks and atom interferometers; and (6) ensemble multi-messenger tests. A cosmological pipeline plan for CLASS/HyRec modifications and MCMC inference is provided, with commitment to open data and blinded analyses.
 
 Einstein's postulate of universal $c$ was a brilliant, operationally perfect approximation in regimes where time's flow is effectively uniform. In a universe where the rate of time is dynamical yet locally Lorentzian, "the speed of light" emerges as an invariant in every local lab but ceases to be globally universal. The new invariant content resides in path-dependent synchronization defects and holonomies of time transport, not in naive one-way "speeds." If detected, these invariants would inaugurate a post-Einsteinian era: from dynamic geometry to dynamic time.
 
@@ -67,7 +67,7 @@ Conceptually, TEP differs from many scalar-tensor theories by its foundational p
 
 ## 2.2 Minimal covariant action
 
-The displayed low-curvature action below represents the leading sector of the master TEP Effective Field Theory. The strong-curvature completion includes higher-order curvature operators (such as the scalar-Gauss-Bonnet coupling $f(\phi)\mathcal{G} + \dots$) which are negligible in the weak-field and cosmological regimes studied here, but become active in the strong-field regime to supply real backreaction (as detailed in TEP-BH, Paper 28). The minimal leading action used in this paper is
+The displayed low-curvature action below represents the leading sector of the master TEP Effective Field Theory. The strong-curvature completion includes higher-order curvature operators (such as the scalar-Gauss-Bonnet coupling $\alpha_{\rm GB} f(\phi)\mathcal{G}$) which are negligible in the weak-field and cosmological regimes studied here, but become active in the strong-field regime to supply real backreaction (as detailed in TEP-BH, Paper 28). The unified action, including the strong-curvature sector, is
 
 $$
 S
@@ -75,28 +75,98 @@ S
 \int d^4x\sqrt{-g}
 \left[
 \frac{M_{\rm Pl}^2}{2}R
--\frac{1}{2}(\nabla\phi)^2
+-\frac{1}{2}K(\phi)(\nabla\phi)^2
 -V(\phi)
++\alpha_{\rm GB}\,f(\phi)\,\mathcal{G}
 \right]
 +
 S_m[\psi_i,\tilde g_{\mu\nu}],
 $$
 
-with
+with the conformal-disformal matter metric
 
 $$
 \tilde g_{\mu\nu}
 =
-A^2(\phi)g_{\mu\nu}
+A^2(\phi)\,g_{\mu\nu}
 +
-B(\phi)\nabla_\mu\phi\nabla_\nu\phi .
+B(\phi)\,\nabla_\mu\phi\,\nabla_\nu\phi .
 $$
+
+In the weak-field regime ($\alpha_{\rm GB} f(\phi)\mathcal{G}\to 0$, $K\to 1$) this reduces to the minimal scalar-tensor action used throughout Papers 1–19. The strong-curvature sector is activated only in the black-hole completion (Paper 28) and does not participate in any GNSS, LLR, cosmological, or wide-binary calculation.
+
+### Canonical microscopic structure and closure status
+
+The universal conformal coupling, the conformal–disformal matter metric architecture, and the observable Temporal-Topology response structure are fixed. The scalar self-interaction $V(\phi)$, however, is not yet uniquely determined by the present macroscopic phenomenology. Its final form must be established by demonstrating that a common microscopic action reproduces the required continuous environmental field configurations without domain-specific retuning. The items below specify what is genuinely frozen and what remains open.
+
+*Conformal coupling.* The conformal factor is fixed universally as
+
+$$
+A(\phi) = \exp\!\left(\frac{\beta_A\,\phi}{M_{\rm Pl}}\right),
+\qquad \beta_A = -1.0,
+$$
+
+so that the dimensionless DEF coupling $\alpha_0 \equiv d\ln A/d\varphi = \beta_A = -1$ is frozen, where $\varphi \equiv \phi/M_{\rm Pl}$ is the dimensionless field variable. The weak-field Solar-System safety is not a second parameter $\beta\approx -0.013$ but the screened source charge $S_\Sigma^{(\odot)}\,\alpha_0$: Cassini requires $|\gamma_{\rm PPN}-1| \approx 2\alpha_0^2 (S_\Sigma^{(\odot)})^2 < 2.3\times10^{-5}$, fixing $S_\Sigma^{(\odot)} \lesssim 3.4\times10^{-3}$ in the Solar-System environment. The terrestrial amplitude factor $S_A^{(\oplus)}$ governs GNSS clock-rate and covariance observables. The Solar-System source-charge factor $S_\Sigma^{(\odot)}$ is a different projection and need not equal $S_A^{(\oplus)}$.
+
+*Sign convention for $\phi$ (corpus-wide).* The scalar field is defined so that **$\phi > 0$ in the vicinity of a mass concentration**, with the ambient cosmological value taken as the zero point, $\phi_\infty = 0$. Combined with the frozen coupling $\beta_A = -1$, this fixes every downstream sign in the framework:
+
+- $A(\phi) = \exp(\beta_A\varphi) < 1$ near a mass, so the conformal factor is *suppressed* in a potential well.
+- Since matter clocks tick at $d\tau/dt \simeq A(\phi)$, clocks **run slower** in deeper wells. This reproduces the sign of the ordinary gravitational redshift and is therefore the convention consistent with general relativity in the screened limit.
+- The Temporal Shear $\Sigma_\mu \equiv \nabla_\mu \ln A = \beta_A \nabla_\mu \varphi$ points *outward* from a mass (since $\beta_A < 0$ and $\nabla_\mu\varphi$ points inward).
+- Consequently $\beta_A \phi < 0$ near a mass, and $\Delta \ln A < 0$ relative to the ambient environment.
+
+The opposite choice ($\phi < 0$ near a mass, giving $A > 1$ and clocks running *faster* in wells) is inconsistent with the measured sign of gravitational redshift and is **not** used anywhere in this corpus. Any paper reporting a conformal-sector sign should be checked against this convention before its result is compared with another paper's. Where a manuscript quotes $\lvert\beta_A\rvert$ or an unsigned effective coupling, that is a magnitude and carries no sign information.
+
+*Disformal coupling.* The matter metric contains a disformal coupling function $B(\phi)$. Observable disformal effects depend on the complete combination $B(\phi)\nabla_\mu\phi\nabla_\nu\phi$, rather than on $B(\phi)$ alone. Paper 28 employs the field-space envelope
+
+$$
+B(\phi) = B_0\,\frac{\varphi^2}{1+\varphi^2}\,
+\exp\!\left(-\frac{\varphi^4}{2\,\sigma_B^4}\right),
+\qquad \varphi\equiv\phi/M_{\rm Pl},
+$$
+
+as a prescribed strong-field realization. At weak-field values ($\varphi \sim 10^{-10}$), the exponential damping factor is unity to extremely high precision and $\varphi^2/(1+\varphi^2)\simeq\varphi^2$, so $B(\phi)\simeq B_0\varphi^2$ throughout terrestrial and typical astrophysical environments. Its rapid large-$|\varphi|$ damping provides additional strong-field suppression of the disformal contribution, enforcing conformal dominance and protecting the Lorentzian matter-metric branch when scalar gradients become extreme. This field-space envelope is not identified with ordinary environmental Temporal-Topology screening, which arises primarily through the environment-dependent scalar configuration and its active gradient. The unique corpus-wide microscopic form and normalization of $B(\phi)$ therefore remain part of the action-closure problem. In the dimensionful Jakarta field convention, $B_0$ carries mass dimension $-4$ so that $B(\phi)\,\nabla_\mu\phi\,\nabla_\nu\phi$ is dimensionless; numerical normalizations employed in Paper 28's geometrized, dimensionless-field strong-field construction are therefore not imported directly into the weak-field theory. GW170817 constrains the path-integral combination $B(\phi)(\partial\phi)^2$ along observed late-time astrophysical paths; it does not require $B\equiv 0$ in every regime. The theory field $\phi$ remains dimensionful (mass dimension 1) throughout, consistent with the canonical kinetic term $-\frac12(\nabla\phi)^2$ and the conformal factor $A=\exp(\beta_A\phi/M_{\rm Pl})$; $\varphi$ is introduced only as a shape variable for $B$.
+
+*Temporal-Topology saturation sector.* Environmental suppression in TEP is defined by the continuous response of the Temporal Topology rather than by a discrete density threshold or thin-shell boundary. Writing $\Theta \equiv \ln A(\phi)$ and $\Sigma_\mu \equiv \nabla_\mu \Theta$, the conformal-amplitude response $S_A$ and the Temporal-Shear/source-charge response $S_\Sigma$ are distinct observable projections of the same environment-dependent scalar configuration. The macroscopic scale
+
+$$
+\rho_T \simeq 20\ {\rm g\,cm^{-3}}
+$$
+
+denotes the empirically calibrated Temporal-Topology saturation/reference scale. It is not a universal microscopic density cutoff and does not define a binary screened/unscreened transition. In the weak-field, canonical $K\to 1$, $B\to 0$, quasistatic limit, a particular microscopic completion must satisfy the scalar field equation $\nabla^2\phi = V_{,\phi} + \mathcal{Q}_m$, with the matter-source convention defined consistently with the action of §2.2. Defining the conserved Einstein-frame density $\rho_* = A^3\tilde\rho$, the field equation reads
+
+$$
+\nabla^2\phi = V_{,\phi} + \rho_*\,A_{,\phi}.
+$$
+
+In regions where a particular completion admits an adiabatic density-dependent equilibrium, this may reduce to a local balance of the form $V_{,\phi} + \rho_*\,A_{,\phi} \simeq 0$. Such an effective minimum is one possible local realization of Temporal-Topology saturation; it is not the defining screening ontology of TEP. Chameleon, Vainshtein, Galileon, DBI, symmetron, and related mechanisms therefore remain candidate microscopic realizations rather than definitions of the framework. The functional form of the microscopic self-interaction $V(\phi)$ is not uniquely frozen by the present macroscopic phenomenology. A completed microscopic closure must derive the continuous environment-dependent field configuration, together with its $S_A$, $S_\Sigma$, and covariance projections, from a common action and stated boundary conditions.
+
+*Screening operators.* Two projections of the solved nonlinear field configuration are needed. The field-amplitude (clock) screening $S_A$ measures the suppression of the conformal factor excursion relative to its unscreened cosmological baseline (Paper 26, `step_02_02`):
+
+$$
+S_A(\mathcal{E})
+\equiv
+\frac{\bigl(A(\phi(\mathbf r)) - 1\bigr)_{\rm local}}
+     {\bigl(A(\phi) - 1\bigr)_{\rm unscreened}},
+$$
+
+The source-charge (shear) screening $S_\Sigma$ measures the suppression of the effective exterior scalar charge relative to the unscreened coupling:
+
+$$
+S_\Sigma(\mathcal{E})
+\equiv
+\frac{Q}{Q_0}
+=
+\frac{\alpha_{\rm eff}}{\alpha_0},
+$$
+
+where $\phi(\mathbf r)$ is the solved static profile for the given source geometry, density, compactness, and boundary conditions, and $Q$ is the effective scalar charge sourced by the body. Both are outputs of the nonlinear field equation $\Box\phi - V_{,\phi} = -\mathcal{Q}$, not phenomenological multipliers fitted separately in each domain. $S_A$ governs clock-rate residuals and covariance; $S_\Sigma$ governs PPN deviations and fifth-force bounds. The two need not be numerically identical. Strong gradient flattening suppresses $S_\Sigma$, while $S_A$ depends separately on the local field amplitude relative to its reference environment. The mesoscopic screening law of Paper 25 ($\mathcal{S}_\Sigma^{\rm meso} = S_{\rm TEP}\times S_{\rm TF}\times S_{\rm boundary}\times S_{\rm decoherence}$) is a factorization of $S_\Sigma$ at intermediate scales.
 
 Variation with respect to the Einstein-frame metric, $\phi$, and matter fields gives the Einstein-frame field equations, scalar equation of motion, and matter-frame conservation law.
 
 ## 2.3 Field equations and conservation laws
 
-Varying the action with respect to the Einstein-frame metric, $\phi$, and the matter fields yields three sets of equations.
+The field equations below are the low-curvature $K\to 1$, $\alpha_{\rm GB}f(\phi)\mathcal{G}\to 0$ equations relevant to the sectors considered in this paper (GNSS, LLR, cosmological background, wide binaries). The strong-curvature sector is invoked only in the black-hole completion (Paper 28). Varying the action with respect to the Einstein-frame metric, $\phi$, and the matter fields yields three sets of equations.
 
 ### Einstein-frame field equations
 
@@ -123,30 +193,30 @@ Thus the Einstein-frame equations reduce to a scalar-tensor theory with conforma
 ### Scalar equation of motion
 
 For the scalar equation it is useful to define the matter-frame stress tensor by
-\[
+$$
 \tilde T^{\mu\nu}
 \equiv
 \frac{2}{\sqrt{-\tilde g}}
 \frac{\delta S_m}{\delta \tilde g_{\mu\nu}} .
-\]
+$$
 This is equivalent to the covariant definition
-\[
+$$
 \tilde T_{\mu\nu}
 =
 -\frac{2}{\sqrt{-\tilde g}}
 \frac{\delta S_m}{\delta \tilde g^{\mu\nu}},
-\]
+$$
 with indices raised and lowered using $\tilde g_{\mu\nu}$.
 
-We also define the density-weighted tensor
-\[
+The density-weighted tensor is also defined as
+$$
 \mathcal T^{\mu\nu}
 \equiv
 \frac{\sqrt{-\tilde g}}{\sqrt{-g}}
 \tilde T^{\mu\nu}.
-\]
+$$
 Varying the matter metric with respect to $\phi$ gives
-\[
+$$
 \delta_\phi \tilde g_{\mu\nu}
 =
 2AA_{,\phi}g_{\mu\nu}\delta\phi
@@ -159,17 +229,17 @@ B
 +
 \nabla_\mu\phi\,\nabla_\nu\delta\phi
 \right).
-\]
+$$
 After integrating the derivative terms by parts, the scalar equation can be written as
-\[
+$$
 \Box\phi
 -
 V_{,\phi}
 =
 -\mathcal Q,
-\]
+$$
 where
-\[
+$$
 \mathcal Q
 =
 AA_{,\phi}g_{\mu\nu}\mathcal T^{\mu\nu}
@@ -182,9 +252,9 @@ AA_{,\phi}g_{\mu\nu}\mathcal T^{\mu\nu}
 \left(
 B\mathcal T^{\mu\nu}\nabla_\nu\phi
 \right).
-\]
+$$
 Equivalently,
-\[
+$$
 \Box\phi
 =
 V_{,\phi}
@@ -199,21 +269,21 @@ AA_{,\phi}g_{\mu\nu}\mathcal T^{\mu\nu}
 \left(
 B\mathcal T^{\mu\nu}\nabla_\nu\phi
 \right).
-\]
+$$
 
 In the conformal limit $B\to0$, this reduces to the standard conformally coupled scalar-tensor source equation,
-\[
+$$
 \Box\phi
 -
 V_{,\phi}
 =
 -
 AA_{,\phi}g_{\mu\nu}\mathcal T^{\mu\nu}.
-\]
+$$
 Equivalently, in terms of the effective scalar coupling
-\[
+$$
 \alpha(\phi)\equiv \frac{d\ln A}{d\phi},
-\]
+$$
 the conformal source is proportional to the matter trace. Nonrelativistic matter sources the scalar through $T\simeq-\rho$, while radiation with $T\simeq0$ weakly sources the conformal sector, as used in the cosmological discussion.
 
 ### Matter-frame conservation law
@@ -221,19 +291,19 @@ the conformal source is proportional to the matter trace. Nonrelativistic matter
 $$\tilde{\nabla}_\mu \tilde{T}^{\mu\nu}_{(m)} = 0,$$
 
 which follows from diffeomorphism invariance of $S_m[\tilde{g}]$ and implies that non-gravitational test particles and light follow geodesics of the matter metric $\tilde{g}_{\mu\nu}$. In the Einstein frame, matter and the scalar exchange energy-momentum. Diffeomorphism invariance gives
-\[
+$$
 \nabla_\mu T^{\mu\nu}_{(m)}
 =
 \mathcal Q\nabla^\nu\phi,
-\]
+$$
 while the scalar stress tensor satisfies
-\[
+$$
 \nabla_\mu T^{\mu\nu}_{(\phi)}
 =
 -\mathcal Q\nabla^\nu\phi .
-\]
+$$
 Therefore the total Einstein-frame stress tensor is conserved:
-\[
+$$
 \nabla_\mu
 \left(
 T^{\mu\nu}_{(m)}
@@ -242,11 +312,11 @@ T^{\mu\nu}_{(\phi)}
 \right)
 =
 0.
-\]
+$$
 The matter-frame conservation law remains
-\[
+$$
 \tilde\nabla_\mu\tilde T^{\mu\nu}_{(m)}=0,
-\]
+$$
 because matter is minimally coupled to $\tilde g_{\mu\nu}$.
 
 These equations define the EFT structure used throughout the paper. The scalar source $\mathcal Q$ displays the leading conformal-disformal matter coupling explicitly.
@@ -299,11 +369,11 @@ For Lorentzian signature, require $A>0$ and $B(\partial\phi)^2 > -A^2$. $B$ is a
 
 ## Causality
 
-The matter cone is inside or equal to the gravitational cone when $B \geq 0$ and gradients are modest; no closed causal curves arise for small $B$. With $B\to0$ at late times, gravitational and matter null cones coincide ($c_T = c_{\text{EM}}$). With $B$ small, any phase differences in propagation are minute and bounded by multi-messenger results.
+The matter cone is inside or equal to the gravitational cone when $B \geq 0$ and gradients are modest; no closed causal curves arise for small $B$. When the observable disformal deformation $\frac{B(\phi)}{A^2(\phi)}(\partial\phi)^2$ is negligible along the relevant late-time propagation paths, gravitational and matter null cones coincide to the required observational accuracy. Laboratory resonator tests independently constrain orientation-dependent components of the same local disformal deformation in the terrestrial environment, while multi-messenger observations strongly constrain its integrated realization along astrophysical propagation paths. These constraints bound the complete disformal deformation on the realized scalar background rather than requiring $B(\phi)$ itself to vanish identically. With $B$ small, any phase differences in propagation are minute and bounded by multi-messenger results.
 
 ## Hyperbolicity
 
-The scalar's canonical kinetic term ensures hyperbolic evolution with a well-posed Cauchy problem where $V''(\phi)>0$ near minima. Maxwell's equations in a Lorentzian matter metric remain hyperbolic. Linearized gravity propagates on the Einstein-frame cone. Strict hyperbolicity and a well-posed Cauchy formulation for the fully coupled system are mathematically protected because the disformal term operates as a smooth, bounded perturbation. Provided the Lorentzian signature constraint $1 + (B/A^2)(\partial\phi)^2 > 0$ holds—which is strictly guaranteed by multi-messenger bounds in the EFT regime—the principal symbol of the differential system remains non-degenerate. Within the small-$B$, canonical-scalar EFT regime considered here, no ghost or gradient instability is introduced at leading order. The EFT is valid below the disformal scale $M$, with higher-dimensional operators suppressed. The specific phenomenological window for the cutoff scale $M$ is bounded from below by the requirement that the EFT remains strictly valid across terrestrial and solar-system density gradients, and from above by the requirement that $B(\phi)$ generates a detectable macroscopic holonomy without violating the $|c_\gamma - c_g|/c$ multi-messenger constraints.
+The canonical scalar equation has a hyperbolic principal operator on a Lorentzian background; $V''>0$ supplies positive-mass stability near an equilibrium. In the small-disformal EFT used here the theory is treated perturbatively about that background. Strong hyperbolicity of a complete nonlinear realization requires analysis of the coupled principal symbol and is not claimed in this paper. Multi-messenger observations strongly constrain the relevant late-time disformal combinations along astrophysical paths, while the realized background solution must independently satisfy the signature condition in other environments. Within the small-$B$, canonical-scalar EFT regime considered here, no ghost or gradient instability is introduced at leading order. The EFT is valid below the disformal scale $M$, with higher-dimensional operators suppressed. The specific phenomenological window for the cutoff scale $M$ is bounded from below by the requirement that the EFT remains strictly valid across terrestrial and solar-system density gradients, and from above by the requirement that $B(\phi)$ generates a detectable macroscopic holonomy without violating the $|c_\gamma - c_g|/c$ multi-messenger constraints.
 
 ## 5. Local Lorentz Invariance, Proper Time, and the Emergence of c
 
@@ -335,11 +405,15 @@ Two-way light speed is synchronization-independent and has established $c$'s loc
 
 For $\tilde{g}_{\mu\nu} = A(\phi)^2 g_{\mu\nu}$, null vectors of $g_{\mu\nu}$ are null for $\tilde{g}_{\mu\nu}$. Maxwell's action is conformally invariant in 4D, so photon trajectories are null with respect to both metrics. Gravitational and electromagnetic waves share null cones when $B = 0$ at late times.
 
-### Theorem 2 (No first-order one-way anisotropy in static φ)
+### Theorem 2 (Exact direct conformal propagation null)
 
-For static $\phi$ with $\partial_0\phi = 0$, the one-way light-time difference for forward/backward propagation along the same path cancels to first order in $\nabla\phi$. Any residual is $O((\nabla\phi)^2)$ or due to time dependence/kinematics. Over astronomical baselines and with current bounds on $\alpha \equiv d \ln A/d\phi$, this places effects in the femto-to-picosecond regime, removing claims of microsecond-scale anomalies.
+In the purely conformal limit $B = 0$, the multiplicative conformal factor $A^2(\phi)$ preserves the null cone exactly. A static conformal rescaling therefore produces no direct direction-odd same-path photon-propagation delay:
 
-**Proof sketch.** Parameterize the path coordinate $s \in [0,L]$; write $t_\to = \int ds A(\phi_0 + s \partial_\parallel\phi)/c$ and $t_\leftarrow$ similarly along the reverse. Linear terms in $\partial_\parallel\phi$ cancel exactly; see Appendix A2 for full derivation.
+$$\Delta t_{\rm prop}^{(A)} = 0.$$
+
+The conformal clock connection is exact, $\omega^{(A)} = d\ln A$, and hence $\oint_C d\ln A = 0$ in a smooth simply connected region. Observable conformal effects remain possible through clock-rate differences, accumulated proper-time histories, and open-path redshift comparisons. Scalar-induced backreaction on $g_{\mu\nu}$, time-dependent geometry, the disformal sector, or another non-exact transport structure are separate channels and are not excluded by this theorem.
+
+**Proof sketch.** For $\tilde{g}_{\mu\nu} = A^2(\phi)\,g_{\mu\nu}$ with $B = 0$, a photon null condition $\tilde{g}_{\mu\nu}k^\mu k^\nu = 0$ reduces to $g_{\mu\nu}k^\mu k^\nu = 0$ because $A > 0$. The conformal factor therefore cancels exactly from the null propagation condition and cannot act as a direction-dependent refractive index; see Appendix A2 for the full derivation.
 
 ## Synchronization one-form and holonomy
 
@@ -426,9 +500,19 @@ The parameter $\rho_T \approx 20$ g/cm³ is a **macroscopic phenomenological sat
 
 The screening ontology is organized through a sector dictionary. The Temporal Shear is defined as the gradient of the conformal factor:
 
-$$\Sigma_\mu \equiv \nabla_\mu \ln A(\phi) = \frac{\partial \ln A}{\partial \phi} \nabla_\mu \phi = \alpha(\phi) \nabla_\mu \phi,$$
+$$\Sigma_\mu \equiv \nabla_\mu \ln A(\phi) = \frac{\partial \ln A}{\partial \phi} \nabla_\mu \phi = \frac{\alpha(\varphi)}{M_{\rm Pl}} \nabla_\mu \phi,$$
 
-where $\alpha(\phi) \equiv d(\ln A)/d\phi$ is the conformal coupling strength. For compactness one may write $\Theta \equiv \ln A$, but the canonical series notation remains $\ln A$, $\Sigma_\mu = \nabla_\mu \ln A$, and $C_A$.
+where $\alpha(\varphi) \equiv d(\ln A)/d\varphi$ is the dimensionless conformal coupling strength, and $\varphi \equiv \phi/M_{\rm Pl}$. For compactness one may write $\Theta \equiv \ln A$, but the canonical series notation remains $\ln A$, $\Sigma_\mu = \nabla_\mu \ln A$, and $C_A$.
+
+The observable Temporal Shear is suppressed by the environmental screening operator $\mathcal S_\Sigma(\mathcal E)$:
+
+$$\Sigma_\mu^{\text{obs}} = \mathcal S_\Sigma(\mathcal E) \, \nabla_\mu \ln A(\phi),$$
+
+where the environmental state is
+
+$$\mathcal E = \{\rho, \Phi/c^2, \nabla\rho, \nabla\Phi, \text{compactness}, R_T(M), \text{proximity}, T, z, \text{boundary geometry}, \text{coherence volume}\}.$$
+
+The common environmental state $\mathcal{E}$ organizes these domain-specific observable projections; the projections themselves need not be numerically identical.
 
 The Temporal Topology correlation function $C_A(x,x')$ characterizes correlations of conformal-factor fluctuations:
 
@@ -446,25 +530,44 @@ $$\Delta O_X = \kappa_X \cdot \mathcal S_X(\mathcal E) \cdot \mathcal F_X[\Delta
 
 where $\kappa_X$ is an observable response coefficient for channel $X$, not the microscopic conformal coupling $\beta_A$ and not a PPN coupling. The locally active PPN coupling is suppressed by the environmental/source screening factor $\mathcal S_\Sigma(\mathcal E)$ and should not be confused with channel response coefficients $\kappa_X$.
 
+### Universal transfer map ($\beta_A \to \kappa_X$)
+
+The transfer map translates the microscopic coupling $\beta_A = -1.0$ into domain-specific observable response coefficients ($\kappa_X$). Channel-specific values are not independent fits, but projections of a single underlying parameter determined by the frozen conformal sector:
+
+Observable channel coefficients are defined as positive response magnitudes
+$$
+\kappa_X \equiv \lvert\beta_A\rvert\,S_X(\mathcal E_X)\,\Gamma_X.
+$$
+
+They are not the bare coupling. $S_X$ is the screening projection appropriate to the channel: $S_A$ for clock-rate and covariance observables (GNSS, J0437, clock networks), $S_\Sigma$ for source-charge and fifth-force observables (Cassini, LLR, wide binaries). $\mathcal{E}_X$ is the environmental state evaluated for the target channel. $\Gamma_X$ is a geometric/kinematic projector and is not yet computed for any channel in this paper.
+
+| Domain | Base coupling | Screening projection | Observable response | Status |
+| --- | --- | --- | --- | --- |
+| Solar System / GNSS | $\beta_A = -1.0$ | $S_A^{(\oplus)}$ (clock) | $\lambda_T$, clock response $\kappa_{\rm GNSS}$ | Conditional |
+| Wide binaries | $\beta_A = -1.0$ | $S_\Sigma(\rho_{\rm gal\ disk})$ | $\alpha_{\rm sat}$ | Conditional |
+| Cepheids ($H_0$) | $\beta_A = -1.0$ | $S_A(\rho_{\rm host\ gal})$ | $\kappa_{\rm Cep}$ | Conditional |
+| JWST high-$z$ | $\beta_A = -1.0$ | Stellar-population transfer | $\kappa_{\rm gal}$ | Inherited |
+| Globular clusters | $\beta_A = -1.0$ | $S_A(\text{cluster env})$ | Pulsar $\Gamma$ | Conditional |
+
+By freezing this action, any discrepancy between the predicted $\kappa_X$ and empirical fits (such as the variation in $\kappa_{\rm Cep}$ between 0.326–0.452 $\times 10^6$ mag and the theory benchmark of 0.96 $\times 10^6$ mag) ceases to be an unconstrained liability and becomes a direct constraint on the kinetic structure of the action.
+
+*On the benchmark value and its unit.* The canonical figure $\kappa_{\rm canonical} = 0.96 \times 10^6$ mag is a **prespecified theory benchmark, not a fitted parameter**: it is declared in advance so that downstream analyses (for example the JWST application, Paper 12) can be run without any domain-specific refitting, which is what makes those applications tests rather than fits. The unit "mag" is a bookkeeping convention inherited from the Cepheid period–luminosity relation in which the coefficient was first expressed; in the transfer-map sense of the equation above, $\kappa_X$ is a dimensionless response magnitude, and the magnitude unit simply records the observational channel through which it is measured. It should not be treated as a physical dimension carried by the coupling.
+
 Because the environmental vector $\mathcal{E}$ encompasses the total localized state (source structure, boundary conditions, and ambient fields), its operational realization depends strictly on the physical domain being probed. In dense macroscopic matter, it manifests via a density proxy; in cosmological voids and local potential wells, it tracks potential-depth gradients; in kinematic orbital phase space, it follows velocity-dispersion transitions; in geodetic clock networks, it is defined by geometric covariance lengths $\lambda_T$; and in subatomic environments, it is bounded by geometric proximity regulators. These are not competing mechanisms, but domain-specific macroscopic projections of the same underlying continuous saturation of the Temporal Topology.
 
 ## PPN mapping
 
-In unscreened regimes, the PPN parameter $\gamma_{\rm PPN} - 1 \approx -2 \alpha_0^2/(1 + \alpha_0^2) \approx -2 \alpha_0^2$ with $\alpha_0 = \alpha(\phi_\infty)$; Cassini's $|\gamma_{\rm PPN} - 1| < 2.3\times10^{-5}$ implies $\alpha_0 \lesssim 3.4\times10^{-3}$. Near massive bodies, the suppression of Temporal Shear (vanishing field gradient) suppresses the effective scalar coupling to $\alpha_{\rm eff}\ll\alpha_0$, cleanly preserving PPN bounds without invoking rigid thin-shell approximations.
+In unscreened regimes, the PPN parameter is $\gamma_{\rm PPN} - 1 = -2\alpha_{\rm eff}^2/(1 + \alpha_{\rm eff}^2) \simeq -2\alpha_{\rm eff}^2$ for $|\alpha_{\rm eff}|\ll 1$, where $\alpha_{\rm eff} = S_\Sigma\,\alpha_0$ is the screened effective scalar charge. With $\alpha_0 = \beta_A = -1$, Cassini's $|\gamma_{\rm PPN} - 1| < 2.3\times10^{-5}$ requires $S_\Sigma^{(\odot)} \lesssim 3.4\times10^{-3}$ in the Solar-System environment. Near massive bodies, the suppression of Temporal Shear (vanishing field gradient) suppresses the effective scalar charge to $\alpha_{\rm eff} = S_\Sigma\,\alpha_0 \ll \alpha_0$, cleanly preserving PPN bounds without invoking rigid thin-shell approximations.
 
-**PPN recovery in the screened limit (DEF framework).** In the Damour–Esposito-Farèse parameterization, the Jordan-frame metric for a static, spherically symmetric source is
+**PPN recovery in the screened limit.** For $A(\phi) = \exp(\beta_A\phi/M_{\rm Pl})$, the dimensionless microscopic coupling is $\alpha_0 \equiv d\ln A/d\varphi = \beta_A = -1$. Environmental screening does not alter this universal microscopic coupling. Instead, it suppresses the effective exterior scalar charge,
 
-$$g_{00}^{\rm J} = -1 + \frac{2GM}{r}\left(1 + \frac{\alpha_{\rm eff}^2}{2}\right), \quad g_{rr}^{\rm J} = 1 + \frac{2GM}{r}\left(1 - \frac{\alpha_{\rm eff}^2}{2}\right),$$
+$$\alpha_{\rm eff} = S_\Sigma(\mathcal E)\,\alpha_0,$$
 
-where $\alpha_{\rm eff}$ is the effective scalar charge that sources the exterior metric perturbation. For $A(\phi) = \exp(\beta_A\phi/M_{\rm Pl})$, the bare derivative $d(\ln A)/d\phi = \beta_A/M_{\rm Pl}$ is constant; screening does not make this derivative vanish. Instead, screening suppresses the effective exterior charge through the environmental screening factor:
+where $S_\Sigma(\mathcal E) \to 0$ in dense environments. In the DEF normalization used here,
 
-$$\alpha_{\rm eff} = \mathcal S_\Sigma(\mathcal E) \, \alpha_0,$$
+$$\gamma_{\rm PPN} - 1 = -\frac{2\alpha_{\rm eff}^2}{1 + \alpha_{\rm eff}^2}.$$
 
-where $\mathcal S_\Sigma(\mathcal E) \to 0$ in dense environments. When $\mathcal S_\Sigma \to 0$, the effective coupling $\alpha_{\rm eff} \to 0$ and the PPN parameters reduce exactly to GR values:
-
-$$\gamma_{\rm PPN} - 1 = -2\alpha_{\rm eff}^2 \to 0, \qquad \beta_{\rm PPN} - 1 = \frac{\alpha_{\rm eff}^2}{2} \frac{d\alpha_{\rm eff}}{d\phi} \to 0.$$
-
-Thus $\gamma_{\rm PPN} = \beta_{\rm PPN} = 1$ in the screened limit, independent of the cosmological value $\alpha_0$.
+Therefore $S_\Sigma \to 0 \;\Longrightarrow\; \alpha_{\rm eff} \to 0 \;\Longrightarrow\; \gamma_{\rm PPN} \to 1$. The remaining PPN parameters likewise recover their GR values in the screened limit. No independent running of the frozen microscopic coupling $\alpha_0$ is required.
 
 ## Equivalence principle
 
@@ -486,7 +589,7 @@ $$d\Delta\sigma \neq 0 .$$
 
 In the minimal TEP model this curvature is supplied by the disformal sector; in more general extensions it may arise from non-metricity or other explicitly non-exact transport structure.
 
-To state the disformal contribution in a measurement-defined way, let $u^\mu$ denote the four-velocity field of the physical clock network or observer congruence used to define the synchronization protocol. We use the $(-+++)$ signature, so that
+To state the disformal contribution in a measurement-defined way, let $u^\mu$ denote the four-velocity field of the physical clock network or observer congruence used to define the synchronization protocol. The $(-+++)$ signature is used, so that
 
 $$u^\mu u_\mu = -1 .$$
 
@@ -524,21 +627,41 @@ $$H_{\rm resid}(C) = \oint_C \Delta\sigma = \iint_\Sigma d(\Delta\sigma).$$
 
 At leading order beyond the GR-subtracted reference model, $d(\Delta\sigma)$ contains the disformal curvature $d(\delta\tilde{\sigma})$. Topological holonomy, where the loop does not bound a smooth surface or the connection is locally closed but not globally exact, is a separate case and is not represented by the Stokes expression above.
 
-This also clarifies the screening ontology. The conformal and disformal sectors are correlated through the same scalar field $\phi$, but their observable responses need not be assumed identical. Macroscopic screening suppresses the observable conformal shear,
+The conformal and disformal responses arise from the same environment-dependent scalar configuration. For the universal exponential coupling,
 
-$$\Sigma_\mu^{\rm obs} = \mathcal S_\Sigma(\mathcal E)\Sigma_\mu ,$$
+$$
+\Sigma_\mu \equiv \nabla_\mu\ln A = \frac{\beta_A}{M_{\rm Pl}}\nabla_\mu\phi,
+$$
 
-thereby driving local clock-rate deviations toward the GR limit. In the limiting case where screening drives all scalar gradients to zero, the disformal holonomy also vanishes. However, the relation between conformal screening and disformal screening is not fixed by the conformal sector alone. It depends on the field solution, the disformal coupling $B(\phi)$, the physical clock-network congruence, boundary conditions, and probe-specific response.
+while the leading disformal deformation relative to the conformal metric is
+
+$$
+\mathcal{D}_{\mu\nu} \equiv \frac{B(\phi)}{A^2(\phi)}\nabla_\mu\phi\nabla_\nu\phi = \frac{B(\phi)\,M_{\rm Pl}^2}{A^2(\phi)\,\beta_A^2}\,\Sigma_\mu\Sigma_\nu.
+$$
+
+Environmental flattening of the Temporal Topology therefore suppresses both responses: Temporal Shear is linear in the locally active scalar gradient, whereas the leading disformal deformation is quadratic in that gradient for fixed $B/A^2$. Their observable suppression is nevertheless not represented by a single universal numerical factor, because the disformal response additionally depends on $B(\phi)$, the solved field profile, path geometry, boundary conditions, and the observer congruence. The body-level exterior source-charge factor
+
+$$
+S_\Sigma \equiv Q/Q_0
+$$
+
+is an integrated observable projection of the field configuration and should not be inserted directly as a universal local $S_\Sigma^2$ multiplier for disformal observables. At leading disformal order, the synchronization correction may equivalently be written
+
+$$
+\delta\tilde{\sigma}_\mu \simeq -\frac{B(\phi)\,M_{\rm Pl}^2}{A^2(\phi)\,\beta_A^2}\,(u\!\cdot\!\Sigma)\,P_\mu{}^\nu\Sigma_\nu.
+$$
+
+Thus synchronization holonomy depends on the local field value and Temporal Shear, the observer motion relative to that field, the orientation of the gradient, and the complete path geometry. Experimental response therefore cannot in general be inferred from ambient density or a body-level source-charge factor alone.
 
 Accordingly, high-energy, mesoscopic, and topological probes should not be modeled solely by the ambient bulk-density screening function used in astrophysical applications. Their responses are represented by channel-specific coefficients $\kappa_X$, depending on momentum transfer, interaction topology, boundary geometry, and microscopic field structure. These probes test whether non-exact disformal transport remains measurable in regimes where the conformal clock-rate response is screened.
 
-## 8. Cosmology: Background Evolution, Growth, and EFT Mapping
+## 8. Cosmology: Static Spatial Geometry, Temporal Horizon, and EFT Mapping
 
 ## Background & The Temporal Horizon
 
 *Supersession Note: Earlier formulations of TEP utilized phenomenological epoch-screening functions to artificially preserve a standard hot-plasma expansion history. The framework now develops thermodynamic closure natively within the canonical eternal-universe architecture. The "hot Big Bang" is formally rejected in the canonical architecture.*
 
-The cosmological background is an eternal, static spatial geometry where apparent expansion is reconstructed purely as open-path conformal temporal shear: $1+z = A_0/A_{\rm em}$. The apparent spatial singularity conventionally written as $a \to 0$ is formally re-expressed as a regular temporal horizon ($\mathscr{T}^-$) where the observational clock map $A_{\rm clock} \to 0$. In the matter frame, the continuity equation for $\tilde{\rho}_m$ is standard, while apparent kinematic acceleration manifests entirely from the evolving Temporal Shear.
+The cosmological background is an eternal, static spatial geometry where apparent expansion is reconstructed purely as open-path conformal temporal shear: $1+z = A_0/A_{\rm em}$. The conformal factor changes the operational rate and calibration of matter proper time relative to the static gravitational spatial geometry; TEP does not identify this conformal matter-frame rescaling with physical expansion of the underlying spatial manifold. The apparent spatial singularity conventionally written as $a \to 0$ is formally re-expressed as a regular temporal horizon ($\mathscr{T}^-$) where the observational clock map $A_{\rm clock} \to 0$. In the matter frame, the continuity equation for $\tilde{\rho}_m$ is standard, while apparent kinematic acceleration manifests entirely from the evolving Temporal Shear.
 
 ## Temporal-Horizon Chemical Equilibrium and Proper-Time Reaction Flow
 
@@ -546,15 +669,13 @@ Big Bang Nucleosynthesis (BBN) and the epoch of Recombination are not modeled as
 
 The classical stellar astration paradox is resolved natively. While the available proper-time history is unbounded, accumulated stellar processing need not diverge; local chemical evolution can approach a steady-state asymptotic attractor when the temporal-exposure convergence condition is satisfied. The unbounded accumulation of heavy elements is prevented by local temporal sequestration: the formation of local Temporal Horizons (black holes) produces extreme but finite transport delays that effectively remove heavy metals from the active baryonic cycle. Consequently, the observed light-element abundances are not primordial artifacts of a global singularity; rather, TEP-BBN demonstrates a candidate asymptotic chemical attractor in which the observed light-element abundances can arise through long-term baryonic cycling, subject to the temporal-exposure convergence condition derived there.
 
-A candidate TEP origin of the Cosmic Microwave Background is the steady-state thermalization of distributed radiation, with its blackbody form preserved by achromatic conformal transport; TEP-BBN demonstrates this mechanism as a local radiative-transfer proof of concept. The universe becomes completely opaque at high redshift because diverging temporal transport stretches the apparent optical depth to infinity, creating an observable boundary without a physical plasma wall (demonstrated as the 1D Global Opacity Theorem in TEP-BBN). The dominant dynamical cosmological observables arise exclusively in the late universe: distance probes traversing unsuppressed voids accumulate open-path temporal shear, generating the illusion of dark energy, while growth probes in dense virialized clusters are screened.
+A candidate TEP origin of the Cosmic Microwave Background is the steady-state thermalization of distributed radiation, with its blackbody form preserved by achromatic conformal transport; TEP-BBN demonstrates this mechanism as a local radiative-transfer proof of concept. The universe becomes completely opaque at high redshift because diverging temporal transport stretches the apparent optical depth to infinity, creating an observable boundary without a physical plasma wall (demonstrated as the 1D Global Opacity Theorem in TEP-BBN). At late times, distance–redshift observables are reconstructed through open-path temporal transport across the inhomogeneous scalar background. Growth and lensing provide independent consistency tests of the realized cosmological solution; their quantitative response must be derived from that solution rather than imposed through a generic unscreened scalar–tensor growth law.
+
+*Status of $\Lambda$ in this framework.* The word "illusion" above refers specifically to the phenomenological attribution on the Hubble diagram, and should not be read as a claim that no corresponding energy density exists. Within TEP, $\Lambda$ is reinterpreted rather than removed: the accelerating-distance signature normally attributed to a cosmological constant is reconstructed as the kinetic energy density of the Temporal Shear field, $\Omega_\phi$ (Papers 18, 26). The observational content of $\Lambda$ is therefore preserved and re-sourced, not denied. At the level of distance–redshift observables, the temporal-transport description can be degenerate with an expanding-$\Lambda$CDM fit on the Hubble diagram (Paper 30). Discrimination therefore requires independent observables, including structure growth, lensing, and clock/transport tests, rather than the distance sector alone.
 
 ## EFT of dark energy mapping
 
-The theory maps to EFT-of-DE with $\alpha_T = 0$ enforced to satisfy $c_T = 1$. The braiding $\alpha_B$ and Planck-mass run $\alpha_M$ are both small and controlled by $\alpha(\phi)$ and $\dot{\phi}$. Bounds from large-scale structure and ISW require $|\alpha_M|$, $|\alpha_B| \ll 1$ at late times. The parameter choices respect these.
-
-## Growth and $S_8$
-
-In unscreened low-density regions, the effective Newton constant is $G_{\text{eff}}(k,a) = G [1 + 2 \alpha_0^2/(1 + m_\phi^2 a^2/k^2)]$, giving mild scale-dependent growth, raising $f\sigma_8$ on large scales while screening suppresses changes in dense regions. A net reduction of $S_8$ inferred from weak lensing by ~0.01–0.03 is possible while preserving CMB lensing. Detailed MCMC fits with CLASS/HyRec and related Boltzmann-pipeline modifications have been developed and tested in the companion cosmology papers, with validation against growth, lensing, BAO, and structure-formation data.
+For comparison with standard cosmological perturbation analyses, the late-time scalar sector can be represented in EFT-of-dark-energy language, with $\alpha_T=0$ enforcing $c_T=1$. The braiding and effective Planck-mass-running functions provide a phenomenological dictionary for perturbations of the realized TEP cosmological solution. This mapping does not identify the underlying static spatial manifold with a physically expanding FLRW background; quantitative constraints on the effective functions are developed in the companion cosmology analyses.
 
 ## Standard sirens
 
@@ -564,13 +685,19 @@ In the late-time conformal limit, EM and GW share null cones; standard siren dis
 
 ## Quantum evolution
 
-Proper-time Schrödinger evolution $i\hbar d|\psi\rangle/d\tau = \hat{H}|\psi\rangle$ becomes $i\hbar d|\psi\rangle/d\tilde{t} = A(\phi) \hat{H} |\psi\rangle$ in the matter frame. Transition frequencies scale as $\nu \propto A(\phi)$ with tiny sectoral corrections from dilaton-like couplings $d_e$, $d_\mu$, $d_q$:
+Proper-time quantum evolution is defined with respect to matter-frame proper time: $i\hbar d|\psi\rangle/d\tau = \hat{H}|\psi\rangle$, where $\tau$ is the proper time defined by the matter metric $\tilde{g}_{\mu\nu}$. Relative to an Einstein-frame or reference coordinate time $t$, stationary clocks satisfy $d\tau \simeq A(\phi)\,dt$ in the weak field, meaning a single clock's tick rate relative to $t$ carries the $A(\phi)$ scaling. Because this conformal rescaling is locally universal, it cancels exactly from dimensionless ratios of co-located ideal matter clocks. Observable conformal clock signatures arise strictly from comparisons between different spacetime environments, transported clock histories, or small sectoral dilaton-like sensitivities:
 
 $$\delta \ln \nu = \delta \ln A + K_\alpha \delta \ln \alpha + K_\mu \delta \ln \mu + K_q \delta \ln X_q + \ldots$$
 
+where the first term represents the universal conformal clock-rate contribution relative to the specified reference standard.
+
 ## Species sensitivity
 
-Different clock transitions carry different $K$-coefficients; by comparing ratios, one can disentangle the universal $A(\phi)$ scaling from composition dependence and constrain $d_e$, $d_\mu$, $d_q$.
+For a dimensionless ratio of two co-located clock transitions $X$ and $Y$, the universal conformal contribution cancels:
+
+$$\delta \ln \frac{\nu_X}{\nu_Y} = (K_{\alpha,X} - K_{\alpha,Y})\delta \ln \alpha + (K_{\mu,X} - K_{\mu,Y})\delta \ln \mu + (K_{q,X} - K_{q,Y})\delta \ln X_q + \ldots$$
+
+Multi-species clock comparisons therefore constrain non-universal sectoral couplings, while universal $A(\phi)$ signatures are tested through comparisons of clock rates or accumulated proper-time histories across distinct spacetime environments.
 
 ## Interferometry
 
@@ -592,14 +719,14 @@ How flagship constraints map to $H_{\rm resid}$:
 
 - **GW170817 (GW–EM coincidence).** $|c_\gamma-c_g|/c\!\lesssim\!\text{few}\times10^{-15}$ constrains global cone splits. In TEP, late-time conformal coupling preserves null cones, so EM and GW share causal structure; small disformal tilts today are allowed. This is a boundary condition, not a loop-holonomy test.
 - **Cassini (PPN-$\gamma$).** Two-way Doppler/Shapiro is reciprocity-even; it calibrates $\sigma_{\rm GR}$ to subtract but does not bound $H_{\rm resid}$.
-- **Resonator MM/KT tests.** Cavities bound closed-path, even-parity (two-way sums) anisotropy at $10^{-17}\!-\!10^{-18}$, yet are blind to odd-parity (direction-reversing one-way differences) non-reciprocity and loop non-closure—the ingredients of $H_{\rm resid}$.
+- **Resonator MM/KT tests.** Cavities provide strong terrestrial bounds on even-parity orientation-dependent photon propagation, including the disformal $D(\hat n\cdot\nabla\phi)^2$ deformation derived in Appendix B. They do not directly measure the distinct odd/non-exact loop-closure observable $H_{\rm resid}$, whose leading synchronization kernel additionally depends on observer motion and path geometry.
 - **"GPS works."** Network self-consistency uses explicit GR+Sagnac modeling and largely two-way/common-view calibration. This verifies internal consistency under assumed GR model; not a direction-reversing one-way loop-closure null.
 - **Clock redshift & pairwise A↔B tests.** Exquisitely confirm GR locally; only closed loops (A→B→C→A with direction reversal) can reveal non-integrability captured by $H_{\rm resid}$.
 
 Why classics can be null while $H_{\rm resid}\neq0$:
 
 - Conformal null-cone invariance ⇒ no large GW–EM kinematic delays (consistent with GW170817).
-- $\partial_t\phi = 0$ over loop timescale; gradients conservative: no first-order one-way anisotropy. Along a fixed path, forward/back times cancel at $\mathcal O(B,\nabla\phi)$; leading effects are second order or require time dependence/kinematics. Thus two-way/closed-path nulls can hold while a loop-holonomy test remains sensitive.
+- $\partial_t\phi = 0$ over loop timescale; gradients conservative: no direct conformal propagation asymmetry. In the purely conformal limit ($B = 0$), the conformal factor cancels exactly from the null condition, so forward/back propagation times are identical. Residuals require the disformal sector, time dependence, or non-exact transport structure. Thus two-way/closed-path nulls can hold while a loop-holonomy test remains sensitive.
 
 **Experimental falsifier (primary endpoints).**
 Run a closed-loop, one-way time-transfer (and/or portable-clock) test and report:
@@ -628,7 +755,7 @@ $$H_{\rm resid}(C) = \oint_C(\tilde{\sigma}-\sigma_{\rm GR}) = \oint_C\Delta\sig
 
 where $\sigma_{\rm GR}$ is computed from the full GR, kinematic, geodetic, atmospheric, instrumental, and clock-scale model for the same loop.
 
-Forecast magnitude $O(10^{-18}$–$10^{-16})$ fraction per loop time (0.1–1 s), limited by disformal and time-varying $A(\phi)$ effects. Null in GR by design.
+**Benchmark sensitivity window.** Previous phenomenological estimates motivate sensitivity in the $10^{-18}$–$10^{-16}$ fractional range per loop time (0.1–1 s). The absolute TEP signal remains to be derived from the common scalar profile and the disformal synchronization path integral. The ground portion samples the strongly screened near-surface configuration while the space legs probe the radial recovery region; the relative contribution of each segment is therefore a prediction of the completed field solution. The experiment is sensitive to disformal or otherwise non-exact transport contributions. Null in GR by design.
 
 Crucially, while the ground stations ($A$ and $B$) reside in the near-surface zone where the environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$ heavily suppresses the local temporal shear to satisfy PPN bounds, the space legs traverse the radial altitude gradient $S_\oplus(r)$, rapidly escaping surface screening. The measurable loop holonomy $H_{\rm resid}$ is therefore geometrically sourced by the un-screened vertical segments of the transit, utilizing the heavily screened ground leg primarily as a stable baseline calibration.
 
@@ -644,7 +771,7 @@ Crucially, while the ground stations ($A$ and $B$) reside in the near-surface zo
 
 **Target:** below $10^{-18}$; projected capability with advanced turbulent cancellation techniques reaches the $10^{-19}$ regime.
 
-**Falsification.** Null at <1×10⁻¹⁹ fractional across seasons/geometry excludes disformal/time-varying $A$ signatures with late-time cosmological relevance.
+**Falsification.** Null at the $10^{-18}$ fractional target across seasons/geometry excludes non-exact transport signatures with late-time cosmological relevance; reaching the projected $10^{-19}$ capability would extend this exclusion.
 
 ## B. Portable-clock "clock anholonomy"
 
@@ -666,7 +793,7 @@ Crucially, while the ground stations ($A$ and $B$) reside in the near-surface zo
 
 **Design.** Two drag-free spacecraft with $10^{-18}$-class optical lattice clocks, separated by 1–5 AU. Optical comb-based one-way time transfer, with third node for calibration (Earth or a relay). Kinematic synchronization via slow-clock transport or common-view transponders.
 
-**Prediction.** Geometry-dependent one-way asymmetry parameter $\Xi_{AB} \equiv (t_{AB} - t_{BA})/(t_{AB} + t_{BA})$ at $10^{-15}$–$10^{-14}$ (0.05–5 ps) for disformal tilts consistent with GW bounds; purely conformal temporal-variation effects are much smaller and geometry-averaging helps isolate them.
+**Benchmark sensitivity window.** Geometry-dependent one-way asymmetry parameter $\Xi_{AB} \equiv (t_{AB} - t_{BA})/(t_{AB} + t_{BA})$ at $10^{-15}$–$10^{-14}$ (0.05–5 ps) for disformal tilts consistent with GW bounds. The absolute signal magnitude remains to be derived from the solved path-dependent kernel; this range is a benchmark target, not a no-refit prediction.
 
 **Systematics.** Plasma delays, pointing jitter, thermal drifts, deep-space clock performance; anticipate >decade timeline.
 
@@ -685,7 +812,7 @@ Crucially, while the ground stations ($A$ and $B$) reside in the near-surface zo
 • Subtract GR redshift and Doppler shifts; correlate residuals with detailed geophysical models and gravimetry to isolate screening signatures
 
 **Forecast.**
-• Distance correlations: Exponential decay with characteristic length $\lambda_T \sim 2,000-3,000$ km for viable screening parameters
+• Distance correlations: Exponential decay with characteristic length $\lambda_T \sim 1,000$–$10,000$ km for viable screening parameters. The empirical terrestrial calibration $L_c \approx 4{,}200$ km, obtained from 25-year multi-centre GNSS clock analysis (Papers 1, 2, 6), falls inside this prespecified theoretical prior. It is an empirical calibration adopted by the corpus, not a value derived here; the held-out MGEX replication (Paper 14) returns a shorter length ($\approx 1{,}400$ km) on a different product type, and that discrepancy is unresolved. Forward analyses that adopt $\lambda_T \approx 4{,}200$ km should state it as a calibration input.
 • Altitude dependence: $10^{-19}$–$10^{-18}$ frequency shifts over tens of kilometers for $\lambda_{\text{scr}} \sim 10$ km near Earth
 • Multi-center cross-validation expected to show <5% variation in fitted parameters
 
@@ -709,7 +836,7 @@ Crucially, while the ground stations ($A$ and $B$) reside in the near-surface zo
 
 **No EM–GW kinematic delay in conformal subclass.** With $B=0$ today, EM and GW share null cones; any observed delays are astrophysical/source or detector-time-standard effects. Earlier overstatements are corrected and aligned with GW170817 constraints.
 
-**Static $\phi$ gradients do not generate first-order one-way anisotropy.** An explicit derivation (Appendix A2) shows cancellation, correcting prior misinterpretations.
+**Static $\phi$ gradients do not generate directional propagation asymmetry.** The conformal factor cancels from the null condition (Appendix A2), so $A(\phi)$ cannot act as a photon refractive index; clock-rate and open-path redshift effects remain.
 
 **Holonomy invariant and not a synchronization artifact.** The observable $H_{\rm resid}$ is constructed from physical proper-time measurements as the closed-loop integral of the GR-subtracted synchronization connection, $\Delta\sigma=\tilde\sigma-\sigma_{\rm GR}$. Synchronization re-gaugings shift both the matter-frame connection and the corresponding GR reference connection by the same exact one-form, leaving $\Delta\sigma$ and therefore $H_{\rm resid}$ invariant.
 
@@ -737,23 +864,21 @@ Einstein moved us from absolute time to relative simultaneity and dynamic geomet
 
 Let $\tilde{g}_{\mu\nu} = A(\phi)^2 g_{\mu\nu}$ with $A > 0$. A vector $k^\mu$ null with respect to $g_{\mu\nu}$, $g_{\mu\nu} k^\mu k^\nu = 0$, satisfies $\tilde{g}_{\mu\nu} k^\mu k^\nu = A^2 g_{\mu\nu} k^\mu k^\nu = 0$. Maxwell's action $S = -(1/4) \int \sqrt{-g} F_{\mu\nu} F^{\mu\nu}$ is conformally invariant in 4D: under $\tilde{g}_{\mu\nu} = \Omega^2 g_{\mu\nu}$, $\sqrt{-\tilde{g}} F_{\mu\nu} F^{\mu\nu} = \sqrt{-g} F_{\mu\nu} F^{\mu\nu}$. Hence photon geodesics are conformally invariant; null cones coincide.
 
-## A2. No first-order one-way anisotropy in static φ
+## A2. Exact direct conformal propagation null
 
-Consider a straight path $x(s)$ along $\nabla\phi$ with $s \in [0, L]$. Expand $A(\phi(s)) = 1 + \alpha \phi(s) + O(\alpha^2)$.
+Consider the purely conformal subclass $\tilde{g}_{\mu\nu} = A^2(\phi)\,g_{\mu\nu}$, $B = 0$. A photon trajectory satisfies
 
-**Forward time.** Parameterize $s = 0 \to L$ with $\phi(s) = \phi_0 + s\,\partial_\parallel\phi$:
+$$\tilde{g}_{\mu\nu}\,k^\mu k^\nu = A^2(\phi)\,g_{\mu\nu}\,k^\mu k^\nu = 0.$$
 
-$$t_\to = \frac{1}{c} \int_0^L \! \bigl[1 + \alpha(\phi_0 + s\,\partial_\parallel\phi)\bigr]\,ds = \frac{L}{c} + \frac{\alpha}{c}\Bigl(\phi_0 L + \frac{1}{2}L^2\,\partial_\parallel\phi\Bigr).$$
+Because $A(\phi) > 0$, this is equivalent to $g_{\mu\nu}\,k^\mu k^\nu = 0$. Thus the conformal factor does not alter the local null cone or act as a direction-dependent refractive index. In a static conformal background, forward and backward propagation along the same geometrical path therefore acquire no conformal propagation-time antisymmetry:
 
-**Backward time.** Parameterize $s' = 0 \to L$ with $\phi(s') = \phi_1 - s'\,\partial_\parallel\phi$, where $\phi_1 = \phi_0 + L\,\partial_\parallel\phi$:
+$$\Delta t_{\rm prop}^{(A)} \equiv t_\to - t_\leftarrow = 0.$$
 
-$$t_\leftarrow = \frac{1}{c} \int_0^L \! \bigl[1 + \alpha(\phi_1 - s'\,\partial_\parallel\phi)\bigr]\,ds' = \frac{L}{c} + \frac{\alpha}{c}\Bigl(\phi_1 L - \frac{1}{2}L^2\,\partial_\parallel\phi\Bigr).$$
+The conformal sector nevertheless remains observable through matter-clock rates and open-path comparisons. For stationary clocks, $d\tilde{\tau} = A(\phi)\,d\tau_g$, so clocks situated in different field environments can acquire different proper-time histories. The corresponding infinitesimal conformal transport is $\omega^{(A)} = d\ln A$, which is exact. Hence, in a smooth simply connected region,
 
-Substituting $\phi_1 = \phi_0 + L\,\partial_\parallel\phi$,
+$$\oint_C d\ln A = 0.$$
 
-$$t_\leftarrow = \frac{L}{c} + \frac{\alpha}{c}\Bigl(\phi_0 L + L^2\,\partial_\parallel\phi - \frac{1}{2}L^2\,\partial_\parallel\phi\Bigr) = \frac{L}{c} + \frac{\alpha}{c}\Bigl(\phi_0 L + \frac{1}{2}L^2\,\partial_\parallel\phi\Bigr) = t_\to.$$
-
-Thus $t_\to - t_\leftarrow = 0 + O((\partial\phi)^2, \alpha^2)$ in the linear expansion. More strongly, in the purely conformal static same-path problem the cancellation is exact: both directions evaluate the same path integral $(1/c)\int_\Gamma A[\phi(x)]\,ds$ with reversed orientation but positive optical arclength. A nonzero one-way residual therefore requires physics beyond a static conformal scalar on a fixed path, such as disformal terms, time dependence, motion through the gradient, or non-exact/topological synchronization structure.
+A static, purely conformal field can therefore produce clock-rate differences and open-path redshift effects, but cannot by itself generate a direction-odd same-path propagation residual or a non-zero closed-loop synchronization holonomy. Such a residual requires the disformal sector $B \neq 0$, explicit time dependence combined with motion through the field, or some other non-exact/topological transport structure.
 
 ## A3. Synchronization holonomy invariance and projected disformal connection
 
@@ -913,21 +1038,27 @@ In a local inertial frame ($g_{\mu\nu} = \eta_{\mu\nu}$), the photon dispersion 
 
 $$\eta^{\mu\nu} k_\mu k_\nu = \frac{(B/A^2)(q \cdot k)^2}{1 + (B/A^2)(q \cdot q)}.$$
 
-For a photon with 4-momentum $k^\mu = (\omega/c)(1, \hat{n})$, and a static scalar gradient $q_\mu = (0, \nabla\phi)$, $q \cdot k = (\omega/c)\,\partial_{\hat{n}}\phi$ and $q \cdot q = |\nabla\phi|^2$. Hence
+For a photon with 4-momentum $k^\mu = (\omega/c,\, k\hat{n})$, where $k \equiv |\vec{k}|$ is not assumed equal to $\omega/c$, and a static scalar gradient $q_\mu = (0, \nabla\phi)$, $q \cdot k = k\,\partial_{\hat{n}}\phi$ and $q \cdot q = |\nabla\phi|^2$. Defining $D \equiv B/A^2$, the dispersion relation gives
 
-$$-\frac{\omega^2}{c^2} + |\vec{k}|^2 = \frac{(B/A^2)(\omega/c)^2(\partial_{\hat{n}}\phi)^2}{1 + (B/A^2)|\nabla\phi|^2}.$$
+$$-\frac{\omega^2}{c^2} + k^2 = \frac{D\,k^2(\partial_{\hat{n}}\phi)^2}{1 + D|\nabla\phi|^2}.$$
 
-The phase speed $v_{\rm ph} = \omega/|\vec{k}|$ is therefore
+Solving for $k^2$ and extracting the phase speed $v_{\rm ph} = \omega/k$ yields
 
-$$v_{\rm ph} = c\left[1 + \frac{(B/A^2)(\partial_{\hat{n}}\phi)^2}{1 + (B/A^2)|\nabla\phi|^2}\right]^{-1/2} \approx c\left[1 - \frac{1}{2}\frac{(B/A^2)(\partial_{\hat{n}}\phi)^2}{1 + (B/A^2)|\nabla\phi|^2}\right].$$
+$$v_{\rm ph} = c\sqrt{1 - \frac{D(\partial_{\hat{n}}\phi)^2}{1 + D|\nabla\phi|^2}}.$$
 
-Gravitons propagate on $g_{\mu\nu}$, so $c_g = c$ exactly. The maximal fractional speed difference between photons and gravitons, for propagation perpendicular to $\nabla\phi$ ($\partial_{\hat{n}}\phi = 0$) versus along it ($\partial_{\hat{n}}\phi = |\nabla\phi|$), is bounded by the disformal term:
+For propagation along the gradient ($\partial_{\hat{n}}\phi = |\nabla\phi|$), this simplifies to
 
-$$\frac{|c_\gamma - c_g|}{c} \lesssim \frac{1}{2}\frac{(B/A^2)|\nabla\phi|^2}{1 + (B/A^2)|\nabla\phi|^2} \approx \frac{B}{2A^2}|\nabla\phi|^2 \quad \text{(for small } B\text{)}.$$
+$$v_\parallel = \frac{c}{\sqrt{1 + D|\nabla\phi|^2}}.$$
+
+For small $D$, the leading-order result is $v_{\rm ph}/c \simeq 1 - \frac{1}{2}D(\partial_{\hat{n}}\phi)^2 + \mathcal{O}(D^2)$.
+
+Gravitons propagate on $g_{\mu\nu}$, so $c_g = c$ exactly. The maximal fractional speed difference between photons and gravitons, for propagation perpendicular to $\nabla\phi$ ($\partial_{\hat{n}}\phi = 0$, $v_\perp = c$) versus along it ($\partial_{\hat{n}}\phi = |\nabla\phi|$, $v_\parallel = c/\sqrt{1 + D|\nabla\phi|^2}$), is
+
+$$\frac{|c_\gamma - c_g|}{c} = 1 - \frac{1}{\sqrt{1 + D|\nabla\phi|^2}} \approx \frac{D}{2}|\nabla\phi|^2 \quad \text{(for small } D\text{)}.$$
 
 The GW170817/GRB170817A bound $|c_\gamma - c_g|/c \lesssim {\rm few} \times 10^{-15}$ therefore requires
 
-$$\frac{B(\phi)}{A(\phi)^2}\,|\nabla\phi|^2 \lesssim {\rm few} \times 10^{-15}$$
+$$D\,|\nabla\phi|^2 = \frac{B(\phi)}{A(\phi)^2}\,|\nabla\phi|^2 \lesssim {\rm few} \times 10^{-15}$$
 
 along typical lines of sight today, bounding the present-day disformal coupling $B(\phi_0)$.
 
@@ -948,7 +1079,7 @@ along typical lines of sight today, bounding the present-day disformal coupling 
 | $P_\mu{}^\nu$ | spatial projector into the local rest space of the clock-network congruence, $P_\mu{}^\nu=\delta_\mu{}^\nu+u_\mu u^\nu$ in $(-+++)$ signature | 7, A3 |
 | $q_\mu$ | scalar-gradient one-form, $q_\mu \equiv \partial_\mu\phi$ | A4, B |
 | $c_g$, $c_\gamma$ | Speed of gravity, speed of light (photons) | 5 |
-| $V(\phi)$ | Potential for the scalar field $\phi$ | 4 |
+| $V(\phi)$ | Scalar self-interaction potential; not yet uniquely frozen | 4 |
 | $\alpha(\phi)$ | Conformal coupling strength, $d(\ln A)/d\phi$ | 4 |
 | $\beta_A$ | Dimensionless conformal coupling parameter | 2 |
 | $M$ | Suppression scale for disformal/EFT operators | 4 |

@@ -1,6 +1,6 @@
 # Global Time Echoes: Empirical Synthesis
 **Matthew Lukin Smawfield**
-Version: v0.5 (Singapore)
+Version: v0.6 (Singapore)
 05 June 2026
 DOI: 10.5281/zenodo.18004832
 
@@ -42,7 +42,7 @@ measuring Newtonian force.
 These observations match pre-specified expectations of the Temporal
 Equivalence Principle, a bi-metric scalar-tensor framework in which
 proper time is a dynamical field governed by a conformal factor A(ϕ) =
-exp(β<sub>A</sub>ϕ/M<sub>Pl</sub>). Fifth-force suppression operates through the
+exp(β<sub>A</sub>ϕ/M<sub>Pl</sub>). Temporal Shear suppression operates through the
 continuous spatial profile of the ϕ field (Temporal Topology), with
 suppression arising from the non-linear superposition of field gradients
 (Temporal Shear), replacing discrete thin-shell approximations with a
@@ -54,6 +54,10 @@ empirical claim.
 The framework preserves local Lorentz invariance while predicting
 spatially correlated clock-network residuals in the conformal sector and
 closed-loop synchronization holonomy in the disformal/non-exact sector.
+The measured GNSS covariance is interpreted primarily as a
+conformal-sector \(A(\phi)\) observable; it should not be identified
+with the non-zero closed-loop holonomy predicted only by the
+non-exact/disformal sector.
 
 **Evidence Tiers:** A (Paper 0/EXP): Foundational theory with
 pre-specified search ranges; B (GNSS I–III): Primary timing-network
@@ -174,9 +178,9 @@ Paper 0: Theoretical Foundation (Smawfield 2025a, DOI:
 developed independently of any GNSS analysis, establishing pre-specified expectations and theoretical search ranges including a Temporal Topology correlation length, exponential
 spatial decay form, velocity-dependent anisotropy, and absence of GM/r²
 scaling. Screening operates via the continuous spatial profile of the φ field
-(Temporal Topology), with fifth-force suppression arising from the non-linear superposition of field
+(Temporal Topology), with Temporal Shear suppression arising from the non-linear superposition of field
 gradients (Temporal Shear) rather than discrete thin-shell boundaries,
-suppressing fifth forces in dense environments while leaving cosmology
+suppressing Temporal Shear in dense environments while leaving cosmology
 accessible to dynamics. This theory-first approach ensures that subsequent
 empirical findings represent genuine predictions rather than post-hoc
 explanations.
@@ -238,15 +242,20 @@ requisite theoretical framework to accommodate them. Recontextualized
 through TEP, these isolated findings form a coherent pattern of empirical
 support:
 
-**GPS One-Way Light Speed Asymmetry.** Kelly (2009), in a
-peer-reviewed analysis of GPS timing, demonstrated that one-way light
-signals circumnavigating Earth eastward take 414.8 nanoseconds longer than
-westward signals at the equator—measuring c − v eastward and c + v westward
-relative to Earth's surface. Standard frameworks dismiss this as a
-"Sagnac correction" requiring no physical interpretation. TEP reinterprets
-this as an operational precursor to the search for residual synchronization holonomy: the path-dependent
-accumulation of proper time around closed loops in a rotating frame with
-dynamical temporal geometry (Section 6.3.3). In standard relativity this is absorbed as the Sagnac correction. In TEP, such effects motivate the search for residual synchronization holonomy after the full GR, kinematic, clock-scale, and reference-frame model has been subtracted. The existing Sagnac-scale observation is therefore not counted as direct TEP evidence, but as an operational precursor to the closed-loop triangle tests.
+**GPS One-Way Propagation and the Synchronization Problem.**
+Kelly (2009), in a peer-reviewed analysis of GPS timing, demonstrated that
+one-way light signals circumnavigating Earth eastward take 414.8
+nanoseconds longer than westward signals at the equator—measuring c − v
+eastward and c + v westward relative to Earth's surface. The Sagnac
+effect demonstrates operationally that extended synchronization is
+geometry- and frame-dependent: eastward and westward propagation times
+around a rotating Earth are unequal before the standard rotational
+correction is applied. This known GR effect is not itself evidence for
+TEP. Instead, it illustrates why a genuine TEP test must construct a
+residual closed-loop observable after subtracting the modeled Sagnac,
+Shapiro, gravitational-redshift and gravitomagnetic contributions. Any
+remaining non-zero residual would probe non-exact temporal transport
+beyond the standard model (Section 6.3.3).
 
 **SLR Network Time Biases.** Exertier et al. (2017) identified
 systematic time biases of 3–4 nanoseconds (1σ) across 25 Satellite Laser
@@ -351,7 +360,10 @@ special relativity)
 
 Breakdown of the equivalence principle in laboratory tests (universal
 coupling ensures the weak equivalence principle is preserved exactly;
-the Nordtvedt parameter η ~ 4 × 10⁻⁶ is well below LLR bounds)
+the TEP-predicted Nordtvedt parameter
+$\eta_{\mathrm{resid}} = -3.91 \times 10^{-4}$ from the residual-channel
+LLR analysis (Paper 17) is consistent with direct-fit LLR bounds
+$|\eta| < 4.4 \times 10^{-4}$, Williams et al. 2004)
 
 Modification of light or gravitational wave propagation speeds (GW170817
 constrains |c<sub>γ</sub> − c<sub>g</sub>|/c ≲ 10⁻¹⁵; TEP satisfies this
@@ -727,7 +739,7 @@ accumulation. The coupling strength is parameterized by β_A ~ 10<sup>−3</sup>
 weak enough to evade existing constraints yet strong enough to produce
 observable GNSS correlations. The scalar field obeys a Klein-Gordon equation
 with source terms from matter density and a screening potential V(φ) that,
-in concert with derivative self-interactions, suppresses fifth forces in
+in concert with derivative self-interactions, suppresses Temporal Shear in
 dense environments through the continuous flattening of the φ-field spatial
 profile. (Full action and field equations are provided in Appendix A.)
 
@@ -743,9 +755,9 @@ c<sub>g</sub> = c<sub>γ</sub> within GW170817 bounds (|c<sub>g</sub> −
 c<sub>γ</sub>|/c ≲ 10<sup>−15</sup>), constraining B(φ) to be negligible at
 late times. The fourth (screening) states that rather than operating via
 discrete boundary cutoffs, screening manifests as a continuous spatial
-profile (Temporal Topology), with fifth-force suppression arising from
+profile (Temporal Topology), with Temporal Shear suppression arising from
 the non-linear superposition of field gradients (Temporal Shear), suppressing
-fifth forces in dense environments while leaving cosmology accessible to dynamics.
+Temporal Shear in dense environments while leaving cosmology accessible to dynamics.
 
 ## 4.4 Candidate Theoretical Completions
 
@@ -1078,7 +1090,7 @@ $r_V^{\text{NS}} \sim \left(\frac{GM_{\text{NS}}}{\Lambda^3}\right)^{1/3}
 This screening radius far exceeds the neutron star radius (R<sub>NS</sub> ~
 10 km) and encompasses the binary orbit (a ~ 10<sup>6</sup> km for PSR
 B1913+16). Within r<sub>V</sub>, the scalar field is strongly screened,
-suppressing fifth-force contributions by factors of
+suppressing Temporal Shear contributions by factors of
 (R<sub>NS</sub>/r<sub>V</sub>)<sup>3</sup> ~ 10<sup>−9</sup>. The residual
 TEP effects on orbital dynamics are therefore below the 0.05% observational
 precision, rendering binary pulsar tests insensitive to the conformal
@@ -1372,7 +1384,7 @@ $\mathcal{A}_{ij} =
 + \underbrace{\mathcal{A}^{(\alpha,\text{dyn})}_{ij}}_{\text{Shear Noise}}$
 
 Standard analyses attribute the sum of the first two terms to total mass.
-TEP identifies the second term as Phantom Mass—a geometric effect of the
+TEP identifies the second term as the coherent optical component of Phantom Mass—a geometric effect of the
 scalar field's refractive gradient rather than particulate matter.
 
 Order-of-magnitude estimates support this mechanism. For a coupling strength
@@ -1833,7 +1845,7 @@ This integrated manuscript synthesizes results from a systematic research progra
 
 The theoretical framework (Paper 0) established pre-specified expectations and theoretical search ranges before any empirical analysis: correlation length λ = 1,000–10,000 km, exponential spatial decay, velocity-dependent anisotropy, and absence of GM/r² scaling. These forecasts have been confirmed across multiple independent measurement technologies. The detection of matching TEP-band spectral concentration and distance-structured correlations in Satellite Laser Ranging (Paper 8) strongly constrains "clock-artifact" hypotheses, as SLR utilizes passive retroreflectors and optical-domain propagation entirely orthogonal to microwave GNSS L-band systems.
 
-Paper 11 (Hubble Tension) demonstrates the theory's explanatory power at cosmological scales. By identifying a systematic, environment-dependent period-contraction bias in Cepheid variable stars, the framework unifies local and early-universe measurements of H₀, reducing the long-standing 5σ tension to a negligible 0.6σ. This resolution uses a Cepheid response coefficient κ<sub>Cep</sub> ∼ 10⁶ that is numerically consistent with the spin-down excess detected in globular cluster pulsars (Paper 10), establishing cross-probe consistency between astrophysical and local timing observables.
+Paper 11 (Hubble Tension) demonstrates the theory's explanatory power at cosmological scales. By identifying a systematic, environment-dependent period-contraction bias in Cepheid variable stars, the framework unifies the local distance-ladder and CMB-inferred observational scales of H₀, reducing the long-standing 5σ tension to a negligible 0.6σ. This resolution uses a Cepheid response coefficient κ<sub>Cep</sub> ∼ 10⁶ that is numerically consistent with the spin-down excess detected in globular cluster pulsars (Paper 10), establishing cross-probe consistency between astrophysical and local timing observables.
 
 Nine convergent signatures support the Temporal Topology interpretation:
 (1) exponential spatial decay (λ ≈ 4,200 km), (2) spatial anisotropy
@@ -1994,7 +2006,7 @@ Riess, A. G. et al. (2022). A comprehensive measurement of the local value of th
 
 Santamaria-Gomez, A., Ray, J. & Collilieux, X. (2017). GNSS related periodic signals in coordinate time-series from Precise Point Positioning. *Geophysical Journal International* 208(3), 1449–1462. DOI: [10.1093/gji/ggw454](https://doi.org/10.1093/gji/ggw454)
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.11 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
 
@@ -2125,7 +2137,7 @@ For a spherically symmetric source of mass M, the scalar field profile in the Va
 
 $\phi(r) \sim \frac{\beta_A M_{\text{Pl}}}{M_{\text{Pl}}^2} \frac{GM}{r} \left(\frac{r}{r_V}\right)^3$
 
-This suppresses the fifth force by a factor of (r/r<sub>V</sub>)<sup>3</sup> inside the screening radius, reconciling weak-field cosmological behavior with strong-field solar system constraints. Other completions (e.g., chameleon mechanisms, symmetry-breaking potentials) may produce similar phenomenology.
+This suppresses the Temporal Shear by a factor of (r/r<sub>V</sub>)<sup>3</sup> inside the screening radius, reconciling weak-field cosmological behavior with strong-field solar system constraints. Other completions (e.g., chameleon mechanisms, symmetry-breaking potentials) may produce similar phenomenology.
 
 ## A.4 Conservation Laws
 

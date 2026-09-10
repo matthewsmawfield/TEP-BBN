@@ -334,6 +334,17 @@ table th {
     text-align: left;
 }
 
+sup a[href^="#ref"] {
+    font-size: 0.75em;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--blue-accent, #2a5a8e);
+}
+
+sup a[href^="#ref"]:hover {
+    text-decoration: underline;
+}
+
 code,
 pre {
     font-family: "Courier New", Courier, monospace;

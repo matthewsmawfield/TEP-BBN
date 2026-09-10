@@ -4,7 +4,8 @@
     "log_N_HI": 17.362,
     "N_HI_source": "Zavarygin et al. 2018, Table 5",
     "z_abs": 2.5042,
-    "dv_target_kms": 81.6,
+    "dv_observed_kms": 78.9,
+    "dv_observed_note": "Cloud kinematic velocity (fitted nuisance parameter), NOT a TEP target. The -81.6 km/s offset is explained by the velocity-selection theorem (Gate 6-I).",
     "Gamma": 1e-12,
     "Gamma_source": "Haardt & Madau 2012",
     "alpha_rec": 2.6e-13,
@@ -27,7 +28,7 @@
       "x_HI": 0.003113678123018228,
       "n_H_cm3": 0.011975685088531642,
       "dv_conf_kms": 5.3376806855815876e-05,
-      "A_env": 1528753.8690806672
+      "A_env_descriptive": 1478170.1013537333
     },
     {
       "R_kpc": 10,
@@ -35,7 +36,7 @@
       "x_HI": 0.0009846314769375551,
       "n_H_cm3": 0.0037870441420675195,
       "dv_conf_kms": 0.0016879228389126897,
-      "A_env": 48343.44208089768
+      "A_env_descriptive": 46743.84289439739
     },
     {
       "R_kpc": 30,
@@ -43,7 +44,7 @@
       "x_HI": 0.0005684772482624763,
       "n_H_cm3": 0.002186450954855678,
       "dv_conf_kms": 0.008770704348758025,
-      "A_env": 9303.699766319789
+      "A_env_descriptive": 8995.856759345972
     },
     {
       "R_kpc": 100,
@@ -51,7 +52,7 @@
       "x_HI": 0.00031136781230182276,
       "n_H_cm3": 0.0011975685088531642,
       "dv_conf_kms": 0.053376806855815875,
-      "A_env": 1528.753869080667
+      "A_env_descriptive": 1478.1701013537333
     },
     {
       "R_kpc": 300,
@@ -59,25 +60,26 @@
       "x_HI": 0.00017976829024944223,
       "n_H_cm3": 0.0006914165009593933,
       "dv_conf_kms": 0.2773540242601917,
-      "A_env": 294.20881927946834
+      "A_env_descriptive": 284.47396864154473
     }
   ],
   "4B_gate_status": {
     "conformal_sign": "PASSED",
     "conformal_sign_explanation": "Clock shift is purely conformal for static field; sign from \u03b2_A\u00b2 > 0 and core-edge geometry.",
-    "conformal_only_amplitude": "quantified, requires environmental operator",
-    "conformal_only_amplitude_explanation": "Poisson Green gives 0.0088 km/s. Full TEP metric includes disformal sector + S_\u03a3(E) by construction; conformal-only isolates one sector and is not expected to close amplitude alone. A_env \u2248 9e+03 is quantitative target for S_\u03a3(E) evaluation.",
-    "full_environmental_disformal_closure": "open calculation",
-    "full_closure_explanation": "First-principles derivation of A_env from S_\u03a3(E) in absorber regime is ongoing."
+    "conformal_only_amplitude": "quantified, below calibration floor",
+    "conformal_only_amplitude_explanation": "Poisson Green gives 0.0088 km/s. This is the signed conformal baseline, not an observed spectral shift. The conformal-only scale is far below the wavelength-calibration floor of present spectra and is not separately detectable. The -81.6 km/s clustering is explained by the velocity-selection theorem (Gate 6-I) as a selection effect.",
+    "disformal_clock": "dominant geometry-dependent contribution",
+    "disformal_clock_explanation": "The temporal-disformal channel (Gate 4B-IV) provides the dominant geometry-dependent contribution via the cosmological \u2202\u2080\u03c6, with the fitted free-H displacements (78.9, 76.0, 118.0 km/s) as the TEP targets. The decisive empirical test is the orphan population (Gate 6); the decisive theoretical calculation is the covariant H_T derivation."
   },
   "4B_reference_case": {
     "R_kpc": 30,
     "log_N_H": 20.607286912069977,
     "dv_conf_kms": 0.008770704348758025,
-    "A_env": 9303.699766319789,
-    "note": "R = 30 kpc is a model parameter, not a direct Q1009 observable."
+    "A_env_descriptive": 8995.856759345972,
+    "note": "R = 30 kpc is a model parameter, not a direct Q1009 observable. A_env_descriptive is the ratio of the observed offset to the TEP conformal prediction. It is NOT an amplification requirement."
   },
-  "4B_falsifiability": "The conformal/static branch sign theorem and amplitude quantification together convert the -82 km/s feature into a quantitative prediction: a first-principles evaluation of S_\u03a3(E) in the absorber regime must yield A_env \u2248 10^4 for physically motivated R. If it does not, the TEP absorber-field explanation is falsified.",
-  "4B_note_on_sign_vs_amplitude": "The clock shift \u0394ln A is purely conformal (since \u2202\u2080\u03c6 = 0 for a static field, the disformal term B(\u03c6)\u2207\u2080\u03c6\u2207\u2080\u03c6 = 0 for g\u2080\u2080). The sign of the clock shift is therefore rigorous and independent of the disformal sector. The mapping from clock shift to observed velocity (\u0394v_T = -c \u0394ln A in the conformal limit) may include disformal corrections to photon propagation through C_{T,\u2225}. The disformal corrections affect the magnitude of the velocity mapping, not the direction of the underlying clock deformation.",
-  "4B_correction_note": "This version corrects a critical error in the previous version which used log N_HI = 20.45 (from a different absorber). The correct Q1009+2956 value is log N_HI = 17.362 \u00b1 0.005 (Zavarygin et al. 2018, Table 5). The absorber is a Lyman Limit System, not a DLA. An ionisation correction is applied to derive the total gas column N_H to which the scalar actually couples."
+  "4B_falsifiability": "The decisive empirical test is the orphan population (Gate 6): the velocity-selection theorem predicts a population of ordinary H clouds at non-isotope offsets. If these orphans are found at the predicted rate, the TEP absorber-field interpretation is supported. If they are absent, it is falsified. The conformal sign theorem and amplitude quantification together predict a signed blueward baseline (~0.005 km/s), far below the calibration floor of present spectra but potentially detectable statistically across a large orphan sample.",
+  "4B_note_on_sign_vs_amplitude": "The clock shift \u0394ln A is purely conformal (since \u2202\u2080\u03c6 = 0 for a static field, the disformal term B(\u03c6)\u2207\u2080\u03c6\u2207\u2080\u03c6 = 0 for g\u2080\u2080). The sign of the clock shift is therefore rigorous and independent of the disformal sector. The temporal-disformal channel (Gate 4B-IV) provides the dominant geometry-dependent contribution via the cosmological \u2202\u2080\u03c6, with the fitted free-H displacements as the TEP targets.",
+  "4B_correction_note": "This version corrects a critical error in the previous version which used log N_HI = 20.45 (from a different absorber). The correct Q1009+2956 value is log N_HI = 17.362 \u00b1 0.005 (Zavarygin et al. 2018, Table 5). The absorber is a Lyman Limit System, not a DLA. An ionisation correction is applied to derive the total gas column N_H to which the scalar actually couples.",
+  "4B_target_reframing": "The ratio A_env \u2248 10^4 is a conditional diagnostic: if the full fitted free-H displacement is attributed to TEP rather than ordinary gas kinematics, it measures the additional non-conformal contribution required relative to the conformal baseline. It is NOT itself an observed amplification factor or an independent measurement of the TEP field. The -81.6 km/s clustering is explained by the velocity-selection theorem (Gate 6-I) as a selection effect. The decisive empirical test is the orphan population (Gate 6); the decisive theoretical calculation is the covariant H_T derivation from omega = -u.k."
 }

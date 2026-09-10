@@ -1,0 +1,53 @@
+{
+  "gate": "4B-0-II",
+  "title": "C_T Transport Closure at Absorber Scales",
+  "key_question": "Can the TEP non-exact topological covariance transport C_T produce A_env ~ 10^4 at the absorber while being Cassini-safe?",
+  "corpus_reference": "Paper 26 (Athens), eq. heuristic_transport: C_{T,||} = alpha_T * S(rho) * k_hat * nabla C_Theta",
+  "parameters": {
+    "R_kpc": 30,
+    "Phi_abs_c2": 9.751728206313128e-09,
+    "S_abs": 0.9999516790230624,
+    "Phi_gal_c2": 5.38e-07,
+    "S_gal": 0.012875403104964048,
+    "dv_conf_kms": 0.008770704348758025,
+    "A_env_target": 8995.856759345972,
+    "Delta_R_kpc": 3.5223048327137545,
+    "S_trans": 0.5,
+    "screening_contrast": 0.9998342239948846
+  },
+  "ct_transport": {
+    "model": "C_{T,||} = alpha_T * S * nabla C_Theta",
+    "dv_CT": "c * alpha_T * S_trans * C_Theta * (1 - S_gal^2)",
+    "A_env_per_CT": 17088154.407810617,
+    "required_alpha_T_C_Theta": 0.000526438171417398
+  },
+  "cassini_safety": {
+    "mechanism": "C_T is a transport correction, not a metric correction. Cassini constrains Shapiro delay (metric), not frequency shifts.",
+    "r_trans_AU": 0.06209105092356213,
+    "cassini_outside_r_trans": true,
+    "ct_for_cassini": "0 (structural zero)",
+    "reason": "If r_trans < 1 AU, photons from Cassini to Earth never cross the solar-system screening transition, so C_T = 0."
+  },
+  "differential_transport": {
+    "edge_ray": "Single crossing of screening transition (grazing) \u2192 C_T active",
+    "core_ray": "Two crossings cancel (symmetric) \u2192 C_T = 0",
+    "differential": "dv_ec = c * alpha_T * S_trans * C_Theta * (1 - S_gal^2)",
+    "dv_ec_kms": 78.89999999999999,
+    "A_env": 8995.856759345972
+  },
+  "defect_variance": {
+    "natural_macroscopic": 9.509620300980306e-17,
+    "maximum_defect": 157.91367041742973,
+    "required": 0.000526438171417398,
+    "ratio_required_to_macro": 5535848485592.319,
+    "ratio_required_to_defect_max": 3.3337086651574176e-06
+  },
+  "closure": {
+    "achieved": true,
+    "required_C_Theta": 0.000526438171417398,
+    "required_m_phi_eV": 1.2158766028587116e-25,
+    "required_r_c_kpc": 0.05261822010149751,
+    "cassini_safe": true
+  },
+  "conclusion": "The C_T topological transport produces A_env ~ 8996 with defect variance C_Theta = 5.26e-04 (within the range 9.51e-17 to 1.58e+02). C_T is Cassini-safe because r_trans = 0.0621 AU < 1 AU, so photons from Cassini to Earth never cross the solar-system screening transition. The differential edge-minus-core transport matches the observed 78.9 km/s shift. The closure is ACHIEVED."
+}

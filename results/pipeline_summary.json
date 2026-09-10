@@ -1,12 +1,12 @@
 {
   "pipeline_run": {
-    "timestamp": "2026-08-30T11:27:44.389574",
+    "timestamp": "2026-09-10T15:01:56.306971",
     "sightline": "Q1009+2956",
-    "mode": "quick",
-    "total_steps": 13,
+    "mode": "full",
+    "total_steps": 14,
     "completed": 13,
     "failed": 0,
-    "skipped": 0,
+    "skipped": 1,
     "all_passed": true
   },
   "step_results": {
@@ -21,64 +21,70 @@
       "step_07_global_opacity",
       "step_08_light_elements",
       "step_09_disformal_transport",
+      "step_04h_disformal_clock",
       "step_09b_screening_plot",
-      "secondary_analyses",
       "finalize_manuscript_numbers"
     ],
     "failed": [],
-    "skipped": []
+    "skipped": [
+      "secondary_analyses"
+    ]
   },
   "step_timings": {
     "step_01_embedding": {
-      "elapsed": 0.5568251609802246,
+      "elapsed": 0.594965934753418,
       "status": "OK"
     },
     "step_02_q1009": {
-      "elapsed": 176.93007802963257,
+      "elapsed": 139.36893010139465,
       "status": "OK"
     },
     "step_03_significance": {
-      "elapsed": 334.00956296920776,
+      "elapsed": 1759.2296028137207,
       "status": "OK"
     },
     "step_04_prior": {
-      "elapsed": 0.48663806915283203,
+      "elapsed": 0.4108877182006836,
       "status": "OK"
     },
     "step_04b_amplitude": {
-      "elapsed": 0.004774808883666992,
+      "elapsed": 0.0049419403076171875,
       "status": "OK"
     },
     "step_05_thermodynamics": {
-      "elapsed": 0.024603843688964844,
+      "elapsed": 0.019183874130249023,
       "status": "OK"
     },
     "step_06_helium": {
-      "elapsed": 0.7187299728393555,
+      "elapsed": 0.6134259700775146,
       "status": "OK"
     },
     "step_07_global_opacity": {
-      "elapsed": 0.02921295166015625,
+      "elapsed": 0.018148183822631836,
       "status": "OK"
     },
     "step_08_light_elements": {
-      "elapsed": 0.4818379878997803,
+      "elapsed": 0.3346741199493408,
       "status": "OK"
     },
     "step_09_disformal_transport": {
-      "elapsed": 0.13193702697753906,
+      "elapsed": 0.0038509368896484375,
+      "status": "OK"
+    },
+    "step_04h_disformal_clock": {
+      "elapsed": 0.006349086761474609,
       "status": "OK"
     },
     "step_09b_screening_plot": {
-      "elapsed": 0.6775341033935547,
+      "elapsed": 0.4385511875152588,
       "status": "OK"
     },
     "secondary_analyses": {
-      "elapsed": 2664.4038832187653,
-      "status": "OK"
+      "elapsed": 0,
+      "status": "SKIPPED"
     },
     "finalize_manuscript_numbers": {
-      "elapsed": 0.1629021167755127,
+      "elapsed": 0.053164005279541016,
       "status": "OK"
     }
   },
@@ -120,7 +126,7 @@
       ]
     },
     "gate2_parameter_ledger.json": {
-      "size_bytes": 18468,
+      "size_bytes": 18811,
       "keys": [
         "manifest",
         "statistic_definition",
@@ -134,7 +140,7 @@
       ]
     },
     "gate3_c2_mc_calibration.json": {
-      "size_bytes": 350,
+      "size_bytes": 356,
       "keys": [
         "sightline",
         "analysis",
@@ -150,7 +156,7 @@
       ]
     },
     "gate3_c2_scaffold_freedom.json": {
-      "size_bytes": 365,
+      "size_bytes": 368,
       "keys": [
         "sightline",
         "analysis",
@@ -164,7 +170,7 @@
       ]
     },
     "gate3_c3_perturbed_mc.json": {
-      "size_bytes": 21219,
+      "size_bytes": 418014,
       "keys": [
         "sightline",
         "analysis",
@@ -180,7 +186,7 @@
       ]
     },
     "gate3_c4_kinematic.json": {
-      "size_bytes": 604,
+      "size_bytes": 608,
       "keys": [
         "sightline",
         "analysis",
@@ -202,7 +208,7 @@
       ]
     },
     "gate3_significance.json": {
-      "size_bytes": 328413,
+      "size_bytes": 329061,
       "keys": [
         "sightline",
         "parent_window_mode",
@@ -225,7 +231,7 @@
       ]
     },
     "gate3_significance_physical.json": {
-      "size_bytes": 68002,
+      "size_bytes": 329067,
       "keys": [
         "sightline",
         "parent_window_mode",
@@ -258,6 +264,75 @@
         "symbolic_relations"
       ]
     },
+    "gate4b0_cavity_loop_profile.json": {
+      "size_bytes": 55128,
+      "keys": [
+        "gate",
+        "title",
+        "description",
+        "observable_separation",
+        "absorber_params",
+        "cavity_results",
+        "loop_results",
+        "key_result",
+        "profiles"
+      ]
+    },
+    "gate4b_0_ct_closure.json": {
+      "size_bytes": 2564,
+      "keys": [
+        "gate",
+        "title",
+        "key_question",
+        "corpus_reference",
+        "parameters",
+        "ct_transport",
+        "cassini_safety",
+        "differential_transport",
+        "defect_variance",
+        "closure",
+        "conclusion"
+      ]
+    },
+    "gate4b_0_differential_transport.json": {
+      "size_bytes": 3283,
+      "keys": [
+        "gate",
+        "title",
+        "key_question",
+        "absorber_params",
+        "conformal_differential",
+        "disformal_transport",
+        "constraints",
+        "screening_contrast",
+        "B_enhancement_at_transition",
+        "conclusion"
+      ]
+    },
+    "gate4b_0_honest_transport.json": {
+      "size_bytes": 74487,
+      "keys": [
+        "gate",
+        "title",
+        "status",
+        "framing",
+        "action",
+        "key_physics",
+        "confirmed_predictions",
+        "cassini_control",
+        "absorber_results_sample",
+        "three_sightline_comparison",
+        "outcome",
+        "max_dv_kms",
+        "max_dv_screened_kms",
+        "reaches_10_kms",
+        "reaches_80_kms",
+        "cassini_pass_screened",
+        "cassini_pass_unscreened",
+        "any_cassini_pass",
+        "conclusion"
+      ]
+    },
     "gate4b_amplitude.json": {
       "size_bytes": 4324,
       "keys": [
@@ -273,7 +348,7 @@
       ]
     },
     "gate4b_closure.json": {
-      "size_bytes": 2177,
+      "size_bytes": 2281,
       "keys": [
         "gate4b_status",
         "screening_params",
@@ -281,6 +356,27 @@
         "perturbative_disformal",
         "non_perturbative_gap",
         "gradient_check"
+      ]
+    },
+    "gate4b_disformal_clock.json": {
+      "size_bytes": 8887,
+      "keys": [
+        "gate",
+        "title",
+        "status",
+        "theory",
+        "mechanism",
+        "key_formula",
+        "cosmological_field",
+        "absorber_params",
+        "conformal_reference",
+        "field_dependence_scan",
+        "n2_v011_weak_field",
+        "n5_minimal_viable",
+        "three_sightline_n5",
+        "environmental_discrimination",
+        "relationship_to_step_04g",
+        "conclusion"
       ]
     },
     "gate4b_edge_calculation.json": {
@@ -313,7 +409,7 @@
       ]
     },
     "gate4b_screening_plot.json": {
-      "size_bytes": 368,
+      "size_bytes": 384,
       "keys": [
         "Phi_half",
         "n",
@@ -338,6 +434,18 @@
         "symbolic_proof"
       ]
     },
+    "gate6_archival_search.json": {
+      "size_bytes": 2329,
+      "keys": [
+        "gate",
+        "title",
+        "data_sources",
+        "n_sightlines_searched",
+        "n_usable",
+        "n_orphan_candidates",
+        "sightlines"
+      ]
+    },
     "gate6_helium_results.json": {
       "size_bytes": 544,
       "keys": [
@@ -345,8 +453,18 @@
         "simulations"
       ]
     },
+    "gate6_orphan_search.json": {
+      "size_bytes": 7844,
+      "keys": [
+        "gate",
+        "title",
+        "search_parameters",
+        "sightlines",
+        "summary"
+      ]
+    },
     "gate6_population_prediction.json": {
-      "size_bytes": 2417,
+      "size_bytes": 2440,
       "keys": [
         "gate",
         "title",
@@ -360,7 +478,7 @@
       ]
     },
     "gate8_calibration_J13320052.json": {
-      "size_bytes": 929,
+      "size_bytes": 937,
       "keys": [
         "gate",
         "sightline",
@@ -374,7 +492,7 @@
       ]
     },
     "gate8_calibration_PKS1937101.json": {
-      "size_bytes": 933,
+      "size_bytes": 937,
       "keys": [
         "gate",
         "sightline",
@@ -388,7 +506,7 @@
       ]
     },
     "gate8_calibration_Q10092956.json": {
-      "size_bytes": 932,
+      "size_bytes": 947,
       "keys": [
         "gate",
         "sightline",
@@ -402,7 +520,7 @@
       ]
     },
     "gate8_evidence.json": {
-      "size_bytes": 4155,
+      "size_bytes": 4472,
       "keys": [
         "gate",
         "title",
@@ -424,8 +542,19 @@
         "simulations"
       ]
     },
+    "gate8_wavelength_systematics.json": {
+      "size_bytes": 2605,
+      "keys": [
+        "gate",
+        "description",
+        "method",
+        "source_files",
+        "n_mc",
+        "results"
+      ]
+    },
     "gate_j13322_parameter_ledger.json": {
-      "size_bytes": 15485,
+      "size_bytes": 23906,
       "keys": [
         "manifest",
         "statistic_definition",
@@ -439,7 +568,30 @@
       ]
     },
     "gate_j13323_significance.json": {
-      "size_bytes": 327422,
+      "size_bytes": 326767,
+      "keys": [
+        "sightline",
+        "parent_window_mode",
+        "parent_window_kms",
+        "T_obs",
+        "T_obs_parent_best",
+        "N_sims",
+        "exceedances_standard",
+        "exceedances_standard_fair",
+        "p_add_one",
+        "p_add_one_standard_fair",
+        "exceedances_parent",
+        "p_add_one_parent",
+        "binom_95_upper",
+        "binom_95_upper_standard",
+        "binom_95_upper_parent",
+        "leave_one_out",
+        "parent_reassignment",
+        "simulations"
+      ]
+    },
+    "gate_j13323_significance_physical.json": {
+      "size_bytes": 326781,
       "keys": [
         "sightline",
         "parent_window_mode",
@@ -462,7 +614,7 @@
       ]
     },
     "gate_pks19372_parameter_ledger.json": {
-      "size_bytes": 15578,
+      "size_bytes": 15691,
       "keys": [
         "manifest",
         "statistic_definition",
@@ -476,7 +628,30 @@
       ]
     },
     "gate_pks19373_significance.json": {
-      "size_bytes": 329793,
+      "size_bytes": 326874,
+      "keys": [
+        "sightline",
+        "parent_window_mode",
+        "parent_window_kms",
+        "T_obs",
+        "T_obs_parent_best",
+        "N_sims",
+        "exceedances_standard",
+        "exceedances_standard_fair",
+        "p_add_one",
+        "p_add_one_standard_fair",
+        "exceedances_parent",
+        "p_add_one_parent",
+        "binom_95_upper",
+        "binom_95_upper_standard",
+        "binom_95_upper_parent",
+        "leave_one_out",
+        "parent_reassignment",
+        "simulations"
+      ]
+    },
+    "gate_pks19373_significance_physical.json": {
+      "size_bytes": 326805,
       "keys": [
         "sightline",
         "parent_window_mode",
@@ -513,6 +688,14 @@
         "method"
       ]
     },
+    "kodiaq_orphan_null_test.json": {
+      "size_bytes": 1836,
+      "keys": "<list>"
+    },
+    "kodiaq_orphan_search_pilot.json": {
+      "size_bytes": 660,
+      "keys": "<list>"
+    },
     "quick_gate3_significance.json": {
       "size_bytes": 19146,
       "keys": [
@@ -537,7 +720,7 @@
       ]
     },
     "secondary_analyses_summary.json": {
-      "size_bytes": 174,
+      "size_bytes": 176,
       "keys": [
         "sightline",
         "n_sims_c3",
@@ -562,12 +745,12 @@
       ]
     },
     "tep_bbn_summary.json": {
-      "size_bytes": 606,
+      "size_bytes": 618,
       "keys": [
         "T_OBS",
         "T_PARENT",
-        "P_PARENT",
         "P_STD",
+        "P_PARENT",
         "T_LYA",
         "DLNL",
         "DAIC",
@@ -583,13 +766,15 @@
         "EXC_STD_PKS",
         "EXC_PARENT_PKS",
         "BINOM95_PKS",
+        "N_SIMS_PKS",
         "T_OBS_J1332",
         "T_PARENT_J1332",
         "P_STD_J1332",
         "P_PARENT_J1332",
         "EXC_STD_J1332",
         "EXC_PARENT_J1332",
-        "BINOM95_J1332"
+        "BINOM95_J1332",
+        "N_SIMS_J1332"
       ]
     }
   }

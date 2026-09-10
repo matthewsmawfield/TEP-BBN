@@ -37,7 +37,7 @@ from scripts.lib.residual_engine import (
 from scripts.lib.doppler_physics import compute_doppler_b
 
 
-def run_gate8_calibration(sightline="Q1009+2956", n_sims=200):
+def run_gate8_calibration(sightline="Q1009+2956", n_sims=1000):
     setup_step_logger(Path(__file__).stem)
     print_status(f"=== GATE 8 CALIBRATION: {sightline} ===", "SUCCESS")
 
@@ -394,6 +394,6 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--sightline", default="Q1009+2956")
-    parser.add_argument("--n-sims", type=int, default=200)
+    parser.add_argument("--n-sims", type=int, default=1000)
     args = parser.parse_args()
     run_gate8_calibration(args.sightline, args.n_sims)

@@ -1,0 +1,335 @@
+{
+  "gate": "4B-IV",
+  "title": "Disformal Clock Mechanism \u2014 Cosmological \u2202\u2080\u03c6 Channel",
+  "status": "CONSTRAINED NEAR-CLOSURE",
+  "theory": "v0.11 Jakarta",
+  "mechanism": "The disformal matter metric g\u0303\u2080\u2080 = A\u00b2g\u2080\u2080 + B(\u03c6)(\u2202\u2080\u03c6)\u00b2 contains a temporal disformal term activated by the cosmological time derivative \u2202\u2080\u03c6 = M_Pl \u00d7 H(z), required by the v0.11 cosmological architecture 1+z = A\u2080/A_em. The static-field calculation (step_04g) correctly found zero disformal frequency shift for \u2202\u2080\u03c6 = 0. The cosmological \u2202\u2080\u03c6 \u2260 0 activates the disformal g\u0303\u2080\u2080 term, providing the dominant geometry-dependent contribution to the TEP velocity shift.",
+  "key_formula": {
+    "disformal_clock_shift_linearized": "\u0394(d\u03c4/dt) = [B(\u03c6_core) - B(\u03c6_edge)] \u00d7 (\u2202\u2080\u03c6)\u00b2 / (2A)  [assumes B\u00b7\u03c6\u0307\u00b2/A\u00b2 \u226a 1]",
+    "exact_lapse": "N\u00b2(\u03c6) = A\u00b2 - B(\u03c6)\u00b7(\u2202\u2080\u03c6)\u00b2,  \u0394_ec = (1/2) ln[N_edge\u00b2/N_core\u00b2]  [exact, no linearization]",
+    "B_expansion": "B(\u03c6_core) - B(\u03c6_edge) \u2248 n B\u2080 (\u03c6_abs/M_Pl)^(n-1) \u00d7 \u0394(\u03b4\u03c6/M_Pl)",
+    "velocity_shift_linearized": "|\u0394v|/c = (n/2) \u00d7 B\u2080 \u00d7 (\u03c6_abs/M_Pl)^(n-1) \u00d7 \u0394(\u03b4\u03c6/M_Pl) \u00d7 (M_Pl\u00d7H)\u00b2 / A\u00b2  [linearized]",
+    "cosmological_derivative": "\u2202\u2080\u03c6 = M_Pl \u00d7 H(z)  [from 1+z = exp(|\u03b2_A|\u03c6/M_Pl)]",
+    "cassini_constraint": "\u03b3_dis = B(\u03c6_sun) \u00d7 (\u2202_r\u03c6_sun)\u00b2 / (2U_sun)  [correct TEP screened Poisson]",
+    "lorentzian_condition": "N\u00b2 > 0  \u27fa  B(\u03c6)\u00b7(\u2202\u2080\u03c6)\u00b2 < A\u00b2  \u27fa  I = 1 - B\u00b7\u03c6\u0307\u00b2/A\u00b2 > 0"
+  },
+  "linearization_validity_audit": [
+    {
+      "n": 2,
+      "B0_lin": 5950333613865.288,
+      "B_bar": 9356431448019.334,
+      "u": 20686.60799817366,
+      "I": -20685.60799817366,
+      "linearization_valid": false
+    },
+    {
+      "n": 3,
+      "B0_lin": 3163483652597.63,
+      "B_bar": 6237620965346.223,
+      "u": 13791.07199878244,
+      "I": -13790.07199878244,
+      "linearization_valid": false
+    },
+    {
+      "n": 4,
+      "B0_lin": 1892092637721.9565,
+      "B_bar": 4678215724009.666,
+      "u": 10343.30399908683,
+      "I": -10342.30399908683,
+      "linearization_valid": false
+    },
+    {
+      "n": 5,
+      "B0_lin": 1207112982308.0037,
+      "B_bar": 3742572579207.7334,
+      "u": 8274.643199269463,
+      "I": -8273.643199269463,
+      "linearization_valid": false
+    },
+    {
+      "n": 6,
+      "B0_lin": 802199177847.6848,
+      "B_bar": 3118810482673.112,
+      "u": 6895.535999391222,
+      "I": -6894.535999391222,
+      "linearization_valid": false
+    }
+  ],
+  "exact_lapse_scan": [
+    {
+      "n": 2,
+      "B0_lin": 5950333613865.288,
+      "B0_exact": 287627917.85259056,
+      "ratio_lin_over_exact": 20687.60799817366,
+      "u": 0.9999516618837669,
+      "I": 4.83381162330745e-05,
+      "dv_check_kms": 78.90000182157019,
+      "B_phi_sun": 1.4662000964718465e-11,
+      "gamma_dis": 0.08389997860005238,
+      "cassini_pass": false,
+      "has_solution": true
+    },
+    {
+      "n": 3,
+      "B0_lin": 3163483652597.63,
+      "B0_exact": 229369717.10102013,
+      "ratio_lin_over_exact": 13792.071998782441,
+      "u": 0.9999274945780382,
+      "I": 7.250542196185457e-05,
+      "dv_check_kms": 78.90000182157019,
+      "B_phi_sun": 2.639850839336065e-21,
+      "gamma_dis": 1.510594832591999e-11,
+      "cassini_pass": true,
+      "has_solution": true
+    },
+    {
+      "n": 4,
+      "B0_lin": 1892092637721.9565,
+      "B0_exact": 182911546.09232157,
+      "ratio_lin_over_exact": 10344.303999086827,
+      "u": 0.9999033284404549,
+      "I": 9.66715595450673e-05,
+      "dv_check_kms": 78.90000182157019,
+      "B_phi_sun": 4.7529750371611235e-31,
+      "gamma_dis": 2.7197822784487764e-21,
+      "cassini_pass": true,
+      "has_solution": true
+    },
+    {
+      "n": 5,
+      "B0_lin": 1207112982308.0037,
+      "B0_exact": 145863342.97430345,
+      "ratio_lin_over_exact": 8275.643199269463,
+      "u": 0.9998791634709326,
+      "I": 0.00012083652906740536,
+      "dv_check_kms": 78.90000182157019,
+      "B_phi_sun": 8.557594005104259e-41,
+      "gamma_dis": 4.896889282874019e-31,
+      "cassini_pass": true,
+      "has_solution": true
+    },
+    {
+      "n": 6,
+      "B0_lin": 802199177847.6848,
+      "B0_exact": 116319146.00583501,
+      "ratio_lin_over_exact": 6896.535999391222,
+      "u": 0.9998549996693864,
+      "I": 0.00014500033061355338,
+      "dv_check_kms": 78.90000182157019,
+      "B_phi_sun": 1.5407700361647369e-50,
+      "gamma_dis": 8.816707444835826e-41,
+      "cassini_pass": true,
+      "has_solution": true
+    }
+  ],
+  "h_t_coordinate_audit": {
+    "einstein_frame": {
+      "formula": "N\u00b2 = A\u00b2 - B(\u03c6)\u00b7(\u2202\u2080\u03c6)\u00b2,  \u03c6\u0307 = M_Pl \u00d7 H_T",
+      "property": "Can cross Lorentzian boundary (near-critical branch exists)",
+      "near_critical_branch": "B\u2080 ~ 10\u2078 eV\u207b\u2074, I ~ 10\u207b\u2074 (near-critical)"
+    },
+    "matter_frame": {
+      "formula": "N\u00b2 = A\u00b2 / (1 + B(\u03c6)\u00b7M_Pl\u00b2\u00b7H_T\u00b2),  \u03c6\u0307 = M_Pl \u00d7 H_T \u00d7 N",
+      "property": "Always Lorentzian for positive B (no near-critical branch)",
+      "max_dv_kms": 0.0047675771691863275,
+      "conformal_prediction_kms": 0.004782689431753379,
+      "verdict": "Matter-frame formulation remains Lorentzian with a maximum shift ~0.005 km/s. The -81.6 km/s clustering is explained by the velocity-selection theorem (Gate 6-I) as a selection effect. The conformal-only scale is far below the wavelength-calibration floor of present spectra and is not separately detectable."
+    },
+    "status": "Temporal-disformal channel identified; transfer test constrains B(phi) form. The temporal-disformal channel provides the dominant geometry-dependent contribution, with the fitted free-H displacements (78.9, 76.0, 118.0 km/s) as the TEP targets. The -81.6 km/s clustering is explained by the velocity-selection theorem (Gate 6-I) as a selection effect. Diagnostic mode establishes algebraic feasibility; transfer mode shows the simple power-law B(phi) ~ phi^5 does not transfer across redshifts. The decisive empirical test is the orphan population (Gate 6); the decisive theoretical calculation is the covariant H_T derivation from omega = -u.k."
+  },
+  "cosmological_field": {
+    "z_abs": 2.5042,
+    "phi_abs_over_MPl": 1.2539622490708502,
+    "A_abs": 0.28537183950687744,
+    "H_z_kms_Mpc": 258.23132436307833,
+    "H_z_eV": 5.507707637581924e-33,
+    "dphi_0_eV2": 1.3418397008358715e-05,
+    "dphi_0_squared_eV4": 1.800533782739301e-10,
+    "M_Pl_eV": 2.436294351718687e+27,
+    "source": "1+z = A\u2080/A_em = exp(|\u03b2_A| \u03c6/M_Pl), v0.11 Jakarta"
+  },
+  "absorber_params": {
+    "log_N_HI": 17.362,
+    "N_HI_source": "Zavarygin et al. 2018, Table 5",
+    "R_kpc": 30,
+    "M_halo_Msun": 10000000000.0,
+    "Phi_halo_over_c2": 1.5952933394774448e-08,
+    "Delta_dphi_over_MPl": 1.5952933394774448e-08,
+    "S_Sigma_absorber": 0.999721376604219
+  },
+  "conformal_reference": {
+    "dv_conf_kms": 0.004782689431753379,
+    "A_env_descriptive": 16496.994238464387,
+    "A_env_note": "Conditional diagnostic: if the full fitted free-H displacement is attributed to TEP, this measures the additional non-conformal contribution required. Not itself an observed amplification factor. The -81.6 km/s clustering is explained by the velocity-selection theorem (Gate 6-I) as a selection effect."
+  },
+  "field_dependence_scan": [
+    {
+      "n": 2,
+      "B0_req": 5950333613865.288,
+      "gamma_dis": 1735.689868333042,
+      "cassini_pass": false,
+      "dc_dc": 3.542640006439381e-09,
+      "gw170817_pass": false,
+      "clock_earth": 7.715194819288488e-17,
+      "local_pass": true
+    },
+    {
+      "n": 3,
+      "B0_req": 3163483652597.63,
+      "gamma_dis": 2.0834232692097558e-07,
+      "cassini_pass": true,
+      "dc_dc": 1.874114612682448e-11,
+      "gw170817_pass": false,
+      "clock_earth": 5.742476277812012e-26,
+      "local_pass": true
+    },
+    {
+      "n": 4,
+      "B0_req": 1892092637721.9565,
+      "gamma_dis": 2.8134254699603165e-17,
+      "cassini_pass": true,
+      "dc_dc": 1.1153670065181178e-13,
+      "gw170817_pass": false,
+      "clock_earth": 4.808438269587233e-35,
+      "local_pass": true
+    },
+    {
+      "n": 5,
+      "B0_req": 1207112982308.0037,
+      "gamma_dis": 4.05249084913919e-27,
+      "cassini_pass": true,
+      "dc_dc": 7.08056907262362e-16,
+      "gw170817_pass": true,
+      "clock_earth": 4.2947471854987493e-44,
+      "local_pass": true
+    },
+    {
+      "n": 6,
+      "B0_req": 802199177847.6848,
+      "gamma_dis": 6.080474028941086e-37,
+      "cassini_pass": true,
+      "dc_dc": 4.6821713259712774e-18,
+      "gw170817_pass": true,
+      "clock_earth": 3.995764917411526e-53,
+      "local_pass": true
+    }
+  ],
+  "n2_v011_weak_field": {
+    "n": 2,
+    "B0_linearized_eVinv4": 5950333613865.288,
+    "B0_exact_eVinv4": 287627917.85259056,
+    "B_phi_sun_eVinv4": 1.4662000964718465e-11,
+    "delta_grr": 3.555477623467027e-07,
+    "gamma_dis": 0.08389997860005238,
+    "u_Bphi2_over_A2": 0.9999516618837669,
+    "I_invariant": 4.8338116233059836e-05,
+    "cassini_bound": 2.3e-05,
+    "cassini_pass": false,
+    "screening": "TEP screened Poisson (NOT thin-shell)",
+    "phi_sun_MPl_tep": 2.2577773046522604e-10,
+    "phi_sun_MPl_thinshell": 4.1988378092683477e-10,
+    "tep_to_thinshell_ratio": 0.5377148171021354,
+    "verdict": "EXCLUDED by Cassini (factor ~4e+03) even with exact lapse. v0.11 weak-field B \u221d \u03c6\u00b2 cannot close the gap. Exact B\u2080 = 2.88e+08 (vs linearized 5.95e+12), sits near Lorentzian boundary (I = 4.8e-05)."
+  },
+  "n5_minimal_viable": {
+    "n": 5,
+    "B0_linearized_eVinv4": 1207112982308.0037,
+    "B0_exact_eVinv4": 145863342.97430345,
+    "gamma_dis": 4.896889282874019e-31,
+    "u_Bphi2_over_A2": 0.9998791634709328,
+    "I_invariant": 0.00012083652906724751,
+    "cassini_bound": 2.3e-05,
+    "cassini_pass": true,
+    "cassini_margin": 4.696859306261696e+25,
+    "gw170817_dc_dc": 8.555913905578553e-20,
+    "gw170817_bound": 3e-15,
+    "gw170817_pass": true,
+    "local_clock_shift": 5.18962343117677e-48,
+    "local_pass": true,
+    "verdict": "ALL constraints PASS with exact lapse. B \u221d \u03c6\u2075 satisfies Cassini, GW170817, and local tests. Exact B\u2080 = 1.46e+08 (vs linearized 1.21e+12), near-critical (I = 1.2e-04)."
+  },
+  "three_sightline_n5": {
+    "B0_eVinv4": 145863342.97430345,
+    "B0_method": "exact_lapse_root_finding",
+    "n": 5,
+    "M_halo_Msun": 10000000000.0,
+    "R_kpc": 30,
+    "sightlines": [
+      {
+        "id": "Q1009+2956",
+        "z_abs": 2.5042,
+        "phi_cosmological_over_MPl": 1.2539622490708502,
+        "A": 0.28537183950687744,
+        "H_z_kms_Mpc": 2.7115466411674824e-37,
+        "u": 0.9998791634709326,
+        "I": 0.00012083652906735853,
+        "N_core_sq": 9.837985106548464e-06,
+        "N_edge_sq": 9.84316470201176e-06,
+        "lorentzian": true,
+        "dv_exact_kms": 78.90000182160345,
+        "dv_H_kms": 78.9,
+        "ratio": 1.0000000230874961
+      },
+      {
+        "id": "PKS1937-101",
+        "z_abs": 3.572,
+        "phi_cosmological_over_MPl": 1.5199507459325643,
+        "A": 0.21872265966754156,
+        "H_z_kms_Mpc": 3.9834937269055754e-37,
+        "u": 9.611730198149424,
+        "I": -8.611730198149424,
+        "N_core_sq": -0.4119817560020426,
+        "N_edge_sq": -0.41198173187132875,
+        "lorentzian": false,
+        "dv_exact_kms": null,
+        "dv_H_kms": 76.0,
+        "ratio": null
+      },
+      {
+        "id": "J1332+0052",
+        "z_abs": 3.421,
+        "phi_cosmological_over_MPl": 1.486365914844106,
+        "A": 0.22619316896629724,
+        "H_z_kms_Mpc": 3.792569034256008e-37,
+        "u": 7.285342706808512,
+        "I": -6.285342706808512,
+        "N_core_sq": -0.32157919681264757,
+        "N_edge_sq": -0.32157917680971027,
+        "lorentzian": false,
+        "dv_exact_kms": null,
+        "dv_H_kms": 118.0,
+        "ratio": null
+      }
+    ],
+    "diagnostic_mode": [
+      {
+        "id": "Q1009+2956",
+        "z_abs": 2.5042,
+        "dv_H_kms": 78.9,
+        "B0_diagnostic": 145863342.97430345,
+        "I_diagnostic": 0.00012083652906740536,
+        "lorentzian": true
+      },
+      {
+        "id": "PKS1937-101",
+        "z_abs": 3.572,
+        "dv_H_kms": 76.0,
+        "B0_diagnostic": 15173984.670329025,
+        "I_diagnostic": 0.00010349613506519861,
+        "lorentzian": true
+      },
+      {
+        "id": "J1332+0052",
+        "z_abs": 3.421,
+        "dv_H_kms": 118.0,
+        "B0_diagnostic": 20020115.149345774,
+        "I_diagnostic": 6.816710317934296e-05,
+        "lorentzian": true
+      }
+    ],
+    "verdict": "TEP targets are the fitted free-H displacements (78.9, 76.0, 118.0 km/s), NOT the 81.6 km/s isotope shift. The -81.6 km/s clustering is explained by the velocity-selection theorem (Gate 6-I). Diagnostic mode: each sightline individually Lorentzian (I > 0), establishing algebraic feasibility. Transfer mode: a single power-law B0 calibrated at z=2.5 does not transfer to z > 3.4 (signature change). The invariant I = 1 - beta(z)*B0 depends only on the cosmological background, not the halo environment. This constrains B(phi) to a more complex form than a pure power law. Predictive closure (not yet performed): a single frozen microscopic B(phi) with independently specified absorber environments must predict the three fitted displacements without using any observed velocity."
+  },
+  "environmental_discrimination": "TEP screening is NOT thin-shell chameleon screening. It is a continuous potential-depth modulation of the scalar source, producing temporal shear \u2014 a continuous topological temporal gradient. TEP effects are partially present in the Solar System (GNSS, LLR) through the CONFORMAL sector (\u03b1_eff ~ 10\u207b\u2074, clock shift ~ 10\u207b\u00b9\u2070). The DISFORMAL temporal term at the Sun is negligible (1.9e-22). The DISFORMAL spatial term at the Sun is the Cassini constraint. At the absorber, the temporal term dominates by ~10\u2076\u00d7 because \u2202\u2080\u03c6 = M_Pl\u00d7H(z) is large and unscreened, while \u2202_r\u03c6 is small. At the Sun, the spatial term dominates by ~10\u00b9\u2075\u00d7 because \u2202_r\u03c6 is large (solar potential) and \u2202\u2080\u03c6 = M_Pl\u00d7H\u2080 is tiny. Both terms share B\u2080. For n \u2265 5, the steeper B(\u03c6) suppresses the spatial term at the Sun sufficiently to satisfy Cassini.",
+  "relationship_to_step_04g": "step_04g (honest static-field transport) correctly found that the disformal frequency shift is exactly zero for a static field (\u2202\u2080\u03c6 = 0). This step (step_04h) extends the calculation to include the cosmological time derivative \u2202\u2080\u03c6 = M_Pl \u00d7 H(z), which is required by the v0.11 cosmological architecture 1+z = A\u2080/A_em. The static-field result is the conformal-only signed baseline; the temporal-disformal clock mechanism provides the dominant geometry-dependent contribution.",
+  "conclusion": "The disformal clock mechanism identifies the correct physics: the cosmological \u2202\u2080\u03c6 = M_Pl \u00d7 H(z) activates the disformal g\u0303\u2080\u2080 term, producing a blueward velocity shift of the correct sign. CRITICAL: the linearized clock formula (division by A\u00b2) is invalid by 10\u00b3-10\u2074\u00d7 (B\u00b7\u03c6\u0307\u00b2/A\u00b2 \u226b 1). The exact matter-metric lapse N\u00b2 = A\u00b2 - B(\u03c6)\u00b7(\u2202\u2080\u03c6)\u00b2 must be used. Solving the exact lapse equation by root-finding gives B\u2080 ~ 10\u2078 eV\u207b\u2074 (vs ~10\u00b9\u00b2 from the invalid linearization), sitting near the Lorentzian boundary (I = 1 - B\u00b7\u03c6\u0307\u00b2/A\u00b2 ~ 10\u207b\u2074). This is a near-critical nonlinear branch completely missed by the linearized code. For n=5, the exact-lapse B\u2080 = 1.46e+08 eV\u207b\u2074 satisfies Cassini (margin ~10\u2074\u00d7), GW170817, and local redshift constraints. The v0.11 weak-field B \u221d \u03c6\u00b2 (n=2) remains excluded by Cassini even with the exact lapse. The three-sightline test reveals that the single-B\u2080 near-critical branch does NOT transfer: at z > 3.4 the invariant I crosses zero (signature change), so the Q1009-calibrated B\u2080 cannot produce a Lorentzian solution at PKS1937 or J1332 with equal halo parameters. This is a failure of the simple power-law transfer ansatz, not a falsification of the temporal-disformal channel. Resolution requires varying halo masses, z-dependent screening, or a more complex B(\u03c6). Predictive closure (not yet performed): a single frozen microscopic B(\u03c6) with independently specified absorber environments must predict the three fitted displacements without using any observed velocity."
+}

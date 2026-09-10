@@ -929,7 +929,7 @@ The causal matter-frame universe is curvature-regular at the temporal conformal 
 
 # 14. References
 
-- Smawfield, M.L. Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed. *Zenodo* (2025). DOI: 10.5281/zenodo.16921911
+- Smawfield, M.L. Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed. *Zenodo* (2025), v0.11 (Jakarta). DOI: 10.5281/zenodo.16921911
 
 - Smawfield, M.L. Temporal Equivalence Principle: A Covariant Alternative to Cosmic Expansion. *Zenodo* (2026). DOI: 10.5281/zenodo.20370143
 

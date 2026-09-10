@@ -1,14 +1,21 @@
-[15:44:57] [INFO] ================================================================================
-[15:44:57] [INFO] Script: step_09b_screening_plot
-[15:44:57] [INFO] Started: 2026-08-30T15:44:57.392708
-[15:44:57] [INFO] ================================================================================
-[15:44:59] [SUCCESS] Saved: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4b_screening.png
-[15:44:59] [SUCCESS] Saved: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/site/assets/gate4b_screening.png
-[15:44:59] [PROCESS] 
+[20:56:43] [INFO] ================================================================================
+[20:56:43] [INFO] Script: step_09b_screening_plot
+[20:56:43] [INFO] Started: 2026-09-10T20:56:43.786067
+[20:56:43] [INFO] ================================================================================
+[20:56:44] [SUCCESS] Saved: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4b_screening.png
+[20:56:44] [SUCCESS] Saved: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/site/assets/gate4b_screening.png
+[20:56:44] [PROCESS] 
 Key screening values:
-[15:44:59] [PROCESS]   Absorber  (|Φ|/c²=1e-8):  S_Σ = 0.999947
-[15:44:59] [PROCESS]   Dwarf     (|Φ|/c²=1e-7):  S_Σ = 0.839012
-[15:44:59] [PROCESS]   Galactic  (|Φ|/c²=5.38e-7): S_Σ = 0.012875
-[15:44:59] [PROCESS]   Solar     (|Φ|/c²=2.12e-6): S_Σ = 0.000099
-[15:44:59] [PROCESS]   Peak β_eff²×|Φ|/c² at |Φ|/c² = 9.5e-08
-[15:44:59] [SUCCESS] Saved: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4b_screening_plot.json
+[20:56:44] [PROCESS]   Absorber  (|Φ|/c²=1e-8):  S_Σ = 0.999947
+[20:56:44] [PROCESS]   Dwarf     (|Φ|/c²=1e-7):  S_Σ = 0.839012
+[20:56:44] [PROCESS]   Galactic  (|Φ|/c²=5.38e-7): S_Σ = 0.012875
+[20:56:44] [PROCESS]   Solar     (|Φ|/c²=2.12e-6): S_Σ = 0.000099
+[20:56:44] [PROCESS]   Peak β_eff²×|Φ|/c² at |Φ|/c² = 9.5e-08
+[20:56:44] [SUCCESS] Saved: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4b_screening_plot.json
+[20:56:44] [SUCCESS]   [OK] 0.4s
+[20:56:44] [INFO] 
+[20:56:44] [INFO] ================================================================================
+[20:56:44] [INFO] PHASE 3: SECONDARY ROBUSTNESS ANALYSES (C2 + C3 + C4)
+[20:56:44] [INFO] ================================================================================
+[20:56:44] [INFO] 
+[20:56:44] [PROCESS] [RUN] secondary_analyses: Secondary Analyses (C2 + C3 + C4)

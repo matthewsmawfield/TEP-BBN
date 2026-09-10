@@ -94,8 +94,8 @@ def load_citation_metadata():
                     version_match.group(1).strip() if version_match else "v0.1"
                 )
 
-            # Parse version string like 'v0.2 (Thika)'
-            pattern = r"^(v?[\d.]+)(?:\s*\(([^)]+)\))?$"
+            # Parse version string like 'v0.2 (Thika)' or 'v0.3 (Dubai)'
+            pattern = r"^(v?[\d.]+)(?:\s*[\(\-]([^)\-]+)[\)]?)?$"
             match = re.match(pattern, version_str.strip())
             if match:
                 metadata["version"] = match.group(1).lstrip("v")

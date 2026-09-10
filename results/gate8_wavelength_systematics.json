@@ -1,0 +1,78 @@
+{
+  "gate": "8-wavelength-systematics",
+  "description": "Sensitivity of Gate 8 velocity-deviation p-values to residual wavelength-calibration systematics",
+  "method": "sigma_total = sqrt(sigma_fit^2 + sigma_sys^2); p from Gaussian tail and Monte Carlo (N=100000)",
+  "source_files": [
+    "gate8_calibration_Q10092956.json",
+    "gate8_calibration_PKS1937101.json"
+  ],
+  "n_mc": 100000,
+  "results": {
+    "Q1009+2956": {
+      "observed_deviation_kms": 2.7172821441621977,
+      "observed_abs_deviation_kms": 2.7172821441621977,
+      "sigma_fit_kms": 0.1609719108810642,
+      "original_calibrated_p": 0.0,
+      "original_nominal_sigma": 16.880473924235705,
+      "systematic_cases": {
+        "sigma_sys_0.0": {
+          "sigma_sys_kms": 0.0,
+          "sigma_total_kms": 0.1609719108810642,
+          "effective_sigma": 16.880473924235705,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000
+        },
+        "sigma_sys_0.5": {
+          "sigma_sys_kms": 0.5,
+          "sigma_total_kms": 0.5252732204221925,
+          "effective_sigma": 5.173083337426113,
+          "p_gaussian": 2.302622494898543e-07,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000
+        },
+        "sigma_sys_1.0": {
+          "sigma_sys_kms": 1.0,
+          "sigma_total_kms": 1.0128731194442377,
+          "effective_sigma": 2.6827468238599983,
+          "p_gaussian": 0.007302024619290082,
+          "p_monte_carlo": 0.00771,
+          "n_mc": 100000
+        }
+      }
+    },
+    "PKS1937-101": {
+      "observed_deviation_kms": 5.658173778810635,
+      "observed_abs_deviation_kms": 5.658173778810635,
+      "sigma_fit_kms": 0.5119971805133374,
+      "original_calibrated_p": 0.0,
+      "original_nominal_sigma": 11.05118151849518,
+      "systematic_cases": {
+        "sigma_sys_0.0": {
+          "sigma_sys_kms": 0.0,
+          "sigma_total_kms": 0.5119971805133374,
+          "effective_sigma": 11.05118151849518,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000
+        },
+        "sigma_sys_0.5": {
+          "sigma_sys_kms": 0.5,
+          "sigma_total_kms": 0.7156403516107843,
+          "effective_sigma": 7.906448771474459,
+          "p_gaussian": 2.6645352591003757e-15,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000
+        },
+        "sigma_sys_1.0": {
+          "sigma_sys_kms": 1.0,
+          "sigma_total_kms": 1.1234505386769846,
+          "effective_sigma": 5.036424465534462,
+          "p_gaussian": 4.743081523095327e-07,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000
+        }
+      }
+    }
+  }
+}

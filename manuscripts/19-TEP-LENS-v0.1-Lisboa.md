@@ -836,7 +836,7 @@ Di Valentino, E., Mena, O., Pan, S., et al. 2021, *Classical and Quantum Gravity
 
 #### TEP Framework (This Series)
 
-Smawfield, M. L. 2025, "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed" (Paper 0, Jakarta), doi:10.5281/zenodo.16921911
+Smawfield, M. L. 2025, "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed" (Paper 0, Jakarta v0.11), doi:10.5281/zenodo.16921911
 
 Smawfield, M. L. 2025, "Temporal-Spatial Coupling in Gravitational Lensing" (Paper 5, Tortola), doi:10.5281/zenodo.17982540
 

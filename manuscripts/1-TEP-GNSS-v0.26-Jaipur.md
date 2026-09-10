@@ -744,7 +744,7 @@ For two zero-mean, wide-sense stationary clock residual processes $x_i(t), x_j(t
 \begin{equation} \label{eq:cross_spectrum}
 S_{ij}(f)=\mathcal{F}\{R_{ij}(\tau)\}, \quad R_{ij}(\tau)=\mathbb{E}[x_i(t)\,x_j(t+\tau)]
 \end{equation}
-Under TEP, each clock's fractional frequency $y_k(t)$ receives a common field contribution $y_k(t) \propto \phi(\mathbf{x}_k,t)$ plus local noise. In the 10–500 μHz band, any propagation delay across baselines ($\leq 15{,}000$ km) is negligible relative to the periods (33 minutes–28 hours):
+Under TEP, each clock's fractional frequency $y_k(t)$ receives a common field contribution $y_k(t) \propto \phi(\mathbf{x}_k,t)$ plus local noise. The local noise term encompasses per-station oscillator characteristics—crystal aging, individual frequency offset, temperature sensitivity, and drive-level dependence—that are independent between stations. These contributions are uncorrelated across the network by construction: two quartz oscillators in the same room drift independently, and GNSS receiver clocks at different sites share no common oscillator heritage. Prior to cross-spectral analysis, each station's clock time series is linearly detrended to remove the dominant per-station systematic drift (frequency offset and linear aging rate), isolating the stochastic fluctuations in the 10–500 μHz band where TEP signatures are expected. Because uncorrelated per-station noise has no distance dependence by definition, it contributes to the noise floor but cannot generate the distance-structured exponential correlation that distinguishes the TEP signal. In the 10–500 μHz band, any propagation delay across baselines ($\leq 15{,}000$ km) is negligible relative to the periods (33 minutes–28 hours):
 
 \begin{equation} \label{eq:phase_bound}
 \phi_{\max}=2\pi f_{\max}\,\tau_{\max} \le 2\pi\,(5\times10^{-4}\,\mathrm{Hz})\;\frac{1.5\times10^7\,\mathrm{m}}{c}\approx1.6\times10^{-4}\ \mathrm{rad}
@@ -5425,7 +5425,7 @@ Petit, G. & Luzum, B. (2010). IERS Conventions (2010). *IERS Technical Note* No.
 Ray, J., et al. (2008). IGS polar motion measurement accuracy. *Geophysical Research Letters*, 35(3), L03303.
 Rosenband, T., et al. (2008). Frequency ratio of Al+ and Hg+ single-ion optical clocks; metrology at the 17th decimal place. *Science*, 319(5871), 1808-1812.
 Senior, K. L., et al. (2008). Characterization of periodic variations in the GPS satellite clocks. *GPS Solutions*, 12(3), 211-225.
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.11 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.26 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1 — this work)
 Smawfield, M. L. (2025). *Global Time Echoes: 25-Year Analysis of CODE Precise Clock Products*. Preprint v0.18 (Cairo). Zenodo. DOI: [10.5281/zenodo.17517141](https://doi.org/10.5281/zenodo.17517141) (Paper 2)
 Smawfield, M. L. (2025). *Global Time Echoes: Raw RINEX Consistency Test*. Preprint v0.5 (Kathmandu). Zenodo. DOI: [10.5281/zenodo.17860166](https://doi.org/10.5281/zenodo.17860166) (Paper 3)

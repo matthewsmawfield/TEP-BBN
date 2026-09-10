@@ -427,7 +427,7 @@ Ratra, B. & Peebles, P. J. E. 1988, Phys. Rev. D, 37, 3406. *Cosmological Conseq
 
 Raghavan, D., McAlister, H. A., Henry, T. J., et al. 2010, ApJS, 190, 1. *A Survey of Stellar Families: Multiplicity of Solar-type Stars.*
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: 10.5281/zenodo.16921911 (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.11 (Jakarta). Zenodo. DOI: 10.5281/zenodo.16921911 (Paper 0)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: 10.5281/zenodo.17127229 (Paper 1)
 

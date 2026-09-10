@@ -1,7 +1,7 @@
 # What Do Precision Tests of General Relativity Actually Measure?
 **Matthew Lukin Smawfield**
-Version: v0.5 (Istanbul)
-First published: 31 December 2025 · Last updated: 19 August 2026
+Version: v0.6 (Istanbul)
+First published: 31 December 2025 · Last updated: 10 September 2026
 DOI: 10.5281/zenodo.18109760
 
 ---
@@ -31,7 +31,7 @@ The experimental confirmation of GR is typically presented as a progression of i
 | Experiment | Year | Claimed Precision | Result |
 |---|---|---|---|
 | Pound-Rebka (redshift) | 1960 | 1% | Confirms GR |
-| Hafele-Keating (time dilation) | 1971 | 10% | Confirms GR |
+| Hafele-Keating (time dilation) | 1972 | 10% | Confirms GR |
 | Gravity Probe A | 1976 | 7 × 10⁻⁵ | Confirms GR |
 | GPS (operational) | 1978– | Meter-level positioning | Confirms GR |
 | Cassini (Shapiro delay) | 2003 | 2 × 10⁻⁵ | γ = 1 |
@@ -48,7 +48,7 @@ This paper asks: What do precision tests of relativity actually constrain?
 
 The analysis identifies six structural limitations shared by the experimental canon:
 
-- *Two-Way Measurement Dominance:* Nearly all tests use round-trip or reciprocity-even measurements, which are mathematically blind to direction-dependent effects.
+- *Two-Way Measurement Dominance:* Nearly all tests use round-trip or reciprocity-even measurements, which cancel reciprocity-odd (direction-reversing) residuals. They remain sensitive to reciprocity-even anisotropy of the form $D(\hat n\cdot\nabla\phi)^2$ (Appendix B of Paper 0; §7.6 below).
 
 - *Local/Global Conflation:* Tests of local Lorentz invariance are extrapolated to claims about global spacetime structure.
 
@@ -58,7 +58,7 @@ The analysis identifies six structural limitations shared by the experimental ca
 
 - *Theory-Laden Data Reduction:* Systematic corrections assume the framework being tested, making independent falsification practically difficult within standard pipelines.
 
-- *The Proximity-Regime Screening Blind Spot:* Tests performed in deep potential wells (Earth's surface, solar system) probe only the screened regime where scalar-field gradients are continuously suppressed, leaving the unscreened dilute regime unexplored.
+- *The Proximity-Regime Screening Blind Spot:* Tests performed in deep potential wells (Earth's surface, solar system) probe only the screened regime where scalar-field gradients are continuously suppressed, leaving the active-shear dilute regime unexplored.
 
 These limitations do not invalidate the experiments. They indicate that, in many cases, the tests primarily constrain parameter space within an assumed framework rather than systematically discriminating between alternatives.
 
@@ -66,7 +66,7 @@ The analysis throughout assumes a regime where disformal cone tilts are already 
 
 #### Scope of Claim
 
-This manuscript does not dispute the validity of canonical precision tests within their modeled domains. It argues that many flagship tests primarily constrain reciprocity-even (two-way / closed-path) observables and therefore may not discriminate GR from a class of two-metric disformal scalar-tensor frameworks that reproduce local redshift and round-trip light-time relations. Discrimination requires observables that are offset-invariant yet one-way and direction-reversing, or that probe spatial clock-correlation structure.
+This manuscript does not dispute the validity of canonical precision tests within their modeled domains. It argues that many flagship tests primarily constrain reciprocity-even observables, or even-parity two-way sums. They do not measure odd-parity synchronization holonomy $H_{\rm resid}$. Discrimination requires observables that are offset-invariant yet one-way and direction-reversing, or that probe spatial clock-correlation structure.
 
 ### 1.3 The Temporal Equivalence Principle: Theory Definition
 
@@ -76,7 +76,7 @@ The Temporal Equivalence Principle (TEP) is defined formally by a single manifol
 
 Sector map: The conformal factor A(φ) governs clock rates and spatial correlation structure; the disformal factor B(φ) governs light-cone tilts and residual holonomy. GW170817 primarily constrains photon–graviton differential propagation and hence disformal cone tilt. It does not directly constrain common-mode conformal clock-rate structure along a shared path, although conformal scalar sectors remain indirectly constrained by PPN, equivalence-principle, source-screening, and clock-comparison tests.
 
-Screening and PPN compatibility: Rather than invoking discrete thin-shell boundaries, screening operates via the continuous spatial profile of the scalar time field, termed Temporal Topology. The locally active gradient sector, Temporal Shear, is suppressed in screened regimes by environmental state and boundary conditions, ensuring short-range Temporal Shear suppression while leaving the field light cosmologically. Near massive bodies, suppression of Temporal Shear decouples local clock rates from the scalar field structure, cleanly preserving PPN bounds without rigid boundary approximations.
+Screening and PPN compatibility: Rather than invoking discrete thin-shell boundaries, screening operates via the continuous spatial profile of the scalar time field, termed Temporal Topology. The locally active gradient sector, Temporal Shear, is suppressed in screened regimes by environmental state and boundary conditions, ensuring short-range Temporal Shear suppression while leaving the field light cosmologically. Near massive bodies, suppression of Temporal Shear suppresses the active-gradient/source-charge response $S_\Sigma$; the conformal amplitude/clock response $S_A$ is a distinct projection of the same environmental state, cleanly preserving PPN bounds without rigid boundary approximations.
 
 1. The Action: The theory is defined in the Einstein frame ($g_{\mu\nu}$) by:
 
@@ -123,10 +123,10 @@ program; requires independent, blinded replication using raw
 data |
 | Orbital velocity coupling | No correlation | |r| > 0.5 with Earth's orbital velocity | Suggested in exploratory GNSS analyses within the TEP
 program; requires independent, blinded replication |
-| CMB frame alignment | No preferred frame |  | Suggested in exploratory GNSS analyses within the TEP
+| CMB frame alignment | No preferred frame | &lt; 30° from CMB dipole | Suggested in exploratory GNSS analyses within the TEP
 program; requires independent, blinded replication |
-| Residual holonomy Hresid | 0 | 0 if B = 0 (conformal-only); ≠ 0 possible if B ≠ 0 (MEO Triangle). *Note: GW170817 bounds disformal coupling to B ≲ 10−19; triangle test probes whether B is nonzero at this level.* | Untested (requires one-way closed loops) |
-| Multi-constellation consistency | N/A | CV | Untested (requires raw data analysis) |
+| Residual holonomy Hresid | 0 | 0 if B = 0 (conformal-only); ≠ 0 possible if B ≠ 0 (MEO Triangle). *Note: GW170817 constrains the realized differential cone deformation, schematically D|∇φ|² = (B/A²)|∇φ|², along the observed astrophysical propagation path.* | Untested (requires one-way closed loops) |
+| Multi-constellation consistency | N/A | CV &lt; 30% across GPS/GLONASS/Galileo/BeiDou | Untested (requires raw data analysis) |
 | Proximity-regime screening transition | None (no regime change predicted) | Continuous active-to-screened recovery governed by \(\mathcal S_\Sigma(\mathcal E)\), with \(\rho_T\) as one macroscopic saturation/proximity proxy | Altitude-varying optical clock network, wide-binary systems |
 
 Critical note: The first three observables target conformal-sector structure associated with A(φ), while the holonomy test targets disformal structure associated with B(φ). The core argument of this paper concerns measurement geometry and does not assume that any specific GNSS-reported numerical value is correct.
@@ -155,11 +155,11 @@ Section 9 discusses the philosophical implications, situating the findings withi
 
 This analysis builds upon and extends several distinct strands of literature in gravitational physics, metrology, and the philosophy of science.
 
-Test Theories of Relativity: Frameworks for testing Lorentz invariance, such as the Mansouri-Sexl (1977) formalism and the Standard Model Extension (SME) (Colladay & Kostelecký 1998), have long parameterized deviations from relativity. These frameworks primarily focus on local Lorentz violation (anisotropy, boost dependence) in single-metric contexts. TEP differs by accepting exact local Lorentz invariance (consistent with the tightest SME bounds) while introducing non-integrable synchronization structure via a second metric.
+Test Theories of Relativity: Frameworks for testing Lorentz invariance, such as the Mansouri-Sexl (1977) formalism and the Standard Model Extension (SME) (Colladay & Kostelecký 1998), have long parameterized deviations from relativity. These frameworks primarily focus on local Lorentz violation (anisotropy, boost dependence) in single-metric contexts. TEP differs by accepting exact local Lorentz invariance (consistent with the tightest SME bounds) while allowing a GR-subtracted non-exact synchronization structure in the matter geometry.
 
 Relativistic Metrology: The distinction between one-way and two-way time transfer is foundational in metrology (Ashby 2003). While two-way satellite time and frequency transfer (TWSTFT) and GPS Common-View are standard techniques for clock comparison, they are explicitly designed to cancel path delays. Recent proposals for "relativistic geodesy" with optical clocks (Mehlstäubler et al. 2018) focus on measuring the geopotential $W$, assuming GR. This work explores the inverse problem: using clocks to test the framework that defines $W$.
 
-Philosophy of Simultaneity: The conventionality of simultaneity (Reichenbach 1928; Grünbaum 1973; Salmon 1977) establishes that one-way light speed is a convention in special relativity. Malament (1977) argued that causal connectivity makes standard synchronization unique, but this uniqueness holds only if the causal structure is singular (one metric). This paper operationalizes these philosophical insights in the context of two-metric theories, where the interplay between causal (light) and temporal (clock) structures makes the "convention" physically testable via holonomy.
+Philosophy of Simultaneity: The conventionality of simultaneity (Reichenbach 1928; Grünbaum 1973; Salmon 1977) establishes that one-way light speed is a convention in special relativity. Malament (1977) establishes synchronization uniqueness relative to a specified causal structure. TEP does not introduce separate clock and photon causal structures; instead it asks whether the universal matter-metric synchronization connection contains a GR-subtracted non-exact component measurable through closed-loop holonomy.
 
 Theory-Laden Experimentation: The challenge of "epistemological circularity" in precision tests—where data reduction relies on the theory being tested—has been discussed by Franklin (1986) and others. This analysis extends that discussion to modern precision cosmology and GNSS data processing, identifying specific pipelines (e.g., common-mode filtering) that enforce theoretical priors.
 
@@ -224,7 +224,7 @@ Two-way measurements avoid this circularity by using a single clock:
 $t_{\text{round-trip}} = t_{\text{return}} - t_{\text{emit}} \quad
 \text{(single clock, gauge-invariant)}$
 
-However, this gauge-invariance comes at a cost: two-way measurements are inherently insensitive to direction-dependent effects. If light travels at c + v in one direction and c − v in the return direction, the round-trip time is:
+However, this gauge-invariance comes at a cost: two-way measurements cancel reciprocity-odd (direction-reversing) residuals, though they remain sensitive to reciprocity-even anisotropy of the form $D(\hat n\cdot\nabla\phi)^2$ (Appendix B of Paper 0; §7.6 below). If light travels at c + v in one direction and c − v in the return direction, the round-trip time is:
 
 $t_{RT} = \frac{L}{c+v} + \frac{L}{c-v} = \frac{2Lc}{c^2 - v^2} \approx
 \frac{2L}{c} + O\left(\frac{v^2}{c^2}\right)$
@@ -233,7 +233,7 @@ The first-order direction-dependent term cancels exactly. This is not a limitati
 
 ### 2.3 Local vs. Global Tests
 
-A second crucial distinction separates local tests—performed within a single freely falling frame—from global tests that probe the structure of spacetime across extended regions.
+A third crucial distinction separates local tests—performed within a single freely falling frame—from global tests that probe the structure of spacetime across extended regions.
 
 #### The Equivalence Principle Hierarchy
 
@@ -249,19 +249,19 @@ The operational criterion for "local" is whether the measurement region is small
 
 ### 2.4 The Screening Blind Spot: Temporal Topology and Proximity Regimes
 
-A fifth distinction concerns the density environment in which experiments are performed. The canonical precision tests are overwhelmingly conducted in dense gravitational environments: Earth's surface, the solar system, or laboratory frames embedded in screened-source or locally constrained regimes. In scalar-tensor frameworks with environment-dependent screening, these locations correspond to regimes where the scalar field gradient is strongly suppressed.
+A fourth distinction concerns the density environment in which experiments are performed. The canonical precision tests are overwhelmingly conducted in dense gravitational environments: Earth's surface, the solar system, or laboratory frames embedded in screened-source or locally constrained regimes. In scalar-tensor frameworks with environment-dependent screening, these locations correspond to regimes where the scalar field gradient is strongly suppressed.
 
 #### Temporal Topology and Temporal Shear
 
-In TEP, screening is formulated as a continuous geometric effect rather than a discrete thin-shell boundary. The spatial profile of the scalar field φ(r; ρ) — termed Temporal Topology — is shaped by the ambient density through the effective potential V_eff(φ; ρ). In deep potential wells, high ambient matter density suppresses the field gradient (Temporal Shear, ∇φ), driving ∇φ toward zero while the Temporal Topology persists. This continuous suppression reconciles local null tests with cosmological dynamics without invoking step-function boundary conditions.
+In TEP, screening is formulated as a continuous geometric effect rather than a discrete thin-shell boundary. Temporal Topology is the continuous spatial profile of $\ln A(\phi)$. A density-dependent $V_{\rm eff}(\phi;\rho)$ is one optional local realization, not the defining screening law (Paper 0, Axiom A4). In deep potential wells, high ambient matter density suppresses the field gradient (Temporal Shear, ∇φ), driving ∇φ toward zero while the Temporal Topology persists. This continuous suppression reconciles local null tests with cosmological dynamics without invoking step-function boundary conditions.
 
-The operative quantity for Temporal Shear coupling and clock-sector effects is the local field gradient (Temporal Shear). In dense environments, suppression of Temporal Shear by environmental state and boundary conditions decouples local clock rates from the scalar field, cleanly preserving PPN bounds. In dilute regions, the gradient recovers and the field becomes cosmologically active.
+The operative quantity for Temporal Shear coupling and clock-sector effects is the local field gradient (Temporal Shear). In dense environments, suppression of Temporal Shear by environmental state and boundary conditions suppresses the active-gradient/source-charge response $S_\Sigma$; the conformal amplitude/clock response $S_A$ is a distinct projection of the same environmental state, cleanly preserving PPN bounds. In dilute regions, the gradient recovers and the field becomes cosmologically active.
 
 $\Sigma_\mu^{\text{obs}} = \mathcal{S}_\Sigma(\mathcal{E}) \, \nabla_\mu \ln A(\phi),$
 
 where the environmental state is $\mathcal{E} = \{\rho, \Phi/c^2, \nabla\rho, \nabla\Phi, \text{compactness}, R_T(M), \text{proximity}, T, z, \text{boundary geometry}, \text{coherence volume}\}.$ This single operator unifies density screening, compactness screening, proximity screening, thermodynamic/environmental-state response, lensing/cosmological covariance screening, and wide-binary environmental screening across the entire TEP corpus.
 
-The experimental consequence is that existing precision tests probe the deeply screened regime, where Temporal Shear vanishes continuously. They are insensitive to the field's behavior in the unscreened dilute regime where large-scale structural effects originate. This creates a proximity-regime blind spot: experiments constrain the screened limit while leaving the unscreened limit largely unexplored.
+The experimental consequence is that existing precision tests probe the deeply screened regime, where Temporal Shear vanishes continuously. They are insensitive to the field's behavior in the active-shear dilute regime where large-scale structural effects originate. This creates a proximity-regime blind spot: experiments constrain the screened limit while leaving the active-shear limit largely unexplored.
 
 Discriminating tests must therefore either probe dilute environments where Temporal Shear recovers (wide binary systems, galactic halos), map the continuous transition using altitude-varying clock networks, or detect spatial correlations on scales where the field gradient remains active.
 
@@ -293,9 +293,9 @@ Single-path, single-direction measurements—the dominant mode of precision test
 | One-way, closed-loop | Invariant | Residual holonomy Hresid, path-dependence | — |
 | Screened (dense environment) | Invariant | Screened PPN limits | Unscreened dilute behavior |
 
-The 'proximity-regime' boundaries defined by deep local potential wells are physical manifestations of the abstract environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. Because standard precision tests overwhelmingly operate within deeply saturated macro-environments, they effectively probe only the screened limit of the continuous screening curve, fundamentally blinding these experimental protocols to the active temporal shear.
+The 'proximity-regime' boundaries defined by deep local potential wells are physical manifestations of the abstract environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. Because standard precision tests overwhelmingly operate within deeply saturated macro-environments, they effectively probe only the screened limit of the continuous screening curve, fundamentally blinding these experimental protocols to the active temporal shear. Following Paper 0, $S_A$ is the amplitude/clock projection and $S_\Sigma$ is the active-gradient/source-charge projection. They are distinct responses of the same environmental state $\mathcal{E}$.
 
-The final row—one-way closed-loop measurements—represents the only configuration capable of testing synchronization integrability. No high-precision relativistic-gravity test has directly targeted a convention-independent, direction-reversing, one-way loop observable designed to detect non-integrable synchronization beyond modeled GR terms. Nor has any precision test directly probed the unscreened dilute regime where Temporal Shear recovers and scalar-field spatial structure becomes detectable.
+The final row—one-way closed-loop measurements—represents the only configuration capable of testing synchronization integrability. No high-precision relativistic-gravity test has directly targeted a convention-independent, direction-reversing, one-way loop observable designed to detect non-integrable synchronization beyond modeled GR terms. Nor has any precision test directly probed the active-shear dilute regime where Temporal Shear recovers and scalar-field spatial structure becomes detectable.
 
 ### 2.7 Canonical Tests and Their Constrained Sectors
 
@@ -318,7 +318,7 @@ Gravitational redshift experiments—from Pound-Rebka (1960) to modern optical l
 
 ### 3.1 The Canonical Experiments
 
-3.1.1 Pound-Rebka-Snider (1960-1965)
+3.1.1 Pound-Rebka-Snider (1960–1965)
 
 The Pound-Rebka experiment measured the gravitational redshift of 14.4 keV gamma rays traveling 22.5 meters vertically in the Jefferson Tower at Harvard. The observed fractional frequency shift:
 
@@ -346,7 +346,7 @@ The comparison used two-way microwave links: signals were sent up to the spacecr
 
 The experiment confirms that clocks at different gravitational potentials run at different rates—a prediction common to GR, TEP, and all metric theories of gravity.
 
-3.1.3 Modern Optical Lattice Clocks (2010-present)
+3.1.3 Modern Optical Lattice Clocks (2010–present)
 
 Jun Ye's group at JILA has achieved gravitational redshift measurements at the 10<sup>−18</sup> level and below, detecting time dilation across millimeter height differences. These represent the most precise measurements of gravitational effects ever performed.
 
@@ -432,7 +432,7 @@ The proposed loop and correlation experiments should therefore be seen as comple
 
 Time dilation experiments—from Hafele-Keating's circumnavigating clocks to GPS satellite corrections—are frequently cited as strong evidence that "time runs differently" in different reference frames. This section examines the logical structure of these claims.
 
-### 4.1 The Hafele-Keating Experiment (1971)
+### 4.1 The Hafele-Keating Experiment (1972)
 
 In October 1971, Joseph Hafele and Richard Keating flew cesium atomic clocks on commercial aircraft around the world—eastward and westward—comparing them with reference clocks at the U.S. Naval Observatory. The observed time differences:
 
@@ -528,7 +528,7 @@ The Global Positioning System is frequently cited as the most practical demonstr
 
 4.5.1 The Standard Narrative
 
-GPS satellites orbit at ~20,200 km altitude with velocity ~3.9 km/s. The combined relativistic correction is approximately +38 μs/day (gravitational) minus 7 μs/day (velocity), yielding a net +31 μs/day correction applied to satellite clocks.
+GPS satellites orbit at ~20,200 km altitude with velocity ~3.9 km/s. The combined relativistic correction is approximately +45 μs/day (gravitational) minus 7 μs/day (velocity), yielding a net +38 μs/day correction applied to satellite clocks.
 
 The argument proceeds: GPS works at meter-level accuracy; therefore, the relativistic corrections must be correct; therefore, GR is confirmed.
 
@@ -580,7 +580,7 @@ Exploratory analysis of GNSS clock products from multiple analysis centers (CODE
 
 - Distance-structured correlations: Clock residuals reportedly show exponential decay with inter-station distance, with a characteristic scale of order 10<sup>3</sup>–10<sup>4</sup> km
 
-- Cross-center consistency: The same pattern reportedly appears in independent processing pipelines (R² = 0.92-0.97 between centers)
+- Cross-center consistency: The same pattern reportedly appears in independent processing pipelines (R² = 0.92–0.97 between centers)
 
 - Temporal persistence: The correlation structure reportedly persists over 25 years of data (2000-2025)
 
@@ -671,11 +671,11 @@ LLR confirms that gravity is universal for self-gravitating bodies. It does not 
 
 #### Why LLR Does Not Directly Probe TEP Signatures
 
-LLR tests the gravitational metric g<sub>μv</sub> through orbital dynamics. TEP modifies the matter metric g̃<sub>μv</sub> through conformal and (constrained) disformal structure. Since:
+LLR tests the gravitational metric g<sub>μν</sub> through orbital dynamics. TEP modifies the matter metric g̃<sub>μν</sub> through conformal and (constrained) disformal structure. Since:
 
-- Orbital dynamics depend on g<sub>μv</sub> (unchanged in TEP)
+- Orbital dynamics depend on g<sub>μν</sub> (unchanged in TEP)
 
-- In the conformal-only limit, photon null cones coincide with those of g<sub>μv</sub>
+- In the conformal-only limit, photon null cones coincide with those of g<sub>μν</sub>
 
 - The measurement is two-way (direction-dependent effects cancel)
 
@@ -794,7 +794,7 @@ The PPN framework parameterizes the post-Newtonian limit under the assumption th
 
 In TEP, the matter metric is related to the gravitational metric by a disformal map g̃<sub>μν</sub> = A²(φ)g<sub>μν</sub> + B(φ)∇<sub>μ</sub>φ∇<sub>ν</sub>φ. The conformal factor A(φ) rescales the matter sector while preserving null cones; the disformal term B(φ) can tilt null cones and is strongly constrained by multi-messenger observations. Consequently, PPN light-propagation tests can leave room for clock-sector effects encoded in A(φ) and for loop/correlation observables that are not representable as a single γ parameter.
 
-A further limitation concerns the environmental setting of PPN tests. The Cassini measurement was performed during solar conjunction, where signals passed through the Sun's deep gravitational potential. In TEP, such deep potential wells correspond to the screened regime: suppression of Temporal Shear (∇φ → 0) by environmental state and boundary conditions decouples local clock rates from the scalar field while the Temporal Topology persists. The PPN constraint on γ therefore probes only the screened limit, where TEP predicts PPN consistency, and remains insensitive to the unscreened dilute regime where the field gradient recovers and large-scale structural effects originate.
+A further limitation concerns the environmental setting of PPN tests. The Cassini measurement was performed during solar conjunction, where signals passed through the Sun's deep gravitational potential. In TEP, such deep potential wells correspond to the screened regime: suppression of Temporal Shear (∇φ → 0) by environmental state and boundary conditions suppresses the active-gradient/source-charge response $S_\Sigma$; the conformal amplitude/clock response $S_A$ is a distinct projection of the same environmental state, while the Temporal Topology persists. The PPN constraint on γ therefore probes only the screened limit, where TEP predicts PPN consistency, and remains insensitive to the active-shear dilute regime where the field gradient recovers and large-scale structural effects originate.
 
 ### 5.4 The Conformal vs. Disformal Distinction
 
@@ -835,25 +835,25 @@ In a two-metric framework, A(φ) can modify clock rates (and hence clock residua
 
 - Clock-sector effects and loop/correlation observables that are not reducible to PPN light-propagation parameters
 
-- The unscreened dilute regime where Temporal Shear recovers and the scalar field becomes cosmologically active
+- The active-shear dilute regime where Temporal Shear recovers and the scalar field becomes cosmologically active
 
-Light propagation tests are precision triumphs that tightly constrain the post-Newtonian light-propagation sector (e.g., γ ≈ 1) and place strong limits on any disformal cone tilt (encoded in B(φ)). In TEP, these constraints probe the screened limit where Temporal Shear is continuously suppressed in screened-source or locally constrained regimes, leaving the unscreened dilute regime—where scalar-field spatial structure and large-scale effects originate—largely unexplored. These constraints are therefore orthogonal to clock-sector observables such as spatially structured correlations in clock residuals and GR-subtracted residual holonomy H<sub>resid</sub>, which require genuinely one-way, direction-reversing configurations or density-varying environments.
+Light propagation tests are precision triumphs that tightly constrain the post-Newtonian light-propagation sector (e.g., γ ≈ 1) and place strong limits on any disformal cone tilt (encoded in B(φ)). In TEP, these constraints probe the screened limit where Temporal Shear is continuously suppressed in screened-source or locally constrained regimes, leaving the active-shear dilute regime—where scalar-field spatial structure and large-scale effects originate—largely unexplored. These constraints are therefore orthogonal to clock-sector observables such as spatially structured correlations in clock residuals and GR-subtracted residual holonomy H<sub>resid</sub>, which require genuinely one-way, direction-reversing configurations or density-varying environments.
 
 ## 6. The Multi-Messenger Constraints
 
-The event GW170817 detected gravitational waves from a binary neutron star merger, followed (+1.74 ± 0.05) s later by a gamma-ray burst (GRB 170817A). This timing coincidence yields an assumption-dependent constraint on the fractional speed difference between gravitational waves and light.
+LIGO and Virgo detected gravitational waves from the binary neutron star merger GW170817, followed (+1.74 ± 0.05) s by the gamma-ray burst GRB 170817A. This timing coincidence yields an assumption-dependent constraint on the fractional speed difference between gravitational waves and light.
 
 ### 6.1 The GW170817 Event
 
-On August 17, 2017, the LIGO-Virgo collaboration detected gravitational waves from a binary neutron star inspiral in NGC 4993, with luminosity distance of order 40 Mpc (130 million light-years; conservative bounds use the lower end of the distance interval) distant. The Fermi Gamma-ray Burst Monitor detected GRB 170817A approximately (+1.74 ± 0.05) s after the gravitational wave signal.
+On August 17, 2017, the LIGO-Virgo collaboration detected gravitational waves from a binary neutron star inspiral in NGC 4993, with luminosity distance of order 40 Mpc (130 million light-years; conservative bounds use the lower end of the distance interval). The Fermi Gamma-ray Burst Monitor detected GRB 170817A approximately (+1.74 ± 0.05) s after the gravitational wave signal.
 
 6.1.1 The Speed Constraint
 
 Interpreting the observed delay as (at least partially) a propagation-time difference yields a bound on the fractional speed difference during the trip.
 
-$-3\times 10^{-15} \lesssim \frac{c_g - c_\gamma}{c} \lesssim 7\times 10^{-16}$
+$\frac{|c_\gamma - c_g|}{c} \lesssim \text{few} \times 10^{-15}$
 
-The numerical bounds depend on conservative assumptions about intrinsic emission-time offsets between the gravitational-wave and gamma-ray signals. In particular, the observable directly constrains differential propagation, while the emission-time difference is astrophysically model dependent (Abbott et al. 2017).
+The numerical bounds depend on conservative assumptions about intrinsic emission-time offsets between the gravitational-wave and gamma-ray signals. In particular, the observable directly constrains differential propagation, while the emission-time difference is astrophysically model-dependent (Abbott et al. 2017).
 
 6.1.2 The Standard Interpretation
 
@@ -918,14 +918,14 @@ where c is the coordinate speed of light in the Einstein frame.
 
 For photons propagating on $g_{\mu\nu}^{\text{EM}} = A^2(\phi) g_{\mu\nu}^{\text{GW}}$:
 
-$T_\gamma = \int_S^D \frac{\sqrt{A(\phi)} \, dl}{c \times \sqrt{A(\phi)}} = \int_S^D \frac{dl}{c} = T_{\text{GW}}$
+$T_\gamma = \int_S^D \frac{A(\phi) \, dl}{c \times A(\phi)} = \int_S^D \frac{dl}{c} = T_{\text{GW}}$
 The conformal factor A(φ) cancels in the differential time-of-flight observable under specific operational assumptions:
 
 - Co-spatial Endpoints: Source S and Detector D are identical for both signals.
 
 - Same Clock Standards: The flight time is measured using the same matter-sector clock definition at the detector.
 
-- Null Path Invariance: Conformal transformations preserve the null character of geodesics ($ds^2 = 0 \iff A ds^2 = 0$).
+- Null Path Invariance: Conformal transformations preserve the null character of geodesics ($ds^2 = 0 \iff A^2(\phi)\,ds^2 = 0$).
 
 - Emission-Time Nuisance: Intrinsic emission delays are treated as nuisance parameters to be modeled or marginalized.
 
@@ -935,13 +935,13 @@ Under these conditions, the observed EM–GW arrival-time difference is insensit
 
 Under a conformal transformation g̃<sub>μν</sub> = A²(φ)g<sub>μν</sub>:
 
-- Null geodesics remain null: If g<sub>μν</sub>k<sup>μ</sup>k<sup>ν</sup> = 0, then g̃<sub>μν</sub>k<sup>μ</sup>k<sup>ν</sup> = A(φ) × 0 = 0
+- Null geodesics remain null: If g<sub>μν</sub>k<sup>μ</sup>k<sup>ν</sup> = 0, then g̃<sub>μν</sub>k<sup>μ</sup>k<sup>ν</sup> = A²(φ) × 0 = 0
 
-- Path length scales: dl̃ = √A(φ) dl
+- Proper length scales: dl̃ = A(φ) dl
 
-- Coordinate speed scales: c̃ = √A(φ) c
+- Proper time scales: dτ̃ = A(φ) dτ
 
-- Flight time invariant: T̃ = dl̃/c̃ = dl/c = T
+- Physical speed invariant: c̃ = dl̃/dτ̃ = c
 
 This cancellation concerns the differential arrival-time observable for two signals that follow the same null trajectory and are time-stamped by the same detector clock standard. In that configuration, a purely conformal rescaling does not generate a measurable EM–GW time-of-flight difference.
 
@@ -949,11 +949,11 @@ This cancellation concerns the differential arrival-time observable for two sign
 
 The disformal term B(φ)∇<sub>μ</sub>φ∇<sub>ν</sub>φ does modify the relative propagation:
 
-$c_\gamma^2 = c^2 \left[1 - \frac{B(\phi)(\partial\phi)^2}{A(\phi)}\right] \quad \text{(schematic parameterization)}$
+$c_\gamma^2 = c^2 \left[1 - \frac{B(\phi)}{A^2(\phi)}(\partial\phi)^2\right] \quad \text{(schematic parameterization)}$
 
 This introduces a genuine speed difference:
 
-$\Delta T = T_\gamma - T_{\text{GW}} \approx \frac{D}{c} \times \frac{B(\phi)(\partial\phi)^2}{A(\phi)}$
+$\Delta T = T_\gamma - T_{\text{GW}} \approx \frac{L}{2c} \frac{B(\phi)}{A^2(\phi)}(\partial\phi)^2$
 
 GW170817's observed coincidence (after accounting for astrophysical emission-time uncertainties) implies that any net differential propagation delay accumulated over the propagation distance must be small. Operationally, the observation bounds the fractional speed difference at the few × 10<sup>−15</sup> level under standard emission-time assumptions.
 
@@ -1128,7 +1128,7 @@ Modern Lorentz violation tests are interpreted within the Standard Model Extensi
 
 The Sagnac effect—the phase shift in a rotating interferometer—is sometimes cited as measuring one-way light speed. In a rotating ring interferometer, counter-propagating beams accumulate different phases:
 
-$\Delta\Phi = \frac{4\pi A\Omega}{\lambda c}$
+$\Delta\Phi = \frac{8\pi A\Omega}{\lambda c}$
 
 where A is the enclosed area and Ω is the rotation rate.
 
@@ -1160,11 +1160,11 @@ More importantly, the Sagnac interferometer is still a closed-path device. Both 
 
 - Effects that cancel in round trips
 
-- TEP predictions (which preserve two-way isotropy)
+- Conformal-limit TEP predictions (which preserve two-way isotropy)
 
 The resonator tests confirm that the laws of electromagnetism are the same in all directions—for round-trip measurements. This is a constraint on Lorentz violation. But it is not a constraint on synchronization structure, which requires genuinely one-way measurements that resonator experiments cannot provide.
 
-TEP preserves local Lorentz invariance exactly. The scalar field φ modifies clock rates but not light propagation. Resonator experiments, which probe light propagation in closed paths, are structurally incapable of detecting TEP signatures.
+Purely conformal TEP preserves two-way photon isotropy. The disformal sector is different. For B ≠ 0, the photon phase speed contains an even-parity orientation dependence proportional at leading order to (B/A²)(n̂·∇φ)². This contribution is unchanged under n̂ → -n̂ and therefore survives round-trip propagation. Rotating optical-cavity Michelson-Morley/Kennedy-Thorndike experiments consequently constrain the orientation-dependent component of the local disformal deformation — specifically the component of ∇φ whose projection onto the cavity axis varies over sidereal and annual cycles. A strictly radial terrestrial gradient produces a constant offset rather than a rotational modulation, so the leading constrained contributions are the solar and galactic gradients at Earth. They remain insensitive, however, to the distinct odd/non-exact synchronization holonomy H<sub>resid</sub> targeted by direction-reversing closed-loop clock experiments.
 
 ## 8. What Would Actually Discriminate?
 
@@ -1269,7 +1269,7 @@ Sagnac Effect:
 
 Residual Holonomy (TEP target):
 
-- Area-dependent: $H_{\rm resid} \propto (B/A)|\nabla\phi|^2 \times \text{Area}$ (depends on loop flux)
+- Area/path-dependent: The leading synchronization kernel is $\delta\tilde{\sigma}_\mu \simeq - \frac{B M_{\rm Pl}^2}{A^2\beta_A^2} (u\cdot\Sigma)P_\mu^\nu\Sigma_\nu$ (depends on loop flux, observer motion, and path geometry)
 
 - Field-gradient dependent: Proportional to scalar field gradient and disformal coupling
 
@@ -1281,7 +1281,7 @@ The numerical values quoted below are order-of-magnitude forecasts intended to c
 
 8.2.3 The Large-Area Strategy
 
-Contrary to "zero-area" approaches that eliminate signal along with noise, the original TEP framework (Smawfield 2025e) emphasizes that the holonomy $H$ scales with the loop area (flux of the time-transport curvature). To maximize the signal-to-noise ratio, a Large-Area MEO Strategy is proposed:
+Contrary to "zero-area" approaches that eliminate signal along with noise, the original TEP framework (Paper 0) emphasizes that the holonomy $H$ scales with the loop area (flux of the time-transport curvature). To maximize the signal-to-noise ratio, a Large-Area MEO Strategy is proposed:
 
 #### Ground-Satellite-Ground Triangle
 
@@ -1411,7 +1411,7 @@ The following signatures are currently best viewed as hypotheses motivated by pr
 
 - Multi-Constellation Consistency: If the signal is physical (conformal coupling to matter), it must appear identically across GPS, GLONASS, Galileo, and BeiDou. Systematic artifacts would show constellation-dependent variations.
 
-The triangle holonomy test serves a different purpose: it constrains or detects *disformal* coupling B(φ). GW170817 bounds the fractional GW–EM speed difference |c<sub>g</sub> − c<sub>γ</sub>|/c at the few × 10<sup>−15</sup> level under standard emission-time assumptions, strongly constraining disformal cone tilts in many scalar-tensor models (e.g., Ezquiaga & Zumalacárregui 2017). Clock-sector disformal coupling could differ and remain detectable at the attosecond-level residuals targeted in Table 8.1.3. These residual levels should be regarded as indicative feasibility thresholds rather than finalized performance specifications.
+The triangle holonomy test serves a different purpose: it constrains or detects *disformal* coupling B(φ). GW170817 bounds the fractional GW–EM speed difference |c<sub>g</sub> − c<sub>γ</sub>|/c at the few × 10<sup>−15</sup> level under standard emission-time assumptions, strongly constraining disformal cone tilts in many scalar-tensor models (e.g., Ezquiaga & Zumalacárregui 2017). Clock-sector disformal coupling could differ and remain detectable at the attosecond-level residuals targeted in the table in §8.2.3. These residual levels should be regarded as indicative feasibility thresholds rather than finalized performance specifications.
 
 #### Testability Hierarchy
 
@@ -1490,7 +1490,7 @@ Status: These findings constitute preliminary evidence requiring independent rep
 
 8.4.2 The Reproducibility Mandate
 
-For these claims to be scientifically accepted, future analysis must move beyond preliminary reports to a fully transparent Reproducibility Package. Any confirming study must provide:
+For these claims to be scientifically accepted, future analysis must move beyond preliminary reports to a fully transparent reproducibility package. Any confirming study must provide:
 
 #### Required Reproducibility Standards
 
@@ -1576,18 +1576,18 @@ Atom interferometers provide a complementary probe sensitive to the gradients of
 
 ### 8.7 Explicit TEP Predictions
 
-To ensure falsifiability, TEP makes specific numerical predictions for each proposed test. These predictions are derived from the theoretical framework (Smawfield 2025a). Numerical ranges are order-of-magnitude targets; where they are informed by reported GNSS analyses, they are treated as provisional pending independent replication.
+To ensure falsifiability, TEP makes specific numerical predictions for each proposed test. These predictions are derived from the theoretical framework (Paper 0). Numerical ranges are order-of-magnitude targets; where they are informed by reported GNSS analyses, they are treated as provisional pending independent replication.
 
 #### Quantitative TEP Predictions
 
 | Observable | TEP Prediction | Derivation | Falsification Criterion |
 |---|---|---|---|
-| Correlation length λ | 1,000–10,000 km | Screening theory: λ ~ (MPl/ρ)^(1/(n+1)) × Λ | λ  20,000 km |
-| Residual holonomy Hresid | 0.5–50 as (MEO Triangle) | Hresid/Tloop ~ 10⁻¹⁸–10⁻¹⁶ (TEP-GL Forecast) | |Hresid| |
-| Interplanetary Closed-Loop Residual | 0.1–10 ps (AU-scale loop) | Direction-reversed loop: $H_{\rm AU,resid} = H_{\rm AU,raw} - H_{\rm AU,GR}$ | |HAU,resid| |
-| Anisotropy ratio (EW/NS) | 1.5–3.0 | CMB velocity v ~ 369 km/s modulates screening | Ratio  5.0 |
-| Orbital coupling | |r| > 0.5 with orbital velocity | Velocity-dependent screening length | |r| |
-| CMB alignment |  | Cosmic rest frame defines field gradient | > 60° separation |
+| Correlation length λ | 1,000–10,000 km | Screening theory: λ ~ (MPl/ρ)^(1/(n+1)) × Λ | &lt; 500 km or > 20,000 km |
+| Residual holonomy Hresid | 0.5–50 as (MEO Triangle) | Hresid/Tloop ~ 10⁻¹⁸–10⁻¹⁶ (TEP-GL Forecast) | |Hresid| &lt; 0.1 as after GR subtraction |
+| Interplanetary Closed-Loop Residual | 0.1–10 ps (AU-scale loop) | Direction-reversed loop: $H_{\rm AU,resid} = H_{\rm AU,raw} - H_{\rm AU,GR}$ | |HAU,resid| &lt; 0.01 ps after GR subtraction |
+| Anisotropy ratio (EW/NS) | 1.5–3.0 | CMB velocity v ~ 369 km/s modulates screening | Ratio &lt; 1.2 or > 5.0 |
+| Orbital coupling | |r| > 0.5 with orbital velocity | Velocity-dependent screening length | |r| &lt; 0.3 or wrong phase |
+| CMB alignment | &lt; 30° from CMB dipole | Cosmic rest frame defines field gradient | > 60° separation |
 
 #### Phenomenological Benchmark
 
@@ -1665,8 +1665,6 @@ Imagine you have a rubber ruler that can stretch. You want to measure whether th
 
 In GR, spacetime is the only ruler. If spacetime "stretches" (the metric changes), all measurements made with spacetime—including light propagation—stretch with it. You cannot detect the change.
 
-In TEP, there are two rulers: the gravitational metric (for gravity) and the matter metric (for clocks and light). If one "stretches" relative to the other, the difference is detectable.
-
 9.2.3 Reichenbach's ε-Synchronization
 
 Reichenbach formalized this insight mathematically. Einstein's synchronization convention (ε = 1/2, meaning light takes equal time in each direction) is not empirically determined. Any value 0 &lt; ε &lt; 1 yields an empirically equivalent theory.
@@ -1692,17 +1690,11 @@ This is true—but it assumes light rays are your only tool. The theorem's premi
 
 #### Why It Doesn't Apply to TEP
 
-TEP introduces a second structure: the matter metric g̃<sub>μν</sub> that governs clock behavior. Clocks don't just follow light—they follow their own metric. This provides the "second ruler" that breaks the circularity.
-
-- Single-metric (GR): Malament applies. Light defines synchronization uniquely.
-
-- Two-metric (TEP): Malament doesn't apply. Clocks and light can disagree on synchronization.
+TEP has two geometric structures, $g_{\mu\nu}$ and $\tilde g_{\mu\nu}$, but all nongravitational matter, clocks, and photons couple to the same matter metric $\tilde g_{\mu\nu}$. The discriminator is not a disagreement between a &ldquo;clock metric&rdquo; and a &ldquo;light metric.&rdquo; It is a GR-subtracted non-exact synchronization structure in the matter geometry, $H_{\rm resid}=\oint_C(\tilde\sigma-\sigma_{\rm GR}).$
 
 #### The Key Point: Malament Assumes Causality Is Fundamental
 
-Malament proves uniqueness *given* that light defines causality. TEP introduces a second causal structure (the matter metric). The theorem's premise fails, not its logic.
-
-In single-metric theories, there is only one notion of "simultaneous"—the one defined by light cones. In two-metric theories, clocks and light can define different simultaneity surfaces. The disagreement between them is precisely the residual synchronization holonomy H<sub>resid</sub> targeted by direction-reversing closed-loop experiments.
+In single-metric theories, there is only one notion of "simultaneous"—the one defined by light cones. In TEP, all matter, clocks, and photons share the same matter metric $\tilde g_{\mu\nu}$; the discriminator is not a disagreement between clocks and light, but a GR-subtracted non-exact synchronization structure in the matter geometry, $H_{\rm resid}=\oint_C(\tilde\sigma-\sigma_{\rm GR})$, targeted by direction-reversing closed-loop experiments.
 
 9.2.5 The Two-Clock Thought Experiment
 
@@ -1730,9 +1722,7 @@ TEP alternative:
 
 - Light still travels at c in both directions (conformal coupling preserves null cones)
 
-- But "simultaneous" according to clocks ≠ "simultaneous" according to light
-
-The two-metric structure provides an independent reference that breaks the circularity. Clock synchronization and light synchronization can disagree—and this disagreement is the residual synchronization holonomy H<sub>resid</sub> (after subtracting modeled GR loop effects).
+A conformal clock-rate difference can alter transported clock histories, but clocks and photons remain governed by the same matter metric $\tilde g_{\mu\nu}$. The independent observable is therefore not a disagreement between a clock metric and a light metric, but the GR-subtracted closed-loop residual $H_{\rm resid}=\oint_C(\tilde\sigma-\sigma_{\rm GR})$, which is nonzero only when the transport contains disformal or otherwise non-exact structure.
 
 9.2.6 Implications for TEP
 
@@ -1754,7 +1744,7 @@ TEP preserves local Lorentz invariance, including local isotropy of light propag
 
 - Locally: Light propagates isotropically at c in all directions (ε = 1/2)
 
-- Globally: Clock synchronization around extended loops can exhibit path-dependence due to variations in the conformal factor A(φ) along different routes
+- Globally: different environments and transported histories can produce conformal clock-rate differences. Closed-loop synchronization holonomy requires disformal or otherwise non-exact transport; $\oint d\ln A=0$ in a smooth simply connected region.
 
 - Operationally: Two-way measurements (which average forward and backward paths) see no anisotropy. One-way closed loops can reveal residual holonomy H<sub>resid</sub> if disformal structure B(φ) ≠ 0
 
@@ -1762,13 +1752,7 @@ This is fundamentally different from Reichenbach's ε-synchronization, which mod
 
 #### The Bottom Line for Experimentalists
 
-Malament's theorem says: "If you only have one ruler, you can only make one kind of measurement." This is mathematically correct but operationally limiting.
-
-TEP introduces two rulers: the gravitational metric and the matter metric. These usually agree, but any divergence becomes detectable.
-
-The triangle holonomy test is precisely this: comparing what clocks say about synchronization with what light says. If they disagree after GR subtraction, H<sub>resid</sub> ≠ 0.
-
-Critical distinction: This is not testing whether the local photon null cone is anisotropic (it isn't). It's testing whether clock synchronization and light synchronization define the same global time coordinate (they might not if the matter metric differs from the gravitational metric).
+The triangle holonomy test targets $H_{\rm resid}=\oint_C(\tilde\sigma-\sigma_{\rm GR})$ directly. If the GR-subtracted residual is nonzero, synchronization is non-integrable in the matter geometry.
 
 ### 9.3 Underdetermination vs. Falsifiability
 
@@ -1859,7 +1843,7 @@ This paper has presented a systematic methodological analysis of the canonical p
 
 ### 10.1 Principal Findings
 
-The analysis in Sections 3–8 demonstrates that the six structural limitations identified in §1.2—two-way measurement dominance, local/global conflation, model-dependent calibration, single-path multi-messenger constraints, theory-laden data reduction, and the proximity-regime screening blind spot—are not isolated issues but interconnected features of the experimental tradition.
+The analysis in Sections 3–7 demonstrates that the six structural limitations identified in §1.2—two-way measurement dominance, local/global conflation, model-dependent calibration, single-path multi-messenger constraints, theory-laden data reduction, and the proximity-regime screening blind spot—are not isolated issues but interconnected features of the experimental tradition.
 
 The underdetermination is structural, not accidental. Two-way measurements evolved because they are simpler and provide gauge-invariant results. The PPN formalism, which guides most precision tests, constrains the post-Newtonian limit in the sectors it parameterizes (solar-system dynamics and light propagation). This makes it exceptionally powerful for ruling out many alternatives to GR, while leaving open the possibility of additional clock-sector structure that is not reducible to a small set of PPN light-propagation parameters.
 
@@ -1956,7 +1940,7 @@ The pattern is consistent: each test constrains its intended observable with pre
 | Experiment | Claimed Result | Actual Constraint | TEP Status |
 |---|---|---|---|
 | Pound-Rebka (1960) | Confirms gravitational redshift | Local clock rate ratio | Compatible |
-| Hafele-Keating (1971) | Confirms time dilation | Proper time on closed worldlines | Compatible |
+| Hafele-Keating (1972) | Confirms time dilation | Proper time on closed worldlines | Compatible |
 | Gravity Probe A (1976) | Confirms GR to 7×10⁻⁵ | Two-way clock comparison | Compatible |
 | GPS (1978-present) | Proves GR corrections | Self-consistency of GR model | Compatible |
 | Lunar Laser Ranging (1969-present) | Nordtvedt effect null | Two-way ranging; gravitational sector only | Compatible |
@@ -2072,33 +2056,71 @@ Zumalacárregui, M., & García-Bellido, J. (2014). Transforming gravity: From de
 
 ### TEP Research Program
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.11 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 
-Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
+Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.26 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
 
-Smawfield, M. L. (2025). *Global Time Echoes: 25-Year Analysis of CODE Precise Clock Products*. Preprint v0.18 (Cairo). Zenodo. DOI: [10.5281/zenodo.17517141](https://doi.org/10.5281/zenodo.17517141) (Paper 2)
+Smawfield, M. L. (2025). *Global Time Echoes: 25-Year Analysis of CODE Precise Clock Products*. Preprint v0.19 (Cairo). Zenodo. DOI: [10.5281/zenodo.17517141](https://doi.org/10.5281/zenodo.17517141) (Paper 2)
 
-Smawfield, M. L. (2025). *Global Time Echoes: Raw RINEX Consistency Test*. Preprint v0.5 (Kathmandu). Zenodo. DOI: [10.5281/zenodo.17860166](https://doi.org/10.5281/zenodo.17860166) (Paper 3)
+Smawfield, M. L. (2025). *Global Time Echoes: Raw RINEX Consistency Test*. Preprint v0.4 (Kathmandu). Zenodo. DOI: [10.5281/zenodo.17860166](https://doi.org/10.5281/zenodo.17860166) (Paper 3)
 
-Smawfield, M. L. (2025). *Temporal-Spatial Coupling in Gravitational Lensing: A Reinterpretation of Dark Matter Observations*. Preprint v0.5 (Tortola). Zenodo. DOI: [10.5281/zenodo.17982540](https://doi.org/10.5281/zenodo.17982540) (Paper 4)
+Smawfield, M. L. (2025). *Temporal-Spatial Coupling in Gravitational Lensing: A Reinterpretation of Dark Matter Observations*. Preprint v0.7 (Tortola). Zenodo. DOI: [10.5281/zenodo.17982540](https://doi.org/10.5281/zenodo.17982540) (Paper 4)
 
-Smawfield, M. L. (2025). *Global Time Echoes: Empirical Synthesis*. Preprint v0.4 (Singapore). Zenodo. DOI: [10.5281/zenodo.18004832](https://doi.org/10.5281/zenodo.18004832) (Paper 5)
+Smawfield, M. L. (2025). *Global Time Echoes: Empirical Synthesis*. Preprint v0.5 (Singapore). Zenodo. DOI: [10.5281/zenodo.18004832](https://doi.org/10.5281/zenodo.18004832) (Paper 5)
 
-Smawfield, M. L. (2025). *Temporal Topology Saturation Scale: Cross-Scale Consistency of ρ_T*. Preprint v0.6 (New Delhi). Zenodo. DOI: [10.5281/zenodo.18064365](https://doi.org/10.5281/zenodo.18064365) (Paper 6)
+Smawfield, M. L. (2025). *Temporal Topology Saturation Scale: Cross-Scale Consistency of ρ_T*. Preprint v0.8 (New Delhi). Zenodo. DOI: [10.5281/zenodo.18064365](https://doi.org/10.5281/zenodo.18064365) (Paper 6)
 
-Smawfield, M. L. (2025). *The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate*. Preprint v0.3 (Blantyre). Zenodo. DOI: [10.5281/zenodo.18059250](https://doi.org/10.5281/zenodo.18059250) (Paper 7)
+Smawfield, M. L. (2025). *The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate*. Preprint v0.4 (Blantyre). Zenodo. DOI: [10.5281/zenodo.18059250](https://doi.org/10.5281/zenodo.18059250) (Paper 7)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Optical-Domain Consistency Test via Satellite Laser Ranging*. Preprint v0.3 (Mombasa). Zenodo. DOI: [10.5281/zenodo.18064581](https://doi.org/10.5281/zenodo.18064581) (Paper 8)
 
-Smawfield, M. L. (2025). *What Do Precision Tests of General Relativity Actually Measure?*. Preprint v0.5 (Istanbul). Zenodo. DOI: [10.5281/zenodo.18109760](https://doi.org/10.5281/zenodo.18109760) (Paper 9 — this work)
+Smawfield, M. L. (2025). *What Do Precision Tests of General Relativity Actually Measure?*. Preprint v0.6 (Istanbul). Zenodo. DOI: [10.5281/zenodo.18109760](https://doi.org/10.5281/zenodo.18109760) (Paper 9 — this work)
 
-Smawfield, M. L. (2026). *Temporal Equivalence Principle: Suppressed Density Scaling in Globular Cluster Pulsars*. Preprint v0.6 (Caracas). Zenodo. DOI: [10.5281/zenodo.18165798](https://doi.org/10.5281/zenodo.18165798) (Paper 10)
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Suppressed Density Scaling in Globular Cluster Pulsars*. Preprint v0.8 (Caracas). Zenodo. DOI: [10.5281/zenodo.18165798](https://doi.org/10.5281/zenodo.18165798) (Paper 10)
 
-Smawfield, M. L. (2026). *The Cepheid Bias: Resolving the Hubble Tension*. Preprint v0.6 (Kingston upon Hull). Zenodo. DOI: [10.5281/zenodo.18209702](https://doi.org/10.5281/zenodo.18209702) (Paper 11)
+Smawfield, M. L. (2026). *The Cepheid Bias: Resolving the Hubble Tension*. Preprint v0.9 (Kingston upon Hull). Zenodo. DOI: [10.5281/zenodo.18209702](https://doi.org/10.5281/zenodo.18209702) (Paper 11)
 
-Smawfield, M. L. (2026). *Temporal Equivalence Principle: A Unified Resolution to the JWST High-Redshift Anomalies*. Preprint v0.4 (Kos). Zenodo. DOI: [10.5281/zenodo.19000827](https://doi.org/10.5281/zenodo.19000827) (Paper 12)
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: A Unified Resolution to the JWST High-Redshift Anomalies*. Preprint v0.6 (Kos). Zenodo. DOI: [10.5281/zenodo.19000827](https://doi.org/10.5281/zenodo.19000827) (Paper 12)
 
-Smawfield, M. L. (2026). *Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries*. Preprint v0.4 (Kilifi). Zenodo. DOI: [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) (Paper 13)
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries*. Preprint v0.5 (Kilifi). Zenodo. DOI: [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) (Paper 13)
+
+Smawfield, M. L. (2026). *Global Time Echoes: MGEX Multi-GNSS Clock Replication, 2025–2026*. Preprint v0.1 (Suva). Zenodo. DOI: [10.5281/zenodo.20572727](https://doi.org/10.5281/zenodo.20572727) (Paper 14)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly*. Preprint v0.2 (Yogyakarta). Zenodo. DOI: [10.5281/zenodo.19454863](https://doi.org/10.5281/zenodo.19454863) (Paper 15)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Synchronization Holonomy in Pulsar Scintillation*. Preprint v0.3 (Sintra). Zenodo. DOI: [10.5281/zenodo.19454620](https://doi.org/10.5281/zenodo.19454620) (Paper 16)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Lunar Laser Ranging and the Nordtvedt Effect*. Preprint v0.2 (Lucknow). Zenodo. DOI: [10.5281/zenodo.19446029](https://doi.org/10.5281/zenodo.19446029) (Paper 17)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Native hi_class Conformal Implementation, Linear Perturbation Closure, and CMB Acoustic Peak Preservation*. Preprint v0.6 (Cambridge). Zenodo. DOI: [10.5281/zenodo.20572722](https://doi.org/10.5281/zenodo.20572722) (Paper 18)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: A Blind-Prediction Residual Test in Multiply-Imaged Supernovae*. Preprint v0.1 (Lisboa). Zenodo. DOI: [10.5281/zenodo.20572720](https://doi.org/10.5281/zenodo.20572720) (Paper 19)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: A Sidereal Modulation Audit of LHC Luminosity Data*. Preprint v0.1 (Hanoi). Zenodo. DOI: [10.5281/zenodo.20572725](https://doi.org/10.5281/zenodo.20572725) (Paper 20)
+
+Smawfield, M. L. (2026). *A Scalar-Field Geological Covariate for Laboratory Variance in Measurements of G: A TEP Analysis of the NIST–BIPM Torsion-Balance Discrepancy*. Preprint v0.1 (Naivasha). Zenodo. DOI: [10.5281/zenodo.20576483](https://doi.org/10.5281/zenodo.20576483) (Paper 21)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: A Standard-Siren Test of Bi-Metric Gravitational-Wave Propagation*. Preprint v0.1 (Harare). Zenodo. DOI: [10.5281/zenodo.20572696](https://doi.org/10.5281/zenodo.20572696) (Paper 22)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time*. Preprint v0.2 (Qatar). Zenodo. DOI: [10.5281/zenodo.20572697](https://doi.org/10.5281/zenodo.20572697) (Paper 23)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Fermion Spin as Temporal-Orientation Holonomy*. Preprint v0.1 (Paris). Zenodo. DOI: [10.5281/zenodo.20572705](https://doi.org/10.5281/zenodo.20572705) (Paper 24)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Disformal Kinematics and the Measurement Landscape*. Preprint v0.1 (Kuala Lumpur). Zenodo. DOI: [10.5281/zenodo.20572740](https://doi.org/10.5281/zenodo.20572740) (Paper 25)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: A Covariant Alternative to Cosmic Expansion*. Preprint v0.2 (Athens). Zenodo. DOI: [10.5281/zenodo.20370143](https://doi.org/10.5281/zenodo.20370143) (Paper 26)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Temporal Horizon Cosmology and the Absence of a Physical Big Bang Singularity*. Preprint v0.3 (Thika). Zenodo. DOI: [10.5281/zenodo.20723059](https://doi.org/10.5281/zenodo.20723059) (Paper 27)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Black Holes and the Temporal Horizon*. Preprint v0.2 (Bahrain). Zenodo. DOI: [10.5281/zenodo.21677826](https://doi.org/10.5281/zenodo.21677826) (Paper 28)
+
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium*. Preprint v0.3 (Dubai). Zenodo. DOI: [10.5281/zenodo.21841147](https://doi.org/10.5281/zenodo.21841147) (Paper 29)
+
+Smawfield, M. L. (2026). *The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle*. Preprint v0.1 (Harare). Zenodo. DOI: [10.5281/zenodo.21954258](https://doi.org/10.5281/zenodo.21954258) (Paper 30)
+
+Smawfield, M. L. (2026). *Cosmological Voids vs Temporal Shear: An Empirical Falsification of Kinematic Hubble Tension Solutions*. Preprint v0.2 (Valencia). Zenodo. DOI: [10.5281/zenodo.22150139](https://doi.org/10.5281/zenodo.22150139) (Paper 31)
+
+Smawfield, M. L. (2026). *TEP-PPP: Operational Time Echoes — Phase-Resolved Spatial Clock Priors for GNSS Outage Bridging*. Preprint v0.1 (Pune). Zenodo. DOI: [10.5281/zenodo.18064582](https://doi.org/10.5281/zenodo.18064582) (Paper 32)
 
 ### Galileo Eccentric Orbit Tests
 
@@ -2148,8 +2170,6 @@ Kostelecký, V. A., & Russell, N. (2011). Data tables for Lorentz and CPT violat
 
 Wdowinski, S., et al. (1997). Southern California permanent GPS geodetic array: Spatial filtering of daily positions for estimating coseismic and postseismic displacements. *Journal of Geophysical Research*, 102(B8), 18057-18070. [doi:10.1029/97JB01378](https://doi.org/10.1029/97JB01378)
 
-Dong, D., et al. (2006). Spatiotemporal filtering using principal component analysis and Karhunen-Loeve expansion approaches for regional GPS network analysis. *Journal of Geophysical Research*, 111(B3), B03405. [doi:10.1029/2005JB003806](https://doi.org/10.1029/2005JB003806)
-
 ### Scalar-Tensor Constraints from GW170817
 
 Langlois, D., Saito, R., Yamauchi, D., & Noui, K. (2018). Scalar-tensor theories and modified gravity in the wake of GW170817. *Physical Review D*, 97(6), 061501. [doi:10.1103/PhysRevD.97.061501](https://doi.org/10.1103/PhysRevD.97.061501)
@@ -2180,11 +2200,11 @@ The repository contains the complete manuscript source, methodological framework
 
 #### Repository Structure
 
-`TEP-EXP/ ├── manuscripts/ # Markdown manuscript sources │ ├── 9-TEP-EXP-v0.5-Istanbul.md # Primary manuscript │ └── [other versions] ├── site/ │ ├── components/ # HTML manuscript sections │ │ ├── 1_abstract.html │ │ ├── 2_introduction.html │ │ ├── 3_methodology.html │ │ ├── 4_redshift_tests.html │ │ ├── 5_time_dilation_tests.html │ │ ├── 6_light_propagation_tests.html │ │ ├── 7_multimessenger.html │ │ ├── 8_resonator_tests.html │ │ ├── 9_discriminating_tests.html │ │ ├── 10_discussion.html │ │ ├── 11_conclusions.html │ │ └── 12_references.html │ ├── public/ # Static assets │ └── manifest.json # Site configuration ├── scripts/ │ └── utils/ # Utility scripts │ └── process_pdf.py # PDF generation helper ├── requirements.txt # Python dependencies ├── CITATION.cff # Citation metadata └── README.md # Repository documentation` ### Data Provenance  This is a theoretical and methodological analysis paper. All experimental data referenced is from published literature with full citations provided. Key referenced experiments include:
+`TEP-EXP/ ├── manuscripts/ # Markdown manuscript sources │ ├── 9-TEP-EXP-v0.6-Istanbul.md # Primary manuscript │ └── [other versions] ├── site/ │ ├── components/ # HTML manuscript sections │ │ ├── 1_abstract.html │ │ ├── 2_introduction.html │ │ ├── 3_methodology.html │ │ ├── 4_redshift_tests.html │ │ ├── 5_time_dilation_tests.html │ │ ├── 6_light_propagation_tests.html │ │ ├── 7_multimessenger.html │ │ ├── 8_resonator_tests.html │ │ ├── 9_discriminating_tests.html │ │ ├── 10_discussion.html │ │ ├── 11_conclusions.html │ │ ├── 12_references.html │ │ └── 13_reproducibility.html │ ├── public/ # Static assets │ └── manifest.json # Site configuration ├── scripts/ │ └── utils/ # Utility scripts │ └── process_pdf.py # PDF generation helper ├── requirements.txt # Python dependencies ├── CITATION.cff # Citation metadata └── README.md # Repository documentation` ### Data Provenance  This is a theoretical and methodological analysis paper. All experimental data referenced is from published literature with full citations provided. Key referenced experiments include:
 
-- Pound-Rebka-Snider (1960): Gravitational redshift measurements
+- Pound-Rebka (1960) and Pound-Snider (1965): Gravitational redshift measurements
 
-- Hafele-Keating (1971): Atomic clock transport experiments
+- Hafele-Keating (1972): Atomic clock transport experiments
 
 - Vessot et al. (1980): Gravity Probe A rocket experiment
 

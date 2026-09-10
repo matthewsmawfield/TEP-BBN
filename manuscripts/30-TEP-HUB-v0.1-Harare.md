@@ -1,7 +1,7 @@
 # The Mount Wilson Paradigm: Restoring the Eternal Universe via the Temporal Equivalence Principle
 **Matthew Lukin Smawfield**
 Version: v0.1 (Harare)
-First published: 15 August 2026 · Last updated: 15 August 2026
+First published: 15 August 2026 · Last updated: 9 September 2026
 DOI: 10.5281/zenodo.21954258
 
 ---
@@ -391,7 +391,7 @@ The TEP corpus systematically applies this framework to specific astrophysical a
 
 [23] Lombriser, L. (2023). Cosmology in Minkowski space. *arXiv:2306.16868*.
 
-[24] Smawfield, M. L. (2025). 0-TEP. *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Zenodo. https://doi.org/10.5281/zenodo.16921911
+[24] Smawfield, M. L. (2025). 0-TEP. *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Zenodo, v0.11 (Jakarta). https://doi.org/10.5281/zenodo.16921911
 
 [25] Smawfield, M. L. (2025). 4-TEP-GL. *Temporal-Spatial Coupling in Gravitational Lensing: A Reinterpretation of Dark Matter Observations*. Zenodo. https://doi.org/10.5281/zenodo.17982540
 

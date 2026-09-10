@@ -580,6 +580,168 @@ def run_disformal_clock():
     print_status(f"")
 
     # =====================================================================
+    # 4g. ENVELOPE B(φ) SCAN: non-power-law field dependence
+    #     The pure power-law B(φ) = B₀φⁿ fails the transfer test:
+    #       - n=2 excluded by Cassini
+    #       - n=5 fails transfer (I < 0 at z > 3.4)
+    #     A saturating envelope B(φ) = B₀φ²/(1+(φ/φ_c)²) behaves as φ²
+    #     at small φ (Cassini, where φ_sun ~ 10⁻¹⁰) but saturates at large
+    #     φ (cosmological, where φ_abs ~ 1), so the effective power index
+    #     varies with field amplitude. This can satisfy Cassini while
+    #     keeping I > 0 across redshifts.
+    # =====================================================================
+    print_status(f"\n--- 4g. Envelope B(φ) Scan: Non-Power-Law Field Dependence ---", "TITLE")
+    print_status(f"  B(φ) = B₀ φ² / (1 + (φ/φ_c)²)", "PROCESS")
+    print_status(f"  Small-φ limit (Cassini): B ∝ φ²  (n_eff = 2)", "PROCESS")
+    print_status(f"  Large-φ limit (cosmo):  B → B₀ φ_c²  (n_eff = 0, saturated)", "PROCESS")
+    print_status(f"  The saturation keeps B·φ̇² bounded, preserving I > 0.", "PROCESS")
+    print_status(f"")
+
+    def B_envelope(phi, B0_env, phi_c):
+        """Saturating envelope: B₀ φ² / (1 + (φ/φ_c)²)"""
+        return B0_env * phi**2 / (1.0 + (phi / phi_c)**2)
+
+    def dB_envelope(phi, B0_env, phi_c):
+        """Derivative: dB/dφ = B₀ × 2φ(1+(φ/φ_c)²) - B₀φ²×2φ/φ_c²) / (1+(φ/φ_c)²)²
+        = B₀ × 2φ / (1+(φ/φ_c)²)²"""
+        return B0_env * 2.0 * phi / (1.0 + (phi / phi_c)**2)**2
+
+    # Scan φ_c over a range. For each φ_c, solve for B₀ that reproduces
+    # the Q1009 velocity shift using the exact lapse, then check:
+    #   (a) Cassini: γ_dis < 2.3e-5
+    #   (b) Transfer: I > 0 at all three sightlines
+    phi_c_values = np.logspace(-2, 1, 30)  # φ_c/M_Pl from 0.01 to 10
+    envelope_results = []
+
+    print_status(f"  {'φ_c/M_Pl':<12} {'B₀_env':<14} {'γ_dis':<12} {'Cassini':<8} "
+                 f"{'I_Q1009':<10} {'I_PKS':<10} {'I_J1332':<10} {'Transfer':<10}", "PROCESS")
+    print_status(f"  {'-'*12} {'-'*14} {'-'*12} {'-'*8} {'-'*10} {'-'*10} {'-'*10} {'-'*10}", "PROCESS")
+
+    for phi_c in phi_c_values:
+        # Solve for B₀ using exact lapse at Q1009
+        # N²(φ) = A² - B(φ)·(∂₀φ)²
+        # Δ_ec = (1/2) ln[N_edge²/N_core²]
+        # B(φ_core) = B(φ_abs - Δδφ/2), B(φ_edge) = B(φ_abs + Δδφ/2)
+        # For small Δδφ: B(φ_core) - B(φ_edge) ≈ -dB/dφ × Δδφ
+        # Exact: N_core² = A² - B(φ_core)·φ̇², N_edge² = A² - B(φ_edge)·φ̇²
+        phi_core = phi_abs_MPl - D_dphi / 2.0
+        phi_edge = phi_abs_MPl + D_dphi / 2.0
+
+        # For the envelope, B(φ) saturates, so the difference B(edge) - B(core)
+        # depends on dB/dφ at φ_abs. The velocity shift is:
+        # dv = (1/2) c × ln(N_edge²/N_core²)
+        # N_edge² = A² - B(φ_edge)·φ̇², N_core² = A² - B(φ_core)·φ̇²
+        # For the near-critical branch, we need B₀ such that dv = -dv_target
+
+        # Use bisection on B₀
+        def dv_for_B0(B0_try):
+            B_core = B_envelope(phi_core, B0_try, phi_c)
+            B_edge = B_envelope(phi_edge, B0_try, phi_c)
+            N_core_sq = A_abs**2 - B_core * dphi_0_eV2**2
+            N_edge_sq = A_abs**2 - B_edge * dphi_0_eV2**2
+            if N_core_sq <= 0 or N_edge_sq <= 0:
+                return float('inf')
+            return 0.5 * np.log(N_edge_sq / N_core_sq) * c_cgs / 1e5
+
+        # Bisection: find B₀ such that dv_for_B0 = -dv_H_fitted_kms
+        target_dv = -abs(dv_H_fitted_kms)
+        B0_lo, B0_hi = 1e-3, 1e20
+        # Check bounds
+        dv_lo = dv_for_B0(B0_lo)
+        dv_hi = dv_for_B0(B0_hi)
+        if not (np.isfinite(dv_lo) and np.isfinite(dv_hi)):
+            continue
+        if dv_lo * dv_hi > 0:
+            # Same sign — no root in range
+            # Try to find a range where dv changes sign
+            found = False
+            for B0_test in np.logspace(-3, 20, 100):
+                dv_test = dv_for_B0(B0_test)
+                if not np.isfinite(dv_test):
+                    continue
+                if dv_test < 0:
+                    B0_lo = B0_test
+                    found = True
+                    break
+                B0_hi = B0_test
+            if not found:
+                continue
+
+        for _ in range(200):
+            B0_mid = np.sqrt(B0_lo * B0_hi)
+            dv_mid = dv_for_B0(B0_mid)
+            if not np.isfinite(dv_mid):
+                B0_hi = B0_mid
+                continue
+            if dv_mid > target_dv:
+                B0_lo = B0_mid
+            else:
+                B0_hi = B0_mid
+            if abs(B0_hi / B0_lo - 1) < 1e-8:
+                break
+        B0_env = np.sqrt(B0_lo * B0_hi)
+
+        # Cassini check
+        B_phi_sun_env = B_envelope(phi_sun_MPl, B0_env, phi_c)
+        delta_grr_env = B_phi_sun_env * dphi_dr_sun_eV2**2
+        gamma_env = delta_grr_env / (2 * U_sun)
+        cassini_env = abs(gamma_env) < 2.3e-5
+
+        # Transfer check: I > 0 at all three sightlines
+        transfer_ok = True
+        I_values = []
+        for sl in sightlines:
+            z_sl = sl['z_abs']
+            phi_sl = np.log(1 + z_sl) / abs(beta_A)
+            A_sl = 1.0 / (1 + z_sl)
+            E_sl = np.sqrt(Omega_m * (1 + z_sl)**3 + Omega_L)
+            H_sl = H0_kms * E_sl * 1e5 / Mpc_cm * hbar_eVs
+            dphi0_sl = (M_Pl_eV * H_sl)**2
+            B_bar_sl = B_envelope(phi_sl, B0_env, phi_c)
+            u_sl = B_bar_sl * dphi0_sl / A_sl**2
+            I_sl = 1.0 - u_sl
+            I_values.append(I_sl)
+            if I_sl <= 0:
+                transfer_ok = False
+
+        print_status(f"  {phi_c:<12.4f} {B0_env:<14.3e} {gamma_env:<12.3e} "
+                     f"{'✓' if cassini_env else '✗':<8} "
+                     f"{I_values[0]:<10.2e} {I_values[1]:<10.2e} {I_values[2]:<10.2e} "
+                     f"{'✓' if transfer_ok else '✗':<10}", "PROCESS")
+
+        envelope_results.append({
+            'phi_c_over_MPl': float(phi_c),
+            'B0_envelope': float(B0_env),
+            'gamma_dis': float(gamma_env),
+            'cassini_pass': bool(cassini_env),
+            'I_q1009': float(I_values[0]),
+            'I_pks1937': float(I_values[1]),
+            'I_j1332': float(I_values[2]),
+            'transfer_pass': bool(transfer_ok),
+            'both_pass': bool(cassini_env and transfer_ok),
+        })
+
+    # Find viable envelope solutions
+    viable = [r for r in envelope_results if r['both_pass']]
+    if viable:
+        print_status(f"")
+        print_status(f"  → {len(viable)} viable envelope solutions found!", "SUCCESS")
+        print_status(f"  The saturating B(φ) = B₀φ²/(1+(φ/φ_c)²) satisfies BOTH", "SUCCESS")
+        print_status(f"  Cassini AND cross-redshift transfer for φ_c in the range:", "SUCCESS")
+        phi_c_min = min(r['phi_c_over_MPl'] for r in viable)
+        phi_c_max = max(r['phi_c_over_MPl'] for r in viable)
+        print_status(f"  φ_c/M_Pl ∈ [{phi_c_min:.4f}, {phi_c_max:.4f}]", "SUCCESS")
+        best = max(viable, key=lambda r: min(r['I_q1009'], r['I_pks1937'], r['I_j1332']))
+        print_status(f"  Best (max min-I): φ_c={best['phi_c_over_MPl']:.4f}, "
+                     f"B₀={best['B0_envelope']:.3e}, γ_dis={best['gamma_dis']:.2e}", "SUCCESS")
+    else:
+        print_status(f"")
+        print_status(f"  → No envelope solution satisfies both Cassini and transfer.", "WARNING")
+        print_status(f"  The saturating form alone is insufficient;", "WARNING")
+        print_status(f"  z-dependent screening or a different functional form may be needed.", "WARNING")
+    print_status(f"")
+
+    # =====================================================================
     # 5. DETAILED ANALYSIS: n=2 (v0.11 weak-field) and n=5 (minimal viable)
     #    Using EXACT lapse B₀ (root-found), not linearized B₀.
     # =====================================================================

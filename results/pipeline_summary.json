@@ -1,12 +1,12 @@
 {
   "pipeline_run": {
-    "timestamp": "2026-09-10T15:01:56.306971",
+    "timestamp": "2026-09-10T22:11:22.195460",
     "sightline": "Q1009+2956",
     "mode": "full",
     "total_steps": 14,
-    "completed": 13,
+    "completed": 14,
     "failed": 0,
-    "skipped": 1,
+    "skipped": 0,
     "all_passed": true
   },
   "step_results": {
@@ -23,68 +23,67 @@
       "step_09_disformal_transport",
       "step_04h_disformal_clock",
       "step_09b_screening_plot",
+      "secondary_analyses",
       "finalize_manuscript_numbers"
     ],
     "failed": [],
-    "skipped": [
-      "secondary_analyses"
-    ]
+    "skipped": []
   },
   "step_timings": {
     "step_01_embedding": {
-      "elapsed": 0.594965934753418,
+      "elapsed": 0.4591391086578369,
       "status": "OK"
     },
     "step_02_q1009": {
-      "elapsed": 139.36893010139465,
+      "elapsed": 92.61819791793823,
       "status": "OK"
     },
     "step_03_significance": {
-      "elapsed": 1759.2296028137207,
+      "elapsed": 1589.2582371234894,
       "status": "OK"
     },
     "step_04_prior": {
-      "elapsed": 0.4108877182006836,
+      "elapsed": 0.39493894577026367,
       "status": "OK"
     },
     "step_04b_amplitude": {
-      "elapsed": 0.0049419403076171875,
+      "elapsed": 0.0033462047576904297,
       "status": "OK"
     },
     "step_05_thermodynamics": {
-      "elapsed": 0.019183874130249023,
+      "elapsed": 0.01682281494140625,
       "status": "OK"
     },
     "step_06_helium": {
-      "elapsed": 0.6134259700775146,
+      "elapsed": 0.5249178409576416,
       "status": "OK"
     },
     "step_07_global_opacity": {
-      "elapsed": 0.018148183822631836,
+      "elapsed": 0.0172426700592041,
       "status": "OK"
     },
     "step_08_light_elements": {
-      "elapsed": 0.3346741199493408,
+      "elapsed": 0.33497190475463867,
       "status": "OK"
     },
     "step_09_disformal_transport": {
-      "elapsed": 0.0038509368896484375,
+      "elapsed": 0.003473043441772461,
       "status": "OK"
     },
     "step_04h_disformal_clock": {
-      "elapsed": 0.006349086761474609,
+      "elapsed": 0.00935506820678711,
       "status": "OK"
     },
     "step_09b_screening_plot": {
-      "elapsed": 0.4385511875152588,
+      "elapsed": 0.42018795013427734,
       "status": "OK"
     },
     "secondary_analyses": {
-      "elapsed": 0,
-      "status": "SKIPPED"
+      "elapsed": 4477.503946781158,
+      "status": "OK"
     },
     "finalize_manuscript_numbers": {
-      "elapsed": 0.053164005279541016,
+      "elapsed": 0.465043306350708,
       "status": "OK"
     }
   },
@@ -334,7 +333,7 @@
       ]
     },
     "gate4b_amplitude.json": {
-      "size_bytes": 4324,
+      "size_bytes": 5785,
       "keys": [
         "4B_frozen_params",
         "4B_ionisation_correction",
@@ -344,7 +343,8 @@
         "4B_reference_case",
         "4B_falsifiability",
         "4B_note_on_sign_vs_amplitude",
-        "4B_correction_note"
+        "4B_correction_note",
+        "4B_target_reframing"
       ]
     },
     "gate4b_closure.json": {
@@ -359,7 +359,7 @@
       ]
     },
     "gate4b_disformal_clock.json": {
-      "size_bytes": 8887,
+      "size_bytes": 17092,
       "keys": [
         "gate",
         "title",
@@ -367,6 +367,9 @@
         "theory",
         "mechanism",
         "key_formula",
+        "linearization_validity_audit",
+        "exact_lapse_scan",
+        "h_t_coordinate_audit",
         "cosmological_field",
         "absorber_params",
         "conformal_reference",
@@ -447,10 +450,12 @@
       ]
     },
     "gate6_helium_results.json": {
-      "size_bytes": 544,
+      "size_bytes": 6610,
       "keys": [
         "theoretical_equilibrium",
-        "simulations"
+        "simulations",
+        "parameters",
+        "f_vmo_sensitivity"
       ]
     },
     "gate6_orphan_search.json": {
@@ -543,18 +548,19 @@
       ]
     },
     "gate8_wavelength_systematics.json": {
-      "size_bytes": 2605,
+      "size_bytes": 12100,
       "keys": [
         "gate",
         "description",
         "method",
+        "systematic_model",
         "source_files",
         "n_mc",
         "results"
       ]
     },
     "gate_j13322_parameter_ledger.json": {
-      "size_bytes": 23906,
+      "size_bytes": 24031,
       "keys": [
         "manifest",
         "statistic_definition",

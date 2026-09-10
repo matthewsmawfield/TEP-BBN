@@ -1,15 +1,9 @@
-v0.3 (Dubai) — 2026-09-10 — Three-sightline spectroscopic analysis with TEP absorber field
+v0.4 (Dubai) — 2026-09-10 — Literature-calibrated systematics, helium sensitivity scan, and envelope B(phi) probe
 
-- Replaced beta_eff with Paper 0 alpha_eff convention; Cassini bound now S_Sigma^odot <= 3.4e-3
-- Separated S_A^abs (absorber amplitude) from S_Sigma (source-charge response); removed three-anchor calibration and 132x contrast claims
-- Added Gate 4B-IV disformal clock mechanism: temporal-disformal channel via cosmological d_0 phi, exact lapse, three-sightline diagnostic/transfer/predictive closure test
-- Added Gate 4B-0 differential transport, CT closure, and honest one-LOS calculation
-- Added Gate 6-III orphan pilot search (6 candidates) and KODIAQ archival null test
-- Monte Carlo increased from N=200 to N=1000 per sightline
-- Restructured Bonferroni: primary 6-test family (alpha/6), Gate 8 as separate secondary family (alpha/3)
-- Added wavelength-systematics sensitivity analysis for Gate 8 velocity deviations
-- Recast A_env per sightline using fitted free-H displacement; added J1332 b_turb boundary check
-- Completed helium attractor analysis (Y0=0 to 0.8 all converge to Y_eq=0.247)
-- Softened TEP identification to candidate framing throughout (displaced-H phenomenology, not definitive edge-gas signature)
-- Noted D-selected sample is not an independent sign test
-- Updated reference [1] to v0.11 Jakarta; added SQUAD/KODIAQ data to reproducibility table
+- Replaced generic wavelength-systematics scan (0.5/1.0 km/s) with literature-calibrated per-sightline sigma_sys: 0.25 km/s Keck/HIRES (Griest et al. 2010), 0.05 km/s VLT/ESPRESSO (Schmidt et al. 2021), 0.20 km/s VLT/UVES+HIRES (Whitmore & Murphy 2014); reframed systematic as intra-spectrum relative velocity distortion (absolute offsets and inter-night drifts cancel in the relative free-H vs isotope measurement)
+- Under the literature systematic floor, Gate 8 velocity-deviation rejections survive at 9.1sigma (Q1009+2956, p~1e-19), 11.0sigma (PKS1937-101, p~1e-27), 2.1sigma (J1332+0052, p=0.032); Q1009 degrades to 2.7sigma only at sigma_sys=1.0 km/s, exceeding all measured intra-spectrum distortions
+- Added Gate 6 f_VMO sensitivity scan (f_VMO in [0.90, 1.00] at delta_f=0.005): Y_eq varies 0.227 to 0.248, observed Y_p=0.245±0.003 compatible with f_VMO in [0.975, 0.995] (delta_f~0.02, not a fine-tuned point); softened f_VMO requirement from >=0.99 to >=~0.97
+- Added Gate 4B-IV envelope B(phi) scan: saturating B(phi)=B0 phi^2/(1+(phi/phi_c)^2) tested as non-power-law field dependence; no viable solution satisfies both Cassini and cross-redshift transfer in the scanned range, saturating form alone insufficient
+- Added "Limit of the reduced Gate-4B closure" paragraph: failed power-law transfer constrains the specific reduced construction, not the full TEP matter-frame transport problem (covariant omega=-u^mu k_mu evaluation remains open)
+- Added three supercalibration references [71-73]: Griest et al. (2010), Whitmore & Murphy (2014), Schmidt et al. (2021)
+- Pipeline step count 14 to 15 (added step_08c_wavelength_systematics to disformal phase)

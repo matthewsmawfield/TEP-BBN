@@ -14,7 +14,7 @@
         GitHub Repository: <a href="https://github.com/matthewsmawfield/TEP-BBN">github.com/matthewsmawfield/TEP-BBN</a>
     </p>
     <p>
-        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 14 analysis steps across 4 phases: core gates (1–8), Gate 8 calibration (step\_08b, true-D injection Monte Carlo), disformal transport, secondary robustness analyses, and manuscript finalization.
+        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 15 analysis steps across 4 phases: core gates (1–8), Gate 8 calibration (step\_08b, true-D injection Monte Carlo), Gate 8 wavelength-systematics sensitivity (step\_08c), disformal transport, secondary robustness analyses, and manuscript finalization.
         All steps are orchestrated by <code>scripts/run_pipeline.py</code> with comprehensive per-step logging, SHA-256 checksum manifest generation, and a pipeline summary ledger.
     </p>
     <p>
@@ -32,7 +32,7 @@ TEP-BBN/
 │   ├── literature_components/     # Published VPFIT model files and component tables
 │   └── processed/                 # Pipeline-ready union manifests
 ├── scripts/
-│   ├── steps/                     # 14 pipeline steps (01-09, 08b, 09b, secondary, finalize)
+│   ├── steps/                     # 15 pipeline steps (01-09, 08b, 08c, 09b, secondary, finalize)
 │   ├── lib/                       # Physical RT engine, Voigt fitters, model parsers
 │   ├── utils/                     # Logging, isotopic shift, shear model utilities
 │   └── run_pipeline.py            # Master orchestration script (4-phase pipeline)
@@ -142,7 +142,7 @@ TEP-BBN/
 
     <h3>Pipeline Architecture</h3>
     <p>
-        The analysis pipeline comprises 4 phases and 14 steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, opacity boundary analysis, Gate 8 true-D injection calibration, disformal transport calibration, secondary robustness checks, and manuscript number finalization.
+        The analysis pipeline comprises 4 phases and 15 steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, opacity boundary analysis, Gate 8 true-D injection calibration, wavelength-systematics sensitivity, disformal transport calibration, secondary robustness checks, and manuscript number finalization.
         Each step is a standalone Python script in <code>scripts/steps/</code> that produces serialized JSON outputs and
         detailed logs with SHA-256 checksum verification.
     </p>
@@ -234,6 +234,13 @@ TEP-BBN/
                 <td style="padding: 0.4em;">~45 min</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">1</td>
+                <td style="padding: 0.4em;">08C</td>
+                <td style="padding: 0.4em;"><code>step_08c_wavelength_systematics.py</code></td>
+                <td style="padding: 0.4em;">Gate 8 wavelength-systematics sensitivity (literature-calibrated $\sigma_{\rm sys}$ per sightline, $N=100\,000$ MC)</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
                 <td style="padding: 0.4em;">2</td>
                 <td style="padding: 0.4em;">09</td>
                 <td style="padding: 0.4em;"><code>step_09_disformal_transport.py</code></td>
@@ -292,7 +299,7 @@ TEP-BBN/
         </tr>
         <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
             <td style="padding: 0.4em;">Disformal + Secondary (Phases 2–3)</td>
-            <td style="padding: 0.4em;">3</td>
+            <td style="padding: 0.4em;">4</td>
             <td style="padding: 0.4em;">~10 min per sightline</td>
         </tr>
         <tr style="border-bottom: 1px solid #d0d7e0;">
@@ -302,7 +309,7 @@ TEP-BBN/
         </tr>
         <tr style="border-bottom: 2px solid #4a7fb5; font-weight: 600;">
             <td style="padding: 0.4em;">Total (3 sightlines)</td>
-            <td style="padding: 0.4em;">14</td>
+            <td style="padding: 0.4em;">15</td>
             <td style="padding: 0.4em;">~2 hr</td>
         </tr>
     </table>
@@ -383,6 +390,45 @@ python scripts/run_pipeline.py --n-sims 500
             <td style="padding: 0.4em;">Linux/macOS</td>
             <td style="padding: 0.4em;">macOS Sequoia 15.1</td>
         </tr>
+    </table>
+
+    <h4>Version Changelog (v0.3 → v0.4)</h4>
+    <p>
+        The following changes were applied between v0.3 (Dubai) and v0.4 (Dubai):
+    </p>
+    <table class="data-table" style="font-size: 0.9em;">
+        <thead>
+            <tr>
+                <th>Change</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Literature-calibrated wavelength systematics</td>
+                <td>The generic $\sigma_{\rm sys} \in \{0.5, 1.0\}$\,km/s scan (step\_08c) is replaced by instrument-specific residual distortion amplitudes from supercalibration studies: $\sigma_{\rm sys} = 0.25$\,km/s for Keck/HIRES (Griest et al. 2010, iodine-cell intra-order distortions $\sim 250$\,m/s), $0.05$\,km/s for VLT/ESPRESSO (Schmidt et al. 2021, laser-frequency-comb discrepancies $\lesssim 24$\,m/s), and $0.20$\,km/s for VLT/UVES+HIRES (Whitmore & Murphy 2014, solar-twin long-range distortions $\sim 200$\,m/s per $1000$\,\AA). The Gate 8 observable is reframed as a <em>relative</em> velocity offset between the fitted free-H component and the isotope-shifted position within the same spectrum, so absolute wavelength offsets and inter-night drifts cancel; only intra-spectrum distortions contribute.</td>
+            </tr>
+            <tr>
+                <td>Gate 8 velocity-deviation significances under systematic floor</td>
+                <td>Folding the literature $\sigma_{\rm sys}$ into the calibrated spread via $\sigma_{\rm total} = \sqrt{\sigma_{\rm fit}^2 + \sigma_{\rm sys}^2}$ ($N = 100\,000$ Monte Carlo draws per case) gives Gaussian-equivalent significances of $9.1\sigma$ (Q1009$+$2956), $11.0\sigma$ (PKS\,1937$-$101), and $2.1\sigma$ (J1332$+$0052), corresponding under a normal-tail approximation to $p\sim10^{-19}$, $10^{-27}$, and $0.032$, respectively; the Monte-Carlo sampling itself does not directly resolve tail probabilities below its finite simulation floor. The Q1009 and PKS\,1937 rejections of isotope-D survive at high significance; the J1332 result remains not individually significant after the $\alpha/3$ correction. A sensitivity scan over $\sigma_{\rm sys} \in [0, 1]$\,km/s is reported in results/gate8\_wavelength\_systematics.json; the $9.1\sigma$ Q1009 result degrades to $2.7\sigma$ only at $\sigma_{\rm sys} = 1.0$\,km/s, exceeding all measured intra-spectrum distortions for the relevant instruments.</td>
+            </tr>
+            <tr>
+                <td>Helium $f_{\rm VMO}$ sensitivity scan</td>
+                <td>A dedicated scan over $f_{\rm VMO} \in [0.90, 1.00]$ at $\Delta f = 0.005$ resolution (step\_06, results/gate6\_helium\_results.json) confirms that $Y_{\rm eq}$ varies from $0.227$ ($f_{\rm VMO} = 0.90$) to $0.248$ ($f_{\rm VMO} = 1.00$), with the observed $Y_p = 0.245 \pm 0.003$ compatible with $f_{\rm VMO} \in [0.975, 0.995]$ — a range spanning $\Delta f_{\rm VMO} \approx 0.02$, not a single fine-tuned point. The $f_{\rm VMO}$ requirement is softened from $\geq 0.99$ to $\gtrsim 0.97$.</td>
+            </tr>
+            <tr>
+                <td>Envelope $B(\phi)$ probe</td>
+                <td>A saturating non-power-law envelope $B(\phi) = B_0\,\varphi^2/(1+(\varphi/\varphi_c)^2)$ with $\varphi \equiv \phi/M_{\rm Pl}$ and $\varphi_c \equiv \phi_c/M_{\rm Pl}$ is scanned over $\varphi_c \in [10^{-2}, 10]$ (step\_04h) as a candidate field dependence that behaves as $\varphi^2$ at small $\varphi$ (Cassini) while saturating at large $\varphi$ (cosmological). No viable solution satisfies both the Cassini bound and cross-redshift transfer ($\mathcal{I} > 0$ at all three sightlines) in the scanned range; the saturating form alone is insufficient. A "Limit of the reduced Gate-4B closure" paragraph is added clarifying that the failed power-law transfer constrains the specific reduced construction tested here, not the full TEP matter-frame transport problem, whose covariant $\omega = -u^\mu k_\mu$ evaluation remains open.</td>
+            </tr>
+            <tr>
+                <td>Supercalibration references</td>
+                <td>Three supercalibration references added [71] Griest et al. (2010), [72] Whitmore & Murphy (2014), [73] Schmidt et al. (2021).</td>
+            </tr>
+            <tr>
+                <td>Pipeline step count</td>
+                <td>step\_08c\_wavelength\_systematics promoted into the disformal phase of <code>run_pipeline.py</code>; total step count $14 \to 15$.</td>
+            </tr>
+        </tbody>
     </table>
 
     <h4>Version Changelog (v0.2 → v0.3)</h4>

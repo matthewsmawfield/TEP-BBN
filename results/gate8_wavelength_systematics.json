@@ -1,77 +1,331 @@
 {
   "gate": "8-wavelength-systematics",
-  "description": "Sensitivity of Gate 8 velocity-deviation p-values to residual wavelength-calibration systematics",
+  "description": "Sensitivity of Gate 8 velocity-deviation p-values to residual wavelength-calibration systematics, with literature-based sigma_sys per sightline",
   "method": "sigma_total = sqrt(sigma_fit^2 + sigma_sys^2); p from Gaussian tail and Monte Carlo (N=100000)",
+  "systematic_model": "Intra-spectrum relative velocity distortion (not absolute offset). The Gate 8 observable is a relative velocity offset between free-H and isotope-shifted position within the same spectrum; absolute wavelength offsets and inter-night drifts cancel.",
   "source_files": [
     "gate8_calibration_Q10092956.json",
-    "gate8_calibration_PKS1937101.json"
+    "gate8_calibration_PKS1937101.json",
+    "gate8_calibration_J13320052.json"
   ],
   "n_mc": 100000,
   "results": {
     "Q1009+2956": {
+      "instrument": "Keck/HIRES",
+      "calibration": "ThAr (no supercalibration)",
       "observed_deviation_kms": 2.7172821441621977,
       "observed_abs_deviation_kms": 2.7172821441621977,
       "sigma_fit_kms": 0.1609719108810642,
       "original_calibrated_p": 0.0,
       "original_nominal_sigma": 16.880473924235705,
+      "sigma_sys_literature": {
+        "value_kms": 0.25,
+        "reference": "Griest et al. (2009), ApJ 708, 158",
+        "basis": "Intra-order distortion ~250 m/s measured via iodine-cell supercalibration of HIRES ThAr pipeline",
+        "systematic_type": "intra-spectrum relative velocity distortion (not absolute offset)"
+      },
       "systematic_cases": {
-        "sigma_sys_0.0": {
+        "sigma_sys_0.00": {
           "sigma_sys_kms": 0.0,
           "sigma_total_kms": 0.1609719108810642,
           "effective_sigma": 16.880473924235705,
           "p_gaussian": 0.0,
           "p_monte_carlo": 0.0,
-          "n_mc": 100000
+          "n_mc": 100000,
+          "is_literature_value": false
         },
-        "sigma_sys_0.5": {
+        "sigma_sys_0.05": {
+          "sigma_sys_kms": 0.05,
+          "sigma_total_kms": 0.16855846490966056,
+          "effective_sigma": 16.12071007895411,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.10": {
+          "sigma_sys_kms": 0.1,
+          "sigma_total_kms": 0.18950450151038964,
+          "effective_sigma": 14.338879142737525,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.15": {
+          "sigma_sys_kms": 0.15,
+          "sigma_total_kms": 0.2200271712600543,
+          "effective_sigma": 12.349757207715905,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.20": {
+          "sigma_sys_kms": 0.2,
+          "sigma_total_kms": 0.25673323916606766,
+          "effective_sigma": 10.584068323169195,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.25": {
+          "sigma_sys_kms": 0.25,
+          "sigma_total_kms": 0.2973414806122773,
+          "effective_sigma": 9.138590884012705,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": true
+        },
+        "sigma_sys_0.30": {
+          "sigma_sys_kms": 0.3,
+          "sigma_total_kms": 0.3404584498770757,
+          "effective_sigma": 7.9812445399527805,
+          "p_gaussian": 1.5543122344752192e-15,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.50": {
           "sigma_sys_kms": 0.5,
           "sigma_total_kms": 0.5252732204221925,
           "effective_sigma": 5.173083337426113,
           "p_gaussian": 2.302622494898543e-07,
           "p_monte_carlo": 0.0,
-          "n_mc": 100000
+          "n_mc": 100000,
+          "is_literature_value": false
         },
-        "sigma_sys_1.0": {
+        "sigma_sys_1.00": {
           "sigma_sys_kms": 1.0,
           "sigma_total_kms": 1.0128731194442377,
           "effective_sigma": 2.6827468238599983,
           "p_gaussian": 0.007302024619290082,
           "p_monte_carlo": 0.00771,
-          "n_mc": 100000
+          "n_mc": 100000,
+          "is_literature_value": false
         }
+      },
+      "literature_result": {
+        "sigma_sys_kms": 0.25,
+        "sigma_total_kms": 0.2973414806122773,
+        "effective_sigma": 9.138590884012705,
+        "p_gaussian": 0.0,
+        "p_monte_carlo": 0.0,
+        "reference": "Griest et al. (2009), ApJ 708, 158"
       }
     },
     "PKS1937-101": {
+      "instrument": "VLT/ESPRESSO",
+      "calibration": "ThAr + Fabry-Perot",
       "observed_deviation_kms": 5.658173778810635,
       "observed_abs_deviation_kms": 5.658173778810635,
       "sigma_fit_kms": 0.5119971805133374,
       "original_calibrated_p": 0.0,
       "original_nominal_sigma": 11.05118151849518,
+      "sigma_sys_literature": {
+        "value_kms": 0.05,
+        "reference": "Schmidt et al. (2021), A&A 646, A104",
+        "basis": "Wavelength-dependent discrepancies up to 24 m/s between ThAr+FP and laser frequency comb; 50 m/s adopted as conservative upper bound",
+        "systematic_type": "intra-spectrum relative velocity distortion (not absolute offset)"
+      },
       "systematic_cases": {
-        "sigma_sys_0.0": {
+        "sigma_sys_0.00": {
           "sigma_sys_kms": 0.0,
           "sigma_total_kms": 0.5119971805133374,
           "effective_sigma": 11.05118151849518,
           "p_gaussian": 0.0,
           "p_monte_carlo": 0.0,
-          "n_mc": 100000
+          "n_mc": 100000,
+          "is_literature_value": false
         },
-        "sigma_sys_0.5": {
+        "sigma_sys_0.05": {
+          "sigma_sys_kms": 0.05,
+          "sigma_total_kms": 0.5144328069375116,
+          "effective_sigma": 10.998858747937389,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": true
+        },
+        "sigma_sys_0.10": {
+          "sigma_sys_kms": 0.1,
+          "sigma_total_kms": 0.5216714606470312,
+          "effective_sigma": 10.84623983798688,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.15": {
+          "sigma_sys_kms": 0.15,
+          "sigma_total_kms": 0.5335176781078647,
+          "effective_sigma": 10.605410112889805,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.20": {
+          "sigma_sys_kms": 0.2,
+          "sigma_total_kms": 0.549673642131044,
+          "effective_sigma": 10.293696741350585,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.25": {
+          "sigma_sys_kms": 0.25,
+          "sigma_total_kms": 0.5697728607555883,
+          "effective_sigma": 9.93057789959881,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.30": {
+          "sigma_sys_kms": 0.3,
+          "sigma_total_kms": 0.593414789884451,
+          "effective_sigma": 9.53493892511912,
+          "p_gaussian": 0.0,
+          "p_monte_carlo": 0.0,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.50": {
           "sigma_sys_kms": 0.5,
           "sigma_total_kms": 0.7156403516107843,
           "effective_sigma": 7.906448771474459,
           "p_gaussian": 2.6645352591003757e-15,
           "p_monte_carlo": 0.0,
-          "n_mc": 100000
+          "n_mc": 100000,
+          "is_literature_value": false
         },
-        "sigma_sys_1.0": {
+        "sigma_sys_1.00": {
           "sigma_sys_kms": 1.0,
           "sigma_total_kms": 1.1234505386769846,
           "effective_sigma": 5.036424465534462,
           "p_gaussian": 4.743081523095327e-07,
           "p_monte_carlo": 0.0,
-          "n_mc": 100000
+          "n_mc": 100000,
+          "is_literature_value": false
         }
+      },
+      "literature_result": {
+        "sigma_sys_kms": 0.05,
+        "sigma_total_kms": 0.5144328069375116,
+        "effective_sigma": 10.998858747937389,
+        "p_gaussian": 0.0,
+        "p_monte_carlo": 0.0,
+        "reference": "Schmidt et al. (2021), A&A 646, A104"
+      }
+    },
+    "J1332+0052": {
+      "instrument": "VLT/UVES + Keck/HIRES",
+      "calibration": "ThAr (no supercalibration)",
+      "observed_deviation_kms": -36.604516624051314,
+      "observed_abs_deviation_kms": 36.604516624051314,
+      "sigma_fit_kms": 17.095689763974008,
+      "original_calibrated_p": 0.094,
+      "original_nominal_sigma": 2.1411547079655446,
+      "sigma_sys_literature": {
+        "value_kms": 0.2,
+        "reference": "Whitmore & Murphy (2014), MNRAS 444, 2",
+        "basis": "Long-range distortions ~200 m/s per 1000 A for UVES/HIRES archival spectra via solar-twin/asteroid supercalibration",
+        "systematic_type": "intra-spectrum relative velocity distortion (not absolute offset)"
+      },
+      "systematic_cases": {
+        "sigma_sys_0.00": {
+          "sigma_sys_kms": 0.0,
+          "sigma_total_kms": 17.095689763974008,
+          "effective_sigma": 2.1411547079655446,
+          "p_gaussian": 0.03226156411905823,
+          "p_monte_carlo": 0.03316,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.05": {
+          "sigma_sys_kms": 0.05,
+          "sigma_total_kms": 17.095762881662978,
+          "effective_sigma": 2.1411455503581855,
+          "p_gaussian": 0.032262302372311646,
+          "p_monte_carlo": 0.03316,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.10": {
+          "sigma_sys_kms": 0.1,
+          "sigma_total_kms": 17.09598223285359,
+          "effective_sigma": 2.141118078241091,
+          "p_gaussian": 0.03226451716209011,
+          "p_monte_carlo": 0.03316,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.15": {
+          "sigma_sys_kms": 0.15,
+          "sigma_total_kms": 17.096347811917187,
+          "effective_sigma": 2.141072293729059,
+          "p_gaussian": 0.032268208578438484,
+          "p_monte_carlo": 0.03317,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.20": {
+          "sigma_sys_kms": 0.2,
+          "sigma_total_kms": 17.09685960947348,
+          "effective_sigma": 2.1410082003462505,
+          "p_gaussian": 0.03227337677140518,
+          "p_monte_carlo": 0.03317,
+          "n_mc": 100000,
+          "is_literature_value": true
+        },
+        "sigma_sys_0.25": {
+          "sigma_sys_kms": 0.25,
+          "sigma_total_kms": 17.097517612391737,
+          "effective_sigma": 2.140925803025436,
+          "p_gaussian": 0.032280021951002213,
+          "p_monte_carlo": 0.03317,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.30": {
+          "sigma_sys_kms": 0.3,
+          "sigma_total_kms": 17.098321803792487,
+          "effective_sigma": 2.1408251081069407,
+          "p_gaussian": 0.03228814438715011,
+          "p_monte_carlo": 0.03318,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_0.50": {
+          "sigma_sys_kms": 0.5,
+          "sigma_total_kms": 17.102999985559425,
+          "effective_sigma": 2.140239528442823,
+          "p_gaussian": 0.03233541418797392,
+          "p_monte_carlo": 0.03319,
+          "n_mc": 100000,
+          "is_literature_value": false
+        },
+        "sigma_sys_1.00": {
+          "sigma_sys_kms": 1.0,
+          "sigma_total_kms": 17.124911926957335,
+          "effective_sigma": 2.1375010149062423,
+          "p_gaussian": 0.03255726325938113,
+          "p_monte_carlo": 0.03341,
+          "n_mc": 100000,
+          "is_literature_value": false
+        }
+      },
+      "literature_result": {
+        "sigma_sys_kms": 0.2,
+        "sigma_total_kms": 17.09685960947348,
+        "effective_sigma": 2.1410082003462505,
+        "p_gaussian": 0.03227337677140518,
+        "p_monte_carlo": 0.03317,
+        "reference": "Whitmore & Murphy (2014), MNRAS 444, 2"
       }
     }
   }

@@ -130,8 +130,124 @@ def run_gate6():
             "Y_eq": float(Y_eq),
             "Z_eq": float(Z_eq)
         },
-        "simulations": results
+        "simulations": results,
+        "parameters": {
+            "R": R,
+            "p_Y_std": p_Y_std,
+            "p_Z_std": p_Z_std,
+            "p_Y_vmo": p_Y_vmo,
+            "p_Z_vmo": p_Z_vmo,
+            "f_vmo": f_vmo,
+            "tau_star": tau_star,
+        }
     }
+
+    # 4. f_VMO sensitivity scan
+    # Scan f_VMO over a physically motivated range to test whether Y_eq
+    # is robust or fine-tuned. The equilibrium is Y_eq = p_Y_eff / (1 - R)
+    # where p_Y_eff = f_VMO * p_Y_vmo + (1 - f_VMO) * p_Y_std.
+    # Z_eq = (1 - f_VMO) * p_Z_std / (1 - R).
+    print_status("\n=== f_VMO SENSITIVITY SCAN ===", "SUCCESS")
+    f_vmo_scan = np.arange(0.90, 1.0001, 0.005)
+    sensitivity_rows = []
+    for f in f_vmo_scan:
+        if f > 1.0:
+            f = 1.0
+        pY = f * p_Y_vmo + (1 - f) * p_Y_std
+        pZ = (1 - f) * p_Z_std
+        y_eq = pY / (1 - R)
+        z_eq = pZ / (1 - R)
+        dY = y_eq - 0.245  # offset from observed Y_p
+        row = {
+            "f_vmo": float(f),
+            "p_Y_eff": float(pY),
+            "p_Z_eff": float(pZ),
+            "Y_eq": float(y_eq),
+            "Z_eq": float(z_eq),
+            "delta_Y_from_observed": float(dY),
+        }
+        sensitivity_rows.append(row)
+        print_status(
+            f"  f_VMO={f:.3f}: Y_eq={y_eq:.4f}, Z_eq={z_eq:.6f}, "
+            f"ΔY(0.245)={dY:+.4f}",
+            "PROCESS",
+        )
+
+    # Find the f_VMO range that gives Y_eq within ±0.003 of observed (0.245 ± 0.003)
+    y_obs = 0.245
+    y_tol = 0.003
+    compatible = [r for r in sensitivity_rows if abs(r["delta_Y_from_observed"]) <= y_tol]
+    if compatible:
+        f_min = min(r["f_vmo"] for r in compatible)
+        f_max = max(r["f_vmo"] for r in compatible)
+        print_status(
+            f"  Y_eq within ±{y_tol} of {y_obs} for f_VMO ∈ [{f_min:.3f}, {f_max:.3f}]",
+            "SUCCESS",
+        )
+    else:
+        f_min = f_max = None
+        print_status(
+            f"  No f_VMO in scan gives Y_eq within ±{y_tol} of {y_obs}",
+            "WARNING",
+        )
+
+    out_dict["f_vmo_sensitivity"] = {
+        "scan_values": sensitivity_rows,
+        "observed_Yp": y_obs,
+        "observed_Yp_tolerance": y_tol,
+        "compatible_f_vmo_range": {
+            "f_min": float(f_min) if f_min is not None else None,
+            "f_max": float(f_max) if f_max is not None else None,
+        },
+        "y_eq_at_f_vmo_0_90": float(
+            min(sensitivity_rows, key=lambda r: abs(r["f_vmo"] - 0.90))["Y_eq"]
+        ),
+        "y_eq_at_f_vmo_0_95": float(
+            min(sensitivity_rows, key=lambda r: abs(r["f_vmo"] - 0.95))["Y_eq"]
+        ),
+        "y_eq_at_f_vmo_0_99": float(
+            min(sensitivity_rows, key=lambda r: abs(r["f_vmo"] - 0.99))["Y_eq"]
+        ),
+        "y_eq_at_f_vmo_0_999": (
+            p_Y_vmo * 0.999 + p_Y_std * 0.001
+        ) / (1 - R),
+        "y_eq_at_f_vmo_1_00": float(
+            min(sensitivity_rows, key=lambda r: abs(r["f_vmo"] - 1.0))["Y_eq"]
+        ),
+        "verdict": (
+            f"Y_eq varies from {sensitivity_rows[0]['Y_eq']:.4f} (f_VMO=0.90) "
+            f"to {sensitivity_rows[-1]['Y_eq']:.4f} (f_VMO=1.00), "
+            f"a range of {sensitivity_rows[-1]['Y_eq'] - sensitivity_rows[0]['Y_eq']:.4f}. "
+            f"The observed Y_p=0.245±0.003 is compatible with f_VMO ∈ "
+            f"[{f_min:.3f}, {f_max:.3f}]"
+            if f_min is not None
+            else f"Y_eq varies from {sensitivity_rows[0]['Y_eq']:.4f} to "
+            f"{sensitivity_rows[-1]['Y_eq']:.4f}. No compatible range found."
+        ),
+    }
+
+    # Sensitivity plot
+    plt.figure(figsize=(10, 6))
+    f_arr = [r["f_vmo"] for r in sensitivity_rows]
+    y_arr = [r["Y_eq"] for r in sensitivity_rows]
+    z_arr = [r["Z_eq"] for r in sensitivity_rows]
+    plt.plot(f_arr, y_arr, "b-o", label="$Y_{\\rm eq}(f_{\\rm VMO})$", markersize=4)
+    plt.axhline(y_obs, color="green", linestyle="--", label=f"Observed $Y_p$ = {y_obs}")
+    plt.axhspan(y_obs - y_tol, y_obs + y_tol, alpha=0.2, color="green",
+                label=f"Observed ±{y_tol}")
+    plt.axvline(f_vmo, color="red", linestyle=":", label=f"Adopted $f_{{\\rm VMO}}$ = {f_vmo}")
+    if f_min is not None:
+        plt.axvspan(f_min, f_max, alpha=0.15, color="blue",
+                    label=f"Compatible range [{f_min:.3f}, {f_max:.3f}]")
+    plt.xlabel("$f_{\\rm VMO}$")
+    plt.ylabel("Equilibrium mass fraction")
+    plt.title("TEP Helium Equilibrium: Sensitivity to VMO Fraction")
+    plt.legend(fontsize=9)
+    plt.grid(True)
+    sens_plot_path = project_root / "results" / "gate6_f_vmo_sensitivity.png"
+    plt.savefig(sens_plot_path, dpi=300, bbox_inches="tight")
+    plt.close()
+    print_status(f"Sensitivity plot saved to {sens_plot_path}", "SUCCESS")
 
     results_path = project_root / "results" / "gate6_helium_results.json"
     with open(results_path, "w") as f:

@@ -41,7 +41,7 @@ SIGHTLINES = {
     "J1332+0052": {
         "config": "configs/sightlines/J1332+0052.json",
         "manifest": "data/processed/J1332+0052_union_manifest.json",
-        "vpfit_model": "data/literature_components/J1332+0052_z3.420_vpfit_model.26",
+        "vpfit_model": "data/literature_components/J1332+0052_z3.421_vpfit_model.26",
         "build_script": "scripts/steps/build_j1332_model.py",
         "arxiv_source": "data/raw/literature_source/2401.12797",
         "gate2_prefix": "gate_j1332",

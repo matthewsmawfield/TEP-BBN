@@ -17,6 +17,20 @@
   "leave_one_out": [
     {
       "type": "coadd",
+      "excluded": "q1011p2941_C5x1.dat",
+      "T": 77.31483847512573,
+      "LL_D": -10290.308787174356,
+      "LL_H": -10251.651367936793
+    },
+    {
+      "type": "coadd",
+      "excluded": "q1011p2941_C5x2.dat",
+      "T": 139.8721395538305,
+      "LL_D": -13424.78281952515,
+      "LL_H": -13354.846749748234
+    },
+    {
+      "type": "coadd",
       "excluded": "q1011p2941_C1x2.dat",
       "T": 141.02960699288087,
       "LL_D": -12737.751700280673,
@@ -28,20 +42,6 @@
       "T": 125.050816591498,
       "LL_D": -9887.126517015009,
       "LL_H": -9824.60110871926
-    },
-    {
-      "type": "coadd",
-      "excluded": "q1011p2941_C5x2.dat",
-      "T": 139.8721395538305,
-      "LL_D": -13424.78281952515,
-      "LL_H": -13354.846749748234
-    },
-    {
-      "type": "coadd",
-      "excluded": "q1011p2941_C5x1.dat",
-      "T": 77.31483847512573,
-      "LL_D": -10290.308787174356,
-      "LL_H": -10251.651367936793
     },
     {
       "type": "transition",
@@ -136,13 +136,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900014,
-      "seed": 900014,
-      "logL_D_max": -15663.344446448195,
-      "logL_D_canonical": -15663.344446448195,
-      "logL_Hfree": -15662.296033075108,
-      "T_parent": 2.0968267461721553,
-      "T_standard": 2.0968267461721553,
+      "simulation_id": 900011,
+      "seed": 900011,
+      "logL_D_max": -15535.667915229946,
+      "logL_D_canonical": -15535.667915229946,
+      "logL_Hfree": -15535.570025870296,
+      "T_parent": 0.19577871929868707,
+      "T_standard": 0.19577871929868707,
       "converged_D": true,
       "converged_H": true
     },
@@ -158,13 +158,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900011,
-      "seed": 900011,
-      "logL_D_max": -15535.667915229946,
-      "logL_D_canonical": -15535.667915229946,
-      "logL_Hfree": -15535.570025870296,
-      "T_parent": 0.19577871929868707,
-      "T_standard": 0.19577871929868707,
+      "simulation_id": 900014,
+      "seed": 900014,
+      "logL_D_max": -15663.344446448195,
+      "logL_D_canonical": -15663.344446448195,
+      "logL_Hfree": -15662.296033075108,
+      "T_parent": 2.0968267461721553,
+      "T_standard": 2.0968267461721553,
       "converged_D": true,
       "converged_H": true
     },
@@ -202,17 +202,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900010,
-      "seed": 900010,
-      "logL_D_max": -15663.099888456178,
-      "logL_D_canonical": -15663.099888456178,
-      "logL_Hfree": -15662.493377509525,
-      "T_parent": 1.2130218933052674,
-      "T_standard": 1.2130218933052674,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900006,
       "seed": 900006,
       "logL_D_max": -15514.208444377444,
@@ -220,6 +209,17 @@
       "logL_Hfree": -15514.204122031515,
       "T_parent": 0.00864469185762573,
       "T_standard": 0.00864469185762573,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900010,
+      "seed": 900010,
+      "logL_D_max": -15663.099888456178,
+      "logL_D_canonical": -15663.099888456178,
+      "logL_Hfree": -15662.493377509525,
+      "T_parent": 1.2130218933052674,
+      "T_standard": 1.2130218933052674,
       "converged_D": true,
       "converged_H": true
     },
@@ -246,17 +246,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900005,
-      "seed": 900005,
-      "logL_D_max": -15568.54585966742,
-      "logL_D_canonical": -15568.54585966742,
-      "logL_Hfree": -15567.322929071113,
-      "T_parent": 2.445861192612938,
-      "T_standard": 2.445861192612938,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900008,
       "seed": 900008,
       "logL_D_max": -15374.26754445169,
@@ -264,6 +253,17 @@
       "logL_Hfree": -15374.155139780185,
       "T_parent": 0.2248093430098379,
       "T_standard": 0.2248093430098379,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900005,
+      "seed": 900005,
+      "logL_D_max": -15568.54585966742,
+      "logL_D_canonical": -15568.54585966742,
+      "logL_Hfree": -15567.322929071113,
+      "T_parent": 2.445861192612938,
+      "T_standard": 2.445861192612938,
       "converged_D": true,
       "converged_H": true
     },
@@ -334,17 +334,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900026,
-      "seed": 900026,
-      "logL_D_max": -15435.901747914657,
-      "logL_D_canonical": -15435.901747914657,
-      "logL_Hfree": -15433.149573177318,
-      "T_parent": 5.504349474678747,
-      "T_standard": 5.504349474678747,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900019,
       "seed": 900019,
       "logL_D_max": -15644.82784570917,
@@ -352,6 +341,17 @@
       "logL_Hfree": -15644.812356197415,
       "T_parent": 0.030979023507825332,
       "T_standard": 0.030979023507825332,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900026,
+      "seed": 900026,
+      "logL_D_max": -15435.901747914657,
+      "logL_D_canonical": -15435.901747914657,
+      "logL_Hfree": -15433.149573177318,
+      "T_parent": 5.504349474678747,
+      "T_standard": 5.504349474678747,
       "converged_D": true,
       "converged_H": true
     },
@@ -389,17 +389,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900028,
-      "seed": 900028,
-      "logL_D_max": -15620.393300648298,
-      "logL_D_canonical": -15620.393300648298,
-      "logL_Hfree": -15620.384405561348,
-      "T_parent": 0.01779017390072113,
-      "T_standard": 0.01779017390072113,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900023,
       "seed": 900023,
       "logL_D_max": -15526.21081085773,
@@ -407,6 +396,17 @@
       "logL_Hfree": -15526.108131202913,
       "T_parent": 0.20535930963524152,
       "T_standard": 0.20535930963524152,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900028,
+      "seed": 900028,
+      "logL_D_max": -15620.393300648298,
+      "logL_D_canonical": -15620.393300648298,
+      "logL_Hfree": -15620.384405561348,
+      "T_parent": 0.01779017390072113,
+      "T_standard": 0.01779017390072113,
       "converged_D": true,
       "converged_H": true
     },
@@ -455,17 +455,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900032,
-      "seed": 900032,
-      "logL_D_max": -15718.487644466673,
-      "logL_D_canonical": -15718.487644466673,
-      "logL_Hfree": -15718.320117471594,
-      "T_parent": 0.33505399015848525,
-      "T_standard": 0.33505399015848525,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900035,
       "seed": 900035,
       "logL_D_max": -15591.786786785204,
@@ -488,6 +477,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900036,
+      "seed": 900036,
+      "logL_D_max": -15534.16640498485,
+      "logL_D_canonical": -15534.16640498485,
+      "logL_Hfree": -15534.056579554426,
+      "T_parent": 0.21965086084674112,
+      "T_standard": 0.21965086084674112,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900031,
       "seed": 900031,
       "logL_D_max": -15655.496324869355,
@@ -499,13 +499,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900036,
-      "seed": 900036,
-      "logL_D_max": -15534.16640498485,
-      "logL_D_canonical": -15534.16640498485,
-      "logL_Hfree": -15534.056579554426,
-      "T_parent": 0.21965086084674112,
-      "T_standard": 0.21965086084674112,
+      "simulation_id": 900032,
+      "seed": 900032,
+      "logL_D_max": -15718.487644466673,
+      "logL_D_canonical": -15718.487644466673,
+      "logL_Hfree": -15718.320117471594,
+      "T_parent": 0.33505399015848525,
+      "T_standard": 0.33505399015848525,
       "converged_D": true,
       "converged_H": true
     },
@@ -521,17 +521,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900043,
-      "seed": 900043,
-      "logL_D_max": -15500.797635975301,
-      "logL_D_canonical": -15500.797635975301,
-      "logL_Hfree": -15499.873256511331,
-      "T_parent": 1.8487589279393433,
-      "T_standard": 1.8487589279393433,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900041,
       "seed": 900041,
       "logL_D_max": -15325.89602063631,
@@ -543,13 +532,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900042,
-      "seed": 900042,
-      "logL_D_max": -15621.82019814614,
-      "logL_D_canonical": -15621.82019814614,
-      "logL_Hfree": -15621.477334177112,
-      "T_parent": 0.685727938056516,
-      "T_standard": 0.685727938056516,
+      "simulation_id": 900043,
+      "seed": 900043,
+      "logL_D_max": -15500.797635975301,
+      "logL_D_canonical": -15500.797635975301,
+      "logL_Hfree": -15499.873256511331,
+      "T_parent": 1.8487589279393433,
+      "T_standard": 1.8487589279393433,
       "converged_D": true,
       "converged_H": true
     },
@@ -561,6 +550,17 @@
       "logL_Hfree": -15475.354174307387,
       "T_parent": 0.12739392389266868,
       "T_standard": 0.12739392389266868,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900042,
+      "seed": 900042,
+      "logL_D_max": -15621.82019814614,
+      "logL_D_canonical": -15621.82019814614,
+      "logL_Hfree": -15621.477334177112,
+      "T_parent": 0.685727938056516,
+      "T_standard": 0.685727938056516,
       "converged_D": true,
       "converged_H": true
     },
@@ -642,17 +642,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900046,
-      "seed": 900046,
-      "logL_D_max": -15489.96685786487,
-      "logL_D_canonical": -15489.96685786487,
-      "logL_Hfree": -15489.503844894989,
-      "T_parent": 0.926025939763349,
-      "T_standard": 0.926025939763349,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900048,
       "seed": 900048,
       "logL_D_max": -15330.194957417438,
@@ -675,6 +664,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900046,
+      "seed": 900046,
+      "logL_D_max": -15489.96685786487,
+      "logL_D_canonical": -15489.96685786487,
+      "logL_Hfree": -15489.503844894989,
+      "T_parent": 0.926025939763349,
+      "T_standard": 0.926025939763349,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900055,
       "seed": 900055,
       "logL_D_max": -15687.796569942586,
@@ -682,17 +682,6 @@
       "logL_Hfree": -15687.731683712253,
       "T_parent": 0.12977246066657244,
       "T_standard": 0.12977246066657244,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900051,
-      "seed": 900051,
-      "logL_D_max": -15413.176485963279,
-      "logL_D_canonical": -15413.176485963279,
-      "logL_Hfree": -15413.148963259533,
-      "T_parent": 0.055045407490979414,
-      "T_standard": 0.055045407490979414,
       "converged_D": true,
       "converged_H": true
     },
@@ -708,6 +697,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900051,
+      "seed": 900051,
+      "logL_D_max": -15413.176485963279,
+      "logL_D_canonical": -15413.176485963279,
+      "logL_Hfree": -15413.148963259533,
+      "T_parent": 0.055045407490979414,
+      "T_standard": 0.055045407490979414,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900050,
       "seed": 900050,
       "logL_D_max": -15251.009944817044,
@@ -715,17 +715,6 @@
       "logL_Hfree": -15250.500737436294,
       "T_parent": 1.0184147615000256,
       "T_standard": 1.0184147615000256,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900057,
-      "seed": 900057,
-      "logL_D_max": -15486.739642785677,
-      "logL_D_canonical": -15486.739642785677,
-      "logL_Hfree": -15485.613551856844,
-      "T_parent": 2.2521818576642545,
-      "T_standard": 2.2521818576642545,
       "converged_D": true,
       "converged_H": true
     },
@@ -752,13 +741,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900059,
-      "seed": 900059,
-      "logL_D_max": -15456.854810781424,
-      "logL_D_canonical": -15456.854810781424,
-      "logL_Hfree": -15456.034305220686,
-      "T_parent": 1.641011121475458,
-      "T_standard": 1.641011121475458,
+      "simulation_id": 900057,
+      "seed": 900057,
+      "logL_D_max": -15486.739642785677,
+      "logL_D_canonical": -15486.739642785677,
+      "logL_Hfree": -15485.613551856844,
+      "T_parent": 2.2521818576642545,
+      "T_standard": 2.2521818576642545,
       "converged_D": true,
       "converged_H": true
     },
@@ -770,6 +759,17 @@
       "logL_Hfree": -15355.759282123898,
       "T_parent": 2.67022184569214,
       "T_standard": 2.67022184569214,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900059,
+      "seed": 900059,
+      "logL_D_max": -15456.854810781424,
+      "logL_D_canonical": -15456.854810781424,
+      "logL_Hfree": -15456.034305220686,
+      "T_parent": 1.641011121475458,
+      "T_standard": 1.641011121475458,
       "converged_D": true,
       "converged_H": true
     },
@@ -807,13 +807,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900064,
-      "seed": 900064,
-      "logL_D_max": -15341.883058672192,
-      "logL_D_canonical": -15341.883058672192,
-      "logL_Hfree": -15341.729699433065,
-      "T_parent": 0.3067184782557888,
-      "T_standard": 0.3067184782557888,
+      "simulation_id": 900066,
+      "seed": 900066,
+      "logL_D_max": -15368.681950259823,
+      "logL_D_canonical": -15368.681950259823,
+      "logL_Hfree": -15368.241762151938,
+      "T_parent": 0.8803762157695019,
+      "T_standard": 0.8803762157695019,
       "converged_D": true,
       "converged_H": true
     },
@@ -829,13 +829,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900066,
-      "seed": 900066,
-      "logL_D_max": -15368.681950259823,
-      "logL_D_canonical": -15368.681950259823,
-      "logL_Hfree": -15368.241762151938,
-      "T_parent": 0.8803762157695019,
-      "T_standard": 0.8803762157695019,
+      "simulation_id": 900064,
+      "seed": 900064,
+      "logL_D_max": -15341.883058672192,
+      "logL_D_canonical": -15341.883058672192,
+      "logL_Hfree": -15341.729699433065,
+      "T_parent": 0.3067184782557888,
+      "T_standard": 0.3067184782557888,
       "converged_D": true,
       "converged_H": true
     },
@@ -862,17 +862,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900069,
-      "seed": 900069,
-      "logL_D_max": -15606.156791255526,
-      "logL_D_canonical": -15606.156791255526,
-      "logL_Hfree": -15606.140668359974,
-      "T_parent": 0.0322457911024685,
-      "T_standard": 0.0322457911024685,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900070,
       "seed": 900070,
       "logL_D_max": -15717.048327857641,
@@ -880,6 +869,17 @@
       "logL_Hfree": -15716.524799557628,
       "T_parent": 1.047056600025826,
       "T_standard": 1.047056600025826,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900069,
+      "seed": 900069,
+      "logL_D_max": -15606.156791255526,
+      "logL_D_canonical": -15606.156791255526,
+      "logL_Hfree": -15606.140668359974,
+      "T_parent": 0.0322457911024685,
+      "T_standard": 0.0322457911024685,
       "converged_D": true,
       "converged_H": true
     },
@@ -950,17 +950,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900076,
-      "seed": 900076,
-      "logL_D_max": -15616.988543914638,
-      "logL_D_canonical": -15616.988543914638,
-      "logL_Hfree": -15616.972745955969,
-      "T_parent": 0.031595917338563595,
-      "T_standard": 0.031595917338563595,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900077,
       "seed": 900077,
       "logL_D_max": -15648.03554038219,
@@ -968,6 +957,17 @@
       "logL_Hfree": -15647.626858351377,
       "T_parent": 0.8173640616259945,
       "T_standard": 0.8173640616259945,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900076,
+      "seed": 900076,
+      "logL_D_max": -15616.988543914638,
+      "logL_D_canonical": -15616.988543914638,
+      "logL_Hfree": -15616.972745955969,
+      "T_parent": 0.031595917338563595,
+      "T_standard": 0.031595917338563595,
       "converged_D": true,
       "converged_H": true
     },
@@ -1016,17 +1016,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900078,
-      "seed": 900078,
-      "logL_D_max": -15266.75884946803,
-      "logL_D_canonical": -15266.75884946803,
-      "logL_Hfree": -15266.739417879851,
-      "T_parent": 0.03886317635624437,
-      "T_standard": 0.03886317635624437,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900083,
       "seed": 900083,
       "logL_D_max": -15810.210415605912,
@@ -1034,6 +1023,17 @@
       "logL_Hfree": -15809.1322328155,
       "T_parent": 2.1563655808240583,
       "T_standard": 2.1563655808240583,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900078,
+      "seed": 900078,
+      "logL_D_max": -15266.75884946803,
+      "logL_D_canonical": -15266.75884946803,
+      "logL_Hfree": -15266.739417879851,
+      "T_parent": 0.03886317635624437,
+      "T_standard": 0.03886317635624437,
       "converged_D": true,
       "converged_H": true
     },
@@ -1126,24 +1126,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900092,
-      "seed": 900092,
-      "logL_D_max": -15708.45331620641,
-      "logL_D_canonical": -15708.45331620641,
-      "logL_Hfree": -15708.453228803777,
-      "T_parent": 0.00017480526730651036,
-      "T_standard": 0.00017480526730651036,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900098,
-      "seed": 900098,
-      "logL_D_max": -15449.807957756018,
-      "logL_D_canonical": -15449.807957756018,
-      "logL_Hfree": -15449.776195816114,
-      "T_parent": 0.0635238798095088,
-      "T_standard": 0.0635238798095088,
+      "simulation_id": 900094,
+      "seed": 900094,
+      "logL_D_max": -15537.81728482139,
+      "logL_D_canonical": -15537.81728482139,
+      "logL_Hfree": -15537.765755251254,
+      "T_parent": 0.10305914027412655,
+      "T_standard": 0.10305914027412655,
       "converged_D": true,
       "converged_H": true
     },
@@ -1159,13 +1148,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900094,
-      "seed": 900094,
-      "logL_D_max": -15537.81728482139,
-      "logL_D_canonical": -15537.81728482139,
-      "logL_Hfree": -15537.765755251254,
-      "T_parent": 0.10305914027412655,
-      "T_standard": 0.10305914027412655,
+      "simulation_id": 900092,
+      "seed": 900092,
+      "logL_D_max": -15708.45331620641,
+      "logL_D_canonical": -15708.45331620641,
+      "logL_Hfree": -15708.453228803777,
+      "T_parent": 0.00017480526730651036,
+      "T_standard": 0.00017480526730651036,
       "converged_D": true,
       "converged_H": true
     },
@@ -1177,6 +1166,17 @@
       "logL_Hfree": -15731.841732456956,
       "T_parent": 0.5109086390439188,
       "T_standard": 0.5109086390439188,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900098,
+      "seed": 900098,
+      "logL_D_max": -15449.807957756018,
+      "logL_D_canonical": -15449.807957756018,
+      "logL_Hfree": -15449.776195816114,
+      "T_parent": 0.0635238798095088,
+      "T_standard": 0.0635238798095088,
       "converged_D": true,
       "converged_H": true
     },
@@ -1203,17 +1203,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900101,
-      "seed": 900101,
-      "logL_D_max": -15491.314311138944,
-      "logL_D_canonical": -15491.314311138944,
-      "logL_Hfree": -15491.307732285855,
-      "T_parent": 0.013157706176571082,
-      "T_standard": 0.013157706176571082,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900099,
       "seed": 900099,
       "logL_D_max": -15272.73218792567,
@@ -1225,6 +1214,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900101,
+      "seed": 900101,
+      "logL_D_max": -15491.314311138944,
+      "logL_D_canonical": -15491.314311138944,
+      "logL_Hfree": -15491.307732285855,
+      "T_parent": 0.013157706176571082,
+      "T_standard": 0.013157706176571082,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900100,
       "seed": 900100,
       "logL_D_max": -15438.701813226802,
@@ -1232,6 +1232,17 @@
       "logL_Hfree": -15437.62141268807,
       "T_parent": 2.160801077465294,
       "T_standard": 2.160801077465294,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900104,
+      "seed": 900104,
+      "logL_D_max": -15630.676855797892,
+      "logL_D_canonical": -15630.676855797892,
+      "logL_Hfree": -15630.639929926998,
+      "T_parent": 0.07385174178853049,
+      "T_standard": 0.07385174178853049,
       "converged_D": true,
       "converged_H": true
     },
@@ -1258,17 +1269,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900104,
-      "seed": 900104,
-      "logL_D_max": -15630.676855797892,
-      "logL_D_canonical": -15630.676855797892,
-      "logL_Hfree": -15630.639929926998,
-      "T_parent": 0.07385174178853049,
-      "T_standard": 0.07385174178853049,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900105,
       "seed": 900105,
       "logL_D_max": -15555.728099129701,
@@ -1291,17 +1291,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900107,
-      "seed": 900107,
-      "logL_D_max": -15492.569333522712,
-      "logL_D_canonical": -15492.569333522712,
-      "logL_Hfree": -15491.668537123693,
-      "T_parent": 1.8015927980377455,
-      "T_standard": 1.8015927980377455,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900108,
       "seed": 900108,
       "logL_D_max": -15587.403003007163,
@@ -1309,6 +1298,17 @@
       "logL_Hfree": -15586.624627922414,
       "T_parent": 1.5567501694968087,
       "T_standard": 1.5567501694968087,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900107,
+      "seed": 900107,
+      "logL_D_max": -15492.569333522712,
+      "logL_D_canonical": -15492.569333522712,
+      "logL_Hfree": -15491.668537123693,
+      "T_parent": 1.8015927980377455,
+      "T_standard": 1.8015927980377455,
       "converged_D": true,
       "converged_H": true
     },
@@ -1346,17 +1346,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900113,
-      "seed": 900113,
-      "logL_D_max": -15559.522631832511,
-      "logL_D_canonical": -15559.522631832511,
-      "logL_Hfree": -15558.865199374904,
-      "T_parent": 1.3148649152135476,
-      "T_standard": 1.3148649152135476,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900115,
       "seed": 900115,
       "logL_D_max": -15635.732683701137,
@@ -1364,6 +1353,17 @@
       "logL_Hfree": -15635.28239741057,
       "T_parent": 0.9005725811330194,
       "T_standard": 0.9005725811330194,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900113,
+      "seed": 900113,
+      "logL_D_max": -15559.522631832511,
+      "logL_D_canonical": -15559.522631832511,
+      "logL_Hfree": -15558.865199374904,
+      "T_parent": 1.3148649152135476,
+      "T_standard": 1.3148649152135476,
       "converged_D": true,
       "converged_H": true
     },
@@ -1390,17 +1390,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900116,
-      "seed": 900116,
-      "logL_D_max": -15753.624810697267,
-      "logL_D_canonical": -15753.624810697267,
-      "logL_Hfree": -15753.53646355162,
-      "T_parent": 0.17669429129455239,
-      "T_standard": 0.17669429129455239,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900117,
       "seed": 900117,
       "logL_D_max": -15625.776825125264,
@@ -1419,6 +1408,17 @@
       "logL_Hfree": -15620.826081171348,
       "T_parent": 0.34999867486112635,
       "T_standard": 0.34999867486112635,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900116,
+      "seed": 900116,
+      "logL_D_max": -15753.624810697267,
+      "logL_D_canonical": -15753.624810697267,
+      "logL_Hfree": -15753.53646355162,
+      "T_parent": 0.17669429129455239,
+      "T_standard": 0.17669429129455239,
       "converged_D": true,
       "converged_H": true
     },
@@ -1478,13 +1478,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900126,
-      "seed": 900126,
-      "logL_D_max": -15558.147215873854,
-      "logL_D_canonical": -15558.147215873854,
-      "logL_Hfree": -15557.785440464982,
-      "T_parent": 0.7235508177436714,
-      "T_standard": 0.7235508177436714,
+      "simulation_id": 900128,
+      "seed": 900128,
+      "logL_D_max": -15468.570353831394,
+      "logL_D_canonical": -15468.570353831394,
+      "logL_Hfree": -15466.565725516914,
+      "T_parent": 4.009256628960429,
+      "T_standard": 4.009256628960429,
       "converged_D": true,
       "converged_H": true
     },
@@ -1500,13 +1500,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900128,
-      "seed": 900128,
-      "logL_D_max": -15468.570353831394,
-      "logL_D_canonical": -15468.570353831394,
-      "logL_Hfree": -15466.565725516914,
-      "T_parent": 4.009256628960429,
-      "T_standard": 4.009256628960429,
+      "simulation_id": 900126,
+      "seed": 900126,
+      "logL_D_max": -15558.147215873854,
+      "logL_D_canonical": -15558.147215873854,
+      "logL_Hfree": -15557.785440464982,
+      "T_parent": 0.7235508177436714,
+      "T_standard": 0.7235508177436714,
       "converged_D": true,
       "converged_H": true
     },
@@ -1566,17 +1566,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900133,
-      "seed": 900133,
-      "logL_D_max": -15668.420776223404,
-      "logL_D_canonical": -15668.420776223404,
-      "logL_Hfree": -15666.144883812329,
-      "T_parent": 4.551784822149784,
-      "T_standard": 4.551784822149784,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900132,
       "seed": 900132,
       "logL_D_max": -15641.347690197439,
@@ -1584,6 +1573,17 @@
       "logL_Hfree": -15639.557527849367,
       "T_parent": 3.580324696144089,
       "T_standard": 3.580324696144089,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900133,
+      "seed": 900133,
+      "logL_D_max": -15668.420776223404,
+      "logL_D_canonical": -15668.420776223404,
+      "logL_Hfree": -15666.144883812329,
+      "T_parent": 4.551784822149784,
+      "T_standard": 4.551784822149784,
       "converged_D": true,
       "converged_H": true
     },
@@ -1643,17 +1643,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900138,
-      "seed": 900138,
-      "logL_D_max": -15421.047595185722,
-      "logL_D_canonical": -15421.047595185722,
-      "logL_Hfree": -15420.898136797869,
-      "T_parent": 0.29891677570776665,
-      "T_standard": 0.29891677570776665,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900141,
       "seed": 900141,
       "logL_D_max": -15501.030724912376,
@@ -1665,13 +1654,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900137,
-      "seed": 900137,
-      "logL_D_max": -15564.351415574765,
-      "logL_D_canonical": -15564.351415574765,
-      "logL_Hfree": -15563.961041424915,
-      "T_parent": 0.7807482997013722,
-      "T_standard": 0.7807482997013722,
+      "simulation_id": 900138,
+      "seed": 900138,
+      "logL_D_max": -15421.047595185722,
+      "logL_D_canonical": -15421.047595185722,
+      "logL_Hfree": -15420.898136797869,
+      "T_parent": 0.29891677570776665,
+      "T_standard": 0.29891677570776665,
       "converged_D": true,
       "converged_H": true
     },
@@ -1687,13 +1676,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900143,
-      "seed": 900143,
-      "logL_D_max": -15883.850416472751,
-      "logL_D_canonical": -15883.850416472751,
-      "logL_Hfree": -15883.661570783908,
-      "T_parent": 0.37769137768555083,
-      "T_standard": 0.37769137768555083,
+      "simulation_id": 900137,
+      "seed": 900137,
+      "logL_D_max": -15564.351415574765,
+      "logL_D_canonical": -15564.351415574765,
+      "logL_Hfree": -15563.961041424915,
+      "T_parent": 0.7807482997013722,
+      "T_standard": 0.7807482997013722,
       "converged_D": true,
       "converged_H": true
     },
@@ -1709,13 +1698,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900148,
-      "seed": 900148,
-      "logL_D_max": -15536.734269838416,
-      "logL_D_canonical": -15536.734269838416,
-      "logL_Hfree": -15536.69728155185,
-      "T_parent": 0.0739765731341322,
-      "T_standard": 0.0739765731341322,
+      "simulation_id": 900143,
+      "seed": 900143,
+      "logL_D_max": -15883.850416472751,
+      "logL_D_canonical": -15883.850416472751,
+      "logL_Hfree": -15883.661570783908,
+      "T_parent": 0.37769137768555083,
+      "T_standard": 0.37769137768555083,
       "converged_D": true,
       "converged_H": true
     },
@@ -1738,6 +1727,17 @@
       "logL_Hfree": -15240.201288349494,
       "T_parent": 2.0467476433150296,
       "T_standard": 2.0467476433150296,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900148,
+      "seed": 900148,
+      "logL_D_max": -15536.734269838416,
+      "logL_D_canonical": -15536.734269838416,
+      "logL_Hfree": -15536.69728155185,
+      "T_parent": 0.0739765731341322,
+      "T_standard": 0.0739765731341322,
       "converged_D": true,
       "converged_H": true
     },
@@ -1830,35 +1830,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900159,
-      "seed": 900159,
-      "logL_D_max": -15456.618447257242,
-      "logL_D_canonical": -15456.618447257242,
-      "logL_Hfree": -15454.929919358205,
-      "T_parent": 3.377055798075162,
-      "T_standard": 3.377055798075162,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900154,
-      "seed": 900154,
-      "logL_D_max": -15555.809219787701,
-      "logL_D_canonical": -15555.809219787701,
-      "logL_Hfree": -15555.791941251879,
-      "T_parent": 0.0345570716453949,
-      "T_standard": 0.0345570716453949,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900157,
-      "seed": 900157,
-      "logL_D_max": -15730.658077273889,
-      "logL_D_canonical": -15730.658077273889,
-      "logL_Hfree": -15729.862594764982,
-      "T_parent": 1.5909650178145966,
-      "T_standard": 1.5909650178145966,
+      "simulation_id": 900164,
+      "seed": 900164,
+      "logL_D_max": -15315.05825380647,
+      "logL_D_canonical": -15315.05825380647,
+      "logL_Hfree": -15314.939632194151,
+      "T_parent": 0.2372432246374956,
+      "T_standard": 0.2372432246374956,
       "converged_D": true,
       "converged_H": true
     },
@@ -1874,13 +1852,35 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900164,
-      "seed": 900164,
-      "logL_D_max": -15315.05825380647,
-      "logL_D_canonical": -15315.05825380647,
-      "logL_Hfree": -15314.939632194151,
-      "T_parent": 0.2372432246374956,
-      "T_standard": 0.2372432246374956,
+      "simulation_id": 900154,
+      "seed": 900154,
+      "logL_D_max": -15555.809219787701,
+      "logL_D_canonical": -15555.809219787701,
+      "logL_Hfree": -15555.791941251879,
+      "T_parent": 0.0345570716453949,
+      "T_standard": 0.0345570716453949,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900159,
+      "seed": 900159,
+      "logL_D_max": -15456.618447257242,
+      "logL_D_canonical": -15456.618447257242,
+      "logL_Hfree": -15454.929919358205,
+      "T_parent": 3.377055798075162,
+      "T_standard": 3.377055798075162,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900157,
+      "seed": 900157,
+      "logL_D_max": -15730.658077273889,
+      "logL_D_canonical": -15730.658077273889,
+      "logL_Hfree": -15729.862594764982,
+      "T_parent": 1.5909650178145966,
+      "T_standard": 1.5909650178145966,
       "converged_D": true,
       "converged_H": true
     },
@@ -1907,17 +1907,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900160,
-      "seed": 900160,
-      "logL_D_max": -15593.63051275197,
-      "logL_D_canonical": -15593.63051275197,
-      "logL_Hfree": -15593.10046869576,
-      "T_parent": 1.06008811241918,
-      "T_standard": 1.06008811241918,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900163,
       "seed": 900163,
       "logL_D_max": -15513.810270068218,
@@ -1925,6 +1914,17 @@
       "logL_Hfree": -15513.796899032839,
       "T_parent": 0.02674207075688173,
       "T_standard": 0.02674207075688173,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900160,
+      "seed": 900160,
+      "logL_D_max": -15593.63051275197,
+      "logL_D_canonical": -15593.63051275197,
+      "logL_Hfree": -15593.10046869576,
+      "T_parent": 1.06008811241918,
+      "T_standard": 1.06008811241918,
       "converged_D": true,
       "converged_H": true
     },
@@ -1962,6 +1962,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900170,
+      "seed": 900170,
+      "logL_D_max": -15659.213753274453,
+      "logL_D_canonical": -15659.213753274453,
+      "logL_Hfree": -15659.04279088131,
+      "T_parent": 0.34192478628392564,
+      "T_standard": 0.34192478628392564,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900167,
       "seed": 900167,
       "logL_D_max": -15246.534734902209,
@@ -1973,13 +1984,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900170,
-      "seed": 900170,
-      "logL_D_max": -15659.213753274453,
-      "logL_D_canonical": -15659.213753274453,
-      "logL_Hfree": -15659.04279088131,
-      "T_parent": 0.34192478628392564,
-      "T_standard": 0.34192478628392564,
+      "simulation_id": 900171,
+      "seed": 900171,
+      "logL_D_max": -15441.078610504515,
+      "logL_D_canonical": -15441.078610504515,
+      "logL_Hfree": -15440.715971797574,
+      "T_parent": 0.7252774138833047,
+      "T_standard": 0.7252774138833047,
       "converged_D": true,
       "converged_H": true
     },
@@ -2002,17 +2013,6 @@
       "logL_Hfree": -15517.013735498957,
       "T_parent": 0.30539574412978254,
       "T_standard": 0.30539574412978254,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900171,
-      "seed": 900171,
-      "logL_D_max": -15441.078610504515,
-      "logL_D_canonical": -15441.078610504515,
-      "logL_Hfree": -15440.715971797574,
-      "T_parent": 0.7252774138833047,
-      "T_standard": 0.7252774138833047,
       "converged_D": true,
       "converged_H": true
     },
@@ -2050,17 +2050,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900175,
-      "seed": 900175,
-      "logL_D_max": -15475.672334730076,
-      "logL_D_canonical": -15475.672334730076,
-      "logL_Hfree": -15475.635533550743,
-      "T_parent": 0.07360235866508447,
-      "T_standard": 0.07360235866508447,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900177,
       "seed": 900177,
       "logL_D_max": -15516.073779346372,
@@ -2068,6 +2057,17 @@
       "logL_Hfree": -15513.621875550798,
       "T_parent": 4.903807591148507,
       "T_standard": 4.903807591148507,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900175,
+      "seed": 900175,
+      "logL_D_max": -15475.672334730076,
+      "logL_D_canonical": -15475.672334730076,
+      "logL_Hfree": -15475.635533550743,
+      "T_parent": 0.07360235866508447,
+      "T_standard": 0.07360235866508447,
       "converged_D": true,
       "converged_H": true
     },
@@ -2182,28 +2182,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900189,
-      "seed": 900189,
-      "logL_D_max": -15398.528225952194,
-      "logL_D_canonical": -15398.528225952194,
-      "logL_Hfree": -15398.465203322618,
-      "T_parent": 0.12604525915230624,
-      "T_standard": 0.12604525915230624,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900184,
-      "seed": 900184,
-      "logL_D_max": -15632.799064300441,
-      "logL_D_canonical": -15632.799064300441,
-      "logL_Hfree": -15632.688669696028,
-      "T_parent": 0.22078920882631792,
-      "T_standard": 0.22078920882631792,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900193,
       "seed": 900193,
       "logL_D_max": -15628.689466370486,
@@ -2211,6 +2189,17 @@
       "logL_Hfree": -15628.687966579058,
       "T_parent": 0.002999582855409244,
       "T_standard": 0.002999582855409244,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900189,
+      "seed": 900189,
+      "logL_D_max": -15398.528225952194,
+      "logL_D_canonical": -15398.528225952194,
+      "logL_Hfree": -15398.465203322618,
+      "T_parent": 0.12604525915230624,
+      "T_standard": 0.12604525915230624,
       "converged_D": true,
       "converged_H": true
     },
@@ -2226,13 +2215,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900190,
-      "seed": 900190,
-      "logL_D_max": -15627.794760857523,
-      "logL_D_canonical": -15627.794760857523,
-      "logL_Hfree": -15627.653785547067,
-      "T_parent": 0.2819506209125393,
-      "T_standard": 0.2819506209125393,
+      "simulation_id": 900184,
+      "seed": 900184,
+      "logL_D_max": -15632.799064300441,
+      "logL_D_canonical": -15632.799064300441,
+      "logL_Hfree": -15632.688669696028,
+      "T_parent": 0.22078920882631792,
+      "T_standard": 0.22078920882631792,
       "converged_D": true,
       "converged_H": true
     },
@@ -2244,6 +2233,17 @@
       "logL_Hfree": -15709.316885907847,
       "T_parent": 0.13541948000056436,
       "T_standard": 0.13541948000056436,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900190,
+      "seed": 900190,
+      "logL_D_max": -15627.794760857523,
+      "logL_D_canonical": -15627.794760857523,
+      "logL_Hfree": -15627.653785547067,
+      "T_parent": 0.2819506209125393,
+      "T_standard": 0.2819506209125393,
       "converged_D": true,
       "converged_H": true
     },
@@ -2281,17 +2281,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900197,
-      "seed": 900197,
-      "logL_D_max": -15448.451361250238,
-      "logL_D_canonical": -15448.451361250238,
-      "logL_Hfree": -15447.49869673371,
-      "T_parent": 1.9053290330557502,
-      "T_standard": 1.9053290330557502,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900199,
       "seed": 900199,
       "logL_D_max": -15560.672127405747,
@@ -2299,6 +2288,17 @@
       "logL_Hfree": -15560.035559206033,
       "T_parent": 1.27313639942804,
       "T_standard": 1.27313639942804,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900197,
+      "seed": 900197,
+      "logL_D_max": -15448.451361250238,
+      "logL_D_canonical": -15448.451361250238,
+      "logL_Hfree": -15447.49869673371,
+      "T_parent": 1.9053290330557502,
+      "T_standard": 1.9053290330557502,
       "converged_D": true,
       "converged_H": true
     },
@@ -2336,17 +2336,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900198,
-      "seed": 900198,
-      "logL_D_max": -15677.36819115986,
-      "logL_D_canonical": -15677.36819115986,
-      "logL_Hfree": -15676.237242208434,
-      "T_parent": 2.26189790285207,
-      "T_standard": 2.26189790285207,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900207,
       "seed": 900207,
       "logL_D_max": -15452.17503923969,
@@ -2354,6 +2343,17 @@
       "logL_Hfree": -15451.961542751793,
       "T_parent": 0.4269929757938371,
       "T_standard": 0.4269929757938371,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900198,
+      "seed": 900198,
+      "logL_D_max": -15677.36819115986,
+      "logL_D_canonical": -15677.36819115986,
+      "logL_Hfree": -15676.237242208434,
+      "T_parent": 2.26189790285207,
+      "T_standard": 2.26189790285207,
       "converged_D": true,
       "converged_H": true
     },
@@ -2479,6 +2479,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900218,
+      "seed": 900218,
+      "logL_D_max": -15555.765661763828,
+      "logL_D_canonical": -15555.765661763828,
+      "logL_Hfree": -15555.73714394961,
+      "T_parent": 0.05703562843700638,
+      "T_standard": 0.05703562843700638,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900219,
       "seed": 900219,
       "logL_D_max": -15605.172259911993,
@@ -2508,17 +2519,6 @@
       "logL_Hfree": -15589.886135216246,
       "T_parent": 1.1467061677758466,
       "T_standard": 1.1467061677758466,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900218,
-      "seed": 900218,
-      "logL_D_max": -15555.765661763828,
-      "logL_D_canonical": -15555.765661763828,
-      "logL_Hfree": -15555.73714394961,
-      "T_parent": 0.05703562843700638,
-      "T_standard": 0.05703562843700638,
       "converged_D": true,
       "converged_H": true
     },
@@ -2578,17 +2578,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900225,
-      "seed": 900225,
-      "logL_D_max": -15479.51762848442,
-      "logL_D_canonical": -15479.51762848442,
-      "logL_Hfree": -15478.899512632426,
-      "T_parent": 1.236231703987869,
-      "T_standard": 1.236231703987869,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900224,
       "seed": 900224,
       "logL_D_max": -15497.448114157754,
@@ -2596,6 +2585,17 @@
       "logL_Hfree": -15497.399933755913,
       "T_parent": 0.09636080368363764,
       "T_standard": 0.09636080368363764,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900225,
+      "seed": 900225,
+      "logL_D_max": -15479.51762848442,
+      "logL_D_canonical": -15479.51762848442,
+      "logL_Hfree": -15478.899512632426,
+      "T_parent": 1.236231703987869,
+      "T_standard": 1.236231703987869,
       "converged_D": true,
       "converged_H": true
     },
@@ -2677,17 +2677,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900239,
-      "seed": 900239,
-      "logL_D_max": -15520.47043783361,
-      "logL_D_canonical": -15520.47043783361,
-      "logL_Hfree": -15520.219771628148,
-      "T_parent": 0.5013324109240784,
-      "T_standard": 0.5013324109240784,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900231,
       "seed": 900231,
       "logL_D_max": -15817.913552077229,
@@ -2721,13 +2710,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900238,
-      "seed": 900238,
-      "logL_D_max": -15583.40799766724,
-      "logL_D_canonical": -15583.40799766724,
-      "logL_Hfree": -15583.378197209375,
-      "T_parent": 0.059600915730698034,
-      "T_standard": 0.059600915730698034,
+      "simulation_id": 900239,
+      "seed": 900239,
+      "logL_D_max": -15520.47043783361,
+      "logL_D_canonical": -15520.47043783361,
+      "logL_Hfree": -15520.219771628148,
+      "T_parent": 0.5013324109240784,
+      "T_standard": 0.5013324109240784,
       "converged_D": true,
       "converged_H": true
     },
@@ -2739,6 +2728,17 @@
       "logL_Hfree": -15643.186949521198,
       "T_parent": 0.43040523314630263,
       "T_standard": 0.43040523314630263,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900238,
+      "seed": 900238,
+      "logL_D_max": -15583.40799766724,
+      "logL_D_canonical": -15583.40799766724,
+      "logL_Hfree": -15583.378197209375,
+      "T_parent": 0.059600915730698034,
+      "T_standard": 0.059600915730698034,
       "converged_D": true,
       "converged_H": true
     },
@@ -2820,24 +2820,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900251,
-      "seed": 900251,
-      "logL_D_max": -15527.497311527699,
-      "logL_D_canonical": -15527.497311527699,
-      "logL_Hfree": -15527.483197770154,
-      "T_parent": 0.028227515089383814,
-      "T_standard": 0.028227515089383814,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900250,
-      "seed": 900250,
-      "logL_D_max": -15688.902574199132,
-      "logL_D_canonical": -15688.902574199132,
-      "logL_Hfree": -15688.671088728357,
-      "T_parent": 0.46297094154942897,
-      "T_standard": 0.46297094154942897,
+      "simulation_id": 900246,
+      "seed": 900246,
+      "logL_D_max": -15718.964826958912,
+      "logL_D_canonical": -15718.964826958912,
+      "logL_Hfree": -15717.438338201167,
+      "T_parent": 3.0529775154900562,
+      "T_standard": 3.0529775154900562,
       "converged_D": true,
       "converged_H": true
     },
@@ -2853,24 +2842,35 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900246,
-      "seed": 900246,
-      "logL_D_max": -15718.964826958912,
-      "logL_D_canonical": -15718.964826958912,
-      "logL_Hfree": -15717.438338201167,
-      "T_parent": 3.0529775154900562,
-      "T_standard": 3.0529775154900562,
+      "simulation_id": 900250,
+      "seed": 900250,
+      "logL_D_max": -15688.902574199132,
+      "logL_D_canonical": -15688.902574199132,
+      "logL_Hfree": -15688.671088728357,
+      "T_parent": 0.46297094154942897,
+      "T_standard": 0.46297094154942897,
       "converged_D": true,
       "converged_H": true
     },
     {
-      "simulation_id": 900247,
-      "seed": 900247,
-      "logL_D_max": -15579.021570814268,
-      "logL_D_canonical": -15579.021570814268,
-      "logL_Hfree": -15578.014518679563,
-      "T_parent": 2.0141042694085627,
-      "T_standard": 2.0141042694085627,
+      "simulation_id": 900251,
+      "seed": 900251,
+      "logL_D_max": -15527.497311527699,
+      "logL_D_canonical": -15527.497311527699,
+      "logL_Hfree": -15527.483197770154,
+      "T_parent": 0.028227515089383814,
+      "T_standard": 0.028227515089383814,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900252,
+      "seed": 900252,
+      "logL_D_max": -15483.309676969971,
+      "logL_D_canonical": -15483.309676969971,
+      "logL_Hfree": -15482.646452486752,
+      "T_parent": 1.3264489664397843,
+      "T_standard": 1.3264489664397843,
       "converged_D": true,
       "converged_H": true
     },
@@ -2886,6 +2886,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900247,
+      "seed": 900247,
+      "logL_D_max": -15579.021570814268,
+      "logL_D_canonical": -15579.021570814268,
+      "logL_Hfree": -15578.014518679563,
+      "T_parent": 2.0141042694085627,
+      "T_standard": 2.0141042694085627,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900248,
       "seed": 900248,
       "logL_D_max": -15616.009298150948,
@@ -2893,17 +2904,6 @@
       "logL_Hfree": -15615.954051897039,
       "T_parent": 0.11049250781798037,
       "T_standard": 0.11049250781798037,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900252,
-      "seed": 900252,
-      "logL_D_max": -15483.309676969971,
-      "logL_D_canonical": -15483.309676969971,
-      "logL_Hfree": -15482.646452486752,
-      "T_parent": 1.3264489664397843,
-      "T_standard": 1.3264489664397843,
       "converged_D": true,
       "converged_H": true
     },
@@ -2941,17 +2941,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900257,
-      "seed": 900257,
-      "logL_D_max": -15770.907967751253,
-      "logL_D_canonical": -15770.907967751253,
-      "logL_Hfree": -15766.093101425631,
-      "T_parent": 9.629732651243103,
-      "T_standard": 9.629732651243103,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900258,
       "seed": 900258,
       "logL_D_max": -15684.228075700965,
@@ -2959,6 +2948,17 @@
       "logL_Hfree": -15683.635116022262,
       "T_parent": 1.1859193574055098,
       "T_standard": 1.1859193574055098,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900257,
+      "seed": 900257,
+      "logL_D_max": -15770.907967751253,
+      "logL_D_canonical": -15770.907967751253,
+      "logL_Hfree": -15766.093101425631,
+      "T_parent": 9.629732651243103,
+      "T_standard": 9.629732651243103,
       "converged_D": true,
       "converged_H": true
     },
@@ -2985,28 +2985,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900266,
-      "seed": 900266,
-      "logL_D_max": -15256.790776962705,
-      "logL_D_canonical": -15256.790776962705,
-      "logL_Hfree": -15256.780545555319,
-      "T_parent": 0.02046281477305456,
-      "T_standard": 0.02046281477305456,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900267,
-      "seed": 900267,
-      "logL_D_max": -15467.912096414244,
-      "logL_D_canonical": -15467.912096414244,
-      "logL_Hfree": -15467.676020730218,
-      "T_parent": 0.47215136805243674,
-      "T_standard": 0.47215136805243674,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900259,
       "seed": 900259,
       "logL_D_max": -15507.53496220748,
@@ -3018,6 +2996,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900266,
+      "seed": 900266,
+      "logL_D_max": -15256.790776962705,
+      "logL_D_canonical": -15256.790776962705,
+      "logL_Hfree": -15256.780545555319,
+      "T_parent": 0.02046281477305456,
+      "T_standard": 0.02046281477305456,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900262,
       "seed": 900262,
       "logL_D_max": -15647.454350369637,
@@ -3025,6 +3014,17 @@
       "logL_Hfree": -15647.426818401533,
       "T_parent": 0.05506393620817107,
       "T_standard": 0.05506393620817107,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900267,
+      "seed": 900267,
+      "logL_D_max": -15467.912096414244,
+      "logL_D_canonical": -15467.912096414244,
+      "logL_Hfree": -15467.676020730218,
+      "T_parent": 0.47215136805243674,
+      "T_standard": 0.47215136805243674,
       "converged_D": true,
       "converged_H": true
     },
@@ -3139,28 +3139,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900282,
-      "seed": 900282,
-      "logL_D_max": -15672.863346548209,
-      "logL_D_canonical": -15672.863346548209,
-      "logL_Hfree": -15669.15703889731,
-      "T_parent": 7.4126153017969045,
-      "T_standard": 7.4126153017969045,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900275,
-      "seed": 900275,
-      "logL_D_max": -15341.916267356068,
-      "logL_D_canonical": -15341.916267356068,
-      "logL_Hfree": -15340.789786348736,
-      "T_parent": 2.2529620146633533,
-      "T_standard": 2.2529620146633533,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900276,
       "seed": 900276,
       "logL_D_max": -15561.392926391907,
@@ -3183,13 +3161,24 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900277,
-      "seed": 900277,
-      "logL_D_max": -15469.993727373243,
-      "logL_D_canonical": -15469.993727373243,
-      "logL_Hfree": -15469.968100179769,
-      "T_parent": 0.05125438694813056,
-      "T_standard": 0.05125438694813056,
+      "simulation_id": 900282,
+      "seed": 900282,
+      "logL_D_max": -15672.863346548209,
+      "logL_D_canonical": -15672.863346548209,
+      "logL_Hfree": -15669.15703889731,
+      "T_parent": 7.4126153017969045,
+      "T_standard": 7.4126153017969045,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900275,
+      "seed": 900275,
+      "logL_D_max": -15341.916267356068,
+      "logL_D_canonical": -15341.916267356068,
+      "logL_Hfree": -15340.789786348736,
+      "T_parent": 2.2529620146633533,
+      "T_standard": 2.2529620146633533,
       "converged_D": true,
       "converged_H": true
     },
@@ -3201,6 +3190,17 @@
       "logL_Hfree": -15385.419770210583,
       "T_parent": 0.21799021018887288,
       "T_standard": 0.21799021018887288,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900277,
+      "seed": 900277,
+      "logL_D_max": -15469.993727373243,
+      "logL_D_canonical": -15469.993727373243,
+      "logL_Hfree": -15469.968100179769,
+      "T_parent": 0.05125438694813056,
+      "T_standard": 0.05125438694813056,
       "converged_D": true,
       "converged_H": true
     },
@@ -3238,17 +3238,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900285,
-      "seed": 900285,
-      "logL_D_max": -15802.377356551602,
-      "logL_D_canonical": -15802.377356551602,
-      "logL_Hfree": -15801.543593727107,
-      "T_parent": 1.6675256489907042,
-      "T_standard": 1.6675256489907042,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900284,
       "seed": 900284,
       "logL_D_max": -16044.787288834621,
@@ -3260,13 +3249,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900287,
-      "seed": 900287,
-      "logL_D_max": -15233.327077753287,
-      "logL_D_canonical": -15233.327077753287,
-      "logL_Hfree": -15231.607662250277,
-      "T_parent": 3.4388310060203366,
-      "T_standard": 3.4388310060203366,
+      "simulation_id": 900285,
+      "seed": 900285,
+      "logL_D_max": -15802.377356551602,
+      "logL_D_canonical": -15802.377356551602,
+      "logL_Hfree": -15801.543593727107,
+      "T_parent": 1.6675256489907042,
+      "T_standard": 1.6675256489907042,
       "converged_D": true,
       "converged_H": true
     },
@@ -3278,6 +3267,17 @@
       "logL_Hfree": -15605.353729257511,
       "T_parent": 0.18158739422869985,
       "T_standard": 0.18158739422869985,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900287,
+      "seed": 900287,
+      "logL_D_max": -15233.327077753287,
+      "logL_D_canonical": -15233.327077753287,
+      "logL_Hfree": -15231.607662250277,
+      "T_parent": 3.4388310060203366,
+      "T_standard": 3.4388310060203366,
       "converged_D": true,
       "converged_H": true
     },
@@ -3337,13 +3337,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900294,
-      "seed": 900294,
-      "logL_D_max": -15753.418212610239,
-      "logL_D_canonical": -15753.418212610239,
-      "logL_Hfree": -15753.272738448835,
-      "T_parent": 0.2909483228067984,
-      "T_standard": 0.2909483228067984,
+      "simulation_id": 900292,
+      "seed": 900292,
+      "logL_D_max": -15405.596295384212,
+      "logL_D_canonical": -15405.596295384212,
+      "logL_Hfree": -15402.826634882847,
+      "T_parent": 5.539321002728684,
+      "T_standard": 5.539321002728684,
       "converged_D": true,
       "converged_H": true
     },
@@ -3359,17 +3359,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900292,
-      "seed": 900292,
-      "logL_D_max": -15405.596295384212,
-      "logL_D_canonical": -15405.596295384212,
-      "logL_Hfree": -15402.826634882847,
-      "T_parent": 5.539321002728684,
-      "T_standard": 5.539321002728684,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900295,
       "seed": 900295,
       "logL_D_max": -15477.131342443718,
@@ -3377,6 +3366,17 @@
       "logL_Hfree": -15476.84825684557,
       "T_parent": 0.5661711962966365,
       "T_standard": 0.5661711962966365,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900294,
+      "seed": 900294,
+      "logL_D_max": -15753.418212610239,
+      "logL_D_canonical": -15753.418212610239,
+      "logL_Hfree": -15753.272738448835,
+      "T_parent": 0.2909483228067984,
+      "T_standard": 0.2909483228067984,
       "converged_D": true,
       "converged_H": true
     },
@@ -3403,17 +3403,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900300,
-      "seed": 900300,
-      "logL_D_max": -15267.673154584605,
-      "logL_D_canonical": -15267.673154584605,
-      "logL_Hfree": -15267.103595873758,
-      "T_parent": 1.1391174216951185,
-      "T_standard": 1.1391174216951185,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900298,
       "seed": 900298,
       "logL_D_max": -15571.469947484988,
@@ -3421,6 +3410,17 @@
       "logL_Hfree": -15571.32339257592,
       "T_parent": 0.2931098181361449,
       "T_standard": 0.2931098181361449,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900300,
+      "seed": 900300,
+      "logL_D_max": -15267.673154584605,
+      "logL_D_canonical": -15267.673154584605,
+      "logL_Hfree": -15267.103595873758,
+      "T_parent": 1.1391174216951185,
+      "T_standard": 1.1391174216951185,
       "converged_D": true,
       "converged_H": true
     },
@@ -3480,6 +3480,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900307,
+      "seed": 900307,
+      "logL_D_max": -15560.215753383469,
+      "logL_D_canonical": -15560.215753383469,
+      "logL_Hfree": -15560.097379832318,
+      "T_parent": 0.23674710230261553,
+      "T_standard": 0.23674710230261553,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900306,
       "seed": 900306,
       "logL_D_max": -15583.762815435495,
@@ -3502,17 +3513,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900307,
-      "seed": 900307,
-      "logL_D_max": -15560.215753383469,
-      "logL_D_canonical": -15560.215753383469,
-      "logL_Hfree": -15560.097379832318,
-      "T_parent": 0.23674710230261553,
-      "T_standard": 0.23674710230261553,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900311,
       "seed": 900311,
       "logL_D_max": -15547.805345012677,
@@ -3524,17 +3524,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900308,
-      "seed": 900308,
-      "logL_D_max": -15625.587494738389,
-      "logL_D_canonical": -15625.587494738389,
-      "logL_Hfree": -15624.921608480872,
-      "T_parent": 1.3317725150336628,
-      "T_standard": 1.3317725150336628,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900309,
       "seed": 900309,
       "logL_D_max": -15573.930423334486,
@@ -3542,6 +3531,17 @@
       "logL_Hfree": -15572.847695652175,
       "T_parent": 2.1654553646221757,
       "T_standard": 2.1654553646221757,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900308,
+      "seed": 900308,
+      "logL_D_max": -15625.587494738389,
+      "logL_D_canonical": -15625.587494738389,
+      "logL_Hfree": -15624.921608480872,
+      "T_parent": 1.3317725150336628,
+      "T_standard": 1.3317725150336628,
       "converged_D": true,
       "converged_H": true
     },
@@ -3579,6 +3579,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900318,
+      "seed": 900318,
+      "logL_D_max": -15394.833512679805,
+      "logL_D_canonical": -15394.833512679805,
+      "logL_Hfree": -15394.55660442534,
+      "T_parent": 0.5538165089310496,
+      "T_standard": 0.5538165089310496,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900315,
       "seed": 900315,
       "logL_D_max": -15550.169984918684,
@@ -3601,17 +3612,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900318,
-      "seed": 900318,
-      "logL_D_max": -15394.833512679805,
-      "logL_D_canonical": -15394.833512679805,
-      "logL_Hfree": -15394.55660442534,
-      "T_parent": 0.5538165089310496,
-      "T_standard": 0.5538165089310496,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900316,
       "seed": 900316,
       "logL_D_max": -15527.760626620902,
@@ -3619,17 +3619,6 @@
       "logL_Hfree": -15527.671489993445,
       "T_parent": 0.1782732549145294,
       "T_standard": 0.1782732549145294,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900319,
-      "seed": 900319,
-      "logL_D_max": -15655.117148098056,
-      "logL_D_canonical": -15655.117148098056,
-      "logL_Hfree": -15655.086219389475,
-      "T_parent": 0.06185741716035409,
-      "T_standard": 0.06185741716035409,
       "converged_D": true,
       "converged_H": true
     },
@@ -3645,6 +3634,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900319,
+      "seed": 900319,
+      "logL_D_max": -15655.117148098056,
+      "logL_D_canonical": -15655.117148098056,
+      "logL_Hfree": -15655.086219389475,
+      "T_parent": 0.06185741716035409,
+      "T_standard": 0.06185741716035409,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900327,
       "seed": 900327,
       "logL_D_max": -15672.013775871666,
@@ -3652,17 +3652,6 @@
       "logL_Hfree": -15671.707725140066,
       "T_parent": 0.6121014632008155,
       "T_standard": 0.6121014632008155,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900324,
-      "seed": 900324,
-      "logL_D_max": -15759.279298535193,
-      "logL_D_canonical": -15759.279298535193,
-      "logL_Hfree": -15758.973156771954,
-      "T_parent": 0.6122835264795867,
-      "T_standard": 0.6122835264795867,
       "converged_D": true,
       "converged_H": true
     },
@@ -3678,6 +3667,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900324,
+      "seed": 900324,
+      "logL_D_max": -15759.279298535193,
+      "logL_D_canonical": -15759.279298535193,
+      "logL_Hfree": -15758.973156771954,
+      "T_parent": 0.6122835264795867,
+      "T_standard": 0.6122835264795867,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900323,
       "seed": 900323,
       "logL_D_max": -15464.056896707916,
@@ -3685,17 +3685,6 @@
       "logL_Hfree": -15462.272097824298,
       "T_parent": 3.5695977672367007,
       "T_standard": 3.5695977672367007,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900325,
-      "seed": 900325,
-      "logL_D_max": -15306.519614135457,
-      "logL_D_canonical": -15306.519614135457,
-      "logL_Hfree": -15306.381944211826,
-      "T_parent": 0.2753398472632398,
-      "T_standard": 0.2753398472632398,
       "converged_D": true,
       "converged_H": true
     },
@@ -3722,6 +3711,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900325,
+      "seed": 900325,
+      "logL_D_max": -15306.519614135457,
+      "logL_D_canonical": -15306.519614135457,
+      "logL_Hfree": -15306.381944211826,
+      "T_parent": 0.2753398472632398,
+      "T_standard": 0.2753398472632398,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900328,
       "seed": 900328,
       "logL_D_max": -15696.12304349806,
@@ -3744,17 +3744,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900330,
-      "seed": 900330,
-      "logL_D_max": -15312.535851079261,
-      "logL_D_canonical": -15312.535851079261,
-      "logL_Hfree": -15311.319197556591,
-      "T_parent": 2.433307045339461,
-      "T_standard": 2.433307045339461,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900333,
       "seed": 900333,
       "logL_D_max": -15286.781408384868,
@@ -3773,6 +3762,17 @@
       "logL_Hfree": -15670.176335874465,
       "T_parent": 2.41846900521341,
       "T_standard": 2.41846900521341,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900330,
+      "seed": 900330,
+      "logL_D_max": -15312.535851079261,
+      "logL_D_canonical": -15312.535851079261,
+      "logL_Hfree": -15311.319197556591,
+      "T_parent": 2.433307045339461,
+      "T_standard": 2.433307045339461,
       "converged_D": true,
       "converged_H": true
     },
@@ -3810,17 +3810,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900338,
-      "seed": 900338,
-      "logL_D_max": -15570.433828818203,
-      "logL_D_canonical": -15570.433828818203,
-      "logL_Hfree": -15569.367198587106,
-      "T_parent": 2.133260462192993,
-      "T_standard": 2.133260462192993,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900336,
       "seed": 900336,
       "logL_D_max": -15530.134922558304,
@@ -3828,6 +3817,17 @@
       "logL_Hfree": -15530.045989108334,
       "T_parent": 0.17786689993954496,
       "T_standard": 0.17786689993954496,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900338,
+      "seed": 900338,
+      "logL_D_max": -15570.433828818203,
+      "logL_D_canonical": -15570.433828818203,
+      "logL_Hfree": -15569.367198587106,
+      "T_parent": 2.133260462192993,
+      "T_standard": 2.133260462192993,
       "converged_D": true,
       "converged_H": true
     },
@@ -3865,17 +3865,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900343,
-      "seed": 900343,
-      "logL_D_max": -15582.081090679301,
-      "logL_D_canonical": -15582.081090679301,
-      "logL_Hfree": -15582.075137083633,
-      "T_parent": 0.011907191335922107,
-      "T_standard": 0.011907191335922107,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900342,
       "seed": 900342,
       "logL_D_max": -15597.96050390848,
@@ -3894,6 +3883,17 @@
       "logL_Hfree": -15437.230719630046,
       "T_parent": 0.8022452857330791,
       "T_standard": 0.8022452857330791,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900343,
+      "seed": 900343,
+      "logL_D_max": -15582.081090679301,
+      "logL_D_canonical": -15582.081090679301,
+      "logL_Hfree": -15582.075137083633,
+      "T_parent": 0.011907191335922107,
+      "T_standard": 0.011907191335922107,
       "converged_D": true,
       "converged_H": true
     },
@@ -4019,17 +4019,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900355,
-      "seed": 900355,
-      "logL_D_max": -15606.816158702044,
-      "logL_D_canonical": -15606.816158702044,
-      "logL_Hfree": -15605.935360916621,
-      "T_parent": 1.7615955708461115,
-      "T_standard": 1.7615955708461115,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900357,
       "seed": 900357,
       "logL_D_max": -15734.90717456993,
@@ -4037,6 +4026,17 @@
       "logL_Hfree": -15734.902577416142,
       "T_parent": 0.009194307574944105,
       "T_standard": 0.009194307574944105,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900355,
+      "seed": 900355,
+      "logL_D_max": -15606.816158702044,
+      "logL_D_canonical": -15606.816158702044,
+      "logL_Hfree": -15605.935360916621,
+      "T_parent": 1.7615955708461115,
+      "T_standard": 1.7615955708461115,
       "converged_D": true,
       "converged_H": true
     },
@@ -4118,17 +4118,6 @@
       "converged_H": false
     },
     {
-      "simulation_id": 900367,
-      "seed": 900367,
-      "logL_D_max": -15609.232598439829,
-      "logL_D_canonical": -15609.232598439829,
-      "logL_Hfree": -15606.678333238051,
-      "T_parent": 5.108530403555051,
-      "T_standard": 5.108530403555051,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900362,
       "seed": 900362,
       "logL_D_max": -15428.254263532805,
@@ -4140,13 +4129,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900365,
-      "seed": 900365,
-      "logL_D_max": -15621.92313667951,
-      "logL_D_canonical": -15621.92313667951,
-      "logL_Hfree": -15621.714833359647,
-      "T_parent": 0.416606639726524,
-      "T_standard": 0.416606639726524,
+      "simulation_id": 900367,
+      "seed": 900367,
+      "logL_D_max": -15609.232598439829,
+      "logL_D_canonical": -15609.232598439829,
+      "logL_Hfree": -15606.678333238051,
+      "T_parent": 5.108530403555051,
+      "T_standard": 5.108530403555051,
       "converged_D": true,
       "converged_H": true
     },
@@ -4158,6 +4147,17 @@
       "logL_Hfree": -15736.641700960101,
       "T_parent": 0.9099203847254103,
       "T_standard": 0.9099203847254103,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900365,
+      "seed": 900365,
+      "logL_D_max": -15621.92313667951,
+      "logL_D_canonical": -15621.92313667951,
+      "logL_Hfree": -15621.714833359647,
+      "T_parent": 0.416606639726524,
+      "T_standard": 0.416606639726524,
       "converged_D": true,
       "converged_H": true
     },
@@ -4305,13 +4305,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900383,
-      "seed": 900383,
-      "logL_D_max": -15649.449589259437,
-      "logL_D_canonical": -15649.449589259437,
-      "logL_Hfree": -15649.125205978467,
-      "T_parent": 0.6487665619388281,
-      "T_standard": 0.6487665619388281,
+      "simulation_id": 900378,
+      "seed": 900378,
+      "logL_D_max": -15671.375566807506,
+      "logL_D_canonical": -15671.375566807506,
+      "logL_Hfree": -15671.336745418066,
+      "T_parent": 0.07764277888054494,
+      "T_standard": 0.07764277888054494,
       "converged_D": true,
       "converged_H": true
     },
@@ -4323,17 +4323,6 @@
       "logL_Hfree": -15353.870516220479,
       "T_parent": 0.7890936696167046,
       "T_standard": 0.7890936696167046,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900378,
-      "seed": 900378,
-      "logL_D_max": -15671.375566807506,
-      "logL_D_canonical": -15671.375566807506,
-      "logL_Hfree": -15671.336745418066,
-      "T_parent": 0.07764277888054494,
-      "T_standard": 0.07764277888054494,
       "converged_D": true,
       "converged_H": true
     },
@@ -4360,6 +4349,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900383,
+      "seed": 900383,
+      "logL_D_max": -15649.449589259437,
+      "logL_D_canonical": -15649.449589259437,
+      "logL_Hfree": -15649.125205978467,
+      "T_parent": 0.6487665619388281,
+      "T_standard": 0.6487665619388281,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900385,
       "seed": 900385,
       "logL_D_max": -15592.015015653751,
@@ -4371,17 +4371,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900388,
-      "seed": 900388,
-      "logL_D_max": -15331.16201914883,
-      "logL_D_canonical": -15331.16201914883,
-      "logL_Hfree": -15331.067517570793,
-      "T_parent": 0.189003156072431,
-      "T_standard": 0.189003156072431,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900387,
       "seed": 900387,
       "logL_D_max": -15506.802537900465,
@@ -4389,6 +4378,17 @@
       "logL_Hfree": -15506.668661645996,
       "T_parent": 0.26775250893842895,
       "T_standard": 0.26775250893842895,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900388,
+      "seed": 900388,
+      "logL_D_max": -15331.16201914883,
+      "logL_D_canonical": -15331.16201914883,
+      "logL_Hfree": -15331.067517570793,
+      "T_parent": 0.189003156072431,
+      "T_standard": 0.189003156072431,
       "converged_D": true,
       "converged_H": true
     },
@@ -4426,6 +4426,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900394,
+      "seed": 900394,
+      "logL_D_max": -15687.725655160084,
+      "logL_D_canonical": -15687.725655160084,
+      "logL_Hfree": -15687.722625257888,
+      "T_parent": 0.006059804392862134,
+      "T_standard": 0.006059804392862134,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900392,
       "seed": 900392,
       "logL_D_max": -15747.26718506149,
@@ -4448,17 +4459,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900394,
-      "seed": 900394,
-      "logL_D_max": -15687.725655160084,
-      "logL_D_canonical": -15687.725655160084,
-      "logL_Hfree": -15687.722625257888,
-      "T_parent": 0.006059804392862134,
-      "T_standard": 0.006059804392862134,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900396,
       "seed": 900396,
       "logL_D_max": -15459.531245173755,
@@ -4470,17 +4470,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900398,
-      "seed": 900398,
-      "logL_D_max": -15688.29284191746,
-      "logL_D_canonical": -15688.29284191746,
-      "logL_Hfree": -15687.322640783148,
-      "T_parent": 1.9404022686248936,
-      "T_standard": 1.9404022686248936,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900397,
       "seed": 900397,
       "logL_D_max": -15610.366366893479,
@@ -4488,6 +4477,17 @@
       "logL_Hfree": -15610.276064060907,
       "T_parent": 0.1806056651439576,
       "T_standard": 0.1806056651439576,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900398,
+      "seed": 900398,
+      "logL_D_max": -15688.29284191746,
+      "logL_D_canonical": -15688.29284191746,
+      "logL_Hfree": -15687.322640783148,
+      "T_parent": 1.9404022686248936,
+      "T_standard": 1.9404022686248936,
       "converged_D": true,
       "converged_H": true
     },
@@ -4525,17 +4525,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900400,
-      "seed": 900400,
-      "logL_D_max": -15677.412160988388,
-      "logL_D_canonical": -15677.412160988388,
-      "logL_Hfree": -15677.044264447555,
-      "T_parent": 0.7357930816651788,
-      "T_standard": 0.7357930816651788,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900402,
       "seed": 900402,
       "logL_D_max": -15401.47245239838,
@@ -4543,6 +4532,17 @@
       "logL_Hfree": -15401.012826972998,
       "T_parent": 0.9192508507658204,
       "T_standard": 0.9192508507658204,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900400,
+      "seed": 900400,
+      "logL_D_max": -15677.412160988388,
+      "logL_D_canonical": -15677.412160988388,
+      "logL_Hfree": -15677.044264447555,
+      "T_parent": 0.7357930816651788,
+      "T_standard": 0.7357930816651788,
       "converged_D": true,
       "converged_H": true
     },
@@ -4613,17 +4613,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900410,
-      "seed": 900410,
-      "logL_D_max": -15600.193634224182,
-      "logL_D_canonical": -15600.193634224182,
-      "logL_Hfree": -15598.236063061311,
-      "T_parent": 3.915142325742636,
-      "T_standard": 3.915142325742636,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900409,
       "seed": 900409,
       "logL_D_max": -15472.22765489799,
@@ -4642,6 +4631,17 @@
       "logL_Hfree": -15718.515253494836,
       "T_parent": 0.013170729307603324,
       "T_standard": 0.013170729307603324,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900410,
+      "seed": 900410,
+      "logL_D_max": -15600.193634224182,
+      "logL_D_canonical": -15600.193634224182,
+      "logL_Hfree": -15598.236063061311,
+      "T_parent": 3.915142325742636,
+      "T_standard": 3.915142325742636,
       "converged_D": true,
       "converged_H": true
     },
@@ -4712,17 +4712,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900419,
-      "seed": 900419,
-      "logL_D_max": -15584.32758776585,
-      "logL_D_canonical": -15584.32758776585,
-      "logL_Hfree": -15584.316694107732,
-      "T_parent": 0.021787316236441256,
-      "T_standard": 0.021787316236441256,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900418,
       "seed": 900418,
       "logL_D_max": -15592.526889651708,
@@ -4730,6 +4719,17 @@
       "logL_Hfree": -15592.354656557547,
       "T_parent": 0.34446618832225795,
       "T_standard": 0.34446618832225795,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900419,
+      "seed": 900419,
+      "logL_D_max": -15584.32758776585,
+      "logL_D_canonical": -15584.32758776585,
+      "logL_Hfree": -15584.316694107732,
+      "T_parent": 0.021787316236441256,
+      "T_standard": 0.021787316236441256,
       "converged_D": true,
       "converged_H": true
     },
@@ -4778,13 +4778,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900425,
-      "seed": 900425,
-      "logL_D_max": -15446.692231439483,
-      "logL_D_canonical": -15446.692231439483,
-      "logL_Hfree": -15444.862963529924,
-      "T_parent": 3.658535819118697,
-      "T_standard": 3.658535819118697,
+      "simulation_id": 900427,
+      "seed": 900427,
+      "logL_D_max": -15500.343582485619,
+      "logL_D_canonical": -15500.343582485619,
+      "logL_Hfree": -15499.983879521867,
+      "T_parent": 0.7194059275025211,
+      "T_standard": 0.7194059275025211,
       "converged_D": true,
       "converged_H": true
     },
@@ -4800,13 +4800,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900427,
-      "seed": 900427,
-      "logL_D_max": -15500.343582485619,
-      "logL_D_canonical": -15500.343582485619,
-      "logL_Hfree": -15499.983879521867,
-      "T_parent": 0.7194059275025211,
-      "T_standard": 0.7194059275025211,
+      "simulation_id": 900425,
+      "seed": 900425,
+      "logL_D_max": -15446.692231439483,
+      "logL_D_canonical": -15446.692231439483,
+      "logL_Hfree": -15444.862963529924,
+      "T_parent": 3.658535819118697,
+      "T_standard": 3.658535819118697,
       "converged_D": true,
       "converged_H": true
     },
@@ -4833,17 +4833,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900431,
-      "seed": 900431,
-      "logL_D_max": -15528.139733301308,
-      "logL_D_canonical": -15528.139733301308,
-      "logL_Hfree": -15527.9234939372,
-      "T_parent": 0.43247872821666533,
-      "T_standard": 0.43247872821666533,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900426,
       "seed": 900426,
       "logL_D_max": -15413.317510259338,
@@ -4855,13 +4844,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900434,
-      "seed": 900434,
-      "logL_D_max": -15432.037121210204,
-      "logL_D_canonical": -15432.037121210204,
-      "logL_Hfree": -15429.185326270028,
-      "T_parent": 5.703589880351501,
-      "T_standard": 5.703589880351501,
+      "simulation_id": 900431,
+      "seed": 900431,
+      "logL_D_max": -15528.139733301308,
+      "logL_D_canonical": -15528.139733301308,
+      "logL_Hfree": -15527.9234939372,
+      "T_parent": 0.43247872821666533,
+      "T_standard": 0.43247872821666533,
       "converged_D": true,
       "converged_H": true
     },
@@ -4873,6 +4862,17 @@
       "logL_Hfree": -15643.593477099028,
       "T_parent": 2.7911215015046764,
       "T_standard": 2.7911215015046764,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900434,
+      "seed": 900434,
+      "logL_D_max": -15432.037121210204,
+      "logL_D_canonical": -15432.037121210204,
+      "logL_Hfree": -15429.185326270028,
+      "T_parent": 5.703589880351501,
+      "T_standard": 5.703589880351501,
       "converged_D": true,
       "converged_H": true
     },
@@ -4932,17 +4932,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900440,
-      "seed": 900440,
-      "logL_D_max": -15773.467878660314,
-      "logL_D_canonical": -15773.467878660314,
-      "logL_Hfree": -15773.45379069377,
-      "T_parent": 0.028175933090096805,
-      "T_standard": 0.028175933090096805,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900438,
       "seed": 900438,
       "logL_D_max": -15616.789817040346,
@@ -4954,13 +4943,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900439,
-      "seed": 900439,
-      "logL_D_max": -15408.941400531174,
-      "logL_D_canonical": -15408.941400531174,
-      "logL_Hfree": -15408.755259806341,
-      "T_parent": 0.3722814496650244,
-      "T_standard": 0.3722814496650244,
+      "simulation_id": 900440,
+      "seed": 900440,
+      "logL_D_max": -15773.467878660314,
+      "logL_D_canonical": -15773.467878660314,
+      "logL_Hfree": -15773.45379069377,
+      "T_parent": 0.028175933090096805,
+      "T_standard": 0.028175933090096805,
       "converged_D": true,
       "converged_H": true
     },
@@ -4976,13 +4965,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900441,
-      "seed": 900441,
-      "logL_D_max": -15636.321938608377,
-      "logL_D_canonical": -15636.321938608377,
-      "logL_Hfree": -15634.819493655072,
-      "T_parent": 3.0048899066096055,
-      "T_standard": 3.0048899066096055,
+      "simulation_id": 900439,
+      "seed": 900439,
+      "logL_D_max": -15408.941400531174,
+      "logL_D_canonical": -15408.941400531174,
+      "logL_Hfree": -15408.755259806341,
+      "T_parent": 0.3722814496650244,
+      "T_standard": 0.3722814496650244,
       "converged_D": true,
       "converged_H": true
     },
@@ -4994,6 +4983,17 @@
       "logL_Hfree": -15475.1302053053,
       "T_parent": 1.5991555377368059,
       "T_standard": 1.5991555377368059,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900441,
+      "seed": 900441,
+      "logL_D_max": -15636.321938608377,
+      "logL_D_canonical": -15636.321938608377,
+      "logL_Hfree": -15634.819493655072,
+      "T_parent": 3.0048899066096055,
+      "T_standard": 3.0048899066096055,
       "converged_D": true,
       "converged_H": true
     },
@@ -5053,17 +5053,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900450,
-      "seed": 900450,
-      "logL_D_max": -15539.024512479278,
-      "logL_D_canonical": -15539.024512479278,
-      "logL_Hfree": -15539.013773008985,
-      "T_parent": 0.021478940587257966,
-      "T_standard": 0.021478940587257966,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900448,
       "seed": 900448,
       "logL_D_max": -15679.12440738641,
@@ -5075,13 +5064,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900451,
-      "seed": 900451,
-      "logL_D_max": -15734.038334055274,
-      "logL_D_canonical": -15734.038334055274,
-      "logL_Hfree": -15733.916799435265,
-      "T_parent": 0.24306924001939478,
-      "T_standard": 0.24306924001939478,
+      "simulation_id": 900450,
+      "seed": 900450,
+      "logL_D_max": -15539.024512479278,
+      "logL_D_canonical": -15539.024512479278,
+      "logL_Hfree": -15539.013773008985,
+      "T_parent": 0.021478940587257966,
+      "T_standard": 0.021478940587257966,
       "converged_D": true,
       "converged_H": true
     },
@@ -5093,6 +5082,17 @@
       "logL_Hfree": -15619.860250216982,
       "T_parent": 1.910029652652156,
       "T_standard": 1.910029652652156,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900451,
+      "seed": 900451,
+      "logL_D_max": -15734.038334055274,
+      "logL_D_canonical": -15734.038334055274,
+      "logL_Hfree": -15733.916799435265,
+      "T_parent": 0.24306924001939478,
+      "T_standard": 0.24306924001939478,
       "converged_D": true,
       "converged_H": true
     },
@@ -5317,17 +5317,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900472,
-      "seed": 900472,
-      "logL_D_max": -15578.316676202803,
-      "logL_D_canonical": -15578.316676202803,
-      "logL_Hfree": -15576.865499190602,
-      "T_parent": 2.902354024401575,
-      "T_standard": 2.902354024401575,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900469,
       "seed": 900469,
       "logL_D_max": -15727.146925721632,
@@ -5335,6 +5324,17 @@
       "logL_Hfree": -15726.473838713177,
       "T_parent": 1.346174016911391,
       "T_standard": 1.346174016911391,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900472,
+      "seed": 900472,
+      "logL_D_max": -15578.316676202803,
+      "logL_D_canonical": -15578.316676202803,
+      "logL_Hfree": -15576.865499190602,
+      "T_parent": 2.902354024401575,
+      "T_standard": 2.902354024401575,
       "converged_D": true,
       "converged_H": true
     },
@@ -5504,17 +5504,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900489,
-      "seed": 900489,
-      "logL_D_max": -15571.747551997923,
-      "logL_D_canonical": -15571.747551997923,
-      "logL_Hfree": -15570.326359370043,
-      "T_parent": 2.842385255760746,
-      "T_standard": 2.842385255760746,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900491,
       "seed": 900491,
       "logL_D_max": -15893.25825534988,
@@ -5522,6 +5511,17 @@
       "logL_Hfree": -15891.417354488785,
       "T_parent": 3.6818017221885384,
       "T_standard": 3.6818017221885384,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900489,
+      "seed": 900489,
+      "logL_D_max": -15571.747551997923,
+      "logL_D_canonical": -15571.747551997923,
+      "logL_Hfree": -15570.326359370043,
+      "T_parent": 2.842385255760746,
+      "T_standard": 2.842385255760746,
       "converged_D": true,
       "converged_H": true
     },
@@ -5570,17 +5570,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900495,
-      "seed": 900495,
-      "logL_D_max": -15727.546824542529,
-      "logL_D_canonical": -15727.546824542529,
-      "logL_Hfree": -15727.289797100948,
-      "T_parent": 0.5140548831623164,
-      "T_standard": 0.5140548831623164,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900494,
       "seed": 900494,
       "logL_D_max": -15605.1434808903,
@@ -5588,6 +5577,17 @@
       "logL_Hfree": -15604.730021027613,
       "T_parent": 0.8269197253721359,
       "T_standard": 0.8269197253721359,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900495,
+      "seed": 900495,
+      "logL_D_max": -15727.546824542529,
+      "logL_D_canonical": -15727.546824542529,
+      "logL_Hfree": -15727.289797100948,
+      "T_parent": 0.5140548831623164,
+      "T_standard": 0.5140548831623164,
       "converged_D": true,
       "converged_H": true
     },
@@ -5603,17 +5603,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900498,
-      "seed": 900498,
-      "logL_D_max": -15413.560972224246,
-      "logL_D_canonical": -15413.560972224246,
-      "logL_Hfree": -15413.477380104145,
-      "T_parent": 0.16718424020291422,
-      "T_standard": 0.16718424020291422,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900499,
       "seed": 900499,
       "logL_D_max": -15400.395501298153,
@@ -5625,13 +5614,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900501,
-      "seed": 900501,
-      "logL_D_max": -15524.58647533232,
-      "logL_D_canonical": -15524.58647533232,
-      "logL_Hfree": -15524.474476815982,
-      "T_parent": 0.2239970326772891,
-      "T_standard": 0.2239970326772891,
+      "simulation_id": 900498,
+      "seed": 900498,
+      "logL_D_max": -15413.560972224246,
+      "logL_D_canonical": -15413.560972224246,
+      "logL_Hfree": -15413.477380104145,
+      "T_parent": 0.16718424020291422,
+      "T_standard": 0.16718424020291422,
       "converged_D": true,
       "converged_H": true
     },
@@ -5647,17 +5636,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900502,
-      "seed": 900502,
-      "logL_D_max": -15657.331658306706,
-      "logL_D_canonical": -15657.331658306706,
-      "logL_Hfree": -15655.338917791621,
-      "T_parent": 3.985481030169467,
-      "T_standard": 3.985481030169467,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900504,
       "seed": 900504,
       "logL_D_max": -15795.808545964446,
@@ -5665,6 +5643,28 @@
       "logL_Hfree": -15795.706988493826,
       "T_parent": 0.20311494123961893,
       "T_standard": 0.20311494123961893,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900501,
+      "seed": 900501,
+      "logL_D_max": -15524.58647533232,
+      "logL_D_canonical": -15524.58647533232,
+      "logL_Hfree": -15524.474476815982,
+      "T_parent": 0.2239970326772891,
+      "T_standard": 0.2239970326772891,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900502,
+      "seed": 900502,
+      "logL_D_max": -15657.331658306706,
+      "logL_D_canonical": -15657.331658306706,
+      "logL_Hfree": -15655.338917791621,
+      "T_parent": 3.985481030169467,
+      "T_standard": 3.985481030169467,
       "converged_D": true,
       "converged_H": true
     },
@@ -5702,17 +5702,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900511,
-      "seed": 900511,
-      "logL_D_max": -15617.231757894284,
-      "logL_D_canonical": -15617.231757894284,
-      "logL_Hfree": -15616.544616289453,
-      "T_parent": 1.374283209661371,
-      "T_standard": 1.374283209661371,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900508,
       "seed": 900508,
       "logL_D_max": -15551.268146625644,
@@ -5720,6 +5709,17 @@
       "logL_Hfree": -15549.764799265795,
       "T_parent": 3.006694719697407,
       "T_standard": 3.006694719697407,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900511,
+      "seed": 900511,
+      "logL_D_max": -15617.231757894284,
+      "logL_D_canonical": -15617.231757894284,
+      "logL_Hfree": -15616.544616289453,
+      "T_parent": 1.374283209661371,
+      "T_standard": 1.374283209661371,
       "converged_D": true,
       "converged_H": true
     },
@@ -5735,17 +5735,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900514,
-      "seed": 900514,
-      "logL_D_max": -15400.298703958902,
-      "logL_D_canonical": -15400.298703958902,
-      "logL_Hfree": -15399.948043577777,
-      "T_parent": 0.7013207622512709,
-      "T_standard": 0.7013207622512709,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900512,
       "seed": 900512,
       "logL_D_max": -15481.105598708578,
@@ -5753,6 +5742,17 @@
       "logL_Hfree": -15481.10559193445,
       "T_parent": 1.3548255083151162e-05,
       "T_standard": 1.3548255083151162e-05,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900514,
+      "seed": 900514,
+      "logL_D_max": -15400.298703958902,
+      "logL_D_canonical": -15400.298703958902,
+      "logL_Hfree": -15399.948043577777,
+      "T_parent": 0.7013207622512709,
+      "T_standard": 0.7013207622512709,
       "converged_D": true,
       "converged_H": true
     },
@@ -5801,17 +5801,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900517,
-      "seed": 900517,
-      "logL_D_max": -15475.013237743697,
-      "logL_D_canonical": -15475.013237743697,
-      "logL_Hfree": -15474.888847988776,
-      "T_parent": 0.24877950984227937,
-      "T_standard": 0.24877950984227937,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900519,
       "seed": 900519,
       "logL_D_max": -15435.254057468595,
@@ -5819,6 +5808,17 @@
       "logL_Hfree": -15434.61050025222,
       "T_parent": 1.2871144327509683,
       "T_standard": 1.2871144327509683,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900517,
+      "seed": 900517,
+      "logL_D_max": -15475.013237743697,
+      "logL_D_canonical": -15475.013237743697,
+      "logL_Hfree": -15474.888847988776,
+      "T_parent": 0.24877950984227937,
+      "T_standard": 0.24877950984227937,
       "converged_D": true,
       "converged_H": true
     },
@@ -5867,17 +5867,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900524,
-      "seed": 900524,
-      "logL_D_max": -15635.500077916855,
-      "logL_D_canonical": -15635.500077916855,
-      "logL_Hfree": -15635.075174792868,
-      "T_parent": 0.8498062479739019,
-      "T_standard": 0.8498062479739019,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900523,
       "seed": 900523,
       "logL_D_max": -15677.252107958906,
@@ -5889,13 +5878,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900529,
-      "seed": 900529,
-      "logL_D_max": -15449.329652367738,
-      "logL_D_canonical": -15449.329652367738,
-      "logL_Hfree": -15449.318740739734,
-      "T_parent": 0.021823256007337477,
-      "T_standard": 0.021823256007337477,
+      "simulation_id": 900524,
+      "seed": 900524,
+      "logL_D_max": -15635.500077916855,
+      "logL_D_canonical": -15635.500077916855,
+      "logL_Hfree": -15635.075174792868,
+      "T_parent": 0.8498062479739019,
+      "T_standard": 0.8498062479739019,
       "converged_D": true,
       "converged_H": true
     },
@@ -5911,13 +5900,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900526,
-      "seed": 900526,
-      "logL_D_max": -15949.398445112996,
-      "logL_D_canonical": -15949.398445112996,
-      "logL_Hfree": -15949.38135287052,
-      "T_parent": 0.034184484953584615,
-      "T_standard": 0.034184484953584615,
+      "simulation_id": 900529,
+      "seed": 900529,
+      "logL_D_max": -15449.329652367738,
+      "logL_D_canonical": -15449.329652367738,
+      "logL_Hfree": -15449.318740739734,
+      "T_parent": 0.021823256007337477,
+      "T_standard": 0.021823256007337477,
       "converged_D": true,
       "converged_H": true
     },
@@ -5933,6 +5922,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900528,
+      "seed": 900528,
+      "logL_D_max": -15900.212380021438,
+      "logL_D_canonical": -15900.212380021438,
+      "logL_Hfree": -15900.089972702266,
+      "T_parent": 0.2448146383430867,
+      "T_standard": 0.2448146383430867,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900532,
       "seed": 900532,
       "logL_D_max": -15481.877351416335,
@@ -5944,13 +5944,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900528,
-      "seed": 900528,
-      "logL_D_max": -15900.212380021438,
-      "logL_D_canonical": -15900.212380021438,
-      "logL_Hfree": -15900.089972702266,
-      "T_parent": 0.2448146383430867,
-      "T_standard": 0.2448146383430867,
+      "simulation_id": 900526,
+      "seed": 900526,
+      "logL_D_max": -15949.398445112996,
+      "logL_D_canonical": -15949.398445112996,
+      "logL_Hfree": -15949.38135287052,
+      "T_parent": 0.034184484953584615,
+      "T_standard": 0.034184484953584615,
       "converged_D": true,
       "converged_H": true
     },
@@ -6186,13 +6186,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900556,
-      "seed": 900556,
-      "logL_D_max": -15653.395733662299,
-      "logL_D_canonical": -15653.395733662299,
-      "logL_Hfree": -15653.395285095441,
-      "T_parent": 0.0008971337156253867,
-      "T_standard": 0.0008971337156253867,
+      "simulation_id": 900553,
+      "seed": 900553,
+      "logL_D_max": -15328.696280831726,
+      "logL_D_canonical": -15328.696280831726,
+      "logL_Hfree": -15328.571789682923,
+      "T_parent": 0.2489822976058349,
+      "T_standard": 0.2489822976058349,
       "converged_D": true,
       "converged_H": true
     },
@@ -6208,13 +6208,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900553,
-      "seed": 900553,
-      "logL_D_max": -15328.696280831726,
-      "logL_D_canonical": -15328.696280831726,
-      "logL_Hfree": -15328.571789682923,
-      "T_parent": 0.2489822976058349,
-      "T_standard": 0.2489822976058349,
+      "simulation_id": 900556,
+      "seed": 900556,
+      "logL_D_max": -15653.395733662299,
+      "logL_D_canonical": -15653.395733662299,
+      "logL_Hfree": -15653.395285095441,
+      "T_parent": 0.0008971337156253867,
+      "T_standard": 0.0008971337156253867,
       "converged_D": true,
       "converged_H": true
     },
@@ -6252,17 +6252,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900557,
-      "seed": 900557,
-      "logL_D_max": -15884.64074988862,
-      "logL_D_canonical": -15884.64074988862,
-      "logL_Hfree": -15884.609121224858,
-      "T_parent": 0.06325732752520707,
-      "T_standard": 0.06325732752520707,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900554,
       "seed": 900554,
       "logL_D_max": -15765.13255155875,
@@ -6270,6 +6259,17 @@
       "logL_Hfree": -15764.929092911487,
       "T_parent": 0.4069172945273749,
       "T_standard": 0.4069172945273749,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900557,
+      "seed": 900557,
+      "logL_D_max": -15884.64074988862,
+      "logL_D_canonical": -15884.64074988862,
+      "logL_Hfree": -15884.609121224858,
+      "T_parent": 0.06325732752520707,
+      "T_standard": 0.06325732752520707,
       "converged_D": true,
       "converged_H": true
     },
@@ -6351,17 +6351,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900567,
-      "seed": 900567,
-      "logL_D_max": -15596.956530165844,
-      "logL_D_canonical": -15596.956530165844,
-      "logL_Hfree": -15596.954105012494,
-      "T_parent": 0.004850306700973306,
-      "T_standard": 0.004850306700973306,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900566,
       "seed": 900566,
       "logL_D_max": -15677.369207132697,
@@ -6373,6 +6362,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900567,
+      "seed": 900567,
+      "logL_D_max": -15596.956530165844,
+      "logL_D_canonical": -15596.956530165844,
+      "logL_Hfree": -15596.954105012494,
+      "T_parent": 0.004850306700973306,
+      "T_standard": 0.004850306700973306,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900574,
       "seed": 900574,
       "logL_D_max": -15511.496205094052,
@@ -6380,6 +6380,17 @@
       "logL_Hfree": -15511.467137062926,
       "T_parent": 0.058136062252742704,
       "T_standard": 0.058136062252742704,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900570,
+      "seed": 900570,
+      "logL_D_max": -15736.969092588351,
+      "logL_D_canonical": -15736.969092588351,
+      "logL_Hfree": -15736.845577031907,
+      "T_parent": 0.24703111288908985,
+      "T_standard": 0.24703111288908985,
       "converged_D": true,
       "converged_H": true
     },
@@ -6406,13 +6417,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900570,
-      "seed": 900570,
-      "logL_D_max": -15736.969092588351,
-      "logL_D_canonical": -15736.969092588351,
-      "logL_Hfree": -15736.845577031907,
-      "T_parent": 0.24703111288908985,
-      "T_standard": 0.24703111288908985,
+      "simulation_id": 900575,
+      "seed": 900575,
+      "logL_D_max": -15508.834879778798,
+      "logL_D_canonical": -15508.834879778798,
+      "logL_Hfree": -15506.226780560039,
+      "T_parent": 5.216198437519779,
+      "T_standard": 5.216198437519779,
       "converged_D": true,
       "converged_H": true
     },
@@ -6424,17 +6435,6 @@
       "logL_Hfree": -15574.0823545361,
       "T_parent": 0.019459725979686482,
       "T_standard": 0.019459725979686482,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900575,
-      "seed": 900575,
-      "logL_D_max": -15508.834879778798,
-      "logL_D_canonical": -15508.834879778798,
-      "logL_Hfree": -15506.226780560039,
-      "T_parent": 5.216198437519779,
-      "T_standard": 5.216198437519779,
       "converged_D": true,
       "converged_H": true
     },
@@ -6527,17 +6527,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900588,
-      "seed": 900588,
-      "logL_D_max": -15428.579674387529,
-      "logL_D_canonical": -15428.579674387529,
-      "logL_Hfree": -15428.537419327684,
-      "T_parent": 0.08451011969009414,
-      "T_standard": 0.08451011969009414,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900582,
       "seed": 900582,
       "logL_D_max": -15707.129537754729,
@@ -6556,6 +6545,17 @@
       "logL_Hfree": -15447.751641188375,
       "T_parent": 0.2759265794411476,
       "T_standard": 0.2759265794411476,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900588,
+      "seed": 900588,
+      "logL_D_max": -15428.579674387529,
+      "logL_D_canonical": -15428.579674387529,
+      "logL_Hfree": -15428.537419327684,
+      "T_parent": 0.08451011969009414,
+      "T_standard": 0.08451011969009414,
       "converged_D": true,
       "converged_H": true
     },
@@ -6714,17 +6714,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900600,
-      "seed": 900600,
-      "logL_D_max": -15418.712931571876,
-      "logL_D_canonical": -15418.712931571876,
-      "logL_Hfree": -15418.6613638913,
-      "T_parent": 0.10313536115063471,
-      "T_standard": 0.10313536115063471,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900603,
       "seed": 900603,
       "logL_D_max": -15469.62177175469,
@@ -6732,6 +6721,17 @@
       "logL_Hfree": -15467.34376674764,
       "T_parent": 4.556010014101048,
       "T_standard": 4.556010014101048,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900600,
+      "seed": 900600,
+      "logL_D_max": -15418.712931571876,
+      "logL_D_canonical": -15418.712931571876,
+      "logL_Hfree": -15418.6613638913,
+      "T_parent": 0.10313536115063471,
+      "T_standard": 0.10313536115063471,
       "converged_D": true,
       "converged_H": true
     },
@@ -6846,17 +6846,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900618,
-      "seed": 900618,
-      "logL_D_max": -15732.982884166648,
-      "logL_D_canonical": -15732.982884166648,
-      "logL_Hfree": -15732.944296744925,
-      "T_parent": 0.07717484344539116,
-      "T_standard": 0.07717484344539116,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900614,
       "seed": 900614,
       "logL_D_max": -15732.960729394683,
@@ -6868,13 +6857,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900612,
-      "seed": 900612,
-      "logL_D_max": -15395.753957443296,
-      "logL_D_canonical": -15395.753957443296,
-      "logL_Hfree": -15394.317912324575,
-      "T_parent": 2.872090237440716,
-      "T_standard": 2.872090237440716,
+      "simulation_id": 900618,
+      "seed": 900618,
+      "logL_D_max": -15732.982884166648,
+      "logL_D_canonical": -15732.982884166648,
+      "logL_Hfree": -15732.944296744925,
+      "T_parent": 0.07717484344539116,
+      "T_standard": 0.07717484344539116,
       "converged_D": true,
       "converged_H": true
     },
@@ -6886,6 +6875,17 @@
       "logL_Hfree": -15585.947134121874,
       "T_parent": 0.0556716081846389,
       "T_standard": 0.0556716081846389,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900612,
+      "seed": 900612,
+      "logL_D_max": -15395.753957443296,
+      "logL_D_canonical": -15395.753957443296,
+      "logL_Hfree": -15394.317912324575,
+      "T_parent": 2.872090237440716,
+      "T_standard": 2.872090237440716,
       "converged_D": true,
       "converged_H": true
     },
@@ -6989,17 +6989,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900625,
-      "seed": 900625,
-      "logL_D_max": -15457.87561670885,
-      "logL_D_canonical": -15457.87561670885,
-      "logL_Hfree": -15457.26317147795,
-      "T_parent": 1.2248904617990775,
-      "T_standard": 1.2248904617990775,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900626,
       "seed": 900626,
       "logL_D_max": -15549.84887151617,
@@ -7007,6 +6996,17 @@
       "logL_Hfree": -15549.024082931595,
       "T_parent": 1.6495771691479604,
       "T_standard": 1.6495771691479604,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900625,
+      "seed": 900625,
+      "logL_D_max": -15457.87561670885,
+      "logL_D_canonical": -15457.87561670885,
+      "logL_Hfree": -15457.26317147795,
+      "T_parent": 1.2248904617990775,
+      "T_standard": 1.2248904617990775,
       "converged_D": true,
       "converged_H": true
     },
@@ -7055,6 +7055,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900635,
+      "seed": 900635,
+      "logL_D_max": -15373.159530602341,
+      "logL_D_canonical": -15373.159530602341,
+      "logL_Hfree": -15373.002058674607,
+      "T_parent": 0.31494385546830017,
+      "T_standard": 0.31494385546830017,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900634,
       "seed": 900634,
       "logL_D_max": -15579.860107306813,
@@ -7073,17 +7084,6 @@
       "logL_Hfree": -15565.527740319121,
       "T_parent": 0.2662973684819008,
       "T_standard": 0.2662973684819008,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900635,
-      "seed": 900635,
-      "logL_D_max": -15373.159530602341,
-      "logL_D_canonical": -15373.159530602341,
-      "logL_Hfree": -15373.002058674607,
-      "T_parent": 0.31494385546830017,
-      "T_standard": 0.31494385546830017,
       "converged_D": true,
       "converged_H": true
     },
@@ -7176,17 +7176,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900643,
-      "seed": 900643,
-      "logL_D_max": -15852.206247596538,
-      "logL_D_canonical": -15852.206247596538,
-      "logL_Hfree": -15851.447899306582,
-      "T_parent": 1.5166965799107857,
-      "T_standard": 1.5166965799107857,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900642,
       "seed": 900642,
       "logL_D_max": -15536.694008338363,
@@ -7198,6 +7187,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900643,
+      "seed": 900643,
+      "logL_D_max": -15852.206247596538,
+      "logL_D_canonical": -15852.206247596538,
+      "logL_Hfree": -15851.447899306582,
+      "T_parent": 1.5166965799107857,
+      "T_standard": 1.5166965799107857,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900645,
       "seed": 900645,
       "logL_D_max": -15474.911929601498,
@@ -7205,17 +7205,6 @@
       "logL_Hfree": -15474.9094376092,
       "T_parent": 0.0049839845960377716,
       "T_standard": 0.0049839845960377716,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900646,
-      "seed": 900646,
-      "logL_D_max": -15517.460819221837,
-      "logL_D_canonical": -15517.460819221837,
-      "logL_Hfree": -15517.456793859494,
-      "T_parent": 0.008050724685745081,
-      "T_standard": 0.008050724685745081,
       "converged_D": true,
       "converged_H": true
     },
@@ -7264,6 +7253,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900646,
+      "seed": 900646,
+      "logL_D_max": -15517.460819221837,
+      "logL_D_canonical": -15517.460819221837,
+      "logL_Hfree": -15517.456793859494,
+      "T_parent": 0.008050724685745081,
+      "T_standard": 0.008050724685745081,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900651,
       "seed": 900651,
       "logL_D_max": -15667.968291955418,
@@ -7297,17 +7297,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900654,
-      "seed": 900654,
-      "logL_D_max": -15981.648445256036,
-      "logL_D_canonical": -15981.648445256036,
-      "logL_Hfree": -15981.60794320267,
-      "T_parent": 0.08100410673068836,
-      "T_standard": 0.08100410673068836,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900653,
       "seed": 900653,
       "logL_D_max": -15699.952526754516,
@@ -7315,6 +7304,17 @@
       "logL_Hfree": -15699.507519635388,
       "T_parent": 0.8900142382553895,
       "T_standard": 0.8900142382553895,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900654,
+      "seed": 900654,
+      "logL_D_max": -15981.648445256036,
+      "logL_D_canonical": -15981.648445256036,
+      "logL_Hfree": -15981.60794320267,
+      "T_parent": 0.08100410673068836,
+      "T_standard": 0.08100410673068836,
       "converged_D": true,
       "converged_H": true
     },
@@ -7363,17 +7363,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900659,
-      "seed": 900659,
-      "logL_D_max": -15617.964677717075,
-      "logL_D_canonical": -15617.964677717075,
-      "logL_Hfree": -15616.797695728299,
-      "T_parent": 2.3339639775513206,
-      "T_standard": 2.3339639775513206,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900657,
       "seed": 900657,
       "logL_D_max": -15712.629770090552,
@@ -7385,13 +7374,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900663,
-      "seed": 900663,
-      "logL_D_max": -15481.816407218415,
-      "logL_D_canonical": -15481.816407218415,
-      "logL_Hfree": -15481.251281084775,
-      "T_parent": 1.130252267281321,
-      "T_standard": 1.130252267281321,
+      "simulation_id": 900659,
+      "seed": 900659,
+      "logL_D_max": -15617.964677717075,
+      "logL_D_canonical": -15617.964677717075,
+      "logL_Hfree": -15616.797695728299,
+      "T_parent": 2.3339639775513206,
+      "T_standard": 2.3339639775513206,
       "converged_D": true,
       "converged_H": true
     },
@@ -7403,6 +7392,17 @@
       "logL_Hfree": -15309.34166273497,
       "T_parent": 2.7337090260298282,
       "T_standard": 2.7337090260298282,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900663,
+      "seed": 900663,
+      "logL_D_max": -15481.816407218415,
+      "logL_D_canonical": -15481.816407218415,
+      "logL_Hfree": -15481.251281084775,
+      "T_parent": 1.130252267281321,
+      "T_standard": 1.130252267281321,
       "converged_D": true,
       "converged_H": true
     },
@@ -7429,17 +7429,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900667,
-      "seed": 900667,
-      "logL_D_max": -15441.045504880974,
-      "logL_D_canonical": -15441.045504880974,
-      "logL_Hfree": -15438.934308074535,
-      "T_parent": 4.222393612879387,
-      "T_standard": 4.222393612879387,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900664,
       "seed": 900664,
       "logL_D_max": -15407.290054944293,
@@ -7447,6 +7436,17 @@
       "logL_Hfree": -15407.103703276302,
       "T_parent": 0.3727033359828056,
       "T_standard": 0.3727033359828056,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900667,
+      "seed": 900667,
+      "logL_D_max": -15441.045504880974,
+      "logL_D_canonical": -15441.045504880974,
+      "logL_Hfree": -15438.934308074535,
+      "T_parent": 4.222393612879387,
+      "T_standard": 4.222393612879387,
       "converged_D": true,
       "converged_H": true
     },
@@ -7473,17 +7473,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900670,
-      "seed": 900670,
-      "logL_D_max": -15584.261585089924,
-      "logL_D_canonical": -15584.261585089924,
-      "logL_Hfree": -15584.235738716452,
-      "T_parent": 0.051692746943444945,
-      "T_standard": 0.051692746943444945,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900669,
       "seed": 900669,
       "logL_D_max": -15763.06778573053,
@@ -7495,13 +7484,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900671,
-      "seed": 900671,
-      "logL_D_max": -15435.965354835225,
-      "logL_D_canonical": -15435.965354835225,
-      "logL_Hfree": -15435.962784239931,
-      "T_parent": 0.005141190587892197,
-      "T_standard": 0.005141190587892197,
+      "simulation_id": 900670,
+      "seed": 900670,
+      "logL_D_max": -15584.261585089924,
+      "logL_D_canonical": -15584.261585089924,
+      "logL_Hfree": -15584.235738716452,
+      "T_parent": 0.051692746943444945,
+      "T_standard": 0.051692746943444945,
       "converged_D": true,
       "converged_H": true
     },
@@ -7517,6 +7506,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900671,
+      "seed": 900671,
+      "logL_D_max": -15435.965354835225,
+      "logL_D_canonical": -15435.965354835225,
+      "logL_Hfree": -15435.962784239931,
+      "T_parent": 0.005141190587892197,
+      "T_standard": 0.005141190587892197,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900672,
       "seed": 900672,
       "logL_D_max": -15676.329229410627,
@@ -7528,17 +7528,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900675,
-      "seed": 900675,
-      "logL_D_max": -15608.875007493905,
-      "logL_D_canonical": -15608.875007493905,
-      "logL_Hfree": -15608.641523852553,
-      "T_parent": 0.46696728270399035,
-      "T_standard": 0.46696728270399035,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900678,
       "seed": 900678,
       "logL_D_max": -15439.680734094316,
@@ -7546,6 +7535,17 @@
       "logL_Hfree": -15439.652422140538,
       "T_parent": 0.05662390755605884,
       "T_standard": 0.05662390755605884,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900675,
+      "seed": 900675,
+      "logL_D_max": -15608.875007493905,
+      "logL_D_canonical": -15608.875007493905,
+      "logL_Hfree": -15608.641523852553,
+      "T_parent": 0.46696728270399035,
+      "T_standard": 0.46696728270399035,
       "converged_D": true,
       "converged_H": true
     },
@@ -7605,17 +7605,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900681,
-      "seed": 900681,
-      "logL_D_max": -15636.235375407086,
-      "logL_D_canonical": -15636.235375407086,
-      "logL_Hfree": -15636.221578329798,
-      "T_parent": 0.027594154576945584,
-      "T_standard": 0.027594154576945584,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900683,
       "seed": 900683,
       "logL_D_max": -15472.896562783033,
@@ -7623,6 +7612,17 @@
       "logL_Hfree": -15470.470893432495,
       "T_parent": 4.851338701075292,
       "T_standard": 4.851338701075292,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900681,
+      "seed": 900681,
+      "logL_D_max": -15636.235375407086,
+      "logL_D_canonical": -15636.235375407086,
+      "logL_Hfree": -15636.221578329798,
+      "T_parent": 0.027594154576945584,
+      "T_standard": 0.027594154576945584,
       "converged_D": true,
       "converged_H": true
     },
@@ -7748,17 +7748,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900693,
-      "seed": 900693,
-      "logL_D_max": -15652.73806527725,
-      "logL_D_canonical": -15652.73806527725,
-      "logL_Hfree": -15652.182945041855,
-      "T_parent": 1.1102404707889946,
-      "T_standard": 1.1102404707889946,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900695,
       "seed": 900695,
       "logL_D_max": -15496.361126033553,
@@ -7770,13 +7759,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900698,
-      "seed": 900698,
-      "logL_D_max": -15516.141260614477,
-      "logL_D_canonical": -15516.141260614477,
-      "logL_Hfree": -15516.140337605884,
-      "T_parent": 0.0018460171850165352,
-      "T_standard": 0.0018460171850165352,
+      "simulation_id": 900693,
+      "seed": 900693,
+      "logL_D_max": -15652.73806527725,
+      "logL_D_canonical": -15652.73806527725,
+      "logL_Hfree": -15652.182945041855,
+      "T_parent": 1.1102404707889946,
+      "T_standard": 1.1102404707889946,
       "converged_D": true,
       "converged_H": true
     },
@@ -7792,6 +7781,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900698,
+      "seed": 900698,
+      "logL_D_max": -15516.141260614477,
+      "logL_D_canonical": -15516.141260614477,
+      "logL_Hfree": -15516.140337605884,
+      "T_parent": 0.0018460171850165352,
+      "T_standard": 0.0018460171850165352,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900696,
       "seed": 900696,
       "logL_D_max": -15960.507239047112,
@@ -7799,17 +7799,6 @@
       "logL_Hfree": -15960.406038806057,
       "T_parent": 0.20240048211053363,
       "T_standard": 0.20240048211053363,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900699,
-      "seed": 900699,
-      "logL_D_max": -15498.407066676831,
-      "logL_D_canonical": -15498.407066676831,
-      "logL_Hfree": -15498.405166720451,
-      "T_parent": 0.0037999127598595805,
-      "T_standard": 0.0037999127598595805,
       "converged_D": true,
       "converged_H": true
     },
@@ -7825,13 +7814,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900703,
-      "seed": 900703,
-      "logL_D_max": -15605.35122660298,
-      "logL_D_canonical": -15605.35122660298,
-      "logL_Hfree": -15605.038426269472,
-      "T_parent": 0.625600667015533,
-      "T_standard": 0.625600667015533,
+      "simulation_id": 900699,
+      "seed": 900699,
+      "logL_D_max": -15498.407066676831,
+      "logL_D_canonical": -15498.407066676831,
+      "logL_Hfree": -15498.405166720451,
+      "T_parent": 0.0037999127598595805,
+      "T_standard": 0.0037999127598595805,
       "converged_D": true,
       "converged_H": true
     },
@@ -7843,6 +7832,17 @@
       "logL_Hfree": -15448.971420410526,
       "T_parent": 0.39959938643005444,
       "T_standard": 0.39959938643005444,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900703,
+      "seed": 900703,
+      "logL_D_max": -15605.35122660298,
+      "logL_D_canonical": -15605.35122660298,
+      "logL_Hfree": -15605.038426269472,
+      "T_parent": 0.625600667015533,
+      "T_standard": 0.625600667015533,
       "converged_D": true,
       "converged_H": true
     },
@@ -7968,17 +7968,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900714,
-      "seed": 900714,
-      "logL_D_max": -15485.423606450982,
-      "logL_D_canonical": -15485.423606450982,
-      "logL_Hfree": -15484.804068398815,
-      "T_parent": 1.239076104335254,
-      "T_standard": 1.239076104335254,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900715,
       "seed": 900715,
       "logL_D_max": -15370.58117152948,
@@ -7986,6 +7975,17 @@
       "logL_Hfree": -15370.515067997425,
       "T_parent": 0.13220706411084393,
       "T_standard": 0.13220706411084393,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900714,
+      "seed": 900714,
+      "logL_D_max": -15485.423606450982,
+      "logL_D_canonical": -15485.423606450982,
+      "logL_Hfree": -15484.804068398815,
+      "T_parent": 1.239076104335254,
+      "T_standard": 1.239076104335254,
       "converged_D": true,
       "converged_H": true
     },
@@ -8177,17 +8177,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900735,
-      "seed": 900735,
-      "logL_D_max": -15393.80749833235,
-      "logL_D_canonical": -15393.80749833235,
-      "logL_Hfree": -15393.788076583241,
-      "T_parent": 0.03884349821601063,
-      "T_standard": 0.03884349821601063,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900733,
       "seed": 900733,
       "logL_D_max": -15305.64169653014,
@@ -8195,6 +8184,17 @@
       "logL_Hfree": -15305.64114116121,
       "T_parent": 0.001110737859562505,
       "T_standard": 0.001110737859562505,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900735,
+      "seed": 900735,
+      "logL_D_max": -15393.80749833235,
+      "logL_D_canonical": -15393.80749833235,
+      "logL_Hfree": -15393.788076583241,
+      "T_parent": 0.03884349821601063,
+      "T_standard": 0.03884349821601063,
       "converged_D": true,
       "converged_H": true
     },
@@ -8232,17 +8232,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900739,
-      "seed": 900739,
-      "logL_D_max": -15496.03576898263,
-      "logL_D_canonical": -15496.03576898263,
-      "logL_Hfree": -15495.975654578433,
-      "T_parent": 0.12022880839504069,
-      "T_standard": 0.12022880839504069,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900741,
       "seed": 900741,
       "logL_D_max": -15513.07066378064,
@@ -8250,6 +8239,17 @@
       "logL_Hfree": -15512.632235903648,
       "T_parent": 0.8768557539842732,
       "T_standard": 0.8768557539842732,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900739,
+      "seed": 900739,
+      "logL_D_max": -15496.03576898263,
+      "logL_D_canonical": -15496.03576898263,
+      "logL_Hfree": -15495.975654578433,
+      "T_parent": 0.12022880839504069,
+      "T_standard": 0.12022880839504069,
       "converged_D": true,
       "converged_H": true
     },
@@ -8265,17 +8265,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900743,
-      "seed": 900743,
-      "logL_D_max": -15480.74932445971,
-      "logL_D_canonical": -15480.74932445971,
-      "logL_Hfree": -15480.493000717146,
-      "T_parent": 0.5126474851276726,
-      "T_standard": 0.5126474851276726,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900740,
       "seed": 900740,
       "logL_D_max": -15395.613407022136,
@@ -8283,6 +8272,17 @@
       "logL_Hfree": -15394.771177767576,
       "T_parent": 1.6844585091203044,
       "T_standard": 1.6844585091203044,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900743,
+      "seed": 900743,
+      "logL_D_max": -15480.74932445971,
+      "logL_D_canonical": -15480.74932445971,
+      "logL_Hfree": -15480.493000717146,
+      "T_parent": 0.5126474851276726,
+      "T_standard": 0.5126474851276726,
       "converged_D": true,
       "converged_H": true
     },
@@ -8331,6 +8331,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900748,
+      "seed": 900748,
+      "logL_D_max": -15403.717195529083,
+      "logL_D_canonical": -15403.717195529083,
+      "logL_Hfree": -15402.382600870716,
+      "T_parent": 2.6691893167335365,
+      "T_standard": 2.6691893167335365,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900746,
       "seed": 900746,
       "logL_D_max": -15580.46368950326,
@@ -8349,17 +8360,6 @@
       "logL_Hfree": -15446.938675560286,
       "T_parent": 0.008052135501202429,
       "T_standard": 0.008052135501202429,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900748,
-      "seed": 900748,
-      "logL_D_max": -15403.717195529083,
-      "logL_D_canonical": -15403.717195529083,
-      "logL_Hfree": -15402.382600870716,
-      "T_parent": 2.6691893167335365,
-      "T_standard": 2.6691893167335365,
       "converged_D": true,
       "converged_H": true
     },
@@ -8408,17 +8408,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900753,
-      "seed": 900753,
-      "logL_D_max": -15514.018111564614,
-      "logL_D_canonical": -15514.018111564614,
-      "logL_Hfree": -15511.070762090014,
-      "T_parent": 5.894698949199665,
-      "T_standard": 5.894698949199665,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900757,
       "seed": 900757,
       "logL_D_max": -15534.988432816383,
@@ -8426,6 +8415,17 @@
       "logL_Hfree": -15534.68708135339,
       "T_parent": 0.6027029259857954,
       "T_standard": 0.6027029259857954,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900753,
+      "seed": 900753,
+      "logL_D_max": -15514.018111564614,
+      "logL_D_canonical": -15514.018111564614,
+      "logL_Hfree": -15511.070762090014,
+      "T_parent": 5.894698949199665,
+      "T_standard": 5.894698949199665,
       "converged_D": true,
       "converged_H": true
     },
@@ -8485,17 +8485,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900760,
-      "seed": 900760,
-      "logL_D_max": -15580.999011753818,
-      "logL_D_canonical": -15580.999011753818,
-      "logL_Hfree": -15580.85896047944,
-      "T_parent": 0.2801025487569859,
-      "T_standard": 0.2801025487569859,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900764,
       "seed": 900764,
       "logL_D_max": -15641.373984478992,
@@ -8518,6 +8507,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900760,
+      "seed": 900760,
+      "logL_D_max": -15580.999011753818,
+      "logL_D_canonical": -15580.999011753818,
+      "logL_Hfree": -15580.85896047944,
+      "T_parent": 0.2801025487569859,
+      "T_standard": 0.2801025487569859,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900763,
       "seed": 900763,
       "logL_D_max": -15468.877803734427,
@@ -8529,17 +8529,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900765,
-      "seed": 900765,
-      "logL_D_max": -15609.788377533525,
-      "logL_D_canonical": -15609.788377533525,
-      "logL_Hfree": -15609.544291111746,
-      "T_parent": 0.48817284355754964,
-      "T_standard": 0.48817284355754964,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900766,
       "seed": 900766,
       "logL_D_max": -15247.29356986202,
@@ -8547,6 +8536,17 @@
       "logL_Hfree": -15247.283467086028,
       "T_parent": 0.020205551983963232,
       "T_standard": 0.020205551983963232,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900765,
+      "seed": 900765,
+      "logL_D_max": -15609.788377533525,
+      "logL_D_canonical": -15609.788377533525,
+      "logL_Hfree": -15609.544291111746,
+      "T_parent": 0.48817284355754964,
+      "T_standard": 0.48817284355754964,
       "converged_D": true,
       "converged_H": true
     },
@@ -8573,17 +8573,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900767,
-      "seed": 900767,
-      "logL_D_max": -15399.169575532273,
-      "logL_D_canonical": -15399.169575532273,
-      "logL_Hfree": -15398.924496605152,
-      "T_parent": 0.4901578542412608,
-      "T_standard": 0.4901578542412608,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900769,
       "seed": 900769,
       "logL_D_max": -15490.134164565565,
@@ -8591,6 +8580,17 @@
       "logL_Hfree": -15488.038885489925,
       "T_parent": 4.190558151280129,
       "T_standard": 4.190558151280129,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900767,
+      "seed": 900767,
+      "logL_D_max": -15399.169575532273,
+      "logL_D_canonical": -15399.169575532273,
+      "logL_Hfree": -15398.924496605152,
+      "T_parent": 0.4901578542412608,
+      "T_standard": 0.4901578542412608,
       "converged_D": true,
       "converged_H": true
     },
@@ -8606,17 +8606,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900774,
-      "seed": 900774,
-      "logL_D_max": -15574.915139225915,
-      "logL_D_canonical": -15574.915139225915,
-      "logL_Hfree": -15574.670724072646,
-      "T_parent": 0.48883030653814785,
-      "T_standard": 0.48883030653814785,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900770,
       "seed": 900770,
       "logL_D_max": -15634.975313681363,
@@ -8624,6 +8613,17 @@
       "logL_Hfree": -15634.570324485998,
       "T_parent": 0.8099783907309757,
       "T_standard": 0.8099783907309757,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900774,
+      "seed": 900774,
+      "logL_D_max": -15574.915139225915,
+      "logL_D_canonical": -15574.915139225915,
+      "logL_Hfree": -15574.670724072646,
+      "T_parent": 0.48883030653814785,
+      "T_standard": 0.48883030653814785,
       "converged_D": true,
       "converged_H": true
     },
@@ -8771,17 +8771,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900787,
-      "seed": 900787,
-      "logL_D_max": -15522.357667217784,
-      "logL_D_canonical": -15522.357667217784,
-      "logL_Hfree": -15522.184519014409,
-      "T_parent": 0.34629640675120754,
-      "T_standard": 0.34629640675120754,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900789,
       "seed": 900789,
       "logL_D_max": -15856.849191577678,
@@ -8789,6 +8778,17 @@
       "logL_Hfree": -15856.767422317975,
       "T_parent": 0.16353851940584718,
       "T_standard": 0.16353851940584718,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900787,
+      "seed": 900787,
+      "logL_D_max": -15522.357667217784,
+      "logL_D_canonical": -15522.357667217784,
+      "logL_Hfree": -15522.184519014409,
+      "T_parent": 0.34629640675120754,
+      "T_standard": 0.34629640675120754,
       "converged_D": true,
       "converged_H": true
     },
@@ -8826,17 +8826,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900792,
-      "seed": 900792,
-      "logL_D_max": -15425.239867348773,
-      "logL_D_canonical": -15425.239867348773,
-      "logL_Hfree": -15424.060297343427,
-      "T_parent": 2.3591400106924993,
-      "T_standard": 2.3591400106924993,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900793,
       "seed": 900793,
       "logL_D_max": -15335.548094417647,
@@ -8844,6 +8833,17 @@
       "logL_Hfree": -15335.540690665759,
       "T_parent": 0.01480750377595541,
       "T_standard": 0.01480750377595541,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900792,
+      "seed": 900792,
+      "logL_D_max": -15425.239867348773,
+      "logL_D_canonical": -15425.239867348773,
+      "logL_Hfree": -15424.060297343427,
+      "T_parent": 2.3591400106924993,
+      "T_standard": 2.3591400106924993,
       "converged_D": true,
       "converged_H": true
     },
@@ -8870,17 +8870,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900799,
-      "seed": 900799,
-      "logL_D_max": -15575.96447432138,
-      "logL_D_canonical": -15575.96447432138,
-      "logL_Hfree": -15575.916846679727,
-      "T_parent": 0.0952552833041409,
-      "T_standard": 0.0952552833041409,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900798,
       "seed": 900798,
       "logL_D_max": -15831.192782925118,
@@ -8903,6 +8892,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900799,
+      "seed": 900799,
+      "logL_D_max": -15575.96447432138,
+      "logL_D_canonical": -15575.96447432138,
+      "logL_Hfree": -15575.916846679727,
+      "T_parent": 0.0952552833041409,
+      "T_standard": 0.0952552833041409,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900800,
       "seed": 900800,
       "logL_D_max": -15497.164169744747,
@@ -8910,17 +8910,6 @@
       "logL_Hfree": -15497.156430734476,
       "T_parent": 0.015478020541195292,
       "T_standard": 0.015478020541195292,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900802,
-      "seed": 900802,
-      "logL_D_max": -15224.445114078328,
-      "logL_D_canonical": -15224.445114078328,
-      "logL_Hfree": -15223.7634154638,
-      "T_parent": 1.3633972290554084,
-      "T_standard": 1.3633972290554084,
       "converged_D": true,
       "converged_H": true
     },
@@ -8936,6 +8925,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900801,
+      "seed": 900801,
+      "logL_D_max": -15460.578226752112,
+      "logL_D_canonical": -15460.578226752112,
+      "logL_Hfree": -15460.335111706181,
+      "T_parent": 0.48623009186121635,
+      "T_standard": 0.48623009186121635,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900804,
       "seed": 900804,
       "logL_D_max": -15353.905345823063,
@@ -8947,13 +8947,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900801,
-      "seed": 900801,
-      "logL_D_max": -15460.578226752112,
-      "logL_D_canonical": -15460.578226752112,
-      "logL_Hfree": -15460.335111706181,
-      "T_parent": 0.48623009186121635,
-      "T_standard": 0.48623009186121635,
+      "simulation_id": 900802,
+      "seed": 900802,
+      "logL_D_max": -15224.445114078328,
+      "logL_D_canonical": -15224.445114078328,
+      "logL_Hfree": -15223.7634154638,
+      "T_parent": 1.3633972290554084,
+      "T_standard": 1.3633972290554084,
       "converged_D": true,
       "converged_H": true
     },
@@ -9013,17 +9013,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900807,
-      "seed": 900807,
-      "logL_D_max": -15711.354673443635,
-      "logL_D_canonical": -15711.354673443635,
-      "logL_Hfree": -15709.959705323286,
-      "T_parent": 2.7899362406969885,
-      "T_standard": 2.7899362406969885,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900810,
       "seed": 900810,
       "logL_D_max": -15606.885872814508,
@@ -9031,6 +9020,17 @@
       "logL_Hfree": -15605.061307863865,
       "T_parent": 3.6491299012850504,
       "T_standard": 3.6491299012850504,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900807,
+      "seed": 900807,
+      "logL_D_max": -15711.354673443635,
+      "logL_D_canonical": -15711.354673443635,
+      "logL_Hfree": -15709.959705323286,
+      "T_parent": 2.7899362406969885,
+      "T_standard": 2.7899362406969885,
       "converged_D": true,
       "converged_H": true
     },
@@ -9068,17 +9068,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900816,
-      "seed": 900816,
-      "logL_D_max": -15515.303188771653,
-      "logL_D_canonical": -15515.303188771653,
-      "logL_Hfree": -15515.280160655675,
-      "T_parent": 0.046056231956754345,
-      "T_standard": 0.046056231956754345,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900815,
       "seed": 900815,
       "logL_D_max": -15410.32126016351,
@@ -9097,6 +9086,17 @@
       "logL_Hfree": -15925.795674538967,
       "T_parent": 4.012834294371714,
       "T_standard": 4.012834294371714,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900816,
+      "seed": 900816,
+      "logL_D_max": -15515.303188771653,
+      "logL_D_canonical": -15515.303188771653,
+      "logL_Hfree": -15515.280160655675,
+      "T_parent": 0.046056231956754345,
+      "T_standard": 0.046056231956754345,
       "converged_D": true,
       "converged_H": true
     },
@@ -9178,17 +9178,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900824,
-      "seed": 900824,
-      "logL_D_max": -15571.962786964656,
-      "logL_D_canonical": -15571.962786964656,
-      "logL_Hfree": -15571.191615429592,
-      "T_parent": 1.5423430701266625,
-      "T_standard": 1.5423430701266625,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900825,
       "seed": 900825,
       "logL_D_max": -15646.164691023529,
@@ -9196,6 +9185,17 @@
       "logL_Hfree": -15645.802556184455,
       "T_parent": 0.7242696781468112,
       "T_standard": 0.7242696781468112,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900824,
+      "seed": 900824,
+      "logL_D_max": -15571.962786964656,
+      "logL_D_canonical": -15571.962786964656,
+      "logL_Hfree": -15571.191615429592,
+      "T_parent": 1.5423430701266625,
+      "T_standard": 1.5423430701266625,
       "converged_D": true,
       "converged_H": true
     },
@@ -9266,17 +9266,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900833,
-      "seed": 900833,
-      "logL_D_max": -15603.282286312133,
-      "logL_D_canonical": -15603.282286312133,
-      "logL_Hfree": -15602.82866896857,
-      "T_parent": 0.9072346871253103,
-      "T_standard": 0.9072346871253103,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900831,
       "seed": 900831,
       "logL_D_max": -15680.230978266498,
@@ -9284,6 +9273,17 @@
       "logL_Hfree": -15679.710498277058,
       "T_parent": 1.0409599788799824,
       "T_standard": 1.0409599788799824,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900833,
+      "seed": 900833,
+      "logL_D_max": -15603.282286312133,
+      "logL_D_canonical": -15603.282286312133,
+      "logL_Hfree": -15602.82866896857,
+      "T_parent": 0.9072346871253103,
+      "T_standard": 0.9072346871253103,
       "converged_D": true,
       "converged_H": true
     },
@@ -9299,17 +9299,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900836,
-      "seed": 900836,
-      "logL_D_max": -15388.339893139759,
-      "logL_D_canonical": -15388.339893139759,
-      "logL_Hfree": -15388.31983827439,
-      "T_parent": 0.04010973073673085,
-      "T_standard": 0.04010973073673085,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900835,
       "seed": 900835,
       "logL_D_max": -15389.618514971471,
@@ -9317,6 +9306,17 @@
       "logL_Hfree": -15389.578036746327,
       "T_parent": 0.08095645028879517,
       "T_standard": 0.08095645028879517,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900836,
+      "seed": 900836,
+      "logL_D_max": -15388.339893139759,
+      "logL_D_canonical": -15388.339893139759,
+      "logL_Hfree": -15388.31983827439,
+      "T_parent": 0.04010973073673085,
+      "T_standard": 0.04010973073673085,
       "converged_D": true,
       "converged_H": true
     },
@@ -9376,17 +9376,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900843,
-      "seed": 900843,
-      "logL_D_max": -15387.379456843582,
-      "logL_D_canonical": -15387.379456843582,
-      "logL_Hfree": -15387.003911830983,
-      "T_parent": 0.7510900251982093,
-      "T_standard": 0.7510900251982093,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900842,
       "seed": 900842,
       "logL_D_max": -15529.17990032987,
@@ -9398,13 +9387,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900845,
-      "seed": 900845,
-      "logL_D_max": -15438.200905345919,
-      "logL_D_canonical": -15438.200905345919,
-      "logL_Hfree": -15438.172609764537,
-      "T_parent": 0.05659116276365239,
-      "T_standard": 0.05659116276365239,
+      "simulation_id": 900843,
+      "seed": 900843,
+      "logL_D_max": -15387.379456843582,
+      "logL_D_canonical": -15387.379456843582,
+      "logL_Hfree": -15387.003911830983,
+      "T_parent": 0.7510900251982093,
+      "T_standard": 0.7510900251982093,
       "converged_D": true,
       "converged_H": true
     },
@@ -9416,6 +9405,17 @@
       "logL_Hfree": -15422.9637444518,
       "T_parent": 0.27885839188456885,
       "T_standard": 0.27885839188456885,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900845,
+      "seed": 900845,
+      "logL_D_max": -15438.200905345919,
+      "logL_D_canonical": -15438.200905345919,
+      "logL_Hfree": -15438.172609764537,
+      "T_parent": 0.05659116276365239,
+      "T_standard": 0.05659116276365239,
       "converged_D": true,
       "converged_H": true
     },
@@ -9541,17 +9541,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900861,
-      "seed": 900861,
-      "logL_D_max": -15839.978475674416,
-      "logL_D_canonical": -15839.978475674416,
-      "logL_Hfree": -15839.945625557557,
-      "T_parent": 0.06570023371750722,
-      "T_standard": 0.06570023371750722,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900854,
       "seed": 900854,
       "logL_D_max": -15548.755767850515,
@@ -9585,6 +9574,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900861,
+      "seed": 900861,
+      "logL_D_max": -15839.978475674416,
+      "logL_D_canonical": -15839.978475674416,
+      "logL_Hfree": -15839.945625557557,
+      "T_parent": 0.06570023371750722,
+      "T_standard": 0.06570023371750722,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900855,
       "seed": 900855,
       "logL_D_max": -15803.557065177494,
@@ -9596,17 +9596,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900862,
-      "seed": 900862,
-      "logL_D_max": -15666.04428403558,
-      "logL_D_canonical": -15666.04428403558,
-      "logL_Hfree": -15665.10466960006,
-      "T_parent": 1.8792288710428693,
-      "T_standard": 1.8792288710428693,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900863,
       "seed": 900863,
       "logL_D_max": -15405.333521029883,
@@ -9614,6 +9603,17 @@
       "logL_Hfree": -15405.009849118567,
       "T_parent": 0.6473438226312282,
       "T_standard": 0.6473438226312282,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900862,
+      "seed": 900862,
+      "logL_D_max": -15666.04428403558,
+      "logL_D_canonical": -15666.04428403558,
+      "logL_Hfree": -15665.10466960006,
+      "T_parent": 1.8792288710428693,
+      "T_standard": 1.8792288710428693,
       "converged_D": true,
       "converged_H": true
     },
@@ -9706,17 +9706,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900872,
-      "seed": 900872,
-      "logL_D_max": -15609.588645677948,
-      "logL_D_canonical": -15609.588645677948,
-      "logL_Hfree": -15609.318072373379,
-      "T_parent": 0.5411466091391048,
-      "T_standard": 0.5411466091391048,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900874,
       "seed": 900874,
       "logL_D_max": -15505.09455167998,
@@ -9735,6 +9724,17 @@
       "logL_Hfree": -15603.579987438243,
       "T_parent": 0.20271010466240114,
       "T_standard": 0.20271010466240114,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900872,
+      "seed": 900872,
+      "logL_D_max": -15609.588645677948,
+      "logL_D_canonical": -15609.588645677948,
+      "logL_Hfree": -15609.318072373379,
+      "T_parent": 0.5411466091391048,
+      "T_standard": 0.5411466091391048,
       "converged_D": true,
       "converged_H": true
     },
@@ -9772,17 +9772,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900879,
-      "seed": 900879,
-      "logL_D_max": -15721.45709596678,
-      "logL_D_canonical": -15721.45709596678,
-      "logL_Hfree": -15721.361867333999,
-      "T_parent": 0.19045726556214504,
-      "T_standard": 0.19045726556214504,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900877,
       "seed": 900877,
       "logL_D_max": -15605.835996101636,
@@ -9790,6 +9779,17 @@
       "logL_Hfree": -15605.834173084706,
       "T_parent": 0.003646033859695308,
       "T_standard": 0.003646033859695308,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900879,
+      "seed": 900879,
+      "logL_D_max": -15721.45709596678,
+      "logL_D_canonical": -15721.45709596678,
+      "logL_Hfree": -15721.361867333999,
+      "T_parent": 0.19045726556214504,
+      "T_standard": 0.19045726556214504,
       "converged_D": true,
       "converged_H": true
     },
@@ -9849,17 +9849,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900885,
-      "seed": 900885,
-      "logL_D_max": -15588.543431561411,
-      "logL_D_canonical": -15588.543431561411,
-      "logL_Hfree": -15588.14681142438,
-      "T_parent": 0.7932402740625548,
-      "T_standard": 0.7932402740625548,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900884,
       "seed": 900884,
       "logL_D_max": -15749.598662818991,
@@ -9867,6 +9856,17 @@
       "logL_Hfree": -15748.964569141364,
       "T_parent": 1.2681873552537581,
       "T_standard": 1.2681873552537581,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900885,
+      "seed": 900885,
+      "logL_D_max": -15588.543431561411,
+      "logL_D_canonical": -15588.543431561411,
+      "logL_Hfree": -15588.14681142438,
+      "T_parent": 0.7932402740625548,
+      "T_standard": 0.7932402740625548,
       "converged_D": true,
       "converged_H": true
     },
@@ -9893,17 +9893,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900889,
-      "seed": 900889,
-      "logL_D_max": -15327.25147969745,
-      "logL_D_canonical": -15327.25147969745,
-      "logL_Hfree": -15327.235299369187,
-      "T_parent": 0.032360656525270315,
-      "T_standard": 0.032360656525270315,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900887,
       "seed": 900887,
       "logL_D_max": -15614.04967616405,
@@ -9911,6 +9900,17 @@
       "logL_Hfree": -15614.023748263025,
       "T_parent": 0.05185580204852158,
       "T_standard": 0.05185580204852158,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900889,
+      "seed": 900889,
+      "logL_D_max": -15327.25147969745,
+      "logL_D_canonical": -15327.25147969745,
+      "logL_Hfree": -15327.235299369187,
+      "T_parent": 0.032360656525270315,
+      "T_standard": 0.032360656525270315,
       "converged_D": true,
       "converged_H": true
     },
@@ -10168,6 +10168,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900915,
+      "seed": 900915,
+      "logL_D_max": -15665.136871608916,
+      "logL_D_canonical": -15665.136871608916,
+      "logL_Hfree": -15663.577183131878,
+      "T_parent": 3.11937695407687,
+      "T_standard": 3.11937695407687,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900914,
       "seed": 900914,
       "logL_D_max": -15442.994567075133,
@@ -10186,17 +10197,6 @@
       "logL_Hfree": -15632.883551241059,
       "T_parent": 3.222780421088828,
       "T_standard": 3.222780421088828,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900915,
-      "seed": 900915,
-      "logL_D_max": -15665.136871608916,
-      "logL_D_canonical": -15665.136871608916,
-      "logL_Hfree": -15663.577183131878,
-      "T_parent": 3.11937695407687,
-      "T_standard": 3.11937695407687,
       "converged_D": true,
       "converged_H": true
     },
@@ -10223,6 +10223,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900919,
+      "seed": 900919,
+      "logL_D_max": -15608.602185431073,
+      "logL_D_canonical": -15608.602185431073,
+      "logL_Hfree": -15606.38741023414,
+      "T_parent": 4.429550393866521,
+      "T_standard": 4.429550393866521,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900921,
       "seed": 900921,
       "logL_D_max": -15828.701471414475,
@@ -10234,13 +10245,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900919,
-      "seed": 900919,
-      "logL_D_max": -15608.602185431073,
-      "logL_D_canonical": -15608.602185431073,
-      "logL_Hfree": -15606.38741023414,
-      "T_parent": 4.429550393866521,
-      "T_standard": 4.429550393866521,
+      "simulation_id": 900923,
+      "seed": 900923,
+      "logL_D_max": -15501.458794908194,
+      "logL_D_canonical": -15501.458794908194,
+      "logL_Hfree": -15501.205052701722,
+      "T_parent": 0.5074844129449048,
+      "T_standard": 0.5074844129449048,
       "converged_D": true,
       "converged_H": true
     },
@@ -10267,17 +10278,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900923,
-      "seed": 900923,
-      "logL_D_max": -15501.458794908194,
-      "logL_D_canonical": -15501.458794908194,
-      "logL_Hfree": -15501.205052701722,
-      "T_parent": 0.5074844129449048,
-      "T_standard": 0.5074844129449048,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900924,
       "seed": 900924,
       "logL_D_max": -15542.433717804295,
@@ -10285,17 +10285,6 @@
       "logL_Hfree": -15542.433613853773,
       "T_parent": 0.00020790104463230819,
       "T_standard": 0.00020790104463230819,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900926,
-      "seed": 900926,
-      "logL_D_max": -15613.411446296053,
-      "logL_D_canonical": -15613.411446296053,
-      "logL_Hfree": -15613.343990081135,
-      "T_parent": 0.13491242983582197,
-      "T_standard": 0.13491242983582197,
       "converged_D": true,
       "converged_H": true
     },
@@ -10311,6 +10300,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900926,
+      "seed": 900926,
+      "logL_D_max": -15613.411446296053,
+      "logL_D_canonical": -15613.411446296053,
+      "logL_Hfree": -15613.343990081135,
+      "T_parent": 0.13491242983582197,
+      "T_standard": 0.13491242983582197,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900927,
       "seed": 900927,
       "logL_D_max": -15389.884769293612,
@@ -10322,13 +10322,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900929,
-      "seed": 900929,
-      "logL_D_max": -15586.62301020266,
-      "logL_D_canonical": -15586.62301020266,
-      "logL_Hfree": -15585.961239461816,
-      "T_parent": 1.323541481688153,
-      "T_standard": 1.323541481688153,
+      "simulation_id": 900930,
+      "seed": 900930,
+      "logL_D_max": -15575.405774687386,
+      "logL_D_canonical": -15575.405774687386,
+      "logL_Hfree": -15575.387663831356,
+      "T_parent": 0.03622171206006897,
+      "T_standard": 0.03622171206006897,
       "converged_D": true,
       "converged_H": true
     },
@@ -10344,13 +10344,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900930,
-      "seed": 900930,
-      "logL_D_max": -15575.405774687386,
-      "logL_D_canonical": -15575.405774687386,
-      "logL_Hfree": -15575.387663831356,
-      "T_parent": 0.03622171206006897,
-      "T_standard": 0.03622171206006897,
+      "simulation_id": 900929,
+      "seed": 900929,
+      "logL_D_max": -15586.62301020266,
+      "logL_D_canonical": -15586.62301020266,
+      "logL_Hfree": -15585.961239461816,
+      "T_parent": 1.323541481688153,
+      "T_standard": 1.323541481688153,
       "converged_D": true,
       "converged_H": true
     },
@@ -10421,17 +10421,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900938,
-      "seed": 900938,
-      "logL_D_max": -15649.820889440256,
-      "logL_D_canonical": -15649.820889440256,
-      "logL_Hfree": -15649.675212528813,
-      "T_parent": 0.291353822885867,
-      "T_standard": 0.291353822885867,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900936,
       "seed": 900936,
       "logL_D_max": -15530.977750495218,
@@ -10443,24 +10432,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900940,
-      "seed": 900940,
-      "logL_D_max": -15651.685462746831,
-      "logL_D_canonical": -15651.685462746831,
-      "logL_Hfree": -15651.607868565497,
-      "T_parent": 0.15518836266710423,
-      "T_standard": 0.15518836266710423,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900942,
-      "seed": 900942,
-      "logL_D_max": -15463.828619475438,
-      "logL_D_canonical": -15463.828619475438,
-      "logL_Hfree": -15463.542895774215,
-      "T_parent": 0.5714474024462106,
-      "T_standard": 0.5714474024462106,
+      "simulation_id": 900938,
+      "seed": 900938,
+      "logL_D_max": -15649.820889440256,
+      "logL_D_canonical": -15649.820889440256,
+      "logL_Hfree": -15649.675212528813,
+      "T_parent": 0.291353822885867,
+      "T_standard": 0.291353822885867,
       "converged_D": true,
       "converged_H": true
     },
@@ -10476,6 +10454,17 @@
       "converged_H": true
     },
     {
+      "simulation_id": 900940,
+      "seed": 900940,
+      "logL_D_max": -15651.685462746831,
+      "logL_D_canonical": -15651.685462746831,
+      "logL_Hfree": -15651.607868565497,
+      "T_parent": 0.15518836266710423,
+      "T_standard": 0.15518836266710423,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
       "simulation_id": 900939,
       "seed": 900939,
       "logL_D_max": -15488.03402097422,
@@ -10483,6 +10472,17 @@
       "logL_Hfree": -15488.033936419237,
       "T_parent": 0.0001691099678282626,
       "T_standard": 0.0001691099678282626,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900942,
+      "seed": 900942,
+      "logL_D_max": -15463.828619475438,
+      "logL_D_canonical": -15463.828619475438,
+      "logL_Hfree": -15463.542895774215,
+      "T_parent": 0.5714474024462106,
+      "T_standard": 0.5714474024462106,
       "converged_D": true,
       "converged_H": true
     },
@@ -10531,17 +10531,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900949,
-      "seed": 900949,
-      "logL_D_max": -15638.64498815521,
-      "logL_D_canonical": -15638.64498815521,
-      "logL_Hfree": -15638.620002890271,
-      "T_parent": 0.04997052987891948,
-      "T_standard": 0.04997052987891948,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900947,
       "seed": 900947,
       "logL_D_max": -15644.70989554791,
@@ -10564,24 +10553,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900952,
-      "seed": 900952,
-      "logL_D_max": -15574.368688794797,
-      "logL_D_canonical": -15574.368688794797,
-      "logL_Hfree": -15573.559950887646,
-      "T_parent": 1.617475814302452,
-      "T_standard": 1.617475814302452,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900951,
-      "seed": 900951,
-      "logL_D_max": -15626.61801069539,
-      "logL_D_canonical": -15626.61801069539,
-      "logL_Hfree": -15626.349484405302,
-      "T_parent": 0.5370525801772601,
-      "T_standard": 0.5370525801772601,
+      "simulation_id": 900949,
+      "seed": 900949,
+      "logL_D_max": -15638.64498815521,
+      "logL_D_canonical": -15638.64498815521,
+      "logL_Hfree": -15638.620002890271,
+      "T_parent": 0.04997052987891948,
+      "T_standard": 0.04997052987891948,
       "converged_D": true,
       "converged_H": true
     },
@@ -10597,24 +10575,24 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900953,
-      "seed": 900953,
-      "logL_D_max": -15492.640115419406,
-      "logL_D_canonical": -15492.640115419406,
-      "logL_Hfree": -15491.00172604221,
-      "T_parent": 3.2767787543925806,
-      "T_standard": 3.2767787543925806,
+      "simulation_id": 900951,
+      "seed": 900951,
+      "logL_D_max": -15626.61801069539,
+      "logL_D_canonical": -15626.61801069539,
+      "logL_Hfree": -15626.349484405302,
+      "T_parent": 0.5370525801772601,
+      "T_standard": 0.5370525801772601,
       "converged_D": true,
       "converged_H": true
     },
     {
-      "simulation_id": 900957,
-      "seed": 900957,
-      "logL_D_max": -15501.892171306044,
-      "logL_D_canonical": -15501.892171306044,
-      "logL_Hfree": -15501.52167012851,
-      "T_parent": 0.7410023550692131,
-      "T_standard": 0.7410023550692131,
+      "simulation_id": 900952,
+      "seed": 900952,
+      "logL_D_max": -15574.368688794797,
+      "logL_D_canonical": -15574.368688794797,
+      "logL_Hfree": -15573.559950887646,
+      "T_parent": 1.617475814302452,
+      "T_standard": 1.617475814302452,
       "converged_D": true,
       "converged_H": true
     },
@@ -10637,6 +10615,28 @@
       "logL_Hfree": -15604.710522311849,
       "T_parent": 1.1301019695019932,
       "T_standard": 1.1301019695019932,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900957,
+      "seed": 900957,
+      "logL_D_max": -15501.892171306044,
+      "logL_D_canonical": -15501.892171306044,
+      "logL_Hfree": -15501.52167012851,
+      "T_parent": 0.7410023550692131,
+      "T_standard": 0.7410023550692131,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900953,
+      "seed": 900953,
+      "logL_D_max": -15492.640115419406,
+      "logL_D_canonical": -15492.640115419406,
+      "logL_Hfree": -15491.00172604221,
+      "T_parent": 3.2767787543925806,
+      "T_standard": 3.2767787543925806,
       "converged_D": true,
       "converged_H": true
     },
@@ -10674,17 +10674,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900964,
-      "seed": 900964,
-      "logL_D_max": -15516.15180451249,
-      "logL_D_canonical": -15516.15180451249,
-      "logL_Hfree": -15516.14194094826,
-      "T_parent": 0.019727128459635423,
-      "T_standard": 0.019727128459635423,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900962,
       "seed": 900962,
       "logL_D_max": -15363.227476407952,
@@ -10703,6 +10692,17 @@
       "logL_Hfree": -15537.020727772902,
       "T_parent": 0.05895766145113157,
       "T_standard": 0.05895766145113157,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900964,
+      "seed": 900964,
+      "logL_D_max": -15516.15180451249,
+      "logL_D_canonical": -15516.15180451249,
+      "logL_Hfree": -15516.14194094826,
+      "T_parent": 0.019727128459635423,
+      "T_standard": 0.019727128459635423,
       "converged_D": true,
       "converged_H": true
     },
@@ -10850,24 +10850,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900981,
-      "seed": 900981,
-      "logL_D_max": -15492.632192125839,
-      "logL_D_canonical": -15492.632192125839,
-      "logL_Hfree": -15492.586471152448,
-      "T_parent": 0.09144194678083295,
-      "T_standard": 0.09144194678083295,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
-      "simulation_id": 900975,
-      "seed": 900975,
-      "logL_D_max": -15521.560606164927,
-      "logL_D_canonical": -15521.560606164927,
-      "logL_Hfree": -15521.380503848239,
-      "T_parent": 0.36020463337627007,
-      "T_standard": 0.36020463337627007,
+      "simulation_id": 900977,
+      "seed": 900977,
+      "logL_D_max": -15754.560286221576,
+      "logL_D_canonical": -15754.560286221576,
+      "logL_Hfree": -15752.295009840316,
+      "T_parent": 4.530552762520529,
+      "T_standard": 4.530552762520529,
       "converged_D": true,
       "converged_H": true
     },
@@ -10883,24 +10872,24 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900977,
-      "seed": 900977,
-      "logL_D_max": -15754.560286221576,
-      "logL_D_canonical": -15754.560286221576,
-      "logL_Hfree": -15752.295009840316,
-      "T_parent": 4.530552762520529,
-      "T_standard": 4.530552762520529,
+      "simulation_id": 900975,
+      "seed": 900975,
+      "logL_D_max": -15521.560606164927,
+      "logL_D_canonical": -15521.560606164927,
+      "logL_Hfree": -15521.380503848239,
+      "T_parent": 0.36020463337627007,
+      "T_standard": 0.36020463337627007,
       "converged_D": true,
       "converged_H": true
     },
     {
-      "simulation_id": 900980,
-      "seed": 900980,
-      "logL_D_max": -15602.264075960256,
-      "logL_D_canonical": -15602.264075960256,
-      "logL_Hfree": -15602.25150652504,
-      "T_parent": 0.025138870430964744,
-      "T_standard": 0.025138870430964744,
+      "simulation_id": 900981,
+      "seed": 900981,
+      "logL_D_max": -15492.632192125839,
+      "logL_D_canonical": -15492.632192125839,
+      "logL_Hfree": -15492.586471152448,
+      "T_parent": 0.09144194678083295,
+      "T_standard": 0.09144194678083295,
       "converged_D": true,
       "converged_H": true
     },
@@ -10912,6 +10901,17 @@
       "logL_Hfree": -15589.500598380531,
       "T_parent": 0.015643457485566614,
       "T_standard": 0.015643457485566614,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900980,
+      "seed": 900980,
+      "logL_D_max": -15602.264075960256,
+      "logL_D_canonical": -15602.264075960256,
+      "logL_Hfree": -15602.25150652504,
+      "T_parent": 0.025138870430964744,
+      "T_standard": 0.025138870430964744,
       "converged_D": true,
       "converged_H": true
     },
@@ -10938,17 +10938,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900985,
-      "seed": 900985,
-      "logL_D_max": -15563.259250216059,
-      "logL_D_canonical": -15563.259250216059,
-      "logL_Hfree": -15562.754313317368,
-      "T_parent": 1.0098737973821699,
-      "T_standard": 1.0098737973821699,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900986,
       "seed": 900986,
       "logL_D_max": -15663.435250066572,
@@ -10956,6 +10945,17 @@
       "logL_Hfree": -15663.385760552484,
       "T_parent": 0.09897902817465365,
       "T_standard": 0.09897902817465365,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900985,
+      "seed": 900985,
+      "logL_D_max": -15563.259250216059,
+      "logL_D_canonical": -15563.259250216059,
+      "logL_Hfree": -15562.754313317368,
+      "T_parent": 1.0098737973821699,
+      "T_standard": 1.0098737973821699,
       "converged_D": true,
       "converged_H": true
     },
@@ -11004,17 +11004,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900991,
-      "seed": 900991,
-      "logL_D_max": -15337.25586861376,
-      "logL_D_canonical": -15337.25586861376,
-      "logL_Hfree": -15336.631856468157,
-      "T_parent": 1.248024291206093,
-      "T_standard": 1.248024291206093,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900990,
       "seed": 900990,
       "logL_D_max": -15469.59767228779,
@@ -11026,13 +11015,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900994,
-      "seed": 900994,
-      "logL_D_max": -15369.309199165122,
-      "logL_D_canonical": -15369.309199165122,
-      "logL_Hfree": -15369.283671536632,
-      "T_parent": 0.05105525697945268,
-      "T_standard": 0.05105525697945268,
+      "simulation_id": 900991,
+      "seed": 900991,
+      "logL_D_max": -15337.25586861376,
+      "logL_D_canonical": -15337.25586861376,
+      "logL_Hfree": -15336.631856468157,
+      "T_parent": 1.248024291206093,
+      "T_standard": 1.248024291206093,
       "converged_D": true,
       "converged_H": true
     },
@@ -11048,13 +11037,13 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900995,
-      "seed": 900995,
-      "logL_D_max": -15435.701861590353,
-      "logL_D_canonical": -15435.701861590353,
-      "logL_Hfree": -15435.67270372013,
-      "T_parent": 0.05831574044350418,
-      "T_standard": 0.05831574044350418,
+      "simulation_id": 900994,
+      "seed": 900994,
+      "logL_D_max": -15369.309199165122,
+      "logL_D_canonical": -15369.309199165122,
+      "logL_Hfree": -15369.283671536632,
+      "T_parent": 0.05105525697945268,
+      "T_standard": 0.05105525697945268,
       "converged_D": true,
       "converged_H": true
     },
@@ -11066,6 +11055,17 @@
       "logL_Hfree": -15554.150760146807,
       "T_parent": 1.13801287458773,
       "T_standard": 1.13801287458773,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900995,
+      "seed": 900995,
+      "logL_D_max": -15435.701861590353,
+      "logL_D_canonical": -15435.701861590353,
+      "logL_Hfree": -15435.67270372013,
+      "T_parent": 0.05831574044350418,
+      "T_standard": 0.05831574044350418,
       "converged_D": true,
       "converged_H": true
     },

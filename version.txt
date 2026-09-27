@@ -1,4 +1,4 @@
-v0.4 (Dubai) — 2026-09-10 — Literature-calibrated systematics, helium sensitivity scan, and envelope B(phi) probe
+v0.5 (Dubai) — 2026-09-13 — Literature-calibrated systematics, helium sensitivity scan, and envelope B(phi) probe
 
 - Replaced generic wavelength-systematics scan (0.5/1.0 km/s) with literature-calibrated per-sightline sigma_sys: 0.25 km/s Keck/HIRES (Griest et al. 2010), 0.05 km/s VLT/ESPRESSO (Schmidt et al. 2021), 0.20 km/s VLT/UVES+HIRES (Whitmore & Murphy 2014); reframed systematic as intra-spectrum relative velocity distortion (absolute offsets and inter-night drifts cancel in the relative free-H vs isotope measurement)
 - Under the literature systematic floor, Gate 8 velocity-deviation rejections survive at 9.1sigma (Q1009+2956, p~1e-19), 11.0sigma (PKS1937-101, p~1e-27), 2.1sigma (J1332+0052, p=0.032); Q1009 degrades to 2.7sigma only at sigma_sys=1.0 km/s, exceeding all measured intra-spectrum distortions

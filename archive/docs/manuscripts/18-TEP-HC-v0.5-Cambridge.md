@@ -3,7 +3,7 @@
 Version: v0.5 (Cambridge)
 First published: 8 June 2026 · Last updated: 5 July 2026
 Paper Series: TEP Series Paper 18 (hi_class Cosmology)
-DOI: 10.5281/zenodo.20682752
+DOI: 10.5281/zenodo.20572722
 
 ---
 
@@ -896,7 +896,7 @@ for CMB acoustic peak preservation tests and MCMC parameter estimation with TEP 
 
 
 
-All MCMC chains, hi_class patch files, posterior samples, and the exact `cobaya` YAML configuration files are released in the Zenodo repository (DOI: 10.5281/zenodo.20682752) under CC-BY 4.0. The `run_all.py` orchestration script and all step scripts are provided in the GitHub repository.
+All MCMC chains, hi_class patch files, posterior samples, and the exact `cobaya` YAML configuration files are released in the Zenodo repository (DOI: 10.5281/zenodo.20572722) under CC-BY 4.0. The `run_all.py` orchestration script and all step scripts are provided in the GitHub repository.
 
 
 

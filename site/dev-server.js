@@ -14,7 +14,7 @@ class DevServer {
     this.liveServerProcess = null;
     this.watcherReady = false;
     this.watcherRestarting = false;
-    this.port = 51814; // Unique port for TEP-BBN
+    this.port = 55529; // Unique port for TEP-BBN (Paper 29)
   }
 
   async killPortProcess() {

@@ -1,29 +1,70 @@
-[22:42:48] [INFO] ================================================================================
-[22:42:48] [INFO] Script: finalize_manuscript_numbers
-[22:42:48] [INFO] Started: 2026-09-10T22:42:48.626457
-[22:42:48] [INFO] ================================================================================
-[22:42:48] [SUCCESS] === FINALIZE: MANUSCRIPT NUMBER SYNCHRONISATION ===
-[22:42:49] [PROCESS] iso_rms saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/iso_rms_q1009.json: 0.0914σ
-[22:42:49] [WARNING] SKIP (anchor not found): isotope RMS
-[22:42:49] [WARNING] SKIP (anchor not found): p_standard
-[22:42:49] [WARNING] SKIP (anchor not found): p_parent
-[22:42:49] [WARNING] SKIP (anchor not found): T_parent inline
-[22:42:49] [WARNING] SKIP (anchor not found): T_parent threshold
-[22:42:49] [WARNING] SKIP (anchor not found): parent count
-[22:42:49] [WARNING] SKIP (anchor not found): summary table Q1009 row
-[22:42:49] [WARNING] SKIP (anchor not found): parent-reassignment PKS1937 T
-[22:42:49] [WARNING] SKIP (anchor not found): parent-reassignment J1332 T
-[22:42:49] [WARNING] SKIP (anchor not found): LOO equation
-[22:42:49] [WARNING] SKIP (anchor not found): abstract dlnL/T
-[22:42:49] [WARNING] SKIP (anchor not found): abstract T_parent
-[22:42:49] [WARNING] SKIP (anchor not found): abstract iso_rms
-[22:42:49] [WARNING] SKIP (anchor not found): abstract significance
-[22:42:49] [WARNING] SKIP (anchor not found): concl dlnL/T
-[22:42:49] [WARNING] SKIP (anchor not found): concl T_parent
-[22:42:49] [WARNING] SKIP (anchor not found): concl significance
-[22:42:49] [SUCCESS] Manuscript numbers synchronised with ledgers:
-[22:42:49] [PROCESS]   LL_D=-15446.77 LL_H=-15366.26 LL_DH=-15366.26 n=8610
-[22:42:49] [PROCESS]   dlnL=80.51 T=161.03 dAIC=-159.03 dBIC=-151.97
-[22:42:49] [PROCESS]   T_parent=161.03  T_-Lya=34.15
-[22:42:49] [PROCESS]   N=1000  p_std=0.001 (0 exc)  p_parent=0.001 (0 exc)  binom95=0.0030
-[22:42:49] [SUCCESS] Finalization complete.
+[14:30:48] [INFO] ================================================================================
+[14:30:48] [INFO] Script: finalize_manuscript_numbers
+[14:30:48] [INFO] Started: 2026-09-23T14:30:48.994833
+[14:30:48] [INFO] ================================================================================
+[14:30:48] [SUCCESS] === FINALIZE: MANUSCRIPT NUMBER SYNCHRONISATION ===
+[14:30:49] [PROCESS] iso_rms saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/iso_rms_q1009.json: 0.0914σ
+[14:30:49] [WARNING] SKIP (anchor not found): isotope RMS
+[14:30:49] [WARNING] SKIP (anchor not found): p_standard
+[14:30:49] [WARNING] SKIP (anchor not found): p_parent
+[14:30:49] [WARNING] SKIP (anchor not found): T_parent inline
+[14:30:49] [WARNING] SKIP (anchor not found): T_parent threshold
+[14:30:49] [WARNING] SKIP (anchor not found): parent count
+[14:30:49] [WARNING] SKIP (anchor not found): summary table Q1009 row
+[14:30:49] [WARNING] SKIP (anchor not found): parent-reassignment PKS1937 T
+[14:30:49] [WARNING] SKIP (anchor not found): parent-reassignment J1332 T
+[14:30:49] [WARNING] SKIP (anchor not found): LOO equation
+[14:30:49] [WARNING] SKIP (anchor not found): abstract dlnL/T
+[14:30:49] [WARNING] SKIP (anchor not found): abstract T_parent
+[14:30:49] [WARNING] SKIP (anchor not found): abstract iso_rms
+[14:30:49] [WARNING] SKIP (anchor not found): abstract significance
+[14:30:49] [WARNING] SKIP (anchor not found): concl dlnL/T
+[14:30:49] [WARNING] SKIP (anchor not found): concl T_parent
+[14:30:49] [WARNING] SKIP (anchor not found): concl significance
+[14:30:49] [SUCCESS] Manuscript numbers synchronised with ledgers:
+[14:30:49] [PROCESS]   LL_D=-15446.77 LL_H=-15366.26 LL_DH=-15366.26 n=8610
+[14:30:49] [PROCESS]   dlnL=80.51 T=161.03 dAIC=-159.03 dBIC=-151.97
+[14:30:49] [PROCESS]   T_parent=161.03  T_-Lya=34.15
+[14:30:49] [PROCESS]   N=1000  p_std=0.001 (0 exc)  p_parent=0.001 (0 exc)  binom95=0.0030
+[14:30:49] [SUCCESS] Finalization complete.
+[14:30:49] [SUCCESS]   [OK] 0.1s
+[14:30:49] [INFO] 
+[14:30:49] [INFO] ================================================================================
+[14:30:49] [INFO] GENERATING SHA-256 CHECKSUM MANIFEST
+[14:30:49] [INFO] ================================================================================
+[14:30:49] [INFO] 
+[14:30:49] [SUCCESS] SHA-256 manifest: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/checksums_sha256.json (48 files)
+[14:30:49] [INFO] 
+[14:30:49] [INFO] ================================================================================
+[14:30:49] [INFO] GENERATING PIPELINE SUMMARY
+[14:30:49] [INFO] ================================================================================
+[14:30:49] [INFO] 
+[14:30:49] [SUCCESS] Pipeline summary: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/pipeline_summary.json
+[14:30:49] [INFO] 
+[14:30:49] [INFO] ================================================================================
+[14:30:49] [INFO] PIPELINE COMPLETE: 16/16 succeeded, 0 failed, 0 skipped
+[14:30:49] [INFO] ================================================================================
+[14:30:49] [INFO] 
+[14:30:49] [INFO] 
+[14:30:49] [INFO] Step Timings:
+[14:30:49] [INFO]   Step                                     Status           Time
+[14:30:49] [INFO]   ---------------------------------------- ---------- ----------
+[14:30:49] [INFO]   step_01_embedding                        OK              0.5s
+[14:30:49] [INFO]   step_02_q1009                            OK             91.0s
+[14:30:49] [INFO]   step_03_significance                     OK           1515.5s
+[14:30:49] [INFO]   step_04_prior                            OK              0.3s
+[14:30:49] [INFO]   step_04b_amplitude                       OK              0.0s
+[14:30:49] [INFO]   step_05_thermodynamics                   OK              0.0s
+[14:30:49] [INFO]   step_06_helium                           OK              0.9s
+[14:30:49] [INFO]   step_07_global_opacity                   OK              0.0s
+[14:30:49] [INFO]   step_08_light_elements                   OK              0.3s
+[14:30:49] [INFO]   step_09_disformal_transport              OK              0.0s
+[14:30:49] [INFO]   step_04h_disformal_clock                 OK              0.0s
+[14:30:49] [INFO]   step_09b_screening_plot                  OK              0.5s
+[14:30:49] [INFO]   step_08c_wavelength_systematics          OK              0.0s
+[14:30:49] [INFO]   step_10_covariant_transport              OK             10.9s
+[14:30:49] [INFO]   secondary_analyses                       OK           4994.7s
+[14:30:49] [INFO]   finalize_manuscript_numbers              OK              0.1s
+[14:30:49] [INFO]   ---------------------------------------- ---------- ----------
+[14:30:49] [INFO]   TOTAL                                                 6614.8s
+[14:30:49] [SUCCESS] All gates and analyses passed. Repository is fully locked.

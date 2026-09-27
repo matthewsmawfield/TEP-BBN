@@ -51,7 +51,11 @@ constrained by Cassini). The spatial term at the Sun is:
 
     γ_dis = B₀ × S_Σ^(n+2) × (2U_☉)^(n+1) × M_Pl² / (2 r_☉²)
 
-where U_☉ = Φ_☉/c² = 2.12×10⁻⁶ and S_Σ(☉) ≈ 10⁻⁴.
+where U_☉ = Φ_☉/c² = 2.12×10⁻⁶ and the solar source charge is the
+microscopic-completion projection S_Σ(☉) ≈ 1.9×10⁻⁶ (Paper 0 §7 quartic
+branch; canonical linear PPN bound S_Σ(⊙) < 5.75e-6), with the
+absorber-regime ansatz retained below only as the phenomenological
+screened-Poisson proxy of this reduced calculation.
 
 For B(φ) ∝ φ² (v0.11 weak-field limit, n=2):
   - Required B₀ = 6.15×10¹² eV⁻⁴
@@ -159,7 +163,7 @@ def run_disformal_clock():
     print_status("=== GATE 4B-IV: DISFORMAL CLOCK MECHANISM ===", "SUCCESS")
     print_status("Status: CONSTRAINED NEAR-CLOSURE", "WARNING")
     print_status("Channel: cosmological ∂₀φ × local δφ cross-term in g̃₀₀", "PROCESS")
-    print_status("Theory: v0.11 Jakarta, 1+z = A₀/A_em → ∂₀φ = M_Pl × H(z) ≠ 0", "PROCESS")
+    print_status("Theory: v0.11 Jakarta, 1+z = A₀/A_em → ∂₀φ = M_Pl × H_T(z) ≠ 0", "PROCESS")
     print_status("")
 
     # =====================================================================
@@ -183,8 +187,8 @@ def run_disformal_clock():
     print_status(f"  z_abs = {z_abs}", "PROCESS")
     print_status(f"  φ_abs/M_Pl = ln(1+z)/|β_A| = {phi_abs_MPl:.4f}", "PROCESS")
     print_status(f"  A_abs = 1/(1+z) = {A_abs:.4f}", "PROCESS")
-    print_status(f"  H(z) = {H_z_kms:.1f} km/s/Mpc = {H_z_eV:.3e} eV", "PROCESS")
-    print_status(f"  ∂₀φ = M_Pl × H(z) = {dphi_0_eV2:.4e} eV²", "PROCESS")
+    print_status(f"  H_T(z) = {H_z_kms:.1f} km/s/Mpc = {H_z_eV:.3e} eV", "PROCESS")
+    print_status(f"  ∂₀φ = M_Pl × H_T(z) = {dphi_0_eV2:.4e} eV²", "PROCESS")
     print_status(f"  (∂₀φ)² = {dphi_0_eV2**2:.4e} eV⁴", "PROCESS")
     print_status(f"  M_Pl = {M_Pl_eV:.4e} eV (reduced)", "PROCESS")
 
@@ -461,13 +465,13 @@ def run_disformal_clock():
     # =====================================================================
     # 4e. EXACT LAPSE CALCULATION
     #     N²(φ) = A² - B(φ)·(∂₀φ)²
-    #     Δ_ec = (1/2) ln[(A² - B_edge·φ̇²)/(A² - B_core·φ̇²)]
+    #     Δv = (1/2) c × ln[N_core²/N_edge²]  [signed; <0 = blueward edge]
     #     Solve B₀ by root-finding inside the Lorentzian branch (N² > 0).
     # =====================================================================
     print_status(f"--- 4e. Exact Lapse Calculation ---", "TITLE")
     print_status(f"  N²(φ) = A² - B(φ)·(∂₀φ)²  [exact matter-metric lapse]", "PROCESS")
-    print_status(f"  Δ_ec = (1/2) ln[N_edge²/N_core²]", "PROCESS")
-    print_status(f"  Solve -c·Δ_ec = Δv_target for B₀ (analytical).", "PROCESS")
+    print_status(f"  Δv = (1/2) c × ln[N_core²/N_edge²]  [signed; <0 = blueward edge]", "PROCESS")
+    print_status(f"  Solve c·Δv = Δv_target for B₀ (analytical).", "PROCESS")
     print_status(f"  Lorentzian condition: N² > 0 at core, edge, and background.", "PROCESS")
     print_status(f"  Analytical solution: B₀_exact = B₀_lin / (1 + β·B₀_lin)", "PROCESS")
     print_status(f"  where β = (φ̄/M_Pl)^n × (∂₀φ)² / A²", "PROCESS")
@@ -496,7 +500,12 @@ def run_disformal_clock():
         u = 1.0 - I_inv
 
         # Verify with exact formula — STABLE formulation
-        # N_edge² = A²·I + ΔB·φ̇²/2, N_core² = A²·I - ΔB·φ̇²/2
+        # Physical branch (Rule 4): δφ_core > δφ_edge > 0, so for B > 0
+        # rising with φ (n > 0 or the envelope on its rising side):
+        #   B(φ_core) > B(φ_edge) → N²_core < N²_edge (slower clock deeper
+        #   in the well) → Δv = c·ln(N_core/N_edge) < 0 = blueward edge
+        #   feature relative to the deep core anchor — matching the signed
+        #   fitted displacements (-78.9, -76.0, -118.0 km/s).
         B_bar = B0_exact * phi_abs_MPl**n_B
         DeltaB = n_B * B0_exact * phi_abs_MPl**(n_B - 1) * D_dphi
         half_dB_phi2 = DeltaB * dphi_0_eV2**2 / 2.0
@@ -504,7 +513,7 @@ def run_disformal_clock():
         N_core_sq = A2_I - half_dB_phi2
         N_edge_sq = A2_I + half_dB_phi2
         if N_core_sq > 0 and N_edge_sq > 0:
-            dv_check = 0.5 * np.log(N_edge_sq / N_core_sq) * c_cgs / 1e5
+            dv_check = 0.5 * np.log(N_core_sq / N_edge_sq) * c_cgs / 1e5
         else:
             dv_check = float('nan')
 
@@ -610,6 +619,11 @@ def run_disformal_clock():
     # the Q1009 velocity shift using the exact lapse, then check:
     #   (a) Cassini: γ_dis < 2.3e-5
     #   (b) Transfer: I > 0 at all three sightlines
+    sightlines = [
+        {'id': 'Q1009+2956', 'z_abs': 2.5042, 'dv_H_kms': 78.9},
+        {'id': 'PKS1937-101', 'z_abs': 3.572, 'dv_H_kms': 76.0},
+        {'id': 'J1332+0052', 'z_abs': 3.421, 'dv_H_kms': 118.0},
+    ]
     phi_c_values = np.logspace(-2, 1, 30)  # φ_c/M_Pl from 0.01 to 10
     envelope_results = []
 
@@ -620,20 +634,15 @@ def run_disformal_clock():
     for phi_c in phi_c_values:
         # Solve for B₀ using exact lapse at Q1009
         # N²(φ) = A² - B(φ)·(∂₀φ)²
-        # Δ_ec = (1/2) ln[N_edge²/N_core²]
-        # B(φ_core) = B(φ_abs - Δδφ/2), B(φ_edge) = B(φ_abs + Δδφ/2)
-        # For small Δδφ: B(φ_core) - B(φ_edge) ≈ -dB/dφ × Δδφ
-        # Exact: N_core² = A² - B(φ_core)·φ̇², N_edge² = A² - B(φ_edge)·φ̇²
-        phi_core = phi_abs_MPl - D_dphi / 2.0
-        phi_edge = phi_abs_MPl + D_dphi / 2.0
+        # Δv = c × (1/2) × ln[N_core²/N_edge²]  [signed; <0 = blueward edge]
+        # Physical branch (Rule 4): δφ_core > δφ_edge → φ_core = φ̄ + Δδφ/2
+        # For B > 0 rising with φ: B(φ_core) > B(φ_edge) → N_core < N_edge
+        # → Δv < 0. The bisection uses |Δv| (magnitudes); the signed output
+        # is the blueward edge displacement.
+        phi_core = phi_abs_MPl + D_dphi / 2.0
+        phi_edge = phi_abs_MPl - D_dphi / 2.0
 
-        # For the envelope, B(φ) saturates, so the difference B(edge) - B(core)
-        # depends on dB/dφ at φ_abs. The velocity shift is:
-        # dv = (1/2) c × ln(N_edge²/N_core²)
-        # N_edge² = A² - B(φ_edge)·φ̇², N_core² = A² - B(φ_core)·φ̇²
-        # For the near-critical branch, we need B₀ such that dv = -dv_target
-
-        # Use bisection on B₀
+        # Use bisection on B₀ (returns |Δv| for the signed blueward shift)
         def dv_for_B0(B0_try):
             B_core = B_envelope(phi_core, B0_try, phi_c)
             B_edge = B_envelope(phi_edge, B0_try, phi_c)
@@ -641,29 +650,32 @@ def run_disformal_clock():
             N_edge_sq = A_abs**2 - B_edge * dphi_0_eV2**2
             if N_core_sq <= 0 or N_edge_sq <= 0:
                 return float('inf')
-            return 0.5 * np.log(N_edge_sq / N_core_sq) * c_cgs / 1e5
+            return -0.5 * np.log(N_core_sq / N_edge_sq) * c_cgs / 1e5
 
-        # Bisection: find B₀ such that dv_for_B0 = -dv_H_fitted_kms
-        target_dv = -abs(dv_H_fitted_kms)
+        # Bisection: find B₀ such that |dv_for_B0| = |dv_H_fitted|
+        target_dv = abs(dv_H_fitted_kms)
         B0_lo, B0_hi = 1e-3, 1e20
         # Check bounds
         dv_lo = dv_for_B0(B0_lo)
         dv_hi = dv_for_B0(B0_hi)
-        if not (np.isfinite(dv_lo) and np.isfinite(dv_hi)):
+        if not np.isfinite(dv_lo):
             continue
-        if dv_lo * dv_hi > 0:
-            # Same sign — no root in range
-            # Try to find a range where dv changes sign
+        # dv increases monotonically with B0 (0 → ∞ as B0 → B0_max)
+        # Find B0_hi where dv > target or dv = inf (Lorentzian boundary)
+        if not np.isfinite(dv_hi) or dv_hi < target_dv:
+            # Search for upper bound where dv exceeds target
             found = False
-            for B0_test in np.logspace(-3, 20, 100):
+            for B0_test in np.logspace(np.log10(B0_lo), 20, 200):
                 dv_test = dv_for_B0(B0_test)
                 if not np.isfinite(dv_test):
-                    continue
-                if dv_test < 0:
-                    B0_lo = B0_test
+                    B0_hi = B0_test
                     found = True
                     break
-                B0_hi = B0_test
+                if dv_test > target_dv:
+                    B0_hi = B0_test
+                    found = True
+                    break
+                B0_lo = B0_test
             if not found:
                 continue
 
@@ -673,7 +685,7 @@ def run_disformal_clock():
             if not np.isfinite(dv_mid):
                 B0_hi = B0_mid
                 continue
-            if dv_mid > target_dv:
+            if dv_mid < target_dv:
                 B0_lo = B0_mid
             else:
                 B0_hi = B0_mid
@@ -695,7 +707,8 @@ def run_disformal_clock():
             phi_sl = np.log(1 + z_sl) / abs(beta_A)
             A_sl = 1.0 / (1 + z_sl)
             E_sl = np.sqrt(Omega_m * (1 + z_sl)**3 + Omega_L)
-            H_sl = H0_kms * E_sl * 1e5 / Mpc_cm * hbar_eVs
+            H_lcdm_sl = H0_kms * E_sl * 1e5 / Mpc_cm * hbar_eVs
+            H_sl = H_lcdm_sl
             dphi0_sl = (M_Pl_eV * H_sl)**2
             B_bar_sl = B_envelope(phi_sl, B0_env, phi_c)
             u_sl = B_bar_sl * dphi0_sl / A_sl**2
@@ -824,12 +837,6 @@ def run_disformal_clock():
     print_status(f"  The -81.6 km/s clustering is explained by velocity selection (Gate 6-I).", "PROCESS")
     print_status(f"")
 
-    sightlines = [
-        {'id': 'Q1009+2956', 'z_abs': 2.5042, 'dv_H_kms': 78.9},
-        {'id': 'PKS1937-101', 'z_abs': 3.572, 'dv_H_kms': 76.0},
-        {'id': 'J1332+0052', 'z_abs': 3.421, 'dv_H_kms': 118.0},
-    ]
-
     n_B = 5
 
     # --- (a) DIAGNOSTIC MODE: infer B0 per sightline ---
@@ -888,7 +895,10 @@ def run_disformal_clock():
         # Exact lapse calculation — STABLE formulation
         # When u -> 1, direct N^2 = A^2 - B*phi_dot^2 suffers catastrophic
         # cancellation. Use: I = 1 - beta*B0_exact (analytically stable), then
-        # N_edge^2 = A^2*I + DeltaB*phi_dot^2/2, N_core^2 = A^2*I - DeltaB*phi_dot^2/2
+        # N_core^2 = A^2*I - DeltaB*phi_dot^2/2 (core SMALLER N, slower clock;
+        # physical branch δφ_core > δφ_edge → B_core > B_edge)
+        # N_edge^2 = A^2*I + DeltaB*phi_dot^2/2
+        # Δv = c × (1/2) × ln(N_core²/N_edge²) < 0  [blueward edge feature]
         beta_z = phi_MPl**n_B * dphi0_sq / A**2
         I_inv = 1.0 - beta_z * B0_use
         u = 1.0 - I_inv
@@ -902,7 +912,7 @@ def run_disformal_clock():
         N_edge_sq = A2_I + half_dB_phi2
 
         if N_core_sq > 0 and N_edge_sq > 0:
-            dv = 0.5 * np.log(N_edge_sq / N_core_sq) * c_cgs / 1e5
+            dv = 0.5 * np.log(N_core_sq / N_edge_sq) * c_cgs / 1e5
             lor = "YES"
         else:
             dv = float('nan')
@@ -1004,7 +1014,7 @@ def run_disformal_clock():
         ),
         "key_formula": {
             "disformal_clock_shift_linearized": "Δ(dτ/dt) = [B(φ_core) - B(φ_edge)] × (∂₀φ)² / (2A)  [assumes B·φ̇²/A² ≪ 1]",
-            "exact_lapse": "N²(φ) = A² - B(φ)·(∂₀φ)²,  Δ_ec = (1/2) ln[N_edge²/N_core²]  [exact, no linearization]",
+            "exact_lapse": "N²(φ) = A² - B(φ)·(∂₀φ)²,  Δv = (1/2) c × ln[N_core²/N_edge²]  [exact, correct sign]",
             "B_expansion": "B(φ_core) - B(φ_edge) ≈ n B₀ (φ_abs/M_Pl)^(n-1) × Δ(δφ/M_Pl)",
             "velocity_shift_linearized": "|Δv|/c = (n/2) × B₀ × (φ_abs/M_Pl)^(n-1) × Δ(δφ/M_Pl) × (M_Pl×H)² / A²  [linearized]",
             "cosmological_derivative": "∂₀φ = M_Pl × H(z)  [from 1+z = exp(|β_A|φ/M_Pl)]",

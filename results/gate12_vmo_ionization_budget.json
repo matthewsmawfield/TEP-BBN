@@ -1,0 +1,440 @@
+{
+  "step": "step_12_vmo_ionization_budget",
+  "A_ionizing_yields": {
+    "N_gamma_VMO_per_baryon": 100000.0,
+    "N_gamma_VMO_per_baryon_low_edge": 30000.0,
+    "N_gamma_VMO_per_Msun": 1.1891031510648919e+62,
+    "N_gamma_std_per_baryon": 4000.0,
+    "N_gamma_std_per_Msun": 4.7564126042595676e+60,
+    "yield_ratio_VMO_over_std": 25.0,
+    "N_gamma_eff_at_f_vmo_0p994": 99424.0,
+    "N_gamma_eff_at_f_vmo_0p975": 97600.0,
+    "note": "H-ionizing photons emitted per stellar baryon over the main sequence, before temporal-horizon formation sequesters the remnant: ~1e5 for metal-free very massive stars (Tumlinson & Shull 2000; Schaerer 2002, top-heavy Z=0 IMFs; conservative low edge 3e4) versus ~4e3 for a standard metal-enriched IMF. At f_VMO = 0.994 the effective yield is dominated by the VMO channel: ~9.96e4 photons per cycled baryon."
+  },
+  "B_recombination_demand": {
+    "today": {
+      "n_e_over_n_b0": 1.0,
+      "n_e_cm^-3": 2.51e-07,
+      "recomb_per_baryon_per_s": 6.5009e-20,
+      "recomb_per_baryon_per_Gyr": 0.0020515280184000002
+    },
+    "z~7": {
+      "n_e_over_n_b0": 14.0,
+      "n_e_cm^-3": 3.514e-06,
+      "recomb_per_baryon_per_s": 9.10126e-19,
+      "recomb_per_baryon_per_Gyr": 0.028721392257600002
+    },
+    "LSS_depth": {
+      "n_e_over_n_b0": 500.0,
+      "n_e_cm^-3": 0.00012550000000000001,
+      "recomb_per_baryon_per_s": 3.250450000000001e-17,
+      "recomb_per_baryon_per_Gyr": 1.0257640092000002
+    }
+  },
+  "C_margin_grid": {
+    "vmo_branch_grid": [
+      {
+        "xi_per_Gyr": 0.001,
+        "f_esc": 0.01,
+        "supply_per_baryon_per_Gyr": 0.9942400000000001,
+        "margin_at_1x": 484.6338880496569,
+        "margin_at_14x": 34.61670628926121,
+        "margin_at_500x": 0.9692677760993137,
+        "n_e_crit_cm^-3": 0.00012164310590046388,
+        "n_e_crit_over_n_b0": 484.6338880496569
+      },
+      {
+        "xi_per_Gyr": 0.001,
+        "f_esc": 0.1,
+        "supply_per_baryon_per_Gyr": 9.942400000000001,
+        "margin_at_1x": 4846.338880496569,
+        "margin_at_14x": 346.1670628926121,
+        "margin_at_500x": 9.692677760993137,
+        "n_e_crit_cm^-3": 0.0012164310590046389,
+        "n_e_crit_over_n_b0": 4846.338880496569
+      },
+      {
+        "xi_per_Gyr": 0.001,
+        "f_esc": 0.5,
+        "supply_per_baryon_per_Gyr": 49.712,
+        "margin_at_1x": 24231.69440248284,
+        "margin_at_14x": 1730.8353144630603,
+        "margin_at_500x": 48.46338880496568,
+        "n_e_crit_cm^-3": 0.006082155295023194,
+        "n_e_crit_over_n_b0": 24231.694402482844
+      },
+      {
+        "xi_per_Gyr": 0.01,
+        "f_esc": 0.01,
+        "supply_per_baryon_per_Gyr": 9.942400000000001,
+        "margin_at_1x": 4846.338880496569,
+        "margin_at_14x": 346.1670628926121,
+        "margin_at_500x": 9.692677760993137,
+        "n_e_crit_cm^-3": 0.0012164310590046389,
+        "n_e_crit_over_n_b0": 4846.338880496569
+      },
+      {
+        "xi_per_Gyr": 0.01,
+        "f_esc": 0.1,
+        "supply_per_baryon_per_Gyr": 99.424,
+        "margin_at_1x": 48463.38880496568,
+        "margin_at_14x": 3461.6706289261206,
+        "margin_at_500x": 96.92677760993136,
+        "n_e_crit_cm^-3": 0.012164310590046388,
+        "n_e_crit_over_n_b0": 48463.38880496569
+      },
+      {
+        "xi_per_Gyr": 0.01,
+        "f_esc": 0.5,
+        "supply_per_baryon_per_Gyr": 497.12,
+        "margin_at_1x": 242316.9440248284,
+        "margin_at_14x": 17308.3531446306,
+        "margin_at_500x": 484.6338880496568,
+        "n_e_crit_cm^-3": 0.060821552950231936,
+        "n_e_crit_over_n_b0": 242316.9440248284
+      },
+      {
+        "xi_per_Gyr": 0.1,
+        "f_esc": 0.01,
+        "supply_per_baryon_per_Gyr": 99.424,
+        "margin_at_1x": 48463.38880496568,
+        "margin_at_14x": 3461.6706289261206,
+        "margin_at_500x": 96.92677760993136,
+        "n_e_crit_cm^-3": 0.012164310590046388,
+        "n_e_crit_over_n_b0": 48463.38880496569
+      },
+      {
+        "xi_per_Gyr": 0.1,
+        "f_esc": 0.1,
+        "supply_per_baryon_per_Gyr": 994.2400000000002,
+        "margin_at_1x": 484633.88804965693,
+        "margin_at_14x": 34616.70628926121,
+        "margin_at_500x": 969.2677760993138,
+        "n_e_crit_cm^-3": 0.1216431059004639,
+        "n_e_crit_over_n_b0": 484633.88804965693
+      },
+      {
+        "xi_per_Gyr": 0.1,
+        "f_esc": 0.5,
+        "supply_per_baryon_per_Gyr": 4971.200000000001,
+        "margin_at_1x": 2423169.4402482845,
+        "margin_at_14x": 173083.53144630603,
+        "margin_at_500x": 4846.338880496568,
+        "n_e_crit_cm^-3": 0.6082155295023194,
+        "n_e_crit_over_n_b0": 2423169.4402482845
+      },
+      {
+        "xi_per_Gyr": 1.0,
+        "f_esc": 0.01,
+        "supply_per_baryon_per_Gyr": 994.24,
+        "margin_at_1x": 484633.8880496568,
+        "margin_at_14x": 34616.7062892612,
+        "margin_at_500x": 969.2677760993136,
+        "n_e_crit_cm^-3": 0.12164310590046387,
+        "n_e_crit_over_n_b0": 484633.8880496568
+      },
+      {
+        "xi_per_Gyr": 1.0,
+        "f_esc": 0.1,
+        "supply_per_baryon_per_Gyr": 9942.400000000001,
+        "margin_at_1x": 4846338.880496569,
+        "margin_at_14x": 346167.06289261207,
+        "margin_at_500x": 9692.677760993136,
+        "n_e_crit_cm^-3": 1.2164310590046388,
+        "n_e_crit_over_n_b0": 4846338.880496569
+      },
+      {
+        "xi_per_Gyr": 1.0,
+        "f_esc": 0.5,
+        "supply_per_baryon_per_Gyr": 49712.0,
+        "margin_at_1x": 24231694.40248284,
+        "margin_at_14x": 1730835.31446306,
+        "margin_at_500x": 48463.388804965674,
+        "n_e_crit_cm^-3": 6.082155295023194,
+        "n_e_crit_over_n_b0": 24231694.40248284
+      }
+    ],
+    "standard_branch_grid": [
+      {
+        "xi_per_Gyr": 0.001,
+        "f_esc": 0.01,
+        "supply_per_baryon_per_Gyr": 0.04,
+        "margin_at_1x": 19.497662055425526,
+        "margin_at_14x": 1.3926901468161088,
+        "margin_at_500x": 0.03899532411085104,
+        "n_e_crit_cm^-3": 4.893913175911807e-06,
+        "n_e_crit_over_n_b0": 19.497662055425526
+      },
+      {
+        "xi_per_Gyr": 0.001,
+        "f_esc": 0.1,
+        "supply_per_baryon_per_Gyr": 0.4,
+        "margin_at_1x": 194.97662055425525,
+        "margin_at_14x": 13.92690146816109,
+        "margin_at_500x": 0.3899532411085105,
+        "n_e_crit_cm^-3": 4.893913175911807e-05,
+        "n_e_crit_over_n_b0": 194.97662055425525
+      },
+      {
+        "xi_per_Gyr": 0.001,
+        "f_esc": 0.5,
+        "supply_per_baryon_per_Gyr": 2.0,
+        "margin_at_1x": 974.8831027712762,
+        "margin_at_14x": 69.63450734080544,
+        "margin_at_500x": 1.9497662055425522,
+        "n_e_crit_cm^-3": 0.00024469565879559036,
+        "n_e_crit_over_n_b0": 974.8831027712763
+      },
+      {
+        "xi_per_Gyr": 0.01,
+        "f_esc": 0.01,
+        "supply_per_baryon_per_Gyr": 0.4,
+        "margin_at_1x": 194.97662055425525,
+        "margin_at_14x": 13.92690146816109,
+        "margin_at_500x": 0.3899532411085105,
+        "n_e_crit_cm^-3": 4.893913175911807e-05,
+        "n_e_crit_over_n_b0": 194.97662055425525
+      },
+      {
+        "xi_per_Gyr": 0.01,
+        "f_esc": 0.1,
+        "supply_per_baryon_per_Gyr": 4.0,
+        "margin_at_1x": 1949.7662055425524,
+        "margin_at_14x": 139.26901468161088,
+        "margin_at_500x": 3.8995324110851044,
+        "n_e_crit_cm^-3": 0.0004893913175911807,
+        "n_e_crit_over_n_b0": 1949.7662055425526
+      },
+      {
+        "xi_per_Gyr": 0.01,
+        "f_esc": 0.5,
+        "supply_per_baryon_per_Gyr": 20.0,
+        "margin_at_1x": 9748.831027712762,
+        "margin_at_14x": 696.3450734080544,
+        "margin_at_500x": 19.497662055425522,
+        "n_e_crit_cm^-3": 0.0024469565879559033,
+        "n_e_crit_over_n_b0": 9748.831027712762
+      },
+      {
+        "xi_per_Gyr": 0.1,
+        "f_esc": 0.01,
+        "supply_per_baryon_per_Gyr": 4.0,
+        "margin_at_1x": 1949.7662055425524,
+        "margin_at_14x": 139.26901468161088,
+        "margin_at_500x": 3.8995324110851044,
+        "n_e_crit_cm^-3": 0.0004893913175911807,
+        "n_e_crit_over_n_b0": 1949.7662055425526
+      },
+      {
+        "xi_per_Gyr": 0.1,
+        "f_esc": 0.1,
+        "supply_per_baryon_per_Gyr": 40.00000000000001,
+        "margin_at_1x": 19497.662055425528,
+        "margin_at_14x": 1392.690146816109,
+        "margin_at_500x": 38.99532411085105,
+        "n_e_crit_cm^-3": 0.004893913175911807,
+        "n_e_crit_over_n_b0": 19497.662055425528
+      },
+      {
+        "xi_per_Gyr": 0.1,
+        "f_esc": 0.5,
+        "supply_per_baryon_per_Gyr": 200.0,
+        "margin_at_1x": 97488.31027712762,
+        "margin_at_14x": 6963.450734080545,
+        "margin_at_500x": 194.97662055425522,
+        "n_e_crit_cm^-3": 0.024469565879559032,
+        "n_e_crit_over_n_b0": 97488.31027712762
+      },
+      {
+        "xi_per_Gyr": 1.0,
+        "f_esc": 0.01,
+        "supply_per_baryon_per_Gyr": 40.0,
+        "margin_at_1x": 19497.662055425524,
+        "margin_at_14x": 1392.6901468161088,
+        "margin_at_500x": 38.995324110851044,
+        "n_e_crit_cm^-3": 0.0048939131759118066,
+        "n_e_crit_over_n_b0": 19497.662055425524
+      },
+      {
+        "xi_per_Gyr": 1.0,
+        "f_esc": 0.1,
+        "supply_per_baryon_per_Gyr": 400.0,
+        "margin_at_1x": 194976.62055425523,
+        "margin_at_14x": 13926.90146816109,
+        "margin_at_500x": 389.95324110851044,
+        "n_e_crit_cm^-3": 0.048939131759118064,
+        "n_e_crit_over_n_b0": 194976.62055425523
+      },
+      {
+        "xi_per_Gyr": 1.0,
+        "f_esc": 0.5,
+        "supply_per_baryon_per_Gyr": 2000.0,
+        "margin_at_1x": 974883.1027712761,
+        "margin_at_14x": 69634.50734080544,
+        "margin_at_500x": 1949.7662055425521,
+        "n_e_crit_cm^-3": 0.24469565879559033,
+        "n_e_crit_over_n_b0": 974883.1027712761
+      }
+    ],
+    "vmo_branch_summary": {
+      "n_e_crit_over_n_b0_min": 484.6338880496569,
+      "n_e_crit_over_n_b0_max": 24231694.40248284,
+      "margin_500x_min": 0.9692677760993137,
+      "margin_500x_max": 48463.388804965674,
+      "cells_above_500x_requirement": 11,
+      "n_cells": 12
+    },
+    "standard_branch_summary": {
+      "n_e_crit_over_n_b0_min": 19.497662055425526,
+      "n_e_crit_over_n_b0_max": 974883.1027712761,
+      "margin_500x_min": 0.03899532411085104,
+      "margin_500x_max": 1949.7662055425521,
+      "cells_above_500x_requirement": 9,
+      "n_cells": 12
+    },
+    "note": "supply = xi f_esc N_gamma_eff per ISM baryon per Gyr; demand = alpha_B n_e. The balance point n_e,crit is the depth to which the diffuse column stays ionized. The VMO branch sustains ionization to ~5e2-2e7 x n_b0 across the scanned plane, straddling the ~500x rise required at the opacity-boundary depth; the standard branch saturates ~25x shallower, failing the deepest requirement at the conservative corner. Ionization is a maintained equilibrium, not an epoch: the ionized column the opacity theorem requires is supplied by the same stellar budget, with the VMO-enhanced yield the factor that reaches the required depth under pessimistic escape/cycling."
+  },
+  "D_f_vmo_min": {
+    "requirement_depth": "n_e = 500 x n_b0 (opacity-boundary depth)",
+    "grid": [
+      {
+        "xi_per_Gyr": 0.001,
+        "f_esc": 0.01,
+        "N_gamma_required_per_baryon": 102576.40092000001,
+        "f_VMO_min_at_500x": 1.0268375095833335,
+        "sustainable_even_at_f_VMO_1": false,
+        "standard_suffices": false
+      },
+      {
+        "xi_per_Gyr": 0.001,
+        "f_esc": 0.1,
+        "N_gamma_required_per_baryon": 10257.640092000001,
+        "f_VMO_min_at_500x": 0.06518375095833334,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": false
+      },
+      {
+        "xi_per_Gyr": 0.001,
+        "f_esc": 0.5,
+        "N_gamma_required_per_baryon": 2051.5280184000003,
+        "f_VMO_min_at_500x": 0.0,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": true
+      },
+      {
+        "xi_per_Gyr": 0.01,
+        "f_esc": 0.01,
+        "N_gamma_required_per_baryon": 10257.640092000001,
+        "f_VMO_min_at_500x": 0.06518375095833334,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": false
+      },
+      {
+        "xi_per_Gyr": 0.01,
+        "f_esc": 0.1,
+        "N_gamma_required_per_baryon": 1025.7640092000001,
+        "f_VMO_min_at_500x": 0.0,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": true
+      },
+      {
+        "xi_per_Gyr": 0.01,
+        "f_esc": 0.5,
+        "N_gamma_required_per_baryon": 205.15280184000005,
+        "f_VMO_min_at_500x": 0.0,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": true
+      },
+      {
+        "xi_per_Gyr": 0.1,
+        "f_esc": 0.01,
+        "N_gamma_required_per_baryon": 1025.7640092000001,
+        "f_VMO_min_at_500x": 0.0,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": true
+      },
+      {
+        "xi_per_Gyr": 0.1,
+        "f_esc": 0.1,
+        "N_gamma_required_per_baryon": 102.57640092,
+        "f_VMO_min_at_500x": 0.0,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": true
+      },
+      {
+        "xi_per_Gyr": 0.1,
+        "f_esc": 0.5,
+        "N_gamma_required_per_baryon": 20.515280184,
+        "f_VMO_min_at_500x": 0.0,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": true
+      },
+      {
+        "xi_per_Gyr": 1.0,
+        "f_esc": 0.01,
+        "N_gamma_required_per_baryon": 102.57640092000003,
+        "f_VMO_min_at_500x": 0.0,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": true
+      },
+      {
+        "xi_per_Gyr": 1.0,
+        "f_esc": 0.1,
+        "N_gamma_required_per_baryon": 10.257640092,
+        "f_VMO_min_at_500x": 0.0,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": true
+      },
+      {
+        "xi_per_Gyr": 1.0,
+        "f_esc": 0.5,
+        "N_gamma_required_per_baryon": 2.0515280184000004,
+        "f_VMO_min_at_500x": 0.0,
+        "sustainable_even_at_f_VMO_1": true,
+        "standard_suffices": true
+      }
+    ],
+    "note": "f_VMO_min solves xi f_esc [f N_VMO + (1-f) N_std] = alpha_B n_e. Over most of the plane the standard yield already suffices at this depth (f_VMO_min = 0): the ionization sector adds no countervailing bound on the helium requirement. Toward the conservative corner (xi <= 1e-2/Gyr and f_esc <= 0.1) f_VMO_min rises to ~0.07-1.0, and at the extreme corner (xi = 1e-3/Gyr, f_esc = 0.01) the 500x depth is marginal even at f_VMO = 1 (97% of the requirement). The constraint therefore directionally favours the high-VMO branch the helium fixed point requires \u2014 supportive, not exclusionary."
+  },
+  "E_thomson_wing": {
+    "tau_per_Hubble_radius_constant_n_b0": 0.0022026,
+    "observed_tau_reion_LCDM": 0.054,
+    "profiles": [
+      {
+        "density_rise_m": 0.0,
+        "z_surface_tau_1": 20.330937592483178,
+        "tau_at_z_1": 0.0066078,
+        "tau_at_z_3": 0.033039,
+        "tau_at_z_4": 0.0528624,
+        "tau_at_z_5": 0.07709099999999999,
+        "tau_at_z_7": 0.1387638
+      },
+      {
+        "density_rise_m": 0.5,
+        "z_surface_tau_1": 11.64432314948024,
+        "tau_at_z_1": 0.008205749735945534,
+        "tau_at_z_3": 0.054624479999999996,
+        "tau_at_z_4": 0.09674118654482072,
+        "tau_at_z_5": 0.15362100789468175,
+        "tau_at_z_7": 0.31720847155025705
+      },
+      {
+        "density_rise_m": 1.0,
+        "z_surface_tau_1": 7.802329565166605,
+        "tau_at_z_1": 0.0102788,
+        "tau_at_z_3": 0.0925092,
+        "tau_at_z_4": 0.18208159999999998,
+        "tau_at_z_5": 0.315706,
+        "tau_at_z_7": 0.7503523999999999
+      }
+    ],
+    "note": "Under the p = 0.5 horizon law at constant n_e = n_b0 the Thomson tau = 1 surface sits at z ~ 20 (the Step-11 sigma_T row), and the partial column accumulated in the optically thin approach is ~0.053 by z ~ 4 \u2014 the Planck tau_reion = 0.054 magnitude. A mild density rise (m = 0.5) reaches the same wing amplitude by z ~ 3 with the tau = 1 surface at z ~ 11.6; the observed wing therefore selects a near-flat to mildly-rising approach profile. The low-EE wing is the approach column of the single opacity boundary, not evidence of a discrete reionization epoch; its precise amplitude is a datum on the n_e(ell) approach profile, owned by the absorber-statistics inversion of the opacity programme (three-point requirement)."
+  },
+  "F_qualitative_closures": {
+    "star_formation_history": "None to contradict: the VMO branch is a metallicity-selected channel (Z < Z_crit ~ 1e-4) that is local and asynchronous across patches; in the eternal steady state there is no global Pop III chronology.",
+    "background_light": "All processed starlight \u2014 including the hard VMO spectrum \u2014 enters the Step-11 thermalization bath; the divergent column reprocesses any input spectrum into the blackbody (achromatic shear invariance), so no separate EBL budget arises.",
+    "photon_escape": "VMO ionizing radiation is emitted over the ~2-3 Myr main sequence before core collapse forms the temporal horizon; the horizon sequesters the metal-bearing remnant, not the emitted radiation field.",
+    "depth_correlation": "Where the demand is highest (deep, dense sightlines), patches are youngest and most metal-poor, so the local f_VMO(Z) transition concentrates the enhanced VMO yield exactly where the 500x recombination demand applies."
+  },
+  "verdict": "Steady-state ionization balance closes: the f_VMO = 0.994 branch sustains the ionized diffuse column to n_e ~ 5e2-2e7 x n_b0 across the scanned (xi, f_esc) plane \u2014 bracketing the ~500x rise the opacity boundary requires \u2014 so the reionization/optical-depth sector adds no countervailing bound on the helium-driven VMO fraction and mildly favours it at the conservative corner. The tau_reion = 0.054 datum is the approach wing of the single opacity boundary (constant-density baseline: tau ~ 0.05 accumulated by z ~ 4), with its profile-shape content assigned to the absorber inversion, not an epoch budget the VMO population must meet."
+}

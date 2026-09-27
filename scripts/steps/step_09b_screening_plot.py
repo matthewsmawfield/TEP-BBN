@@ -27,12 +27,14 @@ def main():
     setup_step_logger(Path(__file__).stem)
     project_root = Path(__file__).resolve().parent.parent.parent
 
-    # Frozen parameters from Gate 4B (three-anchor calibration)
-    # Three boundary conditions:
+    # Frozen parameters from Gate 4B (absorber-regime ansatz calibration)
+    # Anchors:
     # 1. Absorber: |Φ_abs|/c² = 1e-8 → S_Σ > 0.999 (unscreened)
-    # 2. Solar (Cassini): |Φ_⊙|/c² = 2.12e-6 → S_Σ ≈ 1e-4 (|β_eff| < 3.4e-3)
-    # 3. Galactic halo: |Φ_gal|/c² = 5.38e-7 → S_Σ ≈ 0.013 (corpus value)
+    # 2. Galactic halo: |Φ_gal|/c² = 5.38e-7 → S_Σ ≈ 0.013 (corpus value)
     # Solution: Phi_half = 1.59e-7, n = 3.56
+    # NB: solar source charge is the microscopic completion's projection
+    # (Paper 0 §7: S_Σ(⊙) < 5.75e-6 under the canonical linear PPN mapping),
+    # not this ansatz's solar extrapolation — see step_09 docstring.
     Phi_half = 1.59e-7
     n = 3.56
     beta_A = -1.0

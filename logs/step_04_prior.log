@@ -1,44 +1,44 @@
-[20:56:42] [INFO] ================================================================================
-[20:56:42] [INFO] Script: step_04_prior
-[20:56:42] [INFO] Started: 2026-09-10T20:56:42.727332
-[20:56:42] [INFO] ================================================================================
-[20:56:42] [SUCCESS] === GATE 4: TEP ABSORBER FIELD CLOSURE ===
-[20:56:42] [INFO] 
-[20:56:42] [INFO] ================================================================================
-[20:56:42] [INFO] 
+[13:07:21] [INFO] ================================================================================
+[13:07:21] [INFO] Script: step_04_prior
+[13:07:21] [INFO] Started: 2026-09-23T13:07:21.517227
+[13:07:21] [INFO] ================================================================================
+[13:07:21] [SUCCESS] === GATE 4: TEP ABSORBER FIELD CLOSURE ===
+[13:07:21] [INFO] 
+[13:07:21] [INFO] ================================================================================
+[13:07:21] [INFO] 
 Executing Gate 4: Symbolic Derivation of Temporal Shear Sign...
 
-[20:56:42] [INFO] ================================================================================
-[20:56:42] [INFO] 
-[20:56:42] [PROCESS] --- Field Propagation ---
-[20:56:42] [PROCESS] Scalar EOM: (-∇² + m_eff²) δφ = -(β_A/M_Pl) ρ
-[20:56:42] [PROCESS] Green integral K = ∫ G_+(x,x') ρ(x') d³x' > 0
-[20:56:42] [PROCESS] Core scalar response: δφ_core = -K*beta_A/M_Pl
-[20:56:42] [PROCESS] 
+[13:07:21] [INFO] ================================================================================
+[13:07:21] [INFO] 
+[13:07:21] [PROCESS] --- Field Propagation ---
+[13:07:21] [PROCESS] Scalar EOM: (-∇² + m_eff²) δφ = -(β_A/M_Pl) ρ
+[13:07:21] [PROCESS] Green integral K = ∫ G_+(x,x') ρ(x') d³x' > 0
+[13:07:21] [PROCESS] Core scalar response: δφ_core = -K*beta_A/M_Pl
+[13:07:21] [PROCESS] 
 Core clock shift: Δln A_core = (β_A/M_Pl) × δφ_core
-[20:56:42] [PROCESS]   = -K*beta_A**2/M_Pl**2
-[20:56:42] [PROCESS]   = -β_A² K / M_Pl²
-[20:56:42] [PROCESS] Is Δln A_core < 0 (for β_A ≠ 0)? -> True
-[20:56:42] [PROCESS]   (Dependence is QUADRATIC in β_A: ∝ -β_A²)
-[20:56:42] [PROCESS] 
+[13:07:21] [PROCESS]   = -K*beta_A**2/M_Pl**2
+[13:07:21] [PROCESS]   = -β_A² K / M_Pl²
+[13:07:21] [PROCESS] Is Δln A_core < 0 (for β_A ≠ 0)? -> True
+[13:07:21] [PROCESS]   (Dependence is QUADRATIC in β_A: ∝ -β_A²)
+[13:07:21] [PROCESS] 
 Edge-core observable: Δln A_abs = -Δln A_core = K*beta_A**2/M_Pl**2
-[20:56:42] [PROCESS] Is Δln A_abs > 0? -> True
-[20:56:42] [PROCESS] 
+[13:07:21] [PROCESS] Is Δln A_abs > 0? -> True
+[13:07:21] [PROCESS] 
 Velocity shift: Δv_T = -c × Δln A_abs = -K*beta_A**2*c/M_Pl**2
-[20:56:42] [PROCESS] Is Δv_T < 0 (blueward)? -> True
-[20:56:42] [PROCESS] 
+[13:07:21] [PROCESS] Is Δv_T < 0 (blueward)? -> True
+[13:07:21] [PROCESS] 
 --- Amplitude Constraint ---
-[20:56:42] [PROCESS] |Δv_T| = c × β_A² × K / M_Pl²
-[20:56:42] [PROCESS] β_A² = (M_Pl² / K) × (|Δv_T| / c)
-[20:56:42] [PROCESS] |β_A| = M_Pl × √(|Δv_T| / (c × K))  [SQUARE ROOT]
-[20:56:42] [PROCESS] 
+[13:07:21] [PROCESS] |Δv_T| = c × β_A² × K / M_Pl²
+[13:07:21] [PROCESS] β_A² = (M_Pl² / K) × (|Δv_T| / c)
+[13:07:21] [PROCESS] |β_A| = M_Pl × √(|Δv_T| / (c × K))  [SQUARE ROOT]
+[13:07:21] [PROCESS] 
 --- Corpus Consistency ---
-[20:56:42] [PROCESS] For corpus consistency, β_A should be frozen from independent
-[20:56:42] [PROCESS] measurements (GNSS/EFA flyby fits) and the absorber shear
-[20:56:42] [PROCESS] amplitude predicted, not inferred from the same -82 km/s feature.
-[20:56:42] [SUCCESS] 
+[13:07:21] [PROCESS] For corpus consistency, β_A should be frozen from independent
+[13:07:21] [PROCESS] measurements (GNSS/EFA flyby fits) and the absorber shear
+[13:07:21] [PROCESS] amplitude predicted, not inferred from the same -82 km/s feature.
+[13:07:21] [SUCCESS] 
 [SUCCESS] Gate 4 Passed: Blueward shift guaranteed from β_A² and edge-minus-core convention.
-[20:56:42] [SUCCESS] 
+[13:07:21] [SUCCESS] 
 [COMPLETED] Gate 4 predictions written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4_prediction.json
-[20:56:42] [SUCCESS]   [OK] 0.4s
-[20:56:42] [PROCESS] [RUN] step_04b_amplitude: Gate 4B: TEP Absorber Amplitude Test
+[13:07:21] [SUCCESS]   [OK] 0.3s
+[13:07:21] [PROCESS] [RUN] step_04b_amplitude: Gate 4B: TEP Absorber Amplitude Test

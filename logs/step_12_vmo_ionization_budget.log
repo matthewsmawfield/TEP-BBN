@@ -1,0 +1,13 @@
+[00:22:33] [INFO] ================================================================================
+[00:22:33] [INFO] Script: step_12_vmo_ionization_budget
+[00:22:33] [INFO] Started: 2026-09-26T00:22:33.634634
+[00:22:33] [INFO] ================================================================================
+[00:22:33] [SUCCESS] === STEP 12: VMO-BRANCH IONIZATION-EQUILIBRIUM BUDGET ===
+[00:22:33] [SUCCESS] [A] N_gamma_eff(f_VMO=0.994) = 9.94e+04/baryon (std-only 4.0e+03)
+[00:22:33] [PROCESS] [B] n_e=1x n_b0 -> demand 2.05e-03/baryon/Gyr
+[00:22:33] [PROCESS] [B] n_e=14x n_b0 -> demand 2.87e-02/baryon/Gyr
+[00:22:33] [PROCESS] [B] n_e=500x n_b0 -> demand 1.03e+00/baryon/Gyr
+[00:22:33] [SUCCESS] [C] VMO branch ionized to (4.8e+02..2.4e+07) x n_b0; cells meeting 500x requirement: 11/12
+[00:22:33] [PROCESS] [C] Standard branch ionized to (1.9e+01..9.7e+05) x n_b0; cells meeting 500x requirement: 9/12
+[00:22:33] [SUCCESS] [E] Wing: tau(z<4)=0.053, tau=1 surface z=20.3 (m=0 baseline; Planck tau_reion = 0.054)
+[00:22:33] [SUCCESS] [WRITE] /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate12_vmo_ionization_budget.json

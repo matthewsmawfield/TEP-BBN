@@ -62,6 +62,9 @@ DISFORMAL_STEPS = [
     ("step_04h_disformal_clock", "run_disformal_clock", "Gate 4B-IV: Disformal Clock Closure (cosmological d0phi)", "disformal"),
     ("step_09b_screening_plot", "main", "Gate 4B: Screening Function Plot", "disformal"),
     ("step_08c_wavelength_systematics", "main", "Gate 8C: Wavelength-Systematics Sensitivity (literature-calibrated)", "disformal"),
+    ("step_10_covariant_transport", "run_covariant_transport", "Gate 10: Full Covariant Transport Solver (omega = -u^mu k_mu)", "disformal"),
+    ("step_11_steady_state_budget", "run_step_11", "Gate 11: Steady-State Timescale & Thermalization Budget", "core"),
+    ("step_12_vmo_ionization_budget", "run_step_12", "Gate 12: VMO-Branch Ionization-Equilibrium Budget", "core"),
 ]
 
 # Phase 3: Secondary Robustness Analyses

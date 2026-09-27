@@ -599,7 +599,7 @@ The author declares no competing interests. No external funding was received for
 
 - Smawfield, M. L. (2026). *Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries*. v0.3 (Kilifi). DOI: 10.5281/zenodo.19102061.
 
-- Smawfield, M. L. (2026). *TEP-HC: Boltzmann Perturbation Closure and Acoustic-Scale Preservation*. v0.5 (Cambridge). DOI: 10.5281/zenodo.20682752.
+- Smawfield, M. L. (2026). *TEP-HC: Boltzmann Perturbation Closure and Acoustic-Scale Preservation*. v0.5 (Cambridge). DOI: 10.5281/zenodo.20572722.
 
 - Smawfield, M. L. (2026). *TEP-QF: Quantum Foundations and Proper-Time Phase Holonomy*. v0.1. Zenodo.
 

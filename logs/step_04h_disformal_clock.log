@@ -1,302 +1,334 @@
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] Script: step_04h_disformal_clock
-[22:16:59] [INFO] Started: 2026-09-10T22:16:59.782065
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [SUCCESS] === GATE 4B-IV: DISFORMAL CLOCK MECHANISM ===
-[22:16:59] [WARNING] Status: CONSTRAINED NEAR-CLOSURE
-[22:16:59] [PROCESS] Channel: cosmological ∂₀φ × local δφ cross-term in g̃₀₀
-[22:16:59] [PROCESS] Theory: v0.11 Jakarta, 1+z = A₀/A_em → ∂₀φ = M_Pl × H(z) ≠ 0
-[22:16:59] [INFO] 
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] --- 1. Cosmological Scalar Field ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   z_abs = 2.5042
-[22:16:59] [PROCESS]   φ_abs/M_Pl = ln(1+z)/|β_A| = 1.2540
-[22:16:59] [PROCESS]   A_abs = 1/(1+z) = 0.2854
-[22:16:59] [PROCESS]   H(z) = 258.2 km/s/Mpc = 5.508e-33 eV
-[22:16:59] [PROCESS]   ∂₀φ = M_Pl × H(z) = 1.3418e-05 eV²
-[22:16:59] [PROCESS]   (∂₀φ)² = 1.8005e-10 eV⁴
-[22:16:59] [PROCESS]   M_Pl = 2.4363e+27 eV (reduced)
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] Script: step_04h_disformal_clock
+[13:07:22] [INFO] Started: 2026-09-23T13:07:22.879070
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [SUCCESS] === GATE 4B-IV: DISFORMAL CLOCK MECHANISM ===
+[13:07:22] [WARNING] Status: CONSTRAINED NEAR-CLOSURE
+[13:07:22] [PROCESS] Channel: cosmological ∂₀φ × local δφ cross-term in g̃₀₀
+[13:07:22] [PROCESS] Theory: v0.11 Jakarta, 1+z = A₀/A_em → ∂₀φ = M_Pl × H_T(z) ≠ 0
+[13:07:22] [INFO] 
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] --- 1. Cosmological Scalar Field ---
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   z_abs = 2.5042
+[13:07:22] [PROCESS]   φ_abs/M_Pl = ln(1+z)/|β_A| = 1.2540
+[13:07:22] [PROCESS]   A_abs = 1/(1+z) = 0.2854
+[13:07:22] [PROCESS]   H_T(z) = 258.2 km/s/Mpc = 5.508e-33 eV
+[13:07:22] [PROCESS]   ∂₀φ = M_Pl × H_T(z) = 1.3418e-05 eV²
+[13:07:22] [PROCESS]   (∂₀φ)² = 1.8005e-10 eV⁴
+[13:07:22] [PROCESS]   M_Pl = 2.4363e+27 eV (reduced)
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
 --- 2. Absorber Parameters ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   log N_HI = 17.362 (Zavarygin et al. 2018, Table 5)
-[22:16:59] [PROCESS]   R = 30 kpc, M_halo = 10¹⁰ M☉
-[22:16:59] [PROCESS]   Φ/c² = 1.5953e-08, Δ(δφ/M_Pl) = 1.5953e-08
-[22:16:59] [PROCESS]   S_Σ(absorber) = 0.9997 (unscreened)
-[22:16:59] [PROCESS]   dv_H (fitted free-H) = 78.9 km/s (TEP target, NOT 81.6)
-[22:16:59] [PROCESS]   TEP predicts geometry-dependent Δv_T; the -81.6 km/s clustering
-[22:16:59] [PROCESS]   is explained by the velocity-selection theorem (Gate 6-I).
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   log N_HI = 17.362 (Zavarygin et al. 2018, Table 5)
+[13:07:22] [PROCESS]   R = 30 kpc, M_halo = 10¹⁰ M☉
+[13:07:22] [PROCESS]   Φ/c² = 1.5953e-08, Δ(δφ/M_Pl) = 1.5953e-08
+[13:07:22] [PROCESS]   S_Σ(absorber) = 0.9997 (unscreened)
+[13:07:22] [PROCESS]   dv_H (fitted free-H) = 78.9 km/s (TEP target, NOT 81.6)
+[13:07:22] [PROCESS]   TEP predicts geometry-dependent Δv_T; the -81.6 km/s clustering
+[13:07:22] [PROCESS]   is explained by the velocity-selection theorem (Gate 6-I).
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
 --- 3. Conformal-Only Amplitude (reference) ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   |Δv_conf| = 0.00478 km/s (conformal component)
-[22:16:59] [PROCESS]   |Δv_H| (fitted free-H) = 78.9 km/s (TEP target)
-[22:16:59] [PROCESS]   Descriptive ratio = 16497× (disformal clock must dominate)
-[22:16:59] [PROCESS]   The disformal clock is the mechanism producing the geometry-dependent offset.
-[22:16:59] [PROCESS]   The -81.6 km/s clustering is explained by the velocity-selection theorem.
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   |Δv_conf| = 0.00478 km/s (conformal component)
+[13:07:22] [PROCESS]   |Δv_H| (fitted free-H) = 78.9 km/s (TEP target)
+[13:07:22] [PROCESS]   Descriptive ratio = 16497× (disformal clock must dominate)
+[13:07:22] [PROCESS]   The disformal clock is the mechanism producing the geometry-dependent offset.
+[13:07:22] [PROCESS]   The -81.6 km/s clustering is explained by the velocity-selection theorem.
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
 --- 4. TEP Screening: Screened Poisson for the Sun ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   TEP screening modulates the SOURCE, not the field.
-[22:16:59] [PROCESS]   ∇²φ = (β_A/M_Pl) × S_Σ(|Φ|/c²) × ρ  [screened Poisson]
-[22:16:59] [PROCESS]   This is NOT thin-shell: φ_scr ≠ S × φ_unscreened
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   M_total_screened / M_sun = 5.3278e-05
-[22:16:59] [PROCESS]   S_Σ(R_sun) = 9.9082e-05
-[22:16:59] [PROCESS]   φ_scr/M_Pl = 2.2578e-10 (TEP screened Poisson)
-[22:16:59] [PROCESS]   Thin-shell: S×φ_unscr/M_Pl = 4.1988e-10
-[22:16:59] [PROCESS]   Ratio TEP/thin-shell = 0.54
-[22:16:59] [PROCESS]   dφ/dr (TEP) = 1.5572e+02 eV²
-[22:16:59] [INFO] 
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] --- 4b. Temporal vs Spatial Disformal Terms ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   At the Sun (z=0):
-[22:16:59] [PROCESS]     ∂₀φ = M_Pl×H₀ = 3.6374e-06 eV² (cosmological, unscreened)
-[22:16:59] [PROCESS]     ∂_rφ = 1.5572e+02 eV² (local, TEP-screened)
-[22:16:59] [PROCESS]     Ratio ∂_rφ/∂₀φ = 4.2812e+07 (spatial dominates)
-[22:16:59] [PROCESS]     → Cassini sees the SPATIAL term (Shapiro delay)
-[22:16:59] [PROCESS]     → The temporal clock term at the Sun is negligible
-[22:16:59] [PROCESS]     → GNSS/LLR effects come from the CONFORMAL sector
-[22:16:59] [PROCESS]        (α_eff = S×β_A = -9.91e-05, clock shift ~ 4.20e-10)
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   At the absorber (z=2.5042):
-[22:16:59] [PROCESS]     ∂₀φ = M_Pl×H(z) = 1.3418e-05 eV² (cosmological, unscreened)
-[22:16:59] [PROCESS]     ∂_rφ = 1.6564e-08 eV² (local, screened)
-[22:16:59] [PROCESS]     Ratio ∂₀φ/∂_rφ = 8.1011e+02 (temporal dominates)
-[22:16:59] [PROCESS]     → The CLOCK mechanism uses the TEMPORAL term
-[22:16:59] [PROCESS]     → The spatial term is negligible at the absorber
-[22:16:59] [INFO] 
-[22:16:59] [SUCCESS]   Environmental asymmetry: temporal dominates at absorber
-[22:16:59] [SUCCESS]   by 8e+02×, spatial dominates at Sun
-[22:16:59] [PROCESS]   by 4e+07×. Both share B₀.
-[22:16:59] [INFO] 
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] --- 4c. B(φ) Field-Dependence Scan ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   B(φ) = B₀ (φ/M_Pl)^n
-[22:16:59] [PROCESS]   |Δv|/c = (n/2) × B₀ × (φ_abs/M_Pl)^(n-1) × Δ(δφ/M_Pl) × (M_Pl×H)² / A²
-[22:16:59] [PROCESS]   γ_dis = B(φ_sun) × (∂_rφ_sun)² / (2U_sun)  [correct TEP screening]
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   n    B₀_req         γ_dis          Cassini  GW170817   Local   
-[22:16:59] [PROCESS]   ---- -------------- -------------- -------- ---------- --------
-[22:16:59] [PROCESS]   2    5.950e+12      1.736e+03      ✗        ✗          ✓       
-[22:16:59] [PROCESS]   3    3.163e+12      2.083e-07      ✓        ✗          ✓       
-[22:16:59] [PROCESS]   4    1.892e+12      2.813e-17      ✓        ✗          ✓       
-[22:16:59] [PROCESS]   5    1.207e+12      4.052e-27      ✓        ✓          ✓       
-[22:16:59] [PROCESS]   6    8.022e+11      6.080e-37      ✓        ✓          ✓       
-[22:16:59] [INFO] 
-[22:16:59] [WARNING]   v0.11 weak-field: B ∝ φ² (n=2) → EXCLUDED by Cassini
-[22:16:59] [WARNING]   (γ_dis ~ 10³, exceeds bound by ~10⁷× with correct TEP screening)
-[22:16:59] [SUCCESS]   Steeper B(φ) (n≥5) → ALL constraints PASS
-[22:16:59] [PROCESS]   v0.11 states B(φ) microscopic form is not uniquely frozen
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   TEP screening modulates the SOURCE, not the field.
+[13:07:22] [PROCESS]   ∇²φ = (β_A/M_Pl) × S_Σ(|Φ|/c²) × ρ  [screened Poisson]
+[13:07:22] [PROCESS]   This is NOT thin-shell: φ_scr ≠ S × φ_unscreened
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   M_total_screened / M_sun = 5.3278e-05
+[13:07:22] [PROCESS]   S_Σ(R_sun) = 9.9082e-05
+[13:07:22] [PROCESS]   φ_scr/M_Pl = 2.2578e-10 (TEP screened Poisson)
+[13:07:22] [PROCESS]   Thin-shell: S×φ_unscr/M_Pl = 4.1988e-10
+[13:07:22] [PROCESS]   Ratio TEP/thin-shell = 0.54
+[13:07:22] [PROCESS]   dφ/dr (TEP) = 1.5572e+02 eV²
+[13:07:22] [INFO] 
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] --- 4b. Temporal vs Spatial Disformal Terms ---
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   At the Sun (z=0):
+[13:07:22] [PROCESS]     ∂₀φ = M_Pl×H₀ = 3.6374e-06 eV² (cosmological, unscreened)
+[13:07:22] [PROCESS]     ∂_rφ = 1.5572e+02 eV² (local, TEP-screened)
+[13:07:22] [PROCESS]     Ratio ∂_rφ/∂₀φ = 4.2812e+07 (spatial dominates)
+[13:07:22] [PROCESS]     → Cassini sees the SPATIAL term (Shapiro delay)
+[13:07:22] [PROCESS]     → The temporal clock term at the Sun is negligible
+[13:07:22] [PROCESS]     → GNSS/LLR effects come from the CONFORMAL sector
+[13:07:22] [PROCESS]        (α_eff = S×β_A = -9.91e-05, clock shift ~ 4.20e-10)
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   At the absorber (z=2.5042):
+[13:07:22] [PROCESS]     ∂₀φ = M_Pl×H(z) = 1.3418e-05 eV² (cosmological, unscreened)
+[13:07:22] [PROCESS]     ∂_rφ = 1.6564e-08 eV² (local, screened)
+[13:07:22] [PROCESS]     Ratio ∂₀φ/∂_rφ = 8.1011e+02 (temporal dominates)
+[13:07:22] [PROCESS]     → The CLOCK mechanism uses the TEMPORAL term
+[13:07:22] [PROCESS]     → The spatial term is negligible at the absorber
+[13:07:22] [INFO] 
+[13:07:22] [SUCCESS]   Environmental asymmetry: temporal dominates at absorber
+[13:07:22] [SUCCESS]   by 8e+02×, spatial dominates at Sun
+[13:07:22] [PROCESS]   by 4e+07×. Both share B₀.
+[13:07:22] [INFO] 
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] --- 4c. B(φ) Field-Dependence Scan ---
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   B(φ) = B₀ (φ/M_Pl)^n
+[13:07:22] [PROCESS]   |Δv|/c = (n/2) × B₀ × (φ_abs/M_Pl)^(n-1) × Δ(δφ/M_Pl) × (M_Pl×H)² / A²
+[13:07:22] [PROCESS]   γ_dis = B(φ_sun) × (∂_rφ_sun)² / (2U_sun)  [correct TEP screening]
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   n    B₀_req         γ_dis          Cassini  GW170817   Local   
+[13:07:22] [PROCESS]   ---- -------------- -------------- -------- ---------- --------
+[13:07:22] [PROCESS]   2    5.950e+12      1.736e+03      ✗        ✗          ✓       
+[13:07:22] [PROCESS]   3    3.163e+12      2.083e-07      ✓        ✗          ✓       
+[13:07:22] [PROCESS]   4    1.892e+12      2.813e-17      ✓        ✗          ✓       
+[13:07:22] [PROCESS]   5    1.207e+12      4.052e-27      ✓        ✓          ✓       
+[13:07:22] [PROCESS]   6    8.022e+11      6.080e-37      ✓        ✓          ✓       
+[13:07:22] [INFO] 
+[13:07:22] [WARNING]   v0.11 weak-field: B ∝ φ² (n=2) → EXCLUDED by Cassini
+[13:07:22] [WARNING]   (γ_dis ~ 10³, exceeds bound by ~10⁷× with correct TEP screening)
+[13:07:22] [SUCCESS]   Steeper B(φ) (n≥5) → ALL constraints PASS
+[13:07:22] [PROCESS]   v0.11 states B(φ) microscopic form is not uniquely frozen
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
 --- 4d. Linearization Validity Audit ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   Linearized formula assumes B·φ̇²/A² ≪ 1.
-[22:16:59] [PROCESS]   Invariant: I = 1 - B̄(φ)·(∂₀φ)²/A²
-[22:16:59] [PROCESS]   If I ≪ 1 or I < 0, the linearized B₀ is invalid.
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   n=2: B̄·φ̇²/A² = 2.069e+04, I = -2.069e+04 INVALID
-[22:16:59] [PROCESS]   n=3: B̄·φ̇²/A² = 1.379e+04, I = -1.379e+04 INVALID
-[22:16:59] [PROCESS]   n=4: B̄·φ̇²/A² = 1.034e+04, I = -1.034e+04 INVALID
-[22:16:59] [PROCESS]   n=5: B̄·φ̇²/A² = 8.275e+03, I = -8.274e+03 INVALID
-[22:16:59] [PROCESS]   n=6: B̄·φ̇²/A² = 6.896e+03, I = -6.895e+03 INVALID
-[22:16:59] [WARNING]   → All linearized B₀ values are INVALID by 10³-10⁴×.
-[22:16:59] [WARNING]   → The linearized formula is being used outside its validity range.
-[22:16:59] [INFO] 
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] --- 4e. Exact Lapse Calculation ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   N²(φ) = A² - B(φ)·(∂₀φ)²  [exact matter-metric lapse]
-[22:16:59] [PROCESS]   Δ_ec = (1/2) ln[N_edge²/N_core²]
-[22:16:59] [PROCESS]   Solve -c·Δ_ec = Δv_target for B₀ (analytical).
-[22:16:59] [PROCESS]   Lorentzian condition: N² > 0 at core, edge, and background.
-[22:16:59] [PROCESS]   Analytical solution: B₀_exact = B₀_lin / (1 + β·B₀_lin)
-[22:16:59] [PROCESS]   where β = (φ̄/M_Pl)^n × (∂₀φ)² / A²
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   n    B₀_lin         B₀_exact       ratio      u=B̄φ̇²/A²     I=1-u        Cassini 
-[22:16:59] [PROCESS]   ---- -------------- -------------- ---------- -------------- ------------ --------
-[22:16:59] [PROCESS]   2    5.950e+12      2.876e+08      20687.6    0.99995166     4.83e-05     ✗       
-[22:16:59] [PROCESS]   3    3.163e+12      2.294e+08      13792.1    0.99992749     7.25e-05     ✓       
-[22:16:59] [PROCESS]   4    1.892e+12      1.829e+08      10344.3    0.99990333     9.67e-05     ✓       
-[22:16:59] [PROCESS]   5    1.207e+12      1.459e+08      8275.6     0.99987916     1.21e-04     ✓       
-[22:16:59] [PROCESS]   6    8.022e+11      1.163e+08      6896.5     0.99985500     1.45e-04     ✓       
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   NOTE: The exact-lapse calculation was originally framed as targeting
-[22:16:59] [PROCESS]   the 81.6 km/s isotope shift. TEP does not predict a universal
-[22:16:59] [PROCESS]   -81.6 km/s shift; the clustering is explained by the velocity-
-[22:16:59] [PROCESS]   selection theorem (Gate 6-I). The correct TEP targets are the
-[22:16:59] [PROCESS]   fitted free-H displacements (78.9, 76.0, 118.0 km/s). The
-[22:16:59] [PROCESS]   temporal-disformal channel provides the dominant geometry-
-[22:16:59] [PROCESS]   dependent contribution. The near-critical branch is a diagnostic
-[22:16:59] [PROCESS]   property of this ansatz (B0 inferred by inverse fitting), not
-[22:16:59] [PROCESS]   an independent prediction. Predictive significance requires
-[22:16:59] [PROCESS]   B(phi) to be frozen independently of these velocities.
-[22:16:59] [INFO] 
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   Linearized formula assumes B·φ̇²/A² ≪ 1.
+[13:07:22] [PROCESS]   Invariant: I = 1 - B̄(φ)·(∂₀φ)²/A²
+[13:07:22] [PROCESS]   If I ≪ 1 or I < 0, the linearized B₀ is invalid.
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   n=2: B̄·φ̇²/A² = 2.069e+04, I = -2.069e+04 INVALID
+[13:07:22] [PROCESS]   n=3: B̄·φ̇²/A² = 1.379e+04, I = -1.379e+04 INVALID
+[13:07:22] [PROCESS]   n=4: B̄·φ̇²/A² = 1.034e+04, I = -1.034e+04 INVALID
+[13:07:22] [PROCESS]   n=5: B̄·φ̇²/A² = 8.275e+03, I = -8.274e+03 INVALID
+[13:07:22] [PROCESS]   n=6: B̄·φ̇²/A² = 6.896e+03, I = -6.895e+03 INVALID
+[13:07:22] [WARNING]   → All linearized B₀ values are INVALID by 10³-10⁴×.
+[13:07:22] [WARNING]   → The linearized formula is being used outside its validity range.
+[13:07:22] [INFO] 
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] --- 4e. Exact Lapse Calculation ---
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   N²(φ) = A² - B(φ)·(∂₀φ)²  [exact matter-metric lapse]
+[13:07:22] [PROCESS]   Δv = (1/2) c × ln[N_core²/N_edge²]  [signed; <0 = blueward edge]
+[13:07:22] [PROCESS]   Solve c·Δv = Δv_target for B₀ (analytical).
+[13:07:22] [PROCESS]   Lorentzian condition: N² > 0 at core, edge, and background.
+[13:07:22] [PROCESS]   Analytical solution: B₀_exact = B₀_lin / (1 + β·B₀_lin)
+[13:07:22] [PROCESS]   where β = (φ̄/M_Pl)^n × (∂₀φ)² / A²
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   n    B₀_lin         B₀_exact       ratio      u=B̄φ̇²/A²     I=1-u        Cassini 
+[13:07:22] [PROCESS]   ---- -------------- -------------- ---------- -------------- ------------ --------
+[13:07:22] [PROCESS]   2    5.950e+12      2.876e+08      20687.6    0.99995166     4.83e-05     ✗       
+[13:07:22] [PROCESS]   3    3.163e+12      2.294e+08      13792.1    0.99992749     7.25e-05     ✓       
+[13:07:22] [PROCESS]   4    1.892e+12      1.829e+08      10344.3    0.99990333     9.67e-05     ✓       
+[13:07:22] [PROCESS]   5    1.207e+12      1.459e+08      8275.6     0.99987916     1.21e-04     ✓       
+[13:07:22] [PROCESS]   6    8.022e+11      1.163e+08      6896.5     0.99985500     1.45e-04     ✓       
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   NOTE: The exact-lapse calculation was originally framed as targeting
+[13:07:22] [PROCESS]   the 81.6 km/s isotope shift. TEP does not predict a universal
+[13:07:22] [PROCESS]   -81.6 km/s shift; the clustering is explained by the velocity-
+[13:07:22] [PROCESS]   selection theorem (Gate 6-I). The correct TEP targets are the
+[13:07:22] [PROCESS]   fitted free-H displacements (78.9, 76.0, 118.0 km/s). The
+[13:07:22] [PROCESS]   temporal-disformal channel provides the dominant geometry-
+[13:07:22] [PROCESS]   dependent contribution. The near-critical branch is a diagnostic
+[13:07:22] [PROCESS]   property of this ansatz (B0 inferred by inverse fitting), not
+[13:07:22] [PROCESS]   an independent prediction. Predictive significance requires
+[13:07:22] [PROCESS]   B(phi) to be frozen independently of these velocities.
+[13:07:22] [INFO] 
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
 --- 4f. H_T Coordinate Audit ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   H_T(Einstein) = -d ln A / dt   → φ̇ = M_Pl × H
-[22:16:59] [PROCESS]   H_T(matter)   = -d ln A / dτ̃  → φ̇ = M_Pl × H × N
-[22:16:59] [PROCESS]   Einstein: N² = A² - B·φ̇²  [can cross Lorentzian boundary]
-[22:16:59] [PROCESS]   Matter:   N² = A²/(1+B·M_Pl²·H²)  [always Lorentzian]
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   Matter-frame (n=5): maximum |Δv| = 0.0048 km/s
-[22:16:59] [PROCESS]   (conformal prediction: 0.0048 km/s)
-[22:16:59] [PROCESS]   → Matter-frame disformal correction is ~1× the conformal shift
-[22:16:59] [PROCESS]   → Matter-frame prediction is far below the calibration floor of present spectra
-[22:16:59] [PROCESS]   The H_T coordinate definition affects the size of the disformal contribution:
-[22:16:59] [PROCESS]   the matter-frame formulation remains Lorentzian with max shift ~0.005 km/s;
-[22:16:59] [PROCESS]   the Einstein-frame formulation can reach the required amplitude through
-[22:16:59] [PROCESS]   the near-critical branch (Gate 4B-IV). The covariant H_T derivation
-[22:16:59] [PROCESS]   from omega = -u.k determines which time variable enters B*phi_dot^2.
-[22:16:59] [PROCESS]   The -81.6 km/s clustering is explained by the velocity-selection theorem (Gate 6-I).
-[22:16:59] [INFO] 
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   H_T(Einstein) = -d ln A / dt   → φ̇ = M_Pl × H
+[13:07:22] [PROCESS]   H_T(matter)   = -d ln A / dτ̃  → φ̇ = M_Pl × H × N
+[13:07:22] [PROCESS]   Einstein: N² = A² - B·φ̇²  [can cross Lorentzian boundary]
+[13:07:22] [PROCESS]   Matter:   N² = A²/(1+B·M_Pl²·H²)  [always Lorentzian]
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   Matter-frame (n=5): maximum |Δv| = 0.0048 km/s
+[13:07:22] [PROCESS]   (conformal prediction: 0.0048 km/s)
+[13:07:22] [PROCESS]   → Matter-frame disformal correction is ~1× the conformal shift
+[13:07:22] [PROCESS]   → Matter-frame prediction is far below the calibration floor of present spectra
+[13:07:22] [PROCESS]   The H_T coordinate definition affects the size of the disformal contribution:
+[13:07:22] [PROCESS]   the matter-frame formulation remains Lorentzian with max shift ~0.005 km/s;
+[13:07:22] [PROCESS]   the Einstein-frame formulation can reach the required amplitude through
+[13:07:22] [PROCESS]   the near-critical branch (Gate 4B-IV). The covariant H_T derivation
+[13:07:22] [PROCESS]   from omega = -u.k determines which time variable enters B*phi_dot^2.
+[13:07:22] [PROCESS]   The -81.6 km/s clustering is explained by the velocity-selection theorem (Gate 6-I).
+[13:07:22] [INFO] 
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
 --- 4g. Envelope B(φ) Scan: Non-Power-Law Field Dependence ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   B(φ) = B₀ φ² / (1 + (φ/φ_c)²)
-[22:16:59] [PROCESS]   Small-φ limit (Cassini): B ∝ φ²  (n_eff = 2)
-[22:16:59] [PROCESS]   Large-φ limit (cosmo):  B → B₀ φ_c²  (n_eff = 0, saturated)
-[22:16:59] [PROCESS]   The saturation keeps B·φ̇² bounded, preserving I > 0.
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   φ_c/M_Pl     B₀_env         γ_dis        Cassini  I_Q1009    I_PKS      I_J1332    Transfer  
-[22:16:59] [PROCESS]   ------------ -------------- ------------ -------- ---------- ---------- ---------- ----------
-[22:16:59] [INFO] 
-[22:16:59] [WARNING]   → No envelope solution satisfies both Cassini and transfer.
-[22:16:59] [WARNING]   The saturating form alone is insufficient;
-[22:16:59] [WARNING]   z-dependent screening or a different functional form may be needed.
-[22:16:59] [INFO] 
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   B(φ) = B₀ φ² / (1 + (φ/φ_c)²)
+[13:07:22] [PROCESS]   Small-φ limit (Cassini): B ∝ φ²  (n_eff = 2)
+[13:07:22] [PROCESS]   Large-φ limit (cosmo):  B → B₀ φ_c²  (n_eff = 0, saturated)
+[13:07:22] [PROCESS]   The saturation keeps B·φ̇² bounded, preserving I > 0.
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   φ_c/M_Pl     B₀_env         γ_dis        Cassini  I_Q1009    I_PKS      I_J1332    Transfer  
+[13:07:22] [PROCESS]   ------------ -------------- ------------ -------- ---------- ---------- ---------- ----------
+[13:07:22] [PROCESS]   0.0100       4.523e+12      1.319e+03    ✗        6.65e-09   -2.67e+00  -2.11e+00  ✗         
+[13:07:22] [PROCESS]   0.0127       2.809e+12      8.194e+02    ✗        8.36e-09   -2.67e+00  -2.11e+00  ✗         
+[13:07:22] [PROCESS]   0.0161       1.745e+12      5.089e+02    ✗        6.76e-09   -2.67e+00  -2.11e+00  ✗         
+[13:07:22] [PROCESS]   0.0204       1.084e+12      3.161e+02    ✗        1.26e-08   -2.67e+00  -2.11e+00  ✗         
+[13:07:22] [PROCESS]   0.0259       6.730e+11      1.963e+02    ✗        2.46e-08   -2.67e+00  -2.11e+00  ✗         
+[13:07:22] [PROCESS]   0.0329       4.181e+11      1.219e+02    ✗        3.01e-08   -2.67e+00  -2.11e+00  ✗         
+[13:07:22] [PROCESS]   0.0418       2.597e+11      7.576e+01    ✗        5.38e-08   -2.68e+00  -2.11e+00  ✗         
+[13:07:22] [PROCESS]   0.0530       1.614e+11      4.708e+01    ✗        8.79e-08   -2.68e+00  -2.12e+00  ✗         
+[13:07:22] [PROCESS]   0.0672       1.003e+11      2.927e+01    ✗        1.36e-07   -2.68e+00  -2.12e+00  ✗         
+[13:07:22] [PROCESS]   0.0853       6.242e+10      1.821e+01    ✗        2.19e-07   -2.68e+00  -2.12e+00  ✗         
+[13:07:22] [PROCESS]   0.1083       3.888e+10      1.134e+01    ✗        3.59e-07   -2.68e+00  -2.12e+00  ✗         
+[13:07:22] [PROCESS]   0.1374       2.425e+10      7.074e+00    ✗        5.70e-07   -2.69e+00  -2.12e+00  ✗         
+[13:07:22] [PROCESS]   0.1743       1.517e+10      4.425e+00    ✗        9.13e-07   -2.70e+00  -2.13e+00  ✗         
+[13:07:22] [PROCESS]   0.2212       9.530e+09      2.780e+00    ✗        1.46e-06   -2.71e+00  -2.14e+00  ✗         
+[13:07:22] [PROCESS]   0.2807       6.027e+09      1.758e+00    ✗        2.31e-06   -2.73e+00  -2.16e+00  ✗         
+[13:07:22] [PROCESS]   0.3562       3.852e+09      1.124e+00    ✗        3.61e-06   -2.76e+00  -2.18e+00  ✗         
+[13:07:22] [PROCESS]   0.4520       2.501e+09      7.296e-01    ✗        5.56e-06   -2.81e+00  -2.22e+00  ✗         
+[13:07:22] [PROCESS]   0.5736       1.662e+09      4.849e-01    ✗        8.36e-06   -2.89e+00  -2.28e+00  ✗         
+[13:07:22] [PROCESS]   0.7279       1.141e+09      3.329e-01    ✗        1.22e-05   -3.00e+00  -2.36e+00  ✗         
+[13:07:22] [PROCESS]   0.9237       8.178e+08      2.385e-01    ✗        1.70e-05   -3.14e+00  -2.47e+00  ✗         
+[13:07:22] [PROCESS]   1.1721       6.169e+08      1.799e-01    ✗        2.25e-05   -3.32e+00  -2.60e+00  ✗         
+[13:07:22] [PROCESS]   1.4874       4.921e+08      1.435e-01    ✗        2.83e-05   -3.52e+00  -2.74e+00  ✗         
+[13:07:22] [PROCESS]   1.8874       4.146e+08      1.209e-01    ✗        3.35e-05   -3.72e+00  -2.89e+00  ✗         
+[13:07:22] [PROCESS]   2.3950       3.665e+08      1.069e-01    ✗        3.79e-05   -3.90e+00  -3.02e+00  ✗         
+[13:07:22] [PROCESS]   3.0392       3.366e+08      9.818e-02    ✗        4.13e-05   -4.05e+00  -3.13e+00  ✗         
+[13:07:22] [PROCESS]   3.8566       3.180e+08      9.277e-02    ✗        4.37e-05   -4.17e+00  -3.21e+00  ✗         
+[13:07:22] [PROCESS]   4.8939       3.065e+08      8.941e-02    ✗        4.54e-05   -4.25e+00  -3.27e+00  ✗         
+[13:07:22] [PROCESS]   6.2102       2.994e+08      8.732e-02    ✗        4.64e-05   -4.30e+00  -3.31e+00  ✗         
+[13:07:22] [PROCESS]   7.8805       2.949e+08      8.602e-02    ✗        4.71e-05   -4.34e+00  -3.33e+00  ✗         
+[13:07:22] [PROCESS]   10.0000      2.922e+08      8.522e-02    ✗        4.76e-05   -4.36e+00  -3.35e+00  ✗         
+[13:07:22] [INFO] 
+[13:07:22] [WARNING]   → No envelope solution satisfies both Cassini and transfer.
+[13:07:22] [WARNING]   The saturating form alone is insufficient;
+[13:07:22] [WARNING]   z-dependent screening or a different functional form may be needed.
+[13:07:22] [INFO] 
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
 --- 5. Detailed Analysis (Exact Lapse) ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS] 
   n=2 (v0.11 weak-field B ∝ φ²), EXACT lapse:
-[22:16:59] [PROCESS]     B₀_exact = 2.876e+08 eV⁻⁴ (vs linearized 5.950e+12)
-[22:16:59] [PROCESS]     B̄·φ̇²/A² = 0.99995166, I = 1-u = 4.83e-05 (near-critical)
-[22:16:59] [PROCESS]     B(φ_sun) = 1.466e-11 eV⁻⁴ (TEP screened)
-[22:16:59] [PROCESS]     γ_dis = 8.390e-02 (bound: 2.3×10⁻⁵)
-[22:16:59] [WARNING]     → EXCLUDED by factor 3.6e+03×
-[22:16:59] [WARNING]     The v0.11 weak-field B ∝ φ² cannot close the gap even with exact lapse.
-[22:16:59] [PROCESS]     [TEP screened Poisson, NOT thin-shell: φ_scr/φ_TS = 0.54]
-[22:16:59] [PROCESS] 
+[13:07:22] [PROCESS]     B₀_exact = 2.876e+08 eV⁻⁴ (vs linearized 5.950e+12)
+[13:07:22] [PROCESS]     B̄·φ̇²/A² = 0.99995166, I = 1-u = 4.83e-05 (near-critical)
+[13:07:22] [PROCESS]     B(φ_sun) = 1.466e-11 eV⁻⁴ (TEP screened)
+[13:07:22] [PROCESS]     γ_dis = 8.390e-02 (bound: 2.3×10⁻⁵)
+[13:07:22] [WARNING]     → EXCLUDED by factor 3.6e+03×
+[13:07:22] [WARNING]     The v0.11 weak-field B ∝ φ² cannot close the gap even with exact lapse.
+[13:07:22] [PROCESS]     [TEP screened Poisson, NOT thin-shell: φ_scr/φ_TS = 0.54]
+[13:07:22] [PROCESS] 
   n=5 (minimal viable B ∝ φ⁵), EXACT lapse:
-[22:16:59] [PROCESS]     B₀_exact = 1.459e+08 eV⁻⁴ (vs linearized 1.207e+12)
-[22:16:59] [PROCESS]     B̄·φ̇²/A² = 0.99987916, I = 1-u = 1.21e-04 (near-critical)
-[22:16:59] [PROCESS]     B(φ_sun) = 8.558e-41 eV⁻⁴ (TEP screened)
-[22:16:59] [SUCCESS]     γ_dis = 4.897e-31 (bound: 2.3×10⁻⁵) → PASS
-[22:16:59] [SUCCESS]     Cassini margin: 4.7e+25× below bound
-[22:16:59] [SUCCESS]     δc/c (GW170817) = 8.56e-20 (bound: 3×10⁻¹⁵) → PASS
-[22:16:59] [SUCCESS]     Clock shift (Earth) = 5.19e-48 → PASS
-[22:16:59] [SUCCESS]     Lorentzian: N² > 0 at core, edge, background (I = 1.21e-04 > 0)
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
+[13:07:22] [PROCESS]     B₀_exact = 1.459e+08 eV⁻⁴ (vs linearized 1.207e+12)
+[13:07:22] [PROCESS]     B̄·φ̇²/A² = 0.99987916, I = 1-u = 1.21e-04 (near-critical)
+[13:07:22] [PROCESS]     B(φ_sun) = 8.558e-41 eV⁻⁴ (TEP screened)
+[13:07:22] [SUCCESS]     γ_dis = 4.897e-31 (bound: 2.3×10⁻⁵) → PASS
+[13:07:22] [SUCCESS]     Cassini margin: 4.7e+25× below bound
+[13:07:22] [SUCCESS]     δc/c (GW170817) = 8.56e-20 (bound: 3×10⁻¹⁵) → PASS
+[13:07:22] [SUCCESS]     Clock shift (Earth) = 5.19e-48 → PASS
+[13:07:22] [SUCCESS]     Lorentzian: N² > 0 at core, edge, background (I = 1.21e-04 > 0)
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
 --- 6. Sign Check ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   B(φ_core) > B(φ_edge)  [core has larger φ]
-[22:16:59] [PROCESS]   δ(dτ/dt)_dis = -B(φ)(∂₀φ)²/(2A) < 0  [clocks slow]
-[22:16:59] [PROCESS]   |δ(dτ/dt)_core| > |δ(dτ/dt)_edge|  [core more slowed]
-[22:16:59] [SUCCESS]   → edge clock FASTER → edge BLUESHIFTED → Δv < 0  ✓
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   B(φ_core) > B(φ_edge)  [core has larger φ]
+[13:07:22] [PROCESS]   δ(dτ/dt)_dis = -B(φ)(∂₀φ)²/(2A) < 0  [clocks slow]
+[13:07:22] [PROCESS]   |δ(dτ/dt)_core| > |δ(dτ/dt)_edge|  [core more slowed]
+[13:07:22] [SUCCESS]   → edge clock FASTER → edge BLUESHIFTED → Δv < 0  ✓
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
 --- 7. Three-Sightline Comparison (n=5, EXACT lapse) ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   TEP targets: fitted free-H displacements (NOT 81.6 km/s isotope shift)
-[22:16:59] [PROCESS]   Q1009: -78.9, PKS1937: -76.0, J1332: -118.0 km/s
-[22:16:59] [PROCESS]   The -81.6 km/s clustering is explained by velocity selection (Gate 6-I).
-[22:16:59] [INFO] 
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO]   (a) DIAGNOSTIC MODE: infer B0 per sightline from fitted dv_H
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   Sightline        z        dv_H (km/s)  B0_exact       I            Lor?  
-[22:16:59] [PROCESS]   ---------------- -------- ------------ -------------- ------------ ------
-[22:16:59] [SUCCESS]   Q1009+2956       2.504    78.9         1.459e+08      1.21e-04     YES   
-[22:16:59] [SUCCESS]   PKS1937-101      3.572    76.0         1.517e+07      1.03e-04     YES   
-[22:16:59] [SUCCESS]   J1332+0052       3.421    118.0        2.002e+07      6.82e-05     YES   
-[22:16:59] [INFO] 
-[22:16:59] [SUCCESS]   Each sightline admits a fitted Lorentzian solution: algebraic feasibility established.
-[22:16:59] [INFO] 
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO]   (b) TRANSFER MODE: freeze B0 from Q1009, transfer to other two
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   Frozen B0 = 1.459e+08 eV⁻⁴ (from Q1009 diagnostic)
-[22:16:59] [PROCESS]   NOTE: I = 1 - β(z)·B0 depends only on cosmological background,
-[22:16:59] [PROCESS]   NOT on halo environment. Signature change is intrinsic to z > 3.4.
-[22:16:59] [PROCESS]   Sightline        z        u=B̄φ̇²/A²     I=1-u        |Δv|_pred  dv_H     ratio    Lor?  
-[22:16:59] [PROCESS]   ---------------- -------- -------------- ------------ ---------- -------- -------- ------
-[22:16:59] [PROCESS]   Q1009+2956       2.504    0.99987916     1.21e-04     78.9       78.9     1.00     YES   
-[22:16:59] [PROCESS]   PKS1937-101      3.572    9.61173020     -8.61e+00    nan        76.0     nan      NO    
-[22:16:59] [PROCESS]   J1332+0052       3.421    7.28534271     -6.29e+00    nan        118.0    nan      NO    
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   Q1009: ratio = 1.00 (match by construction)
-[22:16:59] [WARNING]   PKS1937: Lorentzian = False (signature change)
-[22:16:59] [WARNING]   J1332: Lorentzian = False (signature change)
-[22:16:59] [WARNING]   A single power-law B0 calibrated at z=2.5 does not generalize to z > 3.4.
-[22:16:59] [PROCESS]   This is a constraint on B(phi), not a falsification of the mechanism.
-[22:16:59] [PROCESS]   I = 1 - beta(z)*B0 depends only on the cosmological background,
-[22:16:59] [PROCESS]   not on the halo environment. The signature change is intrinsic
-[22:16:59] [PROCESS]   to the background lapse at z > 3.4 with B0 from z=2.5.
-[22:16:59] [SUCCESS]   Diagnostic mode shows each sightline individually Lorentzian.
-[22:16:59] [PROCESS]   Resolution requires a more complex B(phi) than a pure power law,
-[22:16:59] [PROCESS]   or z-dependent screening. The disformal clock mechanism remains viable;
-[22:16:59] [PROCESS]   the constraint is on the microscopic form of B(phi).
-[22:16:59] [INFO] 
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   TEP targets: fitted free-H displacements (NOT 81.6 km/s isotope shift)
+[13:07:22] [PROCESS]   Q1009: -78.9, PKS1937: -76.0, J1332: -118.0 km/s
+[13:07:22] [PROCESS]   The -81.6 km/s clustering is explained by velocity selection (Gate 6-I).
+[13:07:22] [INFO] 
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO]   (a) DIAGNOSTIC MODE: infer B0 per sightline from fitted dv_H
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   Sightline        z        dv_H (km/s)  B0_exact       I            Lor?  
+[13:07:22] [PROCESS]   ---------------- -------- ------------ -------------- ------------ ------
+[13:07:22] [SUCCESS]   Q1009+2956       2.504    78.9         1.459e+08      1.21e-04     YES   
+[13:07:22] [SUCCESS]   PKS1937-101      3.572    76.0         1.517e+07      1.03e-04     YES   
+[13:07:22] [SUCCESS]   J1332+0052       3.421    118.0        2.002e+07      6.82e-05     YES   
+[13:07:22] [INFO] 
+[13:07:22] [SUCCESS]   Each sightline admits a fitted Lorentzian solution: algebraic feasibility established.
+[13:07:22] [INFO] 
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO]   (b) TRANSFER MODE: freeze B0 from Q1009, transfer to other two
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   Frozen B0 = 1.459e+08 eV⁻⁴ (from Q1009 diagnostic)
+[13:07:22] [PROCESS]   NOTE: I = 1 - β(z)·B0 depends only on cosmological background,
+[13:07:22] [PROCESS]   NOT on halo environment. Signature change is intrinsic to z > 3.4.
+[13:07:22] [PROCESS]   Sightline        z        u=B̄φ̇²/A²     I=1-u        |Δv|_pred  dv_H     ratio    Lor?  
+[13:07:22] [PROCESS]   ---------------- -------- -------------- ------------ ---------- -------- -------- ------
+[13:07:22] [PROCESS]   Q1009+2956       2.504    0.99987916     1.21e-04     78.9       78.9     1.00     YES   
+[13:07:22] [PROCESS]   PKS1937-101      3.572    9.61173020     -8.61e+00    nan        76.0     nan      NO    
+[13:07:22] [PROCESS]   J1332+0052       3.421    7.28534271     -6.29e+00    nan        118.0    nan      NO    
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   Q1009: ratio = 1.00 (match by construction)
+[13:07:22] [WARNING]   PKS1937: Lorentzian = False (signature change)
+[13:07:22] [WARNING]   J1332: Lorentzian = False (signature change)
+[13:07:22] [WARNING]   A single power-law B0 calibrated at z=2.5 does not generalize to z > 3.4.
+[13:07:22] [PROCESS]   This is a constraint on B(phi), not a falsification of the mechanism.
+[13:07:22] [PROCESS]   I = 1 - beta(z)*B0 depends only on the cosmological background,
+[13:07:22] [PROCESS]   not on the halo environment. The signature change is intrinsic
+[13:07:22] [PROCESS]   to the background lapse at z > 3.4 with B0 from z=2.5.
+[13:07:22] [SUCCESS]   Diagnostic mode shows each sightline individually Lorentzian.
+[13:07:22] [PROCESS]   Resolution requires a more complex B(phi) than a pure power law,
+[13:07:22] [PROCESS]   or z-dependent screening. The disformal clock mechanism remains viable;
+[13:07:22] [PROCESS]   the constraint is on the microscopic form of B(phi).
+[13:07:22] [INFO] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
 --- 8. Environmental Discrimination ---
-[22:16:59] [INFO] ================================================================================
-[22:16:59] [INFO] 
-[22:16:59] [PROCESS]   TEP screening is NOT thin-shell chameleon screening.
-[22:16:59] [PROCESS]   It is a continuous potential-depth modulation of the scalar
-[22:16:59] [PROCESS]   source, producing temporal shear — a continuous topological
-[22:16:59] [PROCESS]   temporal gradient. Effects are partially present in the Solar
-[22:16:59] [PROCESS]   System (GNSS, LLR) through the CONFORMAL sector:
-[22:16:59] [PROCESS]     α_eff = S×β_A = -9.91e-05
-[22:16:59] [PROCESS]     conformal clock shift ~ 4.20e-10
-[22:16:59] [PROCESS]   The DISFORMAL temporal term at the Sun is negligible:
-[22:16:59] [PROCESS]     B(φ_sun)×(∂₀φ)² = 1.94e-22
-[22:16:59] [PROCESS]   The DISFORMAL spatial term at the Sun is the Cassini constraint:
-[22:16:59] [PROCESS]     B(φ_sun)×(∂_rφ)² = 3.56e-07
-[22:16:59] [SUCCESS]   For n ≥ 5, the steeper B(φ) suppresses the spatial term
-[22:16:59] [SUCCESS]   sufficiently: γ_dis = 4.9e-31 << 2.3×10⁻⁵
-[22:16:59] [SUCCESS] 
+[13:07:22] [INFO] ================================================================================
+[13:07:22] [INFO] 
+[13:07:22] [PROCESS]   TEP screening is NOT thin-shell chameleon screening.
+[13:07:22] [PROCESS]   It is a continuous potential-depth modulation of the scalar
+[13:07:22] [PROCESS]   source, producing temporal shear — a continuous topological
+[13:07:22] [PROCESS]   temporal gradient. Effects are partially present in the Solar
+[13:07:22] [PROCESS]   System (GNSS, LLR) through the CONFORMAL sector:
+[13:07:22] [PROCESS]     α_eff = S×β_A = -9.91e-05
+[13:07:22] [PROCESS]     conformal clock shift ~ 4.20e-10
+[13:07:22] [PROCESS]   The DISFORMAL temporal term at the Sun is negligible:
+[13:07:22] [PROCESS]     B(φ_sun)×(∂₀φ)² = 1.94e-22
+[13:07:22] [PROCESS]   The DISFORMAL spatial term at the Sun is the Cassini constraint:
+[13:07:22] [PROCESS]     B(φ_sun)×(∂_rφ)² = 3.56e-07
+[13:07:22] [SUCCESS]   For n ≥ 5, the steeper B(φ) suppresses the spatial term
+[13:07:22] [SUCCESS]   sufficiently: γ_dis = 4.9e-31 << 2.3×10⁻⁵
+[13:07:22] [SUCCESS] 
 [COMPLETED] Results written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4b_disformal_clock.json
+[13:07:22] [SUCCESS]   [OK] 0.0s
+[13:07:22] [PROCESS] [RUN] step_09b_screening_plot: Gate 4B: Screening Function Plot

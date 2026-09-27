@@ -2,7 +2,7 @@
 **Matthew Lukin Smawfield**
 Version: v0.2 (Yogyakarta)
 First published: 5 June 2026
-DOI: 10.5281/zenodo.19454863
+DOI: 10.5281/zenodo.19454862
 
 ---
 
@@ -1738,7 +1738,7 @@ strengthen the screening mechanism established in this analysis.
 
 ## Data Availability
 
-Spacecraft trajectories are available through the JPL Horizons ephemeris service. Literature anomaly values are from Anderson et al. (2008) and companion publications. Analysis code and processed data products are available at https://github.com/matthewsmawfield/TEP-EFA with archived DOI at 10.5281/zenodo.19454863.
+Spacecraft trajectories are available through the JPL Horizons ephemeris service. Literature anomaly values are from Anderson et al. (2008) and companion publications. Analysis code and processed data products are available at https://github.com/matthewsmawfield/TEP-EFA with archived DOI at 10.5281/zenodo.19454862.
 
 ## Acknowledgments
 
@@ -2061,6 +2061,6 @@ To verify successful reproduction:
 
 ### Data Availability Statement
 
-Spacecraft trajectories are available through the NASA JPL Horizons ephemeris service. Literature anomaly values are from Anderson et al. (2008) and companion publications. Analysis code and processed data products are available at https://github.com/matthewsmawfield/TEP-EFA with archived DOI at 10.5281/zenodo.19454863.
+Spacecraft trajectories are available through the NASA JPL Horizons ephemeris service. Literature anomaly values are from Anderson et al. (2008) and companion publications. Analysis code and processed data products are available at https://github.com/matthewsmawfield/TEP-EFA with archived DOI at 10.5281/zenodo.19454862.
 
 Raw DSN tracking products may be obtained from the NASA Deep Space Network and the Planetary Data System following institutional access procedures; per-mission pointers appear under `data/raw/dsn_tracking/&lt;mission&gt;/DOWNLOAD_INSTRUCTIONS.txt`. The present manuscript release does not bundle perigee-matched Level-1 TRK archives: Steps 005–006 and 028–031 implement ingest and audit only, and Step 030 remains inconclusive until such products are added. Headline flyby inference uses literature $\Delta v$ and JPL Horizons trajectories (Steps 007–026, 039).

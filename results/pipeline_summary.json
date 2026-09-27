@@ -1,10 +1,10 @@
 {
   "pipeline_run": {
-    "timestamp": "2026-09-10T22:11:22.195460",
+    "timestamp": "2026-09-23T14:30:49.136457",
     "sightline": "Q1009+2956",
     "mode": "full",
-    "total_steps": 14,
-    "completed": 14,
+    "total_steps": 16,
+    "completed": 16,
     "failed": 0,
     "skipped": 0,
     "all_passed": true
@@ -23,6 +23,8 @@
       "step_09_disformal_transport",
       "step_04h_disformal_clock",
       "step_09b_screening_plot",
+      "step_08c_wavelength_systematics",
+      "step_10_covariant_transport",
       "secondary_analyses",
       "finalize_manuscript_numbers"
     ],
@@ -31,59 +33,67 @@
   },
   "step_timings": {
     "step_01_embedding": {
-      "elapsed": 0.4591391086578369,
+      "elapsed": 0.46371912956237793,
       "status": "OK"
     },
     "step_02_q1009": {
-      "elapsed": 92.61819791793823,
+      "elapsed": 91.02597713470459,
       "status": "OK"
     },
     "step_03_significance": {
-      "elapsed": 1589.2582371234894,
+      "elapsed": 1515.5387918949127,
       "status": "OK"
     },
     "step_04_prior": {
-      "elapsed": 0.39493894577026367,
+      "elapsed": 0.34755492210388184,
       "status": "OK"
     },
     "step_04b_amplitude": {
-      "elapsed": 0.0033462047576904297,
+      "elapsed": 0.0033998489379882812,
       "status": "OK"
     },
     "step_05_thermodynamics": {
-      "elapsed": 0.01682281494140625,
+      "elapsed": 0.018016815185546875,
       "status": "OK"
     },
     "step_06_helium": {
-      "elapsed": 0.5249178409576416,
+      "elapsed": 0.8536510467529297,
       "status": "OK"
     },
     "step_07_global_opacity": {
-      "elapsed": 0.0172426700592041,
+      "elapsed": 0.017332077026367188,
       "status": "OK"
     },
     "step_08_light_elements": {
-      "elapsed": 0.33497190475463867,
+      "elapsed": 0.315105676651001,
       "status": "OK"
     },
     "step_09_disformal_transport": {
-      "elapsed": 0.003473043441772461,
+      "elapsed": 0.0030629634857177734,
       "status": "OK"
     },
     "step_04h_disformal_clock": {
-      "elapsed": 0.00935506820678711,
+      "elapsed": 0.015190839767456055,
       "status": "OK"
     },
     "step_09b_screening_plot": {
-      "elapsed": 0.42018795013427734,
+      "elapsed": 0.47254180908203125,
+      "status": "OK"
+    },
+    "step_08c_wavelength_systematics": {
+      "elapsed": 0.015836000442504883,
+      "status": "OK"
+    },
+    "step_10_covariant_transport": {
+      "elapsed": 10.93530797958374,
       "status": "OK"
     },
     "secondary_analyses": {
-      "elapsed": 4477.503946781158,
+      "elapsed": 4994.658294916153,
       "status": "OK"
     },
     "finalize_manuscript_numbers": {
-      "elapsed": 0.465043306350708,
+      "elapsed": 0.13822412490844727,
       "status": "OK"
     }
   },
@@ -93,6 +103,28 @@
       "keys": [
         "checksums",
         "updated"
+      ]
+    },
+    "gate10_covariant_transport.json": {
+      "size_bytes": 23071,
+      "keys": [
+        "gate",
+        "title",
+        "status",
+        "theory",
+        "matter_metric",
+        "key_theorem",
+        "modules",
+        "geodesic_verification",
+        "backgrounds",
+        "fields_3d",
+        "predictive_closure_einstein_n5",
+        "predictive_closure_matter_n5",
+        "predictive_closure_negative_B0",
+        "predictive_closure_envelope",
+        "comparison_with_step04h",
+        "sightlines",
+        "conclusion"
       ]
     },
     "gate1_embedding.json": {
@@ -309,7 +341,7 @@
       ]
     },
     "gate4b_0_honest_transport.json": {
-      "size_bytes": 74487,
+      "size_bytes": 81354,
       "keys": [
         "gate",
         "title",
@@ -326,7 +358,8 @@
         "max_dv_screened_kms",
         "reaches_10_kms",
         "reaches_80_kms",
-        "cassini_pass_screened",
+        "cassini_pass_microscopic",
+        "cassini_pass_paper29_ansatz",
         "cassini_pass_unscreened",
         "any_cassini_pass",
         "conclusion"
@@ -348,7 +381,7 @@
       ]
     },
     "gate4b_closure.json": {
-      "size_bytes": 2281,
+      "size_bytes": 2387,
       "keys": [
         "gate4b_status",
         "screening_params",
@@ -359,7 +392,7 @@
       ]
     },
     "gate4b_disformal_clock.json": {
-      "size_bytes": 17092,
+      "size_bytes": 17101,
       "keys": [
         "gate",
         "title",
@@ -703,7 +736,7 @@
       "keys": "<list>"
     },
     "quick_gate3_significance.json": {
-      "size_bytes": 19146,
+      "size_bytes": 19163,
       "keys": [
         "sightline",
         "parent_window_mode",

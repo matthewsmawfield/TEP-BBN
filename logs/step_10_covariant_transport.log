@@ -1,0 +1,309 @@
+[23:39:16] [INFO] ================================================================================
+[23:39:16] [INFO] Script: step_10_covariant_transport
+[23:39:16] [INFO] Started: 2026-09-26T23:39:16.951538
+[23:39:16] [INFO] ================================================================================
+[23:39:16] [SUCCESS] === GATE 10: FULL COVARIANT TRANSPORT SOLVER ===
+[23:39:16] [PROCESS] ω = -u^μ k_μ evaluation (manuscript §3.3, predictive closure)
+[23:39:16] [INFO] 
+[23:39:16] [INFO] 
+[23:39:16] [INFO] ================================================================================
+[23:39:16] [INFO] --- 1. Theoretical Framework ---
+[23:39:16] [INFO] ================================================================================
+[23:39:16] [INFO] 
+[23:39:16] [PROCESS]   Matter metric: g̃_μν = A²(φ) g_μν + B(φ) ∇_μφ ∇_νφ
+[23:39:16] [PROCESS]   Static gauge: g_00=-1, g_ij=δ_ij, φ = φ̄(t) + δφ(x)
+[23:39:16] [PROCESS]   g̃_00 = -N² = -(A² - B(φ)(∂₀φ̄)²)    [lapse]
+[23:39:16] [PROCESS]   g̃_0i = B(φ)(∂₀φ̄)(∂_iδφ)             [cone-tilt]
+[23:39:16] [PROCESS]   g̃_ij = A²δ_ij + B(φ)(∂_iδφ)(∂_jδφ)  [spatial]
+[23:39:16] [INFO] 
+[23:39:16] [PROCESS]   KEY THEOREM: For static observer (u^i=0), quasi-static metric:
+[23:39:16] [PROCESS]     ω = -u^μ k_μ = -k_0 / N   [g̃_0i cancels exactly]
+[23:39:16] [PROCESS]     Δv_T/c = ln(N_core/N_edge)   [quasi-static limit; <0 = blueward edge]
+[23:39:16] [PROCESS]     + non-static correction from ∂₀φ̄ during crossing
+[23:39:16] [INFO] 
+[23:39:16] [INFO] 
+[23:39:16] [INFO] ================================================================================
+[23:39:16] [INFO] --- 2. Module A: TEP-Native Background φ̄(z) ---
+[23:39:16] [INFO] ================================================================================
+[23:39:16] [INFO] 
+[23:39:16] [PROCESS]   v0.11: 1+z = exp(|β_A| φ̄/M_Pl) → φ̄/M_Pl = ln(1+z)/|β_A|
+[23:39:16] [PROCESS]   ∂₀φ̄ = M_Pl × H_T(z)  [H_T = -d ln A/dt = H_LCDM for A = 1/(1+z)]
+[23:39:16] [PROCESS]   M_Pl = 2.4363e+27 eV (reduced)
+[23:39:16] [INFO] 
+[23:39:16] [PROCESS]   Q1009+2956 (z=2.5042):
+[23:39:16] [PROCESS]     φ̄/M_Pl = 1.2540, A = 0.2854
+[23:39:16] [PROCESS]     H_T(z) = 258.2 km/s/Mpc = 5.508e-33 eV
+[23:39:16] [PROCESS]     ∂₀φ̄ = M_Pl×H_T = 1.3418e-05 eV², (∂₀φ̄)² = 1.8005e-10 eV⁴
+[23:39:16] [PROCESS]     q(z) = 0.4228 (deceleration parameter)
+[23:39:16] [PROCESS]   PKS1937-101 (z=3.5720):
+[23:39:16] [PROCESS]     φ̄/M_Pl = 1.5200, A = 0.2187
+[23:39:16] [PROCESS]     H_T(z) = 379.4 km/s/Mpc = 8.091e-33 eV
+[23:39:16] [PROCESS]     ∂₀φ̄ = M_Pl×H_T = 1.9713e-05 eV², (∂₀φ̄)² = 3.8859e-10 eV⁴
+[23:39:16] [PROCESS]     q(z) = 0.4643 (deceleration parameter)
+[23:39:16] [PROCESS]   J1332+0052 (z=3.4210):
+[23:39:16] [PROCESS]     φ̄/M_Pl = 1.4864, A = 0.2262
+[23:39:16] [PROCESS]     H_T(z) = 361.2 km/s/Mpc = 7.703e-33 eV
+[23:39:16] [PROCESS]     ∂₀φ̄ = M_Pl×H_T = 1.8768e-05 eV², (∂₀φ̄)² = 3.5224e-10 eV⁴
+[23:39:16] [PROCESS]     q(z) = 0.4606 (deceleration parameter)
+[23:39:16] [INFO] 
+[23:39:16] [INFO] 
+[23:39:16] [INFO] ================================================================================
+[23:39:16] [INFO] --- 3. Module B: 3D Inhomogeneous Absorber Field δφ(r) ---
+[23:39:16] [INFO] ================================================================================
+[23:39:16] [INFO] 
+[23:39:16] [PROCESS]   Screened Poisson: ∇²δφ = (2β_A/M_Pl) × S_Σ(|Φ|/c²) × ∇²Φ_N
+[23:39:16] [PROCESS]   β_A = -1 (signed source) → δφ > 0 inside the absorber (Rule 4)
+[23:39:16] [PROCESS]   Cored profile: ρ(r) = ρ₀(1+(r/r₀)²)^(-3/2)
+[23:39:16] [PROCESS]   NOT thin-shell: φ_scr ≠ S × φ_unscreened
+[23:39:16] [INFO] 
+[23:39:17] [PROCESS]   Q1009+2956:
+[23:39:17] [PROCESS]     R = 30 kpc, M_halo = 1e+10 M☉
+[23:39:17] [PROCESS]     Δ(δφ/M_Pl) full 3D  = 1.2639e-08
+[23:39:17] [PROCESS]     Δ(δφ/M_Pl) step_04h = 1.5953e-08
+[23:39:17] [PROCESS]     Ratio (3D/2-point)  = 0.7923
+[23:39:17] [PROCESS]     δφ_core/M_Pl = 1.8140e-08, δφ_edge/M_Pl = 5.5014e-09
+[23:39:17] [PROCESS]   PKS1937-101:
+[23:39:17] [PROCESS]     R = 30 kpc, M_halo = 1e+10 M☉
+[23:39:17] [PROCESS]     Δ(δφ/M_Pl) full 3D  = 2.4074e-08
+[23:39:17] [PROCESS]     Δ(δφ/M_Pl) step_04h = 1.5953e-08
+[23:39:17] [PROCESS]     Ratio (3D/2-point)  = 1.5091
+[23:39:17] [PROCESS]     δφ_core/M_Pl = 3.4555e-08, δφ_edge/M_Pl = 1.0481e-08
+[23:39:18] [PROCESS]   J1332+0052:
+[23:39:18] [PROCESS]     R = 30 kpc, M_halo = 1e+10 M☉
+[23:39:18] [PROCESS]     Δ(δφ/M_Pl) full 3D  = 1.0164e-07
+[23:39:18] [PROCESS]     Δ(δφ/M_Pl) step_04h = 1.5953e-08
+[23:39:18] [PROCESS]     Ratio (3D/2-point)  = 6.3712
+[23:39:18] [PROCESS]     δφ_core/M_Pl = 1.4836e-07, δφ_edge/M_Pl = 4.6723e-08
+[23:39:18] [INFO] 
+[23:39:18] [INFO] 
+[23:39:18] [INFO] ================================================================================
+[23:39:18] [INFO] --- 4. Module C: Geodesic Verification (k_0 conservation) ---
+[23:39:18] [INFO] ================================================================================
+[23:39:18] [INFO] 
+[23:39:18] [PROCESS]   Hamiltonian: H = (1/2)(g̃^00 k_0² + 2g̃^03 k_0 k_z + g̃^33 k_z²) = 0
+[23:39:18] [PROCESS]   Quasi-static: k_0 conserved (Killing vector ∂/∂t)
+[23:39:18] [PROCESS]   Non-static: dk_0/dλ = -(1/2)(∂_0 g̃^μν) k_μ k_ν
+[23:39:18] [INFO] 
+[23:39:18] [PROCESS]   Verification at Q1009 (B₀=1.44e+08, n=5, Einstein frame):
+[23:39:18] [PROCESS]     Lorentzian: True
+[23:39:18] [PROCESS]     k_0 conservation: 0.00e+00 (quasi-static check)
+[23:39:18] [PROCESS]     N_core = 0.0285370300068327
+[23:39:18] [PROCESS]     N_edge = 0.028537137229178288
+[23:39:18] [PROCESS]     Δv (quasi-static) = -1.13 km/s
+[23:39:18] [PROCESS]     Non-static fractional = 1.03e-04
+[23:39:18] [PROCESS]     Non-static correction = -0.0001 km/s
+[23:39:18] [INFO] 
+[23:39:18] [INFO] 
+[23:39:18] [INFO] ================================================================================
+[23:39:18] [INFO] --- 5. Module D: Cone-Tilt Cancellation ---
+[23:39:18] [INFO] ================================================================================
+[23:39:18] [INFO] 
+[23:39:18] [PROCESS]   For static observer (u^i = 0):
+[23:39:18] [PROCESS]     ω = N k^0 - (g̃_0i/N) k^i = -k_0/N
+[23:39:18] [PROCESS]   The g̃_0i terms cancel EXACTLY:
+[23:39:18] [PROCESS]     ω = N(g̃_0i k^i - k_0)/N² - (g̃_0i/N)k^i = -k_0/N
+[23:39:18] [PROCESS]   Cone-tilt affects the PATH (null cone geometry) but NOT the
+[23:39:18] [PROCESS]   frequency measured by a static observer.
+[23:39:18] [SUCCESS]   VERIFIED: ω = -k_0/N exactly, independent of g̃_0i.
+[23:39:18] [INFO] 
+[23:39:18] [INFO] 
+[23:39:18] [INFO] ================================================================================
+[23:39:18] [INFO] --- 6. Predictive Closure: Einstein Frame, n=5 ---
+[23:39:18] [INFO] ================================================================================
+[23:39:18] [INFO] 
+[23:39:18] [PROCESS]   B(φ) = B₀(φ/M_Pl)^5, frozen from Cassini/GW170817 ONLY
+[23:39:18] [PROCESS]   Predict Δv_T for 3 sightlines WITHOUT using observed velocities
+[23:39:18] [INFO] 
+[23:39:18] [PROCESS]   Per-sightline Lorentzian boundary B₀_max = A²/(φ̄^n × φ̇₀²):
+[23:39:18] [PROCESS]     Q1009+2956       z=2.5042  B₀_max = 1.4588e+08 eV⁻⁴
+[23:39:18] [PROCESS]     PKS1937-101      z=3.5720  B₀_max = 1.5176e+07 eV⁻⁴
+[23:39:18] [PROCESS]     J1332+0052       z=3.4210  B₀_max = 2.0021e+07 eV⁻⁴
+[23:39:18] [PROCESS]   → Simultaneous Lorentzian bound (min over sightlines): B₀ < 1.5176e+07
+[23:39:18] [INFO] 
+[23:39:19] [PROCESS]   Best single B₀ = 1.5024e+07 eV⁻⁴
+[23:39:19] [PROCESS]   χ² = 2.9459
+[23:39:19] [PROCESS]   Cassini: PASS (γ_dis = 5.08e-32)
+[23:39:19] [PROCESS]   GW170817: PASS
+[23:39:19] [INFO] 
+[23:39:19] [PROCESS]   Sightline        z        Δv_pred      Δv_obs     ratio    Lor?  
+[23:39:19] [PROCESS]   ---------------- -------- ------------ ---------- -------- ------
+[23:39:19] [PROCESS]   Q1009+2956       2.504    -0.01        -78.9      0.00     YES   
+[23:39:19] [PROCESS]   PKS1937-101      3.572    -1.90        -76.0      0.02     YES   
+[23:39:19] [PROCESS]   J1332+0052       3.421    -0.28        -118.0     0.00     YES   
+[23:39:19] [INFO] 
+[23:39:19] [INFO] 
+[23:39:19] [INFO] ================================================================================
+[23:39:19] [INFO] --- 7. Predictive Closure: Matter Frame, n=5 ---
+[23:39:19] [INFO] ================================================================================
+[23:39:19] [INFO] 
+[23:39:19] [PROCESS]   N² = A² / (1 + B(φ)·M_Pl²·H²)  [always Lorentzian]
+[23:39:19] [PROCESS]   No near-critical branch exists in the matter frame.
+[23:39:19] [INFO] 
+[23:39:19] [PROCESS]   Best matter-frame B₀ = 1.9792e+19 eV⁻⁴
+[23:39:19] [PROCESS]   χ² = 2.9978
+[23:39:19] [PROCESS]   Sightline        Δv_pred      Δv_obs     ratio   
+[23:39:19] [PROCESS]   Q1009+2956       -0.0113      -78.9      0.000144
+[23:39:19] [PROCESS]   PKS1937-101      -0.0191      -76.0      0.000251
+[23:39:19] [PROCESS]   J1332+0052       -0.0817      -118.0     0.000693
+[23:39:19] [WARNING]   Maximum achievable |Δv| in matter frame: -0.0038 km/s
+[23:39:19] [WARNING]   Matter frame CANNOT reach observed velocities (~80 km/s).
+[23:39:19] [INFO] 
+[23:39:19] [INFO] 
+[23:39:19] [INFO] ================================================================================
+[23:39:19] [INFO] --- 7b. Negative B₀ Scan (B < 0, Einstein frame) ---
+[23:39:19] [INFO] ================================================================================
+[23:39:19] [INFO] 
+[23:39:19] [PROCESS]   Corrected convention: Δv_T = c·ln(N_core/N_edge) < 0 = blueward
+[23:39:19] [PROCESS]   B < 0: N² = A² + |B|φ̇² > A² always Lorentzian → no boundary,
+[23:39:19] [PROCESS]          no amplification: |Δv| bounded by ~Δδφ (conformal scale).
+[23:39:19] [PROCESS]   B < 0 is also the null-cone-excluded branch (Paper 0 §4).
+[23:39:19] [INFO] 
+[23:39:19] [WARNING]   Maximum achievable |Δv| with B < 0: 0.051255 km/s
+[23:39:19] [WARNING]   B < 0 cannot amplify: |Δv| stays at conformal scale (~0.05 km/s).
+[23:39:19] [PROCESS]   Near-critical amplification (B > 0, N² → 0) is the only path to ~80 km/s.
+[23:39:19] [INFO] 
+[23:39:19] [INFO] 
+[23:39:19] [INFO] ================================================================================
+[23:39:19] [INFO] --- 7c. Paper-0/28 Envelope B(φ) Scan ---
+[23:39:19] [INFO] ================================================================================
+[23:39:19] [INFO] 
+[23:39:19] [PROCESS]   B(φ) = B₀ φ̃²/(1+φ̃²) exp(-φ̃⁴/2σ_B⁴),  σ_B scanned
+[23:39:19] [PROCESS]   Corrected field branch: δφ_core > δφ_edge > 0.
+[23:39:19] [PROCESS]   Blueward sign requires u(φ) = Bφ̇²/A² to rise toward the
+[23:39:19] [PROCESS]   core: n_eff = dlnB/dlnφ > -2φ̄ at φ = φ̄.
+[23:39:19] [INFO] 
+[23:39:21] [PROCESS]   σ_B=1.00: boundary spread=1.05, inverse B₀: Q1009+2956=None  PKS1937-101=None  J1332+0052=None
+[23:39:21] [PROCESS]       scan χ²=2.999 at B₀=0.000e+00; Δv_pred: Q1009+2956=-0.0  PKS1937-101=-0.0  J1332+0052=-0.0
+[23:39:22] [PROCESS]   σ_B=1.25: boundary spread=2.33, inverse B₀: Q1009+2956=1.228e+09  PKS1937-101=None  J1332+0052=None
+[23:39:22] [PROCESS]       scan χ²=2.999 at B₀=0.000e+00; Δv_pred: Q1009+2956=-0.0  PKS1937-101=-0.0  J1332+0052=-0.0
+[23:39:23] [PROCESS]   σ_B=1.50: boundary spread=3.16, inverse B₀: Q1009+2956=9.446e+08  PKS1937-101=2.988e+08  J1332+0052=3.416e+08
+[23:39:23] [PROCESS]       scan χ²=2.988 at B₀=2.958e+08; Δv_pred: Q1009+2956=-0.0  PKS1937-101=-0.4  J1332+0052=-0.1
+[23:39:25] [PROCESS]   σ_B=1.75: boundary spread=3.60, inverse B₀: Q1009+2956=8.441e+08  PKS1937-101=2.344e+08  J1332+0052=2.736e+08
+[23:39:25] [PROCESS]       scan χ²=2.981 at B₀=2.321e+08; Δv_pred: Q1009+2956=-0.0  PKS1937-101=-0.6  J1332+0052=-0.2
+[23:39:26] [PROCESS]   σ_B=2.00: boundary spread=3.84, inverse B₀: Q1009+2956=7.993e+08  PKS1937-101=2.084e+08  J1332+0052=2.457e+08
+[23:39:26] [PROCESS]       scan χ²=2.978 at B₀=2.063e+08; Δv_pred: Q1009+2956=-0.0  PKS1937-101=-0.7  J1332+0052=-0.2
+[23:39:27] [PROCESS]   σ_B=2.50: boundary spread=4.04, inverse B₀: Q1009+2956=7.637e+08  PKS1937-101=1.889e+08  J1332+0052=2.245e+08
+[23:39:27] [PROCESS]       scan χ²=2.976 at B₀=1.870e+08; Δv_pred: Q1009+2956=-0.0  PKS1937-101=-0.8  J1332+0052=-0.2
+[23:39:29] [PROCESS]   σ_B=3.00: boundary spread=4.12, inverse B₀: Q1009+2956=7.513e+08  PKS1937-101=1.823e+08  J1332+0052=2.174e+08
+[23:39:29] [PROCESS]       scan χ²=2.975 at B₀=1.805e+08; Δv_pred: Q1009+2956=-0.0  PKS1937-101=-0.8  J1332+0052=-0.2
+[23:39:29] [INFO] 
+[23:39:29] [PROCESS]   Criticality obstruction diagnostic:
+[23:39:29] [PROCESS]     Closure requires B(φ̄) ∝ A²/φ̇² across sightlines:
+[23:39:29] [PROCESS]     Q1009+2956       φ̄=1.254: n_eff req=-4.85, sign bound n_eff>-2.51
+[23:39:29] [PROCESS]     PKS1937-101      φ̄=1.520: n_eff req=-4.93, sign bound n_eff>-3.04
+[23:39:29] [PROCESS]     J1332+0052       φ̄=1.486: n_eff req=-4.92, sign bound n_eff>-2.97
+[23:39:29] [WARNING]     Requirements disjoint under φ̇ = M_Pl·H_LCDM:
+[23:39:29] [WARNING]     no σ_B satisfies both → converts into constraint on
+[23:39:29] [WARNING]     the TEP temporal-rate function H_T(z) (issue 0-1).
+[23:39:29] [INFO] 
+[23:39:29] [INFO] 
+[23:39:29] [INFO] ================================================================================
+[23:39:29] [INFO] --- 7d. TEP-Native Rate Evaluation ---
+[23:39:29] [INFO] ================================================================================
+[23:39:29] [INFO] 
+[23:39:29] [PROCESS]   s(z) = d ln H_T²/d ln(1+z); closure+slope-sign compatible iff s<0
+[23:39:29] [PROCESS]   rate                   s(Q1009)   s(PKS1937)  s(J1332)   verdict
+[23:39:29] [WARNING]   lcdm                   +2.846     +2.929      +2.921     s>0: disjoint
+[23:39:29] [WARNING]   closed_static          +0.156     +0.116      +0.120     s>0: disjoint
+[23:39:29] [WARNING]   stationary             -0.000     -0.000      -0.000     s=0: marginal
+[23:39:29] [SUCCESS]   descent_k4             -0.533     -0.467      -0.475     s<0: compatible
+[23:39:29] [SUCCESS]   descent_k9             -0.720     -0.663      -0.671     s<0: compatible
+[23:39:29] [SUCCESS]   descent_pure           -1.000     -1.000      -1.000     s<0: compatible
+[23:39:29] [INFO] 
+[23:39:29] [PROCESS]   Inverse-fit B₀ dispersion per (rate model, B form):
+[23:39:29] [PROCESS]   lcdm           powerlaw_n5      B₀: 1.459e+08  1.517e+07  2.001e+07  disp=9.6139  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   lcdm           envelope_s1.31   B₀: 1.126e+09  4.365e+08  4.832e+08  disp=2.5790  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   lcdm           envelope_s1.5    B₀: 9.446e+08  2.988e+08  3.416e+08  disp=3.1610  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   lcdm           envelope_s2.0    B₀: 7.993e+08  2.084e+08  2.457e+08  disp=3.8356  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   lcdm           descent_lam1.0   B₀: 1.585e+09  5.628e+08  6.421e+08  disp=2.8160  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   lcdm           descent_lam1.5   B₀: 2.967e+09  1.204e+09  1.350e+09  disp=2.4653  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   closed_static  powerlaw_n5      B₀: 1.208e+09  2.617e+08  3.141e+08  disp=4.6171  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   closed_static  envelope_s1.31   B₀: 9.327e+09  7.530e+09  7.586e+09  disp=1.2386  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   closed_static  envelope_s1.5    B₀: 7.825e+09  5.155e+09  5.363e+09  disp=1.5181  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   closed_static  envelope_s2.0    B₀: 6.622e+09  3.595e+09  3.857e+09  disp=1.8421  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   closed_static  descent_lam1.0   B₀: 1.313e+10  9.709e+09  1.008e+10  disp=1.3524  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   closed_static  descent_lam1.5   B₀: 2.458e+10  2.076e+10  2.119e+10  disp=1.1840  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   stationary     powerlaw_n5      B₀: 1.985e+09  4.456e+08  5.327e+08  disp=4.4546  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   stationary     envelope_s1.31   B₀: 1.532e+10  1.282e+10  1.287e+10  disp=1.1950  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   stationary     envelope_s1.5    B₀: 1.285e+10  8.777e+09  9.096e+09  disp=1.4646  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   stationary     envelope_s2.0    B₀: 1.088e+10  6.121e+09  6.541e+09  disp=1.7772  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   stationary     descent_lam1.0   B₀: 2.157e+10  1.653e+10  1.709e+10  disp=1.3048  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   stationary     descent_lam1.5   B₀: 4.038e+10  3.535e+10  3.595e+10  disp=1.1423  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   descent_k4     powerlaw_n5      B₀: 4.635e+09  1.188e+09  1.398e+09  disp=3.9000  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   descent_k4     envelope_s1.31   B₀: 3.577e+10  3.419e+10  3.377e+10  disp=1.0593  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   descent_k4     envelope_s1.5    B₀: 3.001e+10  2.341e+10  2.388e+10  disp=1.2823  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   descent_k4     envelope_s2.0    B₀: 2.540e+10  1.632e+10  1.717e+10  disp=1.5560  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   descent_k4     descent_lam1.0   B₀: 5.036e+10  4.409e+10  4.487e+10  disp=1.1423  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   descent_k4     descent_lam1.5   B₀: 9.427e+10  9.427e+10  9.436e+10  disp=1.0009  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   descent_k9     powerlaw_n5      B₀: 5.563e+09  1.501e+09  1.755e+09  disp=3.7058  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   descent_k9     envelope_s1.31   B₀: 4.294e+10  4.319e+10  4.238e+10  disp=1.0192  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   descent_k9     envelope_s1.5    B₀: 3.602e+10  2.957e+10  2.996e+10  disp=1.2184  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   descent_k9     envelope_s2.0    B₀: 3.048e+10  2.062e+10  2.155e+10  disp=1.4785  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   descent_k9     descent_lam1.0   B₀: 6.045e+10  5.569e+10  5.631e+10  disp=1.0854  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   descent_k9     descent_lam1.5   B₀: 1.132e+11  1.191e+11  1.184e+11  disp=1.0523  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   descent_pure   powerlaw_n5      B₀: 6.956e+09  2.037e+09  2.355e+09  disp=3.4142  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   descent_pure   envelope_s1.31   B₀: 5.369e+10  5.862e+10  5.688e+10  disp=1.0918  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   descent_pure   envelope_s1.5    B₀: 4.504e+10  4.013e+10  4.021e+10  disp=1.1226  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   descent_pure   envelope_s2.0    B₀: 3.812e+10  2.798e+10  2.892e+10  disp=1.3621  Cassini=False  GW17=True
+[23:39:29] [PROCESS]   descent_pure   descent_lam1.0   B₀: 7.558e+10  7.558e+10  7.557e+10  disp=1.0001  Cassini=True  GW17=True
+[23:39:29] [PROCESS]   descent_pure   descent_lam1.5   B₀: 1.415e+11  1.616e+11  1.589e+11  disp=1.1422  Cassini=True  GW17=True
+[23:39:29] [INFO] 
+[23:39:29] [PROCESS]   Joint single-B₀ closure, descent κ→∞ + descent-tracking B = B₀φ̃⁴/(φ_c⁴+φ̃⁴)e^{−λφ̃}, λ=1, φ_c=0.1:
+[23:39:29] [PROCESS]     Q1009+2956       Δv_pred=-23.45  obs=-78.9  resid=+55.45
+[23:39:29] [PROCESS]     PKS1937-101      Δv_pred=-61.08  obs=-76.0  resid=+14.92
+[23:39:29] [PROCESS]     J1332+0052       Δv_pred=-250.78  obs=-118.0  resid=-132.78
+[23:39:29] [PROCESS]     common B₀ (geometric mean) = 7.557932e+10   χ² = 1.7986e+00
+[23:39:29] [PROCESS]     inverse-fit dispersion = 1.000125 (criticality-scatter floor ~1.0001); Cassini γ_dis=1.13e-14 (bound 2.3e-5); GW170817 δc/c=0.00e+00 (bound 3e-15)
+[23:39:29] [INFO] 
+[23:39:29] [INFO] 
+[23:39:29] [INFO] ================================================================================
+[23:39:29] [INFO] --- 8. Comparison with Reduced Closure (step_04h) ---
+[23:39:29] [INFO] ================================================================================
+[23:39:29] [INFO] 
+[23:39:29] [PROCESS]   Quantity                            Reduced (step_04h)   Full (step_10)      
+[23:39:29] [PROCESS]   ----------------------------------- -------------------- --------------------
+[23:39:29] [PROCESS]   Δ(δφ/M_Pl) Q1009+2956           1.5953e-08           1.2639e-08          
+[23:39:29] [PROCESS]   Δ(δφ/M_Pl) PKS1937-101          1.5953e-08           2.4074e-08          
+[23:39:29] [PROCESS]   Δ(δφ/M_Pl) J1332+0052           1.5953e-08           1.0164e-07          
+[23:39:29] [PROCESS]   Δv Q1009 (n=5, B₀=1.46e+08)     -78.90               -93.92261890690338  
+[23:39:29] [INFO] 
+[23:39:29] [INFO] 
+[23:39:29] [INFO] ================================================================================
+[23:39:29] [INFO] --- 8b. Sign Convention Analysis: step_04h vs step_10 ---
+[23:39:29] [INFO] ================================================================================
+[23:39:29] [INFO] 
+[23:39:29] [PROCESS]   Physical derivation (corrected branch, Rule 4):
+[23:39:29] [PROCESS]     δφ_core > δφ_edge > 0 in the absorber (signed source, β_A = -1)
+[23:39:29] [PROCESS]     Physical branch: N_core < N_edge (slower clock deeper in the well)
+[23:39:29] [PROCESS]     Δv_T = c × ln(N_core/N_edge) < 0 = blueward edge feature
+[23:39:29] [PROCESS]     relative to the deep core anchor — matches fitted displacements
+[23:39:29] [PROCESS]     (-78.9, -76.0, -118.0 km/s).
+[23:39:29] [INFO] 
+[23:39:29] [WARNING]   step_10 bugs FIXED:
+[23:39:29] [PROCESS]     1. Scalar source used |β_A| → δφ < 0 (anti-TEP branch).
+[23:39:29] [PROCESS]        Fixed: signed β_A source → δφ > 0 in wells (Rule 4).
+[23:39:29] [PROCESS]     2. Targets used |Δv_obs| while fitted values are negative.
+[23:39:29] [PROCESS]        Fixed: signed targets -78.9/-76.0/-118.0 km/s.
+[23:39:29] [PROCESS]     3. step_04h exact-lapse block carried the anti-branch
+[23:39:29] [PROCESS]        (φ_core < φ_edge); restored to the physical branch.
+[23:39:29] [INFO] 
+[23:39:29] [INFO] 
+[23:39:29] [INFO] ================================================================================
+[23:39:29] [INFO] --- 9. Gate 10 Status ---
+[23:39:29] [INFO] ================================================================================
+[23:39:29] [INFO] 
+[23:39:29] [SUCCESS]   Covariant evaluation:     COMPLETED
+[23:39:29] [SUCCESS]     ω = -k_0/N verified (cone-tilt cancels for static observer)
+[23:39:29] [PROCESS]     k_0 conservation: 0.00e+00 (quasi-static)
+[23:39:29] [PROCESS]     Non-static correction: 1.03e-04 (fractional)
+[23:39:29] [SUCCESS]   3D field:                  COMPLETED
+[23:39:29] [PROCESS]     Full radial profile δφ(r) replaces 2-point approximation
+[23:39:29] [PROCESS]   Predictive closure:
+[23:39:29] [WARNING]     Einstein n=5: single B₀ does NOT fit all 3 (χ²=2.95)
+[23:39:29] [WARNING]     Matter frame: cannot reach observed velocities
+[23:39:29] [WARNING]     Envelope (σ_B=3.0): χ²=2.97 — no σ_B closes all 3 sightlines under H_T = H_LCDM
+[23:39:29] [SUCCESS]   TEP-native rate closure: descent law (s<0) + descent-tracking B(φ) → inverse-B₀ dispersion 1.0001, Cassini pass=True, GW17 pass=True
+[23:39:29] [PROCESS]   The -81.6 km/s clustering is explained by velocity selection (Gate 6-I).
+[23:39:29] [PROCESS]   Signed TEP targets: -78.9, -76.0, -118.0 km/s (blueward edge).
+[23:39:29] [INFO] 
+[23:39:29] [SUCCESS] [COMPLETED] Results: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate10_covariant_transport.json

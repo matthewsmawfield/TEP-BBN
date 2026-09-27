@@ -17,7 +17,7 @@
     "formula": "S_\u03a3(|\u03a6|/c\u00b2) = 1/(1 + (|\u03a6|/c\u00b2/\u03a6_half)^n)",
     "boundary_conditions": [
       "Absorber: |\u03a6|/c\u00b2=1e-8 \u2192 S_\u03a3>0.999 (unscreened)",
-      "Solar: |\u03a6|/c\u00b2=2.12e-6 \u2192 S_\u03a3\u22481e-4 (Cassini: |\u03b2_eff|<3.4e-3)",
+      "Solar: |\u03a6|/c\u00b2=2.12e-6 \u2192 S_\u03a3\u22481e-4 (ansatz value; canonical Cassini bound |\u03b2_eff|<5.75e-6, satisfied by the microscopic Jakarta solution S_\u03a3\u227210\u207b\u2076)",
       "Galactic: |\u03a6|/c\u00b2=5.38e-7 \u2192 S_\u03a3\u22480.013 (corpus value)"
     ],
     "free_predictions": [

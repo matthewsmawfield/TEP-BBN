@@ -14,7 +14,7 @@
         GitHub Repository: <a href="https://github.com/matthewsmawfield/TEP-BBN">github.com/matthewsmawfield/TEP-BBN</a>
     </p>
     <p>
-        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 15 analysis steps across 4 phases: core gates (1–8), Gate 8 calibration (step\_08b, true-D injection Monte Carlo), Gate 8 wavelength-systematics sensitivity (step\_08c), disformal transport, secondary robustness analyses, and manuscript finalization.
+        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 18 analysis steps across 4 phases: core gates (1–8), Gate 8 calibration (step\_08b, true-D injection Monte Carlo), Gate 8 wavelength-systematics sensitivity (step\_08c), disformal transport, the steady-state and ionization-equilibrium ledgers (step\_11, step\_12), secondary robustness analyses, and manuscript finalization.
         All steps are orchestrated by <code>scripts/run_pipeline.py</code> with comprehensive per-step logging, SHA-256 checksum manifest generation, and a pipeline summary ledger.
     </p>
     <p>
@@ -32,7 +32,7 @@ TEP-BBN/
 │   ├── literature_components/     # Published VPFIT model files and component tables
 │   └── processed/                 # Pipeline-ready union manifests
 ├── scripts/
-│   ├── steps/                     # 15 pipeline steps (01-09, 08b, 08c, 09b, secondary, finalize)
+│   ├── steps/                     # pipeline steps (01-12 + lettered substeps, secondary, finalize)
 │   ├── lib/                       # Physical RT engine, Voigt fitters, model parsers
 │   ├── utils/                     # Logging, isotopic shift, shear model utilities
 │   └── run_pipeline.py            # Master orchestration script (4-phase pipeline)
@@ -142,7 +142,7 @@ TEP-BBN/
 
     <h3>Pipeline Architecture</h3>
     <p>
-        The analysis pipeline comprises 4 phases and 15 steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, opacity boundary analysis, Gate 8 true-D injection calibration, wavelength-systematics sensitivity, disformal transport calibration, secondary robustness checks, and manuscript number finalization.
+        The analysis pipeline comprises 4 phases and 18 steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, opacity boundary analysis, Gate 8 true-D injection calibration, wavelength-systematics sensitivity, disformal transport calibration, the steady-state timescale/thermalization ledger (Gate 11), the VMO ionization-equilibrium budget (Gate 12), secondary robustness checks, and manuscript number finalization.
         Each step is a standalone Python script in <code>scripts/steps/</code> that produces serialized JSON outputs and
         detailed logs with SHA-256 checksum verification.
     </p>
@@ -392,9 +392,9 @@ python scripts/run_pipeline.py --n-sims 500
         </tr>
     </table>
 
-    <h4>Version Changelog (v0.3 → v0.4)</h4>
+    <h4>Version Changelog (v0.3 → v0.5)</h4>
     <p>
-        The following changes were applied between v0.3 (Dubai) and v0.4 (Dubai):
+        The following changes were applied between v0.3 (Dubai) and v0.5 (Dubai):
     </p>
     <table class="data-table" style="font-size: 0.9em;">
         <thead>
@@ -418,7 +418,7 @@ python scripts/run_pipeline.py --n-sims 500
             </tr>
             <tr>
                 <td>Envelope $B(\phi)$ probe</td>
-                <td>A saturating non-power-law envelope $B(\phi) = B_0\,\varphi^2/(1+(\varphi/\varphi_c)^2)$ with $\varphi \equiv \phi/M_{\rm Pl}$ and $\varphi_c \equiv \phi_c/M_{\rm Pl}$ is scanned over $\varphi_c \in [10^{-2}, 10]$ (step\_04h) as a candidate field dependence that behaves as $\varphi^2$ at small $\varphi$ (Cassini) while saturating at large $\varphi$ (cosmological). No viable solution satisfies both the Cassini bound and cross-redshift transfer ($\mathcal{I} > 0$ at all three sightlines) in the scanned range; the saturating form alone is insufficient. A "Limit of the reduced Gate-4B closure" paragraph is added clarifying that the failed power-law transfer constrains the specific reduced construction tested here, not the full TEP matter-frame transport problem, whose covariant $\omega = -u^\mu k_\mu$ evaluation remains open.</td>
+                <td>A saturating non-power-law envelope $B(\phi) = B_0\,\varphi^2/(1+(\varphi/\varphi_c)^2)$ with $\varphi \equiv \phi/M_{\rm Pl}$ and $\varphi_c \equiv \phi_c/M_{\rm Pl}$ is scanned over $\varphi_c \in [10^{-2}, 10]$ (step\_04h) as a candidate field dependence that behaves as $\varphi^2$ at small $\varphi$ (Cassini) while saturating at large $\varphi$ (cosmological). No viable solution satisfies both the Cassini bound and cross-redshift transfer ($\mathcal{I} > 0$ at all three sightlines) in the scanned range; the saturating form alone is insufficient. A "Limit of the reduced Gate-4B closure" paragraph is added clarifying that the failed power-law transfer constrains the specific reduced construction tested here, not the full TEP matter-frame transport problem, whose covariant $\omega = -u^\mu k_\mu$ evaluation remains open. The covariant evaluation has subsequently been completed (Gate 10) and the corpus envelope $B(\phi) = B_0\,\varphi^2/(1+\varphi^2)\exp(-\varphi^4/2\sigma_B^4)$ tested over $\sigma_B \in [1.0, 3.0]$: the corrected sign convention is implemented with the signed source $\beta_A = -1$ and the exact quasi-static relation $\Delta v_T = c\,\ln(N_{\rm core}/N_{\rm edge})$, placing the predicted displacement on the observed (blueward) sign; per-sightline inverse-fit solutions exist for $\sigma_B \gtrsim 1.5$. The Gate-10 rate evaluation (section 7d of step\_10\_covariant\_transport) then tests the temporal-rate function $H_T(z)$ explicitly: under the imported $\Lambda$CDM rate the joint sign-and-closure requirements are disjoint, while under the corpus-derived rates they are reconciled — the homogeneous closed benchmark ($s \approx +0.12$--$0.16$) reduces the inverse-fit dispersion to $1.24$, and the unsourced ambient descent law $\dot{\bar\phi}^{\,2} = \bar\Pi_\infty^2 + \bar\rho\,e^{-\bar\varphi}$ on the reconstructed potential ($s < 0$) admits simultaneous closure, with the descent-tracking coupling $B(\varphi) = B_0\,\varphi^4/(\varphi_c^4+\varphi^4)\,e^{-\varphi}$ reaching inverse-fit dispersion $1.0001$ at Cassini/GW170817-compliant normalisation. The full rate-by-form matrix is recorded under \texttt{tep\_native\_rate\_closure} in results/gate10\_covariant\_transport.json.</td>
             </tr>
             <tr>
                 <td>Supercalibration references</td>
@@ -426,7 +426,7 @@ python scripts/run_pipeline.py --n-sims 500
             </tr>
             <tr>
                 <td>Pipeline step count</td>
-                <td>step\_08c\_wavelength\_systematics promoted into the disformal phase of <code>run_pipeline.py</code>; total step count $14 \to 15$.</td>
+                <td>step\_08c\_wavelength\_systematics and step\_10\_covariant\_transport promoted into the disformal phase of <code>run_pipeline.py</code>; total step count $14 \to 16$.</td>
             </tr>
         </tbody>
     </table>

@@ -75,3 +75,4 @@ data/raw/spectra/
 *.code-workspace
 argos*
 cline-runner*
+manuscripts/

@@ -1,39 +1,39 @@
-[13:07:22] [INFO] ================================================================================
-[13:07:22] [INFO] Script: step_06_helium
-[13:07:22] [INFO] Started: 2026-09-23T13:07:22.051259
-[13:07:22] [INFO] ================================================================================
-[13:07:22] [SUCCESS] === GATE 6: GCE BARYONIC-CYCLING EQUILIBRIUM ===
-[13:07:22] [PROCESS] Integrating GCE ODEs with Temporal Horizon sequestration...
-[13:07:22] [SUCCESS]   IC: Y=0.00, Z=0.00 -> Present Day: Y=0.2470, Z=0.0001
-[13:07:22] [SUCCESS]   IC: Y=0.80, Z=0.10 -> Present Day: Y=0.2470, Z=0.0001
-[13:07:22] [SUCCESS]   IC: Y=0.50, Z=0.50 -> Present Day: Y=0.2470, Z=0.0001
-[13:07:22] [PROCESS] 
+[10:26:12] [INFO] ================================================================================
+[10:26:12] [INFO] Script: step_06_helium
+[10:26:12] [INFO] Started: 2026-09-29T10:26:12.334611
+[10:26:12] [INFO] ================================================================================
+[10:26:12] [SUCCESS] === GATE 6: GCE BARYONIC-CYCLING EQUILIBRIUM ===
+[10:26:12] [PROCESS] Integrating GCE ODEs with Temporal Horizon sequestration...
+[10:26:12] [SUCCESS]   IC: Y=0.00, Z=0.00 -> Present Day: Y=0.2470, Z=0.0001
+[10:26:12] [SUCCESS]   IC: Y=0.80, Z=0.10 -> Present Day: Y=0.2470, Z=0.0001
+[10:26:12] [SUCCESS]   IC: Y=0.50, Z=0.50 -> Present Day: Y=0.2470, Z=0.0001
+[10:26:12] [PROCESS] 
 Theoretical Equilibrium: Y_eq = 0.2470, Z_eq = 0.0001
-[13:07:22] [SUCCESS] 
+[10:26:12] [SUCCESS] 
 === f_VMO SENSITIVITY SCAN ===
-[13:07:22] [PROCESS]   f_VMO=0.900: Y_eq=0.2268, Z_eq=0.001667, ΔY(0.245)=-0.0182
-[13:07:22] [PROCESS]   f_VMO=0.905: Y_eq=0.2279, Z_eq=0.001583, ΔY(0.245)=-0.0171
-[13:07:22] [PROCESS]   f_VMO=0.910: Y_eq=0.2290, Z_eq=0.001500, ΔY(0.245)=-0.0160
-[13:07:22] [PROCESS]   f_VMO=0.915: Y_eq=0.2301, Z_eq=0.001417, ΔY(0.245)=-0.0149
-[13:07:22] [PROCESS]   f_VMO=0.920: Y_eq=0.2311, Z_eq=0.001333, ΔY(0.245)=-0.0139
-[13:07:22] [PROCESS]   f_VMO=0.925: Y_eq=0.2322, Z_eq=0.001250, ΔY(0.245)=-0.0128
-[13:07:22] [PROCESS]   f_VMO=0.930: Y_eq=0.2333, Z_eq=0.001167, ΔY(0.245)=-0.0117
-[13:07:22] [PROCESS]   f_VMO=0.935: Y_eq=0.2344, Z_eq=0.001083, ΔY(0.245)=-0.0106
-[13:07:22] [PROCESS]   f_VMO=0.940: Y_eq=0.2354, Z_eq=0.001000, ΔY(0.245)=-0.0096
-[13:07:22] [PROCESS]   f_VMO=0.945: Y_eq=0.2365, Z_eq=0.000917, ΔY(0.245)=-0.0085
-[13:07:22] [PROCESS]   f_VMO=0.950: Y_eq=0.2376, Z_eq=0.000833, ΔY(0.245)=-0.0074
-[13:07:22] [PROCESS]   f_VMO=0.955: Y_eq=0.2387, Z_eq=0.000750, ΔY(0.245)=-0.0063
-[13:07:22] [PROCESS]   f_VMO=0.960: Y_eq=0.2397, Z_eq=0.000667, ΔY(0.245)=-0.0053
-[13:07:22] [PROCESS]   f_VMO=0.965: Y_eq=0.2408, Z_eq=0.000583, ΔY(0.245)=-0.0042
-[13:07:22] [PROCESS]   f_VMO=0.970: Y_eq=0.2419, Z_eq=0.000500, ΔY(0.245)=-0.0031
-[13:07:22] [PROCESS]   f_VMO=0.975: Y_eq=0.2430, Z_eq=0.000417, ΔY(0.245)=-0.0020
-[13:07:22] [PROCESS]   f_VMO=0.980: Y_eq=0.2440, Z_eq=0.000333, ΔY(0.245)=-0.0010
-[13:07:22] [PROCESS]   f_VMO=0.985: Y_eq=0.2451, Z_eq=0.000250, ΔY(0.245)=+0.0001
-[13:07:22] [PROCESS]   f_VMO=0.990: Y_eq=0.2462, Z_eq=0.000167, ΔY(0.245)=+0.0012
-[13:07:22] [PROCESS]   f_VMO=0.995: Y_eq=0.2473, Z_eq=0.000083, ΔY(0.245)=+0.0023
-[13:07:22] [PROCESS]   f_VMO=1.000: Y_eq=0.2483, Z_eq=0.000000, ΔY(0.245)=+0.0033
-[13:07:22] [SUCCESS]   Y_eq within ±0.003 of 0.245 for f_VMO ∈ [0.975, 0.995]
-[13:07:22] [SUCCESS] Sensitivity plot saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_f_vmo_sensitivity.png
-[13:07:22] [SUCCESS] Gate 6 baryonic-cycling equilibrium verified. Plot saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_equilibrium.png
-[13:07:22] [SUCCESS]   [OK] 0.9s
-[13:07:22] [PROCESS] [RUN] step_07_global_opacity: Gate 7: Global Opacity Boundary
+[10:26:12] [PROCESS]   f_VMO=0.900: Y_eq=0.2268, Z_eq=0.001667, ΔY(0.245)=-0.0182
+[10:26:12] [PROCESS]   f_VMO=0.905: Y_eq=0.2279, Z_eq=0.001583, ΔY(0.245)=-0.0171
+[10:26:12] [PROCESS]   f_VMO=0.910: Y_eq=0.2290, Z_eq=0.001500, ΔY(0.245)=-0.0160
+[10:26:12] [PROCESS]   f_VMO=0.915: Y_eq=0.2301, Z_eq=0.001417, ΔY(0.245)=-0.0149
+[10:26:12] [PROCESS]   f_VMO=0.920: Y_eq=0.2311, Z_eq=0.001333, ΔY(0.245)=-0.0139
+[10:26:12] [PROCESS]   f_VMO=0.925: Y_eq=0.2322, Z_eq=0.001250, ΔY(0.245)=-0.0128
+[10:26:12] [PROCESS]   f_VMO=0.930: Y_eq=0.2333, Z_eq=0.001167, ΔY(0.245)=-0.0117
+[10:26:12] [PROCESS]   f_VMO=0.935: Y_eq=0.2344, Z_eq=0.001083, ΔY(0.245)=-0.0106
+[10:26:12] [PROCESS]   f_VMO=0.940: Y_eq=0.2354, Z_eq=0.001000, ΔY(0.245)=-0.0096
+[10:26:12] [PROCESS]   f_VMO=0.945: Y_eq=0.2365, Z_eq=0.000917, ΔY(0.245)=-0.0085
+[10:26:12] [PROCESS]   f_VMO=0.950: Y_eq=0.2376, Z_eq=0.000833, ΔY(0.245)=-0.0074
+[10:26:12] [PROCESS]   f_VMO=0.955: Y_eq=0.2387, Z_eq=0.000750, ΔY(0.245)=-0.0063
+[10:26:12] [PROCESS]   f_VMO=0.960: Y_eq=0.2397, Z_eq=0.000667, ΔY(0.245)=-0.0053
+[10:26:12] [PROCESS]   f_VMO=0.965: Y_eq=0.2408, Z_eq=0.000583, ΔY(0.245)=-0.0042
+[10:26:12] [PROCESS]   f_VMO=0.970: Y_eq=0.2419, Z_eq=0.000500, ΔY(0.245)=-0.0031
+[10:26:12] [PROCESS]   f_VMO=0.975: Y_eq=0.2430, Z_eq=0.000417, ΔY(0.245)=-0.0020
+[10:26:12] [PROCESS]   f_VMO=0.980: Y_eq=0.2440, Z_eq=0.000333, ΔY(0.245)=-0.0010
+[10:26:12] [PROCESS]   f_VMO=0.985: Y_eq=0.2451, Z_eq=0.000250, ΔY(0.245)=+0.0001
+[10:26:12] [PROCESS]   f_VMO=0.990: Y_eq=0.2462, Z_eq=0.000167, ΔY(0.245)=+0.0012
+[10:26:12] [PROCESS]   f_VMO=0.995: Y_eq=0.2473, Z_eq=0.000083, ΔY(0.245)=+0.0023
+[10:26:12] [PROCESS]   f_VMO=1.000: Y_eq=0.2483, Z_eq=0.000000, ΔY(0.245)=+0.0033
+[10:26:12] [SUCCESS]   Y_eq within ±0.003 of 0.245 for f_VMO ∈ [0.975, 0.995]
+[10:26:12] [SUCCESS] Sensitivity plot saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_f_vmo_sensitivity.png
+[10:26:12] [SUCCESS] Gate 6 baryonic-cycling equilibrium verified. Plot saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate6_equilibrium.png
+[10:26:12] [SUCCESS]   [OK] 0.9s
+[10:26:12] [PROCESS] [RUN] step_07_global_opacity: Gate 7: Global Opacity Boundary

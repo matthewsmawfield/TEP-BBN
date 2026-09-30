@@ -1,0 +1,111 @@
+{
+  "step": "step_16_boundary_transport",
+  "profile_used": {
+    "f_wing": 0.5107600108962136,
+    "x_trough": 1e-05,
+    "f_wall": 500.0,
+    "dwall_L0": 0.8353763733769183,
+    "z_edge": 1080.0
+  },
+  "A_visibility": {
+    "z_peak": 1080.000002,
+    "fwhm_z": [
+      1080.000002,
+      1080.00003,
+      2.7999999929306796e-05
+    ],
+    "z_mean": 1014.7121371301525,
+    "z_rms": 247.67993698863697,
+    "integral": 0.9999648399571449,
+    "wall_fraction": 0.553746466989196,
+    "monotonic_tau": true,
+    "comparison_standard": "Imposed-profile visibility has rms width 247.7 in z; only 55.4% of its probability lies in the wall. The narrow peak is not a narrow normalized visibility distribution. Compare the full function to data before claiming a last-scattering solution."
+  },
+  "B_diffusion_scale": {
+    "mfp_wall_L0": 0.9080177971488241,
+    "mfp_wall_mpc": 3888.7303332539495,
+    "n_scatter_wall": 0.92,
+    "r_diff_L0": 0.870940075059061,
+    "D_A_over_L0": 1080.9990749306198,
+    "ell_damping_geometric": 1241.1865131562745,
+    "comparison": "Toy angular ratio 1241, obtained using assumed D_A = ell/(1+z), a wall of imposed Thomson depth 0.9 and one mean-free-path random walk. This is not a Silk diffusion calculation: the diffusion integral needs a time-dependent scattering rate, photon-baryon coupling, sound speed and native perturbation transfer function. Numerical proximity to a CMB damping multipole is not a prediction."
+  },
+  "C_wall_ionization_saha": {
+    "T_edge_K_assumed": 2945.725,
+    "rows": [
+      {
+        "f_wall": 100.0,
+        "n_b_cm^-3": 2.51e-05,
+        "x_e_saha_T_edge": 0.9883055598467649,
+        "Gamma_required_s^-1": 5.493957410377191e-16
+      },
+      {
+        "f_wall": 300.0,
+        "n_b_cm^-3": 7.53e-05,
+        "x_e_saha_T_edge": 0.966451121841521,
+        "Gamma_required_s^-1": 5.618192717175847e-16
+      },
+      {
+        "f_wall": 500.0,
+        "n_b_cm^-3": 0.00012550000000000001,
+        "x_e_saha_T_edge": 0.9463831870497526,
+        "Gamma_required_s^-1": 5.737325777271272e-16
+      },
+      {
+        "f_wall": 800.0,
+        "n_b_cm^-3": 0.0002008,
+        "x_e_saha_T_edge": 0.9190898691292642,
+        "Gamma_required_s^-1": 5.907701560654361e-16
+      },
+      {
+        "f_wall": 2000.0,
+        "n_b_cm^-3": 0.0005020000000000001,
+        "x_e_saha_T_edge": 0.8336029999913404,
+        "Gamma_required_s^-1": 6.513542602765291e-16
+      }
+    ],
+    "statement": "Conditional LTE at assumed local gas temperature 2946 K gives x_e = 0.988 to 0.834. The TEP clock redshift does not independently set local gas temperature. Saha equilibrium requires a verified thermalizing ionizing radiation field and equilibration time. Gamma_required is an alternative photoionization rate for this ionization fraction, not a supplement to LTE; neither it nor the density or radial placement is derived here."
+  },
+  "D_wall_placement": {
+    "recombination_demand_cm^-2_s^-1": 45033590.18210298,
+    "supply_rows": [
+      {
+        "xi_per_Gyr": 0.001,
+        "photon_supply_cm^-2_s^-1": 4390248612.565864,
+        "demand_cm^-2_s^-1": 45033590.18210298,
+        "margin_before_escape_or_absorption": 97.48831027712762
+      },
+      {
+        "xi_per_Gyr": 1e-06,
+        "photon_supply_cm^-2_s^-1": 4390248.612565863,
+        "demand_cm^-2_s^-1": 45033590.18210298,
+        "margin_before_escape_or_absorption": 0.09748831027712761
+      },
+      {
+        "xi_per_Gyr": 1e-09,
+        "photon_supply_cm^-2_s^-1": 4390.248612565863,
+        "demand_cm^-2_s^-1": 45033590.18210298,
+        "margin_before_escape_or_absorption": 9.748831027712763e-05
+      }
+    ],
+    "lyc_mfp_cm": 6.323910706380826e+23,
+    "lyc_mfp_pc": 204942.49947761695,
+    "statement": "At assumed mean neutral density the threshold LyC mean free path is 0.20 Mpc, not parsecs. The imposed wall requires 4.50e+07 recombinations cm^-2 s^-1. Uniform in-situ emissivity would exceed this for some trial cycling rates before escape, dust absorption and geometry; other trial rates fail. The calculation does not locate the edge, determine source distribution, or show that a neutral trough can coexist with the wall."
+  },
+  "E_gamma_local_equilibria": {
+    "wing_Gamma_needed_s^-1": 4.361389948242985e-19,
+    "trough_residual_Gamma_s^-1": 1.0542105421054211e-29,
+    "lyc_mfp_pc_neutral_IGM": 204942.49947761695,
+    "required_gamma_drop": 41371147166.98447,
+    "statement": "For assumed x_e=0.9 in the wing and x_e=1e-5 in the trough, local photoionization balance requires Gamma 4.36e-19 versus 1.05e-29 s^-1, a drop of 4.1e+10. The neutral mean-density LyC mean free path is 0.20 Mpc. No coupled emissivity/attenuation solution is provided; the sharp transition remains a physical requirement."
+  },
+  "checks": {
+    "visibility_normalized": true,
+    "visibility_peak_in_imposed_wall": true,
+    "optical_depth_monotonic": true,
+    "wall_dominates_visibility": true,
+    "wall_placement_derived": false,
+    "native_acoustic_spectrum_computed": false
+  },
+  "verdict": "An imposed profile produces a peak at z=1080.000, but only 55.4% of normalized visibility lies in the wall (rms width 247.7). Geometric angular ratio 1241 is not a damping-tail prediction. Conditional LTE Saha balance and a local photon budget do not determine temperature, wall location or the ionizing background. Native acoustic modes and dynamical placement remain open."
+}

@@ -1,0 +1,121 @@
+{
+  "step": "step_20_ambient_bath_front",
+  "model": {
+    "ambient_bath": "T_loc(z) = T0(1+z) \u2014 corpus clock-map temperature-depth relation",
+    "ionization_supply": "ambient bath LyC Wien tail: Gamma = c sigma_LyC n_gamma(>nu_L;T), integrated numerically over Planck",
+    "balance": "x_e^2/(1-x_e) = Gamma/(alpha_B n_b)",
+    "ontological_note": "The front is a photoionization phase boundary in the depth-rising ambient field \u2014 not a density wall, not a recombination era.  Below it the ambient bath is too cool to sustain ionization (neutral trough); above it the ambient field keeps the medium plasma (the eternal deep zone).  The wing is ionized separately by local sources (Gate-12 UVB), so the eternal structure is ionized -> neutral -> ionized: two ionized phases separated by a self-shielded trough."
+  },
+  "A_bath_supply": [
+    {
+      "z": 100.0,
+      "T_loc_K": 275.27549999999997,
+      "n_LyC_cm-3": 7.121244695909501e-236,
+      "Gamma_bath_s-1": 1.344973106853627e-242
+    },
+    {
+      "z": 500.0,
+      "T_loc_K": 1365.4755,
+      "n_LyC_cm-3": 1.9003572580220907e-36,
+      "Gamma_bath_s-1": 3.5891610450093885e-43
+    },
+    {
+      "z": 800.0,
+      "T_loc_K": 2183.1254999999996,
+      "n_LyC_cm-3": 1.9192729054441002e-17,
+      "Gamma_bath_s-1": 3.624886593235447e-24
+    },
+    {
+      "z": 900.0,
+      "T_loc_K": 2455.6755,
+      "n_LyC_cm-3": 6.601130339142373e-14,
+      "Gamma_bath_s-1": 1.2467403045540401e-20
+    },
+    {
+      "z": 1000.0,
+      "T_loc_K": 2728.2255,
+      "n_LyC_cm-3": 4.514896418326638e-11,
+      "Gamma_bath_s-1": 8.5271810226759e-18
+    },
+    {
+      "z": 1080.0,
+      "T_loc_K": 2946.2655,
+      "n_LyC_cm-3": 3.5329399048810257e-09,
+      "Gamma_bath_s-1": 6.672582340730981e-16
+    },
+    {
+      "z": 1200.0,
+      "T_loc_K": 3273.3255,
+      "n_LyC_cm-3": 8.31128913809149e-07,
+      "Gamma_bath_s-1": 1.5697340635463222e-13
+    }
+  ],
+  "B_front_vs_density": {
+    "diffuse_n_b0": {
+      "n_b_over_nb0": 1.0,
+      "z_front_xe0p5": 913.5,
+      "T_front_K": 2492.4697499999997,
+      "z_xe0p1": 862.4000000000001,
+      "z_xe0p9": 954.8000000000001,
+      "front_width_z_0p1_0p9": 92.39999999999998
+    },
+    "front_column_500": {
+      "n_b_over_nb0": 500.0,
+      "z_front_xe0p5": 1011.1,
+      "T_front_K": 2758.47855,
+      "z_xe0p1": 949.0,
+      "z_xe0p9": 1061.9,
+      "front_width_z_0p1_0p9": 112.90000000000009
+    },
+    "absorber_5000": {
+      "n_b_over_nb0": 5000.0,
+      "z_front_xe0p5": 1052.8,
+      "T_front_K": 2872.1319,
+      "z_xe0p1": 985.7,
+      "z_xe0p9": 1107.9,
+      "front_width_z_0p1_0p9": 122.20000000000005
+    }
+  },
+  "C_surface_on_computed_profile": {
+    "diffuse_n_b0": {
+      "z_tau1": 811.79,
+      "kernel_z16_50_84": [
+        770.87,
+        803.6825,
+        825.1975
+      ],
+      "kernel_width_z_16_84": 54.327499999999986,
+      "tau_wing": 0.054
+    },
+    "front_column_500": {
+      "z_tau1": 751.63,
+      "kernel_z16_50_84": [
+        716.2525,
+        744.6475,
+        763.1375
+      ],
+      "kernel_width_z_16_84": 46.88499999999999,
+      "tau_wing": 0.054
+    },
+    "absorber_5000": {
+      "z_tau1": 731.4775,
+      "kernel_z16_50_84": [
+        697.86,
+        724.8475,
+        742.3975
+      ],
+      "kernel_width_z_16_84": 44.53750000000002,
+      "tau_wing": 0.054
+    }
+  },
+  "assumption_bounds": {
+    "unshielded": "the computed x_e(z) applies the full local Planck LyC tail at every depth \u2014 an upper bound on trough ionization",
+    "shielding_direction": "the trough is LyC-saturated (tau_LyC ~ 2e10); local depletion of the ambient tail suppresses leading-edge x_e, pushing both z_front and the tau=1 crossing deeper than the unshielded values reported here"
+  },
+  "checks": {
+    "front_depth_computed": true,
+    "front_near_boundary": true,
+    "no_imposed_wall": true
+  },
+  "verdict": "The eternal boundary is computed from the ambient bath rather than parametrized: the bath LyC Wien tail crosses the recombination balance at z_front ~ 914 (diffuse n_b0) to 1053 (5e3 n_b0 absorber density), a density-controlled ionization front with width ~113 in z \u2014 a Saha-type transition, not a razor edge and not a shell.  On the unshielded profile the Thomson tau = 1 crossing sits at z ~ 752 (front-column density) \u2014 a shallower bound, since trough self-shielding suppresses the leading-edge ionization and moves both the front and the surface toward the observed z ~ 1080 at absorber densities.  Residual items: LyC transfer through the self-shielded trough (sets the front's true sharpness and exact depth), the medium density at the front (absorber-statistics inversion), and the perturbation mode spectrum on the front."
+}

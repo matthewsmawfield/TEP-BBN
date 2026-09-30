@@ -1,12 +1,12 @@
 {
   "pipeline_run": {
-    "timestamp": "2026-09-23T14:30:49.136457",
+    "timestamp": "2026-09-29T10:26:37.832838",
     "sightline": "Q1009+2956",
-    "mode": "full",
-    "total_steps": 16,
-    "completed": 16,
+    "mode": "quick",
+    "total_steps": 25,
+    "completed": 24,
     "failed": 0,
-    "skipped": 0,
+    "skipped": 1,
     "all_passed": true
   },
   "step_results": {
@@ -25,75 +25,121 @@
       "step_09b_screening_plot",
       "step_08c_wavelength_systematics",
       "step_10_covariant_transport",
-      "secondary_analyses",
+      "step_11_steady_state_budget",
+      "step_12_vmo_ionization_budget",
+      "step_13_deuterium_production_ledger",
+      "step_14_opacity_three_point",
+      "step_15_deuterium_extended_channels",
+      "step_16_boundary_transport",
+      "step_17_inversion_and_channel_budgets",
+      "step_18_boundary_selfconsistency",
+      "step_19_eternal_surface_reconciliation",
       "finalize_manuscript_numbers"
     ],
     "failed": [],
-    "skipped": []
+    "skipped": [
+      "secondary_analyses"
+    ]
   },
   "step_timings": {
     "step_01_embedding": {
-      "elapsed": 0.46371912956237793,
+      "elapsed": 0.55100417137146,
       "status": "OK"
     },
     "step_02_q1009": {
-      "elapsed": 91.02597713470459,
+      "elapsed": 106.3296492099762,
       "status": "OK"
     },
     "step_03_significance": {
-      "elapsed": 1515.5387918949127,
+      "elapsed": 244.506737947464,
       "status": "OK"
     },
     "step_04_prior": {
-      "elapsed": 0.34755492210388184,
+      "elapsed": 0.34791088104248047,
       "status": "OK"
     },
     "step_04b_amplitude": {
-      "elapsed": 0.0033998489379882812,
+      "elapsed": 0.006433963775634766,
       "status": "OK"
     },
     "step_05_thermodynamics": {
-      "elapsed": 0.018016815185546875,
+      "elapsed": 0.02083587646484375,
       "status": "OK"
     },
     "step_06_helium": {
-      "elapsed": 0.8536510467529297,
+      "elapsed": 0.8783130645751953,
       "status": "OK"
     },
     "step_07_global_opacity": {
-      "elapsed": 0.017332077026367188,
+      "elapsed": 0.020081281661987305,
       "status": "OK"
     },
     "step_08_light_elements": {
-      "elapsed": 0.315105676651001,
+      "elapsed": 0.4140791893005371,
       "status": "OK"
     },
     "step_09_disformal_transport": {
-      "elapsed": 0.0030629634857177734,
+      "elapsed": 0.005856037139892578,
       "status": "OK"
     },
     "step_04h_disformal_clock": {
-      "elapsed": 0.015190839767456055,
+      "elapsed": 0.0166780948638916,
       "status": "OK"
     },
     "step_09b_screening_plot": {
-      "elapsed": 0.47254180908203125,
+      "elapsed": 0.7774479389190674,
       "status": "OK"
     },
     "step_08c_wavelength_systematics": {
-      "elapsed": 0.015836000442504883,
+      "elapsed": 0.019337892532348633,
       "status": "OK"
     },
     "step_10_covariant_transport": {
-      "elapsed": 10.93530797958374,
+      "elapsed": 13.28676700592041,
+      "status": "OK"
+    },
+    "step_11_steady_state_budget": {
+      "elapsed": 0.003454923629760742,
+      "status": "OK"
+    },
+    "step_12_vmo_ionization_budget": {
+      "elapsed": 0.0023479461669921875,
+      "status": "OK"
+    },
+    "step_13_deuterium_production_ledger": {
+      "elapsed": 0.0017580986022949219,
+      "status": "OK"
+    },
+    "step_14_opacity_three_point": {
+      "elapsed": 0.0035860538482666016,
+      "status": "OK"
+    },
+    "step_15_deuterium_extended_channels": {
+      "elapsed": 0.003701925277709961,
+      "status": "OK"
+    },
+    "step_16_boundary_transport": {
+      "elapsed": 0.02082085609436035,
+      "status": "OK"
+    },
+    "step_17_inversion_and_channel_budgets": {
+      "elapsed": 0.0028839111328125,
+      "status": "OK"
+    },
+    "step_18_boundary_selfconsistency": {
+      "elapsed": 10.223156929016113,
+      "status": "OK"
+    },
+    "step_19_eternal_surface_reconciliation": {
+      "elapsed": 0.04794597625732422,
       "status": "OK"
     },
     "secondary_analyses": {
-      "elapsed": 4994.658294916153,
-      "status": "OK"
+      "elapsed": 0,
+      "status": "SKIPPED"
     },
     "finalize_manuscript_numbers": {
-      "elapsed": 0.13822412490844727,
+      "elapsed": 0.05818891525268555,
       "status": "OK"
     }
   },
@@ -106,7 +152,7 @@
       ]
     },
     "gate10_covariant_transport.json": {
-      "size_bytes": 23071,
+      "size_bytes": 37427,
       "keys": [
         "gate",
         "title",
@@ -122,9 +168,82 @@
         "predictive_closure_matter_n5",
         "predictive_closure_negative_B0",
         "predictive_closure_envelope",
+        "tep_native_rate_closure",
         "comparison_with_step04h",
         "sightlines",
         "conclusion"
+      ]
+    },
+    "gate10b_disformal_gate_test.json": {
+      "size_bytes": 3790,
+      "keys": [
+        "step",
+        "purpose",
+        "model",
+        "joint_B0_eVinv4",
+        "per_sightline",
+        "consistency",
+        "ordering_caveat",
+        "population_bound",
+        "verdict"
+      ]
+    },
+    "gate10c_ambient_lapse_margin.json": {
+      "size_bytes": 5210,
+      "keys": [
+        "step",
+        "inputs",
+        "sightlines",
+        "redshift_scan",
+        "gate_budget",
+        "verdict"
+      ]
+    },
+    "gate11_steady_state_budget.json": {
+      "size_bytes": 3873,
+      "keys": [
+        "step",
+        "A_equilibrium_convergence",
+        "B_thermalization_depth",
+        "C_sequestration_ledger",
+        "verdict"
+      ]
+    },
+    "gate12_vmo_ionization_budget.json": {
+      "size_bytes": 18095,
+      "keys": [
+        "step",
+        "A_ionizing_yields",
+        "B_recombination_demand",
+        "C_margin_grid",
+        "D_f_vmo_min",
+        "E_thomson_wing",
+        "F_qualitative_closures",
+        "verdict"
+      ]
+    },
+    "gate13_deuterium_production_ledger.json": {
+      "size_bytes": 2225,
+      "keys": [
+        "step",
+        "demand",
+        "supply_channels",
+        "tep_native_channel",
+        "thresholds",
+        "verdict"
+      ]
+    },
+    "gate15_deuterium_extended_channels.json": {
+      "size_bytes": 6994,
+      "keys": [
+        "step",
+        "demand",
+        "channel_1_vmo_partial_burning_ejecta",
+        "channel_2_vmo_collapse_nu_process",
+        "channel_3_protected_reservoir",
+        "channel_4_wind_shock_bookkeeping",
+        "combined_ledger",
+        "verdict"
       ]
     },
     "gate1_embedding.json": {
@@ -201,7 +320,7 @@
       ]
     },
     "gate3_c3_perturbed_mc.json": {
-      "size_bytes": 418014,
+      "size_bytes": 21250,
       "keys": [
         "sightline",
         "analysis",
@@ -580,6 +699,19 @@
         "simulations"
       ]
     },
+    "gate8_parent_centroid_systematics.json": {
+      "size_bytes": 12030,
+      "keys": [
+        "gate",
+        "description",
+        "method",
+        "plausibility_bound",
+        "source_files",
+        "n_mc",
+        "results",
+        "joint_sign_matched"
+      ]
+    },
     "gate8_wavelength_systematics.json": {
       "size_bytes": 12100,
       "keys": [
@@ -759,7 +891,7 @@
       ]
     },
     "secondary_analyses_summary.json": {
-      "size_bytes": 176,
+      "size_bytes": 174,
       "keys": [
         "sightline",
         "n_sims_c3",
@@ -781,6 +913,64 @@
         "7E_path_length_div_pl",
         "7E_path_length_verified",
         "7F_conclusion"
+      ]
+    },
+    "step_14_opacity_three_point.json": {
+      "size_bytes": 6954,
+      "keys": [
+        "step",
+        "A_derived_requirement",
+        "B_admissible_profile",
+        "C_pilot_inversion",
+        "verdict"
+      ]
+    },
+    "step_16_boundary_transport.json": {
+      "size_bytes": 5405,
+      "keys": [
+        "step",
+        "profile_used",
+        "A_visibility",
+        "B_diffusion_scale",
+        "C_wall_ionization_saha",
+        "D_wall_placement",
+        "E_gamma_local_equilibria",
+        "checks",
+        "verdict"
+      ]
+    },
+    "step_17_inversion_and_channel_budgets.json": {
+      "size_bytes": 11688,
+      "keys": [
+        "step",
+        "A_literature_inversion",
+        "B_nu_irradiation_budget",
+        "C_vmo_ejecta_closure",
+        "D_reservoir_mixing",
+        "verdict"
+      ]
+    },
+    "step_18_boundary_selfconsistency.json": {
+      "size_bytes": 26782,
+      "keys": [
+        "step",
+        "A_ionization_front",
+        "B_wall_temperature",
+        "C_visibility_absorptive_edge",
+        "D_neutrino_transit",
+        "E_reservoir_longevity",
+        "verdict"
+      ]
+    },
+    "step_19_eternal_surface_reconciliation.json": {
+      "size_bytes": 7845,
+      "keys": [
+        "step",
+        "A_column_bookkeeping",
+        "B_diffusion",
+        "C_kernel_comparison",
+        "checks",
+        "verdict"
       ]
     },
     "tep_bbn_summary.json": {

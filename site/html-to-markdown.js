@@ -47,13 +47,21 @@ class HTMLToMarkdownConverter {
     }
 
     htmlToMarkdown(html) {
+        // Extract <pre> blocks before entity decoding so '<' inside code is preserved.
+        const codeBlocks = [];
+        html = html.replace(/<pre[^>]*>([\s\S]*?)<\/pre>/gi, (match, content) => {
+            const inner = content.replace(/<[^>]+>/g, '');
+            codeBlocks.push(this.decodeEntities(inner).replace(/\n+$/g, ''));
+            return `\n\n@@CODE_BLOCK_${codeBlocks.length - 1}@@\n\n`;
+        });
+
         let text = this.decodeEntities(html);
 
         // Protect all math content ($...$ and $$...$$) before ANY HTML processing.
         // LaTeX math may contain '<' and '>' characters that would otherwise be
         // misinterpreted as HTML tags by the conversion regexes.
         const mathBlocks = [];
-        text = text.replace(/(\$\$?)([^$\n]+?)\1/g, (match, delim, math) => {
+        text = text.replace(/(?<!\\)(\$\$?)([^$\n]+?)\1/g, (match, delim, math) => {
             const key = `__MATH_${mathBlocks.length}__`;
             mathBlocks.push(math);
             return `${delim}${key}${delim}`;
@@ -66,14 +74,16 @@ class HTMLToMarkdownConverter {
             .replace(/<h2[^>]*>([\s\S]*?)<\/h2>/gi, '\n## $1\n\n')
             .replace(/<h3[^>]*>([\s\S]*?)<\/h3>/gi, '\n### $1\n\n')
             .replace(/<h4[^>]*>([\s\S]*?)<\/h4>/gi, '\n#### $1\n\n')
+            .replace(/<h5[^>]*>([\s\S]*?)<\/h5>/gi, '\n##### $1\n\n')
+            .replace(/<h6[^>]*>([\s\S]*?)<\/h6>/gi, '\n###### $1\n\n')
             .replace(/\s*<figcaption[^>]*>([\s\S]*?)<\/figcaption>\s*/gi, '\n\n$1\n\n')
             .replace(/<img[^>]+>/gi, (tag) => {
                 const src = (tag.match(/src=["']([^"']+)["']/i) || [])[1];
                 const alt = (tag.match(/alt=["']([^"]*)["']/i) || [])[1] || '';
                 return src ? `\n\n![${alt}](${src})\n\n` : '';
             })
-            .replace(/<blockquote[^>]*>\s*<p[^>]*>([\s\S]*?)<\/p>\s*<\/blockquote>/gi, '\n> $1\n\n')
-            .replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, '\n\n$1\n\n')
+            .replace(/<blockquote[^>]*>\s*<p\b[^>]*>([\s\S]*?)<\/p>\s*<\/blockquote>/gi, '\n> $1\n\n')
+            .replace(/<p\b[^>]*>([\s\S]*?)<\/p>/gi, '\n\n$1\n\n')
             .replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, '\n- $1')
             .replace(/<\/?ul[^>]*>/gi, '\n')
             .replace(/<(strong|b)[^>]*>([\s\S]*?)<\/(strong|b)>/gi, '**$2**')
@@ -92,6 +102,10 @@ class HTMLToMarkdownConverter {
         // Restore math content
         text = text.replace(/(\$\$?)__MATH_(\d+)__\1/g, (match, delim, idx) => {
             return `${delim}${mathBlocks[idx]}${delim}`;
+        });
+
+        text = text.replace(/@@CODE_BLOCK_(\d+)@@/g, (match, idx) => {
+            return `\n\n\`\`\`\n${codeBlocks[idx]}\n\`\`\`\n\n`;
         });
 
         return text;

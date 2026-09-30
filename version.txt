@@ -7,3 +7,4 @@ v0.5 (Dubai) — 2026-09-13 — Literature-calibrated systematics, helium sensit
 - Added "Limit of the reduced Gate-4B closure" paragraph: failed power-law transfer constrains the specific reduced construction, not the full TEP matter-frame transport problem (covariant omega=-u^mu k_mu evaluation remains open)
 - Added three supercalibration references [71-73]: Griest et al. (2010), Whitmore & Murphy (2014), Schmidt et al. (2021)
 - Pipeline step count 14 to 15 (added step_08c_wavelength_systematics to disformal phase)
+- Labelled the absorber-field calculation as using the canonical low-kinetic benchmark; updated thermodynamics and reproducibility sections

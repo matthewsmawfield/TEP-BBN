@@ -26,7 +26,7 @@
         "tau_per_Hubble_radius": 5.548105547137127e-05,
         "ell_req_Hubble_radii": 18024.170439872203,
         "z_therm_powerlaw_p0p5": 133.25785057072903,
-        "z_therm_exponential": null,
+        "z_therm_exponential": Infinity,
         "z_therm_exponential_ln1pz": 18024.170439872203
       },
       {
@@ -34,7 +34,7 @@
         "tau_per_Hubble_radius": 5.548105547137126e-06,
         "ell_req_Hubble_radii": 180241.70439872204,
         "z_therm_powerlaw_p0p5": 423.5500022361583,
-        "z_therm_exponential": null,
+        "z_therm_exponential": Infinity,
         "z_therm_exponential_ln1pz": 180241.70439872204
       },
       {
@@ -42,7 +42,7 @@
         "tau_per_Hubble_radius": 5.548105547137127e-07,
         "ell_req_Hubble_radii": 1802417.0439872202,
         "z_therm_powerlaw_p0p5": 1341.541635848669,
-        "z_therm_exponential": null,
+        "z_therm_exponential": Infinity,
         "z_therm_exponential_ln1pz": 1802417.0439872202
       },
       {

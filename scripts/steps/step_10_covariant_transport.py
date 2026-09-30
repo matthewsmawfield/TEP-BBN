@@ -1307,9 +1307,11 @@ def run_covariant_transport():
     # =====================================================================
     print_status("--- 7b. Negative B₀ Scan (B < 0, Einstein frame) ---", "TITLE")
     print_status("  Corrected convention: Δv_T = c·ln(N_core/N_edge) < 0 = blueward", "PROCESS")
-    print_status("  B < 0: N² = A² + |B|φ̇² > A² always Lorentzian → no boundary,", "PROCESS")
-    print_status("         no amplification: |Δv| bounded by ~Δδφ (conformal scale).", "PROCESS")
-    print_status("  B < 0 is also the null-cone-excluded branch (Paper 0 §4).", "PROCESS")
+    print_status("  B < 0: for the timelike ambient gradient N² = A² + |B|φ̇² > A²", "PROCESS")
+    print_status("         is lapse-safe (no boundary → no amplification): |Δv| bounded", "PROCESS")
+    print_status("         by ~Δδφ (conformal scale). The negative branch is not a priori", "PROCESS")
+    print_status("         excluded (Paper 0 §4 pointwise ledger); its ambient fluid wall", "PROCESS")
+    print_status("         binds at |B0| ≲ 10⁻² at these epochs (Gate 10c).", "PROCESS")
     print_status("")
 
     B0_neg_values = np.logspace(0, 40, 200)
@@ -1552,6 +1554,45 @@ def run_covariant_transport():
                  f"(criticality-scatter floor ~1.0001); "
                  f"Cassini γ_dis={gam_j:.2e} (bound 2.3e-5); "
                  f"GW170817 δc/c={dcc_j:.2e} (bound 3e-15)", "PROCESS")
+    # Ambient self-consistency (issue 29-1). On the descent-tracking form
+    # u(phi_total) = B(phi_total) phidot^2 / A^2(phi_total) scales as
+    # exp(delta phi): the boundary factor in the AMBIENT field equals the
+    # value inside the well to O(10^-7), so a near-critical well implies a
+    # near-critical ambient universe on the same branch. The matter-metric
+    # redshift map is then 1+z = N(0)/N(phibar) with N = A*sqrt(1-u):
+    # an absorber placed at the conformal phi_bar = ln(1+z_obs) would
+    # present at 1+z ~ 400-600, and matching the observed z requires
+    # phi_bar < 0, violating the corpus sign convention (phi >= 0 ambient).
+    # The tracked-criticality branch is therefore excluded by the
+    # lapse/redshift-map self-consistency requirement.
+    print_status("  Ambient self-consistency of the joint closure "
+                 "(issue 29-1):", "PROCESS")
+    amb_sc = []
+    for sl in SIGHTLINES:
+        bg = bgs_desc[sl['id']]
+        phib = bg['phi_bar_over_MPl']
+        B_amb = B_of_phi(phib, B0_joint, 2, sig_desc)
+        u_amb = B_amb * bg['dphi0_sq_eV4'] / bg['A2']
+        N_amb = bg['A'] * np.sqrt(max(0.0, 1.0 - u_amb))
+        presented_1pz = float(1.0 / N_amb) if N_amb > 0 else float('nan')
+        # required phi_bar: exp(-x)*sqrt(1-u(x)) = 1/(1+z_obs), u ~ const
+        req_phib = float(np.log((1.0 + sl['z_abs'])
+                                 * np.sqrt(max(0.0, 1.0 - u_amb))))
+        amb_sc.append({
+            'id': sl['id'],
+            'u_ambient': float(u_amb),
+            'one_minus_u': float(1.0 - u_amb),
+            'presented_1pz_at_conformal_placement': presented_1pz,
+            'required_phi_bar_for_observed_z': req_phib,
+        })
+        print_status(f"    {sl['id']:<16} u_ambient={u_amb:.6f}  "
+                     f"1-u={1.0 - u_amb:.2e}  "
+                     f"presented 1+z={presented_1pz:.0f}  "
+                     f"required phi_bar={req_phib:.3f}", "PROCESS")
+    self_consistent = all(a['required_phi_bar_for_observed_z'] >= 0.0
+                          for a in amb_sc)
+    print_status(f"    ambient-u self-consistency: "
+                 f"{'SATISFIED' if self_consistent else 'EXCLUDED'}", "PROCESS")
     rate_eval['joint_closure_descent'] = {
         'rate': 'descent', 'kappa': 'inf',
         'B_form': "B0 * phi^4/(phi_c^4+phi^4) * exp(-lam*phi)",
@@ -1564,6 +1605,15 @@ def run_covariant_transport():
         'joint_predictions': joint_preds,
         'cassini_gamma': float(gam_j), 'cassini_pass': bool(cas_j),
         'gw170817_dc': float(dcc_j), 'gw170817_pass': bool(gw_j),
+        'ambient_self_consistency': amb_sc,
+        'ambient_self_consistent': bool(self_consistent),
+        'ambient_exclusion_note': (
+            'u(phi) ~ exp(delta phi) makes the ambient boundary factor '
+            'near-critical whenever the well is near-critical; the '
+            'matter-metric map 1+z = N(0)/N(phibar) then requires '
+            'phi_bar < 0 for the observed absorber redshifts, so the '
+            'tracked-criticality branch is excluded by the ambient-lapse '
+            'self-consistency requirement (issue 29-1).'),
     }
     closure_results['_rate_models'] = rate_eval
     print_status("")
@@ -1733,9 +1783,14 @@ def run_covariant_transport():
         "predictive_closure_negative_B0": {
             "B_phi_form": "B₀(φ/M_Pl)^5 with B₀ < 0",
             "max_dv_kms": float(max_dv_neg),
-            "verdict": "B < 0 is always Lorentzian (N² = A² + |B|φ̇² > A²): no boundary, "
-                       "no amplification — |Δv| bounded at the conformal scale (~0.05 km/s). "
-                       "B < 0 is independently excluded by the null-cone condition (Paper 0 §4). "
+            "verdict": "B < 0 is lapse-safe for the timelike ambient gradient "
+                       "(N² = A² + |B|φ̇² > A²): no boundary, no amplification — "
+                       "|Δv| bounded at the conformal scale (~0.05 km/s). The "
+                       "negative branch is not excluded a priori (Paper 0 §4 "
+                       "pointwise admissibility ledger), but its ambient "
+                       "fluid-hyperbolicity wall binds at |B0| ≲ 10⁻² at "
+                       "absorber-epoch densities (Gate 10c), so it cannot carry "
+                       "phenomenological amplitudes ungated either. "
                        "Near-critical amplification requires B > 0 (N² → 0).",
         },
         "predictive_closure_envelope": {

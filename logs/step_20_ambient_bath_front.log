@@ -1,0 +1,13 @@
+[14:05:48] [INFO] ================================================================================
+[14:05:48] [INFO] Script: step_20_ambient_bath_front
+[14:05:48] [INFO] Started: 2026-09-29T14:05:48.781570
+[14:05:48] [INFO] ================================================================================
+[14:05:48] [SUCCESS] === STEP 20: AMBIENT-BATH IONIZATION FRONT ===
+[14:05:50] [PROCESS] [A] Gamma_bath: 3.62e-24/s (z=800) -> 6.67e-16/s (z=1080)
+[14:05:50] [PROCESS] [B] diffuse_n_b0: front z=914 (T=2492 K), width dz=92
+[14:05:50] [PROCESS] [B] front_column_500: front z=1011 (T=2758 K), width dz=113
+[14:05:50] [PROCESS] [B] absorber_5000: front z=1053 (T=2872 K), width dz=122
+[14:05:51] [PROCESS] [C] diffuse_n_b0: tau=1 at z=811.8; kernel 16-84% z=[771,825]
+[14:05:51] [PROCESS] [C] front_column_500: tau=1 at z=751.6; kernel 16-84% z=[716,763]
+[14:05:51] [PROCESS] [C] absorber_5000: tau=1 at z=731.5; kernel 16-84% z=[698,742]
+[14:05:51] [SUCCESS] Wrote /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_20_ambient_bath_front.json

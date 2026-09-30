@@ -1,0 +1,121 @@
+{
+  "step": "step_15_deuterium_extended_channels",
+  "demand": {
+    "DH_ISM": 1.7e-05,
+    "X_D_ISM": 3.4e-05,
+    "R": 0.4,
+    "p_D_req_per_astrated_mass": 2.0399999999999998e-05
+  },
+  "channel_1_vmo_partial_burning_ejecta": {
+    "channel": "vmo_partial_burning_ejecta",
+    "eps_D_range": [
+      2e-05,
+      0.0004
+    ],
+    "f_required_range": [
+      0.05099999999999999,
+      1.0199999999999998
+    ],
+    "note": "NSE-freezeout / incomplete-burning enrichment of the ejected envelope (WFH67; FWW86).  Transport is bulk ejection \u2014 the E_Y>0 channel helium already requires; metals stay sequestered in the temporal-well remnant, removing the Carr-Bond-Arnett objection that killed the channel in steady-state history.  Required transit fraction 0.051-1.02 of astrated mass vs the envelope-ejection fraction the f_VMO=0.994 IMF already supplies.",
+    "supply_at_f_envelope_0p5": 0.000105,
+    "margin_vs_demand_at_f0p5": 5.147058823529412,
+    "status": "viable within documented yield range \u2014 reduces item d1 to the VMO envelope ejecta-fraction/enrichment calculation (stellar-structure input, not new transport physics)"
+  },
+  "channel_2_vmo_collapse_nu_process": {
+    "channel": "vmo_collapse_nu_process_ejecta",
+    "eps_D_range": [
+      6e-05,
+      0.0002
+    ],
+    "f_required_range": [
+      0.10199999999999998,
+      0.33999999999999997
+    ],
+    "note": "FWW86 / Fuller & Shi 1997: thermal nubar_e from the homologously collapsing core drive nubar_e+p -> n+e+ in the envelope; n(p,gamma)D enrichment documented to D/H ~ 1e-4 in ejecta.  Neutrinos are standard-model matter on g~ (A2): MeV neutrinos propagate near-null, sharing the photon cone modulo the multi-messenger-bounded disformal term; the Z_max confinement bound applies to non-relativistic escape, not the transient burst.  Irradiation is required only core -> envelope during collapse (lapse ~ O(1), pre-well); post-formation interior emission emerges below the 1.8 MeV capture threshold, which merely terminates an already-operated channel.",
+    "status": "viable \u2014 yield documented and transport fixed by A2 for the transient phase (near-null neutrinos on g~, irradiation at lapse ~ O(1) before well formation); residual task is a quantitative irradiation budget on the TEP-BH collapse solution, not a transport derivation"
+  },
+  "channel_3_protected_reservoir": {
+    "channel": "protected_reservoir_accumulation",
+    "mechanism": "On bounded-astration-exposure worldlines (p + q = 1.3 > 1 convergence, Gate 11C) the D destruction term is bounded while production time is unbounded: even GCR-rate spallation accumulates X_D,res = 1.7e-7 x N_exp over N_exp exposure-equivalents.  Mixing f_mix X_D,res = 2.04e-5 closes the ledger.",
+    "closure_table": [
+      {
+        "exposure_equivalents_N": 100.0,
+        "X_D_reservoir": 1.7e-05,
+        "f_mix_required": 1.2
+      },
+      {
+        "exposure_equivalents_N": 300.0,
+        "X_D_reservoir": 5.099999999999999e-05,
+        "f_mix_required": 0.4
+      },
+      {
+        "exposure_equivalents_N": 1000.0,
+        "X_D_reservoir": 0.00016999999999999999,
+        "f_mix_required": 0.12
+      },
+      {
+        "exposure_equivalents_N": 3000.0,
+        "X_D_reservoir": 0.0005099999999999999,
+        "f_mix_required": 0.04
+      },
+      {
+        "exposure_equivalents_N": 10000.0,
+        "X_D_reservoir": 0.0017,
+        "f_mix_required": 0.011999999999999999
+      }
+    ],
+    "signature": "metal-poor reservoirs with super-ISM D/H \u2014 an observable, discordant-D/H population is a specific prediction and is also the signature Fuller & Shi 1997 assigned to supermassive-star ejecta masquerading as Lyman-limit systems",
+    "status": "viable in rate terms for N_exp >~ 1e3 exposure equivalents with f_mix ~ 1-12%; the binding input is reservoir longevity/disruption, a mixing calculation rather than new microphysics"
+  },
+  "channel_4_wind_shock_bookkeeping": {
+    "channel": "vmo_wind_shock_spallation",
+    "bookkeeping": [
+      {
+        "M_VMO_Msun": 100.0,
+        "wind_kinetic_erg": 2.9938168046558895e+52,
+        "processed_mass_g": 1.1933519999999997e+35,
+        "erg_per_g_available": 2.5087457888836573e+17,
+        "erg_per_g_required": 3.8588976e+16,
+        "coupling_efficiency_needed": 0.15381780079507912
+      },
+      {
+        "M_VMO_Msun": 1000.0,
+        "wind_kinetic_erg": 2.993816804655889e+53,
+        "processed_mass_g": 1.1933519999999999e+36,
+        "erg_per_g_available": 2.5087457888836566e+17,
+        "erg_per_g_required": 3.8588976e+16,
+        "coupling_efficiency_needed": 0.15381780079507915
+      },
+      {
+        "M_VMO_Msun": 100000.0,
+        "wind_kinetic_erg": 9.46728e+54,
+        "processed_mass_g": 1.193352e+38,
+        "erg_per_g_available": 7.933350763228285e+16,
+        "erg_per_g_required": 3.8588976e+16,
+        "coupling_efficiency_needed": 0.4864145951905088
+      }
+    ],
+    "status": "energetically marginal at fiducial parameters \u2014 requires order-unity conversion of wind kinetic energy into >30 MeV particles at the low-mass end; subsumed by channel 1, retained as the most conservative bound"
+  },
+  "combined_ledger": {
+    "demand_per_astrated_mass": 2.0399999999999998e-05,
+    "gate13_channels_shortfall": {
+      "GCR_spallation": 120.0,
+      "nu_process_CCSN": 2000.0
+    },
+    "new_channels": {
+      "vmo_partial_burning": {
+        "f_req_range": [
+          0.05099999999999999,
+          1.0199999999999998
+        ],
+        "closes_at_f_ej_0p2_to_0p6": true
+      },
+      "protected_reservoir": {
+        "f_mix_for_Nexp_1e3": 0.12,
+        "f_mix_for_Nexp_1e4": 0.011999999999999999
+      }
+    }
+  },
+  "verdict": "Two pre-sequestration channels close the Gate-13 shortfall within documented yield ranges: (1) VMO partial-burning/explosive-freezeout ejecta carry the documented enrichment X_D ~ 2e-5-4e-4, needing only f ~ 0.05-1.0 of astrated mass to transit the ejecta \u2014 a fraction the envelope-ejection geometry of the helium channel already supplies; the Carr-Bond-Arnett metal objection is removed by the temporal-horizon sequestration the model is built on.  (3) Bounded-exposure worldlines accumulate D without a destruction term and mix it in, closing the ledger for N_exp >~ 1e3 at f_mix ~ 1-12%, with a falsifiable signature (metal-poor high-D reservoirs).  The collapse neutrino process (2) reaches the same ejecta enrichment per FWW86/FS97; its transport leg is fixed by Axiom A2 for the transient phase \u2014 MeV neutrinos are near-null matter on g~, irradiating the envelope while the lapse is still order unity, before the temporal well forms (the Z_max confinement bound applies to non-relativistic escape, not to the burst).  Item d1 therefore stands as: documented channels exist whose viability reduces to two compute tasks \u2014 the VMO ejecta-fraction/enrichment calculation and the reservoir mixing rate \u2014 plus a quantitative neutrino irradiation budget on the TEP-BH collapse solution."
+}

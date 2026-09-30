@@ -1,0 +1,14 @@
+[13:22:07] [INFO] ================================================================================
+[13:22:07] [INFO] Script: step_14_opacity_three_point
+[13:22:07] [INFO] Started: 2026-09-29T13:22:07.273324
+[13:22:07] [INFO] ================================================================================
+[13:22:07] [SUCCESS] === STEP 14: SPECIES-RESOLVED OPACITY THREE-POINT TEST ===
+[13:22:07] [PROCESS] [A] Wing requirement: n_e = 0.51 n_b0 (p=0.5) / 13 n_b0 (exp)
+[13:22:07] [PROCESS] [A] Trough ceiling (p=0.5): mean n_e < 3.7e-04 n_b0 — neutral
+[13:22:07] [SUCCESS] [B] tau(z<6) = 0.054; tau=1 surface at z = 1080
+[13:22:07] [SUCCESS] [B] Trough LyC tau ~ 2.4e+10 (saturated)
+[13:22:07] [SUCCESS]   check wing_matches_tau_reion: True
+[13:22:07] [SUCCESS]   check thin_column_preserved: True
+[13:22:07] [SUCCESS]   check tau1_surface_at_edge: True
+[13:22:07] [SUCCESS]   check trough_saturated: True
+[13:22:07] [SUCCESS] [WRITE] /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_14_opacity_three_point.json

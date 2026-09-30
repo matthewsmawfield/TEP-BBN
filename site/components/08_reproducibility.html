@@ -14,7 +14,7 @@
         GitHub Repository: <a href="https://github.com/matthewsmawfield/TEP-BBN">github.com/matthewsmawfield/TEP-BBN</a>
     </p>
     <p>
-        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 18 analysis steps across 4 phases: core gates (1–8), Gate 8 calibration (step\_08b, true-D injection Monte Carlo), Gate 8 wavelength-systematics sensitivity (step\_08c), disformal transport, the steady-state and ionization-equilibrium ledgers (step\_11, step\_12), secondary robustness analyses, and manuscript finalization.
+        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 24 analysis steps across 4 phases: core gates (1–8), Gate 8 calibration (step\_08b, true-D injection Monte Carlo), Gate 8 wavelength- and parent-centroid-systematics sensitivity (step\_08c, step\_08d), disformal transport, the steady-state and ionization-equilibrium ledgers (step\_11, step\_12), the deuterium production and extended-channel ledgers (step\_13, step\_15), the species-resolved opacity three-point test (step\_14), the boundary-transport consistency audit (step\_16), the literature-input inversion and channel-budget audit (step\_17), the boundary self-consistency solve (step\_18), secondary robustness analyses, and manuscript finalization.
         All steps are orchestrated by <code>scripts/run_pipeline.py</code> with comprehensive per-step logging, SHA-256 checksum manifest generation, and a pipeline summary ledger.
     </p>
     <p>
@@ -32,7 +32,7 @@ TEP-BBN/
 │   ├── literature_components/     # Published VPFIT model files and component tables
 │   └── processed/                 # Pipeline-ready union manifests
 ├── scripts/
-│   ├── steps/                     # pipeline steps (01-12 + lettered substeps, secondary, finalize)
+│   ├── steps/                     # pipeline steps (01-17 + lettered substeps, secondary, finalize)
 │   ├── lib/                       # Physical RT engine, Voigt fitters, model parsers
 │   ├── utils/                     # Logging, isotopic shift, shear model utilities
 │   └── run_pipeline.py            # Master orchestration script (4-phase pipeline)
@@ -142,7 +142,7 @@ TEP-BBN/
 
     <h3>Pipeline Architecture</h3>
     <p>
-        The analysis pipeline comprises 4 phases and 18 steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, opacity boundary analysis, Gate 8 true-D injection calibration, wavelength-systematics sensitivity, disformal transport calibration, the steady-state timescale/thermalization ledger (Gate 11), the VMO ionization-equilibrium budget (Gate 12), secondary robustness checks, and manuscript number finalization.
+        The analysis pipeline comprises 4 phases and 24 steps spanning spectroscopic ingestion to thermodynamic evaluation, helium synthesis, opacity boundary analysis, Gate 8 true-D injection calibration, wavelength- and parent-centroid-systematics sensitivity, disformal transport calibration, the steady-state timescale/thermalization ledger (Gate 11), the VMO ionization-equilibrium budget (Gate 12), the deuterium production ledger (Gate 13), the species-resolved opacity three-point test (Step 14), the extended deuterium channels ledger (Step 15), the boundary-transport consistency audit (Step 16), the literature-input inversion and channel-budget audit (Step 17), the boundary self-consistency solve (Step 18), secondary robustness checks, and manuscript number finalization.
         Each step is a standalone Python script in <code>scripts/steps/</code> that produces serialized JSON outputs and
         detailed logs with SHA-256 checksum verification.
     </p>
@@ -241,6 +241,13 @@ TEP-BBN/
                 <td style="padding: 0.4em;">~1 s</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">1</td>
+                <td style="padding: 0.4em;">08D</td>
+                <td style="padding: 0.4em;"><code>step_08d_parent_centroid_systematics.py</code></td>
+                <td style="padding: 0.4em;">Gate 8 parent-centroid blend-bias sensitivity (parent velocity perturbed inside the MC loop, blend-alone and joint sign-matched bounds, $N=100\,000$ MC)</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
                 <td style="padding: 0.4em;">2</td>
                 <td style="padding: 0.4em;">09</td>
                 <td style="padding: 0.4em;"><code>step_09_disformal_transport.py</code></td>
@@ -260,6 +267,83 @@ TEP-BBN/
                 <td style="padding: 0.4em;"><code>step_09b_screening_plot.py</code></td>
                 <td style="padding: 0.4em;">Screening function visualization and JSON ledger</td>
                 <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">10</td>
+                <td style="padding: 0.4em;"><code>step_10_covariant_transport.py</code></td>
+                <td style="padding: 0.4em;">Full covariant transport solver ($\omega = -u^\mu k_\mu$) and ambient-lapse self-consistency</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">11</td>
+                <td style="padding: 0.4em;"><code>step_11_steady_state_budget.py</code></td>
+                <td style="padding: 0.4em;">Gate 11 steady-state timescale and thermalization-depth budget</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">12</td>
+                <td style="padding: 0.4em;"><code>step_12_vmo_ionization_budget.py</code></td>
+                <td style="padding: 0.4em;">Gate 12 VMO-branch ionization-equilibrium budget over the ($\xi$, $f_{\rm esc}$) plane</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">13</td>
+                <td style="padding: 0.4em;"><code>step_13_deuterium_production_ledger.py</code></td>
+                <td style="padding: 0.4em;">Gate 13 deuterium supply-versus-demand ledger ($f\,\varepsilon_D = 2.04\times10^{-5}$)</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">14</td>
+                <td style="padding: 0.4em;"><code>step_14_opacity_three_point.py</code></td>
+                <td style="padding: 0.4em;">Species-resolved opacity three-point test; admissible profile and KODIAQ LLS pilot inversion</td>
+                <td style="padding: 0.4em;">~2 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">15</td>
+                <td style="padding: 0.4em;"><code>step_15_deuterium_extended_channels.py</code></td>
+                <td style="padding: 0.4em;">Extended deuterium channels: VMO ejecta, collapse neutrino process, protected reservoirs</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">16</td>
+                <td style="padding: 0.4em;"><code>step_16_boundary_transport.py</code></td>
+                <td style="padding: 0.4em;">Boundary-transport consistency audit on the Step-14 profile: visibility function, geometric diffusion analogue, conditional Saha ionization, recombination/emissivity ledger, $\Gamma$-equilibrium requirements</td>
+                <td style="padding: 0.4em;">~5 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">17</td>
+                <td style="padding: 0.4em;"><code>step_17_inversion_and_channel_budgets.py</code></td>
+                <td style="padding: 0.4em;">Literature-input absorber audit and deuterium channel budgets: net-yield ejecta closure, neutrino capture-radius thresholds, reservoir mixing bookkeeping</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">18</td>
+                <td style="padding: 0.4em;"><code>step_18_boundary_selfconsistency.py</code></td>
+                <td style="padding: 0.4em;">Boundary self-consistency solve: coupled ionization front (self-shielded $\Gamma$ transition), Compton-equilibrium front temperature, absorptive-edge visibility kernel, homologous-collapse neutrino transit exposure, reservoir longevity timescale</td>
+                <td style="padding: 0.4em;">~5 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">19</td>
+                <td style="padding: 0.4em;"><code>step_19_eternal_surface_reconciliation.py</code></td>
+                <td style="padding: 0.4em;">Eternal-vs-mapped-FLRW surface reconciliation: path-measure Jacobian, explicit diffusion-integral damping scale, TEP-TH kernel comparison</td>
+                <td style="padding: 0.4em;">~1 s</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0;">
+                <td style="padding: 0.4em;">2</td>
+                <td style="padding: 0.4em;">20</td>
+                <td style="padding: 0.4em;"><code>step_20_ambient_bath_front.py</code></td>
+                <td style="padding: 0.4em;">Ambient-bath ionization front: Planck LyC Wien-tail supply vs recombination demand, equilibrium $x_e(z)$, derived front depth and Thomson surface on the computed profile</td>
+                <td style="padding: 0.4em;">~1 min</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
                 <td style="padding: 0.4em;">2</td>
@@ -294,12 +378,12 @@ TEP-BBN/
         </tr>
         <tr style="border-bottom: 1px solid #d0d7e0;">
             <td style="padding: 0.4em;">Core Gates (Phase 1)</td>
-            <td style="padding: 0.4em;">10</td>
+            <td style="padding: 0.4em;">9</td>
             <td style="padding: 0.4em;">~45 min per sightline</td>
         </tr>
         <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
             <td style="padding: 0.4em;">Disformal + Secondary (Phases 2–3)</td>
-            <td style="padding: 0.4em;">4</td>
+            <td style="padding: 0.4em;">14</td>
             <td style="padding: 0.4em;">~10 min per sightline</td>
         </tr>
         <tr style="border-bottom: 1px solid #d0d7e0;">
@@ -309,7 +393,7 @@ TEP-BBN/
         </tr>
         <tr style="border-bottom: 2px solid #4a7fb5; font-weight: 600;">
             <td style="padding: 0.4em;">Total (3 sightlines)</td>
-            <td style="padding: 0.4em;">15</td>
+            <td style="padding: 0.4em;">24</td>
             <td style="padding: 0.4em;">~2 hr</td>
         </tr>
     </table>
@@ -433,7 +517,7 @@ python scripts/run_pipeline.py --n-sims 500
 
     <h4>Version Changelog (v0.2 → v0.3)</h4>
     <p>
-        The following changes were applied between v0.2 (Thika) and v0.3 (Dubai):
+        The following changes were applied between v0.2 (Dubai) and v0.3 (Dubai):
     </p>
     <table class="data-table" style="font-size: 0.9em;">
         <thead>

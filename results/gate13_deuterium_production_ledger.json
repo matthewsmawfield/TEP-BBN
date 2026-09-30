@@ -1,0 +1,41 @@
+{
+  "step": "step_13_deuterium_production_ledger",
+  "demand": {
+    "DH_ISM": 1.7e-05,
+    "X_D_ISM_mass_fraction": 3.4e-05,
+    "return_fraction_R": 0.4,
+    "required_yield_per_astrated_mass": 2.0399999999999998e-05
+  },
+  "supply_channels": {
+    "galactic_cosmic_ray_spallation": {
+      "yield_per_astrated_mass": 1.7e-07,
+      "shortfall": 120.0,
+      "status": "insufficient (~120x short)"
+    },
+    "neutrino_process_He_shells": {
+      "yield_per_astrated_mass": 1e-08,
+      "shortfall": 2039.9999999999998,
+      "status": "insufficient (~2000x short)"
+    },
+    "pms_envelope_recycling_or_pristine_inflow": {
+      "yield_per_astrated_mass": 0.0,
+      "shortfall": Infinity,
+      "status": "zero net production"
+    }
+  },
+  "tep_native_channel": {
+    "demand_per_astrated_mass": 2.0399999999999998e-05,
+    "required_transit_fraction_vs_enrichment": {
+      "eps_1e-6": 20.4,
+      "eps_1e-4": 0.20399999999999996,
+      "eps_1e-2": 0.0020399999999999997,
+      "eps_ISM": 0.6
+    },
+    "interpretation": "if a fraction f of astrated mass transits a spallation-active surface and returns with D mass fraction eps_D, closure requires f x eps_D = 2.04e-05.  E.g. eps_D = 1e-2 (strong spallation zone) needs f = 2.0e-3; eps_D = 1e-4 needs f = 0.20; enrichment only to the ISM level (eps_D = X_D_ISM) requires f = 0.6 \u2014 every astrated parcel must pass through the zone, which no surface geometry supplies.  In eternal cosmology the emissivity rate is NOT the bottleneck (external exposure is unbounded); the bottleneck is the fraction of baryons cycled through the producing geometry per astration epoch."
+  },
+  "thresholds": {
+    "he4_photodisintegration_MeV": 19.8,
+    "hadron_spallation_MeV": 30.0
+  },
+  "verdict": "The standing ISM D/H requires a yield of 2.0e-5 D per unit astrated mass.  Documented channels supply 10^-7-10^-8 \u2014 shortfalls of 120-2000x.  A TEP-native well-adjacent spallation channel closes the ledger only if the processed fraction f satisfies f x eps_D = 2.0e-5; the viability condition is a throughput statement, computable once the horizon-transport solution fixes eps_D.  Gate D item d1 remains open but is now a quantified budget rather than an open-ended debt."
+}

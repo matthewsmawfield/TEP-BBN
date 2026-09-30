@@ -137,7 +137,7 @@
   "predictive_closure_negative_B0": {
     "B_phi_form": "B\u2080(\u03c6/M_Pl)^5 with B\u2080 < 0",
     "max_dv_kms": 0.05125496992830787,
-    "verdict": "B < 0 is always Lorentzian (N\u00b2 = A\u00b2 + |B|\u03c6\u0307\u00b2 > A\u00b2): no boundary, no amplification \u2014 |\u0394v| bounded at the conformal scale (~0.05 km/s). B < 0 is independently excluded by the null-cone condition (Paper 0 \u00a74). Near-critical amplification requires B > 0 (N\u00b2 \u2192 0)."
+    "verdict": "B < 0 is lapse-safe for the timelike ambient gradient (N\u00b2 = A\u00b2 + |B|\u03c6\u0307\u00b2 > A\u00b2): no boundary, no amplification \u2014 |\u0394v| bounded at the conformal scale (~0.05 km/s). The negative branch is not excluded a priori (Paper 0 \u00a74 pointwise admissibility ledger), but its ambient fluid-hyperbolicity wall binds at |B0| \u2272 10\u207b\u00b2 at absorber-epoch densities (Gate 10c), so it cannot carry phenomenological amplitudes ungated either. Near-critical amplification requires B > 0 (N\u00b2 \u2192 0)."
   },
   "predictive_closure_envelope": {
     "B_phi_form": "B\u2080 \u03c6\u0303\u00b2/(1+\u03c6\u0303\u00b2) exp(-\u03c6\u0303\u2074/2\u03c3_B\u2074)  [Paper-0/28 envelope]",
@@ -1023,7 +1023,32 @@
         "cassini_gamma": 1.1316706540532247e-14,
         "cassini_pass": true,
         "gw170817_dc": 0.0,
-        "gw170817_pass": true
+        "gw170817_pass": true,
+        "ambient_self_consistency": [
+          {
+            "id": "Q1009+2956",
+            "u_ambient": 0.9999191874003358,
+            "one_minus_u": 8.081259966419285e-05,
+            "presented_1pz_at_conformal_placement": 389.8067420684956,
+            "required_phi_bar_for_observed_z": -3.4577265850071583
+          },
+          {
+            "id": "PKS1937-101",
+            "u_ambient": 0.9999408937705481,
+            "one_minus_u": 5.910622945193289e-05,
+            "presented_1pz_at_conformal_placement": 594.6885736239444,
+            "required_phi_bar_for_observed_z": -3.3481363709818934
+          },
+          {
+            "id": "J1332+0052",
+            "u_ambient": 0.9999391422470708,
+            "one_minus_u": 6.085775292918871e-05,
+            "presented_1pz_at_conformal_placement": 566.7121953677358,
+            "required_phi_bar_for_observed_z": -3.3671197532271107
+          }
+        ],
+        "ambient_self_consistent": false,
+        "ambient_exclusion_note": "u(phi) ~ exp(delta phi) makes the ambient boundary factor near-critical whenever the well is near-critical; the matter-metric map 1+z = N(0)/N(phibar) then requires phi_bar < 0 for the observed absorber redshifts, so the tracked-criticality branch is excluded by the ambient-lapse self-consistency requirement (issue 29-1)."
       }
     }
   },

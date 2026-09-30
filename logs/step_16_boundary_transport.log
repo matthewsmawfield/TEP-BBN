@@ -1,0 +1,11 @@
+[13:22:07] [INFO] ================================================================================
+[13:22:07] [INFO] Script: step_16_boundary_transport
+[13:22:07] [INFO] Started: 2026-09-29T13:22:07.332670
+[13:22:07] [INFO] ================================================================================
+[13:22:07] [SUCCESS] === STEP 16: ETERNAL-NATIVE BOUNDARY TRANSPORT ===
+[13:22:07] [PROCESS] [A] imposed-wall peak z=1080.000, wall probability=55.4%, rms=247.7
+[13:22:07] [PROCESS] [B] conditional angular ratio 1241; not a Silk damping prediction
+[13:22:07] [PROCESS] [C] conditional LTE x_e: 0.988-0.834
+[13:22:07] [PROCESS] [D] wall demand 4.5e+07/cm2/s; trial supply margins [97.48831, 0.09749, 0.0001]
+[13:22:07] [PROCESS] [E] required Gamma drop 4.1e+10; neutral LyC mfp 0.20 Mpc
+[13:22:07] [SUCCESS] [WRITE] /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_16_boundary_transport.json

@@ -17,6 +17,13 @@
   "leave_one_out": [
     {
       "type": "coadd",
+      "excluded": "q1011p2941_C5x2.dat",
+      "T": 139.8721395538305,
+      "LL_D": -13424.78281952515,
+      "LL_H": -13354.846749748234
+    },
+    {
+      "type": "coadd",
       "excluded": "q1011p2941_C5x1.dat",
       "T": 77.31483847512573,
       "LL_D": -10290.308787174356,
@@ -35,13 +42,6 @@
       "T": 141.02960699288087,
       "LL_D": -12737.751700280673,
       "LL_H": -12667.236896784232
-    },
-    {
-      "type": "coadd",
-      "excluded": "q1011p2941_C5x2.dat",
-      "T": 139.8721395538305,
-      "LL_D": -13424.78281952515,
-      "LL_H": -13354.846749748234
     },
     {
       "type": "transition",
@@ -202,17 +202,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900006,
-      "seed": 900006,
-      "logL_D_max": -15514.208444377444,
-      "logL_D_canonical": -15514.208444377444,
-      "logL_Hfree": -15514.204122031515,
-      "T_parent": 0.00864469185762573,
-      "T_standard": 0.00864469185762573,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900010,
       "seed": 900010,
       "logL_D_max": -15663.099888456178,
@@ -220,6 +209,17 @@
       "logL_Hfree": -15662.493377509525,
       "T_parent": 1.2130218933052674,
       "T_standard": 1.2130218933052674,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900006,
+      "seed": 900006,
+      "logL_D_max": -15514.208444377444,
+      "logL_D_canonical": -15514.208444377444,
+      "logL_Hfree": -15514.204122031515,
+      "T_parent": 0.00864469185762573,
+      "T_standard": 0.00864469185762573,
       "converged_D": true,
       "converged_H": true
     },
@@ -389,17 +389,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900028,
-      "seed": 900028,
-      "logL_D_max": -15620.393300648298,
-      "logL_D_canonical": -15620.393300648298,
-      "logL_Hfree": -15620.384405561348,
-      "T_parent": 0.01779017390072113,
-      "T_standard": 0.01779017390072113,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900023,
       "seed": 900023,
       "logL_D_max": -15526.21081085773,
@@ -407,6 +396,17 @@
       "logL_Hfree": -15526.108131202913,
       "T_parent": 0.20535930963524152,
       "T_standard": 0.20535930963524152,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900028,
+      "seed": 900028,
+      "logL_D_max": -15620.393300648298,
+      "logL_D_canonical": -15620.393300648298,
+      "logL_Hfree": -15620.384405561348,
+      "T_parent": 0.01779017390072113,
+      "T_standard": 0.01779017390072113,
       "converged_D": true,
       "converged_H": true
     },
@@ -477,17 +477,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900032,
-      "seed": 900032,
-      "logL_D_max": -15718.487644466673,
-      "logL_D_canonical": -15718.487644466673,
-      "logL_Hfree": -15718.320117471594,
-      "T_parent": 0.33505399015848525,
-      "T_standard": 0.33505399015848525,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900031,
       "seed": 900031,
       "logL_D_max": -15655.496324869355,
@@ -495,6 +484,17 @@
       "logL_Hfree": -15655.332460748494,
       "T_parent": 0.3277282417220704,
       "T_standard": 0.3277282417220704,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900032,
+      "seed": 900032,
+      "logL_D_max": -15718.487644466673,
+      "logL_D_canonical": -15718.487644466673,
+      "logL_Hfree": -15718.320117471594,
+      "T_parent": 0.33505399015848525,
+      "T_standard": 0.33505399015848525,
       "converged_D": true,
       "converged_H": true
     },
@@ -532,17 +532,6 @@
       "converged_H": true
     },
     {
-      "simulation_id": 900042,
-      "seed": 900042,
-      "logL_D_max": -15621.82019814614,
-      "logL_D_canonical": -15621.82019814614,
-      "logL_Hfree": -15621.477334177112,
-      "T_parent": 0.685727938056516,
-      "T_standard": 0.685727938056516,
-      "converged_D": true,
-      "converged_H": true
-    },
-    {
       "simulation_id": 900038,
       "seed": 900038,
       "logL_D_max": -15475.417871269334,
@@ -550,6 +539,17 @@
       "logL_Hfree": -15475.354174307387,
       "T_parent": 0.12739392389266868,
       "T_standard": 0.12739392389266868,
+      "converged_D": true,
+      "converged_H": true
+    },
+    {
+      "simulation_id": 900042,
+      "seed": 900042,
+      "logL_D_max": -15621.82019814614,
+      "logL_D_canonical": -15621.82019814614,
+      "logL_Hfree": -15621.477334177112,
+      "T_parent": 0.685727938056516,
+      "T_standard": 0.685727938056516,
       "converged_D": true,
       "converged_H": true
     },

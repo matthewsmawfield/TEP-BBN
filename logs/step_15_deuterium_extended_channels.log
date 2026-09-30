@@ -1,0 +1,12 @@
+[10:26:27] [INFO] ================================================================================
+[10:26:27] [INFO] Script: step_15_deuterium_extended_channels
+[10:26:27] [INFO] Started: 2026-09-29T10:26:27.456303
+[10:26:27] [INFO] ================================================================================
+[10:26:27] [SUCCESS] === STEP 15: EXTENDED DEUTERIUM CHANNELS ===
+[10:26:27] [PROCESS] demand: f x eps_D = 2.04e-05
+[10:26:27] [SUCCESS] [1] partial-burning ejecta: f_req 0.051-1.02 — viable in documented range
+[10:26:27] [SUCCESS] [2] nu-process: same scale; transport fixed by A2 (near-null nu on g~, transient irradiation)
+[10:26:27] [SUCCESS] [3] reservoir: f_mix = 0.120 (N_exp=1e3), 0.0120 (N_exp=1e4)
+[10:26:27] [SUCCESS] [WRITE] /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate15_deuterium_extended_channels.json
+[10:26:27] [SUCCESS]   [OK] 0.0s
+[10:26:27] [PROCESS] [RUN] step_16_boundary_transport: Gate 16: Eternal-Native Boundary Transport

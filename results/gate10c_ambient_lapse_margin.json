@@ -1,0 +1,142 @@
+{
+  "step": "step_10c_ambient_lapse_margin",
+  "inputs": {
+    "backgrounds_source": "gate10_covariant_transport.json",
+    "convention": "corpus dimensionless B0 (Paper 0 step_50/52)",
+    "lapse_invariant": "u_bound = B(phibar) phi_dot^2 / A^2 < 1",
+    "matter_frame_note": "self-consistent matter-frame form N~^2 = A^2/(1 + B M_Pl^2 H_T^2 N^2) approaches criticality only asymptotically; the same covariant u_bound applies"
+  },
+  "sightlines": {
+    "Q1009+2956": {
+      "z_abs": 2.5042,
+      "phibar_over_MPl": 1.2539622490708502,
+      "A": 0.28537183950687744,
+      "H_T_over_H0": 3.6890189194725473,
+      "shape_canonical": 0.1775531396731555,
+      "shape_descent": 0.28536029818105707,
+      "B0_lapse_cap_positive_branch": 0.033703275309630146,
+      "B0_lapse_cap_descent_form": 0.02097040964225771,
+      "B0_fluid_cap_w0": 0.01267806238360317,
+      "B0_fluid_cap_w1": 0.006339031191801585,
+      "rho_m_GeV4": 4.773696645526123e-46,
+      "G_ambient_required_at_B0_52": 0.0006481399098005798,
+      "G_ambient_required_at_B0_77": 0.00043376158699652697,
+      "G_ambient_required_at_B0_420": 8.024589359435749e-05
+    },
+    "PKS1937-101": {
+      "z_abs": 3.572,
+      "phibar_over_MPl": 1.5199507459325643,
+      "A": 0.21872265966754156,
+      "H_T_over_H0": 5.419484032119663,
+      "shape_canonical": 0.04839803373975344,
+      "shape_descent": 0.21871856170879658,
+      "B0_lapse_cap_positive_branch": 0.033654563065441595,
+      "B0_lapse_cap_descent_form": 0.007447080238697425,
+      "B0_fluid_cap_w0": 0.012301748405010342,
+      "B0_fluid_cap_w1": 0.006150874202505171,
+      "rho_m_GeV4": 1.060246449309312e-45,
+      "G_ambient_required_at_B0_52": 0.0006472031358738769,
+      "G_ambient_required_at_B0_77": 0.0004331346597868931,
+      "G_ambient_required_at_B0_420": 8.012991206057522e-05
+    },
+    "J1332+0052": {
+      "z_abs": 3.421,
+      "phibar_over_MPl": 1.486365914844106,
+      "A": 0.22619316896629724,
+      "H_T_over_H0": 5.15973382436536,
+      "shape_canonical": 0.05997385779897515,
+      "shape_descent": 0.22618853484243995,
+      "B0_lapse_cap_positive_branch": 0.03204368015513213,
+      "B0_lapse_cap_descent_form": 0.008496377229369408,
+      "B0_fluid_cap_w0": 0.011742514552592816,
+      "B0_fluid_cap_w1": 0.005871257276296408,
+      "rho_m_GeV4": 9.586271090543335e-46,
+      "G_ambient_required_at_B0_52": 0.0006162246183679255,
+      "G_ambient_required_at_B0_77": 0.00041240257599912646,
+      "G_ambient_required_at_B0_420": 7.62944765598384e-05
+    }
+  },
+  "redshift_scan": [
+    {
+      "z": 0.5,
+      "phibar": 0.4054651081081644,
+      "shape": 0.1392948285312614,
+      "B0_lapse_cap": 1.8631675370277712
+    },
+    {
+      "z": 1.0,
+      "phibar": 0.6931471805599453,
+      "shape": 0.2891552546255066,
+      "B0_lapse_cap": 0.2788991726772127
+    },
+    {
+      "z": 1.5,
+      "phibar": 0.9162907318741551,
+      "shape": 0.3208313261874898,
+      "B0_lapse_cap": 0.09256694545068908
+    },
+    {
+      "z": 2.0,
+      "phibar": 1.0986122886681098,
+      "shape": 0.26398097502566226,
+      "B0_lapse_cap": 0.047830199221876486
+    },
+    {
+      "z": 2.5,
+      "phibar": 1.252762968495368,
+      "shape": 0.17826089452899402,
+      "B0_lapse_cap": 0.033765102978076104
+    },
+    {
+      "z": 3.0,
+      "phibar": 1.3862943611198906,
+      "shape": 0.10376606800479408,
+      "B0_lapse_cap": 0.030267153588616622
+    },
+    {
+      "z": 3.5,
+      "phibar": 1.5040773967762742,
+      "shape": 0.053667790590051646,
+      "B0_lapse_cap": 0.03281874499161425
+    },
+    {
+      "z": 4.0,
+      "phibar": 1.6094379124341003,
+      "shape": 0.02519108137403435,
+      "B0_lapse_cap": 0.04156710874379076
+    },
+    {
+      "z": 5.0,
+      "phibar": 1.791759469228055,
+      "shape": 0.004407258430063289,
+      "B0_lapse_cap": 0.09622494734025897
+    },
+    {
+      "z": 6.0,
+      "phibar": 1.9459101490553132,
+      "shape": 0.0006091805342007509,
+      "B0_lapse_cap": 0.32336882393461985
+    },
+    {
+      "z": 8.0,
+      "phibar": 2.1972245773362196,
+      "shape": 7.195496648662005e-06,
+      "B0_lapse_cap": 7.820195002109319
+    },
+    {
+      "z": 10.0,
+      "phibar": 2.3978952727983707,
+      "shape": 5.6386831618519905e-08,
+      "B0_lapse_cap": 366.4181233762983
+    }
+  ],
+  "gate_budget": {
+    "gate10b_keys": {}
+  },
+  "verdict": {
+    "tightest_realized_B0_lapse_cap": 0.03204368015513213,
+    "today_ambient": "phibar(0)=0 => shape=0 => uncapped today",
+    "interpretation": "The corpus-envelope ambient lapse cap bottoms out at B0 ~ 0.03 in the absorber window (z ~ 2.5-3.5, phibar ~ ln(1+z) ~ 1.25-1.5, du/dt ~ 4-5 H0), versus phenomenological B0 ~ 52-78. An ungated envelope is supercritical at absorber-epoch ambients by ~10^3: the ambient-closed environment gate is therefore lapse-mandated, independently of the absorber-amplitude argument of Gate 10-b, with required suppression G_ambient <~ 4.1e-04 at B0 = 78 \u2014 the same order as the in-well saturation G ~ 10^-3 inferred phenomenologically.",
+    "negative_branch": "B<0 is lapse-safe in the drift channel but bounded by the ambient fluid wall |B0| <~ 10^-3 at absorber densities: neither sign can carry phenomenological amplitudes ungated."
+  }
+}

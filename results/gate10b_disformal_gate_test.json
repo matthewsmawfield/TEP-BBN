@@ -1,0 +1,58 @@
+{
+  "step": "10b",
+  "purpose": "Can a structure-activated gate B_eff = B(phi)*G(X_local) rescue the disformal amplitude channel excluded by 29-1?",
+  "model": "u_i = G(dphi_i) * u_bar_i; ambient G(0)=0 restores the conformal map; intra-well contrast supplies Delta_v",
+  "joint_B0_eVinv4": 75579316054.82053,
+  "per_sightline": [
+    {
+      "id": "Q1009+2956",
+      "dv_obs_kms": -78.9,
+      "dphi_edge_MPl": 5.501411348093412e-09,
+      "dphi_core_MPl": 1.814038680072271e-08,
+      "log_depth_span": 1.193136099478207,
+      "u_bar_unscreened": 0.9999191874003358,
+      "required_u_contrast": 0.0005262256369200635,
+      "required_gate_contrast_dG": 0.00052626816601868,
+      "required_dG_d_ln_dphi": 0.0004410797445897684
+    },
+    {
+      "id": "PKS1937-101",
+      "dv_obs_kms": -76.0,
+      "dphi_edge_MPl": 1.0481151449270394e-08,
+      "dphi_core_MPl": 3.455517019794109e-08,
+      "log_depth_span": 1.1929786389816668,
+      "u_bar_unscreened": 0.9999408937705481,
+      "required_u_contrast": 0.0005068889130868115,
+      "required_gate_contrast_dG": 0.0005069188751501597,
+      "required_dG_d_ln_dphi": 0.0004249186520077748
+    },
+    {
+      "id": "J1332+0052",
+      "dv_obs_kms": -118.0,
+      "dphi_edge_MPl": 4.672267009196503e-08,
+      "dphi_core_MPl": 1.4836128082283695e-07,
+      "log_depth_span": 1.1554208979648342,
+      "u_bar_unscreened": 0.9999391422470708,
+      "required_u_contrast": 0.0007869014951700226,
+      "required_gate_contrast_dG": 0.0007869493871413931,
+      "required_dG_d_ln_dphi": 0.0006810932609298748
+    }
+  ],
+  "consistency": {
+    "dG_dln_dphi_values": [
+      0.0004410797445897684,
+      0.0004249186520077748,
+      0.0006810932609298748
+    ],
+    "max_over_min": 1.602879181018895,
+    "log_slope_scatter_rms": 0.26228397570946616,
+    "interpretation": "The three required gate slopes agree within a factor 1.60 per e-fold of depth. A single monotone log/saturating gate predicts equal slopes; the residual ~50% scatter (dominated by J1332) is the consistency budget of a common G(dphi)."
+  },
+  "ordering_caveat": "Parent depths {5.5e-9, 1.05e-8, 4.67e-8} interleave with feature depths {1.81e-8, 3.46e-8, 1.48e-7}: a monotone u(dphi) makes the per-sightline baselines differ, which is admissible (each sightline's uniform level is absorbed by its own redshift anchor) but removes any common-level statement.",
+  "population_bound": {
+    "reference_depth_cluster_dphi": 1e-05,
+    "required_saturation_G_max": 0.0030001773291696144,
+    "note": "To avoid >few x 10^3 km/s internal disformal displacements in structures deeper than the DLA hosts (clusters at delta_phi ~ 1e-5), the gate must saturate: G(1e-5) <~ few x 1e-3 / u_bar. A saturating activation with G_max ~ 1e-3 / u_bar satisfies this; a steep non-saturating gate would reopen the exclusion at cluster depths."
+  },
+  "verdict": "PARTIALLY VIABLE. A structure-activated coupling B_eff = B(phi)*G(X_local) with G closed in the ambient and saturating at G ~ 1e-3 inside nonlinear wells restores the ambient redshift map (u_ambient = 0) while supplying the intra-well u-contrasts the three sightlines require. The required gate slopes agree across sightlines within a factor ~1.6 \u2014 neither a clean fit nor an exclusion \u2014 and the mechanism converts the spectroscopic result into a measurable functional requirement on the disformal sector. Present-day environments are automatically protected by the small-field suppression of the tracked B form (phi_total ~ delta_phi << phi_c), so Cassini/GW170817 bounds are untouched. The channel is therefore NOT excluded in principle but requires a beyond-B(phi) coupling: the disformal sector must be environment-activated, a D2(phi,X)-class generalisation beyond the purely field-tracking forms tested so far."
+}

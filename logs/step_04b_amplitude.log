@@ -1,133 +1,133 @@
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] Script: step_04b_amplitude
-[13:07:21] [INFO] Started: 2026-09-23T13:07:21.665555
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [SUCCESS] === GATE 4B: ABSORBER AMPLITUDE CALCULATION (CORRECTED) ===
-[13:07:21] [INFO] 
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] Script: step_04b_amplitude
+[10:26:11] [INFO] Started: 2026-09-29T10:26:11.997928
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [SUCCESS] === GATE 4B: ABSORBER AMPLITUDE CALCULATION (CORRECTED) ===
+[10:26:11] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
 --- Fail-Fast Validation ---
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
-[13:07:21] [SUCCESS]   ✓ log N_HI = 17.362 matches Zavarygin et al. 2018 Table 5
-[13:07:21] [SUCCESS]   ✓ z_abs = 2.5042 within Q1009+2956 range
-[13:07:21] [SUCCESS]   ✓ β_A = -1.0 (bare, unscreened)
-[13:07:21] [SUCCESS]   ✓ N_HI < 10^18 (LLS, not DLA) — no cross-sightline contamination
-[13:07:21] [INFO] 
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
+[10:26:11] [SUCCESS]   ✓ log N_HI = 17.362 matches Zavarygin et al. 2018 Table 5
+[10:26:11] [SUCCESS]   ✓ z_abs = 2.5042 within Q1009+2956 range
+[10:26:11] [SUCCESS]   ✓ β_A = -1.0 (bare, unscreened)
+[10:26:11] [SUCCESS]   ✓ N_HI < 10^18 (LLS, not DLA) — no cross-sightline contamination
+[10:26:11] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
 --- Frozen Parameters ---
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
-[13:07:21] [PROCESS]   β_A (bare, unscreened) = -1.0
-[13:07:21] [PROCESS]   log N_HI = 17.362 ± 0.005 (Zavarygin et al. 2018, Table 5)
-[13:07:21] [PROCESS]   z_abs = 2.5042
-[13:07:21] [PROCESS]   dv_observed = 78.9 km/s (cloud kinematic velocity, NOT a TEP target)
-[13:07:21] [PROCESS]   Γ = 1.0e-12 s⁻¹ (Haardt & Madau 2012)
-[13:07:21] [PROCESS]   α_rec = 2.6e-13 cm³/s (T~10⁴ K)
-[13:07:21] [PROCESS]   NOTE: The -81.6 km/s offset is explained by the velocity-selection
-[13:07:21] [PROCESS]   theorem (Gate 6-I). TEP does not need to produce this offset.
-[13:07:21] [PROCESS]   TEP's conformal prediction is computed below (~0.005-0.009 km/s).
-[13:07:21] [INFO] 
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
+[10:26:11] [PROCESS]   β_A (bare, unscreened) = -1.0
+[10:26:11] [PROCESS]   log N_HI = 17.362 ± 0.005 (Zavarygin et al. 2018, Table 5)
+[10:26:11] [PROCESS]   z_abs = 2.5042
+[10:26:11] [PROCESS]   dv_observed = 78.9 km/s (cloud kinematic velocity, NOT a TEP target)
+[10:26:11] [PROCESS]   Γ = 1.0e-12 s⁻¹ (Haardt & Madau 2012)
+[10:26:11] [PROCESS]   α_rec = 2.6e-13 cm³/s (T~10⁴ K)
+[10:26:11] [PROCESS]   NOTE: The -81.6 km/s offset is explained by the velocity-selection
+[10:26:11] [PROCESS]   theorem (Gate 6-I). TEP does not need to produce this offset.
+[10:26:11] [PROCESS]   TEP's conformal prediction is computed below (~0.005-0.009 km/s).
+[10:26:11] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
 --- Observational Constraint on R ---
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
-[13:07:21] [PROCESS]   Main D/H components: z = 2.503587 to 2.503737
-[13:07:21] [PROCESS]   Velocity span: Δv = 12.8 km/s
-[13:07:21] [PROCESS]   This velocity width constrains the absorber size but does not
-[13:07:21] [PROCESS]   directly measure R. R remains a model parameter.
-[13:07:21] [PROCESS]   Results are presented as a function of R.
-[13:07:21] [INFO] 
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
+[10:26:11] [PROCESS]   Main D/H components: z = 2.503587 to 2.503737
+[10:26:11] [PROCESS]   Velocity span: Δv = 12.8 km/s
+[10:26:11] [PROCESS]   This velocity width constrains the absorber size but does not
+[10:26:11] [PROCESS]   directly measure R. R remains a model parameter.
+[10:26:11] [PROCESS]   Results are presented as a function of R.
+[10:26:11] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
 --- 1. Ionisation-Corrected Amplitude vs R ---
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
-[13:07:21] [PROCESS]   N_H = sqrt(N_HI × 2R × Γ / α_rec)
-[13:07:21] [PROCESS]   |Δv_conf| = 2 β_A² π G m_p N_H R / c
-[13:07:21] [PROCESS]   R =    1 kpc: log N_H = 19.87, x_HI = 3.1e-03, n_H = 1.20e-02 cm⁻³, |Δv_conf| = 0.00005 km/s, A_env(descriptive) = 1.5e+06
-[13:07:21] [PROCESS]   R =   10 kpc: log N_H = 20.37, x_HI = 9.8e-04, n_H = 3.79e-03 cm⁻³, |Δv_conf| = 0.00169 km/s, A_env(descriptive) = 4.7e+04
-[13:07:21] [PROCESS]   R =   30 kpc: log N_H = 20.61, x_HI = 5.7e-04, n_H = 2.19e-03 cm⁻³, |Δv_conf| = 0.00877 km/s, A_env(descriptive) = 9.0e+03
-[13:07:21] [PROCESS]   R =  100 kpc: log N_H = 20.87, x_HI = 3.1e-04, n_H = 1.20e-03 cm⁻³, |Δv_conf| = 0.05338 km/s, A_env(descriptive) = 1.5e+03
-[13:07:21] [PROCESS]   R =  300 kpc: log N_H = 21.11, x_HI = 1.8e-04, n_H = 6.91e-04 cm⁻³, |Δv_conf| = 0.27735 km/s, A_env(descriptive) = 2.8e+02
-[13:07:21] [INFO] 
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
+[10:26:11] [PROCESS]   N_H = sqrt(N_HI × 2R × Γ / α_rec)
+[10:26:11] [PROCESS]   |Δv_conf| = 2 β_A² π G m_p N_H R / c
+[10:26:11] [PROCESS]   R =    1 kpc: log N_H = 19.87, x_HI = 3.1e-03, n_H = 1.20e-02 cm⁻³, |Δv_conf| = 0.00005 km/s, A_env(descriptive) = 1.5e+06
+[10:26:11] [PROCESS]   R =   10 kpc: log N_H = 20.37, x_HI = 9.8e-04, n_H = 3.79e-03 cm⁻³, |Δv_conf| = 0.00169 km/s, A_env(descriptive) = 4.7e+04
+[10:26:11] [PROCESS]   R =   30 kpc: log N_H = 20.61, x_HI = 5.7e-04, n_H = 2.19e-03 cm⁻³, |Δv_conf| = 0.00877 km/s, A_env(descriptive) = 9.0e+03
+[10:26:11] [PROCESS]   R =  100 kpc: log N_H = 20.87, x_HI = 3.1e-04, n_H = 1.20e-03 cm⁻³, |Δv_conf| = 0.05338 km/s, A_env(descriptive) = 1.5e+03
+[10:26:11] [PROCESS]   R =  300 kpc: log N_H = 21.11, x_HI = 1.8e-04, n_H = 6.91e-04 cm⁻³, |Δv_conf| = 0.27735 km/s, A_env(descriptive) = 2.8e+02
+[10:26:11] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
 --- 2. Gate Status Assessment ---
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
-[13:07:21] [PROCESS]   Representative case: R = 30 kpc (model parameter, not directly measured)
-[13:07:21] [PROCESS]   log N_H = 20.61 (ionisation-corrected)
-[13:07:21] [PROCESS]   |Δv_conf| = 0.00877 km/s (TEP conformal prediction)
-[13:07:21] [PROCESS]   A_env(descriptive) = 9.0e+03 (ratio, NOT amplification requirement)
-[13:07:21] [PROCESS]   Spectral resolution ~ 2.6 km/s; conformal scale is 296× below resolution
-[13:07:21] [PROCESS] 
-[13:07:21] [INFO] 
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO]   GATE 4B STATUS:
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
-[13:07:21] [SUCCESS]     Conformal sign:        PASSED
-[13:07:21] [PROCESS]       (Clock shift Δln A is purely conformal for static field;
-[13:07:21] [PROCESS]        sign follows from β_A² > 0 and core-edge geometry)
-[13:07:21] [PROCESS]     Conformal-only amplitude: quantified, below calibration floor
-[13:07:21] [PROCESS]       (Poisson Green gives 0.0088 km/s; this is the signed
-[13:07:21] [PROCESS]        conformal baseline, not an observed spectral shift. The -81.6
-[13:07:21] [PROCESS]        km/s clustering is explained by velocity selection, Gate 6-I.)
-[13:07:21] [PROCESS]     Temporal-disformal channel (Gate 4B-IV): dominant geometry-dependent
-[13:07:21] [PROCESS]       (The temporal-disformal channel provides the dominant geometry-
-[13:07:21] [PROCESS]        dependent contribution. Fitted free-H displacements are the TEP targets.)
-[13:07:21] [INFO] 
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
+[10:26:11] [PROCESS]   Representative case: R = 30 kpc (model parameter, not directly measured)
+[10:26:11] [PROCESS]   log N_H = 20.61 (ionisation-corrected)
+[10:26:11] [PROCESS]   |Δv_conf| = 0.00877 km/s (TEP conformal prediction)
+[10:26:11] [PROCESS]   A_env(descriptive) = 9.0e+03 (ratio, NOT amplification requirement)
+[10:26:11] [PROCESS]   Spectral resolution ~ 2.6 km/s; conformal scale is 296× below resolution
+[10:26:11] [PROCESS] 
+[10:26:11] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO]   GATE 4B STATUS:
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
+[10:26:11] [SUCCESS]     Conformal sign:        PASSED
+[10:26:11] [PROCESS]       (Clock shift Δln A is purely conformal for static field;
+[10:26:11] [PROCESS]        sign follows from β_A² > 0 and core-edge geometry)
+[10:26:11] [PROCESS]     Conformal-only amplitude: quantified, below calibration floor
+[10:26:11] [PROCESS]       (Poisson Green gives 0.0088 km/s; this is the signed
+[10:26:11] [PROCESS]        conformal baseline, not an observed spectral shift. The -81.6
+[10:26:11] [PROCESS]        km/s clustering is explained by velocity selection, Gate 6-I.)
+[10:26:11] [PROCESS]     Temporal-disformal channel (Gate 4B-IV): dominant geometry-dependent
+[10:26:11] [PROCESS]       (The temporal-disformal channel provides the dominant geometry-
+[10:26:11] [PROCESS]        dependent contribution. Fitted free-H displacements are the TEP targets.)
+[10:26:11] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
 --- 3. Physical Interpretation ---
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
-[13:07:21] [PROCESS]   The conformal sector (A²(φ)g_μν) with the standard Poisson Green
-[13:07:21] [PROCESS]   function produces the correct SIGN (blueward). The conformal-only
-[13:07:21] [PROCESS]   amplitude is 0.0088 km/s for R = 30 kpc.
-[13:07:21] [PROCESS] 
-[13:07:21] [PROCESS]   KEY INSIGHT: The -81.6 km/s offset is NOT a TEP prediction target.
-[13:07:21] [PROCESS]   The velocity-selection theorem (Gate 6-I) explains the offset as a
-[13:07:21] [PROCESS]   selection effect: the D-search protocol selects ordinary H clouds
-[13:07:21] [PROCESS]   that happen to lie near the isotope-shifted position. The offset is
-[13:07:21] [PROCESS]   the cloud's kinematic velocity (a fitted nuisance parameter), not
-[13:07:21] [PROCESS]   a TEP-produced shift.
-[13:07:21] [PROCESS] 
-[13:07:21] [PROCESS]   TEP predicts a small conformal clock shift (~0.005 km/s) on top of
-[13:07:21] [PROCESS]   ordinary cloud kinematics. This is 296× below
-[13:07:21] [PROCESS]   spectral resolution and is not directly detectable in current spectra.
-[13:07:21] [PROCESS]   The decisive test is the orphan population (Gate 6), which tests the
-[13:07:21] [PROCESS]   velocity-selection theorem's prediction of a population of ordinary
-[13:07:21] [PROCESS]   H clouds at non-isotope offsets.
-[13:07:21] [PROCESS] 
-[13:07:21] [PROCESS]   NOTE on sign vs amplitude:
-[13:07:21] [PROCESS]     The clock shift Δln A is purely conformal (since ∂₀φ = 0 for a
-[13:07:21] [PROCESS]     static field, the disformal term B(φ)∇₀φ∇₀φ = 0 for g₀₀).
-[13:07:21] [PROCESS]     The SIGN of the clock shift is rigorous and independent of the
-[13:07:21] [PROCESS]     disformal sector. The temporal-disformal channel (Gate 4B-IV)
-[13:07:21] [PROCESS]     provides the dominant geometry-dependent contribution via the
-[13:07:21] [PROCESS]     cosmological ∂₀φ, with fitted free-H displacements as TEP targets.
-[13:07:21] [INFO] 
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
+[10:26:11] [INFO] ================================================================================
+[10:26:11] [INFO] 
+[10:26:11] [PROCESS]   The conformal sector (A²(φ)g_μν) with the standard Poisson Green
+[10:26:11] [PROCESS]   function produces the correct SIGN (blueward). The conformal-only
+[10:26:11] [PROCESS]   amplitude is 0.0088 km/s for R = 30 kpc.
+[10:26:11] [PROCESS] 
+[10:26:11] [PROCESS]   KEY INSIGHT: The -81.6 km/s offset is NOT a TEP prediction target.
+[10:26:11] [PROCESS]   The velocity-selection theorem (Gate 6-I) explains the offset as a
+[10:26:11] [PROCESS]   selection effect: the D-search protocol selects ordinary H clouds
+[10:26:11] [PROCESS]   that happen to lie near the isotope-shifted position. The offset is
+[10:26:11] [PROCESS]   the cloud's kinematic velocity (a fitted nuisance parameter), not
+[10:26:11] [PROCESS]   a TEP-produced shift.
+[10:26:11] [PROCESS] 
+[10:26:11] [PROCESS]   TEP predicts a small conformal clock shift (~0.005 km/s) on top of
+[10:26:11] [PROCESS]   ordinary cloud kinematics. This is 296× below
+[10:26:11] [PROCESS]   spectral resolution and is not directly detectable in current spectra.
+[10:26:11] [PROCESS]   The decisive test is the orphan population (Gate 6), which tests the
+[10:26:11] [PROCESS]   velocity-selection theorem's prediction of a population of ordinary
+[10:26:11] [PROCESS]   H clouds at non-isotope offsets.
+[10:26:11] [PROCESS] 
+[10:26:11] [PROCESS]   NOTE on sign vs amplitude:
+[10:26:11] [PROCESS]     The clock shift Δln A is purely conformal (since ∂₀φ = 0 for a
+[10:26:11] [PROCESS]     static field, the disformal term B(φ)∇₀φ∇₀φ = 0 for g₀₀).
+[10:26:11] [PROCESS]     The SIGN of the clock shift is rigorous and independent of the
+[10:26:11] [PROCESS]     disformal sector. The temporal-disformal channel (Gate 4B-IV)
+[10:26:11] [PROCESS]     provides the dominant geometry-dependent contribution via the
+[10:26:11] [PROCESS]     cosmological ∂₀φ, with fitted free-H displacements as TEP targets.
+[10:26:12] [INFO] 
+[10:26:12] [INFO] ================================================================================
+[10:26:12] [INFO] 
 --- 4. Falsifiability Criterion ---
-[13:07:21] [INFO] ================================================================================
-[13:07:21] [INFO] 
-[13:07:21] [PROCESS]   The decisive test is the orphan population (Gate 6): the
-[13:07:21] [PROCESS]   velocity-selection theorem predicts a population of ordinary H
-[13:07:21] [PROCESS]   clouds at non-isotope offsets. If these orphans are found at the
-[13:07:21] [PROCESS]   predicted rate (~79% of edge-shear features), the TEP absorber-
-[13:07:21] [PROCESS]   field interpretation is supported. If they are absent, it is
-[13:07:21] [PROCESS]   falsified.
-[13:07:21] [PROCESS] 
-[13:07:21] [PROCESS]   The conformal sign theorem and amplitude quantification together
-[13:07:21] [PROCESS]   predict a small blueward systematic (~0.005 km/s), unresolvable
-[13:07:21] [PROCESS]   in current spectra but potentially detectable statistically across
-[13:07:21] [PROCESS]   a large orphan sample.
-[13:07:21] [SUCCESS] 
+[10:26:12] [INFO] ================================================================================
+[10:26:12] [INFO] 
+[10:26:12] [PROCESS]   The decisive test is the orphan population (Gate 6): the
+[10:26:12] [PROCESS]   velocity-selection theorem predicts a population of ordinary H
+[10:26:12] [PROCESS]   clouds at non-isotope offsets. If these orphans are found at the
+[10:26:12] [PROCESS]   predicted rate (~79% of edge-shear features), the TEP absorber-
+[10:26:12] [PROCESS]   field interpretation is supported. If they are absent, it is
+[10:26:12] [PROCESS]   falsified.
+[10:26:12] [PROCESS] 
+[10:26:12] [PROCESS]   The conformal sign theorem and amplitude quantification together
+[10:26:12] [PROCESS]   predict a small blueward systematic (~0.005 km/s), unresolvable
+[10:26:12] [PROCESS]   in current spectra but potentially detectable statistically across
+[10:26:12] [PROCESS]   a large orphan sample.
+[10:26:12] [SUCCESS] 
 [COMPLETED] Gate 4B results written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate4b_amplitude.json
-[13:07:21] [SUCCESS]   [OK] 0.0s
-[13:07:21] [PROCESS] [RUN] step_05_thermodynamics: Gate 5: Matter-Frame Temporal Thermodynamics
+[10:26:12] [SUCCESS]   [OK] 0.0s
+[10:26:12] [PROCESS] [RUN] step_05_thermodynamics: Gate 5: Matter-Frame Temporal Thermodynamics

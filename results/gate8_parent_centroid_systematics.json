@@ -1,0 +1,311 @@
+{
+  "gate": "8-parent-centroid-systematics",
+  "description": "Sensitivity of Gate 8 velocity-deviation p-values to blend-induced bias of the fitted parent centroid, perturbing the parent velocity by its blend uncertainty inside the MC loop",
+  "method": "dev_measured = dev_true - delta_v_blend; sigma_total = sqrt(sigma_fit^2 + sigma_sys^2 + sigma_blend^2); MC N=100000; blend-alone and joint sign-matched tails reported",
+  "plausibility_bound": "VPFIT centroid errors on logN_HI = 17.36-17.92 columns are far below 1 km/s; a centroid drag of |obs| requires an unresolved companion at f >= 2|obs|/b_parent inside half a linewidth \u2014 visible as residual asymmetry for f of order tens of percent. Blend bias is sign-random; the two free-H-preferred sightlines additionally require same-sign drags.",
+  "source_files": [
+    "gate8_calibration_Q10092956.json",
+    "gate8_calibration_PKS1937101.json",
+    "gate8_calibration_J13320052.json",
+    "gate8_evidence.json"
+  ],
+  "n_mc": 100000,
+  "results": {
+    "Q1009+2956": {
+      "instrument": "Keck/HIRES",
+      "observed_deviation_kms": 2.7172821441621977,
+      "observed_abs_deviation_kms": 2.7172821441621977,
+      "sigma_fit_kms": 0.1609719108810642,
+      "sigma_sys_kms": 0.25,
+      "sigma_base_kms": 0.2973414806122773,
+      "b_parent_kms": 18.646948471887413,
+      "blend_alone_required_sigma_kms": 1.3863939052769325,
+      "required_drag_fraction_of_b_parent": 0.145722617738706,
+      "min_companion_flux_fraction_at_half_linewidth": 0.291445235477412,
+      "systematic_cases": {
+        "sigma_blend_0.00": {
+          "sigma_blend_kms": 0.0,
+          "sigma_total_kms": 0.2973414806122773,
+          "p_monte_carlo": 0.0,
+          "p_gaussian": 0.0,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 9.138590884012705
+        },
+        "sigma_blend_0.10": {
+          "sigma_blend_kms": 0.1,
+          "sigma_total_kms": 0.31370679956402164,
+          "p_monte_carlo": 0.0,
+          "p_gaussian": 0.0,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 8.661852876439331
+        },
+        "sigma_blend_0.25": {
+          "sigma_blend_kms": 0.25,
+          "sigma_total_kms": 0.3884738808371822,
+          "p_monte_carlo": 0.0,
+          "p_gaussian": 2.6572077871378497e-12,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 6.994761496722271
+        },
+        "sigma_blend_0.50": {
+          "sigma_blend_kms": 0.5,
+          "sigma_total_kms": 0.5817318592725529,
+          "p_monte_carlo": 2e-05,
+          "p_gaussian": 2.99705257411631e-06,
+          "p_blend_alone_twosided": 5.4930490378524155e-08,
+          "effective_sigma_vs_null": 4.671021710174373
+        },
+        "sigma_blend_1.00": {
+          "sigma_blend_kms": 1.0,
+          "sigma_total_kms": 1.0432698385809402,
+          "p_monte_carlo": 0.00928,
+          "p_gaussian": 0.00919863290075873,
+          "p_blend_alone_twosided": 0.006582047131487911,
+          "effective_sigma_vs_null": 2.6045822889486154
+        },
+        "sigma_blend_1.50": {
+          "sigma_blend_kms": 1.5,
+          "sigma_total_kms": 1.5291866975921224,
+          "p_monte_carlo": 0.07626,
+          "p_gaussian": 0.07557712938746786,
+          "p_blend_alone_twosided": 0.07006017495748074,
+          "effective_sigma_vs_null": 1.7769459729416075
+        },
+        "sigma_blend_2.00": {
+          "sigma_blend_kms": 2.0,
+          "sigma_total_kms": 2.021982184909823,
+          "p_monte_carlo": 0.17987,
+          "p_gaussian": 0.17899027741301632,
+          "p_blend_alone_twosided": 0.17426035355699332,
+          "effective_sigma_vs_null": 1.3438704675251054
+        },
+        "sigma_blend_3.00": {
+          "sigma_blend_kms": 3.0,
+          "sigma_total_kms": 3.0146993143749348,
+          "p_monte_carlo": 0.36794,
+          "p_gaussian": 0.36740526890373437,
+          "p_blend_alone_twosided": 0.3650625186698391,
+          "effective_sigma_vs_null": 0.9013443334814294
+        },
+        "sigma_blend_5.00": {
+          "sigma_blend_kms": 5.0,
+          "sigma_total_kms": 5.008833392726564,
+          "p_monte_carlo": 0.58804,
+          "p_gaussian": 0.587475478500542,
+          "p_blend_alone_twosided": 0.5868155825567953,
+          "effective_sigma_vs_null": 0.5424980092386427
+        }
+      }
+    },
+    "PKS1937-101": {
+      "instrument": "VLT/ESPRESSO",
+      "observed_deviation_kms": 5.658173778810635,
+      "observed_abs_deviation_kms": 5.658173778810635,
+      "sigma_fit_kms": 0.5119971805133374,
+      "sigma_sys_kms": 0.05,
+      "sigma_base_kms": 0.5144328069375116,
+      "b_parent_kms": 16.3286,
+      "blend_alone_required_sigma_kms": 2.8868763807960938,
+      "required_drag_fraction_of_b_parent": 0.3465192226406817,
+      "min_companion_flux_fraction_at_half_linewidth": 0.6930384452813634,
+      "systematic_cases": {
+        "sigma_blend_0.00": {
+          "sigma_blend_kms": 0.0,
+          "sigma_total_kms": 0.5144328069375116,
+          "p_monte_carlo": 0.0,
+          "p_gaussian": 0.0,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 10.998858747937389
+        },
+        "sigma_blend_0.10": {
+          "sigma_blend_kms": 0.1,
+          "sigma_total_kms": 0.5240621269025335,
+          "p_monte_carlo": 0.0,
+          "p_gaussian": 0.0,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 10.796761468441236
+        },
+        "sigma_blend_0.25": {
+          "sigma_blend_kms": 0.25,
+          "sigma_total_kms": 0.571962510007087,
+          "p_monte_carlo": 0.0,
+          "p_gaussian": 0.0,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 9.892560578385682
+        },
+        "sigma_blend_0.50": {
+          "sigma_blend_kms": 0.5,
+          "sigma_total_kms": 0.717384912619165,
+          "p_monte_carlo": 0.0,
+          "p_gaussian": 3.1086244689504383e-15,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 7.887221600678359
+        },
+        "sigma_blend_1.00": {
+          "sigma_blend_kms": 1.0,
+          "sigma_total_kms": 1.124562631805631,
+          "p_monte_carlo": 2e-05,
+          "p_gaussian": 4.867995955226689e-07,
+          "p_blend_alone_twosided": 1.529921833665071e-08,
+          "effective_sigma_vs_null": 5.031443886522981
+        },
+        "sigma_blend_1.50": {
+          "sigma_blend_kms": 1.5,
+          "sigma_total_kms": 1.5857619975436437,
+          "p_monte_carlo": 0.00044,
+          "p_gaussian": 0.0003595650910483972,
+          "p_blend_alone_twosided": 0.0001618690621234542,
+          "effective_sigma_vs_null": 3.568110339114688
+        },
+        "sigma_blend_2.00": {
+          "sigma_blend_kms": 2.0,
+          "sigma_total_kms": 2.065100751259756,
+          "p_monte_carlo": 0.00639,
+          "p_gaussian": 0.006145749716848892,
+          "p_blend_alone_twosided": 0.004668102326264911,
+          "effective_sigma_vs_null": 2.7399020485363863
+        },
+        "sigma_blend_3.00": {
+          "sigma_blend_kms": 3.0,
+          "sigma_total_kms": 3.0437872975708413,
+          "p_monte_carlo": 0.06332,
+          "p_gaussian": 0.06303770115751828,
+          "p_blend_alone_twosided": 0.05928714917099098,
+          "effective_sigma_vs_null": 1.8589254851435448
+        },
+        "sigma_blend_5.00": {
+          "sigma_blend_kms": 5.0,
+          "sigma_total_kms": 5.026394444614708,
+          "p_monte_carlo": 0.26095,
+          "p_gaussian": 0.26029576256128806,
+          "p_blend_alone_twosided": 0.2577880217924837,
+          "effective_sigma_vs_null": 1.1256923508804242
+        }
+      }
+    },
+    "J1332+0052": {
+      "instrument": "VLT/UVES + Keck/HIRES",
+      "observed_deviation_kms": -36.604516624051314,
+      "observed_abs_deviation_kms": 36.604516624051314,
+      "sigma_fit_kms": 17.095689763974008,
+      "sigma_sys_kms": 0.2,
+      "sigma_base_kms": 17.09685960947348,
+      "b_parent_kms": 13.164968290945612,
+      "blend_alone_required_sigma_kms": 18.676116818498357,
+      "required_drag_fraction_of_b_parent": 2.7804485217960284,
+      "min_companion_flux_fraction_at_half_linewidth": 5.560897043592057,
+      "systematic_cases": {
+        "sigma_blend_0.00": {
+          "sigma_blend_kms": 0.0,
+          "sigma_total_kms": 17.09685960947348,
+          "p_monte_carlo": 0.03317,
+          "p_gaussian": 0.03227337677140518,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 2.1410082003462505
+        },
+        "sigma_blend_0.10": {
+          "sigma_blend_kms": 0.1,
+          "sigma_total_kms": 17.097152058341344,
+          "p_monte_carlo": 0.03308,
+          "p_gaussian": 0.032276330134554776,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 2.1409715781402747
+        },
+        "sigma_blend_0.25": {
+          "sigma_blend_kms": 0.25,
+          "sigma_total_kms": 17.09868733283481,
+          "p_monte_carlo": 0.03303,
+          "p_gaussian": 0.03229183660352719,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 2.1407793423860806
+        },
+        "sigma_blend_0.50": {
+          "sigma_blend_kms": 0.5,
+          "sigma_total_kms": 17.104169331073802,
+          "p_monte_carlo": 0.03308,
+          "p_gaussian": 0.03234723483307511,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 2.1400932085927424
+        },
+        "sigma_blend_1.00": {
+          "sigma_blend_kms": 1.0,
+          "sigma_total_kms": 17.12607977635412,
+          "p_monte_carlo": 0.03339,
+          "p_gaussian": 0.03256910775564337,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 2.137355255964121
+        },
+        "sigma_blend_1.50": {
+          "sigma_blend_kms": 1.5,
+          "sigma_total_kms": 17.162535025632014,
+          "p_monte_carlo": 0.03368,
+          "p_gaussian": 0.03293988382883195,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 2.132815261229356
+        },
+        "sigma_blend_2.00": {
+          "sigma_blend_kms": 2.0,
+          "sigma_total_kms": 17.21344266862517,
+          "p_monte_carlo": 0.03414,
+          "p_gaussian": 0.033461017278829885,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 2.1265075980861243
+        },
+        "sigma_blend_3.00": {
+          "sigma_blend_kms": 3.0,
+          "sigma_total_kms": 17.358070414249553,
+          "p_monte_carlo": 0.03552,
+          "p_gaussian": 0.03496275536674198,
+          "p_blend_alone_twosided": 0.0,
+          "effective_sigma_vs_null": 2.108789499667083
+        },
+        "sigma_blend_5.00": {
+          "sigma_blend_kms": 5.0,
+          "sigma_total_kms": 17.81298988115262,
+          "p_monte_carlo": 0.04089,
+          "p_gaussian": 0.039885390368869844,
+          "p_blend_alone_twosided": 2.462474668618597e-13,
+          "effective_sigma_vs_null": 2.0549338919673126
+        }
+      }
+    }
+  },
+  "joint_sign_matched": {
+    "sigma_blend_0.00": {
+      "sigma_blend_kms": 0.0,
+      "joint_onesided_p_Q1009_x_PKS1937": 0.0
+    },
+    "sigma_blend_0.10": {
+      "sigma_blend_kms": 0.1,
+      "joint_onesided_p_Q1009_x_PKS1937": 0.0
+    },
+    "sigma_blend_0.25": {
+      "sigma_blend_kms": 0.25,
+      "joint_onesided_p_Q1009_x_PKS1937": 0.0
+    },
+    "sigma_blend_0.50": {
+      "sigma_blend_kms": 0.5,
+      "joint_onesided_p_Q1009_x_PKS1937": 0.0
+    },
+    "sigma_blend_1.00": {
+      "sigma_blend_kms": 1.0,
+      "joint_onesided_p_Q1009_x_PKS1937": 2.5175044041689766e-11
+    },
+    "sigma_blend_1.50": {
+      "sigma_blend_kms": 1.5,
+      "joint_onesided_p_Q1009_x_PKS1937": 2.83514370314313e-06
+    },
+    "sigma_blend_2.00": {
+      "sigma_blend_kms": 2.0,
+      "joint_onesided_p_Q1009_x_PKS1937": 0.0002033662904537866
+    },
+    "sigma_blend_3.00": {
+      "sigma_blend_kms": 3.0,
+      "joint_onesided_p_Q1009_x_PKS1937": 0.005410879000279108
+    },
+    "sigma_blend_5.00": {
+      "sigma_blend_kms": 5.0,
+      "joint_onesided_p_Q1009_x_PKS1937": 0.037818507046080044
+    }
+  }
+}

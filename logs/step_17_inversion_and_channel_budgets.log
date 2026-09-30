@@ -1,0 +1,13 @@
+[10:26:27] [INFO] ================================================================================
+[10:26:27] [INFO] Script: step_17_inversion_and_channel_budgets
+[10:26:27] [INFO] Started: 2026-09-29T10:26:27.479958
+[10:26:27] [INFO] ================================================================================
+[10:26:27] [SUCCESS] === STEP 17: LITERATURE INVERSION + D BUDGETS ===
+[10:26:27] [WARNING] [A] no catalogue inversion performed; tau_eff is nonlinear — wing-density confrontation withheld
+[10:26:27] [PROCESS] [A] assumed LLS Poisson opacity -> Delta_z = 0.57 (4.5 L0 path)
+[10:26:27] [PROCESS] [B] nu: capture radius r_crit/R computed (0.002-0.216); ejecta mass undetermined
+[10:26:27] [PROCESS] [C] net eps_D req = 4.1e-05 at f_ej=0.5; ambient feed needs ejecta X_D >= 7.5e-05
+[10:26:27] [PROCESS] [D] reservoir f_mix (D-free feed) = 0.12-0.012
+[10:26:27] [SUCCESS] [WRITE] /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_17_inversion_and_channel_budgets.json
+[10:26:27] [SUCCESS]   [OK] 0.0s
+[10:26:27] [PROCESS] [RUN] step_18_boundary_selfconsistency: Gate 18: Boundary Self-Consistency Solve

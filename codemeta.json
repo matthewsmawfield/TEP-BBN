@@ -1,0 +1,40 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": [
+    "ScholarlyArticle",
+    "SoftwareSourceCode"
+  ],
+  "identifier": "https://doi.org/10.5281/zenodo.21841147",
+  "doi": "10.5281/zenodo.21841147",
+  "name": "Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium",
+  "description": "The spectroscopic identification of primordial deuterium---a foundational empirical pillar of Big Bang cosmology---is not mathematically unique. Within standard Voigt-profile fitting architectures, the absorption features conventionally attributed to deuterium across the three best-studied quasar sightlines are statistically better described by unrestricted ordinary hydrogen. Using Monte-Carlo-calibrated model comparison across Q1009+2956 (Keck/HIRES), PKS\\,1937$-$101 (ESPRESSO), and J1332$+$0052 (UVES+HIRES), the unrestricted hydrogen model is significantly preferred over the true-deuterium model under both the canonical-parent and adversarial parent-reassignment statistics ($p \\le 0.001$ for all three sightlines on the primary Gate 2/3 family, surviving $\\alpha/6$). The key physical insight is that *isotope identifiability is controlled by both Doppler regime and D column density*: at the unsaturated LLS-class columns typical of D/H measurements, the intrinsic H/D profile-shape difference is sub-noise on a per-pixel basis, so the deuterium identification depends predominantly on the velocity offset---which the free-H model can reproduce without invoking deuterium at all. A multi-pronged evidence analysis (Gate 8) calibrates three discriminators---$b$-value ratio, velocity offset deviation, and column density difference---against true-D injection Monte Carlo ($N = 1000$ per sightline): the joint statistic is highly significant for Q1009+2956 and PKS\\,1937$-$101 ($p ≤ 0.001$), with velocity deviations alone rejecting isotope-D at $p ≤ 0.001$ for both sightlines; J1332$+$0052 is less discriminating. All three features are blueward of the parent, consistent with the conformal sign theorem (though the D-selected sample is not an independent sign test). A velocity-selection theorem explains the universality of the $-81.6$\\,km/s offset as a selection effect of the D-search protocol, and motivates an independently selected population test for non-isotope displaced H I components. An archival feasibility search establishes the principal saturation and Ly$\\alpha$-forest selection limits and identifies one candidate component in Q1009$+$2956, motivating a larger targeted survey. A pilot search of the three benchmark sightlines identifies one candidate feature already present in the literature scaffold near the predicted orphan phenotype in Q1009$+$2956: a narrow ($b = 10.3$\\,km/s, $\\log N = 11.5$) H I component at $\\Delta v = -155.5$\\,km/s from the parent ($73.9$\\,km/s from the isotope shift), identified as a candidate non-isotope component in the HIRES spectrum.",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Matthew Lukin",
+      "familyName": "Smawfield",
+      "@id": "https://orcid.org/0009-0003-8219-3159"
+    }
+  ],
+  "datePublished": "2026-08-12",
+  "dateModified": "2026-09-30",
+  "version": "0.5 (Dubai)",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "codeRepository": "https://github.com/matthewsmawfield/TEP-BBN",
+  "url": "https://mlsmawfield.com/tep/bbn/",
+  "keywords": [
+    "Temporal Equivalence Principle",
+    "deuterium abundance",
+    "isotopic line identification",
+    "temporal shear",
+    "absorption-line spectroscopy",
+    "Lyman-limit systems",
+    "Big Bang nucleosynthesis",
+    "cosmology",
+    "TEP",
+    "Proper-Time Transport"
+  ],
+  "developmentStatus": "active",
+  "runtimePlatform": "Python",
+  "applicationCategory": "Scientific/Research"
+}

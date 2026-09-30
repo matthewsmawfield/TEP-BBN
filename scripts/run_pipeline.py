@@ -65,6 +65,14 @@ DISFORMAL_STEPS = [
     ("step_10_covariant_transport", "run_covariant_transport", "Gate 10: Full Covariant Transport Solver (omega = -u^mu k_mu)", "disformal"),
     ("step_11_steady_state_budget", "run_step_11", "Gate 11: Steady-State Timescale & Thermalization Budget", "core"),
     ("step_12_vmo_ionization_budget", "run_step_12", "Gate 12: VMO-Branch Ionization-Equilibrium Budget", "core"),
+    ("step_13_deuterium_production_ledger", "main", "Gate 13: Deuterium Production Ledger", "core"),
+    ("step_14_opacity_three_point", "run_step_14", "Gate 14: Species-Resolved Opacity Three-Point Test", "core"),
+    ("step_15_deuterium_extended_channels", "run_step_15", "Gate 15: Extended Deuterium Channels", "core"),
+    ("step_16_boundary_transport", "run_step_16", "Gate 16: Eternal-Native Boundary Transport", "core"),
+    ("step_17_inversion_and_channel_budgets", "run_step_17", "Gate 17: Literature Inversion + D Channel Budgets", "core"),
+    ("step_18_boundary_selfconsistency", "run_step_18", "Gate 18: Boundary Self-Consistency Solve", "core"),
+    ("step_19_eternal_surface_reconciliation", "run_step_19", "Gate 19: Eternal-Surface Reconciliation vs TEP-TH Kernel", "core"),
+    ("step_20_ambient_bath_front", "run_step_20", "Gate 20: Ambient-Bath Ionization Front", "core"),
 ]
 
 # Phase 3: Secondary Robustness Analyses

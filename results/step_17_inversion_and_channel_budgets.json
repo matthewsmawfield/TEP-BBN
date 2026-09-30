@@ -1,0 +1,272 @@
+{
+  "step": "step_17_inversion_and_channel_budgets",
+  "A_literature_inversion": {
+    "lls_inputs": {
+      "dN_dz_LLS_lit_assumed": 2.8,
+      "N_HI_cm^-2_assumed": 1.584893192461111e+17,
+      "effective_dtau_LyC_per_dz_z3_poisson": 1.7683734762888041,
+      "lyc_mfp_dz_z3": 0.5654914040548998,
+      "lyc_mfp_L0_z3": 4.523931232439199,
+      "note": "Assuming a Poisson population of identical LLS with N_HI=10^17.2 cm^-2 gives effective opacity 1.77 per unit z at z~3 and Delta z=0.57; this is not a measured high-z trough mean free path. Frequency evolution, column distribution and selection are omitted."
+    },
+    "forest_rows": [
+      {
+        "z": 2.4,
+        "tau_eff_illustrative": 0.22
+      },
+      {
+        "z": 3.0,
+        "tau_eff_illustrative": 0.37
+      },
+      {
+        "z": 3.7,
+        "tau_eff_illustrative": 0.65
+      },
+      {
+        "z": 4.2,
+        "tau_eff_illustrative": 1.0
+      },
+      {
+        "z": 4.8,
+        "tau_eff_illustrative": 1.8
+      },
+      {
+        "z": 5.4,
+        "tau_eff_illustrative": 2.9
+      }
+    ],
+    "wing_confrontation": {
+      "admissible_wing_density_n_b0": 0.5107600108962136,
+      "gamma_for_wing_per_z": [
+        {
+          "z": 2.4,
+          "Gamma_for_wing_density_s^-1": null,
+          "reason": "Requires a calibrated line-profile and density-PDF likelihood"
+        },
+        {
+          "z": 3.0,
+          "Gamma_for_wing_density_s^-1": null,
+          "reason": "Requires a calibrated line-profile and density-PDF likelihood"
+        },
+        {
+          "z": 3.7,
+          "Gamma_for_wing_density_s^-1": null,
+          "reason": "Requires a calibrated line-profile and density-PDF likelihood"
+        },
+        {
+          "z": 4.2,
+          "Gamma_for_wing_density_s^-1": null,
+          "reason": "Requires a calibrated line-profile and density-PDF likelihood"
+        },
+        {
+          "z": 4.8,
+          "Gamma_for_wing_density_s^-1": null,
+          "reason": "Requires a calibrated line-profile and density-PDF likelihood"
+        },
+        {
+          "z": 5.4,
+          "Gamma_for_wing_density_s^-1": null,
+          "reason": "Requires a calibrated line-profile and density-PDF likelihood"
+        }
+      ],
+      "note": "No density or UVB rate is inferred: tau_eff=-ln(<F>) is not equal to a monochromatic cross section times a mean neutral column. Saturated pixels, line profiles, covering factors and the density distribution require a forward forest likelihood."
+    },
+    "trough_statement": "Forest saturation limits inference of neutral fraction and cannot establish the 10^-5 residual ionization assumed in the Step-14 trough, or a wall at z=1080.",
+    "completeness_caveat": "Inputs are rounded literature-scale placeholders, not a complete or selection-corrected catalogue. The available 26-system KODIAQ pilot is not complete; the KOA match list is empty. No forward reconstruction or selection function can be checked with these inputs.",
+    "checks": {
+      "complete_catalogue_ingested": false,
+      "selection_function_applied": false,
+      "forest_forward_reconstructed": false
+    }
+  },
+  "B_nu_irradiation_budget": {
+    "inputs": "Illustrative antineutrino energy 1e57-1e59 erg, all assigned to 10 MeV antineutrinos; cross section 9.4e-42 cm^2 is a toy value requiring threshold and spectrum validation; no collapse model is used.",
+    "fluence_rows": [
+      {
+        "E_nu_erg": 1e+57,
+        "r_shell_cm": 1000000000000.0,
+        "fluence_cm^-2": 4.9673827431927396e+36,
+        "y_n_per_proton": 4.669339778601175e-05
+      },
+      {
+        "E_nu_erg": 1e+57,
+        "r_shell_cm": 10000000000000.0,
+        "fluence_cm^-2": 4.967382743192739e+34,
+        "y_n_per_proton": 4.669339778601175e-07
+      },
+      {
+        "E_nu_erg": 1e+57,
+        "r_shell_cm": 100000000000000.0,
+        "fluence_cm^-2": 4.9673827431927394e+32,
+        "y_n_per_proton": 4.669339778601175e-09
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "r_shell_cm": 1000000000000.0,
+        "fluence_cm^-2": 4.96738274319274e+37,
+        "y_n_per_proton": 0.00046693397786011753
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "r_shell_cm": 10000000000000.0,
+        "fluence_cm^-2": 4.967382743192739e+35,
+        "y_n_per_proton": 4.6693397786011744e-06
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "r_shell_cm": 100000000000000.0,
+        "fluence_cm^-2": 4.967382743192739e+33,
+        "y_n_per_proton": 4.6693397786011745e-08
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "r_shell_cm": 1000000000000.0,
+        "fluence_cm^-2": 4.967382743192739e+38,
+        "y_n_per_proton": 0.004669339778601175
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "r_shell_cm": 10000000000000.0,
+        "fluence_cm^-2": 4.9673827431927384e+36,
+        "y_n_per_proton": 4.669339778601174e-05
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "r_shell_cm": 100000000000000.0,
+        "fluence_cm^-2": 4.967382743192738e+34,
+        "y_n_per_proton": 4.6693397786011737e-07
+      }
+    ],
+    "radius_threshold_rows": [
+      {
+        "E_nu_erg_assumed_nubar_e": 1e+57,
+        "R_star_cm": 10000000000000.0,
+        "r_crit_y_n_1e-3_cm": 216086551608.4047,
+        "r_crit_over_R": 0.02160865516084047
+      },
+      {
+        "E_nu_erg_assumed_nubar_e": 1e+57,
+        "R_star_cm": 100000000000000.0,
+        "r_crit_y_n_1e-3_cm": 216086551608.4047,
+        "r_crit_over_R": 0.002160865516084047
+      },
+      {
+        "E_nu_erg_assumed_nubar_e": 1e+58,
+        "R_star_cm": 10000000000000.0,
+        "r_crit_y_n_1e-3_cm": 683325674814.0797,
+        "r_crit_over_R": 0.06833256748140797
+      },
+      {
+        "E_nu_erg_assumed_nubar_e": 1e+58,
+        "R_star_cm": 100000000000000.0,
+        "r_crit_y_n_1e-3_cm": 683325674814.0797,
+        "r_crit_over_R": 0.006833256748140797
+      },
+      {
+        "E_nu_erg_assumed_nubar_e": 1e+59,
+        "R_star_cm": 10000000000000.0,
+        "r_crit_y_n_1e-3_cm": 2160865516084.0466,
+        "r_crit_over_R": 0.21608655160840468
+      },
+      {
+        "E_nu_erg_assumed_nubar_e": 1e+59,
+        "R_star_cm": 100000000000000.0,
+        "r_crit_y_n_1e-3_cm": 2160865516084.0466,
+        "r_crit_over_R": 0.021608655160840467
+      }
+    ],
+    "assessment": "Inverse-square fluence and the radius where assumed capture probability exceeds 1e-3 are computed. The fraction of ejected envelope mass inside that radius is not known: an n=3 central mass fraction cannot represent processed ejecta. Standard neutrinos propagate on the matter metric during a TEP temporal-well formation transient, not through a conventional black-hole horizon. A time-dependent neutrino luminosity, spectrum, metric and envelope trajectory are required before a yield can be claimed.",
+    "checks": {
+      "fluence_inverse_square": true,
+      "dynamical_collapse_solved": false
+    }
+  },
+  "C_vmo_ejecta_closure": {
+    "closure_rows": [
+      {
+        "ejecta_X_D_assumed": 1e-05,
+        "ejecta_D_over_H_approx": 5e-06,
+        "net_eps_D_if_ambient_feed": 0.0,
+        "f_required_if_D_free_feed": 2.04,
+        "f_required_if_ambient_feed": null
+      },
+      {
+        "ejecta_X_D_assumed": 2e-05,
+        "ejecta_D_over_H_approx": 1e-05,
+        "net_eps_D_if_ambient_feed": 0.0,
+        "f_required_if_D_free_feed": 1.02,
+        "f_required_if_ambient_feed": null
+      },
+      {
+        "ejecta_X_D_assumed": 4e-05,
+        "ejecta_D_over_H_approx": 2e-05,
+        "net_eps_D_if_ambient_feed": 6.0000000000000035e-06,
+        "f_required_if_D_free_feed": 0.51,
+        "f_required_if_ambient_feed": 3.399999999999998
+      },
+      {
+        "ejecta_X_D_assumed": 0.0001,
+        "ejecta_D_over_H_approx": 5e-05,
+        "net_eps_D_if_ambient_feed": 6.6e-05,
+        "f_required_if_D_free_feed": 0.20400000000000001,
+        "f_required_if_ambient_feed": 0.3090909090909091
+      },
+      {
+        "ejecta_X_D_assumed": 0.0002,
+        "ejecta_D_over_H_approx": 0.0001,
+        "net_eps_D_if_ambient_feed": 0.00016600000000000002,
+        "f_required_if_D_free_feed": 0.10200000000000001,
+        "f_required_if_ambient_feed": 0.12289156626506023
+      },
+      {
+        "ejecta_X_D_assumed": 0.0004,
+        "ejecta_D_over_H_approx": 0.0002,
+        "net_eps_D_if_ambient_feed": 0.000366,
+        "f_required_if_D_free_feed": 0.051000000000000004,
+        "f_required_if_ambient_feed": 0.05573770491803279
+      }
+    ],
+    "required_net_eps_D_at_f_0p5": 4.08e-05,
+    "minimum_ejecta_X_D_at_f_0p5_if_ambient_feed": 7.48e-05,
+    "key_point": "At assumed f_ej=0.5 the required NET yield is 4.08e-5. If feed gas begins at ISM X_D=3.4e-5, the ejecta must reach at least X_D=7.48e-5 (~D/H 3.74e-5) before losses; returning gas at ISM D/H is not net production. If incoming gas is D-free the earlier gross threshold applies instead. Neither the returned mass fraction nor the freezeout yield is computed from a TEP stellar structure solution.",
+    "checks": {
+      "net_yield_not_gross": true,
+      "tep_stellar_structure_solved": false
+    }
+  },
+  "D_reservoir_mixing": {
+    "rows": [
+      {
+        "N_exp": 300.0,
+        "X_D_res_from_zero": 5.099999999999999e-05,
+        "f_mix_required_if_D_free_feed": 0.4000000000000001,
+        "f_mix_required_if_ambient_feed": 1.2000000000000006
+      },
+      {
+        "N_exp": 1000.0,
+        "X_D_res_from_zero": 0.00016999999999999999,
+        "f_mix_required_if_D_free_feed": 0.12000000000000002,
+        "f_mix_required_if_ambient_feed": 0.15000000000000002
+      },
+      {
+        "N_exp": 3000.0,
+        "X_D_res_from_zero": 0.0005099999999999999,
+        "f_mix_required_if_D_free_feed": 0.04000000000000001,
+        "f_mix_required_if_ambient_feed": 0.042857142857142864
+      },
+      {
+        "N_exp": 10000.0,
+        "X_D_res_from_zero": 0.0017,
+        "f_mix_required_if_D_free_feed": 0.012000000000000002,
+        "f_mix_required_if_ambient_feed": 0.012244897959183675
+      }
+    ],
+    "two_sided_bound": "The 120/N_exp mixing relation holds only for D-free feed. For ambient feed subtract initial X_D before calculating net production. N_exp is a dimensionless assumed cosmic-ray fluence multiplier, not a duration: longevity cannot be deduced without a rate per year. Convergent astration exposure alone does not guarantee 300-10000 cosmic-ray exposure equivalents or survival against mixing.",
+    "checks": {
+      "mixing_arithmetic": true,
+      "longevity_from_rate_verified": false
+    },
+    "signature": "Metal-poor gas with super-ISM D/H \u2014 identical to the Fuller & Shi 1997 prediction for supermassive-star ejecta masquerading as Lyman-limit systems: the collapse-ejecta and reservoir channels share one observational discriminator."
+  },
+  "verdict": "Audit status: no catalogue-level absorber inversion is performed. Rounded literature tau_eff values cannot be mapped to mean neutral columns because tau_eff=-ln<F> is nonlinear and saturated; the wing-density confrontation is therefore not an inference. The assumed Poisson LLS opacity at z~3 gives Delta z~0.57 per LyC mean free path (illustrative only). On the deuterium side: closure requires NET enrichment. At assumed f_ej=0.5 the net requirement is eps_D=4.08e-5; with ambient-IS feed the ejecta must reach X_D>=7.48e-5 (D/H~3.7e-5), inside the documented window but requiring a TEP VMO structure solution. The antineutrino budget computes only inverse-square fluence and a capture-radius threshold \u2014 the irradiated ejecta mass is undetermined pending the dynamical temporal-well collapse solution. The reservoir channel's f_mix values hold for D-free feed and are dimensionless exposure bookkeeping; longevity requires a rate model."
+}

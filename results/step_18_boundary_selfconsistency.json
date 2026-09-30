@@ -1,0 +1,609 @@
+{
+  "step": "step_18_boundary_selfconsistency",
+  "A_ionization_front": {
+    "wing_gamma_s^-1": 2.6895238014165076e-19,
+    "front_rows": [
+      {
+        "n_b_over_nb0": 1.0,
+        "x_e_wing_side": 0.8324857629787966,
+        "depth_to_xe_0p5_pc": 1470754.6428293982,
+        "depth_to_trough_floor_pc": 6394658.658507249,
+        "depth_to_trough_floor_L0": 0.0014931515870265472,
+        "tau_lyc_at_floor": 24.4459
+      },
+      {
+        "n_b_over_nb0": 10.0,
+        "x_e_wing_side": 0.4687942954672056,
+        "depth_to_xe_0p5_pc": 0.0,
+        "depth_to_trough_floor_pc": 484861.07784949185,
+        "depth_to_trough_floor_L0": 0.0001132149699523403,
+        "tau_lyc_at_floor": 22.1433
+      },
+      {
+        "n_b_over_nb0": 100.0,
+        "x_e_wing_side": 0.18376338780122475,
+        "depth_to_xe_0p5_pc": 0.0,
+        "depth_to_trough_floor_pc": 41539.52049157432,
+        "depth_to_trough_floor_L0": 9.699470176379182e-06,
+        "tau_lyc_at_floor": 19.840700000000002
+      },
+      {
+        "n_b_over_nb0": 1000.0,
+        "x_e_wing_side": 0.06228540476489299,
+        "depth_to_xe_0p5_pc": 0.0,
+        "depth_to_trough_floor_pc": 3621.1110308631323,
+        "depth_to_trough_floor_L0": 8.455287406685107e-07,
+        "tau_lyc_at_floor": 17.5382
+      }
+    ],
+    "trough_depth_L0": 1168512.0,
+    "front_depth_over_trough": 1.277823066452503e-09,
+    "two_phase_criterion": {
+      "ionization_maintained_iff": "n_b < n_e,crit (Gate-12 supply)",
+      "n_e_crit_over_n_b0_VMO_range": [
+        484.63,
+        24232000.0
+      ],
+      "statement": "The Gate-12 emissivity budget sustains ionization only up to n_e ~ 5e2-2e7 n_b0 depending on (xi, f_esc).  The trough is neutral iff its mean density exceeds that bound \u2014 the trough is the collapsed/absorber phase and the wing the diffuse phase.  The Step-14 morphology is then the generic two-phase medium, not a tuned profile."
+    },
+    "assessment": "Coupled attenuation + local photoionization balance solved through the front.  The wing's ionizing field is extinguished within ~24 LyC e-folds, ~6.4 Mpc at diffuse density \u2014 ~1e-09 of the trough depth \u2014 and thinner at absorber densities.  The ~4e+10 Gamma contrast between wing and trough is supplied by self-shielding; the sharp boundary in the Step-14 profile is a consequence, not an assumption.",
+    "checks": {
+      "front_sharp_vs_trough": true,
+      "self_consistent_solve": true
+    }
+  },
+  "B_wall_temperature": {
+    "T_bath_K": 2946.2655,
+    "U_rad_erg_cm^-3": 0.5700810929662266,
+    "t_Compton_per_electron_yr": 0.8556175166949282,
+    "wall_rows": [
+      {
+        "f_wall": 500.0,
+        "n_b_cm^-3": 0.00012550000000000001,
+        "x_e_assumed_saha": 0.95,
+        "t_gas_eq_yr": 0.9006500175736087
+      },
+      {
+        "f_wall": 300.0,
+        "n_b_cm^-3": 7.53e-05,
+        "x_e_assumed_saha": 0.97,
+        "t_gas_eq_yr": 0.8820799141184829
+      },
+      {
+        "f_wall": 800.0,
+        "n_b_cm^-3": 0.0002008,
+        "x_e_assumed_saha": 0.92,
+        "t_gas_eq_yr": 0.9300190398857916
+      }
+    ],
+    "trough_residual_t_gas_yr": 1854520.0774594797,
+    "gas_over_rad_energy": 1.343289290773111e-16,
+    "statement": "Compton equilibrium of a Planckian bath is T_gas = T_bath (stationary Kompaneets point).  At the thermalization edge U_rad = 0.57 erg/cm3, per-electron coupling time 0.86 yr, so wall gas at x_e ~ 0.9 equilibrates in ~1 yr and even the x_e = 1e-5 trough couples in ~2e6 yr.  Radiation dominates gas thermal energy by ~1e16.  The wall temperature T = 2946 K is therefore derived \u2014 conditional only on the Gate-11B bath that defines the edge \u2014 and the Step-16 Saha grid x_e = 0.83-0.99 is no longer a free assumption.",
+    "checks": {
+      "equilibration_fast_at_wall": true,
+      "coupling_full_column": true,
+      "T_gas_equals_T_bath": true
+    }
+  },
+  "C_visibility_absorptive_edge": {
+    "artifact_closure_decomposition": {
+      "wing": 0.05255857397376883,
+      "trough": 0.024072963085850985,
+      "wall": 0.5534901626893938,
+      "post_edge": 0.36786313365162643,
+      "z_rms": 247.7590403593815
+    },
+    "absorptive_edge_decomposition": {
+      "kappa_1.0": {
+        "wing": 0.054237275488486676,
+        "trough": 0.02484184466958904,
+        "wall": 0.5711684348387074,
+        "post_edge": 0.34767291472411854,
+        "z_rms": 251.40499761210518
+      },
+      "kappa_10.0": {
+        "wing": 0.06385740559604292,
+        "trough": 0.029248072225836388,
+        "wall": 0.6724772599408094,
+        "post_edge": 0.2319688831975156,
+        "z_rms": 271.0461407106053
+      },
+      "kappa_100.0": {
+        "wing": 0.07901017917470603,
+        "trough": 0.03618837009597014,
+        "wall": 0.8320499134423213,
+        "post_edge": 0.04972218047527127,
+        "z_rms": 298.4109862965217
+      },
+      "kappa_1000.0": {
+        "wing": 0.08293975313172743,
+        "trough": 0.037988199917412965,
+        "wall": 0.8734319442762872,
+        "post_edge": 0.0024600806984502667,
+        "z_rms": 304.91709901013695
+      }
+    },
+    "tau_foreground_screen": 0.08049529108202981,
+    "damping_TEP_e^-2tau_fg": 0.8513000884739672,
+    "damping_LCDM_e^-2tau_reion": 0.8976275964304349,
+    "assessment": "The Step-16 broad tail was dominated by the closure choice n_e = 5000 n_b0 beyond the edge: it carries 36.8% of the kernel over z > 1080. Because that zone scatters at ~11 Thomson depths per L0, folding in absorption only suppresses it when the edge destroys photons faster than they scatter free \u2014 at kappa=1000/L0 the post-edge weight falls to 0.2% and the wall carries ~87%; at kappa=1/L0 the tail still carries 35%.  A thermalization edge must satisfy the large-kappa condition by definition (absorption outrunning scatter escape is what makes a boundary thermalize); the quantitative requirement on the Gate-11B absorption model is kappa_abs >> 11/L0.  What remains in the forward direction is a thin foreground screen: under the thermalized-edge kernel the wing carries 8% of the renormalized weight (the tau_reion datum, identical in observable role to the standard reionization tail) and the trough 4%.  The effective primary-anisotropy damping is e^{-2 tau_fg} = 0.85 versus the standard 0.90 \u2014 the same order and the same degenerate direction as the measured tau_reion screen.",
+    "checks": {
+      "post_edge_suppressed_if_thermalized": true,
+      "wall_dominates_at_high_kappa": true,
+      "kappa_requirement_quantified": true,
+      "absorption_modelled": true
+    }
+  },
+  "D_neutrino_transit": {
+    "model": "n=3 polytropic envelope (Lane-Emden solved numerically), homologous free-fall s=(1-t/t_ff)^{2/3}, top-hat burst E_nu=1e58-1e60 erg emitted over [t_ff - tau_b, t_ff] (star static at s=1 for a burst starting before collapse), 10 MeV antineutrinos, sigma=9.4e-42 cm^2 (Step-17 toy value), s_min=0.01 remnant floor.",
+    "rows": [
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 9641.380432195561,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.010371958735915966,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 9728.185071580347
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 9641.380432195561,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 1.0371958735915965,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 0.7792370380833811,
+        "median_transit_boost_vs_static": 137.2917909984506
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 9641.380432195561,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 103.71958735915966,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 0.024461447368869127,
+        "median_transit_boost_vs_static": 5.184855058164752
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 304887.2195391658,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.0003279901340277532,
+        "r_crit_over_R": 0.006833256748140797,
+        "mass_frac_static": 1.746700114567202e-05,
+        "mass_frac_transit_y_gt_1e-3": 0.9862629382612144,
+        "median_transit_boost_vs_static": 38447.42004159107
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 304887.2195391658,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 0.03279901340277532,
+        "r_crit_over_R": 0.006833256748140797,
+        "mass_frac_static": 1.746700114567202e-05,
+        "mass_frac_transit_y_gt_1e-3": 0.281357669154353,
+        "median_transit_boost_vs_static": 3590.2478747701516
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 304887.2195391658,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 3.279901340277532,
+        "r_crit_over_R": 0.006833256748140797,
+        "mass_frac_static": 1.746700114567202e-05,
+        "mass_frac_transit_y_gt_1e-3": 0.000611205995263946,
+        "median_transit_boost_vs_static": 46.04470284243637
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 3048.872195391658,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.03279901340277532,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 3590.247874770151
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 3048.872195391658,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 3.279901340277532,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 0.36592111970547025,
+        "median_transit_boost_vs_static": 46.044702842436415
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 3048.872195391658,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 327.9901340277532,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 0.018512777848140104,
+        "median_transit_boost_vs_static": 4.25191331619171
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 96413.80432195563,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.0010371958735915965,
+        "r_crit_over_R": 0.006833256748140797,
+        "mass_frac_static": 1.746700114567202e-05,
+        "mass_frac_transit_y_gt_1e-3": 0.9857957594313501,
+        "median_transit_boost_vs_static": 38414.18903215038
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 96413.80432195563,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 0.10371958735915963,
+        "r_crit_over_R": 0.006833256748140797,
+        "mass_frac_static": 1.746700114567202e-05,
+        "mass_frac_transit_y_gt_1e-3": 0.07823607199592895,
+        "median_transit_boost_vs_static": 1246.0579860993341
+      },
+      {
+        "E_nu_erg": 1e+58,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 96413.80432195563,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 10.371958735915964,
+        "r_crit_over_R": 0.006833256748140797,
+        "mass_frac_static": 1.746700114567202e-05,
+        "mass_frac_transit_y_gt_1e-3": 0.0,
+        "median_transit_boost_vs_static": 17.189217011544073
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 9641.380432195561,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.010371958735915966,
+        "r_crit_over_R": 0.21608655160840468,
+        "mass_frac_static": 0.3081089840931515,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 9728.185071580348
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 9641.380432195561,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 1.0371958735915965,
+        "r_crit_over_R": 0.21608655160840468,
+        "mass_frac_static": 0.3081089840931515,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 137.2917909984506
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 9641.380432195561,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 103.71958735915966,
+        "r_crit_over_R": 0.21608655160840468,
+        "mass_frac_static": 0.3081089840931515,
+        "mass_frac_transit_y_gt_1e-3": 0.4085169103864282,
+        "median_transit_boost_vs_static": 5.184855058164749
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 304887.2195391658,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.0003279901340277532,
+        "r_crit_over_R": 0.021608655160840467,
+        "mass_frac_static": 0.0005449459675224357,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 38447.4200415911
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 304887.2195391658,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 0.03279901340277532,
+        "r_crit_over_R": 0.021608655160840467,
+        "mass_frac_static": 0.0005449459675224357,
+        "mass_frac_transit_y_gt_1e-3": 0.9810001353695945,
+        "median_transit_boost_vs_static": 3590.2478747701525
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 304887.2195391658,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 3.279901340277532,
+        "r_crit_over_R": 0.021608655160840467,
+        "mass_frac_static": 0.0005449459675224357,
+        "mass_frac_transit_y_gt_1e-3": 0.02038347651324819,
+        "median_transit_boost_vs_static": 46.04470284243638
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 3048.872195391658,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.03279901340277532,
+        "r_crit_over_R": 0.21608655160840468,
+        "mass_frac_static": 0.3081089840931515,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 3590.247874770152
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 3048.872195391658,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 3.279901340277532,
+        "r_crit_over_R": 0.21608655160840468,
+        "mass_frac_static": 0.3081089840931515,
+        "mass_frac_transit_y_gt_1e-3": 0.9947687962219084,
+        "median_transit_boost_vs_static": 46.04470284243643
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 3048.872195391658,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 327.9901340277532,
+        "r_crit_over_R": 0.21608655160840468,
+        "mass_frac_static": 0.3081089840931515,
+        "mass_frac_transit_y_gt_1e-3": 0.3375094027701716,
+        "median_transit_boost_vs_static": 4.251913316191708
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 96413.80432195563,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.0010371958735915965,
+        "r_crit_over_R": 0.021608655160840467,
+        "mass_frac_static": 0.0005449459675224357,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 38414.189032150396
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 96413.80432195563,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 0.10371958735915963,
+        "r_crit_over_R": 0.021608655160840467,
+        "mass_frac_static": 0.0005449459675224357,
+        "mass_frac_transit_y_gt_1e-3": 0.7447427458596003,
+        "median_transit_boost_vs_static": 1246.0579860993346
+      },
+      {
+        "E_nu_erg": 1e+59,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 96413.80432195563,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 10.371958735915964,
+        "r_crit_over_R": 0.021608655160840467,
+        "mass_frac_static": 0.0005449459675224357,
+        "mass_frac_transit_y_gt_1e-3": 0.004669111560584921,
+        "median_transit_boost_vs_static": 17.189217011544077
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 9641.380432195561,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.010371958735915966,
+        "r_crit_over_R": 0.6833256748140797,
+        "mass_frac_static": 0.9862944026837026,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 9728.185071580348
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 9641.380432195561,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 1.0371958735915965,
+        "r_crit_over_R": 0.6833256748140797,
+        "mass_frac_static": 0.9862944026837026,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 137.29179099845058
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 9641.380432195561,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 103.71958735915966,
+        "r_crit_over_R": 0.6833256748140797,
+        "mass_frac_static": 0.9862944026837026,
+        "mass_frac_transit_y_gt_1e-3": 0.9976768325162204,
+        "median_transit_boost_vs_static": 5.184855058164749
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 304887.2195391658,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.0003279901340277532,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 38447.42004159108
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 304887.2195391658,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 0.03279901340277532,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 3590.2478747701516
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 100000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 304887.2195391658,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 3.279901340277532,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 0.36592111970547025,
+        "median_transit_boost_vs_static": 46.044702842436365
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 3048.872195391658,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.03279901340277532,
+        "r_crit_over_R": 0.6833256748140797,
+        "mass_frac_static": 0.9862944026837026,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 3590.2478747701516
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 3048.872195391658,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 3.279901340277532,
+        "r_crit_over_R": 0.6833256748140797,
+        "mass_frac_static": 0.9862944026837026,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 46.04470284243643
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 10000000000000.0,
+        "t_ff_s": 3048.872195391658,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 327.9901340277532,
+        "r_crit_over_R": 0.6833256748140797,
+        "mass_frac_static": 0.9862944026837026,
+        "mass_frac_transit_y_gt_1e-3": 0.991625604839858,
+        "median_transit_boost_vs_static": 4.251913316191709
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 96413.80432195563,
+        "tau_burst_s": 100.0,
+        "tau_b_over_t_ff": 0.0010371958735915965,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 38414.18903215039
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 96413.80432195563,
+        "tau_burst_s": 10000.0,
+        "tau_b_over_t_ff": 0.10371958735915963,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 1.0000000000000036,
+        "median_transit_boost_vs_static": 1246.0579860993344
+      },
+      {
+        "E_nu_erg": 1e+60,
+        "M_sms_Msun": 1000000.0,
+        "R_star_cm": 100000000000000.0,
+        "t_ff_s": 96413.80432195563,
+        "tau_burst_s": 1000000.0,
+        "tau_b_over_t_ff": 10.371958735915964,
+        "r_crit_over_R": 0.06833256748140797,
+        "mass_frac_static": 0.01620838548335232,
+        "mass_frac_transit_y_gt_1e-3": 0.1203460623175392,
+        "median_transit_boost_vs_static": 17.18921701154407
+      }
+    ],
+    "assessment": "The transit calculation is now integrated over the burst window in particle fluence; an earlier draft integrated the whole collapse at burst luminosity (overcounting fluence for tau_b < t_ff), omitted the 1/E_nu factor in y_n, and hardcoded the tau_b >= t_ff fraction at unity.  The corrected result: for tau_b <=~ t_ff the strongly-irradiated envelope fraction reaches ~0.28-1.00 at E_nu=1e58 (median boost vs static ~40-4e4), far above the static enclosed fraction ~2e-5-0.016 \u2014 shells descending through the burst are exposed at radii far below r_crit.  For tau_b >> t_ff the luminosity dilutes and the exposure relaxes toward the static bound; raising E_nu to 1e59-1e60 closes the remaining deficit across the grid.  What remains undetermined is which irradiated shells are ejected rather than retained \u2014 the channel's ejecta identity still requires a dynamical bounce/ejection model; the irradiation side is now bounded rather than open.",
+    "checks": {
+      "transit_model_computed": true,
+      "ejecta_identity_determined": false
+    }
+  },
+  "E_reservoir_longevity": {
+    "assumption": "One GCR exposure-equivalent = the ISM astrated-mass-integrated dose per astration cycle (the unit of the Gate-13 1.7e-7 yield).  Under ISM-like exposure, N_exp equivalents accrue over ~N_exp astration timescales.",
+    "n_exp_range": [
+      120.00000000000001,
+      1200.0000000000002
+    ],
+    "rows": [
+      {
+        "tau_astration_Gyr": 1.0,
+        "survival_min_Gyr": 120.00000000000001,
+        "survival_max_Gyr": 1200.0000000000002
+      },
+      {
+        "tau_astration_Gyr": 5.0,
+        "survival_min_Gyr": 600.0000000000001,
+        "survival_max_Gyr": 6000.000000000001
+      },
+      {
+        "tau_astration_Gyr": 10.0,
+        "survival_min_Gyr": 1200.0000000000002,
+        "survival_max_Gyr": 12000.000000000002
+      }
+    ],
+    "assessment": "The required survival is ~1e3-1e4 astration timescales, ~1e3-1e4 Gyr \u2014 effectively permanent exemption from astration and mixing.  In the eternal cosmology this is a timescale question, not an age bound: the channel is viable only for a permanently sequestered site (e.g. gas bound below the astration floor or in a temporal-well boundary layer), which narrows the site class but does not remove the channel.  Survival on cosmological scales cannot be achieved in a finite-age cosmology at all.",
+    "checks": {
+      "longevity_rate_anchored": true,
+      "permanent_sequestration_required": true
+    }
+  },
+  "verdict": "Four Step-16/17 open items closed at toy-model level: (A) the wing->trough Gamma contrast is supplied by self-shielding over ~24 LyC e-folds (~6 Mpc at diffuse density, ~1e-9 of the trough depth) \u2014 the sharp edge is automatic; (B) the wall gas temperature is derived: Compton equilibrium with the Gate-11B bath sets T_gas = T_bath = 2946 K on ~1 yr, so Saha ionization x_e ~ 0.83-0.99 is no longer conditional on an assumed temperature; (C) the broad visibility tail is a closure artifact provided the edge is genuinely absorptive: the post-edge weight is 0.368 x 11/(11+kappa) \u2014 wall dominance (~88%) is restored for kappa >> ~100/L0, the condition that the boundary thermalizes rather than reddens; the foreground screen is damping e^{-2 tau_fg} ~ 0.85 versus the standard 0.90; (D) the neutrino channel's irradiated mass fraction is bounded under a stated homologous-collapse model \u2014 transit exposure beats static for bursts ~t_ff \u2014 while ejecta identity remains undetermined; (E) reservoir longevity is a ~1e3-1e4 Gyr sequestration requirement, viable only for permanently astration-exempt sites.  The remaining open item in this sector is the perturbation mode spectrum (eternal-native Boltzmann treatment)."
+}

@@ -1,0 +1,37 @@
+{
+  "provenance": {
+    "sightline": "Q1009+2956",
+    "n_free": 5,
+    "seed_base": 910000,
+    "n_sims": 200,
+    "numpy_version": "2.1.3",
+    "simulation_kernel_sha256": "876dacb45a9ead1109353eb63d9528a2ceadef47294d1f0fee7a9b809beaaa05",
+    "inputs": {
+      "data/processed/Q1009_union_manifest.json": "e8976ea0706e647a279116be3727bd0bc144d36139498b2bd5787a5cd54b8d10",
+      "data/literature_components/model_6a.26": "d88443fdc04726d2ebc6ad41e51825d5159369d91ed2a349059889824cf91aae",
+      "configs/sightlines/Q1009+2956_noise_model.json": "772f00855e20ba1b5f8c8ef316406d418809fa92d3c07fbc9906802d9281413a",
+      "configs/sightlines/Q1009+2956.json": "eb03e5f7683fd0a1c9dc5e1953805f16bdfcbb99956885c5e5980159da2aebcb",
+      "results/gate3_c2_scaffold_freedom.json": "39abf3bf16d96792fbb3d8716ff3c80bedbb5557518d3f3771317fd3a75bad99",
+      "results/gate2_parameter_ledger.json": "7434abaa88074239353b0c6040ee2cd60a9af8a45f17c5f0133ea6cc2ed822e5",
+      "scripts/lib/block_coordinate_optimizer.py": "24bd9a0c83f75df69f984f4021c4433259bc2586ca755cc9561dc6ef6e15ab38",
+      "scripts/lib/c2_checkpoint.py": "faf880c9a5b50e5c349441365c29c30fc9a3c00984cc839d365a2c9cc5ef822b",
+      "scripts/lib/calibration_statistics.py": "43e7018bc5f65f937442f37f8b6c744d67f3e2dbd2067a9ad5beff8e7c599fcf",
+      "scripts/lib/canonical_screening.py": "8af4c9725f95a2dc578d5c89e587c09b0d8c9d9ca419d11907d25ec5edaa9ee9",
+      "scripts/lib/doppler_physics.py": "c2ebfa296be99549816509d635c6ae8b33b5a5515de60f08bfcca78c67633551",
+      "scripts/lib/ionization_balance.py": "e8dd3dab08e26b8688b67c3ab0d5e1203f55cf77e3c12c9573a6dcd4eac71c1c",
+      "scripts/lib/joint_spectrum_likelihood.py": "a10a80ea7d231cfc41925b668297e02392176243dce7f1739e107ab97b7a165f",
+      "scripts/lib/model_builder.py": "0b80b0bca9357c2ad2cf18828a260fbeaa1a2fd7b3b79de01db1914018891b2b",
+      "scripts/lib/model_parser.py": "070e60f21ad532fe2b9b45d169e16a3fd2cc2094cd6f122de9cb4e22c09ec1b9",
+      "scripts/lib/physical_rt_engine.py": "969f7e8c59ce5ecae230f93a3a81f21752bb6a294dbd9989464b8732aa2da88f",
+      "scripts/lib/q1009_primary_test_engine.py": "eac1c6615df225ec9dfc39d5528a2623df6cacd300e32b16c9a79264fd25836d",
+      "scripts/lib/residual_engine.py": "341bb1447702d4d063424c79f8fc7a4a642417c4552fa35cc785fef7842b6b99",
+      "scripts/lib/scaffold_cache.py": "0955913098930eb89a39d148e23def05bd5a5c3e299d5b23f24807ac78d89e1a",
+      "scripts/lib/sightline_config.py": "dc271bedd1ed772171f6bd78087e954ead6bee418ece1bc313f611dba1aba2f7",
+      "scripts/lib/unified_forward_model.py": "82f8a7a067ded41efaa8bd7721abaeb99d0a7682a27272dc549dd40a36c44a78",
+      "scripts/lib/width_coordinates.py": "09a31eefc5a38bc8684e3e70ff24671daa4bc5b88f9fc1b2967fbcf0cfe49140",
+      "scripts/steps/secondary_analyses.py": "f8addc0024f1f1211cbb2493a6e88e8a4968dbf8e360f2c91ba49a02deebcdea"
+    }
+  },
+  "legacy_adoption": true,
+  "legacy_scope": "Archived kernel matched; input hashes recorded at recovery, not retroactively certified"
+}

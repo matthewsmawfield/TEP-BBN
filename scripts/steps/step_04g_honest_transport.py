@@ -53,6 +53,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from scripts.utils.logger import print_status, setup_step_logger
+from scripts.lib.canonical_screening import s_transfer_depth, PHI_HALF_C2, N_SCREEN
 
 # ============================================================================
 # PHYSICAL CONSTANTS (CGS)
@@ -71,13 +72,8 @@ eV_erg = 1.602e-12     # erg per eV
 beta_A = -1.0
 
 # Screening parameters (Paper 29, three-anchor calibration)
-Phi_half = 1.59e-7
-n_screen = 3.56
-
-
-def S_Sigma(Phi_c2):
-    """Paper 29 potential-depth screening."""
-    return 1.0 / (1.0 + (Phi_c2 / Phi_half)**n_screen)
+Phi_half = PHI_HALF_C2
+n_screen = N_SCREEN
 
 
 # ============================================================================
@@ -123,7 +119,7 @@ def solve_phi(R_cm, M_total_g, m_phi_eV, screening='unscreened',
     if screening == 'unscreened':
         S = np.ones_like(r)
     elif screening == 'paper29':
-        S = S_Sigma(Phi_c2)
+        S = s_transfer_depth(Phi_c2)
     else:
         S = np.ones_like(r)
 
@@ -409,7 +405,7 @@ def observe_cassini(m_phi_eV, B0, screening='paper29'):
         # It is the absorber amplitude projection, not the Cassini source
         # charge — it is expected to fail the PPN bound under the canonical
         # linear mapping.
-        S_graze = S_Sigma(Phi_graze_c2)
+        S_graze = s_transfer_depth(Phi_graze_c2)
     else:
         S_graze = 1.0
     alpha_eff = S_graze * beta_A

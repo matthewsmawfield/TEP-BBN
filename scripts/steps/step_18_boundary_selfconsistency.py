@@ -174,11 +174,13 @@ def dldz_pl(z):
     return 2.0 * (1.0 + z)
 
 
+from scripts.lib.ionization_balance import ionized_fraction
+
+
 def xe_balance(gamma, n_b):
     """Solve Gamma(1-x) = alpha_B n x^2 for x in [0, 1]."""
     an = ALPHA_B * n_b
-    return float((-gamma + np.sqrt(gamma * gamma + 4.0 * gamma * an))
-                 / (2.0 * an))
+    return ionized_fraction(gamma / an)
 
 
 def run_step_18():

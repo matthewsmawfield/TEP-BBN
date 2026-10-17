@@ -125,6 +125,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from scripts.utils.logger import print_status, setup_step_logger
+from scripts.lib.canonical_screening import s_transfer_depth, PHI_HALF_C2, N_SCREEN
 
 # ============================================================================
 # PHYSICAL CONSTANTS (CGS)
@@ -149,13 +150,8 @@ M_Pl_eV = M_Pl_g * c_cgs**2 / eV_erg  # eV
 beta_A = -1.0
 
 # Paper 29 screening parameters (three-anchor calibration)
-Phi_half = 1.59e-7
-n_screen = 3.56
-
-
-def S_Sigma(Phi_c2):
-    """Paper 29 potential-depth screening."""
-    return 1.0 / (1.0 + (Phi_c2 / Phi_half)**n_screen)
+Phi_half = PHI_HALF_C2
+n_screen = N_SCREEN
 
 
 def run_disformal_clock():
@@ -216,7 +212,7 @@ def run_disformal_clock():
     DPhi_halo_c2 = Phi_halo_c2 / 2.0
     D_dphi = 2 * abs(beta_A) * DPhi_halo_c2  # Δ(δφ/M_Pl)
 
-    S_abs = S_Sigma(Phi_halo_c2)
+    S_abs = s_transfer_depth(Phi_halo_c2)
 
     print_status(f"  log N_HI = {log_N_HI} (Zavarygin et al. 2018, Table 5)", "PROCESS")
     print_status(f"  R = {R_kpc} kpc, M_halo = 10¹⁰ M☉", "PROCESS")
@@ -267,7 +263,7 @@ def run_disformal_clock():
                            -G_cgs*M_sun_g/(2*R_sun)*(3 - r_sun_arr**2/R_sun**2),
                            -G_cgs*M_sun_g/r_sun_arr)
     Phi_sun_c2_arr = np.abs(Phi_sun_arr)/c_cgs**2
-    S_sun_arr = np.array([S_Sigma(p) for p in Phi_sun_c2_arr])
+    S_sun_arr = np.array([s_transfer_depth(p) for p in Phi_sun_c2_arr])
 
     # Screened density
     rho_scr_sun = np.where(r_sun_arr < R_sun, S_sun_arr * rho_sun, 0.0)
@@ -368,14 +364,14 @@ def run_disformal_clock():
     # GW170817 parameters
     z_gw = 0.01
     phi_gw_MPl = np.log(1 + z_gw)
-    S_gal = S_Sigma(1e-7)
+    S_gal = s_transfer_depth(1e-7)
     U_gal = 1e-7
     dphi_gal = M_Pl_eV * 2 * abs(beta_A) * S_gal * U_gal / (100 * kpc_cm) * hbarc_eVcm
     path_gal = 2 * 100 * kpc_cm * hbarc_eVcm  # eV^-1
     D_gw = 40 * Mpc_cm * hbarc_eVcm  # eV^-1
 
     # Local redshift
-    S_earth = S_Sigma(7e-10)
+    S_earth = s_transfer_depth(7e-10)
     phi_earth = S_earth * 2 * abs(beta_A) * 7e-10
 
     # REFRAMED: Use the fitted free-H displacement as the TEP target.

@@ -1,13 +1,8 @@
-[20:50:53] [INFO] ================================================================================
-[20:50:53] [INFO] Script: c2_mc_calibration
-[20:50:53] [INFO] Started: 2026-08-30T20:50:53.129394
-[20:50:53] [INFO] ================================================================================
-[20:50:53] [SUCCESS] === C2': FREED-SCAFFOLD MC CALIBRATION (Q1009+2956) ===
-[20:50:53] [PROCESS] N_sims: 200, N_free_components: 5
-[20:50:53] [PROCESS] Observed T_scaffold: 385.35
-[20:50:53] [PROCESS] Running 200 sims on 15 workers (fork)...
-[21:04:15] [PROCESS] Exceedances: 0/200
-[21:04:15] [PROCESS] p_C2 (Laplace): 0.004975
-[21:04:15] [PROCESS] T_sim range: [-150.90, -39.72]
-[21:04:15] [PROCESS] T_sim median: -102.79
-[21:04:15] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c2_mc_calibration.json
+[22:28:33] [INFO] ================================================================================
+[22:28:33] [INFO] Script: c2_mc_calibration
+[22:28:33] [INFO] Started: 2026-10-12T22:28:33.196036
+[22:28:33] [INFO] ================================================================================
+[22:28:33] [SUCCESS] === C2': FREED-SCAFFOLD MC CALIBRATION (Q1009+2956) ===
+[22:28:33] [PROCESS] N_sims: 200, N_free_components: 5
+[22:28:33] [PROCESS] Observed T_scaffold: 398.59
+[22:28:33] [PROCESS] Retained 0/200 saved draws; computing 200 missing seeds

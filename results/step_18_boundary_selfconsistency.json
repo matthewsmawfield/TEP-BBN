@@ -5,15 +5,15 @@
     "front_rows": [
       {
         "n_b_over_nb0": 1.0,
-        "x_e_wing_side": 0.8324857629787966,
-        "depth_to_xe_0p5_pc": 1470754.6428293982,
+        "x_e_wing_side": 0.8324857629787964,
+        "depth_to_xe_0p5_pc": 1470754.6428293984,
         "depth_to_trough_floor_pc": 6394658.658507249,
         "depth_to_trough_floor_L0": 0.0014931515870265472,
         "tau_lyc_at_floor": 24.4459
       },
       {
         "n_b_over_nb0": 10.0,
-        "x_e_wing_side": 0.4687942954672056,
+        "x_e_wing_side": 0.46879429546720564,
         "depth_to_xe_0p5_pc": 0.0,
         "depth_to_trough_floor_pc": 484861.07784949185,
         "depth_to_trough_floor_L0": 0.0001132149699523403,
@@ -21,7 +21,7 @@
       },
       {
         "n_b_over_nb0": 100.0,
-        "x_e_wing_side": 0.18376338780122475,
+        "x_e_wing_side": 0.18376338780122478,
         "depth_to_xe_0p5_pc": 0.0,
         "depth_to_trough_floor_pc": 41539.52049157432,
         "depth_to_trough_floor_L0": 9.699470176379182e-06,
@@ -29,7 +29,7 @@
       },
       {
         "n_b_over_nb0": 1000.0,
-        "x_e_wing_side": 0.06228540476489299,
+        "x_e_wing_side": 0.062285404764892985,
         "depth_to_xe_0p5_pc": 0.0,
         "depth_to_trough_floor_pc": 3621.1110308631323,
         "depth_to_trough_floor_L0": 8.455287406685107e-07,

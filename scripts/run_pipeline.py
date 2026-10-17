@@ -63,6 +63,8 @@ DISFORMAL_STEPS = [
     ("step_09b_screening_plot", "main", "Gate 4B: Screening Function Plot", "disformal"),
     ("step_08c_wavelength_systematics", "main", "Gate 8C: Wavelength-Systematics Sensitivity (literature-calibrated)", "disformal"),
     ("step_10_covariant_transport", "run_covariant_transport", "Gate 10: Full Covariant Transport Solver (omega = -u^mu k_mu)", "disformal"),
+    ("step_10b_disformal_gate_test", "main", "Gate 10-b: Environment-Activated Disformal Gate Test", "disformal"),
+    ("step_10c_ambient_lapse_margin", "main", "Gate 10-c: Ambient-Lapse Margin Bound", "disformal"),
     ("step_11_steady_state_budget", "run_step_11", "Gate 11: Steady-State Timescale & Thermalization Budget", "core"),
     ("step_12_vmo_ionization_budget", "run_step_12", "Gate 12: VMO-Branch Ionization-Equilibrium Budget", "core"),
     ("step_13_deuterium_production_ledger", "main", "Gate 13: Deuterium Production Ledger", "core"),
@@ -73,6 +75,7 @@ DISFORMAL_STEPS = [
     ("step_18_boundary_selfconsistency", "run_step_18", "Gate 18: Boundary Self-Consistency Solve", "core"),
     ("step_19_eternal_surface_reconciliation", "run_step_19", "Gate 19: Eternal-Surface Reconciliation vs TEP-TH Kernel", "core"),
     ("step_20_ambient_bath_front", "run_step_20", "Gate 20: Ambient-Bath Ionization Front", "core"),
+    ("step_21_canonical_projection", "main", "Step 21: Canonical Screening-Projection Audit (Paper 0 sec.7 operator)", "core"),
 ]
 
 # Phase 3: Secondary Robustness Analyses

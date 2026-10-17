@@ -64,7 +64,8 @@ for sl in s10.SIGHTLINES:
           f"δφ_edge/M_Pl = {fl['phi_edge_MPl']:+.4e}, "
           f"φ̄ = {bg['phi_bar_over_MPl']:.4f}")
 print("  Rule 4 requires δφ > 0 in overdensity (well). "
-      "Current code gives δφ < 0 (models absorber as underdensity).")
+      "Current code gives δφ > 0 (values printed above are positive — "
+      "the absorber is modeled as an overdensity, satisfying Rule 4).")
 
 print()
 print("=" * 72)
@@ -75,7 +76,7 @@ for sl in s10.SIGHTLINES:
     pb = bg['phi_bar_over_MPl']
     # Diagnostic B0 ~ the per-sightline near-critical value (n=5)
     B0 = 0.9 * bg['A2'] / (pb**5 * bg['dphi0_sq_eV4'])
-    for tag, sgn in [('current code (δφ<0)', +1.0), ('Rule-4 fix (δφ>0)', -1.0)]:
+    for tag, sgn in [('current code (δφ>0)', +1.0), ('old convention (δφ<0)', -1.0)]:
         pc = pb + sgn * fl['phi_core_MPl'] if sgn > 0 else pb - fl['phi_core_MPl']
         pe = pb + sgn * fl['phi_edge_MPl'] if sgn > 0 else pb - fl['phi_edge_MPl']
         # sgn=+1 reproduces code; sgn=-1 applies the Rule-4 flip

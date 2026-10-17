@@ -41,6 +41,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from scripts.utils.logger import print_status, setup_step_logger
+from scripts.lib.canonical_screening import s_transfer_depth, PHI_HALF_C2, N_SCREEN
 
 
 def run_differential_transport():
@@ -58,12 +59,10 @@ def run_differential_transport():
     M_sun = 1.989e33    # solar mass in g
 
     # ---- Screening parameters (frozen by three-anchor calibration) ----
-    Phi_half = 1.59e-7
-    n_screen = 3.56
+    Phi_half = PHI_HALF_C2
+    n_screen = N_SCREEN
     beta_A = -1.0
 
-    def S_Sigma(Phi_c2):
-        return 1.0 / (1.0 + (Phi_c2 / Phi_half)**n_screen)
 
     # ---- Absorber parameters (Q1009+2956) ----
     R_kpc = 30
@@ -90,7 +89,7 @@ def run_differential_transport():
 
     print_status(f"\n--- Absorber Parameters ---", "TITLE")
     print_status(f"  R = {R_kpc} kpc, log N_HI = {log_N_HI}, log N_H = {np.log10(N_H):.3f}", "PROCESS")
-    print_status(f"  |Phi_abs|/c^2 = {Phi_abs_c2:.2e} (S_Sigma = {S_Sigma(Phi_abs_c2):.6f})", "PROCESS")
+    print_status(f"  |Phi_abs|/c^2 = {Phi_abs_c2:.2e} (S_Sigma = {s_transfer_depth(Phi_abs_c2):.6f})", "PROCESS")
     print_status(f"  dv_conf = {dv_conf_kms:.5f} km/s", "PROCESS")
     print_status(f"  A_env target = {A_env_target:.1f}", "PROCESS")
 
@@ -477,7 +476,7 @@ def run_differential_transport():
     # and the path length is ~R_sun.
 
     Phi_sun_c2 = 2.12e-6  # |Phi_sun|/c^2 at solar surface
-    S_solar = S_Sigma(Phi_sun_c2)  # ~1e-4
+    S_solar = s_transfer_depth(Phi_sun_c2)  # ~1e-4
     g_sun = G * M_sun / R_sun**2  # cm/s^2
 
     # Disformal correction to gamma_PPN in solar system
@@ -523,7 +522,7 @@ def run_differential_transport():
     M_test = 1.0     # g (test mass)
     g_lab = G * M_test / r_cavity**2
     Phi_lab_c2 = G * M_test / (r_cavity * c**2)
-    S_lab = S_Sigma(Phi_lab_c2)  # screening at lab scale
+    S_lab = s_transfer_depth(Phi_lab_c2)  # screening at lab scale
 
     delta_gamma_cavity_per_B0 = S_lab**2 * (g_lab / c**2)**2 * r_cavity / 2
     delta_gamma_cavity = B0_needed * delta_gamma_cavity_per_B0
@@ -549,7 +548,7 @@ def run_differential_transport():
     # If this ratio is >> A_env_target, then the amplification is possible
     # without violating solar system constraints.
 
-    S_abs = S_Sigma(Phi_abs_c2)
+    S_abs = s_transfer_depth(Phi_abs_c2)
     g_abs = G * M_abs / R**2  # gravitational acceleration at absorber edge
 
     ratio_absorber_to_solar = (S_abs**2 * g_abs**2 * R) / (S_solar**2 * g_sun**2 * R_sun)
@@ -689,7 +688,7 @@ def run_differential_transport():
     # transition and does NOT affect the solar system!
 
     Phi_gal_c2 = 5.38e-7
-    S_gal = S_Sigma(Phi_gal_c2)
+    S_gal = s_transfer_depth(Phi_gal_c2)
 
     # Field jump at the transition
     delta_phi_transition = abs(beta_A) * (1 - S_gal) * Phi_abs_c2  # dimensionless (phi/M_Pl)

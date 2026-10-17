@@ -36,32 +36,32 @@
       {
         "f_wall": 100.0,
         "n_b_cm^-3": 2.51e-05,
-        "x_e_saha_T_edge": 0.9883055598467649,
-        "Gamma_required_s^-1": 5.493957410377191e-16
+        "x_e_saha_T_edge": 0.9883055598467636,
+        "Gamma_required_s^-1": 5.42970865423648e-16
       },
       {
         "f_wall": 300.0,
         "n_b_cm^-3": 7.53e-05,
-        "x_e_saha_T_edge": 0.966451121841521,
-        "Gamma_required_s^-1": 5.618192717175847e-16
+        "x_e_saha_T_edge": 0.9664511218415216,
+        "Gamma_required_s^-1": 5.429708654236557e-16
       },
       {
         "f_wall": 500.0,
         "n_b_cm^-3": 0.00012550000000000001,
-        "x_e_saha_T_edge": 0.9463831870497526,
-        "Gamma_required_s^-1": 5.737325777271272e-16
+        "x_e_saha_T_edge": 0.9463831870497514,
+        "Gamma_required_s^-1": 5.42970865423656e-16
       },
       {
         "f_wall": 800.0,
         "n_b_cm^-3": 0.0002008,
-        "x_e_saha_T_edge": 0.9190898691292642,
-        "Gamma_required_s^-1": 5.907701560654361e-16
+        "x_e_saha_T_edge": 0.919089869129264,
+        "Gamma_required_s^-1": 5.429708654236557e-16
       },
       {
         "f_wall": 2000.0,
         "n_b_cm^-3": 0.0005020000000000001,
-        "x_e_saha_T_edge": 0.8336029999913404,
-        "Gamma_required_s^-1": 6.513542602765291e-16
+        "x_e_saha_T_edge": 0.8336029999913405,
+        "Gamma_required_s^-1": 5.429708654236554e-16
       }
     ],
     "statement": "Conditional LTE at assumed local gas temperature 2946 K gives x_e = 0.988 to 0.834. The TEP clock redshift does not independently set local gas temperature. Saha equilibrium requires a verified thermalizing ionizing radiation field and equilibration time. Gamma_required is an alternative photoionization rate for this ionization fraction, not a supplement to LTE; neither it nor the density or radial placement is derived here."

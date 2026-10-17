@@ -3,7 +3,7 @@
 C2': Freed-Scaffold Monte Carlo Calibration
 
 Runs the freed-scaffold optimization inside the MC loop to calibrate
-the p-value for the C2 statistic (T_scaffold = 73.86 for Q1009).
+the p-value for the observed C2 statistic loaded from its fitted ledger.
 
 For each MC realization:
   1. Generate true-D synthetic data on the fixed scaffold
@@ -24,6 +24,9 @@ if str(project_root) not in sys.path:
 
 import json
 import argparse
+import hashlib
+import inspect
+import ast
 import numpy as np
 import multiprocessing
 from scipy.optimize import minimize
@@ -35,7 +38,8 @@ from scripts.lib.model_parser import ParameterManager, parse_vpfit_ties
 from scripts.lib.physical_rt_engine import RadiativeTransferEngine
 from scripts.lib.residual_engine import build_frozen_cache, compute_residuals, split_frozen_candidate
 from scripts.lib.sightline_config import load_sightline_config
-from scripts.steps.secondary_analyses import _load_pipeline_data, _make_fast_logpdf_sum
+from scripts.lib.width_coordinates import minimize_width, hydrogen_start_from_deuterium
+from scripts.steps.secondary_analyses import _load_pipeline_data, _make_fast_logpdf_sum, scaffold_residual_evaluator
 
 
 # ---------------------------------------------------------------------------
@@ -146,15 +150,16 @@ def run_c2_mc_simulation(args):
             "coadd": block["coadd"],
         })
 
-    # Fit M_Dfree with scaffold freedom (reduced starts for MC efficiency)
-    # Use only the D-optimal start (from observed fit) — the MC is calibrating
-    # the null distribution, not searching for the global optimum
-    mc_starts_D = [list(opt_D_obs)] if opt_D_obs is not None else [cfg_multistart_D[0]]
+    scaffold_residuals = scaffold_residual_evaluator(pm, theta_shared_base, free_param_slices, noisy_blocks, engine, z_abs_ref, c_kms,
+        {'d_velocity_offset_kms':d_velocity_offset_kms, 'parent_window_kms':parent_window_kms})
+    # Use the same configured multistart search as the observed C2 fit.
+    mc_starts_D = [list(opt_D_obs)] + [list(start) for start in cfg_multistart_D]
     best_ll_D = -np.inf
     for x0 in mc_starts_D:
         scaffold_init = []
         for n_idx, b_idx in free_param_slices:
             scaffold_init.extend([theta_shared_base[n_idx], theta_shared_base[b_idx]])
+        if np.isfinite(best_ll_D):scaffold_init = best_D.x[3:].tolist()
         x0_ext = list(x0) + scaffold_init
         bounds_D_ext = bounds_D + [(10.0, 20.0), (1.0, 50.0)] * len(free_param_slices)
 
@@ -170,23 +175,22 @@ def run_c2_mc_simulation(args):
                 d_velocity_offset_kms=d_velocity_offset_kms,
                 parent_window_kms=parent_window_kms,
             )
-            res = compute_residuals(grouped, noisy_blocks, engine)
+            res = scaffold_residuals(grouped, noisy_blocks)
             return -_fast_logpdf_sum(res)
 
-        r = minimize(obj_D, x0_ext, method="L-BFGS-B", bounds=bounds_D_ext,
-                     options={"maxiter": 100, "ftol": 1e-6})
+        r = minimize_width(obj_D, x0_ext, bounds_D_ext, "D", method="L-BFGS-B")
         if -r.fun > best_ll_D:
             best_ll_D = -r.fun
+            best_D = r
 
-    # Fit M_Hfree with scaffold freedom (reduced starts for MC efficiency)
-    # Use only 1 H-start (vs 20 in the observed fit) — sufficient for MC calibration
-    # where the goal is to calibrate the null distribution, not find the global optimum
-    mc_starts_H = starts_H[:1] if len(starts_H) > 0 else starts_H
+    # Same full H search as observed C2; reduced starts bias the null tail.
+    mc_starts_H = starts_H
     best_ll_H = -np.inf
     for x0 in mc_starts_H:
         scaffold_init = []
         for n_idx, b_idx in free_param_slices:
             scaffold_init.extend([theta_shared_base[n_idx], theta_shared_base[b_idx]])
+        scaffold_init = best_D.x[3:].tolist()
         x0_ext = list(x0) + scaffold_init
         bounds_H_ext = bounds_H + [(10.0, 20.0), (1.0, 50.0)] * len(free_param_slices)
 
@@ -202,24 +206,34 @@ def run_c2_mc_simulation(args):
                 d_velocity_offset_kms=d_velocity_offset_kms,
                 parent_window_kms=parent_window_kms,
             )
-            res = compute_residuals(grouped, noisy_blocks, engine)
+            res = scaffold_residuals(grouped, noisy_blocks)
             return -_fast_logpdf_sum(res)
 
-        r = minimize(obj_H, x0_ext, method="L-BFGS-B", bounds=bounds_H_ext,
-                     options={"maxiter": 100, "ftol": 1e-6})
+        r = minimize_width(obj_H, x0_ext, bounds_H_ext, "H", method="L-BFGS-B")
         if -r.fun > best_ll_H:
             best_ll_H = -r.fun
+            best_H = r
 
+    d_group=build_model_components('M_Dfree',theta_shared_base,best_D.x[:3],pm,z_abs_ref,c_kms,d_velocity_offset_kms=d_velocity_offset_kms,parent_window_kms=parent_window_kms)
+    matched=hydrogen_start_from_deuterium(best_D.x,d_group['D_I'][-1]['v'],bounds_H_ext)
+    if matched is not None:
+        result=minimize_width(obj_H,matched,bounds_H_ext,'H',method='L-BFGS-B')
+        if -result.fun>best_ll_H:best_ll_H=-result.fun;best_H=result
     T_sim = 2.0 * (best_ll_H - best_ll_D)
-    return T_sim
+    return {"seed":seed,"T":float(T_sim),"LL_D":float(best_ll_D),"LL_H":float(best_ll_H),"converged_D":bool(best_D.success),"converged_H":bool(best_H.success),"params_D":best_D.x.tolist(),"params_H":best_H.x.tolist()}
 
 
 def main():
     parser = argparse.ArgumentParser(description="C2' Freed-Scaffold MC Calibration")
     parser.add_argument("--sightline", default="Q1009+2956")
     parser.add_argument("--n-sims", type=int, default=200)
+    parser.add_argument("--workers", type=int, default=None)
     parser.add_argument("--n-free", type=int, default=5)
+    parser.add_argument("--resume", action="store_true", help="Reuse validated saved seeds without overwriting them")
+    parser.add_argument("--legacy-source", type=Path, help="Archived producing script required to adopt a pre-manifest partial ledger")
     args = parser.parse_args()
+    if args.n_sims <= 0 or args.n_free <= 0 or (args.workers is not None and args.workers <= 0):
+        parser.error("Simulation, component and worker counts must be positive")
 
     setup_step_logger(Path(__file__).stem)
     print_status(f"=== C2': FREED-SCAFFOLD MC CALIBRATION ({args.sightline}) ===", "SUCCESS")
@@ -272,6 +286,8 @@ def main():
     bounds_H = [tuple(b) for b in cb["M_Hfree"]["bounds"]]
     starts_H = cfg.get("multistart", {}).get("M_Hfree", [cb["M_Hfree"]["init"]])
     starts_D = cfg.get("multistart", {}).get("M_Dfree", [cb["M_Dfree"]["init"]])
+    h_fit = g2["results"]["M_Hfree"]
+    starts_H = [h_fit.get("cand_params",h_fit.get("params"))] + starts_H
     n_cand_D = len(bounds_D)
     n_cand_H = len(bounds_H)
 
@@ -303,27 +319,59 @@ def main():
         for i in range(args.n_sims)
     ]
 
-    # Run simulations.  Use multiprocessing with fork start method (faster
-    # than spawn on macOS/Linux) when n_sims is large enough to justify
-    # the overhead; run serially for small n_sims.
-    n_workers = min(multiprocessing.cpu_count(), args.n_sims)
-    if args.n_sims <= 20:
-        print_status(f"Running {args.n_sims} sims serially (small N)...", "PROCESS")
-        # Set shared data for serial execution
-        global _worker_shared
-        _worker_shared = shared_data
-        T_sims = [run_c2_mc_simulation(arg) for arg in sim_args]
-    else:
-        print_status(f"Running {args.n_sims} sims on {n_workers} workers (fork)...", "PROCESS")
-        ctx = multiprocessing.get_context('fork')
-        with ctx.Pool(
-            processes=n_workers,
-            initializer=_init_worker,
-            initargs=(shared_data,),
-        ) as pool:
-            T_sims = pool.map(run_c2_mc_simulation, sim_args)
+    # Checkpoint each seed in both serial and parallel modes. Resume never
+    # silently discards a draw or combines different likelihood inputs.
+    from scripts.lib.c2_checkpoint import prepare_checkpoint, validate_record
+    staging_suffix = '' if args.n_sims >= 200 else f'_n{args.n_sims}'
+    staging = project_root / 'results' / f'{output_prefix}3_c2_simulations{staging_suffix}.jsonl.pending'
+    input_paths = [Path(cfg[k]) for k in ['_manifest_abs', '_vpfit_abs', '_noise_abs']]
+    input_paths += [project_root / 'configs' / 'sightlines' / f'{cfg["sightline_id"]}.json',
+                    c2_path, project_root / 'results' / f'{output_prefix}2_parameter_ledger.json']
+    input_paths += sorted((project_root / 'scripts' / 'lib').glob('*.py'))
+    input_paths += [project_root / 'scripts' / 'steps' / 'secondary_analyses.py']
+    provenance = {"sightline": cfg['sightline_id'], "n_free": args.n_free,
+                  "seed_base": base_seed, "n_sims": args.n_sims,
+                  "numpy_version": np.__version__,
+                  "simulation_kernel_sha256": hashlib.sha256(inspect.getsource(run_c2_mc_simulation).encode()).hexdigest(),
+                  "inputs": {str(p.relative_to(project_root)): hashlib.sha256(p.read_bytes()).hexdigest() for p in input_paths}}
+    legacy_verified = False
+    if args.legacy_source:
+        tree = ast.parse(args.legacy_source.read_text())
+        old = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'run_c2_mc_simulation')
+        current = ast.parse(inspect.getsource(run_c2_mc_simulation)).body[0]
+        legacy_verified = ast.dump(old) == ast.dump(current)
+        if not legacy_verified:
+            raise RuntimeError("Archived simulation kernel differs; partial draws cannot be adopted")
+    T_sims = prepare_checkpoint(staging, provenance, args.resume, legacy_verified)
+    saved_seeds = {r['seed'] for r in T_sims}
+    remaining_args = [a for a in sim_args if a[0] not in saved_seeds]
+    print_status(f"Retained {len(T_sims)}/{args.n_sims} saved draws; computing {len(remaining_args)} missing seeds", "PROCESS")
+    n_workers = min(args.workers or multiprocessing.cpu_count(), max(1, len(remaining_args)))
+    def save_draw(result, saved):
+        validate_record(result, set(range(base_seed, base_seed + args.n_sims)))
+        if result['seed'] in saved_seeds:
+            raise RuntimeError("Duplicate completed seed")
+        saved.write(json.dumps(result, allow_nan=False) + '\n'); saved.flush()
+        saved_seeds.add(result['seed']); T_sims.append(result)
+        if len(T_sims) % 10 == 0:
+            print_status(f'Completed {len(T_sims)}/{args.n_sims} full-search scaffold simulations', 'PROCESS')
+    with staging.open('a') as saved:
+        if args.n_sims <= 20:
+            global _worker_shared
+            _worker_shared = shared_data
+            for a in remaining_args:
+                save_draw(run_c2_mc_simulation(a), saved)
+        elif remaining_args:
+            ctx = multiprocessing.get_context('fork')
+            with ctx.Pool(processes=n_workers, initializer=_init_worker, initargs=(shared_data,)) as pool:
+                for result in pool.imap_unordered(run_c2_mc_simulation, remaining_args):
+                    save_draw(result, saved)
+    if saved_seeds != set(range(base_seed, base_seed + args.n_sims)):
+        raise RuntimeError("Simulation seed accounting is incomplete")
 
-    T_sims = np.array(T_sims)
+    simulation_records = sorted(T_sims,key=lambda r:r["seed"])
+    T_sims = np.array([r["T"] for r in simulation_records])
+    if not np.all(np.isfinite(T_sims)): raise RuntimeError("Nonfinite C2 simulation; no calibration saved")
     exceedances = np.sum(T_sims >= T_obs)
     p_value = (exceedances + 1) / (args.n_sims + 1)  # Laplace-corrected
 
@@ -333,7 +381,9 @@ def main():
     print_status(f"T_sim median: {np.median(T_sims):.2f}", "PROCESS")
 
     # Save results
-    out_path = project_root / "results" / f"{output_prefix}3_c2_mc_calibration.json"
+    suffix = "" if args.n_sims >= 200 else f"_n{args.n_sims}"
+    out_path = project_root / "results" / f"{output_prefix}3_c2_mc_calibration{suffix}.json"
+    staging.replace(staging.with_suffix(''))
     with open(out_path, "w") as f:
         json.dump({
             "sightline": cfg["sightline_id"],
@@ -347,6 +397,9 @@ def main():
             "T_sim_max": float(T_sims.max()),
             "T_sim_median": float(np.median(T_sims)),
             "T_sim_mean": float(np.mean(T_sims)),
+            "T_simulations": T_sims.tolist(),
+            "simulations": simulation_records,
+            "seed_base": base_seed,
         }, f, indent=2)
     print_status(f"Saved to {out_path}", "SUCCESS")
 

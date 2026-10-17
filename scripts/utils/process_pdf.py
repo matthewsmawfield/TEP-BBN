@@ -10,7 +10,7 @@ Usage:
     python process_pdf.py <input_pdf> [--quality ebook|printer|prepress|default]
 
 Example:
-    python process_pdf.py site/public/docs/29-TEP-BBN-v0.2-Dubai.pdf --quality ebook
+    python process_pdf.py site/public/docs/F29-TEP-BBN-v0.6-Dubai.pdf --quality ebook
 """
 
 import argparse

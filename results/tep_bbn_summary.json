@@ -25,6 +25,16 @@
   "P_PARENT_J1332": 0.001,
   "EXC_STD_J1332": 0,
   "EXC_PARENT_J1332": 0,
-  "BINOM95_J1332": 0.00199,
-  "N_SIMS_J1332": 1000
+  "BINOM95_J1332": 0.00299,
+  "N_SIMS_J1332": 1000,
+  "_provenance": {
+    "generated_by": "scripts/finalize_manuscript_numbers.py",
+    "generated_utc": "2026-10-17T17:58:14.884362+00:00",
+    "sources": {
+      "gate2_parameter_ledger.json": "LL_Dfree/LL_Hfree, n_pixels -> T_OBS, DLNL, DAIC, DBIC",
+      "gate3_significance.json": "T_obs_parent_best, p_add_one_*, exceedances_*, binom_95_upper, N_sims, leave_one_out[Ly-alpha] -> T_PARENT, P_*, EXC_*, BINOM95, N_SIMS, T_LYA (Q1009+2956)",
+      "gate_pks19373_significance.json": "*_PKS fields (PKS1937-101)",
+      "gate_j13323_significance.json": "*_J1332 fields (J1332+0052)"
+    }
+  }
 }

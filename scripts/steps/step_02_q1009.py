@@ -55,6 +55,7 @@ project_root = Path(__file__).resolve().parent.parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
+from scripts.lib.residual_engine import likelihood_residuals
 from scripts.lib.model_builder import build_model_components
 from scripts.lib.model_parser import ParameterManager, parse_vpfit_ties
 from scripts.lib.physical_rt_engine import RadiativeTransferEngine
@@ -206,7 +207,7 @@ def run_gate2(sightline=None):
             # Gate 2 runs once (220s); the frozen cache is reserved for Gate 3
             # where the 3.1x speedup on 1000 MC simulations is critical.
             res = compute_residuals(grouped, data_blocks, engine)
-            v = res[np.abs(res) < 100.0]
+            v = likelihood_residuals(res)
             z = (v - _loc) / _scale
             ll = _logpdf_const * len(v) - _logpdf_alpha * np.sum(
                 np.log1p(_logpdf_inv_nu * z * z)

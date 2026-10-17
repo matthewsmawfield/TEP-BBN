@@ -1,11 +1,11 @@
-[13:22:07] [INFO] ================================================================================
-[13:22:07] [INFO] Script: step_18_boundary_selfconsistency
-[13:22:07] [INFO] Started: 2026-09-29T13:22:07.402897
-[13:22:07] [INFO] ================================================================================
-[13:22:07] [SUCCESS] === STEP 18: BOUNDARY SELF-CONSISTENCY SOLVE ===
-[13:22:08] [SUCCESS] [A] front depth 6.4 Mpc vs trough 1.2e+06 L0 — edge automatic
-[13:22:08] [SUCCESS] [B] t_C 0.86 yr at wall; T_gas = T_bath derived
-[13:22:08] [SUCCESS] [C] wall 87%, post-edge 0.2% at kappa=1000/L0 (kappa=1: 35%); damping 0.85 vs 0.90
-[13:22:17] [SUCCESS] [D] transit model: strongly-irradiated fraction ranges 0.00e+00-1.00e+00 across the grid (static 1.75e-05-9.86e-01)
-[13:22:17] [PROCESS] [E] reservoir survival ~120-12000 Gyr — permanent sequestration required
-[13:22:17] [SUCCESS] Wrote /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_18_boundary_selfconsistency.json
+[14:35:12] [INFO] ================================================================================
+[14:35:12] [INFO] Script: step_18_boundary_selfconsistency
+[14:35:12] [INFO] Started: 2026-10-11T14:35:12.870660
+[14:35:12] [INFO] ================================================================================
+[14:35:12] [SUCCESS] === STEP 18: BOUNDARY SELF-CONSISTENCY SOLVE ===
+[14:35:24] [SUCCESS] [A] front depth 6.4 Mpc vs trough 1.2e+06 L0 — edge automatic
+[14:35:24] [SUCCESS] [B] t_C 0.86 yr at wall; T_gas = T_bath derived
+[14:35:24] [SUCCESS] [C] wall 87%, post-edge 0.2% at kappa=1000/L0 (kappa=1: 35%); damping 0.85 vs 0.90
+[14:35:32] [SUCCESS] [D] transit model: strongly-irradiated fraction ranges 0.00e+00-1.00e+00 across the grid (static 1.75e-05-9.86e-01)
+[14:35:32] [PROCESS] [E] reservoir survival ~120-12000 Gyr — permanent sequestration required
+[14:35:32] [SUCCESS] Wrote /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_18_boundary_selfconsistency.json

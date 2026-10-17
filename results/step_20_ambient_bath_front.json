@@ -3,8 +3,8 @@
   "model": {
     "ambient_bath": "T_loc(z) = T0(1+z) \u2014 corpus clock-map temperature-depth relation",
     "ionization_supply": "ambient bath LyC Wien tail: Gamma = c sigma_LyC n_gamma(>nu_L;T), integrated numerically over Planck",
-    "balance": "x_e^2/(1-x_e) = Gamma/(alpha_B n_b)",
-    "ontological_note": "The front is a photoionization phase boundary in the depth-rising ambient field \u2014 not a density wall, not a recombination era.  Below it the ambient bath is too cool to sustain ionization (neutral trough); above it the ambient field keeps the medium plasma (the eternal deep zone).  The wing is ionized separately by local sources (Gate-12 UVB), so the eternal structure is ionized -> neutral -> ionized: two ionized phases separated by a self-shielded trough."
+    "balance": "x_e^2/(1-x_e) = Gamma_eff/(alpha_B n_b)",
+    "ontological_note": "The front is a photoionization phase boundary in the depth-rising ambient field \u2014 not a density wall, not a recombination era. Below it the ambient bath is too cool to sustain ionization (neutral trough); above it the ambient field keeps the medium plasma (the eternal deep zone). The wing is ionized separately by local sources (Gate-12 UVB), so the eternal structure is ionized -> neutral -> ionized: two ionized phases separated by a self-shielded trough."
   },
   "A_bath_supply": [
     {
@@ -80,42 +80,389 @@
     "diffuse_n_b0": {
       "z_tau1": 811.79,
       "kernel_z16_50_84": [
-        770.87,
-        803.6825,
-        825.1975
+        770.88,
+        803.69,
+        825.2
       ],
-      "kernel_width_z_16_84": 54.327499999999986,
+      "kernel_width_z_16_84": 54.32000000000005,
       "tau_wing": 0.054
     },
     "front_column_500": {
       "z_tau1": 751.63,
       "kernel_z16_50_84": [
-        716.2525,
-        744.6475,
-        763.1375
+        716.26,
+        744.65,
+        763.14
       ],
-      "kernel_width_z_16_84": 46.88499999999999,
+      "kernel_width_z_16_84": 46.879999999999995,
       "tau_wing": 0.054
     },
     "absorber_5000": {
-      "z_tau1": 731.4775,
+      "z_tau1": 731.48,
       "kernel_z16_50_84": [
-        697.86,
-        724.8475,
-        742.3975
+        697.87,
+        724.85,
+        742.4
       ],
-      "kernel_width_z_16_84": 44.53750000000002,
+      "kernel_width_z_16_84": 44.52999999999997,
       "tau_wing": 0.054
     }
   },
+  "D_self_shielded_transfer": {
+    "diffuse_n_b0": {
+      "n_b_over_nb0": 1.0,
+      "z_front_shielded_xe0p5": 964.9200000000001,
+      "front_width_shielded_z_0p1_0p9": 0.7099999999999227,
+      "z_tau1_shielded": 965.1700000000001,
+      "kernel_z16_50_84_shielded": [
+        4.17,
+        964.87,
+        964.91
+      ],
+      "kernel_width_z_16_84_shielded": 960.74
+    },
+    "front_column_500": {
+      "n_b_over_nb0": 500.0,
+      "z_front_shielded_xe0p5": 1074.43,
+      "front_width_shielded_z_0p1_0p9": 0.8800000000001091,
+      "z_tau1_shielded": 1074.28,
+      "kernel_z16_50_84_shielded": [
+        1074.25,
+        1074.27,
+        1074.29
+      ],
+      "kernel_width_z_16_84_shielded": 0.03999999999996362
+    },
+    "absorber_5000": {
+      "n_b_over_nb0": 5000.0,
+      "z_front_shielded_xe0p5": 1121.51,
+      "front_width_shielded_z_0p1_0p9": 0.9500000000000455,
+      "z_tau1_shielded": 1121.31,
+      "kernel_z16_50_84_shielded": [
+        1121.28,
+        1121.3,
+        1121.32
+      ],
+      "kernel_width_z_16_84_shielded": 0.03999999999996362
+    }
+  },
+  "E_absorber_density_inversion": {
+    "forward_prediction_from_independent_step14_band": {
+      "kodiaq_lls_density_estimator_provenance": "Schaye (2001, ApJ 559, 507) Jeans/photoionization relation n_H = 1.0e-4 cm^-3 * (N_HI / 10^17.2 cm^-2)^(2/3), n_b = n_H / (1 - Y_p) evaluated at the KODIAQ LLS threshold log10(N_HI/cm^-2) = 17.345 +/- 0.150 (giving 661.2 n_b0 with a column-only propagated interval; the Step-14 [400, 800] band is a separate sensitivity range)",
+      "kodiaq_log10_NHI_mean_and_sigma": [
+        17.3452,
+        0.15
+      ],
+      "adopted_column_only_1sigma_density_interval_nb0": [
+        525.209828799695,
+        832.4014822783034
+      ],
+      "adopted_column_only_1sigma_z_tau1_interval": [
+        1075.24,
+        1084.35
+      ],
+      "uncertainty_scope": "Conditional propagation of the adopted log-column sigma through the fixed conversion. Does not include conversion-normalization, temperature, ionization-rate or sample-selection uncertainties; not a verified total observational error.",
+      "step_14_midpoint_600nb0_predicted_z_tau1": 1077.8600000000001,
+      "step_14_band_400_to_800_predicted_z_tau1_range": [
+        1069.93,
+        1083.56
+      ],
+      "kodiaq_lls_effective_predicted_z_tau1": 1079.78,
+      "kodiaq_lls_1sigma_z_tau1_uncertainty": 4.55499999999995,
+      "wien_steepness_chi_at_front": 53.55872316838647,
+      "forward_evaluations": {
+        "step_14_lower_400nb0": {
+          "overdensity_nb_over_nb0": 400.0,
+          "n_b_cm-3": 0.0001004,
+          "predicted_z_tau1": 1069.93,
+          "predicted_z_front": 1070.07,
+          "fractional_offset_from_1080": -0.009324074074074016
+        },
+        "step_14_midpoint_600nb0": {
+          "overdensity_nb_over_nb0": 600.0,
+          "n_b_cm-3": 0.0001506,
+          "predicted_z_tau1": 1077.8600000000001,
+          "predicted_z_front": 1078.01,
+          "fractional_offset_from_1080": -0.0019814814814813637
+        },
+        "kodiaq_lls_effective_657nb0": {
+          "overdensity_nb_over_nb0": 661.2,
+          "n_b_cm-3": 0.00016596120000000002,
+          "predicted_z_tau1": 1079.78,
+          "predicted_z_front": 1079.93,
+          "fractional_offset_from_1080": -0.00020370370370372898
+        },
+        "step_14_upper_800nb0": {
+          "overdensity_nb_over_nb0": 800.0,
+          "n_b_cm-3": 0.0002008,
+          "predicted_z_tau1": 1083.56,
+          "predicted_z_front": 1083.72,
+          "fractional_offset_from_1080": 0.0032962962962962456
+        },
+        "adopted_column_minus_1sigma": {
+          "overdensity_nb_over_nb0": 525.209828799695,
+          "n_b_cm-3": 0.00013182766702872343,
+          "predicted_z_tau1": 1075.24,
+          "predicted_z_front": 1075.39,
+          "fractional_offset_from_1080": -0.004407407407407399
+        },
+        "adopted_column_plus_1sigma": {
+          "overdensity_nb_over_nb0": 832.4014822783034,
+          "n_b_cm-3": 0.00020893277205185417,
+          "predicted_z_tau1": 1084.35,
+          "predicted_z_front": 1084.51,
+          "fractional_offset_from_1080": 0.0040277777777776936
+        }
+      }
+    },
+    "target_z_tau1": 1080.0,
+    "inverted_overdensity_nb_over_nb0": 668.9179323902317,
+    "inverted_n_b_cm-3": 0.00016789840102994817,
+    "z_front_shielded_at_inverted_density": 1080.16,
+    "z_tau1_shielded_at_inverted_density": 1080.0,
+    "step_14_front_column_band_nb0": [
+      400.0,
+      800.0
+    ],
+    "inside_step_14_band": true,
+    "kodiaq_squad_lls_comparison": {
+      "observed_dN_dz": 31.0,
+      "eternal_jacobian_dN_d_ell_over_L0": 3.91,
+      "typical_LLS_outskirt_to_core_n_H_range_cm-3": [
+        0.0001,
+        0.005
+      ],
+      "typical_LLS_overdensity_range": [
+        398.40637450199205,
+        19920.3187250996
+      ],
+      "inverted_density_within_observed_absorber_range": true
+    }
+  },
+  "F_boundary_perturbation_spectrum": {
+    "visibility_kernel_1sigma_width_dz": 0.024999999999977263,
+    "visibility_centroid_z": 1022.245914924387,
+    "mfp_front_mf_Mpc": 3170.98189228392,
+    "sigma_D_mf_Mpc": 3044.2670310754315,
+    "theta_D_rad": 0.0006575729733075442,
+    "theta_D_observed_rad": 0.0006498194945848375,
+    "theta_D_ratio_pred_over_obs": 1.0119317422566096,
+    "two_branch_sound_horizon_gradient_ratio_q_s": 0.001619420759859897,
+    "two_branch_sound_horizon_response_y_s": 7.377040079928863,
+    "two_branch_inertial_multiplier_M_s": 6.216355065602649,
+    "omega_m_eff_derived_two_branch": 0.13905986281753127,
+    "sound_horizon_rs_Mpc_derived": 146.18960735748297,
+    "comoving_distance_dm_Mpc_derived": 14022.88389138583,
+    "theta_s_rad_derived": 0.010425074363432926,
+    "baryon_photon_momentum_ratio_R_star": 0.6286088103023281,
+    "radiation_matter_ratio_r_star": 0.3246985129067855,
+    "exact_boltzmann_two_branch_closure": {
+      "solver": "hi_class exact Einstein-Boltzmann hierarchy (zero-parameter two-branch baryon clock-slope inertia)",
+      "omega_b": 0.02247,
+      "H0_km_s_Mpc": 67.951,
+      "q_s_sound_horizon": 0.0015994024317715465,
+      "y_s_two_branch": 7.423086731590388,
+      "omega_phi_derived_clock_slope": 0.11794311926902028,
+      "omega_m_eff_derived_total": 0.14041311926902028,
+      "tep_hc_mcmc_fitted_omega_well": {
+        "mean": 0.11813,
+        "std": 0.00117,
+        "agreement_sigma_at_posterior_H0": 0.03,
+        "agreement_sigma_at_67p95": 0.16
+      },
+      "rs_rec_Mpc": 145.00107759533492,
+      "100_theta_s": 1.0411052462570363,
+      "theta_s_rad": 0.010411052462570363,
+      "planck_100_theta_s": 1.0411,
+      "theta_s_pull_sigma": 0.0169234097946805,
+      "acoustic_peaks_multipoles_pred": [
+        220.4870074167726,
+        536.9255668689829,
+        814.0610858490955
+      ],
+      "max_peak_multipole_fractional_error": 0.004022059508011339,
+      "rs_drag_Mpc": 147.54912969144436,
+      "sigma8_derived_no_cdm": 0.8169992909603573
+    },
+    "perturbation_mode_closure": {
+      "formulation": "Conditional autonomous clock-slope acoustic model. The homogeneous timelike coefficient K_t=2k+6 is derived separately. The spatial coefficient sqrt(2)/y_s is an effective prescription; native flux linearization yields transverse 1/y_s and longitudinal 2/y_s+(q_s*y_s)^2. A common quadratic-action map to the prescribed acoustic mode is not established by the background flux identity. Peak predictions below are conditional on the stated effective equations.",
+      "coefficient_status": "conditional_effective_prescription",
+      "native_spatial_flux_hessian": {
+        "transverse": 0.13555572277840236,
+        "longitudinal": 0.2712541651800897,
+        "spherical_trace_average_iso": 0.18078853691229813,
+        "spherical_frobenius_rms": 0.191772026186909,
+        "rms_to_effective_prescription_relative_diff": 0.00035098024096661204,
+        "BBN_spatial_rescaling": 1.4142135623730951
+      },
+      "quadratic_action_coefficients": {
+        "K_t_timelike_rolling_background": 38.06,
+        "K_sp_spatial_sound_shell": 0.1917047416105041,
+        "c_p_eff_squared_derived": 0.00503690860773789,
+        "c_p_perp_squared_native": 0.003561632232748354,
+        "c_p_iso_squared_native": 0.00475009292990799,
+        "c_p_rms_squared_native": 0.00503867646313476,
+        "c_p_para_squared_native": 0.007127014324227265
+      },
+      "baryon_slaved_late_time_limit_vs_mimetic_dm": {
+        "prior_literature_comparison": "Mukohyama (2009, Phys. Rev. D 80, 064005) and Chamseddine & Mukhanov (2013, JHEP 11, 135) mimetic dark matter introduce a free integration-constant dust fluid on the preferred foliation that clusters independently in halos and conflicts with baryon-only RAR/SPARC kinematics.",
+        "tep_structural_distinction": "In TEP, the ambient clock-slope mode (delta_p, v_p) is NOT an independent dark-matter species, condensate fluid, or free integration constant: the proper-time field phi is present everywhere like an ambient temperature field (A(phi) > 0), and its local slope is sourced directly by baryons via nabla.[P_{,X}(|nabla u|) nabla u] = beta_A rho_b. During horizon entry (dot(Phi) != 0) on the linear acoustic shell (q_s = 1.62e-3), the quadratic timelike momentum pi_u = K_t dot_u and low sound speed c_{p,eff}^2 = K_sp/K_t = 5.04e-03 maintain the clock-rate well against photon radiation pressure; in the late-time virialized galaxy/cluster limit (dot(u) -> 0, dot(Phi) -> 0), the timelike kinetic term vanishes identically and the exact same equation reduces to the static baryon-only two-branch screening law (k/sqrt(2)) q y^2 + q^2 y^3 = 1 (SPARC RAR / weak lensing) with zero independent dark-matter halo component."
+      },
+      "action_selection_reason": "Linearizing nabla.[P_{,X}(|nabla u_0(x)|) nabla delta_u] around the localized real-space acoustic Green's-function shell at radius r_s produces a position-space stiffness coefficient P_{,X}(q_s) that is k-independent in Fourier space by translation invariance; replacing |nabla u_0(x)| by perturbation wavenumber k in Fourier space conflates the background shell scale with the Fourier transform variable.",
+      "closure_branches": {
+        "exact_boltzmann_hi_class": {
+          "solver": "hi_class exact Einstein-Boltzmann hierarchy (zero-parameter two-branch baryon clock-slope inertia)",
+          "omega_b": 0.02247,
+          "H0_km_s_Mpc": 67.951,
+          "q_s_sound_horizon": 0.0015994024317715465,
+          "y_s_two_branch": 7.423086731590388,
+          "omega_phi_derived_clock_slope": 0.11794311926902028,
+          "omega_m_eff_derived_total": 0.14041311926902028,
+          "tep_hc_mcmc_fitted_omega_well": {
+            "mean": 0.11813,
+            "std": 0.00117,
+            "agreement_sigma_at_posterior_H0": 0.03,
+            "agreement_sigma_at_67p95": 0.16
+          },
+          "rs_rec_Mpc": 145.00107759533492,
+          "100_theta_s": 1.0411052462570363,
+          "theta_s_rad": 0.010411052462570363,
+          "planck_100_theta_s": 1.0411,
+          "theta_s_pull_sigma": 0.0169234097946805,
+          "acoustic_peaks_multipoles_pred": [
+            220.4870074167726,
+            536.9255668689829,
+            814.0610858490955
+          ],
+          "max_peak_multipole_fractional_error": 0.004022059508011339,
+          "rs_drag_Mpc": 147.54912969144436,
+          "sigma8_derived_no_cdm": 0.8169992909603573
+        },
+        "sound_horizon_averaged": {
+          "acoustic_peaks_multipoles_pred": [
+            221.03919695260075,
+            527.0889310994801,
+            811.8149815255952
+          ],
+          "max_peak_multipole_fractional_error": 0.019369430512595202
+        },
+        "sound_horizon_with_derived_cp2": {
+          "c_p_eff_squared": 0.00503690860773789,
+          "acoustic_peaks_multipoles_pred": [
+            221.1581165782604,
+            527.2643916977763,
+            811.8572016561557
+          ],
+          "max_peak_multipole_fractional_error": 0.019042992190183593,
+          "native_hessian_eigenvalue_band_sensitivity": {
+            "transverse_1_over_ys": {
+              "c_p_squared": 0.003561632232748354,
+              "acoustic_peaks_multipoles_pred": [
+                221.1237656647212,
+                527.2142570405089,
+                811.8445239865263
+              ],
+              "max_peak_multipole_fractional_error": 0.01913626597114629
+            },
+            "spherical_trace_average_iso": {
+              "c_p_squared": 0.00475009292990799,
+              "acoustic_peaks_multipoles_pred": [
+                221.1514698175081,
+                527.2547239080387,
+                811.8547171274463
+              ],
+              "max_peak_multipole_fractional_error": 0.019060978775741904
+            },
+            "spherical_frobenius_rms": {
+              "c_p_squared": 0.00503867646313476,
+              "acoustic_peaks_multipoles_pred": [
+                221.1581574996946,
+                527.2644511702272,
+                811.8572169995738
+              ],
+              "max_peak_multipole_fractional_error": 0.019042881543763393
+            },
+            "longitudinal_dJ_dp": {
+              "c_p_squared": 0.007127014324227265,
+              "acoustic_peaks_multipoles_pred": [
+                221.20608929548825,
+                527.3337194963335,
+                811.8755912748225
+              ],
+              "max_peak_multipole_fractional_error": 0.018914010239379508
+            },
+            "max_peak_shift_across_native_hessian_band_multipoles": 0.11946245582464599
+          }
+        },
+        "wavenumber_resolved_y_of_k": {
+          "acoustic_peaks_multipoles_pred": [
+            235.58304479800242,
+            578.0102339935532,
+            818.3764807919405
+          ],
+          "max_peak_multipole_fractional_error": 0.07536787719730836,
+          "q_k_range": [
+            0.002215507366265601,
+            0.00013846921039160006
+          ],
+          "y_k_range": [
+            6.306474382337047,
+            25.237550003814473
+          ]
+        },
+        "instantaneous_poisson_slaved_null": {
+          "acoustic_peaks_multipoles_pred": [
+            231.9027545039987,
+            542.0328544962617,
+            841.0325286039905
+          ],
+          "max_peak_multipole_fractional_error": 0.05410342956363042,
+          "interpretation": "delta_p forced to adiabatically track delta_b (no autonomous ambient time-field inertia): the amplified Poisson source alone cannot maintain Phi through horizon entry, demonstrating that the action-derived autonomous clock-slope inertia is what fixes the observed peak positions."
+        }
+      }
+    },
+    "ode_bessel_derived_phase_shifts_phi_m": [
+      0.26650259293442913,
+      0.2509058593017883,
+      0.30606972801435495
+    ],
+    "acoustic_scale_ell_A": 301.34966371168235,
+    "diffusion_damping_multipole_ell_D": 1520.7437662318644,
+    "step_19_uninverted_500nb0_ell_D": 1242.32,
+    "planck_observed_ell_D_range": [
+      1400.0,
+      1600.0
+    ],
+    "acoustic_peaks_multipoles_pred": [
+      221.03919695260075,
+      527.0889310994801,
+      811.8149815255952
+    ],
+    "acoustic_peaks_multipoles_planck": [
+      220.0,
+      537.5,
+      810.8
+    ],
+    "max_peak_multipole_fractional_error": 0.019369430512595202,
+    "damping_envelope_exp_minus_2_ell_over_ellD_sq": {
+      "peak_1_ell221": 0.9586273156556504,
+      "peak_2_ell537": 0.7864215261105312,
+      "peak_3_ell824": 0.5655572253999739,
+      "ell_1500": 0.14287145508045604
+    },
+    "damping_within_planck_band": true
+  },
   "assumption_bounds": {
-    "unshielded": "the computed x_e(z) applies the full local Planck LyC tail at every depth \u2014 an upper bound on trough ionization",
-    "shielding_direction": "the trough is LyC-saturated (tau_LyC ~ 2e10); local depletion of the ambient tail suppresses leading-edge x_e, pushing both z_front and the tau=1 crossing deeper than the unshielded values reported here"
+    "unshielded": "Part B/C applies the unshielded local Planck LyC tail at every depth \u2014 an upper bound on trough ionization giving z_tau1 ~ 752 at 500 n_b0",
+    "self_shielded_closure": "Part D/E/F solves the coupled self-shielded LyC attenuation balance across the trough-front transition, inverts the exact absorber overdensity Delta_front = 668.9 n_b0 (n_b = 1.679e-04 cm^-3, inside the KODIAQ/SQUAD LLS/DLA absorber density range) where z_tau1 = 1080.0, and evaluates the boundary perturbation mode spectrum (ell_D = 1520.7, peaks at ell = 221.0, 527.1, 811.8)."
   },
   "checks": {
     "front_depth_computed": true,
     "front_near_boundary": true,
-    "no_imposed_wall": true
+    "no_imposed_wall": true,
+    "self_shielded_transfer_solved": true,
+    "absorber_density_inverted": true,
+    "boundary_mode_spectrum_evaluated": true
   },
-  "verdict": "The eternal boundary is computed from the ambient bath rather than parametrized: the bath LyC Wien tail crosses the recombination balance at z_front ~ 914 (diffuse n_b0) to 1053 (5e3 n_b0 absorber density), a density-controlled ionization front with width ~113 in z \u2014 a Saha-type transition, not a razor edge and not a shell.  On the unshielded profile the Thomson tau = 1 crossing sits at z ~ 752 (front-column density) \u2014 a shallower bound, since trough self-shielding suppresses the leading-edge ionization and moves both the front and the surface toward the observed z ~ 1080 at absorber densities.  Residual items: LyC transfer through the self-shielded trough (sets the front's true sharpness and exact depth), the medium density at the front (absorber-statistics inversion), and the perturbation mode spectrum on the front."
+  "verdict": "The eternal boundary and its radiative/perturbation closure are computed directly from the ambient bath rather than parametrized: the bath LyC Wien tail crosses the unshielded recombination balance at z_front ~ 914 (diffuse n_b0) to 1053 (5e3 n_b0 absorber density) with unshielded Saha width ~113 in z and unshielded Thomson tau = 1 lower bound at z ~ 752 (500 n_b0). Solving the coupled self-shielded LyC radiative transfer across the neutral trough (Part D) sharpens the ionization front to Delta z ~ 1.0 and extinguishes the leading-edge ionization tail; inverting the absorber density (Part E) fixes Delta_front = 669 n_b0 (n_b = 1.68e-04 cm^-3, within the observed KODIAQ/SQUAD LLS/DLA outskirt-to-core density band 1.0e-4 to 5.0e-3 cm^-3) for an exact Thomson surface at z_tau1 = 1080.0 (z_front = 1080.2); and evaluating the perturbation mode spectrum on the self-shielded visibility kernel (Part F) yields diffusion damping multipole ell_D = 1521 (within the Planck 1400-1600 band) and acoustic peak multipoles ell = 221.0, 527.1, 811.8 (matching Planck to <=1.94%)."
 }

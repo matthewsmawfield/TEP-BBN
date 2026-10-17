@@ -1,10 +1,6 @@
-v0.5 (Dubai) — 2026-09-13 — Literature-calibrated systematics, helium sensitivity scan, and envelope B(phi) probe
+v0.6 (Dubai) — 17 October 2026 — Deuterium identifiability rewrite, ambient-bath recombination front, and overconstrained VMO yield closure
 
-- Replaced generic wavelength-systematics scan (0.5/1.0 km/s) with literature-calibrated per-sightline sigma_sys: 0.25 km/s Keck/HIRES (Griest et al. 2010), 0.05 km/s VLT/ESPRESSO (Schmidt et al. 2021), 0.20 km/s VLT/UVES+HIRES (Whitmore & Murphy 2014); reframed systematic as intra-spectrum relative velocity distortion (absolute offsets and inter-night drifts cancel in the relative free-H vs isotope measurement)
-- Under the literature systematic floor, Gate 8 velocity-deviation rejections survive at 9.1sigma (Q1009+2956, p~1e-19), 11.0sigma (PKS1937-101, p~1e-27), 2.1sigma (J1332+0052, p=0.032); Q1009 degrades to 2.7sigma only at sigma_sys=1.0 km/s, exceeding all measured intra-spectrum distortions
-- Added Gate 6 f_VMO sensitivity scan (f_VMO in [0.90, 1.00] at delta_f=0.005): Y_eq varies 0.227 to 0.248, observed Y_p=0.245±0.003 compatible with f_VMO in [0.975, 0.995] (delta_f~0.02, not a fine-tuned point); softened f_VMO requirement from >=0.99 to >=~0.97
-- Added Gate 4B-IV envelope B(phi) scan: saturating B(phi)=B0 phi^2/(1+(phi/phi_c)^2) tested as non-power-law field dependence; no viable solution satisfies both Cassini and cross-redshift transfer in the scanned range, saturating form alone insufficient
-- Added "Limit of the reduced Gate-4B closure" paragraph: failed power-law transfer constrains the specific reduced construction, not the full TEP matter-frame transport problem (covariant omega=-u^mu k_mu evaluation remains open)
-- Added three supercalibration references [71-73]: Griest et al. (2010), Whitmore & Murphy (2014), Schmidt et al. (2021)
-- Pipeline step count 14 to 15 (added step_08c_wavelength_systematics to disformal phase)
-- Labelled the absorber-field calculation as using the canonical low-kinetic benchmark; updated thermodynamics and reproducibility sections
+- Rewrote the spectroscopic deuterium identifiability analysis with a shared data-quality mask, Student-t likelihood over all finite residuals, and N = 1,000 true-D Monte Carlo injections per sightline across Q1009+2956, PKS 1937-101, and J1332+0052 (unrestricted hydrogen preferred at calibrated p = 0.001, surviving alpha/6)
+- Derived the parameter-free early-universe ambient-bath recombination front from the independent KODIAQ Lyman-limit absorber scaling, predicting z_{tau=1}^pred = 1077.9 (within 0.2% of the exact inversion z_* = 1080.0 at Delta_front = 668.9 n_{b,0}, path Jacobian J(z_*) = 4.15 x 10^7, damping scale ell_D = 1520.7, and acoustic peaks ell = 221.0, 527.1, 811.8)
+- Closed the overconstrained Very Massive Object (VMO) stellar-yield and spallation equilibrium budget (f_VMO = 0.994, Y_eq = 0.2470, D/H_eq = 2.53 x 10^-5, 7Li/H_eq = 1.55 x 10^-10, 3He/H_eq = 9.0 x 10^-6) with corrected matter-frame source coupling rho_* A_{,phi}
+- Synchronized Gate 8 provenance hashes and the shared core library

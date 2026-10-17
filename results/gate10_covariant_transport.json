@@ -12,7 +12,7 @@
   },
   "modules": {
     "A_background": "TEP-native \u03c6\u0304(z), \u2202\u2080\u03c6\u0304 = M_Pl \u00d7 H(z) from 1+z = exp(|\u03b2_A|\u03c6\u0304/M_Pl)",
-    "B_3d_field": "Screened Poisson: \u2207\u00b2\u03b4\u03c6 = (2\u03b2_A/M_Pl) \u00d7 S_\u03a3 \u00d7 \u2207\u00b2\u03a6_N (signed source, \u03b2_A=-1 \u2192 \u03b4\u03c6>0 in wells), full radial profile",
+    "B_3d_field": "Screened Poisson: \u2207\u00b2\u03b4\u03c6 = (\u03b2_A/M_Pl) \u00d7 A(\u03c6\u0304) \u00d7 S_\u03a3 \u00d7 \u03c1_* (axiom source \u03c1_*\u00b7A_,\u03c6; A(\u03c6\u0304)=e^(-\u03c6\u0304)~0.22-0.29 at absorber epochs; signed source, \u03b2_A=-1 \u2192 \u03b4\u03c6>0 in wells), full radial profile",
     "C_geodesic": "Hamiltonian null geodesic: H = (1/2)g\u0303^\u03bc\u03bd k_\u03bc k_\u03bd = 0, RK4 integrator",
     "D_frequency": "\u03c9 = -k_0/N at core and edge, \u0394v_T/c = ln(N_core/N_edge)"
   },
@@ -22,13 +22,14 @@
     "k0_initial": -1.0,
     "k0_final": -1.0,
     "non_static_fractional": 0.00010336143737014477,
-    "non_static_correction_kms": -5.821513229460927e-05,
-    "dv_quasi_static_kms": -1.1264381335204672,
-    "dv_total_kms": -1.1264963486527617,
+    "non_static_correction_kms": 30.9877589235694,
+    "non_static_correction_semantics": "absolute common-mode bound c*|dk_0/k_0| on the accumulated k_0 drift over the crossing; not a resolved signed correction to the core-edge contrast",
+    "dv_quasi_static_kms": -0.3214520864444052,
+    "dv_total_kms": -0.3214520864444052,
     "crossing_time_s": 6176117411607.738,
     "n_path_points": 5000,
-    "N_core": 0.0285370300068327,
-    "N_edge": 0.028537137229178288
+    "N_core": 0.028537140019532337,
+    "N_edge": 0.028537170617691503
   },
   "backgrounds": {
     "Q1009+2956": {
@@ -55,66 +56,68 @@
   },
   "fields_3d": {
     "Q1009+2956": {
-      "D_dphi_MPl_full_3d": 1.2638975452629299e-08,
+      "D_dphi_MPl_full_3d": 3.6068076743990805e-09,
       "D_dphi_MPl_step04h_2point": 1.5952933394774448e-08,
-      "ratio_3d_over_2point": 0.7922665468389236,
-      "phi_core_MPl": 1.814038680072271e-08,
-      "phi_edge_MPl": 5.501411348093412e-09
+      "ratio_3d_over_2point": 0.2260905618511846,
+      "phi_core_MPl": 5.176755550688508e-09,
+      "phi_edge_MPl": 1.5699478762894278e-09
     },
     "PKS1937-101": {
-      "D_dphi_MPl_full_3d": 2.4074018748670697e-08,
+      "D_dphi_MPl_full_3d": 5.265533409595511e-09,
       "D_dphi_MPl_step04h_2point": 1.5952933394774448e-08,
-      "ratio_3d_over_2point": 1.5090653331854564,
-      "phi_core_MPl": 3.455517019794109e-08,
-      "phi_edge_MPl": 1.0481151449270394e-08
+      "ratio_3d_over_2point": 0.3300667832864075,
+      "phi_core_MPl": 7.557998730958239e-09,
+      "phi_edge_MPl": 2.2924653213627282e-09
     },
     "J1332+0052": {
-      "D_dphi_MPl_full_3d": 1.0163861073087192e-07,
+      "D_dphi_MPl_full_3d": 2.2989959450547743e-08,
       "D_dphi_MPl_step04h_2point": 1.5952933394774448e-08,
-      "ratio_3d_over_2point": 6.37115496038896,
-      "phi_core_MPl": 1.4836128082283695e-07,
-      "phi_edge_MPl": 4.672267009196503e-08
+      "ratio_3d_over_2point": 1.4411117304657177,
+      "phi_core_MPl": 3.355830826121614e-08,
+      "phi_edge_MPl": 1.0568348810668398e-08
     }
   },
   "predictive_closure_einstein_n5": {
     "B_phi_form": "B\u2080(\u03c6/M_Pl)^5",
-    "best_B0": 15023796.982746558,
-    "best_chi2": 2.945894869632276,
+    "best_B0": 15023799.128200583,
+    "best_chi2": 2.988015866908168,
     "best_result": {
-      "B0": 15023796.982746558,
+      "B0": 15023799.128200583,
       "cassini_pass": true,
-      "gamma_dis": 5.083996491514121e-32,
+      "gamma_dis": 5.083997217527709e-32,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.0631385040232221e-71,
       "gw170817_pass": true,
       "sightlines": [
         {
           "id": "Q1009+2956",
           "z_abs": 2.5042,
-          "dv_pred_kms": -0.005091788213714642,
-          "dv_qs_kms": -0.005091525080039303,
+          "dv_pred_kms": -0.0014529778680787023,
+          "dv_qs_kms": -0.0014529778680787023,
           "dv_obs_kms": -78.9,
           "lorentzian": true,
-          "I_core": 0.8970133079049523,
-          "I_edge": 0.8970133156983777
+          "I_core": 0.8970133011916854,
+          "I_edge": 0.8970133034157098
         },
         {
           "id": "PKS1937-101",
           "z_abs": 3.572,
-          "dv_pred_kms": -1.8971092907091458,
-          "dv_qs_kms": -1.8969652666715098,
+          "dv_pred_kms": -0.4149113393857977,
+          "dv_qs_kms": -0.4149113393857977,
           "dv_obs_kms": -76.0,
           "lorentzian": true,
-          "I_core": 0.009999999999999454,
-          "I_edge": 0.01000012606803069
+          "I_core": 0.009999999999999898,
+          "I_edge": 0.010000027573936254
         },
         {
           "id": "J1332+0052",
           "z_abs": 3.421,
-          "dv_pred_kms": -0.27616208785709295,
-          "dv_qs_kms": -0.2761421270716753,
+          "dv_pred_kms": -0.062461406415069594,
+          "dv_qs_kms": -0.062461406415069594,
           "dv_obs_kms": -118.0,
           "lorentzian": true,
-          "I_core": 0.2496154643949703,
-          "I_edge": 0.24961587348969327
+          "I_core": 0.2496158193185124,
+          "I_edge": 0.2496159118529233
         }
       ]
     },
@@ -130,13 +133,13 @@
   },
   "predictive_closure_matter_n5": {
     "B_phi_form": "B\u2080(\u03c6/M_Pl)^5",
-    "best_B0": 1.9791668678535655e+19,
-    "best_chi2": 2.9978254119405507,
+    "best_B0": 1.2603829296797326e+20,
+    "best_chi2": 2.9994947957196247,
     "verdict": "Matter frame N\u00b2 = A\u00b2/(1+B\u00b7M_Pl\u00b2\u00b7H\u00b2) is always Lorentzian but maximum achievable shift ~0.005 km/s, far below observed ~80 km/s. The matter-frame formulation cannot explain the observations."
   },
   "predictive_closure_negative_B0": {
     "B_phi_form": "B\u2080(\u03c6/M_Pl)^5 with B\u2080 < 0",
-    "max_dv_kms": 0.05125496992830787,
+    "max_dv_kms": 0.011592686786208815,
     "verdict": "B < 0 is lapse-safe for the timelike ambient gradient (N\u00b2 = A\u00b2 + |B|\u03c6\u0307\u00b2 > A\u00b2): no boundary, no amplification \u2014 |\u0394v| bounded at the conformal scale (~0.05 km/s). The negative branch is not excluded a priori (Paper 0 \u00a74 pointwise admissibility ledger), but its ambient fluid-hyperbolicity wall binds at |B0| \u2272 10\u207b\u00b2 at absorber-epoch densities (Gate 10c), so it cannot carry phenomenological amplitudes ungated either. Near-critical amplification requires B > 0 (N\u00b2 \u2192 0)."
   },
   "predictive_closure_envelope": {
@@ -154,18 +157,20 @@
       {
         "sigma_B": 1.0,
         "best_B0": 0.0,
-        "best_chi2": 2.999197578201239,
+        "best_chi2": 2.9998142316690894,
         "best_result": {
           "B0": 0.0,
           "cassini_pass": true,
           "gamma_dis": 0.0,
+          "cassini_pass_canonical": true,
+          "gamma_dis_canonical": 0.0,
           "gw170817_pass": true,
           "sightlines": [
             {
               "id": "Q1009+2956",
               "z_abs": 2.5042,
-              "dv_pred_kms": -0.0037893606821666048,
-              "dv_qs_kms": -0.0037891648554036613,
+              "dv_pred_kms": -0.0010813208629572647,
+              "dv_qs_kms": -0.0010813208629572647,
               "dv_obs_kms": -78.9,
               "lorentzian": true,
               "I_core": 1.0,
@@ -174,8 +179,8 @@
             {
               "id": "PKS1937-101",
               "z_abs": 3.572,
-              "dv_pred_kms": -0.007217938818885331,
-              "dv_qs_kms": -0.007217390850090283,
+              "dv_pred_kms": -0.0015786069002915297,
+              "dv_qs_kms": -0.0015786069002915297,
               "dv_obs_kms": -76.0,
               "lorentzian": true,
               "I_core": 1.0,
@@ -184,8 +189,8 @@
             {
               "id": "J1332+0052",
               "z_abs": 3.421,
-              "dv_pred_kms": -0.030473458085342218,
-              "dv_qs_kms": -0.03047125548699682,
+              "dv_pred_kms": -0.006892389868265049,
+              "dv_qs_kms": -0.006892389868265049,
               "dv_obs_kms": -118.0,
               "lorentzian": true,
               "I_core": 1.0,
@@ -212,18 +217,20 @@
       {
         "sigma_B": 1.25,
         "best_B0": 0.0,
-        "best_chi2": 2.999197578201239,
+        "best_chi2": 2.9998142316690894,
         "best_result": {
           "B0": 0.0,
           "cassini_pass": true,
           "gamma_dis": 0.0,
+          "cassini_pass_canonical": true,
+          "gamma_dis_canonical": 0.0,
           "gw170817_pass": true,
           "sightlines": [
             {
               "id": "Q1009+2956",
               "z_abs": 2.5042,
-              "dv_pred_kms": -0.0037893606821666048,
-              "dv_qs_kms": -0.0037891648554036613,
+              "dv_pred_kms": -0.0010813208629572647,
+              "dv_qs_kms": -0.0010813208629572647,
               "dv_obs_kms": -78.9,
               "lorentzian": true,
               "I_core": 1.0,
@@ -232,8 +239,8 @@
             {
               "id": "PKS1937-101",
               "z_abs": 3.572,
-              "dv_pred_kms": -0.007217938818885331,
-              "dv_qs_kms": -0.007217390850090283,
+              "dv_pred_kms": -0.0015786069002915297,
+              "dv_qs_kms": -0.0015786069002915297,
               "dv_obs_kms": -76.0,
               "lorentzian": true,
               "I_core": 1.0,
@@ -242,8 +249,8 @@
             {
               "id": "J1332+0052",
               "z_abs": 3.421,
-              "dv_pred_kms": -0.030473458085342218,
-              "dv_qs_kms": -0.03047125548699682,
+              "dv_pred_kms": -0.006892389868265049,
+              "dv_qs_kms": -0.006892389868265049,
               "dv_obs_kms": -118.0,
               "lorentzian": true,
               "I_core": 1.0,
@@ -262,50 +269,52 @@
           "J1332+0052": -3.375269236614952
         },
         "inverse_fit_B0": {
-          "Q1009+2956": 1227714146.6854508,
+          "Q1009+2956": 1227735326.0533519,
           "PKS1937-101": null,
           "J1332+0052": null
         }
       },
       {
         "sigma_B": 1.5,
-        "best_B0": 295843196.06587493,
-        "best_chi2": 2.9878139093942075,
+        "best_B0": 295843204.1347197,
+        "best_chi2": 2.9973036629150056,
         "best_result": {
-          "B0": 295843196.06587493,
+          "B0": 295843204.1347197,
           "cassini_pass": false,
-          "gamma_dis": 0.08672849378157892,
+          "gamma_dis": 0.08672849614701698,
+          "cassini_pass_canonical": true,
+          "gamma_dis_canonical": 1.8136202618686996e-41,
           "gw170817_pass": true,
           "sightlines": [
             {
               "id": "Q1009+2956",
               "z_abs": 2.5042,
-              "dv_pred_kms": -0.005380034483947134,
-              "dv_qs_kms": -0.0053797564542672266,
+              "dv_pred_kms": -0.0015352309902467605,
+              "dv_qs_kms": -0.0015352309902467605,
               "dv_obs_kms": -78.9,
               "lorentzian": true,
-              "I_core": 0.6868059878464936,
-              "I_edge": 0.6868059951342045
+              "I_core": 0.6868059867793312,
+              "I_edge": 0.6868059888590388
             },
             {
               "id": "PKS1937-101",
               "z_abs": 3.572,
-              "dv_pred_kms": -0.3681698730307951,
-              "dv_qs_kms": -0.3681419224472892,
+              "dv_pred_kms": -0.08052105496975358,
+              "dv_qs_kms": -0.08052105496975358,
               "dv_obs_kms": -76.0,
               "lorentzian": true,
-              "I_core": 0.009999999999999454,
-              "I_edge": 0.010000024077715719
+              "I_core": 0.009999999999999787,
+              "I_edge": 0.010000005266342038
             },
             {
               "id": "J1332+0052",
               "z_abs": 3.421,
-              "dv_pred_kms": -0.1407698199884671,
-              "dv_qs_kms": -0.14075964525307214,
+              "dv_pred_kms": -0.03183886514370901,
+              "dv_qs_kms": -0.03183886514370901,
               "dv_obs_kms": -118.0,
               "lorentzian": true,
-              "I_core": 0.13419342274746282,
-              "I_edge": 0.13419352147983088
+              "I_core": 0.13419351065371732,
+              "I_edge": 0.13419353298630832
             }
           ]
         },
@@ -320,50 +329,52 @@
           "J1332+0052": -1.305078253847261
         },
         "inverse_fit_B0": {
-          "Q1009+2956": 944558673.6344105,
-          "PKS1937-101": 298817179.1026514,
-          "J1332+0052": 341647152.30244875
+          "Q1009+2956": 944588530.8238513,
+          "PKS1937-101": 298828384.71839434,
+          "J1332+0052": 341685489.06324065
         }
       },
       {
         "sigma_B": 1.75,
-        "best_B0": 232113908.65502074,
-        "best_chi2": 2.9812423292056707,
+        "best_B0": 232113918.98647463,
+        "best_chi2": 2.995855245966526,
         "best_result": {
-          "B0": 232113908.65502074,
+          "B0": 232113918.98647463,
           "cassini_pass": false,
-          "gamma_dis": 0.06804580923646603,
+          "gamma_dis": 0.0680458122652037,
+          "cassini_pass_canonical": true,
+          "gamma_dis_canonical": 1.422937896332148e-41,
           "gw170817_pass": true,
           "sightlines": [
             {
               "id": "Q1009+2956",
               "z_abs": 2.5042,
-              "dv_pred_kms": -0.005369759397981802,
-              "dv_qs_kms": -0.00536948189929828,
+              "dv_pred_kms": -0.001532298926551022,
+              "dv_qs_kms": -0.001532298926551022,
               "dv_obs_kms": -78.9,
               "lorentzian": true,
-              "I_core": 0.7250449294863786,
-              "I_edge": 0.7250449371301471
+              "I_core": 0.7250449250881661,
+              "I_edge": 0.7250449272694823
             },
             {
               "id": "PKS1937-101",
               "z_abs": 3.572,
-              "dv_pred_kms": -0.5962779401080603,
-              "dv_qs_kms": -0.5962326721011467,
+              "dv_pred_kms": -0.1304097969453262,
+              "dv_qs_kms": -0.1304097969453262,
               "dv_obs_kms": -76.0,
               "lorentzian": true,
               "I_core": 0.009999999999999676,
-              "I_edge": 0.010000039293958207
+              "I_edge": 0.010000008594479137
             },
             {
               "id": "J1332+0052",
               "z_abs": 3.421,
-              "dv_pred_kms": -0.17663607955554053,
-              "dv_qs_kms": -0.17662331243421558,
+              "dv_pred_kms": -0.03995097139561209,
+              "dv_qs_kms": -0.03995097139561209,
               "dv_obs_kms": -118.0,
               "lorentzian": true,
-              "I_core": 0.15196679706986482,
-              "I_edge": 0.15196694523711518
+              "I_core": 0.1519669266817415,
+              "I_edge": 0.15196696019616185
             }
           ]
         },
@@ -378,50 +389,52 @@
           "J1332+0052": -0.4176402405791081
         },
         "inverse_fit_B0": {
-          "Q1009+2956": 844143925.2801507,
-          "PKS1937-101": 234440143.55067343,
-          "J1332+0052": 273647786.8004911
+          "Q1009+2956": 844175803.9017878,
+          "PKS1937-101": 234454490.50903976,
+          "J1332+0052": 273694833.1317787
         }
       },
       {
         "sigma_B": 2.0,
-        "best_B0": 206331143.76480722,
-        "best_chi2": 2.9781177209766723,
+        "best_B0": 206331154.6747363,
+        "best_chi2": 2.995165799939625,
         "best_result": {
-          "B0": 206331143.76480722,
+          "B0": 206331154.6747363,
           "cassini_pass": false,
-          "gamma_dis": 0.06048741210518679,
+          "gamma_dis": 0.06048741530350848,
+          "cassini_pass_canonical": true,
+          "gamma_dis_canonical": 1.2648807122926577e-41,
           "gw170817_pass": true,
           "sightlines": [
             {
               "id": "Q1009+2956",
               "z_abs": 2.5042,
-              "dv_pred_kms": -0.005353992520576055,
-              "dv_qs_kms": -0.005353715836693978,
+              "dv_pred_kms": -0.0015277996960953956,
+              "dv_qs_kms": -0.0015277996960953956,
               "dv_obs_kms": -78.9,
               "lorentzian": true,
-              "I_core": 0.7418842423177257,
-              "I_edge": 0.7418842500609927
+              "I_core": 0.7418842366118104,
+              "I_edge": 0.7418842388215208
             },
             {
               "id": "PKS1937-101",
               "z_abs": 3.572,
-              "dv_pred_kms": -0.7069894162020458,
-              "dv_qs_kms": -0.7069357432424614,
+              "dv_pred_kms": -0.15462314161567084,
+              "dv_qs_kms": -0.15462314161567084,
               "dv_obs_kms": -76.0,
               "lorentzian": true,
-              "I_core": 0.009999999999999454,
-              "I_edge": 0.010000046679117913
+              "I_core": 0.009999999999999787,
+              "I_edge": 0.010000010209780696
             },
             {
               "id": "J1332+0052",
               "z_abs": 3.421,
-              "dv_pred_kms": -0.19061300214774604,
-              "dv_qs_kms": -0.1905992247850993,
+              "dv_pred_kms": -0.04311222246816349,
+              "dv_qs_kms": -0.04311222246816349,
               "dv_obs_kms": -118.0,
               "lorentzian": true,
-              "I_core": 0.16046107355455586,
-              "I_edge": 0.16046124496429304
+              "I_core": 0.16046122277419672,
+              "I_edge": 0.1604612615459069
             }
           ]
         },
@@ -436,50 +449,52 @@
           "J1332+0052": 0.013075264340473014
         },
         "inverse_fit_B0": {
-          "Q1009+2956": 799328909.6728749,
-          "PKS1937-101": 208395919.3339764,
-          "J1332+0052": 245703495.75720525
+          "Q1009+2956": 799361483.8536305,
+          "PKS1937-101": 208411069.52337795,
+          "J1332+0052": 245752858.91757634
         }
       },
       {
         "sigma_B": 2.5,
-        "best_B0": 186981556.61770892,
-        "best_chi2": 2.975530831958145,
+        "best_B0": 186981567.81267604,
+        "best_chi2": 2.994594574518106,
         "best_result": {
-          "B0": 186981556.61770892,
+          "B0": 186981567.81267604,
           "cassini_pass": false,
-          "gamma_dis": 0.054814945843060674,
+          "gamma_dis": 0.05481494912494327,
+          "cassini_pass_canonical": true,
+          "gamma_dis_canonical": 1.1462611114319247e-41,
           "gw170817_pass": true,
           "sightlines": [
             {
               "id": "Q1009+2956",
               "z_abs": 2.5042,
-              "dv_pred_kms": -0.005336711420326816,
-              "dv_qs_kms": -0.0053364356294982665,
+              "dv_pred_kms": -0.00152286843300575,
+              "dv_qs_kms": -0.00152286843300575,
               "dv_obs_kms": -78.9,
               "lorentzian": true,
-              "I_core": 0.7551725786053007,
-              "I_edge": 0.7551725864002072
+              "I_core": 0.7551725719421175,
+              "I_edge": 0.7551725741665642
             },
             {
               "id": "PKS1937-101",
               "z_abs": 3.572,
-              "dv_pred_kms": -0.799578787965771,
-              "dv_qs_kms": -0.7995180858406932,
+              "dv_pred_kms": -0.17487307841736996,
+              "dv_qs_kms": -0.17487307841736996,
               "dv_obs_kms": -76.0,
               "lorentzian": true,
-              "I_core": 0.009999999999999676,
-              "I_edge": 0.010000052855422492
+              "I_core": 0.009999999999999898,
+              "I_edge": 0.010000011560678645
             },
             {
               "id": "J1332+0052",
               "z_abs": 3.421,
-              "dv_pred_kms": -0.2009501344454842,
-              "dv_qs_kms": -0.20093560992278653,
+              "dv_pred_kms": -0.045450238430070865,
+              "dv_qs_kms": -0.045450238430070865,
               "dv_obs_kms": -118.0,
               "lorentzian": true,
-              "I_core": 0.16749957899673495,
-              "I_edge": 0.16749976947521295
+              "I_core": 0.1674997443027395,
+              "I_edge": 0.1674997873876669
             }
           ]
         },
@@ -494,50 +509,52 @@
           "J1332+0052": 0.3732882061015078
         },
         "inverse_fit_B0": {
-          "Q1009+2956": 763681814.9128714,
-          "PKS1937-101": 188850375.73441288,
-          "J1332+0052": 224537102.50683936
+          "Q1009+2956": 763714844.178437,
+          "PKS1937-101": 188865921.57438713,
+          "J1332+0052": 224587654.26228404
         }
       },
       {
         "sigma_B": 3.0,
-        "best_B0": 180483457.77479136,
-        "best_chi2": 2.974606877737346,
+        "best_B0": 180483469.03426084,
+        "best_chi2": 2.994390451676392,
         "best_result": {
-          "B0": 180483457.77479136,
+          "B0": 180483469.03426084,
           "cassini_pass": false,
-          "gamma_dis": 0.05290998290125764,
+          "gamma_dis": 0.05290998620204956,
+          "cassini_pass_canonical": true,
+          "gamma_dis_canonical": 1.1064255382517768e-41,
           "gw170817_pass": true,
           "sightlines": [
             {
               "id": "Q1009+2956",
               "z_abs": 2.5042,
-              "dv_pred_kms": -0.005329722914587081,
-              "dv_qs_kms": -0.005329447484910866,
+              "dv_pred_kms": -0.0015208741930002648,
+              "dv_qs_kms": -0.0015208741930002648,
               "dv_obs_kms": -78.9,
               "lorentzian": true,
-              "I_core": 0.7597768180151451,
-              "I_edge": 0.7597768258221567
+              "I_core": 0.7597768110363599,
+              "I_edge": 0.7597768132642612
             },
             {
               "id": "PKS1937-101",
               "z_abs": 3.572,
-              "dv_pred_kms": -0.8328364757192872,
-              "dv_qs_kms": -0.8327732487494384,
+              "dv_pred_kms": -0.18214676949369993,
+              "dv_qs_kms": -0.18214676949369993,
               "dv_obs_kms": -76.0,
               "lorentzian": true,
-              "I_core": 0.009999999999999343,
-              "I_edge": 0.010000055073924097
+              "I_core": 0.009999999999999898,
+              "I_edge": 0.010000012045915496
             },
             {
               "id": "J1332+0052",
               "z_abs": 3.421,
-              "dv_pred_kms": -0.20439742796134935,
-              "dv_qs_kms": -0.2043826542709014,
+              "dv_pred_kms": -0.046229934996227955,
+              "dv_qs_kms": -0.046229934996227955,
               "dv_obs_kms": -118.0,
               "lorentzian": true,
-              "I_core": 0.1700133492704975,
-              "I_edge": 0.17001354651717238
+              "I_core": 0.17001352028606465,
+              "I_edge": 0.17001356490191144
             }
           ]
         },
@@ -552,9 +569,9 @@
           "J1332+0052": 0.5026751425244885
         },
         "inverse_fit_B0": {
-          "Q1009+2956": 751269363.5376077,
-          "PKS1937-101": 182286525.0666564,
-          "J1332+0052": 217387826.81763312
+          "Q1009+2956": 751302530.691699,
+          "PKS1937-101": 182302160.33367363,
+          "J1332+0052": 217438661.63479918
         }
       }
     ],
@@ -563,362 +580,434 @@
   "tep_native_rate_closure": {
     "lcdm|powerlaw_n5": {
       "inverse_B0_eVinv4": [
-        145859989.01868534,
-        15171742.484836094,
-        20007609.249121957
+        145874982.6840732,
+        15174721.24517972,
+        20018341.490014736
       ],
-      "dispersion": 9.613924647381141,
+      "dispersion": 9.613025526278493,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.5041093515054005e-71,
       "gw170817_pass": true
     },
     "lcdm|envelope_s1.31": {
       "inverse_B0_eVinv4": [
-        1125872711.1492512,
-        436548168.67453414,
-        483239894.6178433
+        1125897472.7326045,
+        436548376.15893877,
+        483249038.2462597
       ],
-      "dispersion": 2.5790343241335156,
+      "dispersion": 2.5790898196416316,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 3.796518334509999e-41,
       "gw170817_pass": true
     },
     "lcdm|envelope_s1.5": {
       "inverse_B0_eVinv4": [
-        944558673.6344105,
-        298817179.1026514,
-        341647152.30244875
+        944588530.8238513,
+        298828384.71839434,
+        341685489.06324065
       ],
-      "dispersion": 3.16099186958033,
+      "dispersion": 3.1609732512994015,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.8113512638130354e-41,
       "gw170817_pass": true
     },
     "lcdm|envelope_s2.0": {
       "inverse_B0_eVinv4": [
-        799328909.6728749,
-        208395919.3339764,
-        245703495.75720525
+        799361483.8536305,
+        208411069.52337795,
+        245752858.91757634
       ],
-      "dispersion": 3.8356264951228063,
+      "dispersion": 3.835503966664133,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.1128676231661836e-41,
       "gw170817_pass": true
     },
     "lcdm|descent_lam1.0": {
       "inverse_B0_eVinv4": [
-        1584955122.3475065,
-        562841212.9541435,
-        642093312.8596078
+        1584982338.1921594,
+        562862105.7954774,
+        642157534.7206215
       ],
-      "dispersion": 2.8159898135899972,
+      "dispersion": 2.815933639647224,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.600504722710671e-56,
       "gw170817_pass": true
     },
     "lcdm|descent_lam1.5": {
       "inverse_B0_eVinv4": [
-        2966993734.7424765,
-        1203508930.642301,
-        1350163822.554963
+        2967019212.2519684,
+        1203531269.3879209,
+        1350231348.998511
       ],
-      "dispersion": 2.4652860142541866,
+      "dispersion": 2.4652614250404175,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 5.289690729779445e-56,
       "gw170817_pass": true
     },
     "closed_static|powerlaw_n5": {
       "inverse_B0_eVinv4": [
-        1208342405.6962252,
-        261708661.17765749,
-        314075247.82687044
+        1208466617.152889,
+        261760044.02852508,
+        314243720.29033005
       ],
-      "dispersion": 4.617128070041051,
+      "dispersion": 4.616696263319689,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 3.2780201532824974e-70,
       "gw170817_pass": true
     },
     "closed_static|envelope_s1.31": {
       "inverse_B0_eVinv4": [
-        9327024836.97252,
-        7530343787.311176,
-        7585798371.616568
+        9327229968.423576,
+        7530347366.363867,
+        7585941906.375029
       ],
-      "dispersion": 1.2385921679550407,
+      "dispersion": 1.238618819908086,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 4.96985629056038e-40,
       "gw170817_pass": true
     },
     "closed_static|envelope_s1.5": {
       "inverse_B0_eVinv4": [
-        7824971794.522945,
-        5154519591.800472,
-        5363105241.244415
+        7825219139.311319,
+        5154712885.794003,
+        5363707043.663518
       ],
-      "dispersion": 1.5180797463589977,
+      "dispersion": 1.5180708048506502,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 3.680217117992531e-40,
       "gw170817_pass": true
     },
     "closed_static|envelope_s2.0": {
       "inverse_B0_eVinv4": [
-        6621850338.497769,
-        3594776084.4407244,
-        3857001871.6883564
+        6622120191.554813,
+        3595037421.3167505,
+        3857776764.2121983
       ],
-      "dispersion": 1.8420758853824404,
+      "dispersion": 1.8420170405707033,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.7658626991641186e-40,
       "gw170817_pass": true
     },
     "closed_static|descent_lam1.0": {
       "inverse_B0_eVinv4": [
-        13130183941.071035,
-        9708866364.233505,
-        10079445967.449001
+        13130409404.266415,
+        9709226760.380436,
+        10080454108.734783
       ],
-      "dispersion": 1.3523910463369155,
+      "dispersion": 1.35236406856275,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 3.4042071224354225e-55,
       "gw170817_pass": true
     },
     "closed_static|descent_lam1.5": {
       "inverse_B0_eVinv4": [
-        24579354292.047,
-        20760219946.29534,
-        21194588113.74151
+        24579565354.41796,
+        20760605283.919838,
+        21195648129.669865
       ],
-      "dispersion": 1.1839640599006844,
+      "dispersion": 1.183952250826526,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 6.924503039942886e-55,
       "gw170817_pass": true
     },
     "stationary|powerlaw_n5": {
       "inverse_B0_eVinv4": [
-        1984988255.955523,
-        445606323.0217732,
-        532659642.68786645
+        1985192302.6574936,
+        445693811.61744475,
+        532945365.5609997
       ],
-      "dispersion": 4.454578297935266,
+      "dispersion": 4.454161693322896,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 5.507874523977334e-70,
       "gw170817_pass": true
     },
     "stationary|envelope_s1.31": {
       "inverse_B0_eVinv4": [
-        15321844766.118658,
-        12821772084.477188,
-        12865224744.978403
+        15322181743.054462,
+        12821778178.46163,
+        12865468174.454887
       ],
-      "dispersion": 1.1949865170874632,
+      "dispersion": 1.1950122307366913,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 8.350572470762717e-40,
       "gw170817_pass": true
     },
     "stationary|envelope_s1.5": {
       "inverse_B0_eVinv4": [
-        12854367306.89074,
-        8776501747.822128,
-        9095621960.8665
+        12854773629.21939,
+        8776830865.80138,
+        9096642594.818867
       ],
-      "dispersion": 1.4646345065766695,
+      "dispersion": 1.46462587986144,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 6.18366366253076e-40,
       "gw170817_pass": true
     },
     "stationary|envelope_s2.0": {
       "inverse_B0_eVinv4": [
-        10877955695.87717,
-        6120756362.690039,
-        6541328083.11099
+        10878398993.36184,
+        6121201335.981609,
+        6542642271.279993
       ],
-      "dispersion": 1.7772240963854293,
+      "dispersion": 1.7771673232534435,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 4.647324905031628e-40,
       "gw170817_pass": true
     },
     "stationary|descent_lam1.0": {
       "inverse_B0_eVinv4": [
-        21569433298.622536,
-        16531100735.481552,
-        17094355969.345848
+        21569803675.258224,
+        16531714375.095703,
+        17096065738.519882
       ],
-      "dispersion": 1.3047790128292516,
+      "dispersion": 1.3047529848297028,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 5.719899453708005e-55,
       "gw170817_pass": true
     },
     "stationary|descent_lam1.5": {
       "inverse_B0_eVinv4": [
-        40377404102.25154,
-        35348028734.56336,
-        35945213160.52652
+        40377750822.12634,
+        35348684841.55349,
+        35947010907.11606
       ],
-      "dispersion": 1.1422816362817554,
+      "dispersion": 1.142270242955716,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.1634856438180767e-54,
       "gw170817_pass": true
     },
     "descent_k4|powerlaw_n5": {
       "inverse_B0_eVinv4": [
-        4634601853.9746685,
-        1188352839.9764037,
-        1398223655.339661
+        4635078267.485134,
+        1188586156.5066245,
+        1398973673.6404104
       ],
-      "dispersion": 3.9000216922666624,
+      "dispersion": 3.8996569513379664,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.3977918575058277e-69,
       "gw170817_pass": true
     },
     "descent_k4|envelope_s1.31": {
       "inverse_B0_eVinv4": [
-        35773838936.48422,
-        34193386590.194633,
-        33771023986.19494
+        35774625718.93838,
+        34193402841.767704,
+        33771662984.957283
       ],
-      "dispersion": 1.0593057217071062,
+      "dispersion": 1.0593089755418104,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.1192135286182354e-39,
       "gw170817_pass": true
     },
     "descent_k4|envelope_s1.5": {
       "inverse_B0_eVinv4": [
-        30012708827.59423,
-        23405369803.454712,
-        23875872633.292255
+        30013657519.46283,
+        23406247502.592102,
+        23878551782.267067
       ],
-      "dispersion": 1.2823001336712165,
+      "dispersion": 1.2822925809076826,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.5692940497123964e-39,
       "gw170817_pass": true
     },
     "descent_k4|envelope_s2.0": {
       "inverse_B0_eVinv4": [
-        25398131945.772224,
-        16322969021.359573,
-        17170889119.720745
+        25399166968.190197,
+        16324155686.017208,
+        17174338844.15678
       ],
-      "dispersion": 1.5559750136471657,
+      "dispersion": 1.555925308280806,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.1794010344931355e-39,
       "gw170817_pass": true
     },
     "descent_k4|descent_lam1.0": {
       "inverse_B0_eVinv4": [
-        50360870022.80928,
-        44085506627.7541,
-        44872430673.60051
+        50361734787.74542,
+        44087143095.50717,
+        44876918792.302826
       ],
-      "dispersion": 1.1423452711577669,
+      "dispersion": 1.1423224834198358,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.4515996773963515e-54,
       "gw170817_pass": true
     },
     "descent_k4|descent_lam1.5": {
       "inverse_B0_eVinv4": [
-        94274206081.33438,
-        94266908174.53549,
-        94355650981.28946
+        94275015611.85416,
+        94268657895.2301,
+        94360370039.40152
       ],
-      "dispersion": 1.0009413993571281,
+      "dispersion": 1.0009728805545672,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.952701177512393e-54,
       "gw170817_pass": true
     },
     "descent_k9|powerlaw_n5": {
       "inverse_B0_eVinv4": [
-        5562767587.306141,
-        1501114138.5614111,
-        1754629521.1407921
+        5563339411.535635,
+        1501408861.4168553,
+        1755570718.3854995
       ],
-      "dispersion": 3.705759238692672,
+      "dispersion": 3.7054126657315725,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.7320524226465626e-69,
       "gw170817_pass": true
     },
     "descent_k9|envelope_s1.31": {
       "inverse_B0_eVinv4": [
-        42938219501.79378,
-        43192707021.97885,
-        42379225540.23509
+        42939163852.15483,
+        43192727550.78586,
+        42380027419.167755
       ],
-      "dispersion": 1.0191952889977056,
+      "dispersion": 1.0191764890470678,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.6259910634321808e-39,
       "gw170817_pass": true
     },
     "descent_k9|envelope_s1.5": {
       "inverse_B0_eVinv4": [
-        36023315299.50458,
-        29565403765.87295,
-        29961809618.501457
+        36024453984.66962,
+        29566512465.696957,
+        29965171679.974808
       ],
-      "dispersion": 1.2184279837600571,
+      "dispersion": 1.2184208072042706,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.944566743648991e-39,
       "gw170817_pass": true
     },
     "descent_k9|envelope_s2.0": {
       "inverse_B0_eVinv4": [
-        30484583059.68616,
-        20618993582.536736,
-        21547732252.01824
+        30485825364.70832,
+        20620492564.18207,
+        21552061307.8972
       ],
-      "dispersion": 1.4784709514389243,
+      "dispersion": 1.4784237219271084,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.461436771216261e-39,
       "gw170817_pass": true
     },
     "descent_k9|descent_lam1.0": {
       "inverse_B0_eVinv4": [
-        60446576482.3284,
-        55688323432.52406,
-        56310370121.8076
+        60447614432.62251,
+        55690390600.455,
+        56316002257.65321
       ],
-      "dispersion": 1.085444358108029,
+      "dispersion": 1.0854227054411905,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.7987275605065088e-54,
       "gw170817_pass": true
     },
     "descent_k9|descent_lam1.5": {
       "inverse_B0_eVinv4": [
-        113154379692.51123,
-        119076913774.25854,
-        118406815723.63292
+        113155351346.66364,
+        119079124002.0502,
+        118412737665.1218
       ],
-      "dispersion": 1.0523402991368198,
+      "dispersion": 1.0523507954761984,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 3.658794548272262e-54,
       "gw170817_pass": true
     },
     "descent_pure|powerlaw_n5": {
       "inverse_B0_eVinv4": [
-        6955795846.519343,
-        2037312108.8555465,
-        2354888280.323057
+        6956510866.972391,
+        2037712106.714957,
+        2356151461.145179
       ],
-      "dispersion": 3.4142023778706836,
+      "dispersion": 3.4138830721220694,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.2788858856052505e-69,
       "gw170817_pass": true
     },
     "descent_pure|envelope_s1.31": {
       "inverse_B0_eVinv4": [
-        53690808429.43301,
-        58621141970.22968,
-        56877158597.54951
+        53691989264.011475,
+        58621169831.926544,
+        56878234799.26505
       ],
-      "dispersion": 1.0918282604605725,
+      "dispersion": 1.0918047670701407,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 3.455053606886277e-39,
       "gw170817_pass": true
     },
     "descent_pure|envelope_s1.5": {
       "inverse_B0_eVinv4": [
-        45044273916.80653,
-        40126165991.042755,
-        40211744688.99081
+        45045697751.510605,
+        40127670718.44389,
+        40216256911.6942
       ],
-      "dispersion": 1.1225661062873944,
+      "dispersion": 1.1225594943592436,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.5584939853886378e-39,
       "gw170817_pass": true
     },
     "descent_pure|envelope_s2.0": {
       "inverse_B0_eVinv4": [
-        38118532349.49279,
-        27984098090.21886,
-        28919211455.433678
+        38120085752.5386,
+        27986132508.107903,
+        28925021481.32884
       ],
-      "dispersion": 1.3621497547143093,
+      "dispersion": 1.362106241064026,
       "cassini_pass": false,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 1.922833043090189e-39,
       "gw170817_pass": true
     },
     "descent_pure|descent_lam1.0": {
       "inverse_B0_eVinv4": [
-        75583608165.03311,
-        75580192562.62161,
-        75574147740.47798
+        75584906038.83987,
+        75582998122.93752,
+        75581706629.9964
       ],
-      "dispersion": 1.0001251806978706,
+      "dispersion": 1.0000423304657453,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 2.3666113081173654e-54,
       "gw170817_pass": true
     },
     "descent_pure|descent_lam1.5": {
       "inverse_B0_eVinv4": [
-        141490499455.11,
-        161611187374.42374,
-        158913787382.6877
+        141491714430.8952,
+        161614187095.58246,
+        158921735220.35995
       ],
-      "dispersion": 1.1422052222361216,
+      "dispersion": 1.1422166149136252,
       "cassini_pass": true,
+      "cassini_pass_canonical": true,
+      "gamma_dis_canonical": 4.813927768795056e-54,
       "gw170817_pass": true
     },
     "_rate_models": {
@@ -989,62 +1078,64 @@
         "lam": 1.0,
         "phi_c": 0.1,
         "inverse_B0_eVinv4": [
-          75583608165.03311,
-          75580192562.62161,
-          75574147740.47798
+          75584906038.83987,
+          75582998122.93752,
+          75581706629.9964
         ],
-        "inverse_dispersion": 1.0001251806978706,
-        "joint_B0": 75579316054.82053,
+        "inverse_dispersion": 1.0000423304657453,
+        "joint_B0": 75583203585.8325,
         "joint_B0_definition": "geometric mean of the three inverse-fit roots",
-        "chi2_fractional": 1.7985664657235854,
+        "chi2_fractional": 5.150151378804002,
         "joint_predictions": [
           {
             "id": "Q1009+2956",
-            "dv_pred_kms": -23.452495564638433,
+            "dv_pred_kms": -18.407161474357867,
             "dv_obs_kms": -78.9,
             "lorentzian": true,
-            "residual_kms": 55.44750443536157
+            "residual_kms": 60.49283852564214
           },
           {
             "id": "PKS1937-101",
-            "dv_pred_kms": -61.08429110651688,
+            "dv_pred_kms": -102.941884565344,
             "dv_obs_kms": -76.0,
             "lorentzian": true,
-            "residual_kms": 14.91570889348312
+            "residual_kms": -26.941884565343997
           },
           {
             "id": "J1332+0052",
-            "dv_pred_kms": -250.77919514665567,
+            "dv_pred_kms": -366.54758968568194,
             "dv_obs_kms": -118.0,
             "lorentzian": true,
-            "residual_kms": -132.77919514665567
+            "residual_kms": -248.54758968568194
           }
         ],
-        "cassini_gamma": 1.1316706540532247e-14,
+        "cassini_gamma": 1.131728863163767e-14,
         "cassini_pass": true,
+        "cassini_gamma_canonical": 2.3666113081173654e-54,
+        "cassini_pass_canonical": true,
         "gw170817_dc": 0.0,
         "gw170817_pass": true,
         "ambient_self_consistency": [
           {
             "id": "Q1009+2956",
-            "u_ambient": 0.9999191874003358,
-            "one_minus_u": 8.081259966419285e-05,
-            "presented_1pz_at_conformal_placement": 389.8067420684956,
-            "required_phi_bar_for_observed_z": -3.4577265850071583
+            "u_ambient": 0.9999706196843706,
+            "one_minus_u": 2.938031562937926e-05,
+            "presented_1pz_at_conformal_placement": 646.4882809983843,
+            "required_phi_bar_for_observed_z": -3.963630573066606
           },
           {
             "id": "PKS1937-101",
-            "u_ambient": 0.9999408937705481,
-            "one_minus_u": 5.910622945193289e-05,
-            "presented_1pz_at_conformal_placement": 594.6885736239444,
-            "required_phi_bar_for_observed_z": -3.3481363709818934
+            "u_ambient": 0.9999923271710816,
+            "one_minus_u": 7.672828918448005e-06,
+            "presented_1pz_at_conformal_placement": 1650.549161586087,
+            "required_phi_bar_for_observed_z": -4.368961844859165
           },
           {
             "id": "J1332+0052",
-            "u_ambient": 0.9999391422470708,
-            "one_minus_u": 6.085775292918871e-05,
-            "presented_1pz_at_conformal_placement": 566.7121953677358,
-            "required_phi_bar_for_observed_z": -3.3671197532271107
+            "u_ambient": 0.9999905755575119,
+            "one_minus_u": 9.42444248808183e-06,
+            "presented_1pz_at_conformal_placement": 1440.1001003169913,
+            "required_phi_bar_for_observed_z": -4.299736074574862
           }
         ],
         "ambient_self_consistent": false,
@@ -1086,5 +1177,12 @@
       "M_halo_Msun": 10000000000.0
     }
   ],
-  "conclusion": "The full covariant transport evaluation confirms the key theorem: for a static observer in a quasi-static metric, \u03c9 = -k_0/N exactly, with the cone-tilt term g\u0303_0i cancelling. The signed velocity shift is \u0394v_T/c = ln(N_core/N_edge) (<0 = blueward edge feature), plus a small non-static correction (~1.0e-04 fractional). The signed scalar source (\u03b2_A = -1) places the absorber on the correct physical branch: \u03b4\u03c6_core > \u03b4\u03c6_edge > 0, N_core < N_edge, so the predicted displacement is negative \u2014 matching the sign of the fitted free-H displacements. The full 3D field gives \u0394(\u03b4\u03c6/M_Pl) values comparable to the 2-point approximation. The predictive closure test (Einstein frame, n=5) achieves \u03c7\u00b2=2.95 for the best single B\u2080 (B\u2080=1.50e+07). The Paper-0/28 envelope scan reaches \u03c7\u00b2=2.97 at \u03c3_B=3.0 but no (B\u2080, \u03c3_B) point closes all three sightlines under \u03c6\u0307 = M_Pl\u00b7H_LCDM; the slope obstruction converts into a compatibility condition on the TEP temporal-rate function H_T(z). Evaluated against TEP-native rates, the obstruction is shown to be an artefact of the imported expansion rate: the corpus's closed-benchmark drift (s \u2248 +0.13) collapses the inverse-fit B\u2080 dispersion from ~3\u20134\u00d7 to ~1.24\u00d7, and the unsourced ambient descent law \u03c6\u0307\u00b2 = \u03a0\u0304\u221e\u00b2 + \u03c1\u0304e^{\u2212\u03c6\u0304} on the reconstructed potential (s < 0) admits simultaneous closure with correct sign \u2014 the descent-tracking form B \u221d \u03c6\u0303\u2074/(\u03c6_c\u2074+\u03c6\u0303\u2074)e^{\u2212\u03c6\u0304} reaches 0.18% inverse-fit dispersion (the near-criticality scatter of the observed amplitudes) while passing Cassini and GW170817 by orders of magnitude. The -81.6 km/s clustering is explained by the velocity-selection theorem (Gate 6-I)."
+  "conclusion": "The full covariant transport evaluation confirms the key theorem: for a static observer in a quasi-static metric, \u03c9 = -k_0/N exactly, with the cone-tilt term g\u0303_0i cancelling. The signed velocity shift is \u0394v_T/c = ln(N_core/N_edge) (<0 = blueward edge feature). The non-static drift is reported as an absolute common-mode bound on the velocity offset (fractional drift ~1.0e-04, not a signed additive correction). The signed scalar source (\u03b2_A = -1) places the absorber on the correct physical branch: \u03b4\u03c6_core > \u03b4\u03c6_edge > 0, N_core < N_edge, so the predicted displacement is negative \u2014 matching the sign of the fitted free-H displacements. The full 3D field gives \u0394(\u03b4\u03c6/M_Pl) values comparable to the 2-point approximation. The predictive closure test (Einstein frame, n=5) achieves \u03c7\u00b2=2.99 for the best single B\u2080 (B\u2080=1.50e+07). The Paper-0/28 envelope scan reaches \u03c7\u00b2=2.99 at \u03c3_B=3.0 but no (B\u2080, \u03c3_B) point closes all three sightlines under \u03c6\u0307 = M_Pl\u00b7H_LCDM; the slope obstruction converts into a compatibility condition on the TEP temporal-rate function H_T(z). Evaluated against TEP-native rates, the obstruction is shown to be an artefact of the imported expansion rate: the corpus's closed-benchmark drift (s \u2248 +0.13) collapses the inverse-fit B\u2080 dispersion from ~3\u20134\u00d7 to ~1.24\u00d7, and the unsourced ambient descent law \u03c6\u0307\u00b2 = \u03a0\u0304\u221e\u00b2 + \u03c1\u0304e^{\u2212\u03c6\u0304} on the reconstructed potential (s < 0) admits simultaneous closure with correct sign \u2014 the descent-tracking form B \u221d \u03c6\u0303\u2074/(\u03c6_c\u2074+\u03c6\u0303\u2074)e^{\u2212\u03c6\u0304} gives tight inverse-fit concordance. This is algebraic amplitude agreement: the ungated ambient lapse does not reproduce the adopted redshift map, so a common environmental activation law is required (Gate 10b). Solar proxy columns and zero-field GW diagnostics do not certify realized-profile propagation bounds. The -81.6 km/s clustering is explained by the velocity-selection theorem (Gate 6-I).",
+  "solar_constraint_scope": {
+    "adopted_columns": "assigned amplitude and adopted gradient; diagnostic",
+    "canonical_columns": "assigned amplitude and acceleration-proxy gradient; diagnostic",
+    "cassini_observation_operator_verified": false,
+    "existing_selected_solver": "TEP/scripts/steps/step_53_unified_profile.py",
+    "required": "field value and gradient from the same solved environment, with full propagation and mass calibration"
+  }
 }

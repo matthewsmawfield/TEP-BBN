@@ -2,7 +2,7 @@
 """
 Gate 8: Multi-Pronged TEP Evidence Analysis
 
-Computes five independent discriminators between the isotope-D and TEP
+Computes five correlated descriptive diagnostics between the isotope-D and TEP
 edge-gas interpretations, using the fitted free-H parameters from all
 three benchmark sightlines:
 
@@ -12,9 +12,9 @@ three benchmark sightlines:
   4. Column density discriminator: fitted free-H N vs D/H_BBN prediction
   5. D-redundancy test: M_D+H should drive logN_D → 0 under TEP (D redundant)
 
-Each discriminator produces a likelihood ratio or p-value under each
-hypothesis. The combined evidence is reported as a product of independent
-likelihood ratios.
+These reuse the same fitted spectra. Resolution-based scales are descriptive
+proxies; step_08b_calibration supplies the injection-calibrated probabilities.
+No product of independent evidence is formed.
 """
 
 import sys
@@ -22,6 +22,7 @@ from pathlib import Path
 import json
 import numpy as np
 from scipy.stats import norm, spearmanr
+from itertools import permutations
 
 project_root = Path(__file__).resolve().parent.parent.parent
 if str(project_root) not in sys.path:
@@ -82,7 +83,10 @@ def _load_sightline_evidence_data(sl_name):
     T_parent_best = g3["T_obs_parent_best"]
 
     # Parse VPFIT model to get canonical parent and best alternative parent
-    comps_raw, _ = parse_vpfit_ties(cfg["vpfit_model_path"])
+    model_path = Path(cfg["vpfit_model_path"])
+    if not model_path.is_absolute():
+        model_path = project_root / model_path
+    comps_raw, _ = parse_vpfit_ties(str(model_path))
     pm = ParameterManager(comps_raw)
     theta = np.array(pm.theta_init)
     comps = pm.reconstruct(theta)
@@ -251,10 +255,10 @@ def run_gate8():
         # Under D: ratio should be 1.0 (within uncertainty)
         # Under TEP: ratio is unconstrained
         consistent_D = deviation_sigma < 2.0  # 2σ tolerance
-        consistent_TEP = True  # TEP allows any b
+        consistent_TEP = None  # A free width alone does not test the edge-gas mechanism
 
         status_D = "YES" if consistent_D else "NO"
-        status_TEP = "YES"
+        status_TEP = "UNTESTED"
         print_status(f"  {name:<15} {s['parent_b']:<8.1f} {b_D_pred:<10.1f} {b_Hfree:<10.1f} {ratio:<8.2f} {deviation_sigma:<8.1f} {status_D:<5} {status_TEP}", "PROCESS")
 
         b_results[name] = {
@@ -265,7 +269,8 @@ def run_gate8():
             "sigma_b": float(sigma_b),
             "deviation_sigma": float(deviation_sigma),
             "consistent_with_D": bool(consistent_D),
-            "consistent_with_TEP": True,
+            "consistent_with_TEP": None,
+            "uncertainty_scope": "Descriptive resolution proxy; use injection calibration for statistical inference",
         }
 
     n_b_inconsistent = sum(1 for r in b_results.values() if not r["consistent_with_D"])
@@ -295,7 +300,10 @@ def run_gate8():
         logN_HIs.append(logN_HI)
         print_status(f"  {name}: logN_HI={logN_HI:.2f}, |dev|={abs(deviation):.1f} km/s, dev={deviation:+.1f} km/s", "PROCESS")
 
-    rho, pval = spearmanr(logN_HIs, deviations)
+    rho, pval_asymptotic = spearmanr(logN_HIs, deviations)
+    permutation_rhos = np.array([spearmanr(logN_HIs, values).statistic for values in permutations(deviations)])
+    pval = float(np.mean(abs(permutation_rhos) >= abs(rho)-1e-12))
+    p_directional = float(np.mean(permutation_rhos >= rho-1e-12))
     print_status(f"\n  Spearman rank correlation: ρ = {rho:.2f}, p = {pval:.3f}", "PROCESS")
     print_status(f"  With n=3, exact probability of perfect ranking = 1/6 = 0.167", "PROCESS")
 
@@ -317,7 +325,9 @@ def run_gate8():
     results["offset_deviation_correlation"] = {
         "spearman_rho": float(rho),
         "spearman_p": float(pval),
-        "exact_p_n3": 0.167,
+        "exact_p_n3": p_directional,
+        "exact_p_twosided": pval,
+        "scope": "Three-point descriptive ordering; directional test requires a prespecified trend",
         "deviations": deviations,
         "logN_HIs": logN_HIs,
         "n_dev_inconsistent": n_dev_inconsistent,
@@ -349,6 +359,7 @@ def run_gate8():
         "n_blueward": n_blueward,
         "n_total": n_total,
         "p_null": float(p_sign),
+        "scope": "Conditional random-sign benchmark; isotope-offset-selected features are not an unbiased sign sample",
     }
 
     # =====================================================================
@@ -453,7 +464,7 @@ def run_gate8():
     # 1. b-value
     if n_b_inconsistent >= 1:
         evidence_against_d.append(f"b-value: {n_b_inconsistent}/3 sightlines inconsistent with D-predicted b at >2σ")
-        evidence_for_tep.append("b-value: TEP allows free b (no constraint violated)")
+        evidence_for_tep.append("b-value: free-H width is descriptive; edge-gas compatibility requires a physical width prediction")
 
     # 2. Offset deviation: perfect correlation + inconsistency count
     if rho == 1.0:
@@ -486,7 +497,7 @@ def run_gate8():
     print_status(f"\n  Evidence AGAINST TEP:", "PROCESS")
     if n_d > 0:
         print_status(f"    • D-redundancy: {n_d}/{len(meaningful)} sightlines retain logN_D > 0 in M_D+H", "PROCESS")
-    print_status(f"    • Amplitude gap: A_env ~ 10^4 required (Gate 4B-II identifies mechanism, but not yet computed)", "PROCESS")
+    print_status(f"    • Amplitude: conformal and disformal budgets are computed in Gate 4B; assigning the entire free-H offset to a TEP field is a separate physical hypothesis", "PROCESS")
 
     # Overall assessment
     n_for_tep = len(evidence_for_tep)
@@ -502,7 +513,7 @@ def run_gate8():
     if n_tep > 0:
         strongest.append(f"D-redundancy test ({n_tep}/{len(meaningful)} sightlines drive logN_D → 0)")
     print_status(f"  The strongest discriminators are: {', '.join(strongest)}", "PROCESS")
-    print_status(f"  These are independent of the Gate 2/3 likelihood test and provide", "PROCESS")
+    print_status(f"  These reuse the Gate 2/3 spectra and fitted parameters and provide", "PROCESS")
     print_status(f"  complementary evidence that the deuterium-like features are not isotopic D.", "PROCESS")
 
     results["combined_assessment"] = {
@@ -511,16 +522,31 @@ def run_gate8():
         "n_for_tep": n_for_tep,
         "n_against_d": n_against_d,
         "strongest_discriminators": strongest,
+        "scope": "Descriptive patterns and rough uncertainty proxies; correlated diagnostics, not an independent evidence count",
     }
 
     # ---- Build ledger ----
     ledger = {
         "gate": "8",
-        "title": "Multi-Pronged TEP Evidence Analysis",
+        "title": "Descriptive Spectral Diagnostics",
+        "statistical_authority": "gate8_calibration_<sightline>.json; resolution proxies here are not calibrated probabilities",
         "sightlines": list(sightlines.keys()),
         "results": results,
     }
 
+    ledger['calibrated_diagnostics'] = {}
+    import hashlib
+    for name in sl_names:
+        clean = name.replace('+','').replace('-','')
+        path = project_root / 'results' / f'gate8_calibration_{clean}.json'
+        if path.exists():
+            calibrated = json.loads(path.read_text())
+            ledger['calibrated_diagnostics'][name] = {
+                'source_file': str(path.relative_to(project_root)),
+                'source_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+                'n_sims': calibrated['n_sims'],
+                'p_values': calibrated['calibrated_p_values'],
+                'scope': calibrated.get('calibration',{}).get('scope','Legacy calibration; regenerate before using')}
     out_dir = project_root / "results"
     out_dir.mkdir(parents=True, exist_ok=True)
     with open(out_dir / "gate8_evidence.json", "w") as f:

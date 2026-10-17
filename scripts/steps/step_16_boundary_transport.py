@@ -25,6 +25,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from scripts.utils.logger import print_status, setup_step_logger
+from scripts.lib.ionization_balance import ionized_fraction
 
 # Corpus constants (Step 11 / Step 14)
 N_B0 = 2.51e-7            # cm^-3
@@ -56,7 +57,7 @@ def saha_x(n_b_cm3, T):
     """Hydrogen ionization fraction from Saha equilibrium (cgs)."""
     coeff = (2.0 * np.pi * M_E * K_B * T / H_PL ** 2) ** 1.5 \
         * np.exp(-E_ION / (K_B * T)) / n_b_cm3
-    return (-coeff + np.sqrt(coeff ** 2 + 4.0 * coeff)) / 2.0
+    return ionized_fraction(coeff)
 
 
 def run_step_16():
@@ -153,7 +154,8 @@ def run_step_16():
     for fw in [100.0, 300.0, 500.0, 800.0, 2000.0]:
         x = float(saha_x(fw * N_B0, T_edge))
         # required photoionization rate to hold x against alpha_B
-        gam_req = ALPHA_B * (fw * N_B0) * x / max(1.0 - x, 1e-12)
+        # Gamma(1-x) = alpha_B n_b x^2 at the declared baryon density.
+        gam_req = ALPHA_B * (fw * N_B0) * x**2 / max(1.0 - x, 1e-12)
         saha_rows.append({
             "f_wall": fw, "n_b_cm^-3": fw * N_B0,
             "x_e_saha_T_edge": x,

@@ -14,7 +14,7 @@
         GitHub Repository: <a href="https://github.com/matthewsmawfield/TEP-BBN">github.com/matthewsmawfield/TEP-BBN</a>
     </p>
     <p>
-        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 24 analysis steps across 4 phases: core gates (1–8), Gate 8 calibration (step\_08b, true-D injection Monte Carlo), Gate 8 wavelength- and parent-centroid-systematics sensitivity (step\_08c, step\_08d), disformal transport, the steady-state and ionization-equilibrium ledgers (step\_11, step\_12), the deuterium production and extended-channel ledgers (step\_13, step\_15), the species-resolved opacity three-point test (step\_14), the boundary-transport consistency audit (step\_16), the literature-input inversion and channel-budget audit (step\_17), the boundary self-consistency solve (step\_18), secondary robustness analyses, and manuscript finalization.
+        The repository contains a deterministic, version-controlled cosmological analysis pipeline utilizing 27 analysis steps across 4 phases: core gates (1–8), Gate 8 calibration (step_08b, true-D injection Monte Carlo), Gate 8 wavelength- and parent-centroid-systematics sensitivity (step_08c, step_08d), disformal transport, the steady-state and ionization-equilibrium ledgers (step_11, step_12), the deuterium production and extended-channel ledgers (step_13, step_15), the species-resolved opacity three-point test (step_14), the boundary-transport consistency audit (step_16), the literature-input inversion and channel-budget audit (step_17), the boundary self-consistency solve (step_18), the eternal-surface reconciliation and self-shielded ambient-bath front mode spectrum (step_19, step_20), the canonical screening-projection audit (step_21), secondary robustness analyses, and manuscript finalization.
         All steps are orchestrated by <code>scripts/run_pipeline.py</code> with comprehensive per-step logging, SHA-256 checksum manifest generation, and a pipeline summary ledger.
     </p>
     <p>
@@ -99,7 +99,7 @@ TEP-BBN/
                 <td style="padding: 0.5em;">KODIAQ Z LLS Catalog</td>
                 <td style="padding: 0.5em;">Lehner et al. 2016</td>
                 <td style="padding: 0.5em;">Literature</td>
-                <td style="padding: 0.5em;">26 pLLSs/LLSs at $2.3 < z < 3.3$</td>
+                <td style="padding: 0.5em;">26 pLLSs/LLSs at $2.3 &lt; z &lt; 3.3$</td>
                 <td style="padding: 0.5em;"><code>data/kodiaq_z_lls_catalog.json</code></td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
@@ -188,7 +188,7 @@ TEP-BBN/
                 <td style="padding: 0.4em;">1</td>
                 <td style="padding: 0.4em;">04</td>
                 <td style="padding: 0.4em;"><code>step_04_prior.py</code></td>
-                <td style="padding: 0.4em;">TEP absorber field sign closure ($\Delta v_T < 0$)</td>
+                <td style="padding: 0.4em;">TEP absorber field sign closure ($\Delta v_T &lt; 0$)</td>
                 <td style="padding: 0.4em;">~1 s</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0;">
@@ -342,7 +342,7 @@ TEP-BBN/
                 <td style="padding: 0.4em;">2</td>
                 <td style="padding: 0.4em;">20</td>
                 <td style="padding: 0.4em;"><code>step_20_ambient_bath_front.py</code></td>
-                <td style="padding: 0.4em;">Ambient-bath ionization front: Planck LyC Wien-tail supply vs recombination demand, equilibrium $x_e(z)$, derived front depth and Thomson surface on the computed profile</td>
+                <td style="padding: 0.4em;">Ambient-bath ionization front &amp; closure: Planck LyC Wien-tail supply, self-shielded LyC radiative transfer, absorber-statistics density inversion ($\Delta_{\rm front}=668.9\,n_{b,0}$ for $z_{\tau=1}=1080.0$), and boundary perturbation mode spectrum ($\ell_D=1521$; action-derived two-branch ambient clock-slope mode with exact <code>hi_class</code> Boltzmann closure and three-branch ablation)</td>
                 <td style="padding: 0.4em;">~1 min</td>
             </tr>
             <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
@@ -476,122 +476,11 @@ python scripts/run_pipeline.py --n-sims 500
         </tr>
     </table>
 
-    <h4>Version Changelog (v0.3 → v0.5)</h4>
-    <p>
-        The following changes were applied between v0.3 (Dubai) and v0.5 (Dubai):
-    </p>
-    <table class="data-table" style="font-size: 0.9em;">
-        <thead>
-            <tr>
-                <th>Change</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Literature-calibrated wavelength systematics</td>
-                <td>The generic $\sigma_{\rm sys} \in \{0.5, 1.0\}$\,km/s scan (step\_08c) is replaced by instrument-specific residual distortion amplitudes from supercalibration studies: $\sigma_{\rm sys} = 0.25$\,km/s for Keck/HIRES (Griest et al. 2010, iodine-cell intra-order distortions $\sim 250$\,m/s), $0.05$\,km/s for VLT/ESPRESSO (Schmidt et al. 2021, laser-frequency-comb discrepancies $\lesssim 24$\,m/s), and $0.20$\,km/s for VLT/UVES+HIRES (Whitmore & Murphy 2014, solar-twin long-range distortions $\sim 200$\,m/s per $1000$\,\AA). The Gate 8 observable is reframed as a <em>relative</em> velocity offset between the fitted free-H component and the isotope-shifted position within the same spectrum, so absolute wavelength offsets and inter-night drifts cancel; only intra-spectrum distortions contribute.</td>
-            </tr>
-            <tr>
-                <td>Gate 8 velocity-deviation significances under systematic floor</td>
-                <td>Folding the literature $\sigma_{\rm sys}$ into the calibrated spread via $\sigma_{\rm total} = \sqrt{\sigma_{\rm fit}^2 + \sigma_{\rm sys}^2}$ ($N = 100\,000$ Monte Carlo draws per case) gives Gaussian-equivalent significances of $9.1\sigma$ (Q1009$+$2956), $11.0\sigma$ (PKS\,1937$-$101), and $2.1\sigma$ (J1332$+$0052), corresponding under a normal-tail approximation to $p\sim10^{-19}$, $10^{-27}$, and $0.032$, respectively; the Monte-Carlo sampling itself does not directly resolve tail probabilities below its finite simulation floor. The Q1009 and PKS\,1937 rejections of isotope-D survive at high significance; the J1332 result remains not individually significant after the $\alpha/3$ correction. A sensitivity scan over $\sigma_{\rm sys} \in [0, 1]$\,km/s is reported in results/gate8\_wavelength\_systematics.json; the $9.1\sigma$ Q1009 result degrades to $2.7\sigma$ only at $\sigma_{\rm sys} = 1.0$\,km/s, exceeding all measured intra-spectrum distortions for the relevant instruments.</td>
-            </tr>
-            <tr>
-                <td>Helium $f_{\rm VMO}$ sensitivity scan</td>
-                <td>A dedicated scan over $f_{\rm VMO} \in [0.90, 1.00]$ at $\Delta f = 0.005$ resolution (step\_06, results/gate6\_helium\_results.json) confirms that $Y_{\rm eq}$ varies from $0.227$ ($f_{\rm VMO} = 0.90$) to $0.248$ ($f_{\rm VMO} = 1.00$), with the observed $Y_p = 0.245 \pm 0.003$ compatible with $f_{\rm VMO} \in [0.975, 0.995]$ — a range spanning $\Delta f_{\rm VMO} \approx 0.02$, not a single fine-tuned point. The $f_{\rm VMO}$ requirement is softened from $\geq 0.99$ to $\gtrsim 0.97$.</td>
-            </tr>
-            <tr>
-                <td>Envelope $B(\phi)$ probe</td>
-                <td>A saturating non-power-law envelope $B(\phi) = B_0\,\varphi^2/(1+(\varphi/\varphi_c)^2)$ with $\varphi \equiv \phi/M_{\rm Pl}$ and $\varphi_c \equiv \phi_c/M_{\rm Pl}$ is scanned over $\varphi_c \in [10^{-2}, 10]$ (step\_04h) as a candidate field dependence that behaves as $\varphi^2$ at small $\varphi$ (Cassini) while saturating at large $\varphi$ (cosmological). No viable solution satisfies both the Cassini bound and cross-redshift transfer ($\mathcal{I} > 0$ at all three sightlines) in the scanned range; the saturating form alone is insufficient. A "Limit of the reduced Gate-4B closure" paragraph is added clarifying that the failed power-law transfer constrains the specific reduced construction tested here, not the full TEP matter-frame transport problem, whose covariant $\omega = -u^\mu k_\mu$ evaluation remains open. The covariant evaluation has subsequently been completed (Gate 10) and the corpus envelope $B(\phi) = B_0\,\varphi^2/(1+\varphi^2)\exp(-\varphi^4/2\sigma_B^4)$ tested over $\sigma_B \in [1.0, 3.0]$: the corrected sign convention is implemented with the signed source $\beta_A = -1$ and the exact quasi-static relation $\Delta v_T = c\,\ln(N_{\rm core}/N_{\rm edge})$, placing the predicted displacement on the observed (blueward) sign; per-sightline inverse-fit solutions exist for $\sigma_B \gtrsim 1.5$. The Gate-10 rate evaluation (section 7d of step\_10\_covariant\_transport) then tests the temporal-rate function $H_T(z)$ explicitly: under the imported $\Lambda$CDM rate the joint sign-and-closure requirements are disjoint, while under the corpus-derived rates they are reconciled — the homogeneous closed benchmark ($s \approx +0.12$--$0.16$) reduces the inverse-fit dispersion to $1.24$, and the unsourced ambient descent law $\dot{\bar\phi}^{\,2} = \bar\Pi_\infty^2 + \bar\rho\,e^{-\bar\varphi}$ on the reconstructed potential ($s < 0$) admits simultaneous closure, with the descent-tracking coupling $B(\varphi) = B_0\,\varphi^4/(\varphi_c^4+\varphi^4)\,e^{-\varphi}$ reaching inverse-fit dispersion $1.0001$ at Cassini/GW170817-compliant normalisation. The full rate-by-form matrix is recorded under \texttt{tep\_native\_rate\_closure} in results/gate10\_covariant\_transport.json.</td>
-            </tr>
-            <tr>
-                <td>Supercalibration references</td>
-                <td>Three supercalibration references added [71] Griest et al. (2010), [72] Whitmore & Murphy (2014), [73] Schmidt et al. (2021).</td>
-            </tr>
-            <tr>
-                <td>Pipeline step count</td>
-                <td>step\_08c\_wavelength\_systematics and step\_10\_covariant\_transport promoted into the disformal phase of <code>run_pipeline.py</code>; total step count $14 \to 16$.</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h4>Version Changelog (v0.2 → v0.3)</h4>
-    <p>
-        The following changes were applied between v0.2 (Dubai) and v0.3 (Dubai):
-    </p>
-    <table class="data-table" style="font-size: 0.9em;">
-        <thead>
-            <tr>
-                <th>Change</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Gate 8 calibration upgraded</td>
-                <td>True-D injection Monte Carlo increased from $N=200$ to $N=1000$ per sightline. Joint Mahalanobis statistics recomputed; Q1009 and PKS\,1937 remain $p ≤ 0.001$, J1332 $p = 0.023$.</td>
-            </tr>
-            <tr>
-                <td>J1332 interpretive status downgraded</td>
-                <td>J1332$+$0052 Gate 8 joint $p = 0.023$ does not survive the $\alpha/3 = 0.0167$ correction among the three Gate-8 statistics. The broad $b$-value ($b_{H,\rm free} \approx 51$\,km/s) is acknowledged as inconsistent with the narrow-edge TEP orphan prediction. Stated as significant at the uncorrected level only.</td>
-            </tr>
-            <tr>
-                <td>$S_A^{\rm abs}$ / $S_\Sigma^{(\odot)}$ separation</td>
-                <td>The absorber-regime amplitude ansatz $S_A^{\rm abs}(|\Phi|/c^2)$ and the Solar-System source-charge screening $S_\Sigma^{(\odot)}$ are explicitly distinguished as separate projections of the common environmental scalar configuration. The relation between them remains to be derived from the microscopic scalar solution; the paper no longer re-implies a single operator.</td>
-            </tr>
-            <tr>
-                <td>Spurious $132\times$ factor removed</td>
-                <td>An earlier version of the conformal amplitude calculation contained a $132\times$ arithmetic factor with no physical derivation. Removed; the conformal-only amplitude $|\Delta v_{\rm conf}| \approx 0.009$\,km/s at $R = 30$\,kpc now follows directly from the Poisson Green function with uniform-sphere ionisation correction.</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h4>Version Changelog (v0.1 → v0.2)</h4>
-    <p>
-        Several analysis fixes were applied between v0.1 and v0.2, each with a quantitative impact on the primary statistic:
-    </p>
-    <table class="data-table" style="font-size: 0.9em;">
-        <thead>
-            <tr>
-                <th>Fix</th>
-                <th>Description</th>
-                <th>Impact on $T$ (Q1009)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Dynamic continuum basis</td>
-                <td>10-parameter monomial for Ly$\alpha$ regions (broad H I wing), 5-parameter for metal-line regions. v0.1 used a rigid 3-parameter basis that could not separate the H I wing from the D feature.</td>
-                <td>$T$: 56.54 → 24.04</td>
-            </tr>
-            <tr>
-                <td>VPFIT tie parser fix</td>
-                <td>Corrected parsing of <code>x</code>/<code>X</code> tie flags in VPFIT <code>.26</code> files. The parser was misclassifying tied H I components, corrupting their column densities by 0.56–0.84 dex and inflating the D model's likelihood. After fix, the H I columns are correctly read and the D model's likelihood decreases appropriately.</td>
-                <td>$T$: 56.54 → 144.38 → 161.03</td>
-            </tr>
-            <tr>
-                <td>Mass-scaled Doppler identifiability</td>
-                <td>Corrected to use mass-scaled $b$-values at the actual D column ($N_{\rm D} = 5.7\times10^{12}$). v0.1 used $b_H = b_D$ (turbulence-only limit) and an inflated column ($10^{14}$), giving $5.25\sigma$. v0.2: $0.52\sigma$ (thermal), $0.10\sigma$ (mixed), $0.0002\sigma$ (turbulent).</td>
-                <td>Identifiability: $5.25\sigma$ → $0.10\sigma$</td>
-            </tr>
-            <tr>
-                <td>Parent-reassignment interpretation</td>
-                <td>Corrected: non-significant $p_{\rm parent}$ means D with alternative parent is indistinguishable from free-H (D remains viable), not that TEP is supported. v0.1 inverted this interpretation.</td>
-                <td>Interpretation corrected; $T_{\rm parent}$ unchanged</td>
-            </tr>
-            <tr>
-                <td>Per-sightline noise models</td>
-                <td>v0.1 used a single Q1009-calibrated noise model for all sightlines. v0.2 calibrates per-sightline Student-$t$ models from each absorber's D-model residuals.</td>
-                <td>PKS $T$: 8982 → 85.41 → 161.31; J1332 $T$: 1886 → 141.56 → 89.14 → 136.97</td>
-            </tr>
-            <tr>
-                <td>MC realizations increased</td>
-                <td>v0.1 used 200 realizations ($p$-precision $\sim 0.015$). v0.2 uses 1000 realizations ($p$-precision $\sim 0.003$).</td>
-                <td>$N_{\rm MC}$: 200 → 1000</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>
-        The net effect of these fixes is to <em>strengthen</em> the TEP thesis: the corrected identifiability ($0.10\sigma$ at actual D column) is far below the v0.1 claim ($5.25\sigma$), meaning H and D are substantially less distinguishable than previously reported. The primary statistic $T$ started at 56.54 (v0.1), decreased to 24.04 after the continuum basis fix, then increased to 144.38 after the tie parser fix, and finally to 161.03 after the Gate 2 re-run with the corrected noise model and continuum basis. The Monte Carlo calibration yields $p_{\rm std} = 0.001$ and $p_{\rm parent} = 0.001$ (both significant) — a more honest and defensible result than the v0.1 headline.
-    </p>
+    <h4>Current statistical implementation</h4>
+    <p>The fixed data-quality mask is shared by all hypotheses and simulations. All finite residuals contribute to the Student-$t$ likelihood; numerical forward-model or continuum failures are rejected. Continuum order is 10 for Lyman-series blocks and 5 for metal-line blocks. The per-sightline noise models, candidate bounds, multistart searches and parent-selection rules are recorded with the fitted ledgers. Both canonical-parent and parent-maximized likelihood comparisons are calibrated with $N=1000$ genuine true-D injections per sightline.</p>
+    <p>Gate 8 retains every simulation vector and its seed. Marginal consistency tests center on the empirical null means. The joint metric regularizes a dimensionless correlation matrix and uses leave-one-out null scores. Input and simulation-file hashes permit provenance checks. Gaussian systematic sensitivity calculations are distinguished from empirical injection probabilities and their finite-sampling limits. The final method does not combine these correlated diagnostics as independent evidence.</p>
 </section>
+
+<p><strong>Ionization balance.</strong> The opacity calculations use the stable positive root of $x_e^2=q(1-x_e)$. At the declared baryon density, photoionization equilibrium is $\Gamma(1-x_e)=\alpha_B n_b x_e^2$. The step-16 LTE-equivalent rates therefore agree at fixed temperature across its density ladder; these are conditional equilibrium requirements, not a measured radiation field.</p>
+
+<p><strong>Likelihood and tail evaluation.</strong> All finite data residuals contribute to the likelihood. Numerical failures are rejected. Gaussian sensitivity tails use the survival function; Monte-Carlo outputs include exceedance counts, sampling resolution and one-sided 95% binomial upper bounds.</p>

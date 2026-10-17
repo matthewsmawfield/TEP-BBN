@@ -1,9 +1,9 @@
 {
-  "version": "0.5",
+  "version": "0.6",
   "codename": "Dubai",
   "description": "Paper 29: Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium",
-  "date": "2026-09-13",
-  "previous_version": "0.4",
+  "date": "2026-10-17",
+  "previous_version": "0.5",
   "paper": "29",
   "doi": "10.5281/zenodo.21841147"
 }

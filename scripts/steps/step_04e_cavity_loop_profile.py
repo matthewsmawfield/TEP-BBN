@@ -46,6 +46,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from scripts.utils.logger import print_status, setup_step_logger
+from scripts.lib.canonical_screening import s_transfer_depth, PHI_HALF_C2, N_SCREEN
 
 
 def run_cavity_loop_profile():
@@ -84,15 +85,12 @@ def run_cavity_loop_profile():
     Phi_abs_c2 = G * M_abs / (R * c**2)
 
     # Screening
-    Phi_half = 1.59e-7
-    n_screen = 3.56
+    Phi_half = PHI_HALF_C2
+    n_screen = N_SCREEN
     Phi_gal_c2 = 5.38e-7
 
-    def S_Sigma(Phi_c2):
-        return 1.0 / (1.0 + (Phi_c2 / Phi_half)**n_screen)
-
-    S_abs = S_Sigma(Phi_abs_c2)
-    S_gal = S_Sigma(Phi_gal_c2)
+    S_abs = s_transfer_depth(Phi_abs_c2)
+    S_gal = s_transfer_depth(Phi_gal_c2)
 
     # Conformal-only amplitude (center vs. background, full Poisson Green)
     dv_conf = 2 * beta_A**2 * np.pi * G * m_p * N_H * R / c  # cm/s

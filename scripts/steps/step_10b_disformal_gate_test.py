@@ -28,22 +28,26 @@ Physics used (all numbers from the existing artifacts):
    common u_sl contributes only a multiplicative shift
    (1+z)_eff = exp(phi_bar)/sqrt(1-u_sl), tolerable up to the systemic
    velocity scatter (~10^3 km/s => u_sl <~ 3e-3). What the data
-   actually measure is the intra-well contrast u_feature - u_parent.
+   actually measure is the intra-well contrast u_core - u_edge. The
+   core is the parent/redshift anchor; the edge is the candidate feature.
 
-2. Required contrasts. With N_i = A*sqrt(1-u_i) and the parent at
-   u_p ~ 0 (its feature anchors the absorber redshift),
-   Delta_v = c*ln(N_f/N_p) gives
+2. Required contrasts. With N_i = A*sqrt(1-u_i), the observed feature
+   is blueward of the core parent when
+   Delta_v = c*ln(N_core/N_edge) = -c*ln(N_feature/N_parent).
+   In the approximate zero EDGE-lapse baseline used for this inverse
+   requirement (not a claim that the parent has zero lapse),
 
-       u_f - u_p ~= (1-u_p) * (1 - exp(2*Delta_v/c)) ~= 2|Delta_v|/c
+       u_core - u_edge ~= (1-u_edge)*(1-exp(2*Delta_v/c)) ~= 2|Delta_v|/c
 
-   for |Delta_v| << c and u_p << 1.
+   for |Delta_v| << c and u_edge << 1. The small conformal depth
+   difference is neglected here; the exact endpoint checks retain it.
 
 3. Gate requirement. u_i = G(delta_phi_i) * u_bar_i where
    u_bar_i = B(phi_bar + delta_phi_i) * phidot^2 / A^2 is the
    unscreened boundary factor (flat across the well to O(10^-7) on the
    descent-tracking form). The required gate contrast is
 
-       Delta G_i = (u_f - u_p)_i / u_bar_i
+       Delta G_i = (u_core - u_edge)_i / u_bar_i
 
    across the depth span [delta_phi_edge, delta_phi_core] of each
    sightline's well.
@@ -53,8 +57,8 @@ Physics used (all numbers from the existing artifacts):
    gate of log or saturating form supplies Delta G proportional to the
    log-span; the residual scatter of the three implied
    dG/d ln delta_phi values is the consistency statistic. The ordering
-   constraint (parents at {5.5e-9, 1.05e-8, 4.67e-8} must not inherit
-   larger u than shallower features) is checked explicitly for
+   constraint (edge features at {5.5e-9, 1.05e-8, 4.67e-8} and core
+   parents at {1.81e-8, 3.46e-8, 1.48e-7} interleave) is reported for
    monotone forms.
 
 Output: results/gate10b_disformal_gate_test.json
@@ -102,7 +106,7 @@ def main():
         f = fields[sid]
         dphi_edge = float(f["phi_edge_MPl"])
         dphi_core = float(f["phi_core_MPl"])
-        # u_f - u_p = (1-u_p)(1 - exp(2 dv/c)); dv < 0 => positive
+        # Approximate u_core-u_edge=(1-u_edge)(1-exp(2dv/c)); dv<0 => positive.
         du_contrast = float(1.0 - np.exp(2.0 * dv / C_KMS))
         ub = u_bar[sid]
         dG_req = du_contrast / ub
@@ -127,18 +131,18 @@ def main():
     scatter = float(slopes.max() / slopes.min())
     rms_frac = float(np.std(np.log(slopes), ddof=1) if len(slopes) > 2 else np.nan)
 
-    # monotone-ordering check: parents sit at the three edge depths
+    # monotone-ordering check: features sit at the three edge depths
     # {5.5e-9, 1.05e-8, 4.67e-8}; under any monotone nondecreasing
-    # u(delta_phi), u at J1332's edge depth (4.67e-8) must exceed u at
-    # PKS's core depth (3.46e-8). That is only consistent if J1332's
-    # parent inherits u_p(J1332) >= u_p(PKS) + dG(PKS-core) — i.e., the
+    # u(delta_phi), u at J1332's feature edge (4.67e-8) exceeds u at
+    # PKS's parent core (3.46e-8). The depth-ordered lapse levels
+    # differ across sightlines; i.e., the
     # per-sightline baselines are NOT a single common level. Since each
     # sightline's baseline is absorbed by its own z anchor, the binding
     # requirement is only on intra-well contrasts (above); the
     # interleaved ordering is reported as a caveat.
     ordering_note = (
-        "Parent depths {5.5e-9, 1.05e-8, 4.67e-8} interleave with "
-        "feature depths {1.81e-8, 3.46e-8, 1.48e-7}: a monotone u(dphi) "
+        "Feature edge depths {5.5e-9, 1.05e-8, 4.67e-8} interleave with "
+        "parent core depths {1.81e-8, 3.46e-8, 1.48e-7}: a monotone u(dphi) "
         "makes the per-sightline baselines differ, which is admissible "
         "(each sightline's uniform level is absorbed by its own "
         "redshift anchor) but removes any common-level statement."

@@ -1,26 +1,19 @@
-[23:23:35] [INFO] ================================================================================
-[23:23:35] [INFO] Script: secondary_analyses
-[23:23:35] [INFO] Started: 2026-09-28T23:23:35.950670
-[23:23:35] [INFO] ================================================================================
-[23:23:35] [SUCCESS] === C4: PURE KINEMATIC PRIOR TEST (Q1009+2956) ===
-[23:23:48] [PROCESS] M_Dfree: LL = -15446.77 (k=3)
-[23:23:48] [PROCESS] M_Hfree: LL = -15366.26 (k=4)
-[23:23:48] [PROCESS] M_kinematic: LL = -15470.75 (k=2, b=parent)
-[23:23:48] [PROCESS]   Best v_H = -130.52 km/s, logN_H = 12.88
-[23:23:48] [PROCESS] T (M_H vs M_D) = 161.03
-[23:23:48] [PROCESS] T (M_H vs M_kin) = 208.98
-[23:23:48] [PROCESS] T (M_kin vs M_D) = -47.95
-[23:23:48] [PROCESS] AIC: M_D=30899.55, M_H=30740.52, M_kin=30945.50
-[23:23:48] [PROCESS] ΔAIC (M_kin - M_D) = 45.95
-[23:23:48] [PROCESS] ΔAIC (M_H - M_kin) = -204.98
-[23:23:48] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c4_kinematic.json
-[23:23:48] [SUCCESS]   C4: PASS
-[23:23:48] [INFO] 
-[23:23:48] [SUCCESS] Summary written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/secondary_analyses_summary.json
-[23:23:48] [SUCCESS]   [OK] 2502.5s
-[23:23:48] [INFO] 
-[23:23:48] [INFO] ================================================================================
-[23:23:48] [INFO] PHASE 4: MANUSCRIPT FINALIZATION
-[23:23:48] [INFO] ================================================================================
-[23:23:48] [INFO] 
-[23:23:48] [PROCESS] [RUN] finalize_manuscript_numbers: Manuscript Number Finalization
+[08:26:06] [INFO] ================================================================================
+[08:26:06] [INFO] Script: secondary_analyses
+[08:26:06] [INFO] Started: 2026-10-13T08:26:06.730858
+[08:26:06] [INFO] ================================================================================
+[08:26:06] [SUCCESS] === C4: PURE KINEMATIC PRIOR TEST (Q1009+2956) ===
+[08:26:16] [PROCESS] M_Dfree: LL = -15446.77 (k=3)
+[08:26:16] [PROCESS] M_Hfree: LL = -15366.26 (k=4)
+[08:26:16] [PROCESS] M_kinematic: LL = -15470.75 (k=2, b=parent)
+[08:26:16] [PROCESS]   Best v_H = -130.52 km/s, logN_H = 12.88
+[08:26:16] [PROCESS] T (M_H vs M_D) = 161.03
+[08:26:16] [PROCESS] T (M_H vs M_kin) = 208.98
+[08:26:16] [PROCESS] T (M_kin vs M_D) = -47.95
+[08:26:16] [PROCESS] AIC: M_D=30897.55, M_H=30738.52, M_kin=30945.50
+[08:26:16] [PROCESS] ΔAIC (M_kin - M_D) = 47.95
+[08:26:16] [PROCESS] ΔAIC (M_H - M_kin) = -206.98
+[08:26:16] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c4_kinematic.json
+[08:26:16] [SUCCESS]   C4: PASS
+[08:26:16] [INFO] 
+[08:26:16] [SUCCESS] Summary written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/secondary_analyses_summary.json

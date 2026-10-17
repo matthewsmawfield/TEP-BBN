@@ -9,9 +9,43 @@
     14,
     15
   ],
-  "LL_D_free_scaffold": -15397.294079497795,
-  "LL_H_free_scaffold": -15204.619299459277,
-  "T_scaffold": 385.3495600770366,
+  "LL_D_free_scaffold": -15391.761846722413,
+  "LL_H_free_scaffold": -15192.46585212821,
+  "T_scaffold": 398.5919891884041,
   "T_original": 161.02796556646717,
-  "delta_T": 224.3215945105694
+  "params_D": [
+    12.781379882477529,
+    21167.02907133655,
+    1.0,
+    15.574292720462724,
+    23.212285784783383,
+    13.145839836283567,
+    28.0570536146789,
+    13.837887243799772,
+    50.0,
+    12.952801205202181,
+    19.196839465492893,
+    13.139195564686352,
+    50.0
+  ],
+  "params_H": [
+    -128.38591808350742,
+    13.012745143400481,
+    17412.487880446886,
+    1.0,
+    15.575066053630167,
+    23.18679186429739,
+    13.172644608038404,
+    28.790428067410808,
+    10.0,
+    49.98311056495408,
+    12.977821162721503,
+    18.628660617514615,
+    13.203047376431607,
+    50.0
+  ],
+  "candidate_width_coordinate": "Total width over the original T/b_turb bound envelope; thermal/turbulent split is unidentifiable",
+  "continuum_solver": "Augmented weighted ridge least squares, lambda=1e-10",
+  "multistart_scope": "Full configured candidate grids plus baseline fits and matched-D H start; shared scaffold starts reused from the best D fit",
+  "delta_T": 237.56402362193694
 }

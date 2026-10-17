@@ -21,6 +21,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from scripts.utils.logger import print_status, setup_step_logger
+from scripts.lib.canonical_screening import s_transfer_depth, PHI_HALF_C2, N_SCREEN
 
 
 def main():
@@ -35,18 +36,18 @@ def main():
     # NB: solar source charge is the microscopic completion's projection
     # (Paper 0 §7: S_Σ(⊙) < 5.75e-6 under the canonical linear PPN mapping),
     # not this ansatz's solar extrapolation — see step_09 docstring.
-    Phi_half = 1.59e-7
-    n = 3.56
+    Phi_half = PHI_HALF_C2
+    n = N_SCREEN
     beta_A = -1.0
     Phi_sun = 2.12e-6    # solar system (Cassini grazing ray at R_⊙)
     Phi_gal = 5.38e-7    # galactic halo (v_circ = 220 km/s)
-    S_solar = 1.0 / (1.0 + (Phi_sun / Phi_half)**n)  # ~1e-4
-    S_galactic = 1.0 / (1.0 + (Phi_gal / Phi_half)**n)  # ~0.013
+    S_solar = s_transfer_depth(Phi_sun)  # ~1e-4
+    S_galactic = s_transfer_depth(Phi_gal)  # ~0.013
 
     # Logarithmic sweep
     log_Phi = np.linspace(-12, -4, 2000)
     Phi = 10**log_Phi
-    S = 1.0 / (1.0 + (Phi / Phi_half)**n)
+    S = s_transfer_depth(Phi)
     beta_eff_sq = beta_A**2 * S**2
     product = beta_eff_sq * Phi
 

@@ -1,0 +1,96 @@
+[0;37m[07:55:10] [INFO] ================================================================================[0m
+[0;37m[07:55:10] [INFO] Script: secondary_analyses[0m
+[0;37m[07:55:10] [INFO] Started: 2026-10-13T07:55:10.484056[0m
+[0;37m[07:55:10] [INFO] ================================================================================[0m
+[1;32m[07:55:10] [SUCCESS] === SECONDARY ROBUSTNESS ANALYSES (C2 + C3 + C4) ===[0m
+[0;34m[07:55:10] [PROCESS] Sightline: Q1009+2956 (default)[0m
+[0;34m[07:55:10] [PROCESS] C3 simulations: 200[0m
+[0;37m[07:55:10] [INFO] [0m
+[0;37m[07:55:10] [INFO] [0m
+[0;37m[07:55:10] [INFO] ================================================================================[0m
+[0;37m[07:55:10] [INFO] --- C2: Limited Scaffold Freedom ---[0m
+[0;37m[07:55:10] [INFO] ================================================================================[0m
+[0;37m[07:55:10] [INFO] [0m
+[0;37m[07:55:10] [INFO] ================================================================================[0m
+[0;37m[07:55:10] [INFO] Script: secondary_analyses[0m
+[0;37m[07:55:10] [INFO] Started: 2026-10-13T07:55:10.484365[0m
+[0;37m[07:55:10] [INFO] ================================================================================[0m
+[1;32m[07:55:10] [SUCCESS] === C2: LIMITED SCAFFOLD FREEDOM (Q1009+2956) ===[0m
+[0;34m[07:55:10] [PROCESS] D parent components (excluded from freeing): [0, 1, 2][0m
+[0;34m[07:55:10] [PROCESS] Freeing 5 strongest non-parent H I components (by logN, within ±1000 km/s)[0m
+[0;34m[07:55:10] [PROCESS]   Component 6: logN=15.57, b=23.17, v=12.5 km/s[0m
+[0;34m[07:55:10] [PROCESS]   Component 8: logN=13.11, b=27.29, v=-294.1 km/s[0m
+[0;34m[07:55:10] [PROCESS]   Component 13: logN=13.91, b=41.19, v=-50.8 km/s[0m
+[0;34m[07:55:10] [PROCESS]   Component 14: logN=12.93, b=17.97, v=52.9 km/s[0m
+[0;34m[07:55:10] [PROCESS]   Component 15: logN=12.75, b=42.74, v=72.4 km/s[0m
+[0;34m[08:00:49] [PROCESS] M_Dfree (scaffold freedom=5): LL = -15391.76[0m
+[0;34m[08:15:48] [PROCESS] M_Hfree (scaffold freedom=5): LL = -15192.47[0m
+[0;34m[08:15:48] [PROCESS] T (original, fixed scaffold) = 161.03[0m
+[0;34m[08:15:48] [PROCESS] T (with 5 freed components) = 398.59[0m
+[0;34m[08:15:48] [PROCESS] ΔT = 237.56[0m
+[1;32m[08:15:48] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c2_scaffold_freedom.json[0m
+[1;32m[08:15:48] [SUCCESS]   C2: PASS[0m
+[0;37m[08:15:48] [INFO] [0m
+[0;37m[08:15:48] [INFO] [0m
+[0;37m[08:15:48] [INFO] ================================================================================[0m
+[0;37m[08:15:48] [INFO] --- C3: Perturbed Monte Carlo ---[0m
+[0;37m[08:15:48] [INFO] ================================================================================[0m
+[0;37m[08:15:48] [INFO] [0m
+[0;37m[08:15:48] [INFO] ================================================================================[0m
+[0;37m[08:15:48] [INFO] Script: secondary_analyses[0m
+[0;37m[08:15:48] [INFO] Started: 2026-10-13T08:15:48.967603[0m
+[0;37m[08:15:48] [INFO] ================================================================================[0m
+[1;32m[08:15:48] [SUCCESS] === C3: NOISY/OFFSET TRUE-D MC (Q1009+2956) ===[0m
+[0;34m[08:15:48] [PROCESS] Perturbation sigmas: {'logN_D': 0.1, 'T_K': 1000.0, 'b_turb': 1.0}[0m
+[0;34m[08:15:48] [PROCESS] N_sims: 200[0m
+[0;34m[08:16:27] [PROCESS] Completed 10/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:17:04] [PROCESS] Completed 20/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:17:09] [PROCESS] Completed 30/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:17:49] [PROCESS] Completed 40/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:18:27] [PROCESS] Completed 50/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:18:41] [PROCESS] Completed 60/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:19:16] [PROCESS] Completed 70/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:19:57] [PROCESS] Completed 80/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:20:12] [PROCESS] Completed 90/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:20:48] [PROCESS] Completed 100/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:21:24] [PROCESS] Completed 110/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:21:52] [PROCESS] Completed 120/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:22:24] [PROCESS] Completed 130/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:23:06] [PROCESS] Completed 140/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:23:32] [PROCESS] Completed 150/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:24:03] [PROCESS] Completed 160/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:24:47] [PROCESS] Completed 170/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:25:09] [PROCESS] Completed 180/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:25:41] [PROCESS] Completed 190/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:26:06] [PROCESS] Completed 200/200. Std exc: 0, Parent exc: 0[0m
+[0;34m[08:26:06] [PROCESS] 
+T_obs = 161.03, T_parent_best = 161.03[0m
+[0;34m[08:26:06] [PROCESS] Exceedances (standard): 0/200 → p = 0.00498[0m
+[0;34m[08:26:06] [PROCESS] Exceedances (parent): 0/200 → p = 0.00498[0m
+[1;32m[08:26:06] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c3_perturbed_mc_n200.json[0m
+[1;32m[08:26:06] [SUCCESS]   C3: PASS[0m
+[0;37m[08:26:06] [INFO] [0m
+[0;37m[08:26:06] [INFO] [0m
+[0;37m[08:26:06] [INFO] ================================================================================[0m
+[0;37m[08:26:06] [INFO] --- C4: Kinematic Test ---[0m
+[0;37m[08:26:06] [INFO] ================================================================================[0m
+[0;37m[08:26:06] [INFO] [0m
+[0;37m[08:26:06] [INFO] ================================================================================[0m
+[0;37m[08:26:06] [INFO] Script: secondary_analyses[0m
+[0;37m[08:26:06] [INFO] Started: 2026-10-13T08:26:06.730858[0m
+[0;37m[08:26:06] [INFO] ================================================================================[0m
+[1;32m[08:26:06] [SUCCESS] === C4: PURE KINEMATIC PRIOR TEST (Q1009+2956) ===[0m
+[0;34m[08:26:16] [PROCESS] M_Dfree: LL = -15446.77 (k=3)[0m
+[0;34m[08:26:16] [PROCESS] M_Hfree: LL = -15366.26 (k=4)[0m
+[0;34m[08:26:16] [PROCESS] M_kinematic: LL = -15470.75 (k=2, b=parent)[0m
+[0;34m[08:26:16] [PROCESS]   Best v_H = -130.52 km/s, logN_H = 12.88[0m
+[0;34m[08:26:16] [PROCESS] T (M_H vs M_D) = 161.03[0m
+[0;34m[08:26:16] [PROCESS] T (M_H vs M_kin) = 208.98[0m
+[0;34m[08:26:16] [PROCESS] T (M_kin vs M_D) = -47.95[0m
+[0;34m[08:26:16] [PROCESS] AIC: M_D=30897.55, M_H=30738.52, M_kin=30945.50[0m
+[0;34m[08:26:16] [PROCESS] ΔAIC (M_kin - M_D) = 47.95[0m
+[0;34m[08:26:16] [PROCESS] ΔAIC (M_H - M_kin) = -206.98[0m
+[1;32m[08:26:16] [SUCCESS] Saved to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate3_c4_kinematic.json[0m
+[1;32m[08:26:16] [SUCCESS]   C4: PASS[0m
+[0;37m[08:26:16] [INFO] [0m
+[1;32m[08:26:16] [SUCCESS] Summary written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/secondary_analyses_summary.json[0m

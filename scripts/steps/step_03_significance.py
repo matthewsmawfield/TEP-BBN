@@ -34,6 +34,7 @@ project_root = Path(__file__).resolve().parent.parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
+from scripts.lib.residual_engine import likelihood_residuals
 from scripts.lib.model_builder import build_model_components
 from scripts.lib.model_parser import ParameterManager, parse_vpfit_ties
 from scripts.lib.physical_rt_engine import RadiativeTransferEngine
@@ -124,8 +125,8 @@ def run_simulation(
     _logpdf_inv_nu = 1.0 / _nu
 
     def _fast_logpdf_sum(residuals):
-        """Sum of Student-t logpdf for residuals below the 100-sigma clip."""
-        v = residuals[np.abs(residuals) < 100.0]
+        """Sum of Student-t logpdf over every finite residual on the input mask."""
+        v = likelihood_residuals(residuals)
         z = (v - _loc) / _scale
         return _logpdf_const * len(v) - _logpdf_alpha * np.sum(
             np.log1p(_logpdf_inv_nu * z * z)
@@ -313,7 +314,7 @@ def compute_physical_parent_window(pm, theta_shared_base, z_abs_ref, c_kms, fact
     return window, b_max, len(b_values)
 
 
-def run_gate3(sightline=None, parent_window_mode='fixed', n_sims=None):
+def run_gate3(sightline=None, parent_window_mode='fixed', n_sims=None, workers=12):
     setup_step_logger(Path(__file__).stem)
 
     # Load per-sightline configuration
@@ -532,7 +533,7 @@ def run_gate3(sightline=None, parent_window_mode='fixed', n_sims=None):
 
     def _fast_logpdf_sum_obs(residuals):
         """Sum of Student-t logpdf for the observed-data residuals."""
-        v = residuals[np.abs(residuals) < 100.0]
+        v = likelihood_residuals(residuals)
         z = (v - _loc_obs) / _scale_obs
         return _logpdf_const_obs * len(v) - _logpdf_alpha_obs * np.sum(
             np.log1p(_logpdf_inv_nu_obs * z * z)
@@ -649,7 +650,7 @@ def run_gate3(sightline=None, parent_window_mode='fixed', n_sims=None):
 
     # Use multiprocessing with initializer to avoid re-pickling shared data
     # Use fork start method to avoid re-importing modules per worker (macOS default is spawn)
-    n_workers = min(multiprocessing.cpu_count(), N_sims)
+    n_workers = min(workers, multiprocessing.cpu_count(), N_sims)
     ctx = multiprocessing.get_context('fork')
     with ctx.Pool(
         processes=n_workers,
@@ -830,12 +831,11 @@ def run_gate3(sightline=None, parent_window_mode='fixed', n_sims=None):
     out_dir.mkdir(parents=True, exist_ok=True)
     window_suffix = f"_{parent_window_mode}" if parent_window_mode != 'fixed' else ""
     canonical_file = out_dir / f"{output_prefix}3_significance{window_suffix}.json"
-    # Quick-mode runs (N<100) write to a quick_ prefixed file to prevent
-    # overwriting the canonical 1000-sim ledger.
-    if N_sims < 100:
-        output_file = out_dir / f"quick_{output_prefix}3_significance{window_suffix}.json"
+    # Reduced runs use an N-specific file and cannot overwrite production.
+    if N_sims < cfg.get("monte_carlo", {}).get("n_sims", 1000):
+        output_file = out_dir / f"quick_{output_prefix}3_significance{window_suffix}_n{N_sims}.json"
         print_status(
-            f"Quick mode (N={N_sims}<100): writing to {output_file.name} "
+            f"Reduced run (N={N_sims}): writing to {output_file.name} "
             f"to protect canonical ledger",
             "PROCESS",
         )
@@ -880,5 +880,6 @@ if __name__ == "__main__":
                         help="Parent window mode: 'fixed' (±1000 km/s) or 'physical' (±3× largest b-value)")
     parser.add_argument("--n-sims", type=int, default=None,
                         help="Override number of MC simulations (default: config value)")
+    parser.add_argument("--workers", type=int, default=12)
     args = parser.parse_args()
-    run_gate3(sightline=args.sightline, parent_window_mode=args.parent_window, n_sims=args.n_sims)
+    run_gate3(sightline=args.sightline, parent_window_mode=args.parent_window, n_sims=args.n_sims, workers=args.workers)

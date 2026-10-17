@@ -1,10 +1,10 @@
-[13:22:17] [INFO] ================================================================================
-[13:22:17] [INFO] Script: step_19_eternal_surface_reconciliation
-[13:22:17] [INFO] Started: 2026-09-29T13:22:17.828878
-[13:22:17] [INFO] ================================================================================
-[13:22:17] [SUCCESS] === STEP 19: ETERNAL-SURFACE RECONCILIATION ===
-[13:22:17] [PROCESS] [A] Jacobian J(z_edge) = 4.15e+07; eternal-equivalent density = 30.42 n_b0
-[13:22:17] [PROCESS] [A] front depth derivable: z_front = T_ion/T0-1 = 917 (n_b0) -> 1057 (5000 n_b0)
-[13:22:17] [PROCESS] [B] sigma_D 3.727e+03 Mpc (mf); theta_D 8.05e-04 rad (obs ~6.50e-04); ell_D ~ 1242 (diffusion convention)
-[13:22:17] [PROCESS] [C] TH z*=1079 (FWHM 200) vs eternal z*=1080 (front); tau=1 agree
-[13:22:17] [SUCCESS] Wrote /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_19_eternal_surface_reconciliation.json
+[01:27:20] [INFO] ================================================================================
+[01:27:20] [INFO] Script: step_19_eternal_surface_reconciliation
+[01:27:20] [INFO] Started: 2026-10-13T01:27:20.991210
+[01:27:20] [INFO] ================================================================================
+[01:27:20] [SUCCESS] === STEP 19: ETERNAL-SURFACE RECONCILIATION ===
+[01:27:20] [PROCESS] [A] Jacobian J(z_edge) = 4.15e+07; eternal-equivalent density = 30.42 n_b0
+[01:27:20] [PROCESS] [A] front depth derivable: z_front = T_ion/T0-1 = 917 (n_b0) -> 1057 (5000 n_b0)
+[01:27:20] [PROCESS] [B] sigma_D 3.727e+03 Mpc (mf); theta_D 8.05e-04 rad (obs ~6.50e-04); ell_D ~ 1242 (diffusion convention)
+[01:27:21] [PROCESS] [C] TH z*=1079 (FWHM 200) vs eternal z*=1080 (front); tau=1 agree
+[01:27:21] [SUCCESS] Wrote /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_19_eternal_surface_reconciliation.json

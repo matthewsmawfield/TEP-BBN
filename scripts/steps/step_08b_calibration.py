@@ -16,6 +16,8 @@ parameters to build the null distribution.
 import sys
 from pathlib import Path
 import json
+import multiprocessing
+import hashlib
 import numpy as np
 from scipy.optimize import minimize
 from scipy.stats import t as student_t
@@ -26,6 +28,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from scripts.utils.logger import print_status, setup_step_logger
+from scripts.lib.residual_engine import likelihood_residuals
 from scripts.lib.model_builder import build_model_components
 from scripts.lib.model_parser import ParameterManager, parse_vpfit_ties
 from scripts.lib.physical_rt_engine import RadiativeTransferEngine
@@ -35,9 +38,96 @@ from scripts.lib.residual_engine import (
     split_frozen_candidate,
 )
 from scripts.lib.doppler_physics import compute_doppler_b
+from scripts.lib.calibration_statistics import calibrate_vectors, empirical_tail
 
 
-def run_gate8_calibration(sightline="Q1009+2956", n_sims=1000):
+_gate8_state = None
+
+def _initialize_gate8(state):
+    global _gate8_state
+    _gate8_state = state
+
+
+def _simulate_gate8(seed):
+    _nu = _gate8_state['_nu']
+    _scale = _gate8_state['_scale']
+    _loc = _gate8_state['_loc']
+    _logpdf_const = _gate8_state['_logpdf_const']
+    _logpdf_alpha = _gate8_state['_logpdf_alpha']
+    _logpdf_inv_nu = _gate8_state['_logpdf_inv_nu']
+    data_blocks = _gate8_state['data_blocks']
+    base_fluxes = _gate8_state['base_fluxes']
+    theta_shared_base = _gate8_state['theta_shared_base']
+    pm = _gate8_state['pm']
+    z_abs = _gate8_state['z_abs']
+    c_kms = _gate8_state['c_kms']
+    v_iso = _gate8_state['v_iso']
+    parent_window = _gate8_state['parent_window']
+    engine = _gate8_state['engine']
+    frozen_grouped = _gate8_state['frozen_grouped']
+    frozen_cache = _gate8_state['frozen_cache']
+    mc_starts = _gate8_state['mc_starts']
+    bounds_H = _gate8_state['bounds_H']
+    b_D_pred = _gate8_state['b_D_pred']
+    v_expected_D = _gate8_state['v_expected_D']
+    logN_D_pred = _gate8_state['logN_D_pred']
+    def _fast_logpdf_sum(residuals):
+        v = likelihood_residuals(residuals)
+        z = (v - _loc) / _scale
+        return _logpdf_const * len(v) - _logpdf_alpha * np.sum(np.log1p(_logpdf_inv_nu * z*z))
+    rng = np.random.default_rng(seed)
+
+    sim_blocks = []
+    for i, block in enumerate(data_blocks):
+        noise = student_t.rvs(
+            df=_nu, loc=0.0, scale=block["err"] * _scale, random_state=rng,
+        )
+        sim_blocks.append({
+            "wave": block["wave"], "flux": base_fluxes[i] + noise,
+            "err": block["err"], "vsig": block["vsig"],
+            "w_min": block["w_min"], "w_max": block["w_max"],
+            "coadd": block["coadd"],
+        })
+
+    def obj_H(p):
+        grouped = build_model_components(
+            "M_H", theta_shared_base, p, pm, z_abs, c_kms,
+            d_velocity_offset_kms=v_iso, parent_window_kms=parent_window,
+        )
+        cand = split_frozen_candidate(grouped, frozen_grouped)
+        res = compute_residuals_fast(cand, sim_blocks, engine, frozen_cache)
+        return -float(_fast_logpdf_sum(res))
+
+    best_ll = -np.inf
+    best_p = None
+    best_success = False
+    for x0 in mc_starts:
+        res_H = minimize(obj_H, x0, method="L-BFGS-B", bounds=bounds_H)
+        if -res_H.fun > best_ll:
+            best_ll = -res_H.fun
+            best_p = res_H.x.copy()
+            best_success = res_H.success
+
+    if best_p is not None:
+        v_H_sim = best_p[0]
+        logN_H_sim = best_p[1]
+        # Compute total b from fitted T_K and b_turb (not just b_turb)
+        T_K_sim = best_p[2]
+        b_turb_sim = best_p[3]
+        b_H_sim = compute_doppler_b(T_K_sim, b_turb_sim, isotope='H')
+        return {
+            "seed": seed, "optimizer_success": bool(best_success),
+            "v_H": float(v_H_sim), "logN_H": float(logN_H_sim),
+            "b_H": float(b_H_sim),
+            "b_ratio": float(b_H_sim / b_D_pred),
+            "deviation": float(v_H_sim - v_expected_D),
+            "logN_diff": float(logN_H_sim - logN_D_pred),
+        }
+
+    return {"seed": seed, "error": "No finite fit found"}
+
+
+def run_gate8_calibration(sightline="Q1009+2956", n_sims=1000, workers=12):
     setup_step_logger(Path(__file__).stem)
     print_status(f"=== GATE 8 CALIBRATION: {sightline} ===", "SUCCESS")
 
@@ -212,7 +302,7 @@ def run_gate8_calibration(sightline="Q1009+2956", n_sims=1000):
     _logpdf_inv_nu = 1.0 / _nu
 
     def _fast_logpdf_sum(residuals):
-        v = residuals[np.abs(residuals) < 100.0]
+        v = likelihood_residuals(residuals)
         z = (v - _loc) / _scale
         return _logpdf_const * len(v) - _logpdf_alpha * np.sum(
             np.log1p(_logpdf_inv_nu * z * z)
@@ -223,56 +313,28 @@ def run_gate8_calibration(sightline="Q1009+2956", n_sims=1000):
     base_seed = cfg.get("monte_carlo", {}).get("seed", 900000)
 
     sim_results = []
-    for sim_idx in range(n_sims):
-        seed = base_seed + sim_idx + 200000  # Different from Gate 3
-        rng = np.random.default_rng(seed)
-
-        sim_blocks = []
-        for i, block in enumerate(data_blocks):
-            noise = student_t.rvs(
-                df=_nu, loc=0.0, scale=block["err"] * _scale, random_state=rng,
-            )
-            sim_blocks.append({
-                "wave": block["wave"], "flux": base_fluxes[i] + noise,
-                "err": block["err"], "vsig": block["vsig"],
-                "w_min": block["w_min"], "w_max": block["w_max"],
-                "coadd": block["coadd"],
-            })
-
-        def obj_H(p):
-            grouped = build_model_components(
-                "M_H", theta_shared_base, p, pm, z_abs, c_kms,
-                d_velocity_offset_kms=v_iso, parent_window_kms=parent_window,
-            )
-            cand = split_frozen_candidate(grouped, frozen_grouped)
-            res = compute_residuals_fast(cand, sim_blocks, engine, frozen_cache)
-            return -float(_fast_logpdf_sum(res))
-
-        best_ll = -np.inf
-        best_p = None
-        for x0 in mc_starts:
-            res_H = minimize(obj_H, x0, method="L-BFGS-B", bounds=bounds_H)
-            if -res_H.fun > best_ll:
-                best_ll = -res_H.fun
-                best_p = res_H.x.copy()
-
-        if best_p is not None:
-            v_H_sim = best_p[0]
-            logN_H_sim = best_p[1]
-            # Compute total b from fitted T_K and b_turb (not just b_turb)
-            T_K_sim = best_p[2]
-            b_turb_sim = best_p[3]
-            b_H_sim = compute_doppler_b(T_K_sim, b_turb_sim, isotope='H')
-            sim_results.append({
-                "v_H": float(v_H_sim), "logN_H": float(logN_H_sim),
-                "b_H": float(b_H_sim),
-                "b_ratio": float(b_H_sim / b_D_pred),
-                "deviation": float(v_H_sim - v_expected_D),
-                "logN_diff": float(logN_H_sim - logN_D_pred),
-            })
-
-        if (sim_idx + 1) % 25 == 0:
-            print_status(f"  {sim_idx + 1}/{n_sims} done", "PROCESS")
+    state = {key: value for key, value in locals().copy().items() if key in ['_nu', '_scale', '_loc', '_logpdf_const', '_logpdf_alpha', '_logpdf_inv_nu', 'data_blocks', 'base_fluxes', 'theta_shared_base', 'pm', 'z_abs', 'c_kms', 'v_iso', 'parent_window', 'engine', 'frozen_grouped', 'frozen_cache', 'mc_starts', 'bounds_H', 'b_D_pred', 'v_expected_D', 'logN_D_pred']}
+    seeds = [base_seed + i + 200000 for i in range(n_sims)]
+    out_dir = project_root / "results"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    sl_clean = sightline.replace("+", "").replace("-", "")
+    if n_sims < 1000:
+        sl_clean += f"_smoke_n{n_sims}"
+    vector_path = out_dir / f"gate8_simulations_{sl_clean}.jsonl"
+    staging_path = vector_path.with_suffix('.jsonl.pending')
+    with staging_path.open('w') as handle:
+        with multiprocessing.get_context('fork').Pool(
+                min(workers, n_sims), initializer=_initialize_gate8, initargs=(state,)) as pool:
+            for i, result in enumerate(pool.imap_unordered(_simulate_gate8, seeds)):
+                handle.write(json.dumps(result, allow_nan=False) + '\n')
+                handle.flush()
+                sim_results.append(result)
+                if (i + 1) % 25 == 0:
+                    print_status(f"  {i+1}/{n_sims} done", "PROCESS")
+    sim_results.sort(key=lambda result: result['seed'])
+    if any('error' in result for result in sim_results):
+        raise RuntimeError(f"Failed simulations retained at {staging_path}; refusing partial calibration")
+    staging_path.replace(vector_path)
 
     n_ok = len(sim_results)
     print_status(f"  Successful fits: {n_ok}/{n_sims}", "PROCESS")
@@ -288,21 +350,15 @@ def run_gate8_calibration(sightline="Q1009+2956", n_sims=1000):
     sim_devs = np.array([s["deviation"] for s in sim_results])
     sim_logN_diffs = np.array([s["logN_diff"] for s in sim_results])
 
-    obs_b_dev = abs(obs_b_ratio - 1.0)
-    p_b = np.mean(np.abs(sim_b_ratios - 1.0) >= obs_b_dev)
-    sigma_b = np.std(sim_b_ratios)
-    nominal_b = obs_b_dev / sigma_b if sigma_b > 0 else float('inf')
-
-    obs_abs_dev = abs(obs_deviation)
-    p_dev = np.mean(np.abs(sim_devs) >= obs_abs_dev)
-    sigma_dev = np.std(sim_devs)
-    nominal_dev = obs_abs_dev / sigma_dev if sigma_dev > 0 else float('inf')
-
-    obs_abs_logN = abs(obs_logN_diff)
-    p_logN = np.mean(np.abs(sim_logN_diffs) >= obs_abs_logN)
-    sigma_logN = np.std(sim_logN_diffs)
-    nominal_logN = obs_abs_logN / sigma_logN if sigma_logN > 0 else float('inf')
-
+    observed = np.array([obs_b_ratio, obs_deviation, obs_logN_diff])
+    vectors = np.column_stack([sim_b_ratios, sim_devs, sim_logN_diffs])
+    calibration = calibrate_vectors(observed, vectors)
+    p_b, p_dev, p_logN = [row['p_add_one'] for row in calibration['marginal']]
+    nominal_b, nominal_dev, nominal_logN = calibration['centered_sigmas']
+    sigma_b, sigma_dev, sigma_logN = np.std(vectors, axis=0)
+    physical_target = np.array([1., 0., 0.])
+    physical_target_tails = [empirical_tail(abs(observed[j]-physical_target[j]),
+                                          abs(vectors[:,j]-physical_target[j])) for j in range(3)]
     print_status(f"  {'Statistic':<25} {'Nominal σ':<12} {'Calibrated p':<15} {'Verdict'}", "PROCESS")
     print_status(f"  {'-'*25} {'-'*12} {'-'*15} {'-'*20}", "PROCESS")
 
@@ -315,27 +371,10 @@ def run_gate8_calibration(sightline="Q1009+2956", n_sims=1000):
     print_status(f"  {'Velocity deviation':<25} {nominal_dev:<12.1f} {p_dev:<15.3f} {verdict(p_dev)}", "PROCESS")
     print_status(f"  {'Column density':<25} {nominal_logN:<12.1f} {p_logN:<15.3f} {verdict(p_logN)}", "PROCESS")
 
-    # Joint Mahalanobis
-    obs_vec = np.array([obs_b_ratio, obs_deviation, obs_logN_diff])
-    sim_vecs = np.array([[s["b_ratio"], s["deviation"], s["logN_diff"]] for s in sim_results])
-    sim_mean = np.mean(sim_vecs, axis=0)
-    sim_cov = np.cov(sim_vecs.T)
-    # Regularize covariance to handle near-singular matrices from correlated statistics
-    sim_cov += 1e-6 * np.eye(3)
-
-    try:
-        from scipy.linalg import pinv
-        cov_inv = pinv(sim_cov)
-        diff = obs_vec - sim_mean
-        mahal_sq = float(diff @ cov_inv @ diff)
-        sim_mahal = np.array([float((sv - sim_mean) @ cov_inv @ (sv - sim_mean)) for sv in sim_vecs])
-        p_joint = float(np.mean(sim_mahal >= mahal_sq))
-        print_status(f"  {'Joint (Mahalanobis)':<25} {'':12} {p_joint:<15.3f} {verdict(p_joint)}", "PROCESS")
-    except Exception as e:
-        print_status(f"  Mahalanobis failed: {e}", "PROCESS")
-        p_joint = None
-        mahal_sq = None
-
+    # Joint predictive metric uses standardized, unit-independent covariance.
+    p_joint = calibration['joint']['p_add_one']
+    mahal_sq = calibration['observed_mahalanobis_squared']
+    print_status(f"  Joint (predictive Mahalanobis): {p_joint:.6f} {verdict(p_joint)}", "PROCESS")
     # ---- Summary ----
     print_status(f"\n--- Key Finding ---", "TITLE")
     print_status(f"  The nominal sigma values were computed from spectral", "PROCESS")
@@ -359,6 +398,14 @@ def run_gate8_calibration(sightline="Q1009+2956", n_sims=1000):
         "gate": "8-calibration",
         "sightline": sightline,
         "n_sims": n_sims, "n_successful": n_ok,
+        "n_optimizer_success": sum(result['optimizer_success'] for result in sim_results),
+        "calibration": calibration,
+        "physical_target_diagnostic_tails": physical_target_tails,
+        "simulation_vectors_file": str(vector_path.relative_to(project_root)),
+        "simulation_vectors_sha256": hashlib.sha256(vector_path.read_bytes()).hexdigest(),
+        "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        "input_hashes": {str(path.relative_to(project_root)): hashlib.sha256(path.read_bytes()).hexdigest()
+                         for path in (gate2_file, noise_path, manifest_path, vpfit_path)},
         "observed": {
             "v_H": float(v_H_obs), "b_H": float(b_H_obs), "logN_H": float(logN_H_obs),
             "b_ratio": float(obs_b_ratio), "deviation": float(obs_deviation),
@@ -383,7 +430,6 @@ def run_gate8_calibration(sightline="Q1009+2956", n_sims=1000):
 
     out_dir = project_root / "results"
     out_dir.mkdir(parents=True, exist_ok=True)
-    sl_clean = sightline.replace("+", "").replace("-", "")
     out_file = out_dir / f"gate8_calibration_{sl_clean}.json"
     with open(out_file, "w") as f:
         json.dump(ledger, f, indent=2)
@@ -395,5 +441,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--sightline", default="Q1009+2956")
     parser.add_argument("--n-sims", type=int, default=1000)
+    parser.add_argument("--workers", type=int, default=12)
     args = parser.parse_args()
-    run_gate8_calibration(args.sightline, args.n_sims)
+    run_gate8_calibration(args.sightline, args.n_sims, args.workers)

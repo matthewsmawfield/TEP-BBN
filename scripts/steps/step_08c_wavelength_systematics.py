@@ -52,7 +52,7 @@ import json
 from pathlib import Path
 
 import numpy as np
-from scipy.stats import norm
+from scipy.stats import norm, beta
 
 project_root = Path(__file__).resolve().parent.parent.parent
 
@@ -97,7 +97,7 @@ def load_calibration(filename):
 
 
 def gaussian_p(obs_abs, sigma_total):
-    return 2.0 * (1.0 - norm.cdf(obs_abs / sigma_total))
+    return 2.0 * norm.sf(obs_abs / sigma_total)
 
 
 def monte_carlo_p(obs_abs, sigma_total, n=N_MC, seed=SEED):
@@ -111,7 +111,8 @@ def main():
 
     for sightline, config in SIGHTLINES.items():
         cal = load_calibration(config["calibration_file"])
-        obs_dev = abs(cal["observed"]["deviation"])
+        null_mean = cal["simulated_stats"]["deviation_mean"]
+        obs_dev = abs(cal["observed"]["deviation"] - null_mean)
         sigma_fit = cal["simulated_stats"]["deviation_std"]
         sigma_sys_lit = config["sigma_sys_literature_kms"]
 
@@ -119,7 +120,9 @@ def main():
             "instrument": config["instrument"],
             "calibration": config["calibration"],
             "observed_deviation_kms": cal["observed"]["deviation"],
-            "observed_abs_deviation_kms": obs_dev,
+            "observed_abs_deviation_kms": abs(cal["observed"]["deviation"]),
+            "null_mean_deviation_kms": null_mean,
+            "centered_abs_deviation_kms": obs_dev,
             "sigma_fit_kms": sigma_fit,
             "original_calibrated_p": cal["calibrated_p_values"]["velocity_deviation"],
             "original_nominal_sigma": cal["nominal_sigmas"]["velocity_deviation"],
@@ -148,6 +151,10 @@ def main():
                 "effective_sigma": float(sigma_eff),
                 "p_gaussian": float(p_gauss),
                 "p_monte_carlo": p_mc,
+                "mc_exceedances": int(round(p_mc * N_MC)),
+                "mc_resolution": 1.0 / N_MC,
+                "mc_tail_upper_95": float(beta.ppf(0.95, int(round(p_mc*N_MC))+1,
+                                                   N_MC-int(round(p_mc*N_MC)))) if p_mc < 1 else 1.0,
                 "n_mc": N_MC,
                 "is_literature_value": bool(abs(sigma_sys - sigma_sys_lit) < 1e-9),
             }
@@ -192,6 +199,7 @@ def main():
                             "absolute wavelength offsets and inter-night drifts cancel.",
         "source_files": [SIGHTLINES[s]["calibration_file"] for s in SIGHTLINES],
         "n_mc": N_MC,
+        "tail_scope": "Gaussian sensitivity model; empirical zero means no sampled exceedances, not zero probability. mc_tail_upper_95 is a one-sided binomial bound.",
         "results": results,
     }
 

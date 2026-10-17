@@ -1,116 +1,116 @@
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] Script: step_08_evidence
-[20:39:26] [INFO] Started: 2026-08-30T20:39:26.583087
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [SUCCESS] === GATE 8: MULTI-PRONGED TEP EVIDENCE ANALYSIS ===
-[20:39:26] [PROCESS]   Q1009+2956: v_H=-131.3, logN_H=12.80, b_turb=13.4, T_obs=161.03, T_parent=161.03
-[20:39:26] [PROCESS]   PKS1937-101: v_H=-67.3, logN_H=13.23, b_turb=15.1, T_obs=161.31, T_parent=59.00
-[20:39:26] [PROCESS]   J1332+0052: v_H=-118.2, logN_H=15.35, b_turb=50.7, T_obs=136.97, T_parent=135.76
-[20:39:26] [INFO] 
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] Script: step_08_evidence
+[23:49:14] [INFO] Started: 2026-10-12T23:49:14.346511
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [SUCCESS] === GATE 8: MULTI-PRONGED TEP EVIDENCE ANALYSIS ===
+[23:49:14] [PROCESS]   Q1009+2956: v_H=-131.3, logN_H=12.80, b_turb=13.4, T_obs=161.03, T_parent=161.03
+[23:49:14] [PROCESS]   PKS1937-101: v_H=-67.3, logN_H=13.23, b_turb=15.1, T_obs=161.31, T_parent=59.00
+[23:49:14] [PROCESS]   J1332+0052: v_H=-118.2, logN_H=15.35, b_turb=50.7, T_obs=136.97, T_parent=135.76
+[23:49:14] [INFO] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
 --- Discriminator 1: b-value Test ---
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
-[20:39:26] [PROCESS]   Under isotope-D: b_Hfree should equal b_parent/sqrt(2) (mass-scaled)
-[20:39:26] [PROCESS]   Under TEP: b_Hfree is set by edge-gas temperature (free parameter)
-[20:39:26] [PROCESS]   Sightline       b_par    b_D_pred   b_Hfree    ratio    σ_dev    D?    TEP?
-[20:39:26] [PROCESS]   --------------- -------- ---------- ---------- -------- -------- ----- -----
-[20:39:26] [PROCESS]   Q1009+2956      18.6     13.5       13.4       0.99     0.0      YES   YES
-[20:39:26] [PROCESS]   PKS1937-101     16.3     11.5       15.1       1.31     1.0      YES   YES
-[20:39:26] [PROCESS]   J1332+0052      13.2     9.6        50.7       5.31     5.2      NO    YES
-[20:39:26] [PROCESS] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
+[23:49:14] [PROCESS]   Under isotope-D: b_Hfree should equal b_parent/sqrt(2) (mass-scaled)
+[23:49:14] [PROCESS]   Under TEP: b_Hfree is set by edge-gas temperature (free parameter)
+[23:49:14] [PROCESS]   Sightline       b_par    b_D_pred   b_Hfree    ratio    σ_dev    D?    TEP?
+[23:49:14] [PROCESS]   --------------- -------- ---------- ---------- -------- -------- ----- -----
+[23:49:14] [PROCESS]   Q1009+2956      18.6     13.5       13.4       0.99     0.0      YES   UNTESTED
+[23:49:14] [PROCESS]   PKS1937-101     16.3     11.5       15.1       1.31     1.0      YES   UNTESTED
+[23:49:14] [PROCESS]   J1332+0052      13.2     9.6        50.7       5.31     5.2      NO    UNTESTED
+[23:49:14] [PROCESS] 
   Summary: 1/3 sightlines have b-values inconsistent with D at >2σ
-[20:39:26] [PROCESS]   Under isotope-D: P(≥1 out of 3 inconsistent) ≈ 0.143
-[20:39:26] [INFO] 
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
+[23:49:14] [PROCESS]   Under isotope-D: P(≥1 out of 3 inconsistent) ≈ 0.143
+[23:49:14] [INFO] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
 --- Discriminator 2: Offset Deviation vs N_HI ---
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
-[20:39:26] [PROCESS]   Under isotope-D: all deviations should be ~0 (within spectral resolution)
-[20:39:26] [PROCESS]   Under TEP: |deviation| should correlate with N_H (more massive → more shear)
-[20:39:26] [PROCESS]   Q1009+2956: logN_HI=17.36, |dev|=2.7 km/s, dev=+2.7 km/s
-[20:39:26] [PROCESS]   PKS1937-101: logN_HI=17.92, |dev|=5.7 km/s, dev=+5.7 km/s
-[20:39:26] [PROCESS]   J1332+0052: logN_HI=19.25, |dev|=36.6 km/s, dev=-36.6 km/s
-[20:39:26] [PROCESS] 
-  Spearman rank correlation: ρ = 1.00, p = 0.000
-[20:39:26] [PROCESS]   With n=3, exact probability of perfect ranking = 1/6 = 0.167
-[20:39:26] [PROCESS]   Q1009+2956: |dev|/σ_vel = 1.0σ
-[20:39:26] [PROCESS]   PKS1937-101: |dev|/σ_vel = 3.1σ
-[20:39:26] [PROCESS]   J1332+0052: |dev|/σ_vel = 14.6σ
-[20:39:26] [PROCESS] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
+[23:49:14] [PROCESS]   Under isotope-D: all deviations should be ~0 (within spectral resolution)
+[23:49:14] [PROCESS]   Under TEP: |deviation| should correlate with N_H (more massive → more shear)
+[23:49:14] [PROCESS]   Q1009+2956: logN_HI=17.36, |dev|=2.7 km/s, dev=+2.7 km/s
+[23:49:14] [PROCESS]   PKS1937-101: logN_HI=17.92, |dev|=5.7 km/s, dev=+5.7 km/s
+[23:49:14] [PROCESS]   J1332+0052: logN_HI=19.25, |dev|=36.6 km/s, dev=-36.6 km/s
+[23:49:14] [PROCESS] 
+  Spearman rank correlation: ρ = 1.00, p = 0.333
+[23:49:14] [PROCESS]   With n=3, exact probability of perfect ranking = 1/6 = 0.167
+[23:49:14] [PROCESS]   Q1009+2956: |dev|/σ_vel = 1.0σ
+[23:49:14] [PROCESS]   PKS1937-101: |dev|/σ_vel = 3.1σ
+[23:49:14] [PROCESS]   J1332+0052: |dev|/σ_vel = 14.6σ
+[23:49:14] [PROCESS] 
   Summary: 2/3 sightlines have offset deviations inconsistent with D at >2σ
-[20:39:26] [INFO] 
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
+[23:49:14] [INFO] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
 --- Discriminator 3: Sign Test ---
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
-[20:39:26] [PROCESS]   TEP conformal sign theorem predicts all features blueward (v < v_parent)
-[20:39:26] [PROCESS]   Under null (random direction): P(all blueward) = (1/2)^3 = 0.125
-[20:39:26] [PROCESS]   Q1009+2956: v_Hfree=-131.3, v_parent=-52.4 → BLUEWARD
-[20:39:26] [PROCESS]   PKS1937-101: v_Hfree=-67.3, v_parent=8.7 → BLUEWARD
-[20:39:26] [PROCESS]   J1332+0052: v_Hfree=-118.2, v_parent=0.0 → BLUEWARD
-[20:39:26] [PROCESS] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
+[23:49:14] [PROCESS]   TEP conformal sign theorem predicts all features blueward (v < v_parent)
+[23:49:14] [PROCESS]   Under null (random direction): P(all blueward) = (1/2)^3 = 0.125
+[23:49:14] [PROCESS]   Q1009+2956: v_Hfree=-131.3, v_parent=-52.4 → BLUEWARD
+[23:49:14] [PROCESS]   PKS1937-101: v_Hfree=-67.3, v_parent=8.7 → BLUEWARD
+[23:49:14] [PROCESS]   J1332+0052: v_Hfree=-118.2, v_parent=0.0 → BLUEWARD
+[23:49:14] [PROCESS] 
   3/3 blueward, P(≥3 blueward | null) = 0.1250
-[20:39:26] [PROCESS]   Consistent with TEP sign theorem (all blueward as predicted)
-[20:39:26] [INFO] 
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
+[23:49:14] [PROCESS]   Consistent with TEP sign theorem (all blueward as predicted)
+[23:49:14] [INFO] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
 --- Discriminator 4: Column Density Test ---
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
-[20:39:26] [PROCESS]   Under isotope-D: N_Hfree should match N_HI × (D/H)_BBN
-[20:39:26] [PROCESS]   Under TEP: N_Hfree is set by edge-gas properties (free parameter)
-[20:39:26] [PROCESS]   Q1009+2956: logN_D_pred=12.76, logN_Hfree=12.80, diff=+0.03 dex (0.7σ) → D: YES
-[20:39:26] [PROCESS]   PKS1937-101: logN_D_pred=13.33, logN_Hfree=13.23, diff=-0.09 dex (1.9σ) → D: YES
-[20:39:26] [PROCESS]   J1332+0052: logN_D_pred=14.65, logN_Hfree=15.35, diff=+0.70 dex (14.0σ) → D: NO
-[20:39:26] [PROCESS] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
+[23:49:14] [PROCESS]   Under isotope-D: N_Hfree should match N_HI × (D/H)_BBN
+[23:49:14] [PROCESS]   Under TEP: N_Hfree is set by edge-gas properties (free parameter)
+[23:49:14] [PROCESS]   Q1009+2956: logN_D_pred=12.76, logN_Hfree=12.80, diff=+0.03 dex (0.7σ) → D: YES
+[23:49:14] [PROCESS]   PKS1937-101: logN_D_pred=13.33, logN_Hfree=13.23, diff=-0.09 dex (1.9σ) → D: YES
+[23:49:14] [PROCESS]   J1332+0052: logN_D_pred=14.65, logN_Hfree=15.35, diff=+0.70 dex (14.0σ) → D: NO
+[23:49:14] [PROCESS] 
   Summary: 1/3 sightlines have columns inconsistent with D at >2σ
-[20:39:26] [INFO] 
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
+[23:49:14] [INFO] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
 --- Discriminator 5: D-Redundancy Test (M_D+H) ---
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
-[20:39:26] [PROCESS]   Under isotope-D: M_D+H should retain logN_D > 0 (D is physically present)
-[20:39:26] [PROCESS]   Under TEP: M_D+H should drive logN_D → 0 (D is redundant; H interloper suffices)
-[20:39:26] [PROCESS]   Q1009+2956: logN_D(M_Dfree)=12.75, logN_D(M_D+H)=0.00 → D REDUNDANT [TEP: YES, D: NO]
-[20:39:26] [PROCESS]   PKS1937-101: logN_D(M_Dfree)=13.13, logN_D(M_D+H)=0.00 → D REDUNDANT [TEP: YES, D: NO]
-[20:39:26] [PROCESS]   J1332+0052: logN_D(M_Dfree)=13.62, logN_D(M_D+H)=0.00 → D REDUNDANT [TEP: YES, D: NO]
-[20:39:26] [PROCESS] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
+[23:49:14] [PROCESS]   Under isotope-D: M_D+H should retain logN_D > 0 (D is physically present)
+[23:49:14] [PROCESS]   Under TEP: M_D+H should drive logN_D → 0 (D is redundant; H interloper suffices)
+[23:49:14] [PROCESS]   Q1009+2956: logN_D(M_Dfree)=12.75, logN_D(M_D+H)=0.00 → D REDUNDANT [TEP: YES, D: NO]
+[23:49:14] [PROCESS]   PKS1937-101: logN_D(M_Dfree)=13.13, logN_D(M_D+H)=0.00 → D REDUNDANT [TEP: YES, D: NO]
+[23:49:14] [PROCESS]   J1332+0052: logN_D(M_Dfree)=13.62, logN_D(M_D+H)=0.00 → D REDUNDANT [TEP: YES, D: NO]
+[23:49:14] [PROCESS] 
   Meaningful tests: 3/3
-[20:39:26] [PROCESS]   TEP-predicted (D redundant): 3/3
-[20:39:26] [PROCESS]   D-predicted (D retained): 0/3
-[20:39:26] [INFO] 
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
+[23:49:14] [PROCESS]   TEP-predicted (D redundant): 3/3
+[23:49:14] [PROCESS]   D-predicted (D retained): 0/3
+[23:49:14] [INFO] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
 --- Combined Evidence Assessment ---
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
-[20:39:26] [SUCCESS] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
+[23:49:14] [SUCCESS] 
   Evidence FOR TEP:
-[20:39:26] [PROCESS]     • b-value: TEP allows free b (no constraint violated)
-[20:39:26] [PROCESS]     • Offset deviation: perfect rank correlation with N_HI (ρ=1, p=0.167)
-[20:39:26] [PROCESS]     • Sign test: all 3/3 features blueward as conformal sign theorem predicts (p=0.125)
-[20:39:26] [PROCESS]     • D-redundancy: 3/3 sightlines show M_D+H drives logN_D → 0 (D redundant)
-[20:39:26] [SUCCESS] 
+[23:49:14] [PROCESS]     • b-value: free-H width is descriptive; edge-gas compatibility requires a physical width prediction
+[23:49:14] [PROCESS]     • Offset deviation: perfect rank correlation with N_HI (ρ=1, p=0.167)
+[23:49:14] [PROCESS]     • Sign test: all 3/3 features blueward as conformal sign theorem predicts (p=0.125)
+[23:49:14] [PROCESS]     • D-redundancy: 3/3 sightlines show M_D+H drives logN_D → 0 (D redundant)
+[23:49:14] [SUCCESS] 
   Evidence AGAINST isotope-D:
-[20:39:26] [PROCESS]     • b-value: 1/3 sightlines inconsistent with D-predicted b at >2σ
-[20:39:26] [PROCESS]     • Offset deviation: 2/3 sightlines deviate from isotope shift at >2σ
-[20:39:26] [PROCESS]     • Column density: 1/3 sightlines inconsistent with D/H_BBN prediction at >2σ
-[20:39:26] [PROCESS] 
+[23:49:14] [PROCESS]     • b-value: 1/3 sightlines inconsistent with D-predicted b at >2σ
+[23:49:14] [PROCESS]     • Offset deviation: 2/3 sightlines deviate from isotope shift at >2σ
+[23:49:14] [PROCESS]     • Column density: 1/3 sightlines inconsistent with D/H_BBN prediction at >2σ
+[23:49:14] [PROCESS] 
   Evidence AGAINST TEP:
-[20:39:26] [PROCESS]     • Amplitude gap: A_env ~ 10^4 required (Gate 4B-II identifies mechanism, but not yet computed)
-[20:39:26] [INFO] 
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
+[23:49:14] [PROCESS]     • Amplitude: conformal and disformal budgets are computed in Gate 4B; assigning the entire free-H offset to a TEP field is a separate physical hypothesis
+[23:49:14] [INFO] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
   Overall: 4 lines of evidence for TEP, 3 lines against isotope-D
-[20:39:26] [INFO] ================================================================================
-[20:39:26] [INFO] 
-[20:39:26] [PROCESS]   The strongest discriminators are: b-value test (1/3 inconsistent with D at >2σ), offset deviation (2/3 deviate from isotope shift at >2σ, ρ=1.0), D-redundancy test (3/3 sightlines drive logN_D → 0)
-[20:39:26] [PROCESS]   These are independent of the Gate 2/3 likelihood test and provide
-[20:39:26] [PROCESS]   complementary evidence that the deuterium-like features are not isotopic D.
-[20:39:26] [SUCCESS] 
+[23:49:14] [INFO] ================================================================================
+[23:49:14] [INFO] 
+[23:49:14] [PROCESS]   The strongest discriminators are: b-value test (1/3 inconsistent with D at >2σ), offset deviation (2/3 deviate from isotope shift at >2σ, ρ=1.0), D-redundancy test (3/3 sightlines drive logN_D → 0)
+[23:49:14] [PROCESS]   These reuse the Gate 2/3 spectra and fitted parameters and provide
+[23:49:14] [PROCESS]   complementary evidence that the deuterium-like features are not isotopic D.
+[23:49:14] [SUCCESS] 
 [COMPLETED] Gate 8 results written to /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/gate8_evidence.json

@@ -32,6 +32,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from scripts.utils.logger import print_status, setup_step_logger
+from scripts.lib.canonical_screening import s_transfer_depth, PHI_HALF_C2, N_SCREEN
 
 
 def run_gate4b_mechanism():
@@ -86,15 +87,12 @@ def run_gate4b_mechanism():
     A_env_target = dv_target * 1e5 / dv_conf  # dimensionless
 
     # Screening parameters
-    Phi_half = 1.59e-7
-    n_screen = 3.56
+    Phi_half = PHI_HALF_C2
+    n_screen = N_SCREEN
     Phi_gal_c2 = 5.38e-7  # v_circ^2/c^2
 
-    def S_Sigma(Phi_c2):
-        return 1.0 / (1.0 + (Phi_c2 / Phi_half)**n_screen)
-
-    S_gal = S_Sigma(Phi_gal_c2)
-    S_abs = S_Sigma(Phi_abs_c2)
+    S_gal = s_transfer_depth(Phi_gal_c2)
+    S_abs = s_transfer_depth(Phi_abs_c2)
 
     print_status(f"\n--- Absorber Parameters (R = {R_kpc} kpc) ---", "TITLE")
     print_status(f"  log N_H = {log_N_H:.2f}, n_H = {n_H:.2e} cm⁻³", "PROCESS")

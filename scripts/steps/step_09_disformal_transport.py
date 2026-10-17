@@ -61,6 +61,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from scripts.utils.logger import print_status, setup_step_logger
+from scripts.lib.canonical_screening import s_transfer_depth, PHI_HALF_C2, N_SCREEN
 
 c_cgs = 2.998e10; G_cgs = 6.674e-8; m_p = 1.673e-24
 kpc_cm = 3.086e21; km_cgs = 1e5
@@ -84,8 +85,8 @@ def derive_screening_parameters():
     gives ≈1.9e-6 — Paper 0 §7 / step_01). Its solar-depth value is reported
     by full_gradient_check as a diagnostic of projection mismatch only.
     """
-    Phi_half = 1.59e-7; n = 3.56
-    S = lambda p: 1.0 / (1.0 + (p / Phi_half)**n)
+    Phi_half = PHI_HALF_C2; n = N_SCREEN
+    S = lambda p: s_transfer_depth(p)
     # Use the correct potential depths for each anchor
     Phi_abs = 1e-8       # absorber regime
     Phi_sun = 2.12e-6    # solar system (Cassini grazing ray at R_⊙)

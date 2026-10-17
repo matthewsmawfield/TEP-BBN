@@ -1,0 +1,173 @@
+{
+  "gate": "8-calibration",
+  "sightline": "Q1009+2956",
+  "n_sims": 20,
+  "n_successful": 20,
+  "n_optimizer_success": 20,
+  "calibration": {
+    "mean": [
+      0.9167371647376431,
+      0.03715668494542399,
+      -0.00895254793774498
+    ],
+    "covariance": [
+      [
+        0.0003694901403404418,
+        0.0009836448140935659,
+        0.00012250456542912087
+      ],
+      [
+        0.0009836448140935659,
+        0.03148101794865784,
+        0.0006520042362299895
+      ],
+      [
+        0.00012250456542912087,
+        0.0006520042362299895,
+        9.487189748271147e-05
+      ]
+    ],
+    "correlation": [
+      [
+        1.0000000000000002,
+        0.2884114488037161,
+        0.6543077339013739
+      ],
+      [
+        0.2884114488037161,
+        1.0,
+        0.3772743161689481
+      ],
+      [
+        0.6543077339013739,
+        0.3772743161689481,
+        0.9999999999999999
+      ]
+    ],
+    "dimensionless_ridge": 1e-06,
+    "correlation_eigenvalues": [
+      0.3376999480717506,
+      0.7613652727486353,
+      1.9009347791796136
+    ],
+    "centered_sigmas": [
+      3.9042540551639506,
+      15.105348197316063,
+      4.389109873030949
+    ],
+    "marginal": [
+      {
+        "exceedances": 0,
+        "n": 20,
+        "p_add_one": 0.047619047619047616,
+        "empirical_frequency": 0.0,
+        "tail_upper_95": 0.13910834066826516
+      },
+      {
+        "exceedances": 0,
+        "n": 20,
+        "p_add_one": 0.047619047619047616,
+        "empirical_frequency": 0.0,
+        "tail_upper_95": 0.13910834066826516
+      },
+      {
+        "exceedances": 0,
+        "n": 20,
+        "p_add_one": 0.047619047619047616,
+        "empirical_frequency": 0.0,
+        "tail_upper_95": 0.13910834066826516
+      }
+    ],
+    "joint": {
+      "exceedances": 0,
+      "n": 20,
+      "p_add_one": 0.047619047619047616,
+      "empirical_frequency": 0.0,
+      "tail_upper_95": 0.13910834066826516
+    },
+    "observed_mahalanobis_squared": 230.42580480643028,
+    "null_mahalanobis_squared": [
+      0.3091667994698893,
+      15.290517895976938,
+      0.14226793567865748,
+      1.3702580552199182,
+      7.588962715793279,
+      6.952776009309253,
+      1.8982085212348463,
+      2.75041934757278,
+      2.926733560837979,
+      4.0008038431805195,
+      0.395128985378471,
+      2.5587993765779182,
+      8.411162508341874,
+      1.4196855793911654,
+      0.778203002198085,
+      12.176986414211887,
+      4.72358903477897,
+      0.6213048969175852,
+      8.56917188984798,
+      0.9970254257650759
+    ],
+    "scope": "Empirical-null-centered, leave-one-out predictive scores; fixed input pixel mask."
+  },
+  "physical_target_diagnostic_tails": [
+    {
+      "exceedances": 20,
+      "n": 20,
+      "p_add_one": 1.0,
+      "empirical_frequency": 1.0,
+      "tail_upper_95": 1.0
+    },
+    {
+      "exceedances": 0,
+      "n": 20,
+      "p_add_one": 0.047619047619047616,
+      "empirical_frequency": 0.0,
+      "tail_upper_95": 0.13910834066826516
+    },
+    {
+      "exceedances": 0,
+      "n": 20,
+      "p_add_one": 0.047619047619047616,
+      "empirical_frequency": 0.0,
+      "tail_upper_95": 0.13910834066826516
+    }
+  ],
+  "simulation_vectors_file": "results/gate8_simulations_Q10092956_smoke_n20.jsonl",
+  "simulation_vectors_sha256": "0bee4aba5a6e831ba45092be30f8ce1d397ae80c4133f98b8704b3a048650c00",
+  "source_sha256": "d27f6a713afc6837db5f5ee6bcf2461da64ebf57c1265fc30f0f37702b6cfbee",
+  "input_hashes": {
+    "results/gate2_parameter_ledger.json": "7434abaa88074239353b0c6040ee2cd60a9af8a45f17c5f0133ea6cc2ed822e5",
+    "configs/sightlines/Q1009+2956_noise_model.json": "772f00855e20ba1b5f8c8ef316406d418809fa92d3c07fbc9906802d9281413a",
+    "data/processed/Q1009_union_manifest.json": "e8976ea0706e647a279116be3727bd0bc144d36139498b2bd5787a5cd54b8d10",
+    "data/literature_components/model_6a.26": "d88443fdc04726d2ebc6ad41e51825d5159369d91ed2a349059889824cf91aae"
+  },
+  "observed": {
+    "v_H": -131.30887475600116,
+    "b_H": 13.403256825376687,
+    "logN_H": 12.796487592416035,
+    "b_ratio": 0.9917852293793393,
+    "deviation": 2.7172821441621977,
+    "logN_diff": 0.03379835049612012
+  },
+  "simulated_stats": {
+    "b_ratio_mean": 0.9167371647376431,
+    "b_ratio_std": 0.01873541121308576,
+    "deviation_mean": 0.03715668494542399,
+    "deviation_std": 0.1729363092332693,
+    "logN_diff_mean": -0.00895254793774498,
+    "logN_diff_std": 0.009493592713434461
+  },
+  "calibrated_p_values": {
+    "b_value": 0.047619047619047616,
+    "velocity_deviation": 0.047619047619047616,
+    "column_density": 0.047619047619047616,
+    "joint_mahalanobis": 0.047619047619047616
+  },
+  "nominal_sigmas": {
+    "b_value": 3.9042540551639506,
+    "velocity_deviation": 15.105348197316063,
+    "column_density": 4.389109873030949
+  },
+  "mahalanobis_distance": 230.42580480643028
+}

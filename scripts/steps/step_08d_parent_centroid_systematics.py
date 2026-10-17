@@ -58,7 +58,7 @@ import json
 from pathlib import Path
 
 import numpy as np
-from scipy.stats import norm
+from scipy.stats import norm, beta
 
 project_root = Path(__file__).resolve().parent.parent.parent
 
@@ -92,7 +92,7 @@ def load_calibration(filename):
 
 
 def gaussian_p(obs_abs, sigma_total):
-    return 2.0 * (1.0 - norm.cdf(obs_abs / sigma_total))
+    return 2.0 * norm.sf(obs_abs / sigma_total)
 
 
 def monte_carlo_p(obs_abs, sigma_base, sigma_blend, n=N_MC, seed=SEED):
@@ -115,6 +115,8 @@ def main():
         cal = load_calibration(config["calibration_file"])
         obs_dev = float(cal["observed"]["deviation"])
         obs_abs = abs(obs_dev)
+        null_mean = float(cal["simulated_stats"]["deviation_mean"])
+        obs_centered_abs = abs(obs_dev - null_mean)
         sigma_fit = float(cal["simulated_stats"]["deviation_std"])
         sigma_sys = config["sigma_sys_kms"]
         sigma_base = float(np.sqrt(sigma_fit**2 + sigma_sys**2))
@@ -127,25 +129,27 @@ def main():
         cases = {}
         for sb in SIGMA_BLEND_SCAN:
             sigma_total = float(np.sqrt(sigma_base**2 + sb**2))
-            p_mc = monte_carlo_p(obs_abs, sigma_base, sb)
-            p_gauss = gaussian_p(obs_abs, sigma_total)
+            p_mc = monte_carlo_p(obs_centered_abs, sigma_base, sb)
+            p_gauss = gaussian_p(obs_centered_abs, sigma_total)
             p_blend_alone = gaussian_p(obs_abs, sb) if sb > 0 else 0.0
             cases[f"sigma_blend_{sb:.2f}"] = {
                 "sigma_blend_kms": sb,
                 "sigma_total_kms": sigma_total,
                 "p_monte_carlo": p_mc,
+                "mc_exceedances": int(round(p_mc * N_MC)),
+                "mc_resolution": 1.0 / N_MC,
+                "mc_tail_upper_95": float(beta.ppf(0.95, int(round(p_mc*N_MC))+1,
+                                                   N_MC-int(round(p_mc*N_MC)))) if p_mc < 1 else 1.0,
                 "p_gaussian": float(p_gauss),
                 "p_blend_alone_twosided": float(p_blend_alone),
-                "effective_sigma_vs_null": float(obs_abs / sigma_total),
+                "effective_sigma_vs_null": float(obs_centered_abs / sigma_total),
             }
 
         # signed blend-alone tail for the observed sign
         def signed_tail(sb):
             if sb <= 0:
                 return 0.0
-            return float(1.0 - norm.cdf(obs_dev / sb)) if obs_dev > 0 else float(
-                norm.cdf(obs_dev / sb)
-            )
+            return float(norm.sf(abs(obs_dev) / sb))
 
         joint_signed[sightline] = {f"sigma_blend_{sb:.2f}": signed_tail(sb) for sb in SIGMA_BLEND_SCAN}
 
@@ -153,6 +157,8 @@ def main():
             "instrument": config["instrument"],
             "observed_deviation_kms": obs_dev,
             "observed_abs_deviation_kms": obs_abs,
+            "null_mean_deviation_kms": null_mean,
+            "centered_abs_deviation_kms": obs_centered_abs,
             "sigma_fit_kms": sigma_fit,
             "sigma_sys_kms": sigma_sys,
             "sigma_base_kms": sigma_base,
@@ -208,6 +214,7 @@ def main():
         "source_files": [SIGHTLINES[s]["calibration_file"] for s in SIGHTLINES]
         + ["gate8_evidence.json"],
         "n_mc": N_MC,
+        "tail_scope": "Gaussian sensitivity model; empirical zero means no sampled exceedances, not zero probability. mc_tail_upper_95 is a one-sided binomial bound.",
         "results": results,
         "joint_sign_matched": joint,
     }

@@ -1,20 +1,31 @@
 {
-    "status_report": "TEP_BBN_CURRENT_STATUS",
-    "timestamp": "2026-07-20T12:30:00Z",
-    "retained_foundation": {
-        "physical_rt_engine": "validated",
-        "conventional_model": "model_6a",
-        "continuum_and_zero_levels": "analytic profiling",
-        "native_data_mask": "finite flux, error > 0",
-        "frozen_likelihood": {
-            "type": "Student-t",
-            "nu": 2.331,
-            "scale": 0.805,
-            "location": 0.0
-        },
-        "spatial_disformal_frequency_effect": "rejected",
-        "conformal_endpoint_effect": "kinematically viable",
-        "absorber_amplitude_law": "underived",
-        "q1009_status": "development system"
-    }
+  "status_report": "TEP_BBN_CURRENT_STATUS",
+  "schema_version": 2,
+  "timestamp": "2026-10-13T00:35:24.214849+00:00",
+  "legacy_snapshot": "configs/archive/historical/TEP_BBN_CURRENT_STATUS_2026-07-20.json",
+  "authority": "Current retained numerical results and source-linked verification; historical audit labels are not completion evidence.",
+  "numerical_finalisation": {
+    "status": "COMPLETED_AND_VERIFIED",
+    "C2_draws": 200,
+    "C2_exceedances": 0,
+    "C2_p_add_one": 0.004975124378109453,
+    "C2_all_fits_converged": true,
+    "primary_physical_C3_and_diagnostic_verification": "notes/bbn-calibration-rerun-2026-10-11/verification.json",
+    "completion_report": "notes/bbn-calibration-rerun-2026-10-11/review.md"
+  },
+  "likelihood_authority": "Per-sightline configured noise models and fitted ledgers; do not substitute the archived global July noise tuple.",
+  "absorber_activation": {
+    "explicit_equation_present": true,
+    "equation": "G(delta_u)=g_sat min(1,delta_u/1e-7)",
+    "implementation": "TEP-LENS/scripts/steps/step_063_nfw_deprojection.py",
+    "coupled_scalar_benchmark": "notes/solar-coupling-exploration-2026-10-11/coupled-depth-gate.py",
+    "endpoint_geometry_check": "notes/solar-coupling-exploration-2026-10-11/feature-location-check.json",
+    "independent_feature_geometry_verified": false,
+    "full_physical_prediction_verified": false
+  },
+  "interpretation": "Calibrated spectral-model preferences and conditional physical benchmarks have distinct scopes. An explicit gate and strong possible exterior contrasts are not a completed independent three-system prediction.",
+  "source_sha256": {
+    "notes/bbn-calibration-rerun-2026-10-11/verification.json": "625053c3304232c20e7b2290f072bbd732ca2750918bc83f9a7eaf49ef329992",
+    "TEP-BBN/results/gate3_c2_mc_calibration.json": "f9588ac89817a8fcbe59389d8dac7eba3ffe508213a5e3900c6f35a307505064"
+  }
 }

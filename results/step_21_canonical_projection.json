@@ -1,0 +1,216 @@
+{
+  "step": "21",
+  "purpose": "Tabulate the selected-sector acceleration proxy and retain legacy diagnostics, distinguishing them from existing solved profiles.",
+  "operator": {
+    "form": "S_Sigma(g) = 1/[k*(g/g_t) + 2*(g/g_t)^2]",
+    "kinetic_argument_convention": "xi_proxy=(g/g_t)^2 reproduces the step-54 environment benchmark; xi_action=|X|/Lambda_X^4 on a solved field is distinct",
+    "reduced_planck_mass_eV": 2.4353431507105458e+27,
+    "k_star": 16.02867024193226,
+    "g_t_ms2": 3.4001944264419963e-10,
+    "provenance": "Paper 0 v0.15 sec.7; TEP step_54 master-sector admissibility (two-branch selected, unit-term rejected)",
+    "baseline_form": "S_Sigma_baseline(g) = 1/[1 + 2*(g/g_t)^2]"
+  },
+  "corpus_crosscheck": {
+    "rows": [
+      {
+        "name": "Sun 1 AU",
+        "g": 0.00593,
+        "S_Sigma": 1.6438717051381377e-15,
+        "step54_ref": 1.6438717051381377e-15,
+        "rel_err": 0.0
+      },
+      {
+        "name": "Cassini limb 1.6 Rs",
+        "g": 107.0,
+        "S_Sigma": 5.0490532523857e-24,
+        "step54_ref": 5.0490532523857e-24,
+        "rel_err": 0.0
+      },
+      {
+        "name": "MW solar circle",
+        "g": 2e-10,
+        "S_Sigma": 0.09881371372504827,
+        "step54_ref": 0.09881371372504827,
+        "rel_err": 0.0
+      },
+      {
+        "name": "Void/cosmic web",
+        "g": 1e-12,
+        "S_Sigma": 21.205421714450488,
+        "step54_ref": 21.205421714450488,
+        "rel_err": 0.0
+      }
+    ],
+    "max_rel_err": 0.0
+  },
+  "solar_projection": {
+    "environments": {
+      "Sun surface": {
+        "g_ms2": 274.03277348394766,
+        "S_Sigma_two_branch": 7.697904060634761e-25,
+        "S_Sigma_baseline": 7.69790406071131e-25
+      },
+      "Sun field at 1 AU": {
+        "g_ms2": 0.00593140799708313,
+        "S_Sigma_two_branch": 1.6430913537208496e-15,
+        "S_Sigma_baseline": 1.6430921085960539e-15
+      },
+      "Cassini conjunction 1.6 Rsun": {
+        "g_ms2": 107.04405214216705,
+        "S_Sigma_two_branch": 5.044898405099337e-24,
+        "S_Sigma_baseline": 5.044898405227765e-24
+      },
+      "Sun field at Saturn 9.5 AU": {
+        "g_ms2": 6.572197226684908e-05,
+        "S_Sigma_two_branch": 1.3382533037880707e-11,
+        "S_Sigma_baseline": 1.338308791759257e-11
+      }
+    },
+    "S_Sigma_1AU": 1.6430913537208496e-15,
+    "gamma_ppn_minus_1": 6.572365414883376e-15,
+    "cassini_bound": 2.3e-05,
+    "cassini_margin": 3499501100.154232,
+    "adopted_illustrative": 1.9e-06,
+    "note": "Values are inverse-stiffness evaluations on assigned Newtonian accelerations. The gamma and margin columns are legacy proxy diagnostics, not solved-field Cassini bounds.",
+    "scope": "acceleration_proxy_not_solved_source_response",
+    "cassini_bound_verified": false
+  },
+  "absorber_projection": {
+    "ambient_semantics": "X_env is the embedding-hierarchy ambient field (host halo / cosmic web), excluding the absorber's own co-generated response (Paper 0 sec.7 rule)",
+    "ambient_choices": {
+      "host_halo_newtonian": {
+        "g_ms2": 1.5487689475477022e-12,
+        "S_Sigma_two_branch": 13.68903593191123,
+        "S_Sigma_baseline": 0.9999585067227602
+      },
+      "host_halo_deep_tail_scalar": {
+        "g_ms2": 1.3632764712475758e-11,
+        "S_Sigma_two_branch": 1.5482997658373399,
+        "S_Sigma_baseline": 0.9967952339974191
+      },
+      "cosmic_web_floor": {
+        "g_ms2": 1e-12,
+        "S_Sigma_two_branch": 21.205421714450488,
+        "S_Sigma_baseline": 0.9999827012397139
+      }
+    },
+    "ansatz_S_A_abs_at_halo_potential": 0.9997213267070633,
+    "S_Sigma_fiducial": 13.68903593191123,
+    "S_Sigma_range": [
+      1.5482997658373399,
+      21.205421714450488
+    ],
+    "S_Sigma_drift_branch": {
+      "descent_z2.50": {
+        "E2": 0.2857142857142857,
+        "xi_drift": 0.14285714285714285,
+        "P_X": 6.344484788052198,
+        "S_Sigma": 0.15761721139014773
+      },
+      "tracking_z2.50": {
+        "E2": 0.4427613228665136,
+        "xi_drift": 0.2213806614332568,
+        "P_X": 7.985053680265886,
+        "S_Sigma": 0.12523397337595632
+      },
+      "descent_z3.42": {
+        "E2": 0.22624434389140272,
+        "xi_drift": 0.11312217194570136,
+        "P_X": 5.617716787771848,
+        "S_Sigma": 0.17800826167967598
+      },
+      "tracking_z3.42": {
+        "E2": 0.38011970681017815,
+        "xi_drift": 0.19005985340508907,
+        "P_X": 7.368535191370306,
+        "S_Sigma": 0.1357121834976312
+      },
+      "descent_z3.57": {
+        "E2": 0.2188183807439825,
+        "xi_drift": 0.10940919037199125,
+        "P_X": 5.521071112013797,
+        "S_Sigma": 0.18112427456766672
+      },
+      "tracking_z3.57": {
+        "E2": 0.37191104176699696,
+        "xi_drift": 0.18595552088349848,
+        "P_X": 7.2844574615888975,
+        "S_Sigma": 0.1372785832401413
+      }
+    },
+    "dv_conf_canonical": {
+      "Q1009+2956": {
+        "poisson_kms": 0.009,
+        "canonical_fiducial_kms": 0.12320132338720105,
+        "canonical_range_kms": [
+          0.013934697892536058,
+          0.19084879543005437
+        ]
+      },
+      "PKS1937-101": {
+        "poisson_kms": 0.017,
+        "canonical_fiducial_kms": 0.23271361084249093,
+        "canonical_range_kms": [
+          0.02632109601923478,
+          0.3604921691456583
+        ]
+      },
+      "J1332+0052": {
+        "poisson_kms": 0.077,
+        "canonical_fiducial_kms": 1.0540557667571646,
+        "canonical_range_kms": [
+          0.11921908196947517,
+          1.6328174720126876
+        ]
+      }
+    },
+    "interpretation": "Two branch conventions must be distinguished. On the static-branch acceleration proxy the LLS ambient returns S_Sigma ~ 1.5-21 (fiducial host-halo ~14). The solved field at z ~ 2.5-3.6 is instead drift-dominated (spatial/temporal gradient ratio ~ 2.4e-4): evaluated on the ambient action invariant xi = E^2(z)/2, the same operator gives P_X ~ 5.5-8.0, i.e. S_Sigma ~ 0.13-0.18 \u2014 the absorber source-charge response is ~6x screened, not anti-screened. The proxy column is retained as the step-54 convention benchmark; the drift-branch value is the physical one for the LLS ambient. Either way the conformal channel stays below the spectral systematic floor (the disformal potential-depth gate carries the ~80 km/s amplitude), so no reported conclusion changes."
+  },
+  "amplitude_sector": {
+    "S_A_absorber": 3.0820853646104744e-09,
+    "rho_gas_gcc": 5.8554999999999995e-25,
+    "rho_T_gcc": 20.0,
+    "law": "S_A = min[1, (rho_bar/rho_T)^(1/3)] (step_27, quartic minimum)"
+  },
+  "disformal_solar_chain": {
+    "dphi_dr_sun_unscreened_eV2": 2930517.882134859,
+    "dphi_dr_sun_canonical_eV2": 2.255884550464871e-18,
+    "dphi_dr_sun_adopted_eV2": 156.0,
+    "gamma_dis": {
+      "powerlaw_n2_Q1009": {
+        "B0_eVinv4": 288000000.0,
+        "n_eff": 2,
+        "B_phi_sun_eVinv4": 1.4709888e-11,
+        "gamma_dis_adopted_profile": 0.08442920621886792,
+        "gamma_dis_canonical": 1.7655387317274075e-41,
+        "cassini_pass_canonical": true
+      },
+      "powerlaw_n5_Q1009": {
+        "B0_eVinv4": 2490000000000.0,
+        "n_eff": 5,
+        "B_phi_sun_eVinv4": 1.4680523508662397e-36,
+        "gamma_dis_adopted_profile": 8.42606651195302e-27,
+        "gamma_dis_canonical": 1.762014289747019e-66,
+        "cassini_pass_canonical": true
+      },
+      "descent_joint": {
+        "B0_eVinv4": 75579000000.0,
+        "n_eff": 4,
+        "B_phi_sun_eVinv4": 1.9716730390774418e-24,
+        "gamma_dis_adopted_profile": 1.13166592167426e-14,
+        "gamma_dis_canonical": 2.3664796882164636e-54,
+        "cassini_pass_canonical": true
+      }
+    },
+    "scope": {
+      "calculation": "inverse stiffness on Newtonian acceleration proxy",
+      "solved_solar_profile": false,
+      "cassini_bound_verified": false,
+      "field_amplitude_and_gradient_from_same_solution": false,
+      "existing_solver": "TEP/scripts/steps/step_53_unified_profile.py",
+      "existing_selected_result": "TEP/results/step_53_unified_profile_two_branch.json",
+      "reconciliation": "notes/solar-coupling-exploration-2026-10-11/review.md"
+    }
+  },
+  "verdict": "The corpus derives distinct amplitude and gradient projections and already supplies selected-sector nonlinear profiles (Paper 0 steps 53/58) and embedded calculations. This step tabulates inverse stiffness on an acceleration proxy; its agreement with step 54 is a proxy-table check, not a solution of the source equation. The legacy solar gamma columns combine that proxy with an assigned field value and do not certify Cassini compliance. The potential-depth absorber law remains a declared transfer prescription, not automatically the response of a solved absorber. Consistent-profile exploration retains strong solar suppression for quartic-tapered tracking candidates; ambient lapse and three-sightline activation must be checked on the same physical coupling and background. Spectroscopy fits are unchanged."
+}

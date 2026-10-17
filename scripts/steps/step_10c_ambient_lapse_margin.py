@@ -91,6 +91,36 @@ def shape_descent(u, lam=1.0, phi_c=0.1):
     return (u ** 4 / (phi_c ** 4 + u ** 4)) * np.exp(-lam * u)
 
 
+# --- TEP-native drift models (the stored H_z is the imported LCDM rate) ---
+# descent:  E^2 = H_T^2/H_0^2 = 1/(1+z)            (kappa->inf free roll)
+# tracking: E^2 solves c3 e^3 + c4 e^4 = (c3+c4) e^{-u}, the selected
+#           kinetic-tracking branch (k = 4 sqrt2 |beta_A| g_t / 1.2e-10)
+G_T_TRANSITION = 3.4004641632065783e-10  # g_t convention shared with TEP/core
+
+
+def _e2_tracking(u, k=None):
+    """Selected kinetic-tracking E^2(u) via the fixed-point map
+    c3 e^3 + c4 e^4 = (c3+c4) e^{-u}, c3 = sqrt(2) k/3, c4 = 0.75."""
+    if k is None:
+        k = 4.0 * np.sqrt(2.0) * G_T_TRANSITION / 1.2e-10
+    c3 = np.sqrt(2.0) * k / 3.0
+    c4 = 0.75
+    e = np.exp(-u / 3.0)
+    for _ in range(60):
+        f = c3 * e ** 3 + c4 * e ** 4 - (c3 + c4) * np.exp(-u)
+        d = 3.0 * c3 * e ** 2 + 4.0 * c4 * e ** 3
+        e = e - f / d
+        if abs(f) < 1e-16:
+            break
+    return e * e
+
+
+def E2_native(z, model='descent'):
+    if model == 'descent':
+        return 1.0 / (1.0 + z)
+    return _e2_tracking(np.log1p(z))
+
+
 def main():
     res_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'results')
     g10 = json.load(open(os.path.join(res_dir, 'gate10_covariant_transport.json')))
@@ -134,17 +164,33 @@ def main():
         B0_fluid_w0 = A ** 2 * MPL_HC_SQ / (1 * rho_m * sh * R_H ** 2)
         B0_fluid_w1 = A ** 2 * MPL_HC_SQ / (2 * rho_m * sh * R_H ** 2)
 
+        # TEP-native drift margins: stored H_T is the imported LCDM rate.
+        # Under the corpus's own branches the lapse cap loosens by the
+        # drift ratio (HT_lcdm / HT_native)^2.
+        HT_desc = np.sqrt(E2_native(z, 'descent'))
+        HT_trk = np.sqrt(E2_native(z, 'tracking'))
+        B0_lapse_desc = A ** 2 / (sh * HT_desc ** 2)
+        B0_lapse_trk = A ** 2 / (sh * HT_trk ** 2)
+
         rec = {'z_abs': z, 'phibar_over_MPl': u, 'A': A,
                'H_T_over_H0': HT, 'shape_canonical': sh,
                'shape_descent': shd,
+               'H_T_over_H0_descent_native': float(HT_desc),
+               'H_T_over_H0_tracking_native': float(HT_trk),
                'B0_lapse_cap_positive_branch': float(B0_lapse),
                'B0_lapse_cap_descent_form': float(A ** 2 / (shd * HT ** 2)),
+               'B0_lapse_cap_native_descent': float(B0_lapse_desc),
+               'B0_lapse_cap_native_tracking': float(B0_lapse_trk),
                'B0_fluid_cap_w0': float(B0_fluid_w0),
                'B0_fluid_cap_w1': float(B0_fluid_w1),
                'rho_m_GeV4': rho_m}
         # required ambient suppression for each phenomenological B0
         for tag, b0 in B0_PHENOM.items():
             rec[f'G_ambient_required_at_B0_{int(b0)}'] = float(B0_lapse / b0)
+            rec[f'G_ambient_required_native_descent_B0_{int(b0)}'] = float(
+                B0_lapse_desc / b0)
+            rec[f'G_ambient_required_native_tracking_B0_{int(b0)}'] = float(
+                B0_lapse_trk / b0)
         out['sightlines'][sid] = rec
         print(f"  {sid}: z={z:.3f} phibar={u:.3f} A={A:.3f} H_T={HT:.2f}H0  "
               f"shape={sh:.3f}  B0_lapse< {B0_lapse:.3f}  "
@@ -157,9 +203,14 @@ def main():
         E2  = OMEGA_M * (1 + z) ** 3 + (1 - OMEGA_M)
         sh  = shape_corpus(u)
         cap = A2 / (sh * E2) if sh > 0 else np.inf
+        sh_d = shape_descent(u)
+        cap_d = A2 / (sh * E2_native(z, 'descent')) if sh > 0 else np.inf
+        cap_t = A2 / (sh * E2_native(z, 'tracking')) if sh > 0 else np.inf
         out['redshift_scan'].append({'z': z, 'phibar': float(u),
                                      'shape': float(sh),
-                                     'B0_lapse_cap': float(cap)})
+                                     'B0_lapse_cap': float(cap),
+                                     'B0_lapse_cap_native_descent': float(cap_d),
+                                     'B0_lapse_cap_native_tracking': float(cap_t)})
 
     # -- gate budget vs gate10b -------------------------------------------------
     if g10b is not None:
@@ -173,20 +224,34 @@ def main():
 
     caps = [r['B0_lapse_cap_positive_branch'] for r in out['sightlines'].values()]
     tight = min(caps) if caps else float('nan')
+    caps_d = [r['B0_lapse_cap_native_descent'] for r in out['sightlines'].values()]
+    caps_t = [r['B0_lapse_cap_native_tracking'] for r in out['sightlines'].values()]
+    tight_d = min(caps_d) if caps_d else float('nan')
+    tight_t = min(caps_t) if caps_t else float('nan')
     out['verdict'] = {
         'tightest_realized_B0_lapse_cap': float(tight),
+        'tightest_realized_B0_lapse_cap_native_descent': float(tight_d),
+        'tightest_realized_B0_lapse_cap_native_tracking': float(tight_t),
         'today_ambient': 'phibar(0)=0 => shape=0 => uncapped today',
         'interpretation': (
             'The corpus-envelope ambient lapse cap bottoms out at '
             'B0 ~ %.2f in the absorber window (z ~ 2.5-3.5, phibar ~ '
-            'ln(1+z) ~ 1.25-1.5, du/dt ~ 4-5 H0), versus phenomenological '
-            'B0 ~ 52-78. An ungated envelope is supercritical at '
-            'absorber-epoch ambients by ~10^3: the ambient-closed '
-            'environment gate is therefore lapse-mandated, independently '
-            'of the absorber-amplitude argument of Gate 10-b, with '
-            'required suppression G_ambient <~ %.1e at B0 = 78 — the '
-            'same order as the in-well saturation G ~ 10^-3 inferred '
-            'phenomenologically.' % (tight, tight / 77.7)),
+            'ln(1+z) ~ 1.25-1.5) under the IMPORTED LCDM drift '
+            '(du/dt ~ 4-5 H0), versus phenomenological B0 ~ 52-78. Under '
+            'the corpus-native drift the cap loosens to B0 ~ %.1f '
+            '(descent) / %.1f (selected tracking), so an ungated envelope '
+            'is supercritical at absorber-epoch ambients by ~10^3 under '
+            'the imported rate and by ~%d-%dx under the native rate: the '
+            'ambient-closed environment gate is lapse-mandated on either '
+            'drift, independently of the absorber-amplitude argument of '
+            'Gate 10-b, with required suppression G_ambient <~ %.1e at '
+            'B0 = 78 under the imported rate and <~ %.2f-%.2f natively — '
+            'looser than the in-well saturation G ~ 10^-3 inferred '
+            'phenomenologically.'
+            % (tight, tight_d, tight_t,
+               round(52.0 / max(tight_t, 1e-9)),
+               round(52.0 / max(tight_d, 1e-9)),
+               tight / 77.7, tight_d / 77.7, tight_t / 77.7)),
         'negative_branch': (
             'B<0 is lapse-safe in the drift channel but bounded by the '
             'ambient fluid wall |B0| <~ 10^-3 at absorber densities: '

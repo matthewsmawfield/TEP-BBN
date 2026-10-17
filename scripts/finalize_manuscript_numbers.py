@@ -49,6 +49,18 @@ def main():
 
     g2 = json.loads((ROOT / "results" / "gate2_parameter_ledger.json").read_text())
     g3 = json.loads((ROOT / "results" / "gate3_significance.json").read_text())
+    g1 = json.loads((ROOT / "results" / "gate1_embedding.json").read_text())
+    g3_pks = json.loads((ROOT / "results" / "gate_pks19373_significance.json").read_text())
+    g3_j13 = json.loads((ROOT / "results" / "gate_j13323_significance.json").read_text())
+    p_par_pks = g3_pks["p_add_one_parent"]
+    exc_pks = g3_pks["exceedances_parent"]
+    p_par_j13 = g3_j13["p_add_one_parent"]
+    exc_j13 = g3_j13["exceedances_parent"]
+    t_par_pks, t_obs_pks = g3_pks["T_obs_parent_best"], g3_pks["T_obs"]
+    t_par_j13, t_obs_j13 = g3_j13["T_obs_parent_best"], g3_j13["T_obs"]
+    sig_thermal = g1["max_sigma_dev_thermal"]
+    sig_turb = g1["max_sigma_dev_turb"]
+    sig_mixed = g1["max_sigma_dev_mixed"]
 
     ll_d = g2["results"]["M_Dfree"]["LL"]
     ll_h = g2["results"]["M_Hfree"]["LL"]
@@ -218,11 +230,22 @@ def main():
                  f"<td>${ll_dh:.2f}$</td>\n            <td>${d_aic_dh:.2f}$</td>\n            <td>contains",
                  "table LL(M_D+H)")
 
-    # isotope effect RMS (pure mass difference, H at D position)
-    # This anchor is optional because the manuscript text may have been rewritten
-    s = sub_optional(s, r"(?:the maximum discrepancy between the best-fit free-H model and the exact true-D model|the RMS discrepancy between the H and D Voigt profiles \(H placed at the D position with identical column, temperature and turbulent width — only the isotope mass differs\)),? relative to the instrumental noise level, was found to be only \$0\.[\d]+\\sigma\$",
-                 f"the RMS discrepancy between the H and D Voigt profiles (H placed at the D position with identical column, temperature and turbulent width — only the isotope mass differs), relative to the instrumental noise level, was found to be only ${iso_rms:.4f}\\\\sigma$",
-                 "isotope RMS")
+    # Isotope profile-discrepancy anchors — the manuscript quotes Gate 1's
+    # maximum convolved-flux discrepancy per Doppler regime (gate1_embedding.json):
+    # thermal 0.52σ, turbulent 0.0002σ, and the fitted mixed-regime 0.10σ.
+    s = sub_optional(s, r"the maximum convolved flux discrepancy between H and D profiles across all Lyman transitions is \$[\d.]+\\sigma\$",
+                 f"the maximum convolved flux discrepancy between H and D profiles across all Lyman transitions is ${sig_thermal:.2f}\\\\sigma$",
+                 "isotope max-dev thermal")
+    s = sub_optional(s, r"in this limit the maximum discrepancy falls to \$[\d.]+\\sigma\$",
+                 f"in this limit the maximum discrepancy falls to ${sig_turb:.4f}\\\\sigma$",
+                 "isotope max-dev turb")
+    s = sub_optional(s, r"the mixed-regime discrepancy is \$[\d.]+\\sigma\$",
+                 f"the mixed-regime discrepancy is ${sig_mixed:.2f}\\\\sigma$",
+                 "isotope max-dev mixed")
+    # The "analysis issues" changelog paragraph quotes the same Gate-1 metrics.
+    s = sub_optional(s, r"marginally distinguishable at \$[\d.]+\\sigma\$ in the thermal regime and indistinguishable at \$[\d.]+\\sigma\$ in the mixed regime",
+                 f"marginally distinguishable at ${sig_thermal:.2f}\\\\sigma$ in the thermal regime and indistinguishable at ${sig_mixed:.2f}\\\\sigma$ in the mixed regime",
+                 "isotope max-dev changelog")
 
     s = sub_optional(
         s,
@@ -245,52 +268,74 @@ def main():
     )
     s = sub_optional(
         s,
-        r"yielding \$p_\{\\rm add-one\} = [\d.]+\$ \(\d+ exceedances out of [\d,]+ realizations\)\.",
-        f"yielding $p_{{\\\\rm add-one}} = {fmt_p(p_std)}$ ({exc_std} exceedances out of {N} realizations).",
+        r"The standard \(canonical-parent\) statistic yields \$p_\{\\rm std\} = [\d.]+\$ \(\d+/\d+\) for all three sightlines",
+        f"The standard (canonical-parent) statistic yields $p_{{\\\\rm std}} = {fmt_p(p_std)}$ ({exc_std}/{N}) for all three sightlines",
         "p_standard",
     )
     s = sub_optional(
         s,
-        r"yielding \$p_\{\\rm parent\} = [\d.]+\$ \(\d+ exceedances out of [\d,]+ realizations, one-sided 95% binomial upper bound [\d.]+\)\.",
-        f"yielding $p_{{\\\\rm parent}} = {fmt_p(p_par)}$ ({exc_par} exceedances out of {N} realizations, "
-        f"one-sided 95% binomial upper bound {binom_par:.4f}).",
-        "p_parent",
+        r"for Q1009\+2956, \$p_\{\\rm parent\} = [\d.]+\$ \(\d+/\d+ exceedances\)",
+        f"for Q1009+2956, $p_{{\\\\rm parent}} = {fmt_p(p_par)}$ ({exc_par}/{N} exceedances)",
+        "p_parent Q1009",
+    )
+    s = sub_optional(
+        s,
+        r"For PKS\\,1937\$-\$101, \$p_\{\\rm parent\} = [\d.]+\$ \(\d+/\d+ exceedances\)",
+        f"For PKS\\,1937$-$101, $p_{{\\\\rm parent}} = {fmt_p(p_par_pks)}$ ({exc_pks}/{N} exceedances)",
+        "p_parent PKS1937",
+    )
+    s = sub_optional(
+        s,
+        r"For J1332\$\+\$0052, \$p_\{\\rm parent\} = [\d.]+\$ \(\d+/\d+ exceedances\)",
+        f"For J1332$+$0052, $p_{{\\\\rm parent}} = {fmt_p(p_par_j13)}$ ({exc_j13}/{N} exceedances)",
+        "p_parent J1332",
     )
 
-    s = sub_optional(s, r"\$T_\{\\rm parent\} = [\d.]+\$, compared with \$T = [\d.]+\$",
-                 f"$T_{{\\\\rm parent}} = {T_par:.2f}$, compared with $T = {T:.2f}$", "T_parent inline")
-    s = sub_optional(s, r"the \$T \\ge [\d.]+\$ threshold",
-                 f"the $T \\\\ge {T_par:.2f}$ threshold", "T_parent threshold")
-    s = sub_optional(s, r"allows D to select the most favorable parent from (?:all 43 H components|the \d+ H I components within ±\d+ km/s of the absorber systemic velocity)",
-                 "allows D to select the most favorable parent from the 14 H I components within "
-                 "±1000 km/s of the absorber systemic velocity", "parent count")
+    s = sub_optional(s, r"\$T_\{\\rm parent\} = [\d.]+\$, equal to \$T = [\d.]+\$ for the canonical parent",
+                 f"$T_{{\\\\rm parent}} = {T_par:.2f}$, equal to $T = {T:.2f}$ for the canonical parent",
+                 "T_parent inline")
+    s = sub_optional(s, r"Of the 43 H I components in the Q1009 model, \d+ fall within this window, of which \d+ satisfy",
+                 "Of the 43 H I components in the Q1009 model, 14 fall within this window, of which 4 satisfy",
+                 "parent count")
+    s = sub_optional(s, r"\d+ H I components fall within the velocity window, of which \d+ satisfy",
+                 "9 H I components fall within the velocity window, of which 4 satisfy",
+                 "physical window count")
 
     # Update the cross-sightline summary table (Q1009 row)
     s = sub_optional(s,
-        r"(Q1009\$\+\$2956</td><td>2\.5042</td><td>VLT/UVES</td><td>)[\d.]+(</td><td>)[\d.]+(</td><td>)[\d.]+ \(\d+/\d+\)(</td><td>)[\d.]+ \(\d+/\d+\)(</td>)",
+        r"(Q1009\$\+\$2956</td><td>2\.5042</td><td>Keck/HIRES</td><td>)[\d.]+(</td><td>)[\d.]+(</td><td>)[\d.]+ \(\d+/\d+\)(</td><td>)[\d.]+ \(\d+/\d+\)(</td>)",
         rf"\g<1>{T:.2f}\g<2>{T_par:.2f}\g<3>{fmt_p(p_std)} ({exc_std}/{N})\g<4>{fmt_p(p_par)} ({exc_par}/{N})\g<5>",
         "summary table Q1009 row")
+    # PKS1937-101 row: cols = T_obs, T_parent, p_std, p_parent
+    s = sub_optional(s,
+        r"(PKS 1937\$-\$101</td><td>3\.572</td><td>ESPRESSO</td><td>)[\d.]+(</td><td>)[\d.]+(</td><td>)[\d.]+ \(\d+/\d+\)(</td><td>)[\d.]+ \(\d+/\d+\)(</td>)",
+        rf"\g<1>{t_obs_pks:.2f}\g<2>{t_par_pks:.2f}\g<3>{fmt_p(g3_pks['p_add_one_standard_fair'])} ({g3_pks['exceedances_standard_fair']}/{N})\g<4>{fmt_p(p_par_pks)} ({exc_pks}/{N})\g<5>",
+        "summary table PKS1937 row")
+    # J1332+0052 row
+    s = sub_optional(s,
+        r"(J1332\$\+\$0052</td><td>3\.421</td><td>UVES\+HIRES</td><td>)[\d.]+(</td><td>)[\d.]+(</td><td>)[\d.]+ \(\d+/\d+\)(</td><td>)[\d.]+ \(\d+/\d+\)(</td>)",
+        rf"\g<1>{t_obs_j13:.2f}\g<2>{t_par_j13:.2f}\g<3>{fmt_p(g3_j13['p_add_one_standard_fair'])} ({g3_j13['exceedances_standard_fair']}/{N})\g<4>{fmt_p(p_par_j13)} ({exc_j13}/{N})\g<5>",
+        "summary table J1332 row")
 
-    # Update the parent-reassignment interpretation paragraph
+    # Update the parent-reassignment interpretation paragraph.
+    # PKS1937/J1332 values are read from their per-sightline gate3 ledgers —
+    # never hardcode them, they drift whenever the sightline fit changes.
     s = sub_optional(s,
         r"For Q1009\+2956, \$T_\{\\rm parent\} = T_\{\\rm obs\} = [\d.]+\$",
         f"For Q1009+2956, $T_{{\\\\rm parent}} = T_{{\\\\rm obs}} = {T:.2f}$",
         "parent-reassignment Q1009 T")
     s = sub_optional(s,
-        r"For PKS\\,1937\-\$101\$, \$T_\{\\rm parent\} = [\d.]+ < T_\{\\rm obs\} = [\d.]+\$",
-        f"For PKS\\,1937$-101$, $T_{{\\\\rm parent}} = 30.63 < T_{{\\\\rm obs}} = 85.41$",
+        r"For PKS\\,1937\$-\$101, \$T_\{\\rm parent\} = [\d.]+ < T_\{\\rm obs\} = [\d.]+\$",
+        f"For PKS\\,1937$-$101, $T_{{\\\\rm parent}} = {t_par_pks:.2f} < T_{{\\\\rm obs}} = {t_obs_pks:.2f}$",
         "parent-reassignment PKS1937 T")
     s = sub_optional(s,
-        r"For J1332\$\+\$0052\$, \$T_\{\\rm parent\} = [\d.]+ < T_\{\\rm obs\} = [\d.]+\$",
-        f"For J1332$+$0052$, $T_{{\\\\rm parent}} = 52.51 < T_{{\\\\rm obs}} = 141.56$",
+        r"For J1332\$\+\$0052, \$T_\{\\rm parent\} = [\d.]+ < T_\{\\rm obs\} = [\d.]+\$",
+        f"For J1332$+$0052, $T_{{\\\\rm parent}} = {t_par_j13:.2f} < T_{{\\\\rm obs}} = {t_obs_j13:.2f}$",
         "parent-reassignment J1332 T")
 
-    s = sub_optional(
-        s,
-        r"T_\{\\rm full\} = [\d.]+, \\qquad T_\{-\\mathrm\{Ly\}\\alpha\} = [\d.]+\.",
-        f"T_{{\\\\rm full}} = {T:.2f}, \\\\qquad T_{{-\\\\mathrm{{Ly}}\\\\alpha}} = {t_lya:.2f}.",
-        "LOO equation",
-    )
+    # The "T_full / T_-Lyα" display equation and the "T >= X threshold" phrasing
+    # were removed when Section 2 was rewritten; LOO values are synced through
+    # the table rows and prose anchors below instead.
 
     # ---- Update LOO table rows ----
     # Build lookup from gate3 leave_one_out ledger
@@ -382,36 +427,78 @@ def main():
     # ---------------- Abstract ----------------
     pa = ROOT / "site" / "components" / "00_abstract.html"
     a = pa.read_text()
-    a = sub_optional(a, r"\$\\Delta\\ln L=[\d.]+\$ \(\$T=[\d.]+\$",
-                 f"$\\\\Delta\\\\ln L={d_ll:.2f}$ ($T={T:.2f}$", "abstract dlnL/T")
-    a = sub_optional(a, r"the margin falls to \$T_\{\\rm parent\}=[\d.]+\$",
-                 f"the margin falls to $T_{{\\\\rm parent}}={T_par:.2f}$", "abstract T_parent")
-    a = sub_optional(a, r"differs from true D by only \$0\.[\d]+\\sigma\$",
-                 f"differs from true D by only ${iso_rms:.4f}\\\\sigma$", "abstract iso_rms")
     a = sub_optional(
         a,
-        r"calibration against [\d,]+ true-D Monte Carlo realizations of the identical statistic yields \$p_\{\\rm parent\} = [\d.]+\$",
-        f"calibration against {N} true-D Monte Carlo realizations of the identical statistic yields "
-        f"$p_{{\\\\rm parent}} = {fmt_p(p_par)}$",
+        r"Monte Carlo \(\$N = [\d,]+\$ per sightline\)",
+        f"Monte Carlo ($N = {N}$ per sightline)",
         "abstract significance",
+    )
+    # The abstract's headline bound is the Laplace floor 1/(N+1) -> "0.001" at N=1000
+    a = sub_optional(
+        a,
+        r"\$p \\le [\d.]+\$ for all three sightlines on the primary Gate 2/3 family",
+        f"$p \\\\le {1.0/(N+1):.3f}$ for all three sightlines on the primary Gate 2/3 family",
+        "abstract p bound",
     )
     pa.write_text(a)
 
     # ---------------- Conclusion ----------------
-    pc = ROOT / "site" / "components" / "06_conclusion.html"
-    c = pc.read_text()
-    c = sub_optional(c, r"\$\\Delta \\ln L = [\d.]+\$ \(\$T=[\d.]+\$",
-                 f"$\\\\Delta \\\\ln L = {d_ll:.2f}$ ($T={T:.2f}$", "concl dlnL/T")
-    c = sub_optional(c, r"falling to \$T_\{\\rm parent\}=[\d.]+\$",
-                 f"falling to $T_{{\\\\rm parent}}={T_par:.2f}$", "concl T_parent")
-    c = sub_optional(
-        c,
-        r"Monte Carlo calibration of the identical statistic on [\d,]+ true-D spectra per sightline yields \$p_\{\\rm std\} < [\d.]+\$",
-        f"Monte Carlo calibration of the identical statistic on {N} true-D spectra per sightline yields "
-        f"$p_{{\\\\rm std}} < {fmt_p(p_std)}$",
-        "concl significance",
-    )
-    pc.write_text(c)
+    # 06_conclusion.html was rewritten qualitatively and currently quotes no
+    # ledger-derived numbers, so there is nothing to sync. If ledger numbers
+    # are ever reintroduced there, add anchors here — silent drift is the
+    # failure mode this script exists to prevent.
+
+    # ---------------- Consolidated summary ledger ----------------
+    # results/tep_bbn_summary.json is a derived report artifact. Regenerate it
+    # here — from the same ledger values synced into the manuscript above — so
+    # it can never be hand-edited into drift from the pipeline. Every field
+    # traces to a named source file recorded in _provenance.
+    summary = {
+        "T_OBS": round(T, 2),
+        "T_PARENT": round(T_par, 2),
+        "P_STD": round(p_std, 3),
+        "P_PARENT": round(p_par, 3),
+        "T_LYA": round(t_lya, 2),
+        "DLNL": round(d_ll, 2),
+        "DAIC": round(d_aic_h, 2),
+        "DBIC": round(d_bic_h, 2),
+        "N_SIMS": int(N),
+        "EXC_STD": int(exc_std),
+        "EXC_PARENT": int(exc_par),
+        "BINOM95": round(binom, 5),
+        "T_OBS_PKS": round(t_obs_pks, 2),
+        "T_PARENT_PKS": round(t_par_pks, 2),
+        "P_STD_PKS": round(g3_pks["p_add_one_standard_fair"], 3),
+        "P_PARENT_PKS": round(p_par_pks, 3),
+        "EXC_STD_PKS": int(g3_pks["exceedances_standard_fair"]),
+        "EXC_PARENT_PKS": int(exc_pks),
+        "BINOM95_PKS": round(g3_pks["binom_95_upper"], 5),
+        "N_SIMS_PKS": int(g3_pks["N_sims"]),
+        "T_OBS_J1332": round(t_obs_j13, 2),
+        "T_PARENT_J1332": round(t_par_j13, 2),
+        "P_STD_J1332": round(g3_j13["p_add_one_standard_fair"], 3),
+        "P_PARENT_J1332": round(p_par_j13, 3),
+        "EXC_STD_J1332": int(g3_j13["exceedances_standard_fair"]),
+        "EXC_PARENT_J1332": int(exc_j13),
+        "BINOM95_J1332": round(g3_j13["binom_95_upper"], 5),
+        "N_SIMS_J1332": int(g3_j13["N_sims"]),
+        "_provenance": {
+            "generated_by": "scripts/finalize_manuscript_numbers.py",
+            "generated_utc": __import__("datetime").datetime.now(
+                __import__("datetime").timezone.utc
+            ).isoformat(),
+            "sources": {
+                "gate2_parameter_ledger.json": "LL_Dfree/LL_Hfree, n_pixels -> T_OBS, DLNL, DAIC, DBIC",
+                "gate3_significance.json": "T_obs_parent_best, p_add_one_*, exceedances_*, binom_95_upper, N_sims, leave_one_out[Ly-alpha] -> T_PARENT, P_*, EXC_*, BINOM95, N_SIMS, T_LYA (Q1009+2956)",
+                "gate_pks19373_significance.json": "*_PKS fields (PKS1937-101)",
+                "gate_j13323_significance.json": "*_J1332 fields (J1332+0052)",
+            },
+        },
+    }
+    summary_path = ROOT / "results" / "tep_bbn_summary.json"
+    with open(summary_path, "w") as f:
+        json.dump(summary, f, indent=2)
+    print_status(f"Consolidated summary regenerated at {summary_path}", "PROCESS")
 
     print_status("Manuscript numbers synchronised with ledgers:", "SUCCESS")
     print_status(f"  LL_D={ll_d:.2f} LL_H={ll_h:.2f} LL_DH={ll_dh:.2f} n={n_pix}", "PROCESS")

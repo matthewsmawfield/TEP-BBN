@@ -1,0 +1,63 @@
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] Script: step_21_canonical_projection
+[22:37:26] [INFO] Started: 2026-10-12T22:37:26.713176
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [SUCCESS] === STEP 21: CANONICAL SCREENING-PROJECTION AUDIT ===
+[22:37:26] [PROCESS] Canonical operator: S_Sigma = 1/P_X, P_X = k*sqrt(xi) + 2*xi,
+[22:37:26] [PROCESS]   xi=(g/g_t)^2, k=16.0287, g_t=3.400194e-10 m/s^2 (Paper 0 v0.15 sec.7 / step_54)
+[22:37:26] [INFO] 
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] 
+--- 0. Cross-check vs TEP step_54 tabulation ---
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] 
+[22:37:26] [PROCESS]   Sun 1 AU               g=5.93e-03  S_Sigma=1.6439e-15  (step54: 1.6439e-15, rel err 0.0e+00)
+[22:37:26] [PROCESS]   Cassini limb 1.6 Rs    g=1.07e+02  S_Sigma=5.0491e-24  (step54: 5.0491e-24, rel err 0.0e+00)
+[22:37:26] [PROCESS]   MW solar circle        g=2.00e-10  S_Sigma=9.8814e-02  (step54: 9.8814e-02, rel err 0.0e+00)
+[22:37:26] [PROCESS]   Void/cosmic web        g=1.00e-12  S_Sigma=2.1205e+01  (step54: 2.1205e+01, rel err 0.0e+00)
+[22:37:26] [SUCCESS]   operator reproduces step_54 tabulation to <1e-9
+[22:37:26] [INFO] 
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] 
+--- 1. Solar-system projection ---
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] 
+[22:37:26] [PROCESS]   Sun surface                  g=2.740e+02  S_Sigma=7.698e-25 (baseline 7.698e-25)
+[22:37:26] [PROCESS]   Sun field at 1 AU            g=5.931e-03  S_Sigma=1.643e-15 (baseline 1.643e-15)
+[22:37:26] [PROCESS]   Cassini conjunction 1.6 Rsun g=1.070e+02  S_Sigma=5.045e-24 (baseline 5.045e-24)
+[22:37:26] [PROCESS]   Sun field at Saturn 9.5 AU   g=6.572e-05  S_Sigma=1.338e-11 (baseline 1.338e-11)
+[22:37:26] [SUCCESS]   -> gamma_PPN-1 = 6.572e-15 vs bound 2.3e-05 (margin 3.5e+09x)
+[22:37:26] [INFO] 
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] 
+--- 2. Absorber projection (ambient semantics) ---
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] 
+[22:37:26] [PROCESS]   host_halo_newtonian              g=1.549e-12  S_Sigma=13.689 (baseline 1.0000)
+[22:37:26] [PROCESS]   host_halo_deep_tail_scalar       g=1.363e-11  S_Sigma=1.548 (baseline 0.9968)
+[22:37:26] [PROCESS]   cosmic_web_floor                 g=1.000e-12  S_Sigma=21.205 (baseline 1.0000)
+[22:37:26] [PROCESS]   ansatz S_A^abs(Phi_halo=1.60e-08) = 0.99972
+[22:37:26] [PROCESS]   Q1009+2956     dv_conf: 0.009 -> 0.123 km/s (range 0.014-0.191)
+[22:37:26] [PROCESS]   PKS1937-101    dv_conf: 0.017 -> 0.233 km/s (range 0.026-0.360)
+[22:37:26] [PROCESS]   J1332+0052     dv_conf: 0.077 -> 1.054 km/s (range 0.119-1.633)
+[22:37:26] [INFO] 
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] 
+--- 3. Amplitude sector S_A ---
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] 
+[22:37:26] [PROCESS]   rho_gas ~ 5.9e-25 g/cm^3, rho_T = 20.0 g/cm^3
+[22:37:26] [PROCESS]   S_A(absorber) = (rho/rho_T)^(1/3) = 3.08e-09 (far below saturation -> field excursion ambient-set)
+[22:37:26] [INFO] 
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] 
+--- 4. Disformal constraint chain ---
+[22:37:26] [INFO] ================================================================================
+[22:37:26] [INFO] 
+[22:37:26] [PROCESS]   dphi_dr(surface): unscreened 2.931e+06 eV^2, canonical 2.256e-18 eV^2, adopted profile 156.0 eV^2
+[22:37:26] [PROCESS]   powerlaw_n2_Q1009    gamma_dis: adopted 8.44e-02 -> canonical 1.77e-41 (bound 2.3e-05)
+[22:37:26] [PROCESS]   powerlaw_n5_Q1009    gamma_dis: adopted 8.43e-27 -> canonical 1.76e-66 (bound 2.3e-05)
+[22:37:26] [PROCESS]   descent_joint        gamma_dis: adopted 1.13e-14 -> canonical 2.37e-54 (bound 2.3e-05)
+[22:37:26] [INFO]   Legacy solar columns use an acceleration-proxy gradient; they are not a solved source-field or Cassini test.
+[22:37:26] [SUCCESS] 
+wrote /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-BBN/results/step_21_canonical_projection.json

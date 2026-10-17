@@ -10,7 +10,7 @@ C2: Re-optimise the N strongest H I components (by column density) under both
     M_Dfree and M_Hfree, and recompute T. Tests whether the fixed scaffold
     biases the significance.
 
-C3: Perturb the true-D generating parameters (v_offset, logN_D, b_turb) by
+C3: Perturb the true-D generating nuisance parameters (logN_D, T_K, b_turb) by
     small random draws consistent with measurement uncertainties, then
     regenerate MC flux and refit. Tests whether the calibration is robust
     to uncertainties in the true-D model.
@@ -38,12 +38,15 @@ from scripts.lib.model_builder import build_model_components
 from scripts.lib.model_parser import ParameterManager, parse_vpfit_ties
 from scripts.lib.physical_rt_engine import RadiativeTransferEngine
 from scripts.lib.residual_engine import (
+    likelihood_residuals,
     build_frozen_cache,
     compute_residuals,
     compute_residuals_fast,
     split_frozen_candidate,
 )
 from scripts.lib.sightline_config import load_sightline_config, SightlineConfigError
+from scripts.lib.width_coordinates import minimize_width, hydrogen_start_from_deuterium
+from scripts.lib.scaffold_cache import scaffold_evaluator
 
 np.seterr(all="ignore")
 
@@ -64,11 +67,31 @@ def _make_fast_logpdf_sum(noise_cfg):
     inv_nu = 1.0 / nu
 
     def _fast_logpdf_sum(residuals):
-        v = residuals[np.abs(residuals) < 100.0]
+        v = likelihood_residuals(residuals)
         z = (v - loc) / scale
         return const * len(v) - alpha * np.sum(np.log1p(inv_nu * z * z))
 
     return _fast_logpdf_sum
+
+
+def scaffold_residual_evaluator(pm, theta, free_slices, blocks, engine, z_abs, c_kms, cfg):
+    """Cache only fixed optical depths; preserve the full scaffold objective."""
+    def scaffold(values):
+        return build_model_components('M_NULL', values, None, pm, z_abs, c_kms,
+            d_velocity_offset_kms=cfg['d_velocity_offset_kms'], parent_window_kms=cfg['parent_window_kms'])
+    original = scaffold(theta)
+    probe = theta.copy()
+    for indices in free_slices:
+        for index in indices: probe[index] += .123
+    perturbed = scaffold(probe)
+    mutable = {ion: [i for i,(a,b) in enumerate(zip(original[ion],perturbed[ion])) if a != b] for ion in original}
+    if any(mutable[ion] for ion in original if ion not in ['H_I','D_I']):
+        return lambda grouped, data: compute_residuals(grouped, data, engine)
+    evaluate = scaffold_evaluator(original, mutable, blocks, engine)
+    # Fail closed if cache bookkeeping changes the forward calculation.
+    for grouped in [original, perturbed]:
+        assert np.allclose(evaluate(grouped, blocks), compute_residuals(grouped, blocks, engine), rtol=1e-7, atol=1e-7), 'Scaffold cache differs from full forward model'
+    return evaluate
 
 
 def _load_pipeline_data(sightline=None):
@@ -247,10 +270,13 @@ def run_c2_limited_scaffold(sightline=None, n_free_components=5):
     bounds_D_ext = bounds_D + scaffold_bounds
     bounds_H_ext = bounds_H + scaffold_bounds
 
-    starts_D = cfg["multistart"]["M_Dfree"]
-    starts_H = cfg["multistart"]["M_Hfree"]
+    starts_D = [list(opt_D_obs)] + cfg["multistart"]["M_Dfree"]
+    h_fit = g2["results"]["M_Hfree"]
+    starts_H = [h_fit.get("cand_params",h_fit.get("params"))] + cfg["multistart"]["M_Hfree"]
 
     _fast_logpdf_sum = _make_fast_logpdf_sum(noise_cfg)
+
+    scaffold_residuals = scaffold_residual_evaluator(pm, theta_shared_base, free_param_slices, data_blocks, engine, z_abs_ref, c_kms, cfg)
 
     def make_obj_scaffold(model_name, bounds_ext, starts_cand):
         def obj(p):
@@ -273,7 +299,7 @@ def run_c2_limited_scaffold(sightline=None, n_free_components=5):
                 d_velocity_offset_kms=cfg["d_velocity_offset_kms"],
                 parent_window_kms=cfg["parent_window_kms"],
             )
-            res = compute_residuals(grouped, data_blocks, engine)
+            res = scaffold_residuals(grouped, data_blocks)
             ll = _fast_logpdf_sum(res)
             return -float(ll)
         return obj
@@ -286,10 +312,12 @@ def run_c2_limited_scaffold(sightline=None, n_free_components=5):
         scaffold_init = []
         for n_idx, b_idx in free_param_slices:
             scaffold_init.extend([theta_shared_base[n_idx], theta_shared_base[b_idx]])
+        if np.isfinite(best_ll_D):scaffold_init = best_D_params[3:]
         x0_ext = list(x0) + scaffold_init
-        res_D = minimize(obj_D, x0_ext, method="L-BFGS-B", bounds=bounds_D_ext)
+        res_D = minimize_width(obj_D, x0_ext, bounds_D_ext, "D", method="L-BFGS-B")
         if -res_D.fun > best_ll_D:
             best_ll_D = -res_D.fun
+            best_D_params = res_D.x.tolist()
     print_status(f"M_Dfree (scaffold freedom={n_free_components}): LL = {best_ll_D:.2f}", "PROCESS")
 
     # Fit M_Hfree with scaffold freedom
@@ -299,10 +327,17 @@ def run_c2_limited_scaffold(sightline=None, n_free_components=5):
         scaffold_init = []
         for n_idx, b_idx in free_param_slices:
             scaffold_init.extend([theta_shared_base[n_idx], theta_shared_base[b_idx]])
+        scaffold_init = best_D_params[3:]
         x0_ext = list(x0) + scaffold_init
-        res_H = minimize(obj_H, x0_ext, method="L-BFGS-B", bounds=bounds_H_ext)
+        res_H = minimize_width(obj_H, x0_ext, bounds_H_ext, "H", method="L-BFGS-B")
         if -res_H.fun > best_ll_H:
             best_ll_H = -res_H.fun
+            best_H_params = res_H.x.tolist()
+    d_group=build_model_components('M_Dfree',theta_shared_base,best_D_params[:3],pm,z_abs_ref,c_kms,d_velocity_offset_kms=cfg['d_velocity_offset_kms'],parent_window_kms=cfg['parent_window_kms'])
+    matched=hydrogen_start_from_deuterium(best_D_params,d_group['D_I'][-1]['v'],bounds_H_ext)
+    if matched is not None:
+        result=minimize_width(obj_H,matched,bounds_H_ext,'H',method='L-BFGS-B')
+        if -result.fun>best_ll_H:best_ll_H=-result.fun;best_H_params=result.x.tolist()
     print_status(f"M_Hfree (scaffold freedom={n_free_components}): LL = {best_ll_H:.2f}", "PROCESS")
 
     T_scaffold = 2.0 * (best_ll_H - best_ll_D)
@@ -323,8 +358,16 @@ def run_c2_limited_scaffold(sightline=None, n_free_components=5):
             "freed_component_indices": sorted(free_indices),
             "LL_D_free_scaffold": best_ll_D,
             "LL_H_free_scaffold": best_ll_H,
+            "LL_D_fixed_scaffold": float(g2["results"]["M_Dfree"]["LL"]),
+            "LL_H_fixed_scaffold": float(g2["results"]["M_Hfree"]["LL"]),
+            "delta_logL_D": float(best_ll_D - g2["results"]["M_Dfree"]["LL"]),
+            "delta_logL_H": float(best_ll_H - g2["results"]["M_Hfree"]["LL"]),
             "T_scaffold": float(T_scaffold),
             "T_original": float(T_orig),
+            "params_D": best_D_params, "params_H": best_H_params,
+            "candidate_width_coordinate": "Total width over the original T/b_turb bound envelope; thermal/turbulent split is unidentifiable",
+            "continuum_solver": "Augmented weighted ridge least squares, lambda=1e-10",
+            "multistart_scope": "Full configured candidate grids plus baseline fits and matched-D H start; shared scaffold starts reused from the best D fit",
             "delta_T": float(T_scaffold - T_orig),
         }, f, indent=2)
     print_status(f"Saved to {output_file}", "SUCCESS")
@@ -444,10 +487,12 @@ def run_c3_simulation(
             res_D = minimize(obj_D, x0, method="L-BFGS-B", bounds=bounds_D)
             if -res_D.fun > best_local_ll_D:
                 best_local_ll_D = -res_D.fun
+                best_local_success = bool(res_D.success)
         if j == canonical_parent_idx:
             ll_D_canonical = best_local_ll_D
         if best_local_ll_D > best_ll_D:
             best_ll_D = best_local_ll_D
+            best_D_success = best_local_success
 
     # Fit M_Hfree
     obj_H = make_obj_parent("M_H", sim_blocks)
@@ -456,6 +501,7 @@ def run_c3_simulation(
         res_H = minimize(obj_H, x0, method="L-BFGS-B", bounds=bounds_H)
         if -res_H.fun > best_ll_H:
             best_ll_H = -res_H.fun
+            best_H_success = bool(res_H.success)
 
     T_parent = 2.0 * (best_ll_H - best_ll_D)
     T_standard = 2.0 * (best_ll_H - ll_D_canonical)
@@ -468,6 +514,7 @@ def run_c3_simulation(
         "logL_Hfree": best_ll_H,
         "T_parent": T_parent,
         "T_standard": T_standard,
+        "converged_D": best_D_success, "converged_H": best_H_success,
         "perturbed_params": {
             "logN_D": logN_D_pert,
             "T_K": T_K_pert,
@@ -476,7 +523,7 @@ def run_c3_simulation(
     }
 
 
-def run_c3_perturbed_mc(sightline=None, n_sims=200):
+def run_c3_perturbed_mc(sightline=None, n_sims=200, workers=None):
     """Run MC with perturbed true-D generating parameters."""
     setup_step_logger(Path(__file__).stem)
     print_status(f"=== C3: NOISY/OFFSET TRUE-D MC ({sightline or 'Q1009+2956'}) ===", "SUCCESS")
@@ -578,7 +625,7 @@ def run_c3_perturbed_mc(sightline=None, n_sims=200):
 
     # Use fork start method to avoid re-importing modules per worker (macOS default is spawn)
     ctx = multiprocessing.get_context('fork')
-    with ctx.Pool(processes=multiprocessing.cpu_count()) as pool:
+    with ctx.Pool(processes=min(workers or multiprocessing.cpu_count(), n_sims)) as pool:
         for i, res in enumerate(pool.imap_unordered(_run_c3_wrapper, pool_args)):
             results_ledger.append(res)
             if res["T_standard"] >= T_obs:
@@ -601,7 +648,8 @@ def run_c3_perturbed_mc(sightline=None, n_sims=200):
     out_dir = project_root / "results"
     out_dir.mkdir(parents=True, exist_ok=True)
     output_prefix = cfg.get("output_prefix", "gate")
-    output_file = out_dir / f"{output_prefix}3_c3_perturbed_mc.json"
+    suffix = "" if n_sims >= cfg.get("monte_carlo", {}).get("n_sims", 1000) else f"_n{n_sims}"
+    output_file = out_dir / f"{output_prefix}3_c3_perturbed_mc{suffix}.json"
     with open(output_file, "w") as f:
         json.dump({
             "sightline": cfg["sightline_id"],
@@ -674,9 +722,10 @@ def run_c4_kinematic_test(sightline=None):
     print_status(f"T (M_H vs M_kin) = {T_kin_vs_D:.2f}", "PROCESS")
     print_status(f"T (M_kin vs M_D) = {T_kin_vs_H:.2f}", "PROCESS")
 
-    # AIC comparison
-    aic_D = 2 * 3 - 2 * ll_D
-    aic_H = 2 * 4 - 2 * ll_H
+    # A single-isotope profile identifies total b, not T and b_turb separately.
+    # Count identifiable profile coordinates for AIC: (N,b) or (v,N,b).
+    aic_D = 2 * 2 - 2 * ll_D
+    aic_H = 2 * 3 - 2 * ll_H
     aic_kin = 2 * 2 - 2 * best_ll_kin
     print_status(f"AIC: M_D={aic_D:.2f}, M_H={aic_H:.2f}, M_kin={aic_kin:.2f}", "PROCESS")
     print_status(f"ΔAIC (M_kin - M_D) = {aic_kin - aic_D:.2f}", "PROCESS")
@@ -693,8 +742,9 @@ def run_c4_kinematic_test(sightline=None):
             "LL_Dfree": float(ll_D),
             "LL_Hfree": float(ll_H),
             "LL_kinematic": float(best_ll_kin),
-            "k_Dfree": 3,
-            "k_Hfree": 4,
+            "k_Dfree": 2,
+            "k_Hfree": 3,
+            "parameter_count_scope": "Identifiable profile coordinates; T/b_turb is one total-width direction",
             "k_kinematic": 2,
             "best_kinematic_params": {"v_H": float(best_params_kin[0]), "logN_H": float(best_params_kin[1])},
             "T_H_vs_D": float(T_D_vs_H),
@@ -785,6 +835,7 @@ if __name__ == "__main__":
     parser.add_argument("--analysis", required=True, choices=["c2", "c3", "c4", "all"],
                         help="Which analysis to run: c2 (scaffold freedom), c3 (perturbed MC), c4 (kinematic), all")
     parser.add_argument("--n-free", type=int, default=5, help="C2: Number of H I components to free")
+    parser.add_argument("--workers", type=int, default=None, help="Number of C3 workers")
     parser.add_argument("--n-sims", type=int, default=200, help="C3: Number of MC simulations")
     args = parser.parse_args()
 
@@ -795,6 +846,6 @@ if __name__ == "__main__":
     elif args.analysis == "c2":
         run_c2_limited_scaffold(sightline=args.sightline, n_free_components=args.n_free)
     elif args.analysis == "c3":
-        run_c3_perturbed_mc(sightline=args.sightline, n_sims=args.n_sims)
+        run_c3_perturbed_mc(sightline=args.sightline, n_sims=args.n_sims, workers=args.workers)
     elif args.analysis == "c4":
         run_c4_kinematic_test(sightline=args.sightline)

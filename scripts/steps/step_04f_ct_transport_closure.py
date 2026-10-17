@@ -55,6 +55,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from scripts.utils.logger import print_status, setup_step_logger
+from scripts.lib.canonical_screening import s_transfer_depth, PHI_HALF_C2, N_SCREEN
 
 
 def run_ct_transport_closure():
@@ -72,12 +73,10 @@ def run_ct_transport_closure():
     eV = 1.602e-12      # erg
 
     # ---- Screening parameters (frozen by three-anchor calibration) ----
-    Phi_half = 1.59e-7
-    n_screen = 3.56
+    Phi_half = PHI_HALF_C2
+    n_screen = N_SCREEN
     beta_A = -1.0
 
-    def S_Sigma(Phi_c2):
-        return 1.0 / (1.0 + (Phi_c2 / Phi_half)**n_screen)
 
     # ---- Absorber parameters (Q1009+2956) ----
     R_kpc = 30
@@ -91,11 +90,11 @@ def run_ct_transport_closure():
     rho_abs = n_H * m_p
     M_abs = (4.0/3.0) * np.pi * R**3 * rho_abs
     Phi_abs_c2 = G * M_abs / (R * c**2)
-    S_abs = S_Sigma(Phi_abs_c2)
+    S_abs = s_transfer_depth(Phi_abs_c2)
 
     # Galactic halo parameters
     Phi_gal_c2 = 5.38e-7
-    S_gal = S_Sigma(Phi_gal_c2)
+    S_gal = s_transfer_depth(Phi_gal_c2)
 
     # Conformal-only shift (from pipeline)
     dv_conf = 2 * beta_A**2 * np.pi * G * m_p * N_H * R / c  # cm/s
@@ -226,9 +225,9 @@ def run_ct_transport_closure():
     Phi_earth_c2 = 7.0e-10  # Earth surface
     Phi_lunar_c2 = 3.0e-11  # lunar surface
 
-    S_sun = S_Sigma(Phi_sun_c2)
-    S_earth = S_Sigma(Phi_earth_c2)
-    S_lunar = S_Sigma(Phi_lunar_c2)
+    S_sun = s_transfer_depth(Phi_sun_c2)
+    S_earth = s_transfer_depth(Phi_earth_c2)
+    S_lunar = s_transfer_depth(Phi_lunar_c2)
 
     print_status(f"  Solar system screening:", "PROCESS")
     print_status(f"    Sun surface:   |Phi|/c^2 = {Phi_sun_c2:.2e}, S = {S_sun:.2e}", "PROCESS")

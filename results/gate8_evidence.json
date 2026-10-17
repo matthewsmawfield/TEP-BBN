@@ -1,6 +1,7 @@
 {
   "gate": "8",
-  "title": "Multi-Pronged TEP Evidence Analysis",
+  "title": "Descriptive Spectral Diagnostics",
+  "statistical_authority": "gate8_calibration_<sightline>.json; resolution proxies here are not calibrated probabilities",
   "sightlines": [
     "Q1009+2956",
     "PKS1937-101",
@@ -16,7 +17,8 @@
         "sigma_b": 4.177039211395354,
         "deviation_sigma": 0.02657783447609767,
         "consistent_with_D": true,
-        "consistent_with_TEP": true
+        "consistent_with_TEP": null,
+        "uncertainty_scope": "Descriptive resolution proxy; use injection calibration for statistical inference"
       },
       "PKS1937-101": {
         "b_parent": 16.3286,
@@ -26,7 +28,8 @@
         "sigma_b": 3.7077084290657925,
         "deviation_sigma": 0.9548651065167792,
         "consistent_with_D": true,
-        "consistent_with_TEP": true
+        "consistent_with_TEP": null,
+        "uncertainty_scope": "Descriptive resolution proxy; use injection calibration for statistical inference"
       },
       "J1332+0052": {
         "b_parent": 13.164968290945612,
@@ -36,13 +39,16 @@
         "sigma_b": 7.980745749764589,
         "deviation_sigma": 5.1592168039658315,
         "consistent_with_D": false,
-        "consistent_with_TEP": true
+        "consistent_with_TEP": null,
+        "uncertainty_scope": "Descriptive resolution proxy; use injection calibration for statistical inference"
       }
     },
     "offset_deviation_correlation": {
       "spearman_rho": 1.0,
-      "spearman_p": 0.0,
-      "exact_p_n3": 0.167,
+      "spearman_p": 0.3333333333333333,
+      "exact_p_n3": 0.16666666666666666,
+      "exact_p_twosided": 0.3333333333333333,
+      "scope": "Three-point descriptive ordering; directional test requires a prespecified trend",
       "deviations": [
         2.7172821441621977,
         5.658173778810635,
@@ -63,7 +69,8 @@
     "sign_test": {
       "n_blueward": 3,
       "n_total": 3,
-      "p_null": 0.125
+      "p_null": 0.125,
+      "scope": "Conditional random-sign benchmark; isotope-offset-selected features are not an unbiased sign sample"
     },
     "column_density_test": {
       "Q1009+2956": {
@@ -122,7 +129,7 @@
     },
     "combined_assessment": {
       "evidence_for_tep": [
-        "b-value: TEP allows free b (no constraint violated)",
+        "b-value: free-H width is descriptive; edge-gas compatibility requires a physical width prediction",
         "Offset deviation: perfect rank correlation with N_HI (\u03c1=1, p=0.167)",
         "Sign test: all 3/3 features blueward as conformal sign theorem predicts (p=0.125)",
         "D-redundancy: 3/3 sightlines show M_D+H drives logN_D \u2192 0 (D redundant)"
@@ -138,7 +145,46 @@
         "b-value test (1/3 inconsistent with D at >2\u03c3)",
         "offset deviation (2/3 deviate from isotope shift at >2\u03c3, \u03c1=1.0)",
         "D-redundancy test (3/3 sightlines drive logN_D \u2192 0)"
-      ]
+      ],
+      "scope": "Descriptive patterns and rough uncertainty proxies; correlated diagnostics, not an independent evidence count"
+    }
+  },
+  "calibrated_diagnostics": {
+    "Q1009+2956": {
+      "source_file": "results/gate8_calibration_Q10092956.json",
+      "source_sha256": "3aa0149842a9e7a3dc17cdb86931b9ab3b3a4ec5ac6de2f40249d49b7cf81710",
+      "n_sims": 1000,
+      "p_values": {
+        "b_value": 0.002997002997002997,
+        "velocity_deviation": 0.000999000999000999,
+        "column_density": 0.000999000999000999,
+        "joint_mahalanobis": 0.000999000999000999
+      },
+      "scope": "Empirical-null-centered, leave-one-out predictive scores; fixed input pixel mask."
+    },
+    "PKS1937-101": {
+      "source_file": "results/gate8_calibration_PKS1937101.json",
+      "source_sha256": "f5e7aa9e19dd6f50ab046ca535e2fd4109eae279d59302dd51d33543bdfab0ad",
+      "n_sims": 1000,
+      "p_values": {
+        "b_value": 0.0919080919080919,
+        "velocity_deviation": 0.000999000999000999,
+        "column_density": 0.00999000999000999,
+        "joint_mahalanobis": 0.000999000999000999
+      },
+      "scope": "Empirical-null-centered, leave-one-out predictive scores; fixed input pixel mask."
+    },
+    "J1332+0052": {
+      "source_file": "results/gate8_calibration_J13320052.json",
+      "source_sha256": "32399127785a7a18304974ab643dede999401c45db29942b8ee37dfc409754ac",
+      "n_sims": 1000,
+      "p_values": {
+        "b_value": 0.06493506493506493,
+        "velocity_deviation": 0.0979020979020979,
+        "column_density": 0.014985014985014986,
+        "joint_mahalanobis": 0.022977022977022976
+      },
+      "scope": "Empirical-null-centered, leave-one-out predictive scores; fixed input pixel mask."
     }
   }
 }
